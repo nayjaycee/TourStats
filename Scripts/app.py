@@ -1,11 +1,16 @@
 # Scripts/app.py
 from __future__ import annotations
-from league import build_league_standings_through_prior, build_event_order_map
-# from compare import render_compare_tab
 import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from Scripts.league import build_league_standings_through_prior, build_event_order_map
+# from compare import render_compare_tab
 import os
 import inspect
-from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 
@@ -1523,17 +1528,6 @@ with tab1:
 # =========================
 # TAB 2: PLAYER PROFILE  (clean rewrite)
 # =========================
-from pathlib import Path
-from typing import Optional
-
-import numpy as np
-import pandas as pd
-import streamlit as st
-import plotly.graph_objects as go
-
-COMBINED_ROUNDS_PATH = Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/combined_rounds_all_2017_2025.csv")
-
-
 # -------------------------
 # Data load
 # -------------------------
