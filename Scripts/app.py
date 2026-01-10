@@ -1,9 +1,6 @@
 # Scripts/app.py
 from __future__ import annotations
 from league import build_league_standings_through_prior, build_event_order_map
-from compare import render_compare_tab
-
-
 
 import sys
 import os
