@@ -1,7 +1,7 @@
 # Scripts/app.py
 from __future__ import annotations
 from league import build_league_standings_through_prior, build_event_order_map
-
+# from compare import render_compare_tab
 import sys
 import os
 import inspect
@@ -12,7 +12,7 @@ from typing import Dict, List, Optional, Tuple
 import numpy as np
 import pandas as pd
 import streamlit as st
-
+import plotly.graph_objects as go
 import plotly.express as px
 
 COMBINED_ROUNDS_PATH = Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/combined_rounds_all_2017_2025.csv")
