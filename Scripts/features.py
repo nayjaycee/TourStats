@@ -762,4 +762,3 @@ def compute_course_history_stats(
     )
 
     return out
-

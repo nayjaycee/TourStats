@@ -409,14 +409,14 @@ def build_weekly_view(
     sg_L24 = _minmax_series(summary["sg_total_L24"]) if "sg_total_L24" in summary.columns else pd.Series(0.0, index=idx)
     sg_L40 = _minmax_series(summary["sg_total_L40"]) if "sg_total_L40" in summary.columns else pd.Series(0.0, index=idx)
 
-    summary["z_sg_recent"] = 0.40 * sg_L12 + 0.35 * sg_L24 + 0.25 * sg_L40
+    summary["z_sg_recent"] = 0.25 * sg_L12 + 0.35 * sg_L24 + 0.40 * sg_L40
 
     # ---------------------------------------------------------------
     # YTD form: z_ytd (made_cut% + top10 count)
     # ---------------------------------------------------------------
     z_ytd_mc = _minmax_series(summary["ytd_made_cut_pct"]) if "ytd_made_cut_pct" in summary.columns else pd.Series(0.0, index=idx)
     z_ytd_t10 = _minmax_series(summary["ytd_top10"]) if "ytd_top10" in summary.columns else pd.Series(0.0, index=idx)
-    summary["z_ytd"] = 0.60 * z_ytd_mc + 0.40 * z_ytd_t10
+    summary["z_ytd"] = 0.55 * z_ytd_mc + 0.45 * z_ytd_t10
 
     # ---------------------------------------------------------------
     # Event history metric + majors / course-change logic
@@ -476,10 +476,10 @@ def build_weekly_view(
     # Final OAD score (keep as-is)
     # ---------------------------------------------------------------
     summary["oad_score"] = (
-        0.40 * summary["z_sg_recent"] +
-        0.15 * summary["z_ev_current"] +
-        0.20 * summary["z_ytd"] +
-        0.20 * summary["z_history"]
+        0.36 * summary["z_sg_recent"] +
+        0.08 * summary["z_ev_current"] +
+        0.28 * summary["z_ytd"] +
+        0.28 * summary["z_history"]
     )
 
     # ---------------------------------------------------------------

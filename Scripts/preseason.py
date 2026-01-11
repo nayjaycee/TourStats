@@ -479,7 +479,7 @@ def load_shortlist(season: int) -> pd.DataFrame:
     path = get_shortlist_path(season)
     df = pd.read_csv(path)
 
-    int_cols = ["dg_id", "tag_event_1", "tag_event_2", "tag_event_3", "tag_event_4"]
+    int_cols = ["dg_id", "player_name", "tag_event_1", "tag_event_2", "tag_event_3", "tag_event_4"]
     for col in int_cols:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
