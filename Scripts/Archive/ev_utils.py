@@ -606,12 +606,12 @@ if __name__ == "__main__":
             df_odds = odds.copy()
 
             # normalize season/year column
-            season_col = None
-            for cand in ("season", "year"):
-                if cand in df_odds.columns:
-                    season_col = cand
-                    df_odds[cand] = pd.to_numeric(df_odds[cand], errors="coerce").astype("Int64")
-                    break
+            season_col = "year" if "year" in df_odds.columns else ("season" if "season" in df_odds.columns else None)
+            if season_col is None:
+                raise ValueError("build_week_ev_table: odds must contain 'year' or 'season'.")
+
+            df_odds[season_col] = pd.to_numeric(df_odds[season_col], errors="coerce").astype("Int64")
+
             if season_col is None:
                 raise ValueError("build_week_ev_table: odds must contain 'season' or 'year'.")
 

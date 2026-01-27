@@ -20,8 +20,9 @@ def build_event_order_map(schedule_df: pd.DataFrame) -> Dict[int, int]:
     Build event_id -> event_order.
 
     Preference:
-      1) if schedule_df has week_num, use it (it is your authoritative ordering)
-      2) else use start_date (legacy)
+      1) event_order (authoritative if present)
+      2) week_num (legacy alt ordering)
+      3) start_date (fallback)
     """
     if "event_id" not in schedule_df.columns:
         raise ValueError("schedule_df must contain 'event_id'")
@@ -31,24 +32,35 @@ def build_event_order_map(schedule_df: pd.DataFrame) -> Dict[int, int]:
     s = s.dropna(subset=["event_id"]).copy()
     s["event_id"] = s["event_id"].astype(int)
 
+    # 1) preferred: event_order
+    if "event_order" in s.columns:
+        s["event_order"] = pd.to_numeric(s["event_order"], errors="coerce")
+        s = s.dropna(subset=["event_order"]).copy()
+        s["event_order"] = s["event_order"].astype(int)
+
+        s = (
+            s.sort_values(["event_order", "event_id"])
+             .drop_duplicates(subset=["event_id"], keep="first")
+             .reset_index(drop=True)
+        )
+        return dict(zip(s["event_id"], s["event_order"]))
+
+    # 2) next: week_num
     if "week_num" in s.columns:
         s["week_num"] = pd.to_numeric(s["week_num"], errors="coerce")
         s = s.dropna(subset=["week_num"]).copy()
         s["week_num"] = s["week_num"].astype(int)
 
-        # one row per event_id; keep earliest week_num just in case duplicates
         s = (
             s.sort_values(["week_num", "event_id"])
              .drop_duplicates(subset=["event_id"], keep="first")
              .reset_index(drop=True)
         )
-
-        # event_order = week_num (already 1..N in your schedule)
         return dict(zip(s["event_id"], s["week_num"]))
 
-    # fallback: start_date
+    # 3) fallback: start_date
     if "start_date" not in s.columns:
-        raise ValueError("schedule_df must contain 'week_num' or 'start_date'")
+        raise ValueError("schedule_df must contain 'event_order', 'week_num', or 'start_date'")
 
     s["start_date"] = pd.to_datetime(s["start_date"], errors="coerce")
     s = s.dropna(subset=["start_date"]).copy()
@@ -60,6 +72,7 @@ def build_event_order_map(schedule_df: pd.DataFrame) -> Dict[int, int]:
     )
     s["event_order"] = np.arange(1, len(s) + 1, dtype=int)
     return dict(zip(s["event_id"], s["event_order"]))
+
 
 
 def compute_cutoff(order_map: Dict[int, int], current_event_id: int) -> Optional[LeagueCutoff]:

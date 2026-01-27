@@ -14,7 +14,7 @@ from Scripts.data_io import (
     load_course_fit,
     load_player_skills,
 )
-from Scripts.field_sim import get_actual_field
+from Scripts.field_sim import get_actual_field, simulate_field_for_event
 from Scripts.features import (
     compute_rolling_stats,
     compute_event_history,
@@ -36,15 +36,30 @@ from Scripts.patterns import (
 YTD_TRACKER_PATH = Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/ytd_tracker.csv")
 ytd_tracker = pd.read_csv(YTD_TRACKER_PATH)
 
-COURSE_SENSITIVITY_PATH = Path("/Data/Clean/Processed/course_sensitivity_table.csv")
+COURSE_SENSITIVITY_PATH = Path("/Users/joshmacbook/python_projects/OAD/Data/Clean/Processed/course_sensitivity_table.csv")
+
+print("COURSE_SENSITIVITY_PATH:", COURSE_SENSITIVITY_PATH)
+print("  exists?:", COURSE_SENSITIVITY_PATH.exists())
+
 try:
     course_sens_df = pd.read_csv(COURSE_SENSITIVITY_PATH)
     course_sens_df["course_num"] = pd.to_numeric(course_sens_df["course_num"], errors="coerce").astype("Int64")
-    # expect column name: course_type
     course_sens_df["course_type"] = course_sens_df["course_type"].astype(str).str.lower()
-except Exception:
+except Exception as e:
+    print("FAILED loading course sensitivity:", repr(e))
     course_sens_df = pd.DataFrame(columns=["course_num", "course_type"])
 
+
+def _coerce_dg_id(df: pd.DataFrame) -> pd.DataFrame:
+    if df is None or df.empty:
+        return df
+    out = df.copy()
+    if "dg_id" not in out.columns:
+        return out
+    out["dg_id"] = pd.to_numeric(out["dg_id"], errors="coerce")
+    out = out.dropna(subset=["dg_id"]).copy()
+    out["dg_id"] = out["dg_id"].astype(int)
+    return out
 
 def _attach_shortlist_flags(
     summary: pd.DataFrame,
@@ -142,6 +157,195 @@ def _attach_shortlist_flags(
 
     return summary
 
+def _pick_date_col(df: pd.DataFrame, candidates) -> str | None:
+    for c in candidates:
+        if c in df.columns:
+            return c
+    return None
+
+def compute_ytd_stats_rolling_90d(
+    rounds_df: pd.DataFrame,
+    odds_df: pd.DataFrame,
+    dg_ids: list[int],
+    as_of_date: pd.Timestamp,
+    days: int = 90,
+    ytd_tracker: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    """
+    Jan–Mar YTD proxy: use last `days` of *events* ending at as_of_date.
+    HARD GUARANTEE:
+      - starts/outcomes are computed at the EVENT LEVEL (1 row per dg_id-year-event_id)
+      - ytd_made_cut_pct is always in [0, 1] when starts>0
+    Prefers ytd_tracker if provided (since it's already event-level).
+    """
+    end_dt = pd.to_datetime(as_of_date, errors="coerce")
+    if pd.isna(end_dt):
+        raise ValueError(f"Invalid as_of_date: {as_of_date}")
+    start_dt = end_dt - pd.Timedelta(days=days)
+
+    dg_ids = [int(x) for x in dg_ids if pd.notna(x)]
+    base = pd.DataFrame({"dg_id": dg_ids}).drop_duplicates().copy()
+    base["dg_id"] = pd.to_numeric(base["dg_id"], errors="coerce").astype(int)
+
+    # -------------------------
+    # 1) EVENT-LEVEL outcomes (starts, cuts, topX, wins)
+    # Prefer ytd_tracker (already event-level); fallback to odds_df
+    # -------------------------
+    src = None
+    if ytd_tracker is not None and not ytd_tracker.empty:
+        src = ytd_tracker.copy()
+        # expected columns in your ytd_tracker: year, event_id, dg_id, event_completed, Made_Cut, Top_25, Top_10, Top_5, Win, tour (optional)
+        for c in ["year", "event_id", "dg_id"]:
+            if c in src.columns:
+                src[c] = pd.to_numeric(src[c], errors="coerce")
+
+        if "event_completed" in src.columns:
+            src["event_completed"] = pd.to_datetime(src["event_completed"], errors="coerce")
+            src = src[(src["event_completed"] >= start_dt) & (src["event_completed"] <= end_dt)].copy()
+
+        src = src[pd.to_numeric(src.get("dg_id"), errors="coerce").isin(dg_ids)].copy()
+
+        # LIV made-cut logic (if tour exists)
+        if "tour" in src.columns:
+            is_liv = src["tour"].astype(str).str.lower().str.contains("liv", na=False)
+        else:
+            is_liv = pd.Series(False, index=src.index)
+
+        # normalize flags
+        def _flag(col: str) -> pd.Series:
+            if col in src.columns:
+                return pd.to_numeric(src[col], errors="coerce").fillna(0).astype(int)
+            return pd.Series(0, index=src.index, dtype=int)
+
+        src["Made_Cut"] = _flag("Made_Cut")
+        src["Top_25"] = _flag("Top_25")
+        src["Top_10"] = _flag("Top_10")
+        src["Top_5"]  = _flag("Top_5")
+        src["Win"]    = _flag("Win")
+
+        # LIV → treat as made cut
+        src.loc[is_liv, "Made_Cut"] = 1
+
+        # critical: one row per player-event
+        key_cols = [c for c in ["dg_id", "year", "event_id"] if c in src.columns]
+        if len(key_cols) < 2:
+            # if something is missing, still dedupe on dg_id+event_id at minimum
+            key_cols = [c for c in ["dg_id", "event_id"] if c in src.columns]
+        src = src.dropna(subset=["dg_id", "event_id"]).drop_duplicates(subset=key_cols).copy()
+
+        outcome_agg = (
+            src.groupby("dg_id", as_index=False)
+               .agg(
+                   ytd_starts=("event_id", "count"),
+                   ytd_made_cuts=("Made_Cut", "sum"),
+                   ytd_top25=("Top_25", "sum"),
+                   ytd_top10=("Top_10", "sum"),
+                   ytd_top5=("Top_5", "sum"),
+                   ytd_wins=("Win", "sum"),
+               )
+        )
+
+    else:
+        # fallback: use odds_df but still force event-level dedupe
+        o = odds_df.copy()
+        for c in ["year", "event_id", "dg_id"]:
+            if c in o.columns:
+                o[c] = pd.to_numeric(o[c], errors="coerce")
+
+        o = o[pd.to_numeric(o.get("dg_id"), errors="coerce").isin(dg_ids)].copy()
+
+        o_date_col = _pick_date_col(o, ["event_completed", "event_date", "date", "tournament_date", "end_date", "start_date"])
+        if o_date_col is not None:
+            o[o_date_col] = pd.to_datetime(o[o_date_col], errors="coerce")
+            o = o[(o[o_date_col] >= start_dt) & (o[o_date_col] <= end_dt)].copy()
+
+        # normalize flags
+        def _flag_o(col: str) -> pd.Series:
+            if col in o.columns:
+                return pd.to_numeric(o[col], errors="coerce").fillna(0).astype(int)
+            return pd.Series(0, index=o.index, dtype=int)
+
+        made_cut_col = None
+        for c in ["Made_Cut", "made_cut", "made_cut_flag"]:
+            if c in o.columns:
+                made_cut_col = c
+                break
+
+        if made_cut_col is not None:
+            o["Made_Cut"] = _flag_o(made_cut_col)
+        else:
+            # infer from finish_num if present
+            if "finish_num" in o.columns:
+                o["Made_Cut"] = pd.to_numeric(o["finish_num"], errors="coerce").notna().astype(int)
+            else:
+                o["Made_Cut"] = 0
+
+        # topX/win from existing columns if present; else infer from finish_num
+        if "Top_25" in o.columns:
+            o["Top_25"] = _flag_o("Top_25")
+            o["Top_10"] = _flag_o("Top_10") if "Top_10" in o.columns else 0
+            o["Top_5"]  = _flag_o("Top_5")  if "Top_5"  in o.columns else 0
+            o["Win"]    = _flag_o("Win")    if "Win"    in o.columns else 0
+        else:
+            fin = pd.to_numeric(o["finish_num"], errors="coerce") if "finish_num" in o.columns else pd.Series(np.nan, index=o.index)
+            o["Top_25"] = (fin <= 25).fillna(False).astype(int)
+            o["Top_10"] = (fin <= 10).fillna(False).astype(int)
+            o["Top_5"]  = (fin <= 5).fillna(False).astype(int)
+            o["Win"]    = (fin == 1).fillna(False).astype(int)
+
+        # critical: one row per player-event (prevents inflated starts/cuts)
+        key_cols = [c for c in ["dg_id", "year", "event_id"] if c in o.columns]
+        if len(key_cols) < 2:
+            key_cols = [c for c in ["dg_id", "event_id"] if c in o.columns]
+        o = o.dropna(subset=["dg_id", "event_id"]).drop_duplicates(subset=key_cols).copy()
+
+        outcome_agg = (
+            o.groupby("dg_id", as_index=False)
+             .agg(
+                 ytd_starts=("event_id", "count"),
+                 ytd_made_cuts=("Made_Cut", "sum"),
+                 ytd_top25=("Top_25", "sum"),
+                 ytd_top10=("Top_10", "sum"),
+                 ytd_top5=("Top_5", "sum"),
+                 ytd_wins=("Win", "sum"),
+             )
+        )
+
+    out = base.merge(outcome_agg, on="dg_id", how="left")
+    for c in ["ytd_starts", "ytd_made_cuts", "ytd_top25", "ytd_top10", "ytd_top5", "ytd_wins"]:
+        out[c] = pd.to_numeric(out[c], errors="coerce").fillna(0).astype(float)
+
+    # made cut pct: hard-safe
+    out["ytd_made_cut_pct"] = np.where(out["ytd_starts"] > 0, out["ytd_made_cuts"] / out["ytd_starts"], 0.0)
+    out["ytd_made_cut_pct"] = out["ytd_made_cut_pct"].clip(lower=0.0, upper=1.0)
+
+    # -------------------------
+    # 2) FORM-ish averages from rounds_df over the same window
+    # -------------------------
+    r = rounds_df.copy()
+    r = r[pd.to_numeric(r.get("dg_id"), errors="coerce").isin(dg_ids)].copy()
+
+    r_date_col = _pick_date_col(r, ["round_date", "event_completed", "date", "dt", "timestamp"])
+    if r_date_col is not None:
+        r[r_date_col] = pd.to_datetime(r[r_date_col], errors="coerce")
+        r = r[(r[r_date_col] >= start_dt) & (r[r_date_col] <= end_dt)].copy()
+
+    if "round_score" in r.columns:
+        r["round_score"] = pd.to_numeric(r["round_score"], errors="coerce")
+        avg_score = r.groupby("dg_id")["round_score"].mean()
+        out["ytd_avg_score"] = avg_score.reindex(out["dg_id"]).fillna(0.0).values
+    else:
+        out["ytd_avg_score"] = 0.0
+
+    if "sg_total" in r.columns:
+        r["sg_total"] = pd.to_numeric(r["sg_total"], errors="coerce")
+        avg_sg = r.groupby("dg_id")["sg_total"].mean()
+        out["ytd_avg_sg_total"] = avg_sg.reindex(out["dg_id"]).fillna(0.0).values
+    else:
+        out["ytd_avg_sg_total"] = 0.0
+
+    return out
+
 def _round_float_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
     Round float columns for readability:
@@ -151,7 +355,7 @@ def _round_float_columns(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
     float_cols = out.select_dtypes(include="float").columns
     for col in float_cols:
-        if col in ("ev_current", "ev_future_total"):
+        if col in ("ev_current", "ev_future_total", "ev_current_adj", "ev_future_max", "ev_future_max_adj"):
             out[col] = out[col].round(0)
         else:
             out[col] = out[col].round(2)
@@ -228,6 +432,8 @@ def build_weekly_view(
         raise ValueError(f"Schedule event_date is missing/invalid for yr={yr}, event_id={eid}")
     course_num = int(sched_row["course_num"])
     purse = float(sched_row["purse"])
+    ws = pd.to_numeric(sched_row.get("winner_share", np.nan), errors="coerce")
+    winner_share = float(ws) if np.isfinite(ws) else None
 
     cutoff_date = event_date - pd.Timedelta(days=1)
 
@@ -237,15 +443,37 @@ def build_weekly_view(
 
     # --- core data ---
     rounds_df = load_rounds()
-    odds_df = load_odds_and_results()
-    if "year" in odds_df.columns:
-        odds_df = odds_df[pd.to_numeric(odds_df["year"], errors="coerce") == yr].copy()
+    odds_all = load_odds_and_results()
+    odds_df = odds_all
     course_fit_df = load_course_fit(yr)
     player_skills_df = load_player_skills(yr)
 
-    # --- actual field (for backtests) ---
-    field_df = get_actual_field(odds_df, yr, eid)
+    # keep a season slice ONLY for "actual field" lookups
+    odds_season = odds_all.copy()
+    if "year" in odds_season.columns:
+        odds_season["year"] = pd.to_numeric(odds_season["year"], errors="coerce")
+        odds_season = odds_season[odds_season["year"] == yr].copy()
+
+    # --- field ---
+    field_df = get_actual_field(odds_season, yr, eid)
+
+    # if 2026 (or any season) has no actual field yet, simulate it from historical odds
+    if field_df is None or field_df.empty:
+        field_df = simulate_field_for_event(
+            season_year=yr,
+            event_id=eid,
+            as_of_date=cutoff_date,
+            odds_df=odds_all,  # <-- IMPORTANT: pass ALL years, not year==yr
+            schedule_df=schedule_df,
+        )
+
+    field_df = _coerce_dg_id(field_df)
+    if field_df is None or field_df.empty:
+        raise ValueError(...)
     dg_ids = field_df["dg_id"].dropna().astype(int).unique().tolist()
+
+    if field_df is None or field_df.empty:
+        raise ValueError(f"Field is empty for yr={yr}, event_id={eid} (after coercing dg_id).")
 
     # --- rolling stats ---
     rolling_df = compute_rolling_stats(
@@ -263,14 +491,24 @@ def build_weekly_view(
         as_of_date=cutoff_date,
     )
 
-    # --- YTD stats for current season ---
-    ytd_df = compute_ytd_stats(
-        rounds_df,
-        odds_df,
-        season_year=yr,
-        as_of_date=cutoff_date,
-        ytd_tracker=ytd_tracker,  # module-level
-    )
+    # --- YTD stats: Jan–Mar use last 90 days ending at cutoff_date; April+ use true season YTD ---
+    if pd.to_datetime(cutoff_date).month <= 3:
+        ytd_df = compute_ytd_stats_rolling_90d(
+            rounds_df=rounds_df,
+            odds_df=odds_df,
+            dg_ids=dg_ids,
+            as_of_date=cutoff_date,
+            days=90,
+            ytd_tracker=ytd_tracker,
+        )
+    else:
+        ytd_df = compute_ytd_stats(
+            rounds_df=rounds_df,
+            odds_df=odds_df,
+            season_year=yr,
+            as_of_date=cutoff_date,
+            ytd_tracker=ytd_tracker,
+        )
 
     # --- course history (this course only, prior years / prior rounds) ---
     course_hist_df = compute_course_history_stats(
@@ -293,6 +531,7 @@ def build_weekly_view(
         odds_df=odds_df,
         event_id=eid,
         purse=purse,
+        winner_share=winner_share,  # <-- add
         use_pre_odds=False,
     )
 
@@ -327,8 +566,13 @@ def build_weekly_view(
         .merge(course_fit_scores, on="dg_id", how="left")
         .merge(ev_current_df[["dg_id", "decimal_odds", "ev_current"]], on="dg_id", how="left")
         .merge(future_agg, on="dg_id", how="left")
-        .merge(course_hist_df, on="dg_id", how="left")
     )
+
+    # --- FORCE dg_id dtype match before course history merge ---
+    summary["dg_id"] = pd.to_numeric(summary["dg_id"], errors="coerce").astype("Int64")
+    course_hist_df["dg_id"] = pd.to_numeric(course_hist_df["dg_id"], errors="coerce").astype("Int64")
+
+    summary = summary.merge(course_hist_df, on="dg_id", how="left")
 
     # --- course sensitivity label (course_type) ---
 
@@ -513,7 +757,11 @@ def build_weekly_view(
     summary["pct_event_hist_sg"] = _pct_rank(summary["avg_sg_total_event"]) if "avg_sg_total_event" in summary.columns else np.nan
     summary["pct_course_hist_sg"] = _pct_rank(summary["course_avg_sg_total"]) if "course_avg_sg_total" in summary.columns else np.nan
 
-    course_type = str(summary["course_type"].iloc[0]).lower() if "course_type" in summary.columns else "mixed"
+    course_type = (
+        str(summary["course_type"].iloc[0]).lower()
+        if ("course_type" in summary.columns and not summary.empty)
+        else "mixed"
+    )
 
     if course_type == "form_only":
         if tier == "major":

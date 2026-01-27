@@ -392,15 +392,24 @@ def compute_ytd_stats(
         for col in ["year", "event_id", "dg_id"]:
             if col in yt.columns:
                 yt[col] = pd.to_numeric(yt[col], errors="coerce")
+
         if "event_completed" in yt.columns:
             yt["event_completed"] = pd.to_datetime(yt["event_completed"], errors="coerce")
             yt_win = yt[(yt["year"] == yr) & (yt["event_completed"] < ts)].copy()
 
+            # Optional: if your tracker includes multiple tours, keep PGA only
+            if "tour" in yt_win.columns:
+                yt_win = yt_win[yt_win["tour"].astype(str).str.upper().str.contains("PGA", na=False)].copy()
+
+            # Critical: ensure 1 row per (dg_id, event_id)
+            yt_win = (
+                yt_win.dropna(subset=["dg_id", "event_id"])
+                .sort_values("event_completed")
+                .drop_duplicates(subset=["dg_id", "event_id"], keep="last")
+            )
+
             starts_df = (
-                yt_win[["dg_id", "event_id"]]
-                .dropna(subset=["dg_id", "event_id"])
-                .drop_duplicates()
-                .groupby("dg_id", as_index=False)
+                yt_win.groupby("dg_id", as_index=False)
                 .agg(ytd_starts=("event_id", "count"))
             )
 
@@ -417,14 +426,24 @@ def compute_ytd_stats(
             yt["event_completed"] = pd.to_datetime(yt["event_completed"], errors="coerce")
             yt = yt[(yt["year"] == yr) & (yt["event_completed"] < ts)]
 
-        # normalize flags (counts)
+        # Optional: if tracker includes multiple tours, keep PGA only
+        if "tour" in yt.columns:
+            yt = yt[yt["tour"].astype(str).str.upper().str.contains("PGA", na=False)].copy()
+
+        # Critical: ensure 1 row per (dg_id, event_id) before summing flags
+        yt = (
+            yt.dropna(subset=["dg_id", "event_id"])
+            .sort_values("event_completed")
+            .drop_duplicates(subset=["dg_id", "event_id"], keep="last")
+        )
+
         for col in ["Top_25", "Top_10", "Top_5", "Win"]:
             if col in yt.columns:
-                yt[col] = pd.to_numeric(yt[col], errors="coerce").fillna(0).astype(int)
+                yt[col] = pd.to_numeric(yt[col], errors="coerce").fillna(0).clip(0, 1).astype(int)
             else:
                 yt[col] = 0
 
-        # made-cut logic: no cut on LIV, assume made cut
+        # made-cut logic
         if "tour" in yt.columns:
             is_liv = yt["tour"].astype(str).str.lower().str.contains("liv", na=False)
         else:
@@ -436,7 +455,7 @@ def compute_ytd_stats(
             mc = np.nan
 
         mc = mc.where(~is_liv, 1)
-        yt["Made_Cut"] = mc.fillna(1)  # neutral default for non-PGA
+        yt["Made_Cut"] = mc.fillna(0).clip(0, 1).astype(int)
 
         tracker_agg = (
             yt.groupby("dg_id", as_index=False)

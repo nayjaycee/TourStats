@@ -14,12 +14,11 @@ import streamlit as st
 # Column groupings (your spec)
 # -----------------------------
 CONDENSED_GROUPS: Dict[str, List[str]] = {
-    "Identifiers / Context": [
-        "dg_id",
-        "is_shortlist",
-        "decision_context",
-        "course_type",
-    ],
+    # "Identifiers / Context": [
+    #     "dg_id",
+    #     "is_shortlist",
+    #     "decision_context",
+    # ],
     "Decision scores": [
         "decision_score",
         "final_rank_score",
@@ -27,42 +26,39 @@ CONDENSED_GROUPS: Dict[str, List[str]] = {
     ],
     "Percentile drivers": [
         "pct_ytd_avg_sg_total",
-        "pct_ytd_made_cut_pct",
         "pct_event_hist_sg",
         "pct_course_hist_sg",
         "pct_sg_total_L12",
-        "pct_ev_current_adj",
-        "pct_oad_score",
     ],
     "Odds / EV": [
-        "decimal_odds",
+        "close_odds",
+        "win_prob_est",
         "ev_current_adj",
         "ev_future_max",
-        "ev_current_to_future_max_ratio",
     ],
-    "Recent form (SG)": [
-        "sg_total_L40",
-        "sg_total_L24",
-        "sg_total_L12",
-    ],
-    "Event history": [
-        "starts_event",
-        "made_cut_pct_event",
-        "top25_event",
-        "top10_event",
-        "top5_event",
-        "wins_event",
-        "prev_finish_num_event",
-    ],
-    "YTD": [
-        "ytd_starts",
-        "ytd_made_cut_pct",
-        "ytd_top25",
-        "ytd_top10",
-        "ytd_top5",
-        "ytd_wins",
-        "ytd_avg_sg_total",
-    ],
+    # "Recent form (SG)": [
+    #     "sg_total_L40",
+    #     "sg_total_L24",
+    #     "sg_total_L12",
+    # ],
+    # "Event history": [
+    #     "starts_event",
+    #     "made_cut_pct_event",
+    #     "top25_event",
+    #     "top10_event",
+    #     "top5_event",
+    #     "wins_event",
+    #     "prev_finish_num_event",
+    # ],
+    # "YTD": [
+    #     "ytd_starts",
+    #     "ytd_made_cut_pct",
+    #     "ytd_top25",
+    #     "ytd_top10",
+    #     "ytd_top5",
+    #     "ytd_wins",
+    #     "ytd_avg_sg_total",
+    # ],
 }
 
 def _format_for_ui(df: pd.DataFrame) -> "pd.io.formats.style.Styler":
@@ -85,7 +81,7 @@ def _format_for_ui(df: pd.DataFrame) -> "pd.io.formats.style.Styler":
             fmt[c] = "{:.2f}"
 
     # Odds
-    for c in ["close_odds", "decimal_odds"]:
+    for c in ["close_odds"]:
         if c in df.columns:
             fmt[c] = "{:.1f}"
 
@@ -193,7 +189,7 @@ def _style_group_table(df: pd.DataFrame) -> "pd.io.formats.style.Styler":
         elif "made_cut_pct" in c:
             # these are usually 0-1
             fmt[c] = "{:.0%}" if df[c].dropna().max() <= 1.5 else "{:.2f}"
-        elif c in ("decimal_odds",):
+        elif c in ("close_odds",):
             fmt[c] = "{:.1f}"
         elif c == "ev_current_to_future_max_ratio":
             fmt[c] = "{:.2f}"
@@ -243,7 +239,7 @@ def _style_group_table(df: pd.DataFrame) -> "pd.io.formats.style.Styler":
     )
 
     # Odds: lower is better
-    apply_gradient(["decimal_odds"], reverse=True)
+    apply_gradient(["close_odds"], reverse=True)
 
     # SG: higher better (simple gradient; we can switch to diverging later if you want)
     apply_gradient([c for c in df.columns if c.startswith("sg_") or c.endswith("_avg_sg_total")], reverse=False)

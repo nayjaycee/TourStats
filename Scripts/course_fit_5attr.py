@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Tuple
+from typing import Tuple, Optional
 
 import numpy as np
 import pandas as pd
@@ -99,7 +99,9 @@ def build_course_fit_5attr(
     combined: pd.DataFrame,
     target_season: int,
     cfg: CourseFitConfig = CourseFitConfig(),
+    target_courses: Optional[pd.DataFrame] = None,
 ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+
     """
     Main function: computes:
 
@@ -203,15 +205,53 @@ def build_course_fit_5attr(
             event_perf[zname] = (event_perf[col] - mu) / sd
 
     # 4) target-season PGA courses
-    courses_target = (
-        df[(df["tour"] == "PGA") & (df["season"] == target_season)]
-        .loc[:, ["course_num", "course_name"]]
-        .dropna(subset=["course_num"])
-        .drop_duplicates()
-        .sort_values("course_num")
-    )
-    if courses_target.empty:
-        raise ValueError(f"No PGA courses found for season {target_season}.")
+    # 4) target courses: use provided list (e.g., OAD schedule) if given,
+    # otherwise fall back to courses appearing in target_season rounds.
+    if target_courses is not None:
+        courses_target = target_courses.copy()
+
+        if "course_num" not in courses_target.columns:
+            raise ValueError("target_courses must include a 'course_num' column.")
+
+        # Fill course_name from historical data if not supplied (nice-to-have)
+        if "course_name" not in courses_target.columns:
+            # most common historical course_name for each course_num
+            name_map = (
+                df[(df["tour"] == "PGA") & (df["season"] < target_season)]
+                .dropna(subset=["course_num", "course_name"])
+                .groupby("course_num")["course_name"]
+                .agg(lambda x: x.value_counts().index[0])
+                .rename("course_name")
+                .reset_index()
+            )
+            courses_target = courses_target.merge(name_map, on="course_num", how="left")
+        else:
+            courses_target["course_name"] = courses_target["course_name"].astype(str)
+
+        courses_target["course_num"] = pd.to_numeric(
+            courses_target["course_num"], errors="coerce"
+        )
+
+        courses_target = (
+            courses_target.dropna(subset=["course_num"])
+            .drop_duplicates(subset=["course_num"])
+            .sort_values("course_num")
+            .reset_index(drop=True)
+        )
+
+        if courses_target.empty:
+            raise ValueError("target_courses resolved to empty after cleaning.")
+    else:
+        # Original behavior
+        courses_target = (
+            df[(df["tour"] == "PGA") & (df["season"] == target_season)]
+            .loc[:, ["course_num", "course_name"]]
+            .dropna(subset=["course_num"])
+            .drop_duplicates()
+            .sort_values("course_num")
+        )
+        if courses_target.empty:
+            raise ValueError(f"No PGA courses found for season {target_season}.")
 
     profiles = []
     for _, row in courses_target.iterrows():
@@ -280,15 +320,26 @@ def build_course_fit_5attr(
     return course_profiles, skills
 
 
-def build_and_save_course_fit_and_skills(target_season: int) -> None:
+def build_and_save_course_fit_and_skills_with_targets(
+    target_season: int,
+    target_courses: pd.DataFrame,
+    cfg: CourseFitConfig = CourseFitConfig(),
+) -> None:
     """
-    Convenience wrapper:
+    Convenience wrapper for preseason / OAD use:
       - loads rounds
-      - builds course profiles & player skills
-      - saves them to disk under the standard filenames.
+      - builds course profiles ONLY for target_courses
+      - builds player skills from historical PGA rounds
+      - saves both to disk
     """
     combined = load_rounds()
-    course_profiles, skills = build_course_fit_5attr(combined, target_season)
+
+    course_profiles, skills = build_course_fit_5attr(
+        combined=combined,
+        target_season=target_season,
+        cfg=cfg,
+        target_courses=target_courses,
+    )
 
     course_path = COURSE_FIT_TEMPLATE.with_name(
         str(COURSE_FIT_TEMPLATE.name).format(season=target_season)
@@ -302,5 +353,45 @@ def build_and_save_course_fit_and_skills(target_season: int) -> None:
     skills_path.parent.mkdir(parents=True, exist_ok=True)
     skills.to_csv(skills_path, index=False)
 
+    print(f"Requested courses: {len(target_courses)}")
+    print(f"Profiles created:  {len(course_profiles)}")
+    print(f"Saved course profiles to: {course_path}")
+    print(f"Saved player skills to:   {skills_path}")
+
+def build_and_save_course_fit_and_skills_with_targets(
+    target_season: int,
+    target_courses: pd.DataFrame,
+    cfg: CourseFitConfig = CourseFitConfig(),
+) -> None:
+    """
+    Convenience wrapper for preseason / OAD use:
+      - loads rounds
+      - builds course profiles ONLY for target_courses
+      - builds player skills from historical PGA rounds
+      - saves both to disk
+    """
+    combined = load_rounds()
+
+    course_profiles, skills = build_course_fit_5attr(
+        combined=combined,
+        target_season=target_season,
+        cfg=cfg,
+        target_courses=target_courses,
+    )
+
+    course_path = COURSE_FIT_TEMPLATE.with_name(
+        str(COURSE_FIT_TEMPLATE.name).format(season=target_season)
+    )
+    course_path.parent.mkdir(parents=True, exist_ok=True)
+    course_profiles.to_csv(course_path, index=False)
+
+    skills_path = PLAYER_SKILL_TEMPLATE.with_name(
+        str(PLAYER_SKILL_TEMPLATE.name).format(season=target_season)
+    )
+    skills_path.parent.mkdir(parents=True, exist_ok=True)
+    skills.to_csv(skills_path, index=False)
+
+    print(f"Requested courses: {len(target_courses)}")
+    print(f"Profiles created:  {len(course_profiles)}")
     print(f"Saved course profiles to: {course_path}")
     print(f"Saved player skills to:   {skills_path}")

@@ -18,7 +18,7 @@ IN_USE_DIR: Path = DATA_ROOT / "in Use"
 SCRIPTS_DIR: Path = PROJECT_ROOT / "Scripts"
 
 # Core combined rounds file we've already built
-COMBINED_ROUNDS_ALL_PATH: Path = IN_USE_DIR / "combined_rounds_all_2017_2025.csv"
+COMBINED_ROUNDS_ALL_PATH: Path = IN_USE_DIR / "combined_rounds_all_2017_2026.csv"
 
 # Event skill file (avg field strength etc.)
 EVENT_SKILL_PATH: Path = IN_USE_DIR / "event_skill.xlsx"
@@ -26,14 +26,38 @@ EVENT_SKILL_PATH: Path = IN_USE_DIR / "event_skill.xlsx"
 # Odds + results workbook (Excel)
 ODDS_AND_RESULTS_PATH: Path = IN_USE_DIR / "Odds_and_Results.xlsx"
 
+# ============================================================
+# PATHS EXPECTED BY Scripts/data_io.py
+# ============================================================
+
+# data_io.py expects this exact name:
+COMBINED_ROUNDS_PATH: Path = IN_USE_DIR / "combined_rounds_all_2017_2026.csv"
+
+# If you want to keep your existing name too, keep it as an alias:
+COMBINED_ROUNDS_ALL_PATH: Path = COMBINED_ROUNDS_PATH
+
+# Templates expected by data_io.py (these are format strings)
+COURSE_FIT_TEMPLATE: Path = IN_USE_DIR / "course_fit_{season}_dg_style_5attr.csv"
+PLAYER_SKILL_TEMPLATE: Path = IN_USE_DIR / "player_skills_{season}.csv"
+OAD_TEMPLATE: Path = IN_USE_DIR / "OAD_{season}.xlsx"
+PRESEASON_TEMPLATE: Path = IN_USE_DIR / "preseason_{season}.csv"
+
+# New: files used by weekly_view.py (don’t hard-code absolute paths there)
+YTD_TRACKER_PATH: Path = IN_USE_DIR / "ytd_tracker.csv"
+COURSE_SENSITIVITY_PATH: Path = DATA_ROOT / "Clean" / "Processed" / "course_sensitivity_table.csv"
+
+
 # OAD schedules (Excel)
 OAD_2024_PATH: Path = IN_USE_DIR / "OAD_2024.xlsx"
 OAD_2025_PATH: Path = IN_USE_DIR / "OAD_2025.xlsx"
+OAD_2026_PATH: Path = IN_USE_DIR / "OAD_2026.xlsx"
 
 OAD_PATHS = {
     2024: OAD_2024_PATH,
     2025: OAD_2025_PATH,
+    2026: OAD_2026_PATH,
 }
+
 
 # Where we'll drop derived files for modeling (course fit, baselines, preseason, etc.)
 DERIVED_DIR: Path = IN_USE_DIR / "derived"

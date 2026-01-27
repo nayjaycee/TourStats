@@ -68,6 +68,7 @@ def compute_current_event_ev(
     odds_df: pd.DataFrame,
     event_id: int,
     purse: float,
+    winner_share: Optional[float] = None,   # <-- add
     use_pre_odds: bool = False,
 ) -> pd.DataFrame:
     """
@@ -92,8 +93,25 @@ def compute_current_event_ev(
     sub.loc[sub["decimal_odds"] <= 0, "decimal_odds"] = pd.NA
 
     # implied probability
+    # implied probability
     sub["p_win"] = 1.0 / sub["decimal_odds"]
-    sub["ev_current"] = sub["p_win"] * float(purse)
+
+    # raw EV using TOTAL purse (your stated preference)
+    sub["ev_current_raw"] = sub["p_win"] * float(purse)
+
+    # cap (optional): if you have a winner_share for THIS EVENT, cap at that
+    cap = float(purse)  # fallback: no cap (or cap=purse)
+    # if you have winner share available (recommended)
+    if "winner_share" in sub.columns:
+        ws = pd.to_numeric(sub["winner_share"], errors="coerce")
+        if ws.notna().any():
+            cap = float(ws.dropna().iloc[0])
+
+    sub["ev_current_raw"] = sub["p_win"] * float(purse)
+    sub["ev_current"] = sub["ev_current_raw"]
+
+    cap = float(winner_share) if winner_share is not None and np.isfinite(winner_share) else float(purse)
+    sub["ev_current"] = np.minimum(sub["ev_current_raw"], cap)
 
     out = sub[["dg_id", "decimal_odds", "ev_current"]].copy()
     out["dg_id"] = pd.to_numeric(out["dg_id"], errors="coerce").astype("Int64")
@@ -291,12 +309,27 @@ def compute_future_ev_for_players(
     )
     future_events["purse_num"] = pd.to_numeric(purse_clean, errors="coerce")
 
+    # Winner share as numeric (cap for EV)
+    if "winner_share" in future_events.columns:
+        ws_raw = future_events["winner_share"].astype(str)
+        ws_clean = (
+            ws_raw.str.replace(",", "", regex=False)
+            .str.replace("$", "", regex=False)
+            .str.strip()
+        )
+        future_events["winner_share_num"] = pd.to_numeric(ws_clean, errors="coerce")
+    else:
+        future_events["winner_share_num"] = pd.NA
+
+
+
+
     # ------------------------------------------------------------------
     # Cartesian product: players × future events
     # ------------------------------------------------------------------
     players_df = pd.DataFrame({"dg_id": dg_ids_arr})
     fev = future_events[
-        ["event_id", "event_date", "Event_Tier", "purse_num"]
+        ["event_id", "event_date", "Event_Tier", "purse_num", "winner_share_num"]
     ].copy()
 
     cart = (
@@ -336,7 +369,15 @@ def compute_future_ev_for_players(
     # EV_future = implied win prob × purse
     # ------------------------------------------------------------------
     cart["p_win_future"] = 1.0 / cart["decimal_odds_proxy"]
-    cart["ev_future"] = cart["p_win_future"] * cart["purse_num"].astype(float)
+
+    cart["ev_future_raw"] = cart["p_win_future"] * cart["purse_num"].astype(float)
+
+    # cap defaults to purse if winner_share missing/non-numeric
+    cap = pd.to_numeric(cart["winner_share_num"], errors="coerce")
+    cap = cap.where(cap.notna(), pd.to_numeric(cart["purse_num"], errors="coerce"))
+
+    cart["ev_future"] = np.minimum(cart["ev_future_raw"], cap)
+
 
     return cart[
         ["dg_id", "event_id", "event_date", "Event_Tier", "decimal_odds_proxy", "ev_future"]

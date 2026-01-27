@@ -13,14 +13,13 @@ import os
 import inspect
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
+from Scripts.preseason_tab import render_preseason_tab
 
 import numpy as np
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
-
-COMBINED_ROUNDS_PATH = Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/combined_rounds_all_2017_2025.csv")
 
 # ============================================================
 # PATH + IMPORT FIX (match notebook: from Scripts.weekly_view ...)
@@ -30,7 +29,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 DATA_ROOT = PROJECT_ROOT / "Data"
-
+COMBINED_ROUNDS_PATH = DATA_ROOT / "in Use" / "combined_rounds_all_2017_2026.csv"
 
 # =========================
 # CONFIG (YOUR PATHS)
@@ -38,14 +37,17 @@ DATA_ROOT = PROJECT_ROOT / "Data"
 LEAGUE_CSV = {
     2024: Path("/Users/joshmacbook/python_projects/OAD/Data/Clean/Leagues/2024_small_normalized.csv"),
     2025: Path("/Users/joshmacbook/python_projects/OAD/Data/Clean/Leagues/2025_small_normalized.csv"),
+    2026: Path("/Users/joshmacbook/python_projects/OAD/Data/Clean/Leagues/2026_small_normalized.csv"),  # <-- add
 }
 
 SCHEDULE_XLSX = {
     2024: Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/OAD_2024.xlsx"),
     2025: Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/OAD_2025.xlsx"),
+    2026: Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/OAD_2026.xlsx"),  # <-- add
 }
 
-ODDS_AND_RESULTS_XLSX = Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/Odds_and_Results.xlsx")
+
+ODDS_AND_RESULTS_XLSX = Path("/Data/in Use/Needs Updated/Odds_and_Results.xlsx")
 
 PICKS_LOG_DIR = Path("/Users/joshmacbook/python_projects/OAD/Data/in Use/Picks Log")
 PICKS_LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -200,18 +202,39 @@ def load_schedule(season: int) -> pd.DataFrame:
 
 @st.cache_data(show_spinner=False)
 def load_league(season: int) -> pd.DataFrame:
-    path = LEAGUE_CSV[int(season)]
-    df = pd.read_csv(path)
+    path = Path(f"/Users/joshmacbook/python_projects/OAD/Data/Clean/Leagues/{season}_small_normalized.csv")
 
-    # normalize types a bit
-    df["event_id"] = pd.to_numeric(df["event_id"], errors="coerce")
-    df["raw_winnings"] = pd.to_numeric(df["raw_winnings"], errors="coerce")
-    df["league_id"] = df["league_id"].astype(str)
-    df["entry_id"] = df["entry_id"].astype(str)
-    df["username"] = df["username"].astype(str)
+    expected_cols = [
+        "league_id", "entry_id", "username",
+        "event_id", "event_name",
+        "dg_id", "player_name",
+        "raw_winnings",
+        "week_num", "year",
+    ]
+
+    # Case 1: missing file
+    if not path.exists():
+        return pd.DataFrame(columns=expected_cols)
+
+    # Case 2: file exists but is empty (0 bytes)
+    try:
+        if path.stat().st_size == 0:
+            return pd.DataFrame(columns=expected_cols)
+    except OSError:
+        return pd.DataFrame(columns=expected_cols)
+
+    # Case 3: try reading; also handle EmptyDataError anyway
+    try:
+        df = pd.read_csv(path, low_memory=False)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame(columns=expected_cols)
+
+    # Ensure schema
+    for c in expected_cols:
+        if c not in df.columns:
+            df[c] = pd.NA
 
     return df
-
 
 @st.cache_data(show_spinner=False)
 def load_odds(season: int) -> pd.DataFrame:
@@ -874,7 +897,7 @@ def build_yearly_sg(
 with st.sidebar:
     st.header("Inputs")
 
-    season = st.selectbox("Season", [2024, 2025], index=1, key="sb_season")
+    season = st.selectbox("Season", [2024, 2025, 2026], index=1, key="sb_season")
 
     mode = st.radio("Mode", ["Live", "Test"], horizontal=True, key="sb_mode")
     test_mode = (mode == "Test")
@@ -1079,13 +1102,14 @@ if debug:
 
 
 # Tabs
-tab1, tab2, tab3 = st.tabs([
-    "Pick",
-    "Player Profile",
-    "League",
-    # "Head to Head",
-])
+tab1, tab2, tab3 = st.tabs(["Pick", "Player", "Season/League"])
 
+# with tab5:
+#     render_preseason_tab(
+#         season=season,
+#         project_root=PROJECT_ROOT,
+#         hide_names=(mode == "Test"),
+#     )
 
 # =========================
 # TAB 1: Pick
@@ -2083,7 +2107,7 @@ with tab2:
     else:
         st.write("rounds_all has course_num:", "course_num" in rounds_all.columns)
         course_hist = build_course_history_table(
-            rounds_all=rounds_all,  # combined_rounds_all_2017_2025.csv
+            rounds_all=rounds_all,  # combined_rounds_all_2017_2026.csv
             dg_id=int(dg_id_sel),
             course_num=int(course_num_here),
             date_max=pre_event_cutoff,  # anything before event start (event_date - 1)
@@ -2225,29 +2249,52 @@ with tab2:
 with tab3:
     st.header("Season / League")
     st.subheader("League movement (cumulative winnings through the prior event)")
+    league_all = load_league(season)
+    sched2 = load_schedule(season)
 
     # -------------------------
     # Load inputs
     # -------------------------
     league_all = load_league(season)
-    sched2 = load_schedule(season)
+
+    if league_all.empty:
+        st.info(f"League file for {season} is empty/not created yet.")
+    else:
+        sched2 = load_schedule(season)
+
+        need_league_cols = {"league_id", "entry_id", "username", "event_id", "raw_winnings"}
+        missing_league = need_league_cols - set(league_all.columns)
+
+        if missing_league:
+            st.error(f"League file missing required columns: {sorted(missing_league)}")
+        else:
+            # ...rest of your tab3 logic...
+            pass
 
     # -------------------------
-    # Basic validation
+    # Basic validation (DO NOT st.stop() inside tabs)
     # -------------------------
+    ok = True
+
     need_league_cols = {"league_id", "entry_id", "username", "event_id", "raw_winnings"}
     missing_league = need_league_cols - set(league_all.columns)
     if missing_league:
         st.error(f"League file missing required columns: {sorted(missing_league)}")
-        st.stop()
+        ok = False
 
     if "event_id" not in sched2.columns:
         st.error("Schedule is missing required column: event_id")
-        st.stop()
+        ok = False
 
     if "event_order" not in sched2.columns:
         st.error("Schedule is missing required column: event_order")
-        st.stop()
+        ok = False
+
+    if not ok:
+        st.info("Fix the inputs above to enable Season/League visuals.")
+    else:
+        # put the rest of your tab3 logic below this line
+        ...
 
     # -------------------------
     # League selection
@@ -2791,3 +2838,4 @@ with tab3:
 #         score_col="oad_score",
 #         dg_id_col="dg_id",
 #     )
+
