@@ -23,6 +23,7 @@ CONDENSED_GROUPS: Dict[str, List[str]] = {
         "decision_score",
         "final_rank_score",
         "oad_score",
+        "decision_context",
     ],
     "Percentile drivers": [
         "pct_ytd_avg_sg_total",

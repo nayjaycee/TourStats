@@ -755,6 +755,8 @@ def plot_player_skill_radar(
                 tickcolor="rgba(255,255,255,0.55)",
             ),
             angularaxis=dict(
+                rotation=90,
+                direction="clockwise",
                 gridcolor="rgba(255,255,255,0.12)",
                 tickcolor="rgba(255,255,255,0.75)",
             ),
@@ -802,6 +804,29 @@ def _radar_course_vs_players_global(
       - player vectors: min-max per skill_* over full skills table
     Returns: (course_vec, player_vecs, error_message)
     """
+
+    # ============================================================
+    # ADD THIS BLOCK HERE (top of the function)
+    # ============================================================
+    AXES = ["DIST", "ACC", "APP", "ARG", "PUTT"]
+
+    IMP_COLS_BY_AXIS = {
+        "DIST": "imp_dist",
+        "ACC":  "imp_acc",
+        "APP":  "imp_app",
+        "ARG":  "imp_arg",
+        "PUTT": "imp_putt",
+    }
+
+    SKILL_COLS_BY_AXIS = {
+        "DIST": "skill_dist",
+        "ACC":  "skill_acc",
+        "APP":  "skill_app",
+        "ARG":  "skill_arg",
+        "PUTT": "skill_putt",
+    }
+    # ============================================================
+
     if not isinstance(weekly, dict) or "schedule_row" not in weekly:
         return None, {}, "weekly missing schedule_row"
 
@@ -836,18 +861,34 @@ def _radar_course_vs_players_global(
         return None, {}, f"no course_fit row for course_num={course_num}"
     row = row.iloc[0]
 
-    global_max_imp = float(np.nanmax(cf[imp_cols].to_numpy()))
-    if not np.isfinite(global_max_imp) or global_max_imp <= 0:
-        global_max_imp = 1.0
+    # ---- course vector (percentile-by-attribute across courses) ----
+    imp_cols = [IMP_COLS_BY_AXIS[a] for a in AXES]
 
-    course_vec = {
-        "DIST": float(row.get("imp_dist", 0.0) or 0.0) / global_max_imp,
-        "ACC":  float(row.get("imp_acc",  0.0) or 0.0) / global_max_imp,
-        "APP":  float(row.get("imp_app",  0.0) or 0.0) / global_max_imp,
-        "ARG":  float(row.get("imp_arg",  0.0) or 0.0) / global_max_imp,
-        "PUTT": float(row.get("imp_putt", 0.0) or 0.0) / global_max_imp,
-    }
-    course_vec = {k: float(np.clip(v, 0.0, 1.0)) for k, v in course_vec.items()}
+    cf_num = cf.copy()
+    for c in imp_cols:
+        cf_num[c] = pd.to_numeric(cf_num[c], errors="coerce")
+
+    # percentile rank per attribute across courses (0..1)
+    # method="average" avoids “hard” ties; clip to avoid exact 0/1 if you want
+    pct = cf_num[imp_cols].rank(pct=True, method="average")
+
+    # row index in cf_num for this course
+    idx = cf_num.index[cf_num["course_num"] == course_num]
+    if len(idx) == 0:
+        return None, {}, f"no course_fit row for course_num={course_num}"
+    i = idx[0]
+
+    raw = pct.loc[i, imp_cols].to_numpy(dtype=float)
+
+    # optional: soften exact endpoints so you don’t get true 0/1
+    eps = 0.02
+    scaled = np.clip(raw, eps, 1.0 - eps)
+
+    # optional gentle contrast
+    gamma = 0.95
+    scaled = np.power(scaled, gamma)
+
+    course_vec = dict(zip(AXES, scaled.tolist()))
 
     # ---- player vectors ----
     if player_skills_df is None or player_skills_df.empty:
@@ -860,11 +901,11 @@ def _radar_course_vs_players_global(
     skills["dg_id"] = pd.to_numeric(skills["dg_id"], errors="coerce").astype("Int64")
 
     attr_map = {
-        "DIST": "skill_dist",
         "ACC":  "skill_acc",
         "APP":  "skill_app",
         "ARG":  "skill_arg",
         "PUTT": "skill_putt",
+        "DIST": "skill_dist",
     }
     missing = [c for c in attr_map.values() if c not in skills.columns]
     if missing:
@@ -910,14 +951,10 @@ def plot_radar_course_vs_players(
     theta = axes + [axes[0]]
     fig = go.Figure()
 
-    # --- DataGolf-ish palette (explicitly requested) ---
-    COURSE_LINE = "#59C98C"   # green
+    COURSE_LINE = "#59C98C"
     COURSE_FILL = "rgba(89, 201, 140, 0.20)"
-
-    # Higher-contrast player lines (kept readable on dark bg)
     PLAYER_ALPHA_FILL = 0.12
 
-    # course
     cvals = [float(course_vec.get(a, np.nan)) for a in axes]
     fig.add_trace(go.Scatterpolar(
         r=close(cvals),
@@ -931,7 +968,6 @@ def plot_radar_course_vs_players(
         opacity=1.0,
     ))
 
-    # players (let Plotly pick contrasting colors; keep fill subtle)
     for label, vec in player_vecs.items():
         vals = [float(vec.get(a, np.nan)) for a in axes]
         fig.add_trace(go.Scatterpolar(
@@ -951,8 +987,12 @@ def plot_radar_course_vs_players(
     fig.update_layout(
         title=title,
         polar=dict(
+            bgcolor="rgba(0,0,0,0)",
             radialaxis=dict(visible=True, range=[0, 1], tickformat=".2f"),
-            bgcolor="rgba(0,0,0,0)"
+            angularaxis=dict(
+                rotation=90,          # puts first axis (DIST) at top
+                direction="clockwise" # matches DataGolf clockwise order
+            ),
         ),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
@@ -963,6 +1003,7 @@ def plot_radar_course_vs_players(
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
 
 # ============================================================
 # SIDEBAR (NO SEASON PICKER, NO USERNAME PICKER, NO LOGGING UI)
@@ -1459,6 +1500,7 @@ with tab1:
         # 1) pull the season-scoped tables
         course_fit_df = load_course_fit_df(season)
         player_skills_df = load_player_skills_df(season)
+
 
         # 2) label map for selected players
         label_map = {int(r["dg_id"]): str(r["player_label"]) for _, r in sel_df.iterrows()}
@@ -2122,7 +2164,11 @@ def plot_player_skill_radar(player_skills_df: pd.DataFrame, dg_id: int, title: s
     fig.update_traces(hovertemplate="%{theta}: %{r:.2f}<extra></extra>")
     fig.update_layout(
         title=title,
-        polar=dict(radialaxis=dict(visible=True, range=[0, 1], tickformat=".2f"), bgcolor="rgba(0,0,0,0)"),
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, 1], tickformat=".2f"),
+            angularaxis=dict(rotation=90, direction="clockwise"),
+            bgcolor="rgba(0,0,0,0)",
+        ),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         showlegend=False,
@@ -2614,20 +2660,20 @@ with tab4:
             snap_all = snap_all.dropna(subset=["label", "event_order"]).copy()
             snap_all["event_order"] = snap_all["event_order"].astype(int)
 
-            def latest_snapshot_upto(df: pd.DataFrame, week: int) -> pd.DataFrame:
-                d = df[df["event_order"] <= int(week)].copy()
-                if d.empty:
-                    return d
-                d = d.sort_values(["label", "event_order"])
-                return d.groupby("label", as_index=False).tail(1)[["label", "username", "cum_winnings", "event_order"]]
+        def latest_snapshot_upto(df: pd.DataFrame, week: int) -> pd.DataFrame:
+            d = df[df["event_order"] <= int(week)].copy()
+            if d.empty:
+                return d
+            d = d.sort_values(["label", "event_order"])
+            return d.groupby("label", as_index=False).tail(1)[["label", "username", "cum_winnings", "event_order"]]
 
-            league_totals_all = latest_snapshot_upto(snap_all, cut_week)
-            n_entries = int(len(league_totals_all))
+        league_totals_all = latest_snapshot_upto(snap_all, cut_week)
+        n_entries = int(len(league_totals_all))
 
-            paid_cut = None
-            if n_entries >= 7:
-                tmp = league_totals_all.sort_values("cum_winnings", ascending=False).reset_index(drop=True)
-                paid_cut = float(tmp.loc[6, "cum_winnings"])
+        paid_cut = None
+        if n_entries >= 7:
+            tmp = league_totals_all.sort_values("cum_winnings", ascending=False).reset_index(drop=True)
+            paid_cut = float(tmp.loc[6, "cum_winnings"])
 
             # -------------------------
             # ONE plot selector (unique key)
@@ -2944,13 +2990,21 @@ with tab5:
     out = _add_change(out, "L24_", "B2Y_", "L24_vs_2Y")
     out = _add_change(out, "L40_", "B2Y_", "L40_vs_2Y")
 
-    # Optional: join current field tag so you can filter to this week’s field
-    # (summary must exist in oad.py already)
-    if "summary" in locals() and summary is not None and "dg_id" in summary.columns:
-        field_ids = pd.to_numeric(summary["dg_id"], errors="coerce").dropna().astype(int).unique().tolist()
-        out["in_field"] = out["dg_id"].astype(int).isin(field_ids)
-    else:
-        out["in_field"] = False
+    # Optional: tag current field so we can filter to this week’s field
+    field_ids = []
+    if "summary" in globals() and summary is not None and "dg_id" in summary.columns:
+        field_ids = (
+            pd.to_numeric(summary["dg_id"], errors="coerce")
+            .dropna()
+            .astype(int)
+            .unique()
+            .tolist()
+        )
+
+    field_set = set(field_ids)
+
+    out["dg_id_num"] = pd.to_numeric(out["dg_id"], errors="coerce").astype("Int64")
+    out["in_field"] = out["dg_id_num"].isin(field_set).fillna(False)
 
     # UI controls
     only_field = st.toggle("Only show this week’s field", value=True)
@@ -2958,6 +3012,7 @@ with tab5:
         out_view = out[out["in_field"]].copy()
     else:
         out_view = out.copy()
+
 
     # -------------------------
     # Sort controls (3 dropdowns)
@@ -3011,15 +3066,20 @@ with tab5:
     c1, c2 = st.columns(2)
     with c1:
         st.subheader("Top improvers")
+        fig_top = px.bar(top, x=sort_col, y="player_name", orientation="h")
         st.plotly_chart(
-            px.bar(top, x=sort_col, y="player_name", orientation="h"),
+            fig_top,
             use_container_width=True,
+            key=f"tab5_top_improvers_{win_choice}_{base_choice}_{suffix}_{top_n}_{int(only_field)}",
         )
+
     with c2:
         st.subheader("Biggest declines")
+        fig_bot = px.bar(bot, x=sort_col, y="player_name", orientation="h")
         st.plotly_chart(
-            px.bar(bot, x=sort_col, y="player_name", orientation="h"),
+            fig_bot,
             use_container_width=True,
+            key=f"tab5_biggest_declines_{win_choice}_{base_choice}_{suffix}_{top_n}_{int(only_field)}",
         )
 
     # Scatter: baseline vs current for SG Total (only if present)
@@ -3030,9 +3090,11 @@ with tab5:
         sc = sc.dropna(subset=["B2Y_sg_total_mean", "L12_sg_total"])
 
         st.subheader("SG Total: baseline vs current")
+        fig_sc = px.scatter(sc, x="B2Y_sg_total_mean", y="L12_sg_total", hover_name="player_name")
         st.plotly_chart(
-            px.scatter(sc, x="B2Y_sg_total_mean", y="L12_sg_total", hover_name="player_name"),
+            fig_sc,
             use_container_width=True,
+            key=f"tab5_scatter_sg_total_{int(only_field)}_{win_choice}_{base_choice}",
         )
 
 
@@ -3139,6 +3201,3 @@ with tab5:
         hide_index=True,
         disabled=True,
     )
-
-
-
