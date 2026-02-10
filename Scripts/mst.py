@@ -2005,7 +2005,32 @@ elif active_tab == "Deep Dive":
         top_dg = int(summary_top.iloc[0]["dg_id"]) if (
                     isinstance(summary_top, pd.DataFrame) and not summary_top.empty) else pool["dg_id"].iloc[0]
 
-    sel_label = st.selectbox("Player", labels, index=default_idx, key="mst_dd_player")
+    # Default Deep Dive player: Weekly top1 if available, else summary_top[0], else first label
+    weekly_top1 = st.session_state.get("weekly_top1_dg_id", None)
+
+    default_dg = None
+    if weekly_top1 is not None:
+        default_dg = int(weekly_top1)
+    elif isinstance(summary_top, pd.DataFrame) and not summary_top.empty and "dg_id" in summary_top.columns:
+        default_dg = int(summary_top.iloc[0]["dg_id"])
+
+    default_label = None
+    if default_dg is not None:
+        # label is "player_name — dg_id"
+        # find the label in labels that matches dg_id
+        for lab in labels:
+            if int(label_to_id[lab]) == default_dg:
+                default_label = lab
+                break
+
+    if default_label is None and labels:
+        default_label = labels[0]
+
+    # Only set if first time, or if prior choice disappeared due to filtering/pool change
+    if ("mst_dd_player" not in st.session_state) or (st.session_state.get("mst_dd_player") not in labels):
+        st.session_state["mst_dd_player"] = default_label
+
+    sel_label = st.selectbox("Player", labels, key="mst_dd_player")
     dg_id_sel = int(label_to_id[sel_label])
     player_name_sel = str(label_to_name.get(dg_id_sel, f"dg_{dg_id_sel}"))
 
