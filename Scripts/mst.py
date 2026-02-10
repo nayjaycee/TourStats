@@ -363,34 +363,103 @@ def load_all_players() -> pd.DataFrame:
     return df.dropna(subset=["dg_id"]).drop_duplicates(subset=["dg_id"])
 
 @st.cache_data(show_spinner=False)
-def build_headshot_map(all_players_df: pd.DataFrame) -> dict[str, str]:
-    # Expect columns like: player (or name), dg_id, image
-    df = all_players_df.copy()
+def load_all_players() -> pd.DataFrame:
+    df = pd.read_excel(ALL_PLAYERS_PATH)
 
-    # Pick your join key. dg_id is best if you have it everywhere.
+    # Normalize column names for safety
+    df.columns = [c.strip().lower() for c in df.columns]
+
     if "dg_id" in df.columns:
-        key = "dg_id"
-    else:
-        key = "player"  # or whatever your name column is
+        df["dg_id"] = pd.to_numeric(df["dg_id"], errors="coerce")
+    if "player_name" in df.columns:
+        df["player_name"] = df["player_name"].astype(str)
 
-    # normalize
+    # allow image to be missing, but create it
     if "image" not in df.columns:
-        return {}
+        df["image"] = None
+    else:
+        df["image"] = df["image"].astype(str).str.strip()
+        df.loc[df["image"].isin(["", "nan", "None"]), "image"] = None
 
-    df = df[[key, "image"]].dropna()
+    df = df.dropna(subset=["dg_id"]).drop_duplicates(subset=["dg_id"]).copy()
+    df["dg_id"] = df["dg_id"].astype(int)
+    return df
+
+
+@st.cache_data(show_spinner=False)
+def build_headshot_maps(all_players: pd.DataFrame) -> tuple[dict[int, str], dict[str, str]]:
+    """
+    Returns:
+      id_to_img: dg_id(int) -> image_url(str)
+      name_to_img: player_name(str) -> image_url(str)
+    """
+    df = all_players.copy()
+    df.columns = [c.strip().lower() for c in df.columns]
+
+    if "dg_id" not in df.columns or "player_name" not in df.columns:
+        raise ValueError("All_players.xlsx must have columns: dg_id, player_name (and optionally image)")
+
+    if "image" not in df.columns:
+        df["image"] = None
+
+    df["dg_id"] = pd.to_numeric(df["dg_id"], errors="coerce")
+    df = df.dropna(subset=["dg_id"]).copy()
+    df["dg_id"] = df["dg_id"].astype(int)
+
+    df["player_name"] = df["player_name"].astype(str)
+
+    # normalize image values
     df["image"] = df["image"].astype(str).str.strip()
-    df = df[df["image"] != ""]
+    df.loc[df["image"].isin(["", "nan", "None"]), "image"] = None
 
-    return dict(zip(df[key].astype(str), df["image"]))
+    id_to_img = {}
+    name_to_img = {}
 
-def headshot_for(dg_id: int | str | None, player_name: str | None) -> str | None:
-    if dg_id is not None:
-        u = headshot_map.get(str(dg_id)) or headshot_map.get(dg_id)
-        if u:
-            return u
-    if player_name:
-        return headshot_map.get(player_name)
+    for _, row in df.iterrows():
+        dg_id = int(row["dg_id"])
+        name = str(row["player_name"])
+        img = row["image"]
+        if isinstance(img, str) and img.strip():
+            id_to_img[dg_id] = img
+            name_to_img[name] = img
+
+    return id_to_img, name_to_img
+
+
+def get_headshot_url(dg_id: int | None, player_name: str | None,
+                     id_to_img: dict[int, str], name_to_img: dict[str, str]) -> str | None:
+    if dg_id is not None and dg_id in id_to_img:
+        return id_to_img[dg_id]
+    if player_name is not None and player_name in name_to_img:
+        return name_to_img[player_name]
     return None
+
+def show_headshot(img_value: str | None, width: int = 90) -> None:
+    """
+    img_value can be:
+      - a public URL (https://...)
+      - a repo-relative/absolute file path that exists in the deployed repo
+    """
+    if not img_value:
+        return
+
+    s = str(img_value).strip()
+    if not s or s.lower() in {"none", "nan"}:
+        return
+
+    p = Path(s)
+    if p.exists():
+        st.image(str(p), width=width)
+        return
+
+    # also try relative to REPO_ROOT (handles "Data/MST/headshots/x.png")
+    p2 = REPO_ROOT / s
+    if p2.exists():
+        st.image(str(p2), width=width)
+        return
+
+    # otherwise treat as a URL
+    st.image(s, width=width)
 
 
 @st.cache_data(show_spinner=False)
@@ -709,6 +778,7 @@ def compute_approach_fit(
 schedule = load_schedule()
 fields = load_fields()
 all_players = load_all_players()
+ID_TO_IMG, NAME_TO_IMG = build_headshot_maps(ALL_PLAYERS)
 skills = load_player_skill()
 buckets = load_approach_buckets()
 rounds = load_rounds_minimal()
@@ -1477,6 +1547,16 @@ with tab3:
     pool["dg_id"] = pool["dg_id"].astype(int)
     pool["player_name"] = pool["player_name"].astype(str)
 
+    # --- build name<->id maps FROM POOL (authoritative for this event/field) ---
+    name_to_id = dict(zip(pool["player_name"], pool["dg_id"]))
+    id_to_name = dict(zip(pool["dg_id"], pool["player_name"]))
+
+    player_options = sorted(pool["player_name"].unique().tolist())
+
+    # defaults (first two players)
+    default_a = 0
+    default_b = 1 if len(player_options) > 1 else 0
+
     if len(pool) < 2:
         st.info("Need at least two players available to compare.")
         st.stop()
@@ -1492,30 +1572,33 @@ with tab3:
     with selA:
         st.markdown("### Player A")
         a1, a2 = st.columns([6, 2], vertical_alignment="center")
+
         with a1:
-            name_a = st.selectbox(" ", player_options, key="h2h_a", label_visibility="collapsed")
+            name_a = st.selectbox(" ", player_options, index=default_a, key="h2h_a", label_visibility="collapsed")
+
         with a2:
-            url_a = headshot_for(dg_id_map[name_a], name_a)  # adapt dg_id_map lookup to your code
-            if url_a:
-                st.image(url_a, width=90)
+            dg_a = int(name_to_id[name_a])
+            url_a = get_headshot_url(dg_a, name_a, ID_TO_IMG, NAME_TO_IMG)
+            show_headshot(url_a, width=90)
 
     with selB:
         st.markdown("### Player B")
         b1, b2 = st.columns([6, 2], vertical_alignment="center")
-        with b1:
-            name_b = st.selectbox(" ", player_options, key="h2h_b", label_visibility="collapsed")
-        with b2:
-            url_b = headshot_for(dg_id_map[name_b], name_b)
-            if url_b:
-                st.image(url_b, width=90)
 
-    dg_a, dg_b = int(dg_a), int(dg_b)
+        with b1:
+            name_b = st.selectbox(" ", player_options, index=default_b, key="h2h_b", label_visibility="collapsed")
+
+        with b2:
+            dg_b = int(name_to_id[name_b])
+            url_b = get_headshot_url(dg_b, name_b, ID_TO_IMG, NAME_TO_IMG)
+            show_headshot(url_b, width=90)
+
+    dg_a = int(name_to_id[name_a])
+    dg_b = int(name_to_id[name_b])
+
     if dg_a == dg_b:
         st.warning("Pick two different players.")
         st.stop()
-
-    name_a = str(id_to_name.get(dg_a))
-    name_b = str(id_to_name.get(dg_b))
 
     st.subheader("Recent tournaments")
     left, right = st.columns(2, gap="large")
@@ -1877,9 +1960,8 @@ with tab4:
         st.header(player_name_sel)
 
     with img_col:
-        url = get_headshot_url(dg_id_sel)
-        if url:
-            st.image(url, width=90)
+        url = get_headshot_url(dg_id_sel, player_name_sel, ID_TO_IMG, NAME_TO_IMG)
+        show_headshot(url, width=90)
 
     st.subheader("Course History")
 
