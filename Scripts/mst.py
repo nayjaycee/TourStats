@@ -1812,7 +1812,7 @@ with tab4:
     dg_id_sel = int(label_to_id[sel_label])
     player_name_sel = str(label_to_name.get(dg_id_sel, f"dg_{dg_id_sel}"))
 
-    st.subheader("Course history (same course, any event name)")
+    st.subheader("Course History")
 
     course_num = st.session_state.get("selected_course_num", None)
 
