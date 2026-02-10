@@ -2146,7 +2146,7 @@ with tab4:
     # -------------------------
     # Tournament breakdown: 2024+ (event totals) + 2017-2023 (eventlevel rows)
     # -------------------------
-    st.subheader("Tournament breakdown (mixed history)")
+    st.subheader("Tournament breakdown")
 
     # 2024+ aggregate to event totals
     r = rounds_2024p.copy()
