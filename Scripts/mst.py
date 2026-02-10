@@ -113,7 +113,8 @@ SEASON_YEAR = 2026
 # ============================================================
 # Page config
 # ============================================================
-st.set_page_config(page_title="MST OAD", layout="wide")
+st.set_page_config(page_title="MST OaD", layout="wide")
+st.title("One and Done")
 
 st.markdown(
     """
