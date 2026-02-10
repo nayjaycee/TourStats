@@ -2333,8 +2333,8 @@ elif active_tab == "Deep Dive":
                 )
                 fig.update_xaxes(
                     type="linear",
-                    tickmode="array",
-                    tickvals=x_all,  # forces 1..60 order even with missing bar rounds
+                    tickmode="auto",  # <- important: not array
+                    nticks=12,
                 )
                 fig.update_yaxes(zeroline=True)
 
