@@ -1952,7 +1952,7 @@ with tab4:
 
     with img_col:
         url = get_headshot_url(dg_id_sel, player_name_sel, ID_TO_IMG, NAME_TO_IMG)
-        show_headshot(url, width=90)
+        show_headshot(url, width=180)
 
     st.subheader("Course History")
 
@@ -2251,6 +2251,8 @@ with tab4:
                         name="SG Total",
                     )
                 )
+
+                fig.update_layout(barmode="relative")
 
                 fig.update_layout(
                     height=420,
