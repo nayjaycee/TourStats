@@ -2174,37 +2174,6 @@ with tab4:
                         )
                         bar_df = bar_df.loc[abs_sum > 0].copy()
 
-                    if not bar_df.empty:
-                        # composition-of-total segments (by absolute contribution)
-                        total = bar_df["sg_total_calc"].to_numpy(dtype=float)
-                        abs_sum = (
-                                np.abs(bar_df["sg_ott"].to_numpy(dtype=float))
-                                + np.abs(bar_df["sg_app"].to_numpy(dtype=float))
-                                + np.abs(bar_df["sg_arg"].to_numpy(dtype=float))
-                                + np.abs(bar_df["sg_putt"].to_numpy(dtype=float))
-                        )
-                        safe_abs_sum = np.where(abs_sum == 0.0, 1.0, abs_sum)
-
-                        w_ott = np.abs(bar_df["sg_ott"].to_numpy(dtype=float)) / safe_abs_sum
-                        w_app = np.abs(bar_df["sg_app"].to_numpy(dtype=float)) / safe_abs_sum
-                        w_arg = np.abs(bar_df["sg_arg"].to_numpy(dtype=float)) / safe_abs_sum
-                        w_putt = np.abs(bar_df["sg_putt"].to_numpy(dtype=float)) / safe_abs_sum
-
-                        sign_total = np.where(total < 0, -1.0, 1.0)
-                        total_abs = np.abs(total)
-
-                        bar_df["seg_ott"] = sign_total * total_abs * w_ott
-                        bar_df["seg_app"] = sign_total * total_abs * w_app
-                        bar_df["seg_arg"] = sign_total * total_abs * w_arg
-                        bar_df["seg_putt"] = sign_total * total_abs * w_putt
-
-                        long = bar_df.melt(
-                            id_vars=["round_index"],
-                            value_vars=["seg_ott", "seg_app", "seg_arg", "seg_putt"],
-                            var_name="component",
-                            value_name="value",
-                        )
-
                         label_map = {
                             "seg_ott": "SG OTT",
                             "seg_app": "SG APP",
@@ -2214,57 +2183,68 @@ with tab4:
                         long["component"] = long["component"].map(label_map)
 
                 # -------------------------
-                # 3) PLOT: bars (if any) + total line (always)
+                # 3) PLOT: TRUE stacked bars (components) + SG total line
                 # -------------------------
-                if long is not None and not long.empty:
-                    fig = px.bar(
-                        long,
-                        x="round_index",
-                        y="value",
-                        color="component",
-                        barmode="relative",
-                    )
-                # lighter + semi-transparent bar colors
-                    COLOR_MAP = {
-                        "SG OTT": "rgba(120, 180, 255, 0.55)",  # blue
-                        "SG APP": "rgba(255, 170, 190, 0.55)",  # green
-                        "SG ARG": "rgba(190, 150, 255, 0.55)",  # purple
-                        "SG PUTT": "rgba(255, 190, 120, 0.55)",  # orange
+                fig = go.Figure()
+
+                # x as categorical so bars stack at each index
+                line_x = line_df["round_index"].astype(int).astype(str)
+
+                # Bars: only where we have all components (bar_df already filtered)
+                if have_all_comps and (bar_df is not None) and (not bar_df.empty):
+                    bar_x = bar_df["round_index"].astype(int).astype(str)
+
+                    # IMPORTANT: stack the REAL components (not seg_*), so it’s a real SG breakdown
+                    BAR_COLS = {
+                        "SG OTT": "sg_ott",
+                        "SG APP": "sg_app",
+                        "SG ARG": "sg_arg",
+                        "SG PUTT": "sg_putt",
                     }
 
-                    # apply per-trace colors (px creates one trace per component)
-                    for tr in fig.data:
-                        if tr.name in COLOR_MAP:
-                            tr.marker.color = COLOR_MAP[tr.name]
-                            tr.marker.line.width = 0  # cleaner look on dark bg
+                    COLOR_MAP = {
+                        "SG OTT": "rgba(120, 180, 255, 0.55)",
+                        "SG APP": "rgba(255, 170, 190, 0.55)",
+                        "SG ARG": "rgba(190, 150, 255, 0.55)",
+                        "SG PUTT": "rgba(255, 190, 120, 0.55)",
+                    }
 
-                else:
-                    # no bars available; start with empty figure
-                    fig = go.Figure()
+                    for label, col in BAR_COLS.items():
+                        if col in bar_df.columns:
+                            fig.add_trace(
+                                go.Bar(
+                                    x=bar_x,
+                                    y=pd.to_numeric(bar_df[col], errors="coerce"),
+                                    name=label,
+                                    marker=dict(color=COLOR_MAP.get(label)),
+                                )
+                            )
 
-                # SG Total line ALWAYS, even when bars missing
+                # SG Total line (always)
                 fig.add_trace(
                     go.Scatter(
-                        x=line_df["round_index"],
+                        x=line_x,
                         y=line_df["sg_total"],
                         mode="lines+markers",
                         name="SG Total",
                     )
                 )
 
-                fig.update_layout(barmode="relative")
-
                 fig.update_layout(
+                    barmode="relative",  # TRUE stacking
                     height=420,
                     margin=dict(l=20, r=20, t=30, b=20),
                     legend_title_text="",
                 )
+
                 fig.update_yaxes(zeroline=True)
+                fig.update_xaxes(type="category")  # force categorical axis
+
                 st.plotly_chart(fig, use_container_width=True)
 
-                # Optional note to explain gaps
-                if (long is None) or long.empty:
+                if (not have_all_comps) or (bar_df is None) or bar_df.empty:
                     st.caption("Bars hidden on rounds where SG component breakdown (OTT/APP/ARG/PUTT) is unavailable.")
+
 
 
         else:
