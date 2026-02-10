@@ -1862,7 +1862,6 @@ elif active_tab == "H2H":
         out = out.sort_values("year", ascending=False).reset_index(drop=True)
         return out
 
-
     c1, c2 = st.columns(2, gap="large")
     with c1:
         st.markdown(f"#### {name_a}")
