@@ -113,8 +113,8 @@ SEASON_YEAR = 2026
 # ============================================================
 # Page config
 # ============================================================
-st.set_page_config(page_title="Player Stats", layout="wide")
-st.title("Player Stats")
+st.set_page_config(page_title="MacKenzie Scott's Tots One and Done Collective Ownership Group LLC", layout="wide")
+st.title("MSTOaDCOG LLC")
 
 st.markdown(
     """
