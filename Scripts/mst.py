@@ -71,6 +71,18 @@ SEASON_YEAR = 2026
 st.set_page_config(page_title="Player Stats", layout="wide")
 st.title("Player Stats")
 
+st.markdown(
+    """
+    <style>
+      /* Remove extra top padding in the main app area */
+      .block-container { padding-top: 3.0rem; }
+
+      /* Slightly tighten header area too (Streamlit versions vary) */
+      header[data-testid="stHeader"] { height: 0rem; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # ============================================================
 # Paths (AUTO-DETECT between your local OAD project and public repo)
@@ -700,7 +712,6 @@ buckets = load_approach_buckets()
 rounds = load_rounds_minimal()
 
 with st.sidebar:
-    st.header("Controls")
 
     # --- schedule ordering ---
     sched = schedule.copy()
@@ -712,15 +723,15 @@ with st.sidebar:
     else:
         sched = sched.reset_index(drop=True)
 
-    # stable row selection (works even if event_id is missing)
+    # stable row selection
     sched = sched.reset_index(drop=True)
     sched["__row_id"] = sched.index.astype(int)
 
-    # event dropdown shows ONLY event_name
+    # label shown in dropdown
     sched["__event_label"] = sched.get("event_name", "").astype(str)
     sched.loc[sched["__event_label"].str.strip().isin(["", "nan", "None"]), "__event_label"] = "Unknown event"
 
-    # --- pick default = next upcoming event (coming week) ---
+    # pick default = next upcoming (same logic you already have)
     today = pd.Timestamp.today().normalize()
 
     date_col2 = None
@@ -731,57 +742,59 @@ with st.sidebar:
 
     if date_col2:
         sched[date_col2] = pd.to_datetime(sched[date_col2], errors="coerce")
-
-        # sort so upcoming events are first, then past events
         is_upcoming = sched[date_col2] >= today
         sched = sched.assign(__is_upcoming=is_upcoming)
         sched = sched.sort_values(["__is_upcoming", date_col2], ascending=[False, True]).drop(columns="__is_upcoming")
 
-        labels = sched["__event_label"].tolist()
-
-        # default to first upcoming; fallback to 0 if none upcoming
-        upcoming_idxs = np.where((sched[date_col2] >= today).to_numpy())[0]
-        default_idx = int(upcoming_idxs[0]) if len(upcoming_idxs) else 0
+        upcoming = sched.loc[sched[date_col2] >= today, "__row_id"].tolist()
+        default_row_id = int(upcoming[0]) if len(upcoming) else int(sched["__row_id"].iloc[0])
     else:
-        labels = sched["__event_label"].tolist()
-        default_idx = 0
+        default_row_id = int(sched["__row_id"].iloc[0])
 
-    selected_idx = st.selectbox(
+    # build a stable mapping for labels
+    row_ids = [int(x) for x in sched["__row_id"].tolist()]
+    label_by_id = dict(zip(row_ids, sched["__event_label"].tolist()))
+
+    selected_row_id = st.selectbox(
         "Event",
-        options=list(range(len(labels))),
-        format_func=lambda i: labels[i],
-        index=default_idx,
+        options=row_ids,
+        format_func=lambda rid: label_by_id.get(int(rid), "Unknown event"),
+        index=row_ids.index(int(default_row_id)),
+        key="event_select_row_id",
     )
 
-    selected_row = sched.iloc[int(selected_idx)]
+    selected_row = sched.loc[sched["__row_id"].astype(int) == int(selected_row_id)].iloc[0]
 
-    # ----------------------------
-    # Event details panel (from schedule row) - nicer card + robust champ lookup
-    # ----------------------------
+    course_num_val = pd.to_numeric(selected_row.get("course_num"), errors="coerce")
+    course_num = int(course_num_val) if pd.notna(course_num_val) else None
+    st.session_state["selected_course_num"] = course_num
+
+    # image (optional) from schedule column "image"
+    img_url = selected_row.get("image", None)
+    img_url = None if img_url is None else str(img_url).strip()
+
+    if img_url and img_url.lower() not in {"nan", "none", "null", "<unset>", ""}:
+        st.image(img_url, use_container_width=True)
+
+
     def _clean_text(x) -> str:
         if x is None:
             return "—"
-        if isinstance(x, float) and np.isnan(x):
-            return "—"
         s = str(x).strip()
-        if s == "" or s.lower() in {"nan", "none", "null"}:
+        if s == "" or s.lower() in {"nan", "none", "null", "<unset>"}:
             return "—"
         return s
 
-    def _first_present(row: pd.Series, candidates: list[str]):
-        for c in candidates:
-            if c in row.index:
-                return row.get(c)
-        return None
 
     def _as_money(x) -> str:
         v = pd.to_numeric(x, errors="coerce")
         return f"${v:,.0f}" if pd.notna(v) else "—"
 
-    course = _clean_text(_first_present(selected_row, ["course_name", "course", "course_nm"]))
-    champ  = _clean_text(_first_present(selected_row, ["defending_champ", "defending_champion", "def_champ", "champion"]))
-    purse  = _as_money(_first_present(selected_row, ["purse", "total_purse"]))
-    winshr = _as_money(_first_present(selected_row, ["winner_share", "winners_share", "winner_purse_share"]))
+
+    course = _clean_text(selected_row.get("course_name"))
+    champ = _clean_text(selected_row.get("defending_champ"))
+    purse = _as_money(selected_row.get("purse"))
+    winshr = _as_money(selected_row.get("winner_share"))
 
     st.markdown(
         f"""
@@ -795,23 +808,23 @@ with st.sidebar:
           <div style="font-size: 22px; font-weight: 800; margin-bottom: 10px;">Event Details</div>
 
           <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.75;">Course</div>
-            <div style="font-weight:700; text-align:right;">{course}</div>
+            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Course</div>
+            <div style="font-weight:800; font-size:14px; text-align:right;">{course}</div>
           </div>
 
           <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.75;">Defending Champion</div>
-            <div style="font-weight:700; text-align:right;">{champ}</div>
+            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Defending Champion</div>
+            <div style="font-weight:800; font-size:14px; text-align:right;">{champ}</div>
           </div>
 
           <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.75;">Purse</div>
-            <div style="font-weight:800; text-align:right;">{purse}</div>
+            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Purse</div>
+            <div style="font-weight:900; font-size:15px; text-align:right;">{purse}</div>
           </div>
 
           <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.75;">Winner&apos;s Share</div>
-            <div style="font-weight:800; text-align:right;">{winshr}</div>
+            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Winner&apos;s Share</div>
+            <div style="font-weight:900; font-size:15px; text-align:right;">{winshr}</div>
           </div>
         </div>
         """,
@@ -837,12 +850,36 @@ with st.sidebar:
         st.session_state.only_in_field = True
 
     st.markdown("---")
-    only_in_field = st.toggle("Only players in this week's field", value=st.session_state.only_in_field)
+    st.caption("Filters")
+    only_in_field = st.toggle(
+        "Only players in this week's field",
+        value=st.session_state.only_in_field,
+        key="only_in_field_toggle_sidebar",  # prevents duplicate-id issues if it appears elsewhere later
+    )
     st.session_state.only_in_field = only_in_field
 
     if only_in_field and not field_ids:
-        st.warning("No field uploaded yet for this event (Fields.xlsx has 0 rows for this event_id). Showing All_players instead.")
+        st.warning("Field Not Yet Released - Showing All Players Instead.")
         only_in_field = False
+# -------------------------
+# Player exclusion controls
+# -------------------------
+    if "excluded_players" not in st.session_state:
+        st.session_state["excluded_players"] = []
+
+    player_universe = st.session_state.get("player_universe", [])
+
+    st.markdown("---")
+    if not player_universe:
+        st.caption("Player list will appear once Tab 1 loads for the selected event.")
+
+    excluded = st.multiselect(
+        "Filter OUT players",
+        options=player_universe,
+        key="excluded_players",  # widget owns the value
+    )
+
+
 
 # Pull schedule row for this event_id (first match)
 # Selected schedule row (by index), independent of event_id
@@ -858,8 +895,6 @@ else:
 
 if event_id is None:
     st.info("This schedule row has no event_id yet, so field/odds/YTD-by-event can’t be shown for it.")
-elif not field_ids:
-    st.warning("No field uploaded yet for this event (Fields.xlsx has 0 rows for this event_id).")
 
 
 # ============================================================
@@ -1079,6 +1114,33 @@ def render_table(
     sty = sty.format(fmt)
 
     st.dataframe(sty, use_container_width=True, height=height)
+
+def heat_table(df: pd.DataFrame, sg_cols, precision=2):
+    show = df.copy()
+
+    # convert formatted "+1.23" strings back to numbers for coloring
+    for c in sg_cols:
+        if c in show.columns:
+            show[c] = (
+                show[c].astype(str)
+                      .str.replace("+", "", regex=False)
+                      .replace({"": None, "nan": None, "None": None})
+            )
+            show[c] = pd.to_numeric(show[c], errors="coerce")
+
+    # build styler
+    sty = show.style
+
+    # center 0 so negatives/positives diverge (red↔green look)
+    # pick a built-in cmap; "RdYlGn" is classic
+    sty = sty.background_gradient(subset=[c for c in sg_cols if c in show.columns], cmap="RdYlGn", axis=None)
+
+    # format back to +/- strings for display
+    fmt = {c: (lambda x: "" if pd.isna(x) else f"{x:+.{precision}f}") for c in sg_cols if c in show.columns}
+    sty = sty.format(fmt)
+
+    return sty
+
 # ============================================================
 # summary_top (used by H2H + Deep Dive player pools)
 # ============================================================
@@ -1123,12 +1185,66 @@ with tab1:
 
     # use sort_by as before (still the real column name)
     out_show = out.copy()
-    if sort_by in out_show.columns:
-        out_show = out_show.sort_values(sort_by, ascending=False)
-
-    out_show = out.copy()
     if sort_by and sort_by in out_show.columns:
         out_show = out_show.sort_values(sort_by, ascending=False)
+
+    name_col = "player_name"
+    odds = odds_col if odds_col else None
+
+    # Apply "Only in field" from sidebar (uses dg_id)
+    if st.session_state.get("only_in_field", False) and field_ids and "dg_id" in out_show.columns:
+        out_show["dg_id"] = pd.to_numeric(out_show["dg_id"], errors="coerce")
+        out_show = out_show[out_show["dg_id"].isin([int(x) for x in field_ids])]
+
+    # --- Sidebar-driven filters ---
+    player_q = st.session_state.get("player_q", "").strip()
+    top_n = int(st.session_state.get("player_top_n", 0) or 0)
+    min_sg_total_l24 = float(st.session_state.get("min_sg_total_l24", 0.0))
+    min_sg_app_l24 = float(st.session_state.get("min_sg_app_l24", -99.0))
+    use_odds_range = bool(st.session_state.get("use_odds_range", False))
+
+    # Build multiselect here (so we have options)
+    all_players = out_show[name_col].dropna().sort_values().unique().tolist()
+
+    # Publish the player list for the sidebar exclusion selector
+    st.session_state["player_universe"] = all_players
+
+    # Apply exclusions (filter OUT)
+    excluded_players = st.session_state.get("excluded_players", [])
+    if excluded_players:
+        out_show = out_show[~out_show[name_col].isin(excluded_players)]
+
+
+    if player_q:
+        out_show = out_show[out_show[name_col].str.contains(player_q, case=False, na=False)]
+
+    # Odds range (compute bounds from current df)
+    if use_odds_range and odds and odds in out_show.columns:
+        odds_series = pd.to_numeric(out_show[odds], errors="coerce").dropna()
+        if not odds_series.empty:
+            lo, hi = float(odds_series.min()), float(odds_series.max())
+            odds_min, odds_max = st.slider(
+                "Odds range",
+                min_value=lo,
+                max_value=hi,
+                value=(lo, hi),
+                key="odds_range_slider",
+            )
+            out_show[odds] = pd.to_numeric(out_show[odds], errors="coerce")
+            out_show = out_show[out_show[odds].between(odds_min, odds_max)]
+
+    # Thresholds
+    if "sg_total_L24" in out_show.columns:
+        out_show["sg_total_L24"] = pd.to_numeric(out_show["sg_total_L24"], errors="coerce")
+        out_show = out_show[out_show["sg_total_L24"] >= min_sg_total_l24]
+
+    if "sg_app_L24" in out_show.columns and min_sg_app_l24 > -50:  # treat -99 as "ignore"
+        out_show["sg_app_L24"] = pd.to_numeric(out_show["sg_app_L24"], errors="coerce")
+        out_show = out_show[out_show["sg_app_L24"] >= min_sg_app_l24]
+
+    # Top N
+    if top_n > 0:
+        out_show = out_show.head(top_n)
 
     name_col = "player_name"
     odds = odds_col if odds_col else None
@@ -1306,31 +1422,39 @@ with tab2:
     for c in val_cols:
         s[c] = pd.to_numeric(s[c], errors="coerce")
 
+    # Scale SG to more readable units
+    SG_SCALE = 100.0
+    if val_cols:
+        s[val_cols] = s[val_cols] * SG_SCALE
+
+    # Note above the selector
+    st.caption(f"Note: SG columns are scaled to SG per 100 shots (original values ×{int(SG_SCALE)}).")
+    st.caption(
+        "None indicates shots recorded in this distance bucket (often DP World Tour players or rookies).")
+
     # Sort by a chosen bucket value
+    default_sort = "100 – 150 SG" if "100 – 150 SG" in val_cols else (val_cols[0] if val_cols else None)
+
     sort_choice = st.selectbox(
         "Sort by",
         options=val_cols,
-        index=(val_cols.index("100–150 Value") if "100–150 Value" in val_cols else 0) if val_cols else 0,
+        index=(val_cols.index(default_sort) if default_sort else 0),
+        key="tab2_sort_by",
     )
 
     if sort_choice and sort_choice in s.columns:
         s = s.sort_values(sort_choice, ascending=False)
 
-    # Style + format
+    # Style + format (now scaled)
     sty = s.style
     if val_cols:
         sty = sty.background_gradient(subset=val_cols, cmap="RdYlGn")
 
-    sty = sty.format({c: "{:.4f}" for c in val_cols})
+    # If you're using "per 100 shots", 1 decimal usually reads better.
+    sty = sty.format({c: "{:.1f}" for c in val_cols})
 
-    if val_cols:
-        sty = sty.background_gradient(subset=val_cols, cmap="RdYlGn")  # low=red, high=green
+    st.dataframe(sty, use_container_width=True, height=800)
 
-    # format: 1 decimal for values, ints for shots
-    fmt = {c: "{:.4f}" for c in val_cols}
-    sty = sty.format(fmt)
-
-    st.dataframe(sty, use_container_width=True, height=650)
 
 with tab3:
     st.header("Head-to-Head Comparison")
@@ -1685,7 +1809,7 @@ with tab3:
     st.dataframe(sty, use_container_width=True, hide_index=True, height=670)
 
 with tab4:
-    st.header("Deep Dive (MST)")
+    st.header("Player Deep Dive")
 
     rounds_2024p = load_mst_roundlevel_2024_present()
     ev_2017_2023 = load_mst_eventlevel_2017_2023()
@@ -1716,40 +1840,335 @@ with tab4:
     sel_label = st.selectbox("Player", labels, index=default_idx, key="mst_dd_player")
     dg_id_sel = int(label_to_id[sel_label])
     player_name_sel = str(label_to_name.get(dg_id_sel, f"dg_{dg_id_sel}"))
-    # -------------------------
-    # Top row: recent tournaments + per-round trend
-    # -------------------------
-    colL, colR = st.columns([1.25, 1], gap="large")
 
-    with colL:
-        st.subheader("Recent tournaments (last 25, pre-event)")
-        last25 = build_last_n_events_table_mst(rounds_2024p, ev_2017_2023, dg_id_sel, n=25, date_max=cutoff_dt)
-        if last25.empty:
-            st.info("No tournament history found for this player.")
+    st.subheader("Course history (same course, any event name)")
+
+    course_num = st.session_state.get("selected_course_num", None)
+
+    if course_num is None:
+        st.info("Course history unavailable (no course_num for the selected event).")
+    else:
+        out_parts = []
+
+        # -------------------------
+        # A) 2024+ from roundlevel
+        # -------------------------
+        r = rounds_2024p.copy()
+        r["dg_id"] = pd.to_numeric(r.get("dg_id"), errors="coerce")
+        r = r.loc[r["dg_id"] == int(dg_id_sel)].copy()
+
+        if "course_num" not in r.columns:
+            st.info("Course history unavailable for 2024+ (roundlevel has no course_num column).")
         else:
-            st.dataframe(last25[["Event", "Finish", "SG Total", "Year"]], use_container_width=True, hide_index=True)
+            r["course_num"] = pd.to_numeric(r["course_num"], errors="coerce")
+            r = r.loc[r["course_num"] == int(course_num)].copy()
 
-    with colR:
-        st.subheader("2024+ recent form (per round)")
+            if not r.empty:
+                # add event_end so we can apply cutoff + sort cleanly
+                ends_r = _event_end_table_roundlevel(rounds_2024p)
+                r["year"] = pd.to_numeric(r.get("year"), errors="coerce")
+                r["event_id"] = pd.to_numeric(r.get("event_id"), errors="coerce")
+                r = r.dropna(subset=["year", "event_id"]).copy()
+                r["year"] = r["year"].astype(int)
+                r["event_id"] = r["event_id"].astype(int)
 
-        metric_options = [c for c in ["sg_total", "sg_t2g", "sg_app", "sg_ott", "sg_arg", "sg_putt", "round_score"] if c in rounds_2024p.columns]
-        if not metric_options:
-            st.info("No metrics found in roundlevel_2024_present to chart.")
+                r = r.merge(ends_r, on=["year", "event_id"], how="left")
+                r["event_end"] = pd.to_datetime(r["event_end"], errors="coerce")
+
+                if cutoff_dt is not None and pd.notna(cutoff_dt):
+                    r = r.loc[r["event_end"].notna() & (r["event_end"] <= pd.to_datetime(cutoff_dt))].copy()
+
+                fin_col = "fin_text" if "fin_text" in r.columns else (
+                    "finish_text" if "finish_text" in r.columns else None)
+                if fin_col is None:
+                    r["fin_text"] = ""
+                    fin_col = "fin_text"
+
+
+                def _first_non_null_str(s: pd.Series) -> str:
+                    s2 = s.dropna().astype(str)
+                    return s2.iloc[0] if len(s2) else ""
+
+
+                agg_kwargs = {
+                    "Finish": (fin_col, _first_non_null_str),
+                }
+                if "sg_total" in r.columns: agg_kwargs["SG Total"] = ("sg_total", "mean")
+                if "sg_app" in r.columns:   agg_kwargs["SG APP"] = ("sg_app", "mean")
+                if "sg_ott" in r.columns:   agg_kwargs["SG OTT"] = ("sg_ott", "mean")
+                if "sg_arg" in r.columns:   agg_kwargs["SG ARG"] = ("sg_arg", "mean")
+                if "sg_putt" in r.columns:  agg_kwargs["SG PUTT"] = ("sg_putt", "mean")
+
+                t24 = (
+                    r.groupby(["year", "event_id", "event_name"], as_index=False)
+                    .agg(**agg_kwargs)
+                    .rename(columns={"year": "Year", "event_name": "Event"})
+                )
+                t24["event_end"] = r.groupby(["year", "event_id"])["event_end"].max().values
+                t24["source"] = "2024+ roundlevel"
+                out_parts.append(t24)
+
+        # -------------------------
+        # B) 2017-2023 from eventlevel means file
+        # -------------------------
+        e = ev_2017_2023.copy()
+        e["dg_id"] = pd.to_numeric(e.get("dg_id"), errors="coerce")
+        e = e.loc[e["dg_id"] == int(dg_id_sel)].copy()
+
+        if e.empty:
+            pass
+        elif "course_num" not in e.columns:
+            st.info("Course history unavailable for 2017–2023 (eventlevel has no course_num column).")
         else:
-            metric = st.selectbox("Metric", metric_options, index=0, key="mst_dd_metric")
+            e["course_num"] = pd.to_numeric(e["course_num"], errors="coerce")
+            e = e.loc[e["course_num"] == int(course_num)].copy()
 
-            df = _last_n_rounds_pre_event(rounds_2024p, dg_id_sel, cutoff_dt, n=60)
-            if df.empty:
-                st.info("Not enough 2024+ rounds pre-event for this player.")
+            if not e.empty:
+                # apply cutoff + attach event_end for sorting
+                ends_e = _event_end_table_eventlevel(ev_2017_2023)
+                e["year"] = pd.to_numeric(e.get("year"), errors="coerce")
+                e["event_id"] = pd.to_numeric(e.get("event_id"), errors="coerce")
+                e = e.dropna(subset=["year", "event_id"]).copy()
+                e["year"] = e["year"].astype(int)
+                e["event_id"] = e["event_id"].astype(int)
+
+                e = e.merge(ends_e, on=["year", "event_id"], how="left")
+                e["event_end"] = pd.to_datetime(e["event_end"], errors="coerce")
+
+                if cutoff_dt is not None and pd.notna(cutoff_dt):
+                    e = e.loc[e["event_end"].notna() & (e["event_end"] <= pd.to_datetime(cutoff_dt))].copy()
+
+                name_col = "event_name" if "event_name" in e.columns else (
+                    "tournament" if "tournament" in e.columns else None)
+                if name_col is None:
+                    e["event_name"] = e.get("event_id", "").astype(str)
+                    name_col = "event_name"
+
+                fin_col = "fin_text" if "fin_text" in e.columns else (
+                    "finish_text" if "finish_text" in e.columns else None)
+                if fin_col is None:
+                    e["fin_text"] = ""
+                    fin_col = "fin_text"
+
+                cols = ["year", "event_id", name_col, fin_col, "event_end"]
+                for c in ["sg_total", "sg_app", "sg_ott", "sg_arg", "sg_putt"]:
+                    if c in e.columns:
+                        cols.append(c)
+
+                t17 = e[cols].copy().rename(columns={
+                    "year": "Year",
+                    name_col: "Event",
+                    fin_col: "Finish",
+                    "sg_total": "SG Total",
+                    "sg_app": "SG APP",
+                    "sg_ott": "SG OTT",
+                    "sg_arg": "SG ARG",
+                    "sg_putt": "SG PUTT",
+                })
+                t17["source"] = "2017–2023 eventlevel"
+                out_parts.append(t17)
+
+        # -------------------------
+        # Combine + display
+        # -------------------------
+        if not out_parts:
+            st.info("No course history found for this player at this course.")
+        else:
+            course_hist = pd.concat(out_parts, ignore_index=True)
+            course_hist["event_end"] = pd.to_datetime(course_hist.get("event_end"), errors="coerce")
+            course_hist = course_hist.sort_values(["event_end", "Year", "event_id"],
+                                                  ascending=[False, False, False]).copy()
+
+            # format SG columns
+            for c in ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]:
+                if c in course_hist.columns:
+                    course_hist[c] = pd.to_numeric(course_hist[c], errors="coerce").map(
+                        lambda x: f"{x:+.2f}" if pd.notna(x) else ""
+                    )
+
+            show_cols = [c for c in
+                         ["Year", "Event", "Finish", "SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
+                         if c in course_hist.columns]
+            sg_cols = ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
+            sty = heat_table(course_hist[show_cols], sg_cols=sg_cols, precision=2)
+            st.dataframe(sty, use_container_width=True, hide_index=True)
+
+    st.subheader("Last 60 Rounds")
+    st.caption("Rounds without bars indicate non-PGA Tour events (SG breakdown not available).")
+
+    # choose what to plot
+    metric_mode = st.selectbox(
+        "Chart",
+        ["Stacked SG components + SG Total line", "Single metric line (legacy)"],
+        index=0,
+        key="mst_dd_chart_mode",
+    )
+
+    df = _last_n_rounds_pre_event(rounds_2024p, dg_id_sel, cutoff_dt, n=60)
+    if df.empty:
+        st.info("Not enough rounds pre-event for this player.")
+    else:
+        df = df.copy()
+        df["round_index"] = range(1, len(df) + 1)
+
+        # Coerce required cols
+        for c in ["sg_total", "sg_app", "sg_ott", "sg_arg", "sg_putt"]:
+            if c in df.columns:
+                df[c] = pd.to_numeric(df[c], errors="coerce")
+
+        if metric_mode == "Stacked SG components + SG Total line":
+            # require at least sg_total for the line
+            if "sg_total" not in df.columns:
+                st.info("sg_total not available to chart.")
             else:
-                df["metric"] = pd.to_numeric(df.get(metric), errors="coerce")
-                df = df.dropna(subset=["metric"]).copy()
-                df["round_index"] = range(1, len(df) + 1)
+                base = df.copy()
+                base["round_index"] = range(1, len(base) + 1)
 
-                fig = px.line(df, x="round_index", y="metric", markers=True)
-                fig.update_layout(height=360, margin=dict(l=20, r=20, t=30, b=20))
+                # -------------------------
+                # 1) LINE: show SG Total wherever it's available
+                # -------------------------
+                line_df = base.copy()
+                line_df["sg_total"] = pd.to_numeric(line_df["sg_total"], errors="coerce")
+                line_df = line_df.dropna(subset=["sg_total"]).copy()
+
+                # -------------------------
+                # 2) BARS: only where all 4 components exist (no fake zeros)
+                # -------------------------
+                comps = ["sg_ott", "sg_app", "sg_arg", "sg_putt"]
+                have_all_comps = all(c in base.columns for c in comps)
+
+                long = None
+                bar_df = pd.DataFrame()
+
+                if have_all_comps:
+                    bar_df = base.copy()
+                    for c in comps:
+                        bar_df[c] = pd.to_numeric(bar_df[c], errors="coerce")
+
+                    # Only keep rounds where ALL components are present
+                    bar_df = bar_df.dropna(subset=comps).copy()
+
+                    if not bar_df.empty:
+                        # Total from components (for bar height)
+                        bar_df["sg_total_calc"] = bar_df[comps].sum(axis=1)
+
+                        # If everything is literally zero, skip bars
+                        abs_sum = (
+                                bar_df["sg_ott"].abs()
+                                + bar_df["sg_app"].abs()
+                                + bar_df["sg_arg"].abs()
+                                + bar_df["sg_putt"].abs()
+                        )
+                        bar_df = bar_df.loc[abs_sum > 0].copy()
+
+                    if not bar_df.empty:
+                        # composition-of-total segments (by absolute contribution)
+                        total = bar_df["sg_total_calc"].to_numpy(dtype=float)
+                        abs_sum = (
+                                np.abs(bar_df["sg_ott"].to_numpy(dtype=float))
+                                + np.abs(bar_df["sg_app"].to_numpy(dtype=float))
+                                + np.abs(bar_df["sg_arg"].to_numpy(dtype=float))
+                                + np.abs(bar_df["sg_putt"].to_numpy(dtype=float))
+                        )
+                        safe_abs_sum = np.where(abs_sum == 0.0, 1.0, abs_sum)
+
+                        w_ott = np.abs(bar_df["sg_ott"].to_numpy(dtype=float)) / safe_abs_sum
+                        w_app = np.abs(bar_df["sg_app"].to_numpy(dtype=float)) / safe_abs_sum
+                        w_arg = np.abs(bar_df["sg_arg"].to_numpy(dtype=float)) / safe_abs_sum
+                        w_putt = np.abs(bar_df["sg_putt"].to_numpy(dtype=float)) / safe_abs_sum
+
+                        sign_total = np.where(total < 0, -1.0, 1.0)
+                        total_abs = np.abs(total)
+
+                        bar_df["seg_ott"] = sign_total * total_abs * w_ott
+                        bar_df["seg_app"] = sign_total * total_abs * w_app
+                        bar_df["seg_arg"] = sign_total * total_abs * w_arg
+                        bar_df["seg_putt"] = sign_total * total_abs * w_putt
+
+                        long = bar_df.melt(
+                            id_vars=["round_index"],
+                            value_vars=["seg_ott", "seg_app", "seg_arg", "seg_putt"],
+                            var_name="component",
+                            value_name="value",
+                        )
+
+                        label_map = {
+                            "seg_ott": "SG OTT",
+                            "seg_app": "SG APP",
+                            "seg_arg": "SG ARG",
+                            "seg_putt": "SG PUTT",
+                        }
+                        long["component"] = long["component"].map(label_map)
+
+                # -------------------------
+                # 3) PLOT: bars (if any) + total line (always)
+                # -------------------------
+                if long is not None and not long.empty:
+                    fig = px.bar(
+                        long,
+                        x="round_index",
+                        y="value",
+                        color="component",
+                        barmode="relative",
+                    )
+                # lighter + semi-transparent bar colors
+                    COLOR_MAP = {
+                        "SG OTT": "rgba(120, 180, 255, 0.55)",  # blue
+                        "SG APP": "rgba(255, 170, 190, 0.55)",  # green
+                        "SG ARG": "rgba(190, 150, 255, 0.55)",  # purple
+                        "SG PUTT": "rgba(255, 190, 120, 0.55)",  # orange
+                    }
+
+                    # apply per-trace colors (px creates one trace per component)
+                    for tr in fig.data:
+                        if tr.name in COLOR_MAP:
+                            tr.marker.color = COLOR_MAP[tr.name]
+                            tr.marker.line.width = 0  # cleaner look on dark bg
+
+                else:
+                    # no bars available; start with empty figure
+                    fig = go.Figure()
+
+                # SG Total line ALWAYS, even when bars missing
+                fig.add_trace(
+                    go.Scatter(
+                        x=line_df["round_index"],
+                        y=line_df["sg_total"],
+                        mode="lines+markers",
+                        name="SG Total",
+                    )
+                )
+
+                fig.update_layout(
+                    height=420,
+                    margin=dict(l=20, r=20, t=30, b=20),
+                    legend_title_text="",
+                )
                 fig.update_yaxes(zeroline=True)
                 st.plotly_chart(fig, use_container_width=True)
+
+                # Optional note to explain gaps
+                if (long is None) or long.empty:
+                    st.caption("Bars hidden on rounds where SG component breakdown (OTT/APP/ARG/PUTT) is unavailable.")
+
+
+        else:
+            metric_options = [c for c in ["sg_total", "sg_t2g", "sg_app", "sg_ott", "sg_arg", "sg_putt", "round_score"]
+                              if c in df.columns]
+            if not metric_options:
+                st.info("No metrics found in roundlevel_2024_present to chart.")
+            else:
+                metric = st.selectbox("Metric", metric_options, index=0, key="mst_dd_metric")
+                df["metric"] = pd.to_numeric(df.get(metric), errors="coerce")
+                df2 = df.dropna(subset=["metric"]).copy()
+
+                if df2.empty:
+                    st.info("No data for this metric.")
+                else:
+                    fig = px.line(df2, x="round_index", y="metric", markers=True)
+                    fig.update_layout(height=360, margin=dict(l=20, r=20, t=30, b=20))
+                    fig.update_yaxes(zeroline=True)
+                    st.plotly_chart(fig, use_container_width=True)
 
     st.divider()
 
@@ -1856,13 +2275,10 @@ with tab4:
             if c in out.columns:
                 out[c] = pd.to_numeric(out[c], errors="coerce").map(lambda x: f"{x:+.2f}" if pd.notna(x) else "")
 
-        show_cols = [c for c in ["Year", "Event", "Finish", "SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT", "source"] if c in out.columns]
-        st.dataframe(out[show_cols], use_container_width=True, hide_index=True)
+        show_cols = [c for c in ["Year", "Event", "Finish", "SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"] if c in out.columns]
+        sg_cols = ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
+        sty = heat_table(out[show_cols], sg_cols=sg_cols, precision=2)
+        st.dataframe(sty, use_container_width=True, hide_index=True)
 
     st.divider()
 
-    # -------------------------
-    # Placeholder for radar (hook it to your existing skills table if mst.py has it)
-    # -------------------------
-    st.subheader("Skill radar (optional)")
-    st.info("If mst.py already has a player_skills_df (DIST/ACC/APP/ARG/PUTT), plug it in here like you did in oad.py.")
