@@ -2174,76 +2174,50 @@ with tab4:
                         )
                         bar_df = bar_df.loc[abs_sum > 0].copy()
 
-                        label_map = {
-                            "seg_ott": "SG OTT",
-                            "seg_app": "SG APP",
-                            "seg_arg": "SG ARG",
-                            "seg_putt": "SG PUTT",
-                        }
-                        long["component"] = long["component"].map(label_map)
-
-                # -------------------------
-                # 3) PLOT: TRUE stacked bars (components) + SG total line
-                # -------------------------
                 fig = go.Figure()
 
-                # x as categorical so bars stack at each index
-                line_x = line_df["round_index"].astype(int).astype(str)
+                # --- bars: only rounds where all components exist
+                comps = ["sg_ott", "sg_app", "sg_arg", "sg_putt"]
+                bar_df = base.copy()
+                for c in comps:
+                    bar_df[c] = pd.to_numeric(bar_df[c], errors="coerce")
+                bar_df = bar_df.dropna(subset=comps).copy()
 
-                # Bars: only where we have all components (bar_df already filtered)
-                if have_all_comps and (bar_df is not None) and (not bar_df.empty):
-                    bar_x = bar_df["round_index"].astype(int).astype(str)
+                # x as categorical so stacking is exact
+                bar_x = bar_df["round_index"].astype(int).astype(str)
 
-                    # IMPORTANT: stack the REAL components (not seg_*), so it’s a real SG breakdown
-                    BAR_COLS = {
-                        "SG OTT": "sg_ott",
-                        "SG APP": "sg_app",
-                        "SG ARG": "sg_arg",
-                        "SG PUTT": "sg_putt",
-                    }
+                COLOR_MAP = {
+                    "SG OTT": "rgba(120, 180, 255, 0.55)",
+                    "SG APP": "rgba(255, 170, 190, 0.55)",
+                    "SG ARG": "rgba(190, 150, 255, 0.55)",
+                    "SG PUTT": "rgba(255, 190, 120, 0.55)",
+                }
 
-                    COLOR_MAP = {
-                        "SG OTT": "rgba(120, 180, 255, 0.55)",
-                        "SG APP": "rgba(255, 170, 190, 0.55)",
-                        "SG ARG": "rgba(190, 150, 255, 0.55)",
-                        "SG PUTT": "rgba(255, 190, 120, 0.55)",
-                    }
+                for label, col in [("SG OTT", "sg_ott"), ("SG APP", "sg_app"), ("SG ARG", "sg_arg"),
+                                   ("SG PUTT", "sg_putt")]:
+                    fig.add_trace(go.Bar(
+                        x=bar_x,
+                        y=bar_df[col],
+                        name=label,
+                        marker=dict(color=COLOR_MAP[label]),
+                    ))
 
-                    for label, col in BAR_COLS.items():
-                        if col in bar_df.columns:
-                            fig.add_trace(
-                                go.Bar(
-                                    x=bar_x,
-                                    y=pd.to_numeric(bar_df[col], errors="coerce"),
-                                    name=label,
-                                    marker=dict(color=COLOR_MAP.get(label)),
-                                )
-                            )
+                # --- line: SG total wherever available
+                line_df = base.copy()
+                line_df["sg_total"] = pd.to_numeric(line_df["sg_total"], errors="coerce")
+                line_df = line_df.dropna(subset=["sg_total"]).copy()
 
-                # SG Total line (always)
-                fig.add_trace(
-                    go.Scatter(
-                        x=line_x,
-                        y=line_df["sg_total"],
-                        mode="lines+markers",
-                        name="SG Total",
-                    )
-                )
+                fig.add_trace(go.Scatter(
+                    x=line_df["round_index"].astype(int).astype(str),
+                    y=line_df["sg_total"],
+                    mode="lines+markers",
+                    name="SG Total",
+                ))
 
-                fig.update_layout(
-                    barmode="relative",  # TRUE stacking
-                    height=420,
-                    margin=dict(l=20, r=20, t=30, b=20),
-                    legend_title_text="",
-                )
-
-                fig.update_yaxes(zeroline=True)
-                fig.update_xaxes(type="category")  # force categorical axis
-
+                fig.update_layout(barmode="relative")
+                fig.update_xaxes(type="category")
                 st.plotly_chart(fig, use_container_width=True)
 
-                if (not have_all_comps) or (bar_df is None) or bar_df.empty:
-                    st.caption("Bars hidden on rounds where SG component breakdown (OTT/APP/ARG/PUTT) is unavailable.")
 
 
 
