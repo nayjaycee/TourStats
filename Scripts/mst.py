@@ -356,15 +356,6 @@ def _last_n_rounds_pre_event(rounds_2024p: pd.DataFrame, dg_id: int, cutoff_dt: 
 @st.cache_data(show_spinner=False)
 def load_all_players() -> pd.DataFrame:
     df = pd.read_excel(ALL_PLAYERS_PATH)
-    if "dg_id" in df.columns:
-        df["dg_id"] = pd.to_numeric(df["dg_id"], errors="coerce")
-    if "player_name" in df.columns:
-        df["player_name"] = df["player_name"].astype(str)
-    return df.dropna(subset=["dg_id"]).drop_duplicates(subset=["dg_id"])
-
-@st.cache_data(show_spinner=False)
-def load_all_players() -> pd.DataFrame:
-    df = pd.read_excel(ALL_PLAYERS_PATH)
 
     # Normalize column names for safety
     df.columns = [c.strip().lower() for c in df.columns]
@@ -777,8 +768,8 @@ def compute_approach_fit(
 # ============================================================
 schedule = load_schedule()
 fields = load_fields()
-all_players = load_all_players()
-ID_TO_IMG, NAME_TO_IMG = build_headshot_maps(ALL_PLAYERS)
+all_players_df = load_all_players()
+ID_TO_IMG, NAME_TO_IMG = build_headshot_maps(all_players_df)
 skills = load_player_skill()
 buckets = load_approach_buckets()
 rounds = load_rounds_minimal()
@@ -1061,8 +1052,11 @@ for w in (12, 24, 40):
         rolling[f"birdies_or_better_L{w}"] = rolling[b].fillna(0) + rolling[e].fillna(0)
 
 ytd = compute_ytd_from_fields_today(fields, year=2026)
-fit = compute_approach_fit(base_ids, skills, buckets, event_id) if event_id is not None else pd.DataFrame({"dg_id": base_ids, "approach_fit_score": np.nan})
-fit = compute_approach_fit(base_ids, skills, buckets, event_id)
+if event_id is not None:
+    fit = compute_approach_fit(base_ids, skills, buckets, event_id)
+else:
+    fit = pd.DataFrame({"dg_id": base_ids, "approach_fit_score": np.nan})
+
 
 # Merge
 out = base.merge(rolling, on="dg_id", how="left").merge(ytd, on=["dg_id", "player_name"], how="left").merge(fit, on="dg_id", how="left")
@@ -1275,11 +1269,8 @@ with tab1:
     min_sg_app_l24 = float(st.session_state.get("min_sg_app_l24", -99.0))
     use_odds_range = bool(st.session_state.get("use_odds_range", False))
 
-    # Build multiselect here (so we have options)
-    all_players = out_show[name_col].dropna().sort_values().unique().tolist()
-
-    # Publish the player list for the sidebar exclusion selector
-    st.session_state["player_universe"] = all_players
+    player_name_options = out_show[name_col].dropna().sort_values().unique().tolist()
+    st.session_state["player_universe"] = player_name_options
 
     # Apply exclusions (filter OUT)
     excluded_players = st.session_state.get("excluded_players", [])
