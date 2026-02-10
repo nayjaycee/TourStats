@@ -363,6 +363,37 @@ def load_all_players() -> pd.DataFrame:
     return df.dropna(subset=["dg_id"]).drop_duplicates(subset=["dg_id"])
 
 @st.cache_data(show_spinner=False)
+def build_headshot_map(all_players_df: pd.DataFrame) -> dict[str, str]:
+    # Expect columns like: player (or name), dg_id, image
+    df = all_players_df.copy()
+
+    # Pick your join key. dg_id is best if you have it everywhere.
+    if "dg_id" in df.columns:
+        key = "dg_id"
+    else:
+        key = "player"  # or whatever your name column is
+
+    # normalize
+    if "image" not in df.columns:
+        return {}
+
+    df = df[[key, "image"]].dropna()
+    df["image"] = df["image"].astype(str).str.strip()
+    df = df[df["image"] != ""]
+
+    return dict(zip(df[key].astype(str), df["image"]))
+
+def headshot_for(dg_id: int | str | None, player_name: str | None) -> str | None:
+    if dg_id is not None:
+        u = headshot_map.get(str(dg_id)) or headshot_map.get(dg_id)
+        if u:
+            return u
+    if player_name:
+        return headshot_map.get(player_name)
+    return None
+
+
+@st.cache_data(show_spinner=False)
 def load_schedule() -> pd.DataFrame:
     df = pd.read_excel(SCHED_PATH)
     # common normalizations
@@ -1456,13 +1487,27 @@ with tab3:
 
     opts = pool["dg_id"].tolist()
 
-    cA, cB = st.columns(2, gap="large")
-    with cA:
-        dg_a = st.selectbox("Player A", options=opts, index=0,
-                            format_func=lambda x: id_to_label.get(int(x), str(x)), key="mst_h2h_a")
-    with cB:
-        dg_b = st.selectbox("Player B", options=opts, index=1 if len(opts) > 1 else 0,
-                            format_func=lambda x: id_to_label.get(int(x), str(x)), key="mst_h2h_b")
+    selA, selB = st.columns(2, gap="large")
+
+    with selA:
+        st.markdown("### Player A")
+        a1, a2 = st.columns([6, 2], vertical_alignment="center")
+        with a1:
+            name_a = st.selectbox(" ", player_options, key="h2h_a", label_visibility="collapsed")
+        with a2:
+            url_a = headshot_for(dg_id_map[name_a], name_a)  # adapt dg_id_map lookup to your code
+            if url_a:
+                st.image(url_a, width=90)
+
+    with selB:
+        st.markdown("### Player B")
+        b1, b2 = st.columns([6, 2], vertical_alignment="center")
+        with b1:
+            name_b = st.selectbox(" ", player_options, key="h2h_b", label_visibility="collapsed")
+        with b2:
+            url_b = headshot_for(dg_id_map[name_b], name_b)
+            if url_b:
+                st.image(url_b, width=90)
 
     dg_a, dg_b = int(dg_a), int(dg_b)
     if dg_a == dg_b:
@@ -1824,6 +1869,17 @@ with tab4:
     sel_label = st.selectbox("Player", labels, index=default_idx, key="mst_dd_player")
     dg_id_sel = int(label_to_id[sel_label])
     player_name_sel = str(label_to_name.get(dg_id_sel, f"dg_{dg_id_sel}"))
+
+    # --- Title row: name + headshot (mobile-friendly)
+    title_col, img_col = st.columns([10, 2], vertical_alignment="center")
+
+    with title_col:
+        st.header(player_name_sel)
+
+    with img_col:
+        url = get_headshot_url(dg_id_sel)
+        if url:
+            st.image(url, width=90)
 
     st.subheader("Course History")
 
