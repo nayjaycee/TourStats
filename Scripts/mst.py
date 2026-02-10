@@ -1472,17 +1472,26 @@ with tab3:
     name_a = str(id_to_name.get(dg_a))
     name_b = str(id_to_name.get(dg_b))
 
-    # ---- Recent tournaments table (mixes 2017-2023 eventlevel + 2024+ roundlevel aggregated)
     st.subheader("Recent tournaments")
     left, right = st.columns(2, gap="large")
+
     with left:
+        st.markdown(f"#### {name_a}")
         tA = build_last_n_events_table_mst(rounds_2024p, ev_2017_2023, dg_a, n=25, date_max=cutoff_dt)
-        st.dataframe(tA[["Event", "Finish", "SG Total", "Year"]] if not tA.empty else tA,
-                     use_container_width=True, hide_index=True)
+        st.dataframe(
+            tA[["Event", "Finish", "SG Total", "Year"]] if not tA.empty else tA,
+            use_container_width=True,
+            hide_index=True,
+        )
+
     with right:
+        st.markdown(f"#### {name_b}")
         tB = build_last_n_events_table_mst(rounds_2024p, ev_2017_2023, dg_b, n=25, date_max=cutoff_dt)
-        st.dataframe(tB[["Event", "Finish", "SG Total", "Year"]] if not tB.empty else tB,
-                     use_container_width=True, hide_index=True)
+        st.dataframe(
+            tB[["Event", "Finish", "SG Total", "Year"]] if not tB.empty else tB,
+            use_container_width=True,
+            hide_index=True,
+        )
 
     st.divider()
 
@@ -1666,10 +1675,14 @@ with tab3:
         out = out.sort_values("year", ascending=False).reset_index(drop=True)
         return out
 
+
     c1, c2 = st.columns(2, gap="large")
     with c1:
+        st.markdown(f"#### {name_a}")
         st.dataframe(_perf_by_season_mst(dg_a), use_container_width=True, hide_index=True)
+
     with c2:
+        st.markdown(f"#### {name_b}")
         st.dataframe(_perf_by_season_mst(dg_b), use_container_width=True, hide_index=True)
 
     st.divider()
