@@ -1384,7 +1384,7 @@ if active_tab == "Weekly":
     # 8) YTD (your upstream YTD calc must already respect cutoff)
     ytd_cols = [name_col, "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cut_pct"]
     ytd_grad = ["ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cut_pct"]
-    render_table("Year to Date (completed events only; before cutoff)", out_show, ytd_cols, ytd_grad, odds_col=None, height=420)
+    render_table("Year to Date", out_show, ytd_cols, ytd_grad, odds_col=None, height=420)
 
 
 
