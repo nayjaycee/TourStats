@@ -1319,6 +1319,23 @@ if active_tab == "Weekly":
     if top_n > 0:
         out_show = out_show.head(top_n)
 
+    # ------------------------------------------------------------
+    # Persist Weekly top defaults for other tabs (Deep Dive / H2H)
+    # ------------------------------------------------------------
+    if "dg_id" in out_show.columns and not out_show.empty:
+        tmp = out_show.copy()
+        tmp["dg_id"] = pd.to_numeric(tmp["dg_id"], errors="coerce")
+        tmp = tmp.dropna(subset=["dg_id"]).copy()
+        tmp["dg_id"] = tmp["dg_id"].astype(int)
+
+        if not tmp.empty:
+            top1 = int(tmp.iloc[0]["dg_id"])
+            top2 = int(tmp.iloc[1]["dg_id"]) if len(tmp) > 1 else top1
+
+            st.session_state["weekly_top1_dg_id"] = top1
+            st.session_state["weekly_top2_dg_id"] = top2
+
+
     name_col = "player_name"
     odds = odds_col if odds_col else None
 
@@ -1554,9 +1571,42 @@ elif active_tab == "H2H":
 
     player_options = sorted(pool["player_name"].unique().tolist())
 
-    # defaults (first two players)
-    default_a = 0
-    default_b = 1 if len(player_options) > 1 else 0
+    # ------------------------------------------------------------
+    # Auto-default from Weekly (top1 vs top2), but don't overwrite
+    # a user's manual selections.
+    # ------------------------------------------------------------
+    weekly_top1 = st.session_state.get("weekly_top1_dg_id", None)
+    weekly_top2 = st.session_state.get("weekly_top2_dg_id", None)
+
+    # Resolve dg_id -> player names that exist in THIS pool
+    top1_name = id_to_name.get(int(weekly_top1)) if weekly_top1 is not None else None
+    top2_name = id_to_name.get(int(weekly_top2)) if weekly_top2 is not None else None
+
+    # Fallbacks if weekly not set or not in pool
+    if not top1_name or top1_name not in player_options:
+        top1_name = player_options[0] if player_options else None
+    if not top2_name or top2_name not in player_options:
+        top2_name = player_options[1] if len(player_options) > 1 else top1_name
+
+    # Ensure A != B if possible
+    if top1_name == top2_name and len(player_options) > 1:
+        top2_name = next((n for n in player_options if n != top1_name), top2_name)
+
+    # Only set defaults if:
+    # - first time visiting tab, OR
+    # - previous selection became invalid due to filters/field changes
+    if ("h2h_a" not in st.session_state) or (st.session_state.get("h2h_a") not in player_options):
+        st.session_state["h2h_a"] = top1_name
+
+    if ("h2h_b" not in st.session_state) or (st.session_state.get("h2h_b") not in player_options):
+        st.session_state["h2h_b"] = top2_name
+
+    # Final safety: if user ends up with same selection, bump B
+    if st.session_state.get("h2h_a") == st.session_state.get("h2h_b") and len(player_options) > 1:
+        st.session_state["h2h_b"] = next((n for n in player_options if n != st.session_state["h2h_a"]),
+                                         st.session_state["h2h_b"])
+
+
 
     if len(pool) < 2:
         st.info("Need at least two players available to compare.")
@@ -1575,8 +1625,12 @@ elif active_tab == "H2H":
         a1, a2 = st.columns([6, 2], vertical_alignment="center")
 
         with a1:
-            name_a = st.selectbox(" ", player_options, index=default_a, key="h2h_a", label_visibility="collapsed")
-
+            name_a = st.selectbox(
+                " ",
+                player_options,
+                key="h2h_a",
+                label_visibility="collapsed",
+            )
         with a2:
             dg_a = int(name_to_id[name_a])
             url_a = get_headshot_url(dg_a, name_a, ID_TO_IMG, NAME_TO_IMG)
@@ -1587,8 +1641,12 @@ elif active_tab == "H2H":
         b1, b2 = st.columns([6, 2], vertical_alignment="center")
 
         with b1:
-            name_b = st.selectbox(" ", player_options, index=default_b, key="h2h_b", label_visibility="collapsed")
-
+            name_b = st.selectbox(
+                " ",
+                player_options,
+                key="h2h_b",
+                label_visibility="collapsed",
+            )
         with b2:
             dg_b = int(name_to_id[name_b])
             url_b = get_headshot_url(dg_b, name_b, ID_TO_IMG, NAME_TO_IMG)
@@ -1942,13 +2000,11 @@ elif active_tab == "Deep Dive":
     label_to_id = dict(zip(labels, pool["dg_id"]))
     label_to_name = dict(zip(pool["dg_id"], pool["player_name"]))
 
-    default_idx = 0
-    if isinstance(summary_top, pd.DataFrame) and not summary_top.empty and "dg_id" in summary_top.columns:
-        top_dg = int(summary_top.iloc[0]["dg_id"])
-        for i, lab in enumerate(labels):
-            if int(label_to_id[lab]) == top_dg:
-                default_idx = i
-                break
+    top_dg = st.session_state.get("weekly_top1_dg_id", None)
+    if top_dg is None:
+        # fallback if state not set yet
+        top_dg = int(summary_top.iloc[0]["dg_id"]) if (
+                    isinstance(summary_top, pd.DataFrame) and not summary_top.empty) else pool["dg_id"].iloc[0]
 
     sel_label = st.selectbox("Player", labels, index=default_idx, key="mst_dd_player")
     dg_id_sel = int(label_to_id[sel_label])
