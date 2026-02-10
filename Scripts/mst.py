@@ -2220,7 +2220,7 @@ with tab4:
                         name=label,
                         marker=dict(color=COLOR_MAP[label]),
                         customdata=(bar_df[f"w_{c}"] * 100.0),  # percent share
-                        hovertemplate=f"{label}: %{customdata:.0f}%<br>Seg: %{y:.2f}<extra></extra>",
+                        hovertemplate="%{fullData.name}: %{customdata:.0f}%<br>Seg: %{y:.2f}<extra></extra>"
                     ))
 
                 # SG Total line (add LAST so it draws on top)
