@@ -1220,9 +1220,19 @@ if _default_sort:
 
 summary_top = summary_top.reset_index(drop=True)
 
-tab1, tab2, tab3, tab4 = st.tabs(["Weekly", "Approach Buckets", "H2H", "Deep Dive"])
+TAB_NAMES = ["Weekly", "Approach Buckets", "H2H", "Deep Dive"]
 
-with tab1:
+if "active_tab" not in st.session_state:
+    st.session_state.active_tab = "Weekly"
+
+active_tab = st.segmented_control(
+    "View",
+    TAB_NAMES,
+    default=st.session_state.active_tab,
+    key="active_tab",
+)
+
+if active_tab == "Weekly":
     st.subheader("Players (rolling L12/L24/L40)")
 
     # ----- sort selector (pretty labels, real columns) -----
@@ -1361,7 +1371,7 @@ with tab1:
 
 
 
-with tab2:
+elif active_tab == "Approach Buckets":
     # Event name for the selected event_id (fallback to schedule label)
     event_name = None
     if event_id is not None:
@@ -1519,7 +1529,7 @@ with tab2:
     st.dataframe(sty, use_container_width=True, height=800)
 
 
-with tab3:
+elif active_tab == "H2H":
     st.header("Head-to-Head Comparison")
 
     if event_id is None:
@@ -1911,7 +1921,7 @@ with tab3:
 
     st.dataframe(sty, use_container_width=True, hide_index=True, height=670)
 
-with tab4:
+elif active_tab == "Deep Dive":
     st.header("Player Deep Dive")
 
     rounds_2024p = load_mst_roundlevel_2024_present()
