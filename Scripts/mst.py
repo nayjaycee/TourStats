@@ -2176,15 +2176,34 @@ with tab4:
 
                 fig = go.Figure()
 
-                # --- bars: only rounds where all components exist
-                comps = ["sg_ott", "sg_app", "sg_arg", "sg_putt"]
-                bar_df = base.copy()
-                for c in comps:
-                    bar_df[c] = pd.to_numeric(bar_df[c], errors="coerce")
-                bar_df = bar_df.dropna(subset=comps).copy()
+                comps = [("SG OTT", "sg_ott"), ("SG APP", "sg_app"), ("SG ARG", "sg_arg"), ("SG PUTT", "sg_putt")]
 
-                # x as categorical so stacking is exact
-                bar_x = bar_df["round_index"].astype(int).astype(str)
+                bar_df = base.copy()
+                for _, c in comps:
+                    bar_df[c] = pd.to_numeric(bar_df[c], errors="coerce")
+                bar_df["sg_total"] = pd.to_numeric(bar_df["sg_total"], errors="coerce")
+
+                # Only rounds where ALL components + sg_total exist
+                need = [c for _, c in comps] + ["sg_total"]
+                bar_df = bar_df.dropna(subset=need).copy()
+
+                # If component breakdown is literally all zero, skip bars for that round
+                abs_sum = np.zeros(len(bar_df), dtype=float)
+                for _, c in comps:
+                    abs_sum += np.abs(bar_df[c].to_numpy(dtype=float))
+                bar_df = bar_df.loc[abs_sum > 0].copy()
+                abs_sum = abs_sum[abs_sum > 0]
+
+                # weights = abs(component) / sum(abs(components))
+                for label, c in comps:
+                    w = np.abs(bar_df[c].to_numpy(dtype=float)) / abs_sum
+                    bar_df[f"w_{c}"] = w
+                    # segment heights sum to sg_total exactly
+                    bar_df[f"seg_{c}"] = bar_df["sg_total"].to_numpy(dtype=float) * w
+
+                # nice ordering on x (fixes the “60, 53, 54…” weirdness)
+                x_all = list(range(1, len(base) + 1))
+                x_bar = bar_df["round_index"].astype(int).tolist()
 
                 COLOR_MAP = {
                     "SG OTT": "rgba(120, 180, 255, 0.55)",
@@ -2193,30 +2212,44 @@ with tab4:
                     "SG PUTT": "rgba(255, 190, 120, 0.55)",
                 }
 
-                for label, col in [("SG OTT", "sg_ott"), ("SG APP", "sg_app"), ("SG ARG", "sg_arg"),
-                                   ("SG PUTT", "sg_putt")]:
+                # stacked composition bars (scaled to sg_total)
+                for label, c in comps:
                     fig.add_trace(go.Bar(
-                        x=bar_x,
-                        y=bar_df[col],
+                        x=x_bar,
+                        y=bar_df[f"seg_{c}"],
                         name=label,
                         marker=dict(color=COLOR_MAP[label]),
+                        customdata=(bar_df[f"w_{c}"] * 100.0),  # percent share
+                        hovertemplate=f"{label}: %{customdata:.0f}%<br>Seg: %{y:.2f}<extra></extra>",
                     ))
 
-                # --- line: SG total wherever available
+                # SG Total line (add LAST so it draws on top)
                 line_df = base.copy()
                 line_df["sg_total"] = pd.to_numeric(line_df["sg_total"], errors="coerce")
                 line_df = line_df.dropna(subset=["sg_total"]).copy()
 
                 fig.add_trace(go.Scatter(
-                    x=line_df["round_index"].astype(int).astype(str),
+                    x=line_df["round_index"].astype(int),
                     y=line_df["sg_total"],
                     mode="lines+markers",
                     name="SG Total",
                 ))
 
-                fig.update_layout(barmode="relative")
-                fig.update_xaxes(type="category")
+                fig.update_layout(
+                    barmode="relative",
+                    height=420,
+                    margin=dict(l=20, r=20, t=30, b=20),
+                    legend_title_text="",
+                )
+                fig.update_xaxes(
+                    type="linear",
+                    tickmode="array",
+                    tickvals=x_all,  # forces 1..60 order even with missing bar rounds
+                )
+                fig.update_yaxes(zeroline=True)
+
                 st.plotly_chart(fig, use_container_width=True)
+
 
 
 
