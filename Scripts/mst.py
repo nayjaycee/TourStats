@@ -113,8 +113,7 @@ SEASON_YEAR = 2026
 # ============================================================
 # Page config
 # ============================================================
-st.set_page_config(page_title="MSTOaDCOG LLC", layout="wide")
-st.title("MacKenzie Scott's Tots One and Done Collective Ownership Group LLC")
+st.set_page_config(page_title="MST OAD", layout="wide")
 
 st.markdown(
     """
