@@ -9,20 +9,25 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 
-REPO_ROOT = Path(__file__).resolve().parent
-DATA_DIR = REPO_ROOT / "Data"
-MST_DIR = DATA_DIR / "MST"
-INUSE_DIR = DATA_DIR / "in Use"
+# ============================================================
+# Paths (repo-relative; works locally + Streamlit Cloud)
+# ============================================================
+THIS_FILE = Path(__file__).resolve()
 
-# ============================================================
-# Paths (repo-relative; Streamlit Cloud safe)
-# ============================================================
-REPO_ROOT = Path(__file__).resolve().parent
+def _pick_repo_root(start: Path) -> Path:
+    # find ALL parents that contain a Data/ folder
+    candidates = [p for p in [start.parent] + list(start.parents) if (p / "Data").exists()]
+    if not candidates:
+        raise RuntimeError("Could not find repo root containing Data/")
+    # pick the HIGHEST one (closest to filesystem root), not the first
+    return candidates[-1]
+
+REPO_ROOT = _pick_repo_root(THIS_FILE)
 DATA_ROOT = REPO_ROOT / "Data"
 MST_DIR   = DATA_ROOT / "MST"
 INUSE_DIR = DATA_ROOT / "in Use"
 
-# Required MST Excel inputs
+# ---- Inputs ----
 ALL_PLAYERS_PATH = MST_DIR / "All_players.xlsx"
 SCHED_PATH       = MST_DIR / "OAD_2026_Schedule.xlsx"
 SKILL_PATH       = MST_DIR / "app_skill.xlsx"
@@ -32,11 +37,8 @@ BUCKET_PATH_A = MST_DIR / "Approach_Buckets.xlsx"
 BUCKET_PATH_B = MST_DIR / "Approach Buckets.xlsx"
 BUCKET_PATH   = BUCKET_PATH_A if BUCKET_PATH_A.exists() else BUCKET_PATH_B
 
-# Required MST CSV inputs
 MST_EVENTLEVEL_2017_2023 = MST_DIR / "combined_eventlevel_pga_2017_2023_mean.csv"
 
-# IMPORTANT: set this to the exact filename that exists in GitHub
-# If you don't know it yet, use the candidate picker below.
 ROUNDLEVEL_2024P_CANDIDATES = [
     MST_DIR / "combined_roundlevel_2024_present.csv",
     MST_DIR / "combined_roundlevel_2024_present_mean.csv",
@@ -45,8 +47,26 @@ ROUNDLEVEL_2024P_CANDIDATES = [
 ]
 MST_ROUNDLEVEL_2024_PRESENT = next((p for p in ROUNDLEVEL_2024P_CANDIDATES if p.exists()), None)
 
-# Optional combined rounds (only if used)
 ROUNDS_PATH = INUSE_DIR / "combined_rounds_all_2017_2026.csv"
+
+# ---- Hard fail early ----
+required = [
+    ALL_PLAYERS_PATH, SCHED_PATH, SKILL_PATH, FIELDS_PATH, BUCKET_PATH,
+    MST_EVENTLEVEL_2017_2023,
+    ROUNDS_PATH,
+]
+missing = [p for p in required if not p.exists()]
+
+if MST_ROUNDLEVEL_2024_PRESENT is None:
+    missing.append(MST_DIR / "combined_roundlevel_2024_present*.csv (not found)")
+elif not MST_ROUNDLEVEL_2024_PRESENT.exists():
+    missing.append(MST_ROUNDLEVEL_2024_PRESENT)
+
+if missing:
+    st.error("Missing required file(s):")
+    for p in missing:
+        st.code(str(p))
+    st.stop()
 
 # ============================================================
 # LOADERS (MST split files)
@@ -108,42 +128,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-# ============================================================
-# Paths (repo-relative; works on Streamlit Cloud)
-# ============================================================
-from pathlib import Path
-
-THIS_FILE = Path(__file__).resolve()
-
-def _pick_repo_root(start: Path) -> Path:
-    """
-    Walk upward until we find the repo root that contains the 'Data' folder.
-    Works whether mst.py is at repo root or in Scripts/.
-    """
-    for p in [start.parent] + list(start.parents):
-        if (p / "Data").exists():
-            return p
-    # fallback: assume file's parent
-    return start.parent
-
-required = [
-    ALL_PLAYERS_PATH, SCHED_PATH, SKILL_PATH, FIELDS_PATH, BUCKET_PATH,
-    MST_EVENTLEVEL_2017_2023
-]
-
-missing = [p for p in required if not p.exists()]
-
-if MST_ROUNDLEVEL_2024_PRESENT is None:
-    missing.append(MST_DIR / "combined_roundlevel_2024_present*.csv (not found)")
-elif not MST_ROUNDLEVEL_2024_PRESENT.exists():
-    missing.append(MST_ROUNDLEVEL_2024_PRESENT)
-
-if missing:
-    st.error("Missing required file(s):")
-    for p in missing:
-        st.code(str(p))
-    st.stop()
 
 # ============================================================
 # Loaders (cached)
