@@ -1,0 +1,380 @@
+tour,year,season,event_completed,event_name,event_id,player_name,dg_id,fin_text,round_num,course_name,course_num,course_par,start_hole,teetime,round_score,sg_putt,sg_arg,sg_app,sg_ott,sg_t2g,sg_total,driving_dist,driving_acc,gir,scrambling,prox_rgh,prox_fw,great_shots,poor_shots,eagles_or_better,birdies,pars,bogies,doubles_or_worse
+liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,0,2,13,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Park, Sungkug",15550,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,4,12,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Florimo, Will",25780,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,1,16,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Florimo, Will",25780,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,5,10,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Truslow, Austen",18239,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,1,15,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Truslow, Austen",18239,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,6,9,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Prateeptienchai, Suteepat",21231,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,3,11,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Prateeptienchai, Suteepat",21231,,1,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.75,,,,,,,,,0,5,12,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Foos, Dominic",17022,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,3,12,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Foos, Dominic",17022,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,6,10,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Koepka, Chase",21997,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,4,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Koepka, Chase",21997,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,5,11,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Albertse, Louis",24341,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,3,12,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Albertse, Louis",24341,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,3,15,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ereno Perez, Pablo",33839,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,3,13,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ereno Perez, Pablo",33839,,1,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.75,,,,,,,,,0,6,10,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Park, Sungkug",15550,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,4,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Eckhardt, Albert",16405,,1,Black Diamond Ranch - Ranch Course,1,70,,,83,,,,,,-13.25,,,,,,,,,0,1,7,6,4
+liv,2026,2026,2026-01-11,Promotions Event,53,"Saksansin, Poom",14951,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,5,10,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ikemura, Tomoyo",18809,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,4,11,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Schwab, Matthias",15016,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,4,12,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Hongtaek",17973,,2,Black Diamond Ranch - Ranch Course,1,70,,,75,,,,,,-5.553,,,,,,,,,0,1,12,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Hongtaek",17973,,1,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.75,,,,,,,,,0,6,10,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Forster, Charlie",20000238,,2,Black Diamond Ranch - Ranch Course,1,70,,,74,,,,,,-4.553,,,,,,,,,0,2,10,6,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Forster, Charlie",20000238,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,6,9,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Brun, Julien",16363,,2,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.553,,,,,,,,,0,4,8,6,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Brun, Julien",16363,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Adams, Collin",20000261,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,9,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Adams, Collin",20000261,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Tangkamolprasert, Pavit",11958,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,3,12,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Tangkamolprasert, Pavit",11958,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ashfield, James",28636,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,4,11,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ashfield, James",28636,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kieffer, Max",12317,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,5,9,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kieffer, Max",12317,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ikemura, Tomoyo",18809,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Schwab, Matthias",15016,,2,Black Diamond Ranch - Ranch Course,1,70,,,74,,,,,,-4.553,,,,,,,,,0,2,11,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Pineau, Pierre",20900,,1,Black Diamond Ranch - Ranch Course,1,70,,,75,,,,,,-5.25,,,,,,,,,0,1,12,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hwang, Doyeon",17459,,2,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.553,,,,,,,,,0,1,14,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Plunkett, Marcus",29716,,1,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.25,,,,,,,,,0,2,14,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Loubser, Herman",21197,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,3,12,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ogletree, Andy",27597,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,2,14,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Simpson, Samuel",27415,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,3,12,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kennon, Scotty",34156,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,5,8,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Sordet, Clement",17718,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,2,14,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Sanchez, Matias",18180,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,1,0,15,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Drewitt, Brett",15162,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,5,8,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Jaeho",16197,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,4,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Scrivener, Jason",12734,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,4,11,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"John, Cameron",19390,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,4,12,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Shinkwin, Callum",18244,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,3,12,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Voke, Nick",24091,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,4,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Chris",12451,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,4,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crowe, Harrison",24280,,1,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.25,,,,,,,,,0,5,10,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Yeongsu",13486,,1,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.25,,,,,,,,,0,2,13,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Geary, Josh",9903,,1,Black Diamond Ranch - Ranch Course,1,70,,,74,,,,,,-4.25,,,,,,,,,0,3,10,3,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Maguire, MJ",19453,,1,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.25,,,,,,,,,0,1,15,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Soomin",14614,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,11,1,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Vorster, Martin",25829,,1,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.25,,,,,,,,,0,1,13,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Jeon, Galam",21513,,1,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.25,,,,,,,,,0,3,11,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Brightwell, Jonathan",28536,,1,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.25,,,,,,,,,0,4,9,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ieremia, Denzel",20918,,1,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.25,,,,,,,,,0,3,11,2,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Catlin, John",18524,,2,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.553,,,,,,,,,0,0,16,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Rottluff, Max",19899,,2,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.553,,,,,,,,,0,4,9,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Levy, Alexander",14973,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,4,10,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Wei-Hsuan",19697,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,4,8,6,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Buchanan, Jack",27379,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,4,11,1,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hirschman, Grant",25027,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,2,12,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Katsumata, Ryo",22777,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,2,12,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Moscatel, Joel",27815,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,1,15,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Carrera, Luis",29579,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,4,9,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lewis, Tom",15164,,1,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.25,,,,,,,,,0,2,13,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Schniederjans, Ollie",18662,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,11,1,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Clemons, Dominic",32594,,1,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.25,,,,,,,,,0,3,11,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,2,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.447,,,,,,,,,1,4,12,0,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Saksansin, Poom",14951,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,10,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,4,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.682,,,,,,,,,0,8,8,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,5,11,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,6,8,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kaewkanjana, Sadom",19844,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kaewkanjana, Sadom",19844,,3,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.455,,,,,,,,,0,1,14,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kaewkanjana, Sadom",19844,,2,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.447,,,,,,,,,0,6,10,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kaewkanjana, Sadom",19844,,1,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.75,,,,,,,,,0,5,12,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bekker, Oliver",12819,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,0,4,9,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bekker, Oliver",12819,,3,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.545,,,,,,,,,0,5,12,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bekker, Oliver",12819,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,6,9,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bekker, Oliver",12819,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,3,15,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,4,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.318,,,,,,,,,0,3,12,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,3,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.545,,,,,,,,,0,5,11,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,4,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.318,,,,,,,,,0,2,13,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,4,12,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,5,9,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,3,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.455,,,,,,,,,0,4,9,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,4,12,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,1,2,9,6,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,2,14,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,4,Black Diamond Ranch - Ranch Course,1,70,,,76,,,,,,-6.318,,,,,,,,,0,2,10,5,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,2,15,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,3,15,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,1,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.75,,,,,,,,,0,5,12,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,4,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.318,,,,,,,,,0,5,8,4,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,3,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.455,,,,,,,,,0,2,13,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,7,7,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,4,12,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,1,4,8,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,6,9,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Vincent, Kieran",19538,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,3,15,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Vincent, Kieran",19538,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,4,11,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Vincent, Kieran",19538,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,12,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,1,5,8,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,0,2,12,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,2,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.447,,,,,,,,,0,6,9,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,3,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.545,,,,,,,,,0,6,10,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Anthony",11641,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Anthony",11641,,3,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.545,,,,,,,,,0,4,14,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Anthony",11641,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,6,8,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,2,Black Diamond Ranch - Ranch Course,1,70,,,65,,,,,,4.447,,,,,,,,,0,5,13,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,2,1,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,3,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.455,,,,,,,,,0,4,9,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,3,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.455,,,,,,,,,0,1,14,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,3,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.545,,,,,,,,,0,6,12,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,2,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.447,,,,,,,,,2,1,14,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,1,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.75,,,,,,,,,0,6,12,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Boonma, Danthai",16424,,4,Black Diamond Ranch - Ranch Course,1,70,,,77,,,,,,-7.318,,,,,,,,,0,3,7,6,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Boonma, Danthai",16424,,3,Black Diamond Ranch - Ranch Course,1,70,,,76,,,,,,-6.455,,,,,,,,,0,1,12,3,2
+liv,2026,2026,2026-01-11,Promotions Event,53,"Boonma, Danthai",16424,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Tabuena, Miguel",15274,,4,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.318,,,,,,,,,0,4,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,4,Black Diamond Ranch - Ranch Course,1,70,,,65,,,,,,4.682,,,,,,,,,0,6,11,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Tabuena, Miguel",15274,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wannasrichan, Rattanon",14953,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,2,15,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wannasrichan, Rattanon",14953,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,5,8,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wannasrichan, Rattanon",14953,,2,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.447,,,,,,,,,0,4,12,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,5,10,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,2,14,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,1,3,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Tabuena, Miguel",15274,,3,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.455,,,,,,,,,0,2,12,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,3,Riyadh Golf Club,1,72,,,68,1.078,-1.162,1.196,-0.586,-0.552,0.526,352.014,0.214,0.778,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,2,Riyadh Golf Club,1,72,,,73,-1.692,-1.685,-0.36,0.632,-1.413,-3.105,336.556,0.571,0.722,,,,,,0,2,13,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,1,Riyadh Golf Club,1,72,,,75,-3.318,-1.903,0.15,0.035,-1.718,-5.035,321.276,0.429,0.778,,,,,,0,2,11,5,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,4,Riyadh Golf Club,1,72,,,69,0.488,-0.048,0.998,-2.597,-1.646,-1.158,316.278,0.214,0.722,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,3,Riyadh Golf Club,1,72,,,68,-1.113,1.151,0.595,-0.107,1.639,0.526,309.981,0.286,0.722,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,2,Riyadh Golf Club,1,72,,,74,-0.888,-0.609,-0.209,-2.399,-3.217,-4.105,291.403,0.357,0.556,,,,,,0,2,12,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,1,Riyadh Golf Club,1,72,,,72,-3.702,-0.437,2.909,-0.805,1.666,-2.035,293.172,0.357,0.944,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,4,Riyadh Golf Club,1,72,,,68,2.743,-0.847,-2.024,-0.029,-2.901,-0.158,324.478,0.571,0.611,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,4,Riyadh Golf Club,1,72,,,72,-2.594,-1.02,-1.038,0.494,-1.563,-4.158,327.371,0.5,0.778,,,,,,0,4,11,2,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,2,Riyadh Golf Club,1,72,,,73,-2.341,-0.339,-1.51,1.085,-0.764,-3.105,327.022,0.714,0.667,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,1,Riyadh Golf Club,1,72,,,74,-2.037,-1.846,-0.888,0.736,-1.998,-4.035,313.174,0.5,0.722,,,,,,0,3,11,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,3,Riyadh Golf Club,1,72,,,71,0.977,-0.367,-2.677,-0.407,-3.451,-2.474,319.397,0.357,0.667,,,,,,0,5,10,2,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,2,Riyadh Golf Club,1,72,,,68,3.064,-1.067,0.012,-0.114,-1.17,1.895,306.974,0.429,0.667,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,1,Riyadh Golf Club,1,72,,,71,0.137,-0.678,1.006,-1.5,-1.172,-1.035,320.325,0.5,0.833,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,4,Riyadh Golf Club,1,72,,,67,-1.565,-0.158,1.361,1.204,2.407,0.842,357.35,0.5,0.722,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,4,Riyadh Golf Club,1,72,,,69,0.741,-1.037,-0.581,-0.281,-1.899,-1.158,320.036,0.429,0.833,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,3,Riyadh Golf Club,1,72,,,67,0.559,-1.045,1.033,0.979,0.968,1.526,323.062,0.714,0.778,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,1,Riyadh Golf Club,1,72,,,69,4.189,-0.385,-2.7,-0.138,-3.224,0.965,304.043,0.357,0.667,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,1,Riyadh Golf Club,1,72,,,69,2.053,-0.028,-0.518,-0.541,-1.088,0.965,287.301,0.429,0.667,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,3,Riyadh Golf Club,1,72,,,74,-5.669,-1.067,0.279,0.983,0.196,-5.474,340.489,0.429,0.667,,,,,,0,1,14,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,4,Riyadh Golf Club,1,72,,,74,-3.238,0.267,-3.24,0.053,-2.92,-6.158,329.61,0.429,0.778,,,,,,0,3,13,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,2,Riyadh Golf Club,1,72,,,71,3.31,-1.895,-1.534,-0.987,-4.415,-1.105,291.01,0.571,0.611,,,,,,0,6,10,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,1,Riyadh Golf Club,1,72,,,71,0.27,-0.914,-1.264,0.872,-1.305,-1.035,316.832,0.714,0.722,,,,,,0,4,12,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,4,Riyadh Golf Club,1,72,,,69,0.642,1.013,-1.347,-1.466,-1.8,-1.158,316.347,0.357,0.444,,,,,,1,4,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,3,Riyadh Golf Club,1,72,,,74,0.378,0.556,-5.352,-1.056,-5.852,-5.474,315.261,0.357,0.444,,,,,,0,4,8,6,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,2,Riyadh Golf Club,1,72,,,71,0.752,-1.644,-0.978,0.765,-1.857,-1.105,308.807,0.714,0.722,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,1,Riyadh Golf Club,1,72,,,72,-0.538,-1.484,0.008,-0.021,-1.497,-2.035,302.706,0.5,0.778,,,,,,0,2,14,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,2,Riyadh Golf Club,1,72,,,74,-0.409,-1.014,-0.324,-2.357,-3.696,-4.105,326.778,0.286,0.667,,,,,,0,3,11,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,4,Riyadh Golf Club,1,72,,,72,0.073,-0.92,-1.601,-1.71,-4.231,-4.158,307.344,0.429,0.778,,,,,,0,5,9,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,2,Riyadh Golf Club,1,72,,,74,-1.144,1.018,-1.86,-2.119,-2.961,-4.105,266.554,0.286,0.5,,,,,,0,3,11,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,3,Riyadh Golf Club,1,72,,,71,0.695,0.533,-1.624,-2.078,-3.168,-2.474,310.294,0.286,0.611,,,,,,0,4,12,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,4,Riyadh Golf Club,1,72,,,68,1.137,0.117,2.252,0.337,2.705,-0.158,315.329,0.643,0.833,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,3,Riyadh Golf Club,1,72,,,73,-0.799,-0.487,0.406,-3.594,-3.675,-4.474,316.181,0.571,0.667,,,,,,0,1,15,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,2,Riyadh Golf Club,1,72,,,70,0.083,0.154,1.096,-0.437,0.812,-0.105,281.778,0.5,0.833,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,1,Riyadh Golf Club,1,72,,,73,1.608,-0.807,0.609,0.556,0.357,-3.035,291.403,0.643,0.722,,,,,,0,2,14,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,4,Riyadh Golf Club,1,72,,,66,-0.121,0.918,1.343,-0.299,1.963,1.842,347.831,0.5,0.778,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,3,Riyadh Golf Club,1,72,,,70,-3.563,-0.431,1.939,0.582,2.09,-1.474,313.307,0.786,0.722,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,3,Riyadh Golf Club,1,72,,,76,0.649,-1.458,-6.084,-0.581,-8.123,-7.474,346.185,0.571,0.444,,,,,,0,2,12,2,2
+liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,1,Riyadh Golf Club,1,72,,,66,1.124,0.507,1.174,1.16,2.841,3.965,311.401,0.714,0.778,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,4,Riyadh Golf Club,1,72,,,75,-3.292,1.09,-2.877,-2.078,-3.865,-7.158,320.526,0.429,0.5,,,,,,0,4,9,4,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,4,Riyadh Golf Club,1,72,,,67,-1.315,0.559,1.133,0.464,2.157,0.842,315.618,0.714,0.778,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,3,Riyadh Golf Club,1,72,,,67,0.185,0.011,2.501,-1.17,1.342,1.526,332.451,0.429,0.833,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,2,Riyadh Golf Club,1,72,,,71,-2.697,0.526,0.702,0.364,1.592,-1.105,333.121,0.5,0.889,,,,,,0,2,15,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,1,Riyadh Golf Club,1,72,,,69,-0.799,-0.01,1.491,0.282,1.763,0.965,326.867,0.429,0.889,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Vincent, Scott",14559,T13,4,Riyadh Golf Club,1,72,,,67,0.765,0.087,1.006,-1.016,0.077,0.842,302.093,0.5,0.778,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Vincent, Scott",14559,T13,3,Riyadh Golf Club,1,72,,,68,1.702,2.076,-1.712,-1.539,-1.175,0.526,308.446,0.643,0.667,,,,,,1,5,9,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Vincent, Scott",14559,T13,2,Riyadh Golf Club,1,72,,,70,-0.369,-0.989,1.082,0.171,0.263,-0.105,293.735,0.5,0.833,,,,,,0,2,16,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Vincent, Scott",14559,T13,1,Riyadh Golf Club,1,72,,,68,2.068,0.06,-0.195,0.032,-0.104,1.965,317.899,0.429,0.722,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Richard",12413,T13,4,Riyadh Golf Club,1,72,,,67,-1.996,1.707,0.486,0.645,2.838,0.842,322.568,0.571,0.611,,,,,,0,7,9,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Richard",12413,T13,3,Riyadh Golf Club,1,72,,,67,3.393,0.629,-1.474,-1.022,-1.867,1.526,299.144,0.5,0.611,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Richard",12413,T13,2,Riyadh Golf Club,1,72,,,70,-0.467,2.216,-0.389,-1.465,0.362,-0.105,320.532,0.286,0.611,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Richard",12413,T13,1,Riyadh Golf Club,1,72,,,69,-0.685,-0.761,1.369,1.042,1.65,0.965,308.669,0.643,0.889,,,,,,0,3,15,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smith, Cameron",15856,T13,4,Riyadh Golf Club,1,72,,,65,0.818,1.412,-0.308,0.92,2.024,2.842,298.929,0.714,0.722,,,,,,0,8,9,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smith, Cameron",15856,T13,3,Riyadh Golf Club,1,72,,,68,0.263,0.787,-0.381,-0.142,0.263,0.526,331.575,0.429,0.667,,,,,,0,7,8,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smith, Cameron",15856,T13,2,Riyadh Golf Club,1,72,,,71,-2.246,1.033,0.565,-0.458,1.14,-1.105,312.854,0.429,0.722,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smith, Cameron",15856,T13,1,Riyadh Golf Club,1,72,,,69,0.209,1.169,0.276,-0.689,0.756,0.965,296.975,0.429,0.778,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ortiz, Carlos",14735,T13,4,Riyadh Golf Club,1,72,,,68,-0.888,0.294,0.199,0.238,0.731,-0.158,317.322,0.357,0.833,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ortiz, Carlos",14735,T13,3,Riyadh Golf Club,1,72,,,65,0.786,1.428,1.628,-0.316,2.74,3.526,326.318,0.357,0.722,,,,,,0,9,7,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ortiz, Carlos",14735,T13,2,Riyadh Golf Club,1,72,,,70,-0.556,0.589,-0.707,0.568,0.45,-0.105,300.726,0.571,0.778,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"DeChambeau, Bryson",19841,T17,1,Riyadh Golf Club,1,72,,,68,-0.295,0.969,0.267,1.025,2.26,1.965,332.906,0.571,0.833,,,,,,0,6,11,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"DeChambeau, Bryson",19841,T17,2,Riyadh Golf Club,1,72,,,71,-4.047,-0.122,0.851,2.212,2.941,-1.105,328.514,0.571,0.889,,,,,,0,2,15,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"DeChambeau, Bryson",19841,T17,3,Riyadh Golf Club,1,72,,,67,1.643,-0.601,-0.41,0.894,-0.117,1.526,331.836,0.571,0.833,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"DeChambeau, Bryson",19841,T17,4,Riyadh Golf Club,1,72,,,68,-0.58,-0.433,0.167,0.688,0.422,-0.158,343.139,0.429,0.778,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hellgren, Bjorn",16231,T22,4,Riyadh Golf Club,1,72,,,66,1.19,-0.029,0.779,-0.097,0.652,1.842,320.568,0.571,0.778,,,,,,0,8,8,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hellgren, Bjorn",16231,T22,3,Riyadh Golf Club,1,72,,,67,0.964,-0.693,0.177,1.078,0.562,1.526,335.325,0.714,0.833,,,,,,1,4,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hellgren, Bjorn",16231,T22,2,Riyadh Golf Club,1,72,,,70,-1.403,0.744,0.509,0.044,1.297,-0.105,290.103,0.5,0.722,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hellgren, Bjorn",16231,T22,1,Riyadh Golf Club,1,72,,,72,-1.747,0.125,0.602,-1.015,-0.289,-2.035,301.837,0.429,0.722,,,,,,0,4,10,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Niemann, Joaquin",18079,T22,4,Riyadh Golf Club,1,72,,,68,0.228,-0.055,-0.336,0.005,-0.386,-0.158,333.654,0.5,0.778,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Niemann, Joaquin",18079,T22,3,Riyadh Golf Club,1,72,,,70,-2.408,0.713,0.135,0.087,0.935,-1.474,315.69,0.643,0.667,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Niemann, Joaquin",18079,T22,2,Riyadh Golf Club,1,72,,,69,-0.983,-0.454,1.238,1.094,1.878,0.895,313.208,0.643,0.778,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Niemann, Joaquin",18079,T22,1,Riyadh Golf Club,1,72,,,68,1.553,-0.806,0.477,0.741,0.412,1.965,302.011,0.429,0.778,,,,,,1,3,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Johnson, Dustin",12422,T17,4,Riyadh Golf Club,1,72,,,64,1.667,3.025,0.092,-0.943,2.175,3.842,302.394,0.286,0.5,,,,,,0,8,10,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ortiz, Carlos",14735,T13,1,Riyadh Golf Club,1,72,,,70,0.334,0.278,0.831,-1.478,-0.369,-0.035,327.324,0.286,0.611,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Johnson, Dustin",12422,T17,3,Riyadh Golf Club,1,72,,,71,-0.961,1.5,-2.805,-0.207,-1.512,-2.474,315.535,0.5,0.611,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Johnson, Dustin",12422,T17,1,Riyadh Golf Club,1,72,,,72,0.126,-0.334,-1.468,-0.359,-2.161,-2.035,284.383,0.429,0.778,,,,,,0,1,16,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Asaji, Yosuke",12637,T17,4,Riyadh Golf Club,1,72,,,64,-1.124,-0.338,1.227,1.077,1.966,3.842,333.699,0.643,0.833,,,,,,0,9,8,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Asaji, Yosuke",12637,T17,3,Riyadh Golf Club,1,72,,,73,0.618,-1.492,1.378,0.022,-0.092,-4.474,329.907,0.286,0.722,,,,,,0,5,9,2,2
+liv,2026,2026,2026-02-07,Riyadh,54,"Asaji, Yosuke",12637,T17,2,Riyadh Golf Club,1,72,,,69,1.164,-0.355,-0.088,0.174,-0.269,0.895,314.442,0.429,0.889,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Asaji, Yosuke",12637,T17,1,Riyadh Golf Club,1,72,,,68,1.891,-0.537,2.663,0.947,3.074,1.965,321.882,0.714,0.944,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McKibbin, Tom",22322,T17,4,Riyadh Golf Club,1,72,,,67,1.4,-0.785,-0.091,0.317,-0.558,0.842,300.294,0.571,0.722,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McKibbin, Tom",22322,T17,3,Riyadh Golf Club,1,72,,,65,1.38,0.162,0.665,1.319,2.147,3.526,319.439,0.786,0.833,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McKibbin, Tom",22322,T17,2,Riyadh Golf Club,1,72,,,70,-0.505,0.973,-1.286,0.713,0.4,-0.105,309.54,0.643,0.667,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McKibbin, Tom",22322,T17,1,Riyadh Golf Club,1,72,,,72,0.172,-0.954,-2.723,1.47,-2.207,-2.035,302.788,0.714,0.611,,,,,,0,4,11,2,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Johnson, Dustin",12422,T17,2,Riyadh Golf Club,1,72,,,67,3.017,-0.382,0.45,-0.191,-0.123,2.895,303.182,0.714,0.833,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,4,Riyadh Golf Club,1,72,,,71,-2.261,-0.172,-0.998,0.274,-0.897,-3.158,319.571,0.571,0.667,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,3,Riyadh Golf Club,1,72,,,67,-0.188,1.175,-0.877,1.416,1.714,1.526,315.056,0.714,0.778,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,2,Riyadh Golf Club,1,72,,,67,-0.026,1.348,0.727,0.845,2.92,2.895,306.079,0.714,0.833,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,1,Riyadh Golf Club,1,72,,,68,0.323,0.167,1.72,-0.246,1.642,1.965,288.546,0.286,0.889,,,,,,1,3,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,4,Riyadh Golf Club,1,72,,,65,0.787,0.205,1.763,0.087,2.055,2.842,318.424,0.429,0.944,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,3,Riyadh Golf Club,1,72,,,65,3.259,-1.21,1.722,-0.244,0.268,3.526,302.296,0.214,0.722,,,,,,0,8,9,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,2,Riyadh Golf Club,1,72,,,68,-1.082,0.769,2.045,0.163,2.977,1.895,311.922,0.571,0.778,,,,,,0,7,8,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,1,Riyadh Golf Club,1,72,,,70,-3.013,2.912,-0.597,0.662,2.977,-0.035,307.104,0.571,0.778,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,4,Riyadh Golf Club,1,72,,,65,2.74,0.085,-1.211,1.228,0.102,2.842,329.203,0.643,0.778,,,,,,1,5,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,3,Riyadh Golf Club,1,72,,,67,2.113,0.232,-1.545,0.726,-0.586,1.526,339.147,0.5,0.833,,,,,,1,5,11,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,2,Riyadh Golf Club,1,72,,,67,0.903,-0.291,1.191,1.092,1.991,2.895,329.971,0.5,0.944,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,1,Riyadh Golf Club,1,72,,,69,0.473,-0.793,0.047,1.238,0.492,0.965,308.738,0.643,0.889,,,,,,0,3,15,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,2,Riyadh Golf Club,1,72,,,69,0.354,0.818,-0.953,0.677,0.541,0.895,304.55,0.929,0.667,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,4,Riyadh Golf Club,1,72,,,67,-2.223,0.804,2.167,0.094,3.065,0.842,329.432,0.429,0.889,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,2,Riyadh Golf Club,1,72,,,69,1.44,0.371,0.834,-1.75,-0.546,0.895,326.443,0.214,0.722,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,1,Riyadh Golf Club,1,72,,,65,3.388,0.052,2.126,-0.601,1.577,4.965,290.278,0.357,0.833,,,,,,1,5,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,4,Riyadh Golf Club,1,72,,,63,1.015,0.992,0.303,2.532,3.827,4.842,346.429,0.714,0.833,,,,,,0,9,9,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,3,Riyadh Golf Club,1,72,,,67,-0.44,-0.488,0.979,1.475,1.966,1.526,340.165,0.5,0.889,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,2,Riyadh Golf Club,1,72,,,68,2.768,-1.195,-0.04,0.361,-0.874,1.895,316.169,0.571,0.722,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,1,Riyadh Golf Club,1,72,,,67,1.843,0.679,-1.37,1.812,1.122,2.965,329.883,0.643,0.889,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,4,Riyadh Golf Club,1,72,,,64,-0.164,0.346,1.891,1.769,4.006,3.842,335.738,0.857,0.833,,,,,,0,8,10,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,3,Riyadh Golf Club,1,72,,,65,2.008,-0.209,0.271,1.457,1.519,3.526,325.376,0.857,0.778,,,,,,1,5,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,2,Riyadh Golf Club,1,72,,,69,1.434,0.0,-0.667,0.128,-0.539,0.895,302.871,0.5,0.667,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,3,Riyadh Golf Club,1,72,,,66,-0.298,0.022,2.167,0.635,2.825,2.526,341.831,0.429,0.889,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,1,Riyadh Golf Club,1,72,,,71,-1.394,1.372,-0.128,-0.885,0.359,-1.035,305.472,0.429,0.778,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,3,Riyadh Golf Club,1,72,,,65,1.212,-0.588,1.839,1.063,2.314,3.526,314.236,0.714,0.833,,,,,,1,6,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,1,Riyadh Golf Club,1,72,,,65,2.593,0.055,-3.46,-2.224,-5.628,4.965,306.228,0.286,0.5,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,1,Riyadh Golf Club,1,72,,,67,2.159,-0.058,-0.032,0.896,0.806,2.965,296.228,0.571,0.722,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,4,Riyadh Golf Club,1,72,,,64,0.393,0.65,1.758,1.041,3.449,3.842,339.529,0.643,0.833,,,,,,0,9,8,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,3,Riyadh Golf Club,1,72,,,65,1.916,0.328,0.221,1.061,1.61,3.526,327.617,0.571,0.722,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,2,Riyadh Golf Club,1,72,,,67,0.037,1.212,1.301,0.345,2.858,2.895,327.794,0.571,0.667,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,1,Riyadh Golf Club,1,72,,,75,-1.002,-2.139,-2.602,0.708,-4.033,-5.035,326.207,0.5,0.611,,,,,,0,1,13,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,4,Riyadh Golf Club,1,72,,,67,2.976,0.359,-2.017,-0.476,-2.134,0.842,306.139,0.429,0.667,,,,,,0,8,7,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,3,Riyadh Golf Club,1,72,,,67,-0.366,0.794,0.763,0.336,1.892,1.526,330.022,0.286,0.556,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,2,Riyadh Golf Club,1,72,,,70,-2.192,0.695,1.459,-0.067,2.087,-0.105,322.688,0.357,0.778,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,1,Riyadh Golf Club,1,72,,,67,1.972,0.175,0.926,-0.108,0.993,2.965,305.2,0.429,0.722,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,4,Riyadh Golf Club,1,72,,,66,0.912,0.225,0.844,-0.139,0.93,1.842,297.982,0.5,0.722,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,4,Riyadh Golf Club,1,72,,,64,1.701,-0.668,2.812,-0.003,2.141,3.842,315.465,0.429,0.944,,,,,,1,6,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,2,Riyadh Golf Club,1,72,,,71,-1.382,2.579,-2.792,0.489,0.277,-1.105,307.897,0.571,0.611,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,1,Riyadh Golf Club,1,72,,,69,0.915,0.722,-1.283,0.612,0.05,0.965,312.69,0.571,0.833,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,4,Riyadh Golf Club,1,72,,,66,2.16,0.532,0.052,-0.901,-0.318,1.842,299.908,0.429,0.722,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,3,Riyadh Golf Club,1,72,,,69,-0.797,-0.359,-0.502,1.185,0.323,-0.474,297.11,0.643,0.778,,,,,,1,3,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,2,Riyadh Golf Club,1,72,,,68,-1.188,0.005,3.429,-0.35,3.083,1.895,285.965,0.357,0.778,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,1,Riyadh Golf Club,1,72,,,67,0.078,2.353,0.361,0.173,2.887,2.965,300.408,0.429,0.722,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,4,Riyadh Golf Club,1,72,,,67,1.347,0.435,-3.153,1.214,-1.505,0.842,334.582,0.643,0.611,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,3,Riyadh Golf Club,1,72,,,68,-1.707,-1.301,-2.08,0.614,-2.767,0.526,312.711,0.643,0.722,,,,,,1,3,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,2,Riyadh Golf Club,1,72,,,69,-0.409,-0.099,-0.215,0.617,0.303,0.895,327.361,0.714,0.833,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,3,Riyadh Golf Club,1,72,,,67,-0.768,1.278,1.797,-0.78,2.295,1.526,306.689,0.357,0.778,,,,,,1,4,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,1,Riyadh Golf Club,1,72,,,71,0.773,-1.82,0.423,-0.411,-1.808,-1.035,284.181,0.357,0.722,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,2,Riyadh Golf Club,1,72,,,64,4.228,0.999,-0.119,0.787,1.667,5.895,310.533,0.786,0.722,,,,,,0,8,10,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,4,Riyadh Golf Club,1,72,,,72,0.244,-2.95,-1.724,0.272,-4.402,-4.158,320.785,0.714,0.778,,,,,,0,3,13,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,3,Riyadh Golf Club,1,72,,,67,0.892,-0.283,0.148,0.769,0.634,1.526,346.653,0.571,0.722,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,2,Riyadh Golf Club,1,72,,,73,-1.227,1.394,-2.664,-0.609,-1.878,-3.105,319.053,0.571,0.556,,,,,,0,1,15,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,1,Riyadh Golf Club,1,72,,,69,1.46,-0.177,-1.349,1.03,-0.495,0.965,333.243,0.714,0.833,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,4,Riyadh Golf Club,1,72,,,70,1.206,-0.546,-0.623,-2.194,-3.364,-2.158,326.192,0.357,0.611,,,,,,0,5,11,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,3,Riyadh Golf Club,1,72,,,71,-0.307,0.214,-1.456,-0.925,-2.167,-2.474,319.707,0.429,0.611,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,2,Riyadh Golf Club,1,72,,,67,0.797,-0.273,0.984,1.387,2.097,2.895,306.828,0.786,0.833,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,1,Riyadh Golf Club,1,72,,,71,-1.757,-0.116,0.477,0.361,0.722,-1.035,298.968,0.571,0.778,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,4,Riyadh Golf Club,1,72,,,68,1.329,-1.039,0.344,-0.791,-1.487,-0.158,307.619,0.357,0.722,,,,,,1,5,9,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,3,Riyadh Golf Club,1,72,,,70,-1.837,2.166,-0.935,-0.867,0.363,-1.474,292.747,0.214,0.667,,,,,,0,2,16,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,2,Riyadh Golf Club,1,72,,,66,3.009,0.879,0.104,-0.097,0.886,3.895,297.635,0.286,0.722,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,1,Riyadh Golf Club,1,72,,,75,-2.655,-0.91,-0.323,-1.148,-2.38,-5.035,289.674,0.286,0.833,,,,,,0,2,12,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Masaveu, Luis",30428,T37,4,Riyadh Golf Club,1,72,,,65,1.524,0.689,0.701,-0.072,1.318,2.842,322.454,0.429,0.833,,,,,,1,5,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Masaveu, Luis",30428,T37,3,Riyadh Golf Club,1,72,,,69,-2.936,0.314,3.794,-1.645,2.462,-0.474,325.628,0.429,0.833,,,,,,1,4,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Masaveu, Luis",30428,T37,2,Riyadh Golf Club,1,72,,,69,-0.964,-0.211,0.921,1.149,1.859,0.895,323.46,0.643,0.833,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Masaveu, Luis",30428,T37,1,Riyadh Golf Club,1,72,,,75,-0.495,-0.284,-4.479,0.224,-4.54,-5.035,308.932,0.571,0.667,,,,,,0,3,10,4,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,4,Riyadh Golf Club,1,72,,,68,1.715,-0.721,-1.04,-0.111,-1.872,-0.158,323.943,0.5,0.778,,,,,,1,4,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,3,Riyadh Golf Club,1,72,,,68,-0.252,-0.049,-0.437,1.265,0.778,0.526,336.593,0.714,0.833,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,2,Riyadh Golf Club,1,72,,,70,0.925,-0.855,0.81,-0.986,-1.031,-0.105,307.154,0.5,0.833,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,1,Riyadh Golf Club,1,72,,,72,-2.747,-0.646,0.175,1.183,0.712,-2.035,306.988,0.643,0.889,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,4,Riyadh Golf Club,1,72,,,71,-3.165,1.252,-0.481,-0.765,0.007,-3.158,344.533,0.429,0.778,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,1,Riyadh Golf Club,1,72,,,75,0.943,0.177,-4.146,-2.009,-5.978,-5.035,282.671,0.429,0.389,,,,,,0,2,12,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,2,Riyadh Golf Club,1,72,,,71,1.306,0.28,-2.653,-0.038,-2.411,-1.105,277.882,0.643,0.389,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,3,Riyadh Golf Club,1,72,,,67,-0.34,-0.866,1.655,1.078,1.866,1.526,311.172,0.786,0.833,,,,,,1,4,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,3,Riyadh Golf Club,1,72,,,67,0.297,0.353,0.947,-0.071,1.229,1.526,328.833,0.429,0.778,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,2,Riyadh Golf Club,1,72,,,72,-0.011,-1.871,-1.319,1.095,-2.095,-2.105,305.053,0.714,0.667,,,,,,0,5,10,1,2
+liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,1,Riyadh Golf Club,1,72,,,67,0.625,1.346,-0.595,1.588,2.34,2.965,318.396,0.714,0.667,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,4,Riyadh Golf Club,1,72,,,68,-1.252,-0.774,1.485,0.383,1.094,-0.158,318.654,0.5,0.889,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,3,Riyadh Golf Club,1,72,,,68,-0.425,0.233,0.722,-0.003,0.952,0.526,326.887,0.357,0.722,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,2,Riyadh Golf Club,1,72,,,74,-0.276,-0.952,-1.529,-1.349,-3.83,-4.105,320.261,0.5,0.556,,,,,,0,4,8,6,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,1,Riyadh Golf Club,1,72,,,70,-1.354,0.099,1.123,0.097,1.319,-0.035,317.26,0.286,0.833,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,4,Riyadh Golf Club,1,72,,,71,-0.604,-0.825,-0.48,-1.249,-2.554,-3.158,295.254,0.429,0.833,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,3,Riyadh Golf Club,1,72,,,67,0.596,1.999,0.758,-1.827,0.93,1.526,318.707,0.5,0.611,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,4,Riyadh Golf Club,1,72,,,69,-1.667,-0.474,0.119,0.864,0.509,-1.158,308.475,0.714,0.611,,,,,,1,3,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,2,Riyadh Golf Club,1,72,,,72,-1.49,-1.235,1.171,-0.552,-0.615,-2.105,284.483,0.571,0.778,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,4,Riyadh Golf Club,1,72,,,68,1.547,0.435,-2.101,-0.039,-1.705,-0.158,294.613,0.571,0.722,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,3,Riyadh Golf Club,1,72,,,70,1.647,-1.974,-0.672,-0.475,-3.121,-1.474,301.029,0.5,0.667,,,,,,1,3,12,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,2,Riyadh Golf Club,1,72,,,70,-1.218,-0.058,0.601,0.569,1.113,-0.105,289.526,0.714,0.722,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,1,Riyadh Golf Club,1,72,,,72,-2.023,0.047,1.103,-1.162,-0.012,-2.035,289.079,0.214,0.889,,,,,,0,2,14,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,4,Riyadh Golf Club,1,72,,,70,-1.813,-0.414,-0.415,0.484,-0.345,-2.158,322.946,0.571,0.889,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,3,Riyadh Golf Club,1,72,,,70,-1.227,-0.718,0.49,-0.018,-0.247,-1.474,326.978,0.571,0.778,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,2,Riyadh Golf Club,1,72,,,69,1.683,-0.676,-0.293,0.181,-0.788,0.895,255.446,0.643,0.778,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,1,Riyadh Golf Club,1,72,,,71,-1.939,1.22,2.26,-2.576,0.904,-1.035,285.806,0.357,0.611,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,4,Riyadh Golf Club,1,72,,,67,-1.078,0.347,1.596,-0.022,1.92,0.842,321.238,0.286,0.667,,,,,,1,3,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,1,Riyadh Golf Club,1,72,,,70,-0.118,0.494,0.34,-0.751,0.082,-0.035,307.626,0.286,0.778,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,3,Riyadh Golf Club,1,72,,,69,0.534,0.489,-1.584,0.086,-1.008,-0.474,303.069,0.429,0.722,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,2,Riyadh Golf Club,1,72,,,70,-0.416,0.702,-0.868,0.476,0.31,-0.105,290.654,0.643,0.611,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,1,Riyadh Golf Club,1,72,,,69,0.788,0.206,0.661,-0.69,0.177,0.965,299.476,0.286,0.667,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,4,Riyadh Golf Club,1,72,,,68,1.244,-0.35,-1.878,0.826,-1.402,-0.158,333.626,0.714,0.778,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,3,Riyadh Golf Club,1,72,,,70,-0.221,-0.557,-0.454,-0.242,-1.253,-1.474,338.364,0.429,0.667,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,2,Riyadh Golf Club,1,72,,,69,-0.116,1.658,-0.16,-0.487,1.011,0.895,290.136,0.571,0.611,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,1,Riyadh Golf Club,1,72,,,69,0.983,-0.748,0.305,0.425,-0.018,0.965,306.399,0.429,0.778,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,4,Riyadh Golf Club,1,72,,,66,-1.498,-0.456,3.426,0.371,3.34,1.842,343.946,0.357,1.0,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,3,Riyadh Golf Club,1,72,,,66,0.483,0.706,1.052,0.285,2.043,2.526,332.321,0.357,0.833,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,2,Riyadh Golf Club,1,72,,,73,-2.443,-0.943,-0.154,0.434,-0.663,-3.105,296.431,0.357,0.833,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,1,Riyadh Golf Club,1,72,,,71,-2.181,0.217,0.222,0.707,1.146,-1.035,307.265,0.357,0.778,,,,,,1,0,16,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,4,Riyadh Golf Club,1,72,,,70,-0.766,-0.609,-0.618,-0.165,-1.392,-2.158,272.535,0.643,0.667,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,1,Riyadh Golf Club,1,72,,,67,1.053,1.887,-0.081,0.106,1.912,2.965,298.847,0.5,0.778,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,3,Riyadh Golf Club,1,72,,,68,2.179,-0.215,-1.45,0.012,-1.653,0.526,302.803,0.571,0.611,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,1,Riyadh Golf Club,1,72,,,72,0.496,0.251,-2.241,-0.542,-2.531,-2.035,302.833,0.286,0.778,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,4,Riyadh Golf Club,1,72,,,69,0.267,-0.123,-0.787,-0.515,-1.424,-1.158,299.242,0.5,0.778,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,3,Riyadh Golf Club,1,72,,,68,1.192,0.366,-0.278,-0.753,-0.666,0.526,322.753,0.5,0.667,,,,,,0,7,8,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,2,Riyadh Golf Club,1,72,,,68,0.248,-1.604,3.149,0.102,1.647,1.895,309.919,0.5,0.944,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,1,Riyadh Golf Club,1,72,,,70,-1.319,0.454,1.149,-0.319,1.284,-0.035,314.003,0.5,0.778,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,4,Riyadh Golf Club,1,72,,,66,-0.399,-0.156,2.324,0.073,2.241,1.842,306.318,0.571,0.722,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,3,Riyadh Golf Club,1,72,,,69,-1.042,-0.223,0.699,0.091,0.568,-0.474,310.597,0.571,0.778,,,,,,0,3,15,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,2,Riyadh Golf Club,1,72,,,72,-1.076,1.215,0.233,-2.477,-1.029,-2.105,281.931,0.357,0.722,,,,,,0,2,15,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,1,Riyadh Golf Club,1,72,,,68,0.837,-0.08,1.773,-0.565,1.128,1.965,298.931,0.429,0.833,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,2,Riyadh Golf Club,1,72,,,66,2.541,-0.306,1.447,0.212,1.354,3.895,294.61,0.571,0.889,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,3,Riyadh Golf Club,1,72,,,68,1.365,-0.49,-1.009,0.659,-0.839,0.526,313.196,0.429,0.722,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,2,Riyadh Golf Club,1,72,,,71,-0.358,-0.049,0.312,-1.011,-0.748,-1.105,305.4,0.429,0.778,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,4,Riyadh Golf Club,1,72,,,69,-0.857,0.249,-0.854,0.304,-0.301,-1.158,317.61,0.714,0.833,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,4,Riyadh Golf Club,1,72,,,67,-0.77,-0.427,1.704,0.334,1.612,0.842,335.881,0.5,0.833,,,,,,1,4,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,3,Riyadh Golf Club,1,72,,,71,-2.853,0.437,0.439,-0.497,0.38,-2.474,321.942,0.5,0.778,,,,,,0,2,15,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,2,Riyadh Golf Club,1,72,,,71,-0.808,-0.693,-0.014,0.41,-0.297,-1.105,317.275,0.643,0.667,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,1,Riyadh Golf Club,1,72,,,68,-1.698,0.202,2.223,1.238,3.663,1.965,320.486,0.643,0.889,,,,,,0,7,8,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,4,Riyadh Golf Club,1,72,,,71,-0.466,0.51,-2.29,-0.912,-2.692,-3.158,308.865,0.571,0.722,,,,,,0,5,10,2,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,3,Riyadh Golf Club,1,72,,,70,-2.165,-1.101,1.412,0.381,0.692,-1.474,329.982,0.5,0.889,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,2,Riyadh Golf Club,1,72,,,68,0.786,0.086,0.76,0.262,1.109,1.895,296.161,0.571,0.722,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,1,Riyadh Golf Club,1,72,,,68,-1.31,-0.037,2.814,0.497,3.275,1.965,304.179,0.571,0.944,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,4,Riyadh Golf Club,1,72,,,69,0.739,-1.285,-0.516,-0.096,-1.897,-1.158,304.276,0.429,0.722,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,3,Riyadh Golf Club,1,72,,,70,-0.38,-0.733,-0.425,0.064,-1.094,-1.474,304.631,0.571,0.778,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,3,Riyadh Golf Club,1,72,,,68,-1.609,-0.929,2.729,0.335,2.135,0.526,340.831,0.5,0.778,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,1,Riyadh Golf Club,1,72,,,70,0.899,0.367,-1.496,0.196,-0.934,-0.035,316.408,0.5,0.722,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,4,Riyadh Golf Club,1,72,,,69,-2.718,-0.553,2.173,-0.06,1.56,-1.158,306.153,0.357,0.833,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,3,Riyadh Golf Club,1,72,,,66,1.852,0.031,0.256,0.388,0.674,2.526,309.061,0.571,0.889,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,2,Riyadh Golf Club,1,72,,,73,-2.178,0.252,-1.703,0.524,-0.927,-3.105,290.471,0.786,0.667,,,,,,0,2,13,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,1,Riyadh Golf Club,1,72,,,69,1.613,0.71,-0.141,-1.217,-0.648,0.965,275.536,0.357,0.778,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,4,Riyadh Golf Club,1,72,,,67,2.673,-0.392,-1.877,0.438,-1.831,0.842,313.533,0.643,0.667,,,,,,0,7,9,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,3,Riyadh Golf Club,1,72,,,71,-2.144,0.411,-0.567,-0.173,-0.329,-2.474,285.842,0.571,0.778,,,,,,0,2,15,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,2,Riyadh Golf Club,1,72,,,67,3.421,0.293,-0.481,-0.338,-0.526,2.895,271.318,0.429,0.667,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,1,Riyadh Golf Club,1,72,,,72,-1.824,0.425,0.016,-0.652,-0.211,-2.035,291.096,0.429,0.778,,,,,,0,2,14,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,2,Riyadh Golf Club,1,72,,,70,0.82,-0.952,-0.312,0.338,-0.926,-0.105,321.956,0.5,0.556,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,2,Riyadh Golf Club,1,72,,,71,0.514,0.01,-1.805,0.175,-1.62,-1.105,282.49,0.5,0.556,,,,,,1,2,12,3,0

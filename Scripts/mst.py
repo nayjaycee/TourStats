@@ -6,22 +6,47 @@ from typing import Iterable, Sequence, Optional, Dict, List
 import numpy as np
 import pandas as pd
 import streamlit as st
-
-from pathlib import Path
-from typing import Optional, Dict, List, Tuple
-
-import numpy as np
-import pandas as pd
-import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 
+REPO_ROOT = Path(__file__).resolve().parent
+DATA_DIR = REPO_ROOT / "Data"
+MST_DIR = DATA_DIR / "MST"
+INUSE_DIR = DATA_DIR / "in Use"
+
 # ============================================================
-# MST DATA PATHS
+# Paths (repo-relative; Streamlit Cloud safe)
 # ============================================================
-MST_DIR = Path("/Users/joshmacbook/python_projects/OAD/Data/MST")
-MST_ROUNDLEVEL_2024_PRESENT = MST_DIR / "combined_roundlevel_2024_present.csv"
+REPO_ROOT = Path(__file__).resolve().parent
+DATA_ROOT = REPO_ROOT / "Data"
+MST_DIR   = DATA_ROOT / "MST"
+INUSE_DIR = DATA_ROOT / "in Use"
+
+# Required MST Excel inputs
+ALL_PLAYERS_PATH = MST_DIR / "All_players.xlsx"
+SCHED_PATH       = MST_DIR / "OAD_2026_Schedule.xlsx"
+SKILL_PATH       = MST_DIR / "app_skill.xlsx"
+FIELDS_PATH      = MST_DIR / "Fields.xlsx"
+
+BUCKET_PATH_A = MST_DIR / "Approach_Buckets.xlsx"
+BUCKET_PATH_B = MST_DIR / "Approach Buckets.xlsx"
+BUCKET_PATH   = BUCKET_PATH_A if BUCKET_PATH_A.exists() else BUCKET_PATH_B
+
+# Required MST CSV inputs
 MST_EVENTLEVEL_2017_2023 = MST_DIR / "combined_eventlevel_pga_2017_2023_mean.csv"
+
+# IMPORTANT: set this to the exact filename that exists in GitHub
+# If you don't know it yet, use the candidate picker below.
+ROUNDLEVEL_2024P_CANDIDATES = [
+    MST_DIR / "combined_roundlevel_2024_present.csv",
+    MST_DIR / "combined_roundlevel_2024_present_mean.csv",
+    MST_DIR / "combined_roundlevel_2024_present_mean_only.csv",
+    MST_DIR / "combined_roundlevel_2024_present_pga.csv",
+]
+MST_ROUNDLEVEL_2024_PRESENT = next((p for p in ROUNDLEVEL_2024P_CANDIDATES if p.exists()), None)
+
+# Optional combined rounds (only if used)
+ROUNDS_PATH = INUSE_DIR / "combined_rounds_all_2017_2026.csv"
 
 # ============================================================
 # LOADERS (MST split files)
@@ -85,78 +110,40 @@ st.markdown(
 )
 
 # ============================================================
-# Paths (AUTO-DETECT between your local OAD project and public repo)
+# Paths (repo-relative; works on Streamlit Cloud)
 # ============================================================
+from pathlib import Path
+
 THIS_FILE = Path(__file__).resolve()
 
-CANDIDATE_DATA_DIRS = [
-    # Local OAD project layout
-    THIS_FILE.parents[1] / "Data" / "MST",      # .../OAD/Scripts/mst.py -> .../OAD/Data/MST
-    # Public repo layout (if mst.py is at repo root)
-    THIS_FILE.parent / "data" / "mst",          # .../oad-public/mst.py -> .../oad-public/data/mst
-    THIS_FILE.parent / "data" / "MST",
+def _pick_repo_root(start: Path) -> Path:
+    """
+    Walk upward until we find the repo root that contains the 'Data' folder.
+    Works whether mst.py is at repo root or in Scripts/.
+    """
+    for p in [start.parent] + list(start.parents):
+        if (p / "Data").exists():
+            return p
+    # fallback: assume file's parent
+    return start.parent
+
+required = [
+    ALL_PLAYERS_PATH, SCHED_PATH, SKILL_PATH, FIELDS_PATH, BUCKET_PATH,
+    MST_EVENTLEVEL_2017_2023
 ]
 
-def _pick_data_dir(cands: list[Path]) -> Path:
-    for d in cands:
-        if d.exists():
-            return d
-    # fall back to the first candidate; we’ll error with exact missing file paths below
-    return cands[0]
-def _clean_text(x) -> str:
-    if x is None:
-        return "—"
-    if isinstance(x, float) and np.isnan(x):
-        return "—"
-    s = str(x).strip()
-    if s == "" or s.lower() in {"nan", "none", "null"}:
-        return "—"
-    return s
+missing = [p for p in required if not p.exists()]
 
-def _first_present(row: pd.Series, candidates: list[str]):
-    for c in candidates:
-        if c in row.index:
-            return row.get(c)
-    return None
+if MST_ROUNDLEVEL_2024_PRESENT is None:
+    missing.append(MST_DIR / "combined_roundlevel_2024_present*.csv (not found)")
+elif not MST_ROUNDLEVEL_2024_PRESENT.exists():
+    missing.append(MST_ROUNDLEVEL_2024_PRESENT)
 
-def _as_money(x) -> str:
-    try:
-        v = float(x)
-        if np.isnan(v):
-            return "—"
-        return "${:,.0f}".format(v)
-    except Exception:
-        return "—"
-
-
-DATA_DIR = _pick_data_dir(CANDIDATE_DATA_DIRS)
-
-# Required MST Excel inputs
-ALL_PLAYERS_PATH = DATA_DIR / "All_players.xlsx"
-SCHED_PATH  = DATA_DIR / "OAD_2026_Schedule.xlsx"
-SKILL_PATH  = DATA_DIR / "app_skill.xlsx"
-FIELDS_PATH = DATA_DIR / "Fields.xlsx"
-
-# Bucket filename varies in your worlds; try both
-BUCKET_PATH_A = DATA_DIR / "Approach_Buckets.xlsx"
-BUCKET_PATH_B = DATA_DIR / "Approach Buckets.xlsx"
-BUCKET_PATH = BUCKET_PATH_A if BUCKET_PATH_A.exists() else BUCKET_PATH_B
-
-# Round-level combined CSV: local OAD project path
-ROUNDS_CANDIDATES = [
-    THIS_FILE.parents[1] / "Data" / "in Use" / "combined_rounds_all_2017_2026.csv",  # .../OAD/Data/in Use/...
-    THIS_FILE.parent / "data" / "combined_rounds_all_2017_2026.csv",                 # if you later copy into public repo
-]
-ROUNDS_PATH = next((p for p in ROUNDS_CANDIDATES if p.exists()), ROUNDS_CANDIDATES[0])
-
-# Hard fail early with a helpful message (no guessing)
-missing = [p for p in [SCHED_PATH, SKILL_PATH, FIELDS_PATH, ALL_PLAYERS_PATH, BUCKET_PATH, ROUNDS_PATH] if not p.exists()]
 if missing:
     st.error("Missing required file(s):")
     for p in missing:
         st.code(str(p))
     st.stop()
-
 
 # ============================================================
 # Loaders (cached)
