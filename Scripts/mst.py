@@ -2,12 +2,21 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Iterable, Sequence, Optional, Dict, List
+import streamlit.components.v1 as components
+from textwrap import dedent
 
 import numpy as np
 import pandas as pd
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
+import html
+
+st.set_page_config(
+    page_title="MST OaD",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 # ============================================================
 # Paths (repo-relative; works locally + Streamlit Cloud)
@@ -32,7 +41,7 @@ ALL_PLAYERS_PATH = MST_DIR / "All_players.xlsx"
 SCHED_PATH       = MST_DIR / "OAD_2026_Schedule.xlsx"
 SKILL_PATH       = MST_DIR / "app_skill.xlsx"
 FIELDS_PATH      = MST_DIR / "Fields.xlsx"
-
+FINISHES_PATH = MST_DIR / "Finishes.csv"
 BUCKET_PATH_A = MST_DIR / "Approach_Buckets.xlsx"
 BUCKET_PATH_B = MST_DIR / "Approach Buckets.xlsx"
 BUCKET_PATH   = BUCKET_PATH_A if BUCKET_PATH_A.exists() else BUCKET_PATH_B
@@ -49,12 +58,13 @@ MST_ROUNDLEVEL_2024_PRESENT = next((p for p in ROUNDLEVEL_2024P_CANDIDATES if p.
 
 ROUNDS_PATH = INUSE_DIR / "combined_rounds_all_2017_2026.csv"
 
-# ---- Hard fail early ----
 required = [
     ALL_PLAYERS_PATH, SCHED_PATH, SKILL_PATH, FIELDS_PATH, BUCKET_PATH,
     MST_EVENTLEVEL_2017_2023,
     ROUNDS_PATH,
+    FINISHES_PATH,
 ]
+
 missing = [p for p in required if not p.exists()]
 
 if MST_ROUNDLEVEL_2024_PRESENT is None:
@@ -113,25 +123,318 @@ SEASON_YEAR = 2026
 # ============================================================
 # Page config
 # ============================================================
-st.set_page_config(page_title="MST OaD", layout="wide")
 st.title("One and Done")
 
-st.markdown(
-    """
-    <style>
-      /* Remove extra top padding in the main app area */
-      .block-container { padding-top: 3.0rem; }
+HERO_H = 240  # <-- tune: 230-280
 
-      /* Slightly tighten header area too (Streamlit versions vary) */
-      header[data-testid="stHeader"] { height: 0rem; }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+st.markdown("""
+<style>
+/* Deep Dive layout helpers */
+.dd-wrap{
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+  padding: 16px 18px;
+}
+
+.dd-title{
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+}
+.dd-kpi { flex: 1 1 0; min-width: 0; min-height: 52px; }
+
+.dd-kpi-row{
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.dd-kpi{
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 12px 12px;
+  min-height: 64px;
+}
+
+.dd-kpi-label{
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.dd-kpi-val{
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.dd-img-card{
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 330px; /* keeps it stable */
+}
+
+.dd-img-card img{
+  border-radius: 16px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+.dd-photo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ============================================================
 # Loaders (cached)
 # ============================================================
+st.markdown("""
+<style>
+.hero-card{
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.hero-title{
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero-meta-row{
+  margin-top: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-meta{ white-space: nowrap; }
+.hero-meta-sep{ opacity: 0.55; }
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<style>
+/* center it and remove any "card" vibe */
+.dd-float-wrap{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding-top: 8px;
+}
+
+/* floating image box: NO border, NO background, just shadow */
+.dd-float-imgbox{
+  border-radius: 22px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.55),
+    0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* actual image crop */
+.dd-float-imgbox img{
+  width: 100%;
+  height: 100%;
+  display:block;
+  object-fit: cover;
+  object-position: center 20%;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+/* Deep Dive hero row */
+.dd-hero-left {
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+}
+
+.dd-hero-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+}
+
+.dd-kpi-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: nowrap;
+}
+
+.dd-kpi {
+  flex: 1 1 0;
+  min-width: 0;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.035);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.dd-kpi-label {
+  font-size: 11px;
+  opacity: 0.70;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dd-kpi-val {
+  font-size: 20px;
+  font-weight: 850;
+  line-height: 1.0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Right headshot card */
+.dd-photo-card {
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.02);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.45),
+    0 2px 10px rgba(0,0,0,0.25);
+}
+
+.dd-photo-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
+}
+</style>
+""", unsafe_allow_html=True)
+
+def load_mst_finishes_2026() -> pd.DataFrame:
+    p = MST_DIR / "Finishes.csv"   # this file is 2026-only per your notebook
+    df = pd.read_csv(p)
+
+    # types
+    df["year"] = pd.to_numeric(df.get("year"), errors="coerce").astype("Int64")
+    df["event_id"] = pd.to_numeric(df.get("event_id"), errors="coerce").astype("Int64")
+    df["dg_id"] = pd.to_numeric(df.get("dg_id"), errors="coerce").astype("Int64")
+
+    # flags (ensure int 0/1)
+    for c in ["event_completed", "win", "top_5", "top_10", "top_25", "made_cut", "CUT"]:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0).astype(int)
+
+    return df
+
+def show_headshot_cropped_card(img_value: str | None, height_px: int = 250) -> None:
+    if not img_value:
+        st.empty()
+        return
+
+    s = str(img_value).strip().strip('"').strip("'").strip()
+    if not s or s.lower() in {"none", "nan"}:
+        st.empty()
+        return
+
+    # URL path -> render with HTML (best crop control)
+    if s.startswith("http://") or s.startswith("https://"):
+        safe_src = html.escape(s, quote=True)
+        st.markdown(
+            f"""
+            <div class="dd-photo-card" style="height:{height_px}px;">
+              <img src="{safe_src}" />
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        return
+
+    # local fallback
+    p = Path(s)
+    p2 = REPO_ROOT / s
+    if p.exists():
+        st.image(str(p), use_container_width=True)
+    elif p2.exists():
+        st.image(str(p2), use_container_width=True)
+    else:
+        st.image(s, use_container_width=True)
+
+def show_headshot_cropped_floating(img_value: str | None, height_px: int = 320, max_width_px: int = 420) -> None:
+    if not img_value:
+        return
+
+    s = str(img_value).strip().strip('"').strip("'").strip()
+    if not s or s.lower() in {"none", "nan"}:
+        return
+
+    # URL only for this floating HTML version
+    if s.startswith("http://") or s.startswith("https://"):
+        safe_src = html.escape(s, quote=True)
+        st.markdown(
+            f"""
+            <div class="dd-float-wrap">
+              <div class="dd-float-imgbox" style="height:{height_px}px; width:min(100%, {max_width_px}px);">
+                <img src="{safe_src}" />
+              </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        return
+
+    # fallback for local paths (can't crop cleanly)
+    p = Path(s)
+    p2 = REPO_ROOT / s
+    if p.exists():
+        st.image(str(p), use_container_width=True)
+    elif p2.exists():
+        st.image(str(p2), use_container_width=True)
+    else:
+        st.image(s, use_container_width=True)
+
+
+    # local file fallback
+    p = Path(s)
+    p2 = REPO_ROOT / s
+
+    if p.exists():
+        st.image(str(p), use_container_width=True)
+        return
+    if p2.exists():
+        st.image(str(p2), use_container_width=True)
+        return
+
+    st.image(s, use_container_width=True)
+
+
 def get_pre_event_cutoff_date(sched: pd.DataFrame, event_id: int) -> Optional[pd.Timestamp]:
     """Returns (event_date/start_date - 1 day)."""
     if sched is None or sched.empty:
@@ -488,10 +791,16 @@ def load_fields() -> pd.DataFrame:
         df["player_name"] = df["player_name"].astype(str)
 
     # normalize binary outcome flags
+    # IMPORTANT: do NOT fill NaN with 0 here.
+    # NaN means "event not completed / not recorded yet".
     flag_cols = ["Win", "Top_5", "Top_10", "Top_25", "Made_Cut", "CUT"]
     for c in flag_cols:
         if c in df.columns:
-            df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0).clip(0, 1).astype(int)
+            s = pd.to_numeric(df[c], errors="coerce")  # blank -> NaN
+            # clamp only non-null values into [0,1]
+            s = s.where(s.isna(), s.clip(0, 1))
+            df[c] = s.astype("Int64")  # nullable int keeps <NA>
+
     return df
 
 @st.cache_data(show_spinner=False)
@@ -558,6 +867,100 @@ def load_rounds_minimal() -> pd.DataFrame:
 
     return df
 
+def _player_meta_from_all_players(all_players: pd.DataFrame, dg_id: int) -> dict:
+    """
+    Returns a dict of player meta fields from all_players for a given dg_id.
+    Safe if columns are missing or player not found.
+    """
+    meta = {"owgr": None, "country": None}
+
+    if all_players is None or not isinstance(all_players, pd.DataFrame) or all_players.empty:
+        return meta
+
+    ap = all_players.copy()
+    if "dg_id" not in ap.columns:
+        return meta
+
+    ap["dg_id"] = pd.to_numeric(ap["dg_id"], errors="coerce")
+    row = ap.loc[ap["dg_id"] == int(dg_id)]
+    if row.empty:
+        return meta
+
+    r0 = row.iloc[0]
+
+    # ---- OWGR (use whatever column name you added; handle common variants) ----
+    owgr_col = None
+    for c in ["owgr", "OWGR", "owgr_rank", "owgr_current"]:
+        if c in ap.columns:
+            owgr_col = c
+            break
+    if owgr_col:
+        v = pd.to_numeric(r0.get(owgr_col), errors="coerce")
+        meta["owgr"] = int(v) if pd.notna(v) else None
+
+    # ---- optional: country if you have it ----
+    for c in ["country", "country_code", "ctry", "nation"]:
+        if c in ap.columns:
+            val = r0.get(c)
+            meta["country"] = str(val) if pd.notna(val) else None
+            break
+
+    return meta
+
+def render_player_hero(
+    *,
+    dg_id: int,
+    player_name: str,
+    all_players: pd.DataFrame,
+    ID_TO_IMG: dict,
+    NAME_TO_IMG: dict,
+    odds: float | None = None,
+    headshot_width: int = 120,
+    image_only: bool = False,   # NEW
+):
+
+    meta = _player_meta_from_all_players(all_players, dg_id)
+    owgr = meta.get("owgr", None)
+
+    # odds cleanup
+    if odds is not None:
+        try:
+            odds = float(odds)
+            if not np.isfinite(odds):
+                odds = None
+        except Exception:
+            odds = None
+
+    url = get_headshot_url(dg_id, player_name, ID_TO_IMG, NAME_TO_IMG)
+    if image_only:
+        show_headshot(url, width=headshot_width)
+        return
+
+
+    c_img, c_txt = st.columns([2, 8], vertical_alignment="center")
+    with c_img:
+        show_headshot(url, width=headshot_width)
+
+    with c_txt:
+        parts = []
+        if owgr is not None:
+            parts.append(f'<span class="hero-meta">OWGR: {owgr}</span>')
+        if odds is not None:
+            if parts:
+                parts.append('<span class="hero-meta-sep">•</span>')
+            parts.append(f'<span class="hero-meta">Odds: {odds:.1f}</span>')
+
+        meta_html = f'<div class="hero-meta-row">{" ".join(parts)}</div>' if parts else ""
+
+        st.markdown(
+            f"""
+            <div class="hero-card">
+              <div class="hero-title">{player_name}</div>
+              {meta_html}
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # ============================================================
 # Rolling stats (L40/L24/L12) from round-level data
@@ -624,82 +1027,474 @@ def compute_rolling_stats(
     )
     return rolled
 
-def compute_ytd_from_fields_today(fields: pd.DataFrame, year: int) -> pd.DataFrame:
-    df = fields.copy()
+@st.cache_data(show_spinner=False)
+def load_finishes() -> pd.DataFrame:
+    df = pd.read_csv(FINISHES_PATH)
 
-    # --- normalize key columns ---
-    df["year"] = pd.to_numeric(df.get("year"), errors="coerce")
-    df["dg_id"] = pd.to_numeric(df.get("dg_id"), errors="coerce")
-    df["event_id"] = pd.to_numeric(df.get("event_id"), errors="coerce")
+    # normalize ids/types
+    for c in ["dg_id", "event_id", "year"]:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce")
 
-    # basic filter
-    df = df[df["year"] == int(year)].copy()
-    df = df.dropna(subset=["dg_id", "event_id"]).copy()
-    if df.empty:
-        return pd.DataFrame(columns=[
-            "dg_id", "player_name",
-            "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts", "ytd_made_cut_pct"
-        ])
+    if "event_completed" in df.columns:
+        df["event_completed"] = pd.to_datetime(df["event_completed"], errors="coerce")
 
-    df["dg_id"] = df["dg_id"].astype(int)
-    df["event_id"] = df["event_id"].astype(int)
     if "player_name" in df.columns:
         df["player_name"] = df["player_name"].astype(str)
 
-    # --- TODAY cutoff (not event-based) ---
-    today = pd.Timestamp.today().normalize()
-
-    # --- results gate: row counts only if results exist ---
-    # If your Fields file has finish_num / finish_text / winnings, use them as the "results exist" signal.
-    has_result = pd.Series(False, index=df.index)
-
-    if "finish_num" in df.columns:
-        has_result |= pd.to_numeric(df["finish_num"], errors="coerce").notna()
-
-    if "finish_text" in df.columns:
-        has_result |= df["finish_text"].notna()
-
-    if "winnings" in df.columns:
-        has_result |= pd.to_numeric(df["winnings"], errors="coerce").notna()
-
-    # If you also have event_completed, require it AND require it to be < today.
-    if "event_completed" in df.columns:
-        df["event_completed"] = pd.to_datetime(df["event_completed"], errors="coerce")
-        has_result &= df["event_completed"].notna() & (df["event_completed"] < today)
-
-    # FINAL FILTER: only completed-with-results rows count for YTD
-    df = df[has_result].copy()
-    if df.empty:
-        return pd.DataFrame(columns=[
-            "dg_id", "player_name",
-            "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts", "ytd_made_cut_pct"
-        ])
-
-    # --- normalize outcome flags (only AFTER we've filtered to real results) ---
-    for c in ["Win", "Top_10", "Top_25", "Made_Cut", "CUT"]:
+    # flags -> int 0/1 (leave missing as 0)
+    flag_cols = ["win", "top_5", "top_10", "top_25", "made_cut", "CUT"]
+    for c in flag_cols:
         if c in df.columns:
             df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0).clip(0, 1).astype(int)
 
-    # one row per (player,event)
-    df = df.drop_duplicates(subset=["dg_id", "event_id"], keep="last").copy()
+    return df
 
-    out = (
-        df.groupby(["dg_id", "player_name"], as_index=False)
-          .agg(
-              ytd_starts=("event_id", "count"),
-              ytd_wins=("Win", "sum") if "Win" in df.columns else ("event_id", "size"),
-              ytd_top10=("Top_10", "sum") if "Top_10" in df.columns else ("event_id", "size"),
-              ytd_top25=("Top_25", "sum") if "Top_25" in df.columns else ("event_id", "size"),
-              ytd_made_cuts=("Made_Cut", "sum") if "Made_Cut" in df.columns else ("event_id", "size"),
-          )
-    )
+
+def compute_ytd_from_finishes(finishes: pd.DataFrame, year: int = 2026) -> pd.DataFrame:
+    """
+    YTD from Finishes.csv:
+      - only rows in `year`
+      - only rows with event_completed present (completed events)
+      - starts = unique event_id per dg_id
+      - wins/top10/top25/made_cut = sums of 0/1 flags (de-duped per event)
+    """
+    if finishes is None or finishes.empty:
+        return pd.DataFrame(columns=[
+            "dg_id", "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts", "ytd_made_cut_pct"
+        ])
+
+    df = finishes.copy()
+
+    # year filter
+    if "year" not in df.columns:
+        raise ValueError("Finishes.csv must include a 'year' column.")
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    df = df[df["year"] == int(year)].copy()
+
+    # require completed event
+    if "event_completed" in df.columns:
+        df["event_completed"] = pd.to_datetime(df["event_completed"], errors="coerce")
+        df = df[df["event_completed"].notna()].copy()
+
+    # require ids
+    if "dg_id" not in df.columns:
+        raise ValueError("Finishes.csv must include 'dg_id'.")
+
+    df["dg_id"] = pd.to_numeric(df["dg_id"], errors="coerce")
+    df = df.dropna(subset=["dg_id"]).copy()
+    df["dg_id"] = df["dg_id"].astype(int)
+
+    # de-dupe to one row per dg_id/event_id (keep last)
+    if "event_id" in df.columns:
+        df["event_id"] = pd.to_numeric(df["event_id"], errors="coerce")
+        df = df.dropna(subset=["event_id"]).copy()
+        df["event_id"] = df["event_id"].astype(int)
+        df = df.drop_duplicates(subset=["dg_id", "event_id"], keep="last")
+
+        starts = df.groupby("dg_id")["event_id"].nunique()
+    else:
+        starts = df.groupby("dg_id").size()
+
+    def _sum_flag(col: str) -> pd.Series:
+        if col not in df.columns:
+            return pd.Series(0, index=starts.index)
+        s = df.groupby("dg_id")[col].sum()
+        return s.reindex(starts.index, fill_value=0)
+
+    wins  = _sum_flag("win")
+    top10 = _sum_flag("top_10")
+    top25 = _sum_flag("top_25")
+    made  = _sum_flag("made_cut")
+
+    out = pd.DataFrame({
+        "dg_id": starts.index.astype(int),
+        "ytd_starts": starts.values,
+        "ytd_wins": wins.values,
+        "ytd_top10": top10.values,
+        "ytd_top25": top25.values,
+        "ytd_made_cuts": made.values,
+    })
 
     out["ytd_made_cut_pct"] = np.where(
         out["ytd_starts"] > 0,
         out["ytd_made_cuts"] / out["ytd_starts"],
         np.nan
     )
+
+    # ints
+    for c in ["ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts"]:
+        out[c] = pd.to_numeric(out[c], errors="coerce").fillna(0).astype(int)
+
     return out
+
+def _finish_sort_key(fin: str) -> float:
+    """
+    Convert finish text to a sortable numeric:
+      1, T3, T16 -> 1, 3, 16
+      CUT -> 999
+      DNP/WD/DQ -> 9999
+      blank -> 1e9
+    Lower is better.
+    """
+    if fin is None:
+        return 1e9
+    s = str(fin).strip().upper()
+    if s == "" or s in {"NONE", "NAN"}:
+        return 1e9
+    if s in {"CUT", "MC"}:
+        return 999.0
+    if s in {"DNP", "WD", "DQ"}:
+        return 9999.0
+    s = s.replace("T", "")
+    try:
+        return float(pd.to_numeric(s, errors="coerce"))
+    except Exception:
+        return 1e9
+
+
+def _best_finish_text(series: pd.Series) -> str:
+    vals = [str(x) for x in series.dropna().astype(str).tolist() if str(x).strip() != ""]
+    if not vals:
+        return ""
+    vals_sorted = sorted(vals, key=_finish_sort_key)
+    return vals_sorted[0]
+
+@st.cache_data(show_spinner=False)
+def compute_ytd_sg_total(
+    rounds_df: pd.DataFrame,
+    as_of_date: pd.Timestamp,
+    dg_ids: Iterable[int],
+    year: int,
+) -> pd.DataFrame:
+    """
+    YTD SG Total = mean sg_total across PGA rounds in `year` with round_date < as_of_date.
+    Returns: dg_id, ytd_sg_total
+    """
+    ts = pd.to_datetime(as_of_date, errors="coerce")
+    if pd.isna(ts):
+        raise ValueError(f"Invalid as_of_date: {as_of_date}")
+
+    df = rounds_df.copy()
+
+    if "tour" in df.columns:
+        df = df[df["tour"] == "pga"].copy()
+
+    df["dg_id"] = pd.to_numeric(df.get("dg_id"), errors="coerce")
+    df["year"] = pd.to_numeric(df.get("year"), errors="coerce")
+    df["sg_total"] = pd.to_numeric(df.get("sg_total"), errors="coerce")
+
+    # need round_date (your load_rounds_minimal includes it)
+    if "round_date" not in df.columns:
+        return pd.DataFrame({"dg_id": list(dg_ids), "ytd_sg_total": np.nan})
+
+    df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
+
+    df = df.dropna(subset=["dg_id", "year", "round_date", "sg_total"]).copy()
+    df = df[df["dg_id"].isin([int(x) for x in dg_ids])].copy()
+    df = df[df["year"] == int(year)].copy()
+    df = df[df["round_date"] < ts].copy()
+
+    if df.empty:
+        return pd.DataFrame({"dg_id": list(dg_ids), "ytd_sg_total": np.nan})
+
+    out = (
+        df.groupby("dg_id", as_index=False)["sg_total"]
+          .mean()
+          .rename(columns={"sg_total": "ytd_sg_total"})
+    )
+    return out
+
+def build_course_history_field_table(
+    *,
+    course_num: int,
+    base_ids: list[int],
+    rounds_2024p: pd.DataFrame,
+    ev_2017_2023: pd.DataFrame,
+    cutoff_dt: Optional[pd.Timestamp],
+    season_year: int,
+    years_back: int = 9,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+
+    if course_num is None:
+        return (pd.DataFrame(), pd.DataFrame())
+
+    course_num = int(course_num)
+    base_ids = [int(x) for x in base_ids] if base_ids else []
+
+    # Show last N completed years (ending last season), but we will only display years that exist in the data.
+    end_year = int(season_year) - 1
+    target_years = set(range(end_year - years_back + 1, end_year + 1))
+
+    def _pick_first_col(df: pd.DataFrame, candidates: list[str]) -> Optional[str]:
+        for c in candidates:
+            if c in df.columns:
+                return c
+        return None
+
+    def _ensure_finish_text(df: pd.DataFrame) -> tuple[pd.DataFrame, str]:
+        # Prefer existing text column; else create one from finish_num
+        fin_col = _pick_first_col(df, ["fin_text", "finish_text"])
+        if fin_col is not None:
+            df[fin_col] = df[fin_col].astype(str).fillna("")
+            return df, fin_col
+
+        # fallback: derive from finish_num if present
+        if "finish_num" in df.columns:
+            df["finish_num"] = pd.to_numeric(df["finish_num"], errors="coerce")
+            df["fin_text"] = df["finish_num"].map(lambda x: "" if pd.isna(x) else str(int(x)))
+        else:
+            df["fin_text"] = ""
+        return df, "fin_text"
+
+    cutoff_ts = pd.to_datetime(cutoff_dt) if cutoff_dt is not None and pd.notna(cutoff_dt) else None
+
+    # -------------------------
+    # A) 2024+ roundlevel
+    # -------------------------
+    r = rounds_2024p.copy()
+
+    # normalize numeric cols if present
+    for c in ["dg_id", "year", "event_id", "course_num", "course", "course_id", "round_num", "sg_total", "finish_num"]:
+        if c in r.columns:
+            r[c] = pd.to_numeric(r[c], errors="coerce")
+    if "round_date" in r.columns:
+        r["round_date"] = pd.to_datetime(r["round_date"], errors="coerce")
+
+    course_col_r = _pick_first_col(r, ["course_num", "course", "course_id"])
+    if course_col_r is None:
+        r = r.iloc[0:0].copy()
+    else:
+        r = r.loc[r[course_col_r] == course_num].copy()
+
+    if "dg_id" in r.columns and base_ids:
+        r = r.loc[r["dg_id"].isin(base_ids)].copy()
+    elif "dg_id" not in r.columns:
+        r = r.iloc[0:0].copy()
+
+    # cutoff: prefer event_end if it merges; otherwise fall back to round_date
+    if not r.empty and cutoff_ts is not None:
+        used_cutoff = False
+
+        if "year" in r.columns and "event_id" in r.columns:
+            ends_r = _event_end_table_roundlevel(rounds_2024p)
+            rr = r.dropna(subset=["year", "event_id"]).copy()
+            if not rr.empty:
+                rr["year"] = rr["year"].astype(int)
+                rr["event_id"] = rr["event_id"].astype(int)
+                rr = rr.merge(ends_r, on=["year", "event_id"], how="left")
+                rr["event_end"] = pd.to_datetime(rr["event_end"], errors="coerce")
+
+                # keep rows where event_end exists and is <= cutoff
+                keep = rr["event_end"].notna() & (rr["event_end"] <= cutoff_ts)
+                if keep.any():
+                    r = rr.loc[keep].copy()
+                    used_cutoff = True
+
+        # fallback to round_date if event_end cutoff removed everything / didn't apply
+        if not used_cutoff and "round_date" in r.columns:
+            r = r.loc[r["round_date"].notna() & (r["round_date"] <= cutoff_ts)].copy()
+
+    r, fin_col_r = _ensure_finish_text(r)
+
+    r_year = pd.DataFrame()
+    if not r.empty and "dg_id" in r.columns and "year" in r.columns:
+        r_year = (
+            r.groupby(["dg_id", "year"], as_index=False)
+             .agg(
+                 best_finish=(fin_col_r, _best_finish_text),
+                 rounds=("round_num", "count") if "round_num" in r.columns else ("event_id", "size"),
+                 sg_mean=("sg_total", "mean") if "sg_total" in r.columns else ("event_id", "size"),
+             )
+        )
+
+    # -------------------------
+    # B) 2017–2023 eventlevel
+    # -------------------------
+    e = ev_2017_2023.copy()
+
+    for c in ["dg_id", "year", "event_id", "course_num", "course", "course_id", "sg_total", "finish_num"]:
+        if c in e.columns:
+            e[c] = pd.to_numeric(e[c], errors="coerce")
+
+    course_col_e = _pick_first_col(e, ["course_num", "course", "course_id"])
+    if course_col_e is None:
+        e = e.iloc[0:0].copy()
+    else:
+        e = e.loc[e[course_col_e] == course_num].copy()
+
+    if "dg_id" in e.columns and base_ids:
+        e = e.loc[e["dg_id"].isin(base_ids)].copy()
+    elif "dg_id" not in e.columns:
+        e = e.iloc[0:0].copy()
+
+    # cutoff: eventlevel uses event_end if possible; if event_end missing we do NOT nuke rows
+    if not e.empty and cutoff_ts is not None and "year" in e.columns and "event_id" in e.columns:
+        ends_e = _event_end_table_eventlevel(ev_2017_2023)
+        ee = e.dropna(subset=["year", "event_id"]).copy()
+        if not ee.empty:
+            ee["year"] = ee["year"].astype(int)
+            ee["event_id"] = ee["event_id"].astype(int)
+            ee = ee.merge(ends_e, on=["year", "event_id"], how="left")
+            ee["event_end"] = pd.to_datetime(ee["event_end"], errors="coerce")
+
+            # only apply cutoff where we actually have event_end
+            has_end = ee["event_end"].notna()
+            if has_end.any():
+                ee = ee.loc[~has_end | (ee["event_end"] <= cutoff_ts)].copy()
+            e = ee.copy()
+
+    e, fin_col_e = _ensure_finish_text(e)
+
+    e_year = pd.DataFrame()
+    if not e.empty and "dg_id" in e.columns and "year" in e.columns:
+        e_year = (
+            e.groupby(["dg_id", "year"], as_index=False)
+             .agg(
+                 best_finish=(fin_col_e, _best_finish_text),
+                 starts=("event_id", "nunique") if "event_id" in e.columns else (fin_col_e, "size"),
+                 sg_mean=("sg_total", "mean") if "sg_total" in e.columns else (fin_col_e, "size"),
+             )
+        )
+        e_year["rounds"] = (pd.to_numeric(e_year["starts"], errors="coerce").fillna(0).astype(int) * 4)
+
+    # -------------------------
+    # Combine
+    # -------------------------
+    combined = pd.concat(
+        [r_year.assign(src="roundlevel"), e_year.assign(src="eventlevel")],
+        ignore_index=True
+    )
+
+    if combined.empty:
+        return (pd.DataFrame(), pd.DataFrame())
+
+    combined["src_rank"] = combined["src"].map({"roundlevel": 0, "eventlevel": 1}).fillna(9)
+    combined = (
+        combined.sort_values(["dg_id", "year", "src_rank"])
+                .drop_duplicates(["dg_id", "year"], keep="first")
+                .copy()
+    )
+
+    # only keep display years that exist in combined and are in target_years
+    years_present = sorted([y for y in combined["year"].dropna().astype(int).unique() if y in target_years])
+
+    pivot = (
+        combined[combined["year"].isin(years_present)]
+        .pivot(index="dg_id", columns="year", values="best_finish")
+        .reset_index()
+    )
+
+    agg_all = (
+        combined.groupby("dg_id", as_index=False)
+        .agg(
+            rounds=("rounds", "sum"),
+            true_sg=("sg_mean", "mean"),
+        )
+    )
+
+    # name map (relies on outer all_players existing as you had)
+    name_map = all_players[["dg_id", "player_name"]].drop_duplicates().copy()
+    name_map["dg_id"] = pd.to_numeric(name_map["dg_id"], errors="coerce").astype("Int64")
+
+    out_wide = (
+        pivot.merge(agg_all, on="dg_id", how="left")
+             .merge(name_map, on="dg_id", how="left")
+    )
+
+    out_wide["rounds"] = pd.to_numeric(out_wide["rounds"], errors="coerce").fillna(0).astype(int)
+    out_wide["true_sg"] = pd.to_numeric(out_wide["true_sg"], errors="coerce")
+
+    year_cols = [y for y in years_present if y in out_wide.columns]
+    display_cols = ["dg_id", "player_name"] + year_cols + ["rounds", "true_sg"]
+    out_wide = out_wide[display_cols].copy()
+
+    out_wide = out_wide.rename(columns={
+        "player_name": "PLAYER",
+        "rounds": "ROUNDS",
+        "true_sg": "SG",
+    })
+
+    out_wide = out_wide.sort_values("SG", ascending=False, na_position="last").reset_index(drop=True)
+
+    horses = out_wide.copy()
+    horses = horses.loc[horses["ROUNDS"] >= 8].head(12).copy()
+
+    return out_wide, horses
+
+
+
+def style_course_history_table(df: pd.DataFrame) -> pd.io.formats.style.Styler:
+    """
+    Colors:
+      - TRUE SG: green-high
+      - year finish cells: gold for 1, green for top 10, RED for CUT/MC, GREY for DNP/WD/DQ
+      - blank/None -> show "DNP"
+    """
+    if df is None or df.empty:
+        return df.style
+
+    show = df.copy()
+
+    # year finish cells are everything except these
+    finish_cols = [c for c in show.columns if c not in {"PLAYER", "ROUNDS", "SG"}]
+
+    # ---- replace missing/blank/"nan"/"None" finish cells with DNP (display-only) ----
+    if finish_cols:
+        for c in finish_cols:
+            s = show[c]
+
+            # cast to string for consistent detection of 'nan', 'None', blanks, etc.
+            s = s.astype("string")
+
+            # normalize + mark missing tokens as <NA>
+            s_norm = s.str.strip().str.upper()
+            missing_mask = s_norm.isna() | s_norm.isin(["", "NONE", "NAN", "<NA>"])
+
+            show[c] = s.mask(missing_mask, "DNP")
+
+    def _cell_style(v: str) -> str:
+        s = str(v).strip().upper()
+
+        # ---- NEW: DNP grey ----
+        if s == "DNP":
+            return "background-color: rgba(255,255,255,0.03); color: rgba(255,255,255,0.45);"
+
+        # ---- NEW: CUT/MC red ----
+        if s in {"CUT", "MC"}:
+            return "background-color: rgba(220, 38, 38, 0.35); color: rgba(255,255,255,0.95); font-weight: 750;"
+
+        # keep your old grouping for WD/DQ (also grey)
+        if s in {"WD", "DQ"}:
+            return "background-color: rgba(255,255,255,0.03); color: rgba(255,255,255,0.45);"
+
+        # numeric finish
+        key = _finish_sort_key(s)
+        if key == 1:
+            return "background-color: rgba(250, 204, 21, 0.50); font-weight: 800;"  # gold
+        if key <= 3:
+            return "background-color: rgba(34, 197, 94, 0.35); font-weight: 700;"
+        if key <= 10:
+            return "background-color: rgba(34, 197, 94, 0.22);"
+        if key <= 25:
+            return "background-color: rgba(34, 197, 94, 0.12);"
+        return ""
+
+    sty = show.style
+
+    # highlight TRUE SG (unchanged)
+    if "SG" in show.columns:
+        sty = sty.background_gradient(subset=["SG"], cmap="RdYlGn")
+        sty = sty.format({"SG": (lambda x: "" if pd.isna(x) else f"{float(x):+.2f}")})
+
+    # year finish cells (unchanged structurally, but now includes DNP/CUT formatting)
+    if finish_cols:
+        sty = sty.applymap(_cell_style, subset=finish_cols)
+
+    return sty
+
+
+
 
 # ============================================================
 # Approach fit (player bucket skill × tournament bucket mix)
@@ -768,8 +1563,8 @@ def compute_approach_fit(
 # ============================================================
 schedule = load_schedule()
 fields = load_fields()
-all_players_df = load_all_players()
-ID_TO_IMG, NAME_TO_IMG = build_headshot_maps(all_players_df)
+all_players = load_all_players()
+ID_TO_IMG, NAME_TO_IMG = build_headshot_maps(all_players)
 skills = load_player_skill()
 buckets = load_approach_buckets()
 rounds = load_rounds_minimal()
@@ -1051,7 +1846,8 @@ for w in (12, 24, 40):
     if b in rolling.columns and e in rolling.columns:
         rolling[f"birdies_or_better_L{w}"] = rolling[b].fillna(0) + rolling[e].fillna(0)
 
-ytd = compute_ytd_from_fields_today(fields, year=2026)
+finishes = load_finishes()
+ytd = compute_ytd_from_finishes(finishes, year=SEASON_YEAR)
 if event_id is not None:
     fit = compute_approach_fit(base_ids, skills, buckets, event_id)
 else:
@@ -1059,7 +1855,9 @@ else:
 
 
 # Merge
-out = base.merge(rolling, on="dg_id", how="left").merge(ytd, on=["dg_id", "player_name"], how="left").merge(fit, on="dg_id", how="left")
+out = base.merge(rolling, on="dg_id", how="left") \
+          .merge(ytd, on="dg_id", how="left") \
+          .merge(fit, on="dg_id", how="left")
 out["dg_id"] = pd.to_numeric(out["dg_id"], errors="coerce")
 out = out.dropna(subset=["dg_id"]).copy()
 out["dg_id"] = out["dg_id"].astype(int)
@@ -1081,7 +1879,9 @@ for c in ["ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts"]:
     if c in out.columns:
         out[c] = pd.to_numeric(out[c], errors="coerce").fillna(0).astype(int)
 if "ytd_made_cut_pct" in out.columns:
-    out["ytd_made_cut_pct"] = pd.to_numeric(out["ytd_made_cut_pct"], errors="coerce").fillna(0.0)
+    out["ytd_made_cut_pct"] = pd.to_numeric(out["ytd_made_cut_pct"], errors="coerce")
+    # IMPORTANT: do NOT fill NaN with 0.0 (NaN means event not finished / pct undefined)
+
 
 # Round rolling columns to readable precision
 for c in out.columns:
@@ -1106,22 +1906,22 @@ if "ytd_made_cut_pct" in out.columns:
 # DISPLAY: unique + readable column names (Styler-safe)
 # ============================================================
 WINDOW_LABELS = {
-    "L12": "Last 12 Rounds",
-    "L24": "Last 24 Rounds",
-    "L40": "Last 40 Rounds",
+    "L12": "L12",
+    "L24": "L24",
+    "L40": "L40",
 }
 
 STAT_LABELS = {
-    "sg_total": "SG Total",
-    "sg_app": "SG Approach",
-    "sg_putt": "SG Putting",
-    "sg_ott": "SG Off the Tee",
-    "sg_arg": "SG Around the Green",
-    "sg_t2g": "SG Tee to Green",
-    "round_score": "Round Score",
-    "birdies_or_better": "Birdies or Better",
+    "sg_total": "Total",
+    "sg_app": "App",
+    "sg_putt": "Putt",
+    "sg_ott": "OTT",
+    "sg_arg": "ARG",
+    "sg_t2g": "T2G",
+    "round_score": "Score",
+    "birdies_or_better": "Birdies+",
     "birdies": "Birdies",
-    "eagles_or_better": "Eagles or Better",
+    "eagles_or_better": "Eagles+",
 }
 
 def pretty_col(c: str, odds_col: str | None = None) -> str:
@@ -1220,36 +2020,34 @@ if _default_sort:
 
 summary_top = summary_top.reset_index(drop=True)
 
-TAB_NAMES = ["Weekly", "Approach Buckets", "H2H", "Deep Dive"]
+TAB_NAMES = ["Strokes Gained", "Course History", "Approach Buckets", "H2H", "Deep Dive"]
 
 if "active_tab" not in st.session_state:
-    st.session_state.active_tab = "Weekly"
+    st.session_state.active_tab = "Strokes Gained"
+
 
 active_tab = st.segmented_control(
-    "View",
+    "",
     TAB_NAMES,
     default=st.session_state.active_tab,
     key="active_tab",
 )
 
-if active_tab == "Weekly":
+if active_tab == "Strokes Gained":
     st.subheader("Players (rolling L12/L24/L40)")
 
     # ----- sort selector (pretty labels, real columns) -----
     SORT_LABELS = {
-        "sg_total_L12": "SG Total — Last 12 Rounds",
-        "sg_total_L24": "SG Total — Last 24 Rounds",
-        "sg_total_L40": "SG Total — Last 40 Rounds",
-        "sg_app_L12": "SG Approach — Last 12 Rounds",
-        "sg_putt_L12": "SG Putting — Last 12 Rounds",
-        "ytd_wins": "YTD Wins",
-        "ytd_top10": "YTD Top 10s",
+        "sg_total_L12": "SG Total - L12",
+        "sg_total_L24": "SG Total - L24",
+        "sg_total_L40": "SG Total - L40",
+        "sg_app_L12": "SG Approach - L12",
+        "sg_putt_L12": "SG Putting - L12",
     }
 
     sort_choices = [c for c in [
         "sg_total_L12", "sg_total_L24", "sg_total_L40",
         "sg_app_L12", "sg_putt_L12",
-        "ytd_wins", "ytd_top10"
     ] if c in out.columns]
 
     sort_by = st.selectbox(
@@ -1259,7 +2057,6 @@ if active_tab == "Weekly":
         format_func=lambda c: SORT_LABELS.get(c, c),
     )
 
-    # use sort_by as before (still the real column name)
     out_show = out.copy()
     if sort_by and sort_by in out_show.columns:
         out_show = out_show.sort_values(sort_by, ascending=False)
@@ -1272,72 +2069,22 @@ if active_tab == "Weekly":
         out_show["dg_id"] = pd.to_numeric(out_show["dg_id"], errors="coerce")
         out_show = out_show[out_show["dg_id"].isin([int(x) for x in field_ids])]
 
-    # --- Sidebar-driven filters ---
-    player_q = st.session_state.get("player_q", "").strip()
-    top_n = int(st.session_state.get("player_top_n", 0) or 0)
-    min_sg_total_l24 = float(st.session_state.get("min_sg_total_l24", 0.0))
-    min_sg_app_l24 = float(st.session_state.get("min_sg_app_l24", -99.0))
-    use_odds_range = bool(st.session_state.get("use_odds_range", False))
-
-    player_name_options = out_show[name_col].dropna().sort_values().unique().tolist()
-    st.session_state["player_universe"] = player_name_options
-
-    # Apply exclusions (filter OUT)
+    # exclusions
     excluded_players = st.session_state.get("excluded_players", [])
     if excluded_players:
         out_show = out_show[~out_show[name_col].isin(excluded_players)]
 
-
-    if player_q:
-        out_show = out_show[out_show[name_col].str.contains(player_q, case=False, na=False)]
-
-    # Odds range (compute bounds from current df)
-    if use_odds_range and odds and odds in out_show.columns:
-        odds_series = pd.to_numeric(out_show[odds], errors="coerce").dropna()
-        if not odds_series.empty:
-            lo, hi = float(odds_series.min()), float(odds_series.max())
-            odds_min, odds_max = st.slider(
-                "Odds range",
-                min_value=lo,
-                max_value=hi,
-                value=(lo, hi),
-                key="odds_range_slider",
-            )
-            out_show[odds] = pd.to_numeric(out_show[odds], errors="coerce")
-            out_show = out_show[out_show[odds].between(odds_min, odds_max)]
-
-    # Thresholds
-    if "sg_total_L24" in out_show.columns:
-        out_show["sg_total_L24"] = pd.to_numeric(out_show["sg_total_L24"], errors="coerce")
-        out_show = out_show[out_show["sg_total_L24"] >= min_sg_total_l24]
-
-    if "sg_app_L24" in out_show.columns and min_sg_app_l24 > -50:  # treat -99 as "ignore"
-        out_show["sg_app_L24"] = pd.to_numeric(out_show["sg_app_L24"], errors="coerce")
-        out_show = out_show[out_show["sg_app_L24"] >= min_sg_app_l24]
-
-    # Top N
-    if top_n > 0:
-        out_show = out_show.head(top_n)
-
-    # ------------------------------------------------------------
-    # Persist Weekly top defaults for other tabs (Deep Dive / H2H)
-    # ------------------------------------------------------------
+    # Persist defaults for H2H / Deep Dive
     if "dg_id" in out_show.columns and not out_show.empty:
         tmp = out_show.copy()
         tmp["dg_id"] = pd.to_numeric(tmp["dg_id"], errors="coerce")
         tmp = tmp.dropna(subset=["dg_id"]).copy()
         tmp["dg_id"] = tmp["dg_id"].astype(int)
-
         if not tmp.empty:
             top1 = int(tmp.iloc[0]["dg_id"])
             top2 = int(tmp.iloc[1]["dg_id"]) if len(tmp) > 1 else top1
-
             st.session_state["weekly_top1_dg_id"] = top1
             st.session_state["weekly_top2_dg_id"] = top2
-
-
-    name_col = "player_name"
-    odds = odds_col if odds_col else None
 
     # 1) Odds + SG Total
     total_cols = [name_col] + ([odds] if odds else []) + ["sg_total_L12", "sg_total_L24", "sg_total_L40"]
@@ -1381,11 +2128,264 @@ if active_tab == "Weekly":
     ]
     render_table("Scoring (Avg Score + Birdies-or-Better)", out_show, score_cols, score_grad, odds_col=None, height=420)
 
-    # 8) YTD (your upstream YTD calc must already respect cutoff)
-    ytd_cols = [name_col, "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cut_pct"]
-    ytd_grad = ["ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cut_pct"]
-    render_table("Year to Date", out_show, ytd_cols, ytd_grad, odds_col=None, height=420)
+elif active_tab == "Course History":
+    st.header("Course History")
 
+    # ------------------------------------------------------------
+    # Required context
+    # ------------------------------------------------------------
+    course_num = st.session_state.get("selected_course_num", None)
+    if course_num is None:
+        st.info("No course_num found for this schedule row.")
+        st.stop()
+
+    # MST sources used for course history
+    rounds_2024p = load_mst_roundlevel_2024_present()
+    ev_2017_2023 = load_mst_eventlevel_2017_2023()
+
+    # Pre-event cutoff (day before this event). If event_id missing, leave None.
+    cutoff_dt = get_pre_event_cutoff_date(sched, int(event_id)) if event_id is not None else None
+
+    # Use the same rule as your other tabs:
+    # - if the field/pool is present -> use it
+    # - if it's missing -> fall back to ALL_PLAYERS
+    effective_base_ids: list[int] = []
+    try:
+        if base_ids:
+            effective_base_ids = [int(x) for x in base_ids if pd.notna(x)]
+    except Exception:
+        effective_base_ids = []
+
+    if not effective_base_ids:
+        if all_players is None or all_players.empty or "dg_id" not in all_players.columns:
+            st.error("all_players is missing or does not include a 'dg_id' column — cannot build Course History.")
+            st.stop()
+
+        effective_base_ids = (
+            pd.to_numeric(all_players["dg_id"], errors="coerce")
+            .dropna()
+            .astype(int)
+            .tolist()
+        )
+
+    # ------------------------------------------------------------
+    # Build course history tables (finish history + course horses)
+    # ------------------------------------------------------------
+    course_hist, horses = build_course_history_field_table(
+        course_num=int(course_num),
+        base_ids=effective_base_ids,
+        rounds_2024p=rounds_2024p,
+        ev_2017_2023=ev_2017_2023,
+        cutoff_dt=cutoff_dt,
+        season_year=SEASON_YEAR,
+        years_back=9,
+    )
+
+    # ------------------------------------------------------------
+    # Top 5 course horses cards
+    # ------------------------------------------------------------
+    if horses is not None and not horses.empty:
+        horses_show = horses.copy()
+
+        if "SG" in horses_show.columns:
+            horses_show["SG"] = pd.to_numeric(horses_show["SG"], errors="coerce")
+        else:
+            horses_show["SG"] = np.nan
+
+        if "ROUNDS" in horses_show.columns:
+            horses_show["ROUNDS"] = pd.to_numeric(horses_show["ROUNDS"], errors="coerce").fillna(0)
+        else:
+            horses_show["ROUNDS"] = 0
+
+        top5 = (
+            horses_show.sort_values(["SG", "ROUNDS"], ascending=[False, False], na_position="last")
+            .head(5)
+            .copy()
+        )
+
+        cols = st.columns(5, gap="large")
+        for i, (_, r) in enumerate(top5.iterrows()):
+            with cols[i]:
+                dg_id = None
+                if "dg_id" in top5.columns and pd.notna(r.get("dg_id")):
+                    try:
+                        dg_id = int(r.get("dg_id"))
+                    except Exception:
+                        dg_id = None
+
+                name = str(r.get("PLAYER", "")) if pd.notna(r.get("PLAYER", "")) else ""
+
+                img = None
+                if dg_id is not None and "ID_TO_IMG" in globals():
+                    img = ID_TO_IMG.get(dg_id)
+                if img is None and "NAME_TO_IMG" in globals():
+                    img = NAME_TO_IMG.get(name)
+
+                if img is not None:
+                    st.image(img, use_container_width=True)
+
+                sg_val = r.get("SG")
+                sg_txt = ""
+                if pd.notna(sg_val):
+                    try:
+                        sg_txt = f"{float(sg_val):+.1f}"
+                    except Exception:
+                        sg_txt = ""
+                st.caption(f"{name} {sg_txt}".strip())
+
+    # ------------------------------------------------------------
+    # Course Horses table
+    # ------------------------------------------------------------
+    st.subheader("Course Horses")
+
+    if horses is None or horses.empty:
+        st.info("No reliable course-horse sample yet for this course.")
+    else:
+        horses_show = horses.copy()
+        cols_h = ["PLAYER"] + [c for c in horses_show.columns if str(c).isdigit()] + ["ROUNDS", "SG"]
+        cols_h = [c for c in cols_h if c in horses_show.columns]
+
+        st.dataframe(
+            style_course_history_table(horses_show[cols_h]),
+            use_container_width=True,
+            hide_index=True,
+            height=420,
+        )
+
+    st.divider()
+
+    # ------------------------------------------------------------
+    # Bottom tables: both sorted by YTD SG TOTAL
+    # ------------------------------------------------------------
+    # Use whichever cutoff variable exists elsewhere in your app; fall back to cutoff_dt.
+    as_of_date = None
+    if "cutoff" in globals() and cutoff is not None:
+        as_of_date = cutoff
+    else:
+        as_of_date = cutoff_dt
+
+    if as_of_date is None:
+        st.error("No as_of_date available (cutoff/cutoff_dt). Cannot compute YTD stats for Course History.")
+        st.stop()
+
+    # Compute YTD SG Total per dg_id (SEASON_YEAR, pre-event)
+    ytd_sg = compute_ytd_sg_total(
+        rounds_df=rounds,
+        as_of_date=as_of_date,
+        dg_ids=effective_base_ids,
+        year=SEASON_YEAR,
+    )
+
+    if ytd_sg is None or ytd_sg.empty or "dg_id" not in ytd_sg.columns:
+        # Keep the app alive; tables can still render without the merge
+        ytd_sg = pd.DataFrame({"dg_id": pd.Series(dtype="Int64"), "ytd_sg_total": pd.Series(dtype="float")})
+
+    ytd_sg = ytd_sg.copy()
+    ytd_sg["dg_id"] = pd.to_numeric(ytd_sg["dg_id"], errors="coerce").astype("Int64")
+    if "ytd_sg_total" in ytd_sg.columns:
+        ytd_sg["ytd_sg_total"] = pd.to_numeric(ytd_sg["ytd_sg_total"], errors="coerce")
+    else:
+        ytd_sg["ytd_sg_total"] = np.nan
+
+    # Build a robust name->id map from ALL_PLAYERS (works for field AND future events)
+    ap = all_players.copy() if all_players is not None else pd.DataFrame()
+    if not ap.empty and ("dg_id" in ap.columns) and ("player_name" in ap.columns):
+        ap["dg_id"] = pd.to_numeric(ap["dg_id"], errors="coerce").astype("Int64")
+        ap["player_name"] = ap["player_name"].astype(str)
+        name_to_id_all = dict(zip(ap["player_name"], ap["dg_id"]))
+    else:
+        name_to_id_all = {}
+
+    # -------------------------
+    # Table A: Finish History (by COURSE) [sorted by YTD SG]
+    # -------------------------
+    st.subheader("Finish History (by COURSE)")
+
+    if course_hist is None or course_hist.empty:
+        st.info("No course history found for the current player set at this course.")
+    else:
+        ch = course_hist.copy()
+
+        # Attach dg_id if it's not already present
+        if "dg_id" in ch.columns:
+            ch["dg_id"] = pd.to_numeric(ch["dg_id"], errors="coerce").astype("Int64")
+        else:
+            # course_hist uses PLAYER; map to dg_id via all_players
+            if "PLAYER" not in ch.columns:
+                st.error("course_hist is missing expected 'PLAYER' column.")
+                st.stop()
+            ch["dg_id"] = ch["PLAYER"].astype(str).map(name_to_id_all).astype("Int64")
+
+        # Merge in YTD SG
+        ch = ch.merge(ytd_sg[["dg_id", "ytd_sg_total"]], on="dg_id", how="left")
+
+        # Normalize numeric sorts
+        if "SG" in ch.columns:
+            ch["SG"] = pd.to_numeric(ch["SG"], errors="coerce")
+        else:
+            ch["SG"] = np.nan
+
+        if "ROUNDS" in ch.columns:
+            ch["ROUNDS"] = pd.to_numeric(ch["ROUNDS"], errors="coerce")
+        else:
+            ch["ROUNDS"] = np.nan
+
+        ch["ytd_sg_total"] = pd.to_numeric(ch.get("ytd_sg_total"), errors="coerce")
+
+        # Auto-sort: YTD SG desc, then TRUE SG desc, then ROUNDS desc, then name
+        sort_cols = [c for c in ["ytd_sg_total", "SG", "ROUNDS", "PLAYER"] if c in ch.columns]
+        asc = [False, False, False, True][: len(sort_cols)]
+        ch = ch.sort_values(by=sort_cols, ascending=asc, na_position="last").reset_index(drop=True)
+
+        cols = ["PLAYER"] + [c for c in ch.columns if str(c).isdigit()] + ["ROUNDS", "SG"]
+        cols = [c for c in cols if c in ch.columns]
+
+        st.dataframe(
+            style_course_history_table(ch[cols]),
+            use_container_width=True,
+            hide_index=True,
+            height=800,
+        )
+
+    st.divider()
+
+    # -------------------------
+    # Table B: Year to Date [sorted by YTD SG]
+    # -------------------------
+    if "out" not in globals() or out is None or out.empty:
+        st.info("YTD table source ('out') is empty or missing.")
+    else:
+        ytd_show = out.copy()
+
+        # Keep behavior consistent with your app controls
+        if st.session_state.get("only_in_field", False):
+            # Only apply if field_ids is populated
+            if "field_ids" in globals() and field_ids and "dg_id" in ytd_show.columns:
+                ytd_show["dg_id"] = pd.to_numeric(ytd_show["dg_id"], errors="coerce")
+                ytd_show = ytd_show[ytd_show["dg_id"].isin([int(x) for x in field_ids if pd.notna(x)])]
+
+        excluded_players = st.session_state.get("excluded_players", [])
+        if excluded_players and "player_name" in ytd_show.columns:
+            ytd_show = ytd_show[~ytd_show["player_name"].isin(excluded_players)]
+
+        # Attach ytd_sg_total then sort
+        if "dg_id" in ytd_show.columns:
+            ytd_show["dg_id"] = pd.to_numeric(ytd_show["dg_id"], errors="coerce").astype("Int64")
+        else:
+            # If somehow missing, we can't merge; still render without YTD SG
+            ytd_show["dg_id"] = pd.Series([pd.NA] * len(ytd_show), dtype="Int64")
+
+        ytd_show = ytd_show.merge(ytd_sg[["dg_id", "ytd_sg_total"]], on="dg_id", how="left")
+        ytd_show["ytd_sg_total"] = pd.to_numeric(ytd_show.get("ytd_sg_total"), errors="coerce")
+        ytd_show = ytd_show.sort_values("ytd_sg_total", ascending=False, na_position="last")
+
+        ytd_cols = ["player_name", "ytd_sg_total", "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cut_pct"]
+        ytd_cols = [c for c in ytd_cols if c in ytd_show.columns]
+
+        ytd_grad = [c for c in ["ytd_sg_total", "ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cut_pct"]
+                    if c in ytd_show.columns]
+
+        render_table("Year to Date", ytd_show, ytd_cols, ytd_grad, odds_col=None, height=520)
 
 
 elif active_tab == "Approach Buckets":
@@ -1559,11 +2559,15 @@ elif active_tab == "H2H":
     cutoff_dt = get_pre_event_cutoff_date(sched, int(event_id))
 
     # pool from summary_top (already reflects your field filtering in mst.py)
-    pool = summary_top[["dg_id", "player_name"]].dropna().drop_duplicates().copy()
+    pool = summary_top[["dg_id", "player_name", "close_odds"]].dropna(
+        subset=["dg_id", "player_name"]).drop_duplicates().copy()
     pool["dg_id"] = pd.to_numeric(pool["dg_id"], errors="coerce")
     pool = pool.dropna(subset=["dg_id"]).copy()
     pool["dg_id"] = pool["dg_id"].astype(int)
     pool["player_name"] = pool["player_name"].astype(str)
+
+    pool["close_odds"] = pool.get("close_odds")  # keep column even if missing
+    odds_by_id = dict(zip(pool["dg_id"], pool["close_odds"]))
 
     # --- build name<->id maps FROM POOL (authoritative for this event/field) ---
     name_to_id = dict(zip(pool["player_name"], pool["dg_id"]))
@@ -1622,35 +2626,21 @@ elif active_tab == "H2H":
 
     with selA:
         st.markdown("### Player A")
-        a1, a2 = st.columns([6, 2], vertical_alignment="center")
-
-        with a1:
-            name_a = st.selectbox(
-                " ",
-                player_options,
-                key="h2h_a",
-                label_visibility="collapsed",
-            )
-        with a2:
-            dg_a = int(name_to_id[name_a])
-            url_a = get_headshot_url(dg_a, name_a, ID_TO_IMG, NAME_TO_IMG)
-            show_headshot(url_a, width=90)
+        name_a = st.selectbox(
+            " ",
+            player_options,
+            key="h2h_a",
+            label_visibility="collapsed",
+        )
 
     with selB:
         st.markdown("### Player B")
-        b1, b2 = st.columns([6, 2], vertical_alignment="center")
-
-        with b1:
-            name_b = st.selectbox(
-                " ",
-                player_options,
-                key="h2h_b",
-                label_visibility="collapsed",
-            )
-        with b2:
-            dg_b = int(name_to_id[name_b])
-            url_b = get_headshot_url(dg_b, name_b, ID_TO_IMG, NAME_TO_IMG)
-            show_headshot(url_b, width=90)
+        name_b = st.selectbox(
+            " ",
+            player_options,
+            key="h2h_b",
+            label_visibility="collapsed",
+        )
 
     dg_a = int(name_to_id[name_a])
     dg_b = int(name_to_id[name_b])
@@ -1659,7 +2649,41 @@ elif active_tab == "H2H":
         st.warning("Pick two different players.")
         st.stop()
 
+    odds_a = odds_by_id.get(dg_a, None)
+    odds_b = odds_by_id.get(dg_b, None)
+
+    kpis_a = [("Odds", str(odds_a))] if odds_a is not None and str(odds_a).strip() != "" else []
+    kpis_b = [("Odds", str(odds_b))] if odds_b is not None and str(odds_b).strip() != "" else []
+
+        # -------------------------
+        # HERO CARDS (H2H)
+        # -------------------------
+    heroA, heroB=st.columns(2, gap="large")
+
+    with heroA:
+        render_player_hero(
+            dg_id=dg_a,
+            player_name=name_a,
+            all_players=all_players,
+            ID_TO_IMG=ID_TO_IMG,
+            NAME_TO_IMG=NAME_TO_IMG,
+            odds=odds_a,
+            headshot_width=110,
+        )
+
+    with heroB:
+        render_player_hero(
+            dg_id=dg_b,
+            player_name=name_b,
+            all_players=all_players,
+            ID_TO_IMG=ID_TO_IMG,
+            NAME_TO_IMG=NAME_TO_IMG,
+            odds=odds_b,
+            headshot_width=110,
+        )
+
     st.subheader("Recent tournaments")
+
     left, right = st.columns(2, gap="large")
 
     with left:
@@ -1981,68 +3005,120 @@ elif active_tab == "H2H":
 elif active_tab == "Deep Dive":
     st.header("Player Deep Dive")
 
+    if event_id is None:
+        st.info("No event_id for this schedule row yet.")
+        st.stop()
+
     rounds_2024p = load_mst_roundlevel_2024_present()
     ev_2017_2023 = load_mst_eventlevel_2017_2023()
     cutoff_dt = get_pre_event_cutoff_date(sched, int(event_id))
 
-    # -------------------------
-    # Player selector (use current pool)
-    # -------------------------
-    pool = summary_top[["dg_id", "player_name"]].dropna().drop_duplicates().copy()
-    pool["dg_id"] = pd.to_numeric(pool["dg_id"], errors="coerce")
+    # --- pool (stable: dg_id is option value) ---
+    cols_needed = ["dg_id", "player_name"]
+    if "close_odds" in summary_top.columns:
+        cols_needed.append("close_odds")
+
+    pool = (
+        summary_top[cols_needed]
+        .dropna(subset=["dg_id", "player_name"])
+        .drop_duplicates(subset=["dg_id"])
+        .copy()
+    )
+    pool["dg_id"] = pd.to_numeric(pool["dg_id"], errors="coerce").astype("Int64")
     pool = pool.dropna(subset=["dg_id"]).copy()
     pool["dg_id"] = pool["dg_id"].astype(int)
     pool["player_name"] = pool["player_name"].astype(str)
 
-    pool["label"] = pool["player_name"] + " — " + pool["dg_id"].astype(str)
-    labels = pool["label"].tolist()
-    label_to_id = dict(zip(labels, pool["dg_id"]))
-    label_to_name = dict(zip(pool["dg_id"], pool["player_name"]))
+    name_by_id = dict(zip(pool["dg_id"], pool["player_name"]))
+    odds_by_id = dict(zip(pool["dg_id"], pool.get("close_odds", pd.Series([None] * len(pool)))))
 
-    top_dg = st.session_state.get("weekly_top1_dg_id", None)
-    if top_dg is None:
-        # fallback if state not set yet
-        top_dg = int(summary_top.iloc[0]["dg_id"]) if (
-                    isinstance(summary_top, pd.DataFrame) and not summary_top.empty) else pool["dg_id"].iloc[0]
+    dg_options = pool["dg_id"].tolist()
 
-    # Default Deep Dive player: Weekly top1 if available, else summary_top[0], else first label
     weekly_top1 = st.session_state.get("weekly_top1_dg_id", None)
+    default_dg = int(weekly_top1) if weekly_top1 in dg_options else (dg_options[0] if dg_options else None)
+    if default_dg is None:
+        st.info("No players available.")
+        st.stop()
 
-    default_dg = None
-    if weekly_top1 is not None:
-        default_dg = int(weekly_top1)
-    elif isinstance(summary_top, pd.DataFrame) and not summary_top.empty and "dg_id" in summary_top.columns:
-        default_dg = int(summary_top.iloc[0]["dg_id"])
+    if ("mst_dd_dg_id" not in st.session_state) or (st.session_state["mst_dd_dg_id"] not in dg_options):
+        st.session_state["mst_dd_dg_id"] = default_dg
 
-    default_label = None
-    if default_dg is not None:
-        # label is "player_name — dg_id"
-        # find the label in labels that matches dg_id
-        for lab in labels:
-            if int(label_to_id[lab]) == default_dg:
-                default_label = lab
-                break
+    DD_HERO_H = 250  # one knob
 
-    if default_label is None and labels:
-        default_label = labels[0]
 
-    # Only set if first time, or if prior choice disappeared due to filtering/pool change
-    if ("mst_dd_player" not in st.session_state) or (st.session_state.get("mst_dd_player") not in labels):
-        st.session_state["mst_dd_player"] = default_label
+    def _fmt_int(x):
+        if x is None or (isinstance(x, float) and pd.isna(x)):
+            return "—"
+        try:
+            return f"{int(x)}"
+        except Exception:
+            return str(x)
 
-    sel_label = st.selectbox("Player", labels, key="mst_dd_player")
-    dg_id_sel = int(label_to_id[sel_label])
-    player_name_sel = str(label_to_name.get(dg_id_sel, f"dg_{dg_id_sel}"))
 
-    # --- Title row: name + headshot (mobile-friendly)
-    title_col, img_col = st.columns([10, 2], vertical_alignment="center")
+    def _fmt_pct(x, digits=0):
+        if x is None or (isinstance(x, float) and pd.isna(x)):
+            return "—"
+        try:
+            return f"{100 * float(x):.{digits}f}%"
+        except Exception:
+            return "—"
 
-    with title_col:
-        st.header(player_name_sel)
 
-    with img_col:
-        url = get_headshot_url(dg_id_sel, player_name_sel, ID_TO_IMG, NAME_TO_IMG)
-        show_headshot(url, width=180)
+    def _fmt_odds(x):
+        if x is None or (isinstance(x, float) and pd.isna(x)):
+            return "—"
+        try:
+            return f"{float(x):.1f}"
+        except Exception:
+            return str(x)
+
+
+    def _kpi_strip_html(kpis):
+        cards = "".join(
+            f'<div class="dd-kpi"><div class="dd-kpi-label">{label}</div><div class="dd-kpi-val">{val}</div></div>'
+            for label, val in kpis
+        )
+        return f'<div class="dd-kpi-row">{cards}</div>'
+
+
+    left, right = st.columns([7, 5], gap="medium")
+
+    with left:
+        dg_id_sel = st.selectbox(
+            "Player",
+            options=dg_options,
+            index=dg_options.index(st.session_state["mst_dd_dg_id"]),
+            format_func=lambda dg: f"{name_by_id.get(int(dg), 'Unknown')}",
+            key="mst_dd_dg_id",
+        )
+
+        player_name_sel = name_by_id.get(int(dg_id_sel), "Unknown")
+        odds_sel = odds_by_id.get(int(dg_id_sel), None)
+
+        meta = _player_meta_from_all_players(all_players, int(dg_id_sel))
+        owgr = meta.get("owgr", None)
+
+        yrow = ytd.loc[ytd["dg_id"] == int(dg_id_sel)]
+        yrow = yrow.iloc[0] if not yrow.empty else None
+
+        ytd_starts = yrow["ytd_starts"] if yrow is not None else None
+        ytd_cutpct = yrow["ytd_made_cut_pct"] if yrow is not None else None
+        ytd_top10 = yrow["ytd_top10"] if yrow is not None else None
+
+        kpis = [
+            ("OWGR", _fmt_int(owgr)),
+            ("Odds", _fmt_odds(odds_sel)),
+            ("Starts", _fmt_int(ytd_starts)),
+            ("Cut %", _fmt_pct(ytd_cutpct, digits=0)),
+            ("Top 10", _fmt_int(ytd_top10)),
+        ]
+        st.markdown(_kpi_strip_html(kpis), unsafe_allow_html=True)
+
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    with right:
+        img_url = get_headshot_url(int(dg_id_sel), player_name_sel, ID_TO_IMG, NAME_TO_IMG)
+        show_headshot_cropped_card(img_url, height_px=DD_HERO_H)
 
     st.subheader("Course History")
 
@@ -2177,24 +3253,71 @@ elif active_tab == "Deep Dive":
         if not out_parts:
             st.info("No course history found for this player at this course.")
         else:
-            course_hist = pd.concat(out_parts, ignore_index=True)
-            course_hist["event_end"] = pd.to_datetime(course_hist.get("event_end"), errors="coerce")
-            course_hist = course_hist.sort_values(["event_end", "Year", "event_id"],
-                                                  ascending=[False, False, False]).copy()
+            # -------------------------
+            # Combine + display (SORTABLE like SG tables)
+            # -------------------------
+            if not out_parts:
+                st.info("No course history found for this player at this course.")
+            else:
+                course_hist = pd.concat(out_parts, ignore_index=True)
+                course_hist["event_end"] = pd.to_datetime(course_hist.get("event_end"), errors="coerce")
 
-            # format SG columns
-            for c in ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]:
-                if c in course_hist.columns:
-                    course_hist[c] = pd.to_numeric(course_hist[c], errors="coerce").map(
-                        lambda x: f"{x:+.2f}" if pd.notna(x) else ""
-                    )
+                # ----- sort selector (like Weekly tables) -----
+                COURSE_SORT_LABELS = {
+                    "SG Total": "SG Total",
+                    "SG APP": "SG APP",
+                    "SG OTT": "SG OTT",
+                    "SG ARG": "SG ARG",
+                    "SG PUTT": "SG PUTT",
+                    "Year": "Year",
+                }
 
-            show_cols = [c for c in
-                         ["Year", "Event", "Finish", "SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
-                         if c in course_hist.columns]
-            sg_cols = ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
-            sty = heat_table(course_hist[show_cols], sg_cols=sg_cols, precision=2)
-            st.dataframe(sty, use_container_width=True, hide_index=True)
+                sort_choices = [c for c in ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT", "Year"] if
+                                c in course_hist.columns]
+
+                default_idx = sort_choices.index("Year") if "Year" in sort_choices else 0
+
+                sort_by = st.selectbox(
+                    "Sort by",
+                    options=sort_choices,
+                    index=default_idx,
+                    format_func=lambda c: COURSE_SORT_LABELS.get(c, c),
+                    key="dd_course_hist_sort_by",
+                )
+
+                # same direction as SG tables (higher SG better)
+                ascending = (sort_by == "Year")  # year ascending usually reads better; flip if you want
+
+                # numeric sort (SG columns are numeric *before* formatting)
+                if sort_by in ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]:
+                    course_hist[sort_by] = pd.to_numeric(course_hist[sort_by], errors="coerce")
+
+                course_hist = course_hist.sort_values(
+                    by=[sort_by, "event_end", "event_id"],
+                    ascending=[ascending, False, False],
+                    na_position="last",
+                ).copy()
+
+                ascending = False  # default
+
+                if sort_by == "Year":
+                    ascending = False
+
+                course_hist = course_hist.sort_values(sort_by, ascending=ascending)
+
+                # ----- format SG columns AFTER sorting -----
+                for c in ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]:
+                    if c in course_hist.columns:
+                        course_hist[c] = pd.to_numeric(course_hist[c], errors="coerce").map(
+                            lambda x: f"{x:+.2f}" if pd.notna(x) else ""
+                        )
+
+                show_cols = [c for c in ["Year", "Event", "Finish", "SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
+                             if c in course_hist.columns]
+                sg_cols = ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
+
+                sty = heat_table(course_hist[show_cols], sg_cols=sg_cols, precision=2)
+                st.dataframe(sty, use_container_width=True, hide_index=True)
 
     st.subheader("Last 60 Rounds")
     st.caption("Rounds without bars indicate non-PGA Tour events (SG breakdown not available).")
@@ -2471,6 +3594,4 @@ elif active_tab == "Deep Dive":
         sg_cols = ["SG Total", "SG APP", "SG OTT", "SG ARG", "SG PUTT"]
         sty = heat_table(out[show_cols], sg_cols=sg_cols, precision=2)
         st.dataframe(sty, use_container_width=True, hide_index=True)
-
-    st.divider()
 

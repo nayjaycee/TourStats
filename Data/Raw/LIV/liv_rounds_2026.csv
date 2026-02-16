@@ -1,5 +1,5 @@
 tour,year,season,event_completed,event_name,event_id,player_name,dg_id,fin_text,round_num,course_name,course_num,course_par,start_hole,teetime,round_score,sg_putt,sg_arg,sg_app,sg_ott,sg_t2g,sg_total,driving_dist,driving_acc,gir,scrambling,prox_rgh,prox_fw,great_shots,poor_shots,eagles_or_better,birdies,pars,bogies,doubles_or_worse
-liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,0,2,13,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,5,9,3,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Park, Sungkug",15550,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,4,12,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Florimo, Will",25780,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,1,16,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Florimo, Will",25780,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,5,10,3,0
@@ -34,7 +34,7 @@ liv,2026,2026,2026-01-11,Promotions Event,53,"Ashfield, James",28636,,2,Black Di
 liv,2026,2026,2026-01-11,Promotions Event,53,"Ashfield, James",28636,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kieffer, Max",12317,,2,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.553,,,,,,,,,0,5,9,3,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kieffer, Max",12317,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Ikemura, Tomoyo",18809,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Saksansin, Poom",14951,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,10,3,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Schwab, Matthias",15016,,2,Black Diamond Ranch - Ranch Course,1,70,,,74,,,,,,-4.553,,,,,,,,,0,2,11,4,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Pineau, Pierre",20900,,1,Black Diamond Ranch - Ranch Course,1,70,,,75,,,,,,-5.25,,,,,,,,,0,1,12,4,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Hwang, Doyeon",17459,,2,Black Diamond Ranch - Ranch Course,1,70,,,73,,,,,,-3.553,,,,,,,,,0,1,14,2,1
@@ -74,8 +74,9 @@ liv,2026,2026,2026-01-11,Promotions Event,53,"Lewis, Tom",15164,,1,Black Diamond
 liv,2026,2026,2026-01-11,Promotions Event,53,"Schniederjans, Ollie",18662,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,11,1,2
 liv,2026,2026,2026-01-11,Promotions Event,53,"Clemons, Dominic",32594,,1,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.25,,,,,,,,,0,3,11,4,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,2,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.447,,,,,,,,,1,4,12,0,1
-liv,2026,2026,2026-01-11,Promotions Event,53,"Saksansin, Poom",14951,,2,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.553,,,,,,,,,0,4,10,3,1
-liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,4,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.682,,,,,,,,,0,8,8,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Ikemura, Tomoyo",18809,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,2,Black Diamond Ranch - Ranch Course,1,70,,,65,,,,,,4.447,,,,,,,,,0,5,13,0,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,4,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.318,,,,,,,,,0,2,13,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,3,13,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,5,11,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,6,8,3,1
@@ -90,18 +91,19 @@ liv,2026,2026,2026-01-11,Promotions Event,53,"Bekker, Oliver",12819,,1,Black Dia
 liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,4,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.318,,,,,,,,,0,3,12,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,3,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.545,,,,,,,,,0,5,11,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,4,13,1,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Pagdin, Joseph",34270,,4,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.318,,,,,,,,,0,2,13,3,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,4,12,2,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,5,9,3,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,1,4,8,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Hellgren, Bjorn",16231,,4,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.682,,,,,,,,,0,8,8,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,3,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.455,,,,,,,,,0,4,9,5,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,0,2,13,2,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,3,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.455,,,,,,,,,0,1,14,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,4,12,1,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,1,2,9,6,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,2,14,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Bjerregaard, Lucas",11619,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,4,13,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Perico, Julian",22812,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,0,3,13,2,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,4,Black Diamond Ranch - Ranch Course,1,70,,,76,,,,,,-6.318,,,,,,,,,0,2,10,5,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,2,15,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,3,15,0,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,1,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.75,,,,,,,,,0,5,12,1,0
@@ -109,31 +111,30 @@ liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,4,Black Diamon
 liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,3,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.455,,,,,,,,,0,2,13,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,7,7,4,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Smyth, Trav",19232,,1,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.75,,,,,,,,,0,4,12,2,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Kennedy, Max",31455,,4,Black Diamond Ranch - Ranch Course,1,70,,,76,,,,,,-6.318,,,,,,,,,0,2,10,5,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,4,12,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,11,3,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Crawford, Cory",17785,,1,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.75,,,,,,,,,1,4,8,5,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,6,9,3,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,2,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.447,,,,,,,,,0,6,9,2,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Vincent, Kieran",19538,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,3,15,0,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Vincent, Kieran",19538,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,4,11,2,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Vincent, Kieran",19538,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,3,13,2,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,12,1,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,1,5,8,4,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,4,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.318,,,,,,,,,0,2,12,4,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,2,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.447,,,,,,,,,0,6,9,2,1
 liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,3,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.545,,,,,,,,,0,6,10,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,2,1,13,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Anthony",11641,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,4,11,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Anthony",11641,,3,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.545,,,,,,,,,0,4,14,0,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Kim, Anthony",11641,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,6,8,4,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,11,3,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Wang, Jeunghun",15366,,2,Black Diamond Ranch - Ranch Course,1,70,,,65,,,,,,4.447,,,,,,,,,0,5,13,0,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Janewattananond, Jazz",14368,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,2,1,13,2,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,11,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,3,Black Diamond Ranch - Ranch Course,1,70,,,71,,,,,,-1.455,,,,,,,,,0,4,9,5,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Islas, Jose Cristobal",28142,,3,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.455,,,,,,,,,0,1,14,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wood, Christopher",16012,,4,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.682,,,,,,,,,0,4,13,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Konishi, Takanori",17401,,3,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.545,,,,,,,,,0,4,12,1,1
+liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,1,3,10,4,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,4,Black Diamond Ranch - Ranch Course,1,70,,,65,,,,,,4.682,,,,,,,,,0,6,11,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,3,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.545,,,,,,,,,0,6,12,0,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,2,Black Diamond Ranch - Ranch Course,1,70,,,66,,,,,,3.447,,,,,,,,,2,1,14,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,1,Black Diamond Ranch - Ranch Course,1,70,,,64,,,,,,5.75,,,,,,,,,0,6,12,0,0
@@ -141,55 +142,54 @@ liv,2026,2026,2026-01-11,Promotions Event,53,"Boonma, Danthai",16424,,4,Black Di
 liv,2026,2026,2026-01-11,Promotions Event,53,"Boonma, Danthai",16424,,3,Black Diamond Ranch - Ranch Course,1,70,,,76,,,,,,-6.455,,,,,,,,,0,1,12,3,2
 liv,2026,2026,2026-01-11,Promotions Event,53,"Boonma, Danthai",16424,,2,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.447,,,,,,,,,0,4,13,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Tabuena, Miguel",15274,,4,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.318,,,,,,,,,0,4,10,4,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Lee, Richard",12413,,4,Black Diamond Ranch - Ranch Course,1,70,,,65,,,,,,4.682,,,,,,,,,0,6,11,1,0
+liv,2026,2026,2026-01-11,Promotions Event,53,"Suwannarut, Sarit",23638,,1,Black Diamond Ranch - Ranch Course,1,70,,,67,,,,,,2.75,,,,,,,,,0,6,9,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Tabuena, Miguel",15274,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,0,4,11,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wannasrichan, Rattanon",14953,,4,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.682,,,,,,,,,0,2,15,1,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wannasrichan, Rattanon",14953,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,5,8,5,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Wannasrichan, Rattanon",14953,,2,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.447,,,,,,,,,0,4,12,2,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,4,Black Diamond Ranch - Ranch Course,1,70,,,68,,,,,,1.682,,,,,,,,,0,5,10,3,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,3,Black Diamond Ranch - Ranch Course,1,70,,,70,,,,,,-0.455,,,,,,,,,0,2,14,2,0
-liv,2026,2026,2026-01-11,Promotions Event,53,"Jones, Matt",8605,,2,Black Diamond Ranch - Ranch Course,1,70,,,69,,,,,,0.447,,,,,,,,,1,3,10,4,0
 liv,2026,2026,2026-01-11,Promotions Event,53,"Tabuena, Miguel",15274,,3,Black Diamond Ranch - Ranch Course,1,70,,,72,,,,,,-2.455,,,,,,,,,0,2,12,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,1,Riyadh Golf Club,1,72,,,69,4.189,-0.385,-2.7,-0.138,-3.224,0.965,304.043,0.357,0.667,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,4,Riyadh Golf Club,1,72,,,67,-1.565,-0.158,1.361,1.204,2.407,0.842,357.35,0.5,0.722,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,3,Riyadh Golf Club,1,72,,,68,1.078,-1.162,1.196,-0.586,-0.552,0.526,352.014,0.214,0.778,,,,,,0,5,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,2,Riyadh Golf Club,1,72,,,73,-1.692,-1.685,-0.36,0.632,-1.413,-3.105,336.556,0.571,0.722,,,,,,0,2,13,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,1,Riyadh Golf Club,1,72,,,75,-3.318,-1.903,0.15,0.035,-1.718,-5.035,321.276,0.429,0.778,,,,,,0,2,11,5,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,4,Riyadh Golf Club,1,72,,,69,0.488,-0.048,0.998,-2.597,-1.646,-1.158,316.278,0.214,0.722,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,3,Riyadh Golf Club,1,72,,,68,-1.113,1.151,0.595,-0.107,1.639,0.526,309.981,0.286,0.722,,,,,,0,6,10,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,2,Riyadh Golf Club,1,72,,,74,-0.888,-0.609,-0.209,-2.399,-3.217,-4.105,291.403,0.357,0.556,,,,,,0,2,12,4,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,1,Riyadh Golf Club,1,72,,,72,-3.702,-0.437,2.909,-0.805,1.666,-2.035,293.172,0.357,0.944,,,,,,0,3,12,3,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,4,Riyadh Golf Club,1,72,,,68,2.743,-0.847,-2.024,-0.029,-2.901,-0.158,324.478,0.571,0.611,,,,,,0,6,10,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,4,Riyadh Golf Club,1,72,,,72,-2.594,-1.02,-1.038,0.494,-1.563,-4.158,327.371,0.5,0.778,,,,,,0,4,11,2,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,2,Riyadh Golf Club,1,72,,,73,-2.341,-0.339,-1.51,1.085,-0.764,-3.105,327.022,0.714,0.667,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,4,Riyadh Golf Club,1,72,,,68,2.743,-0.847,-2.024,-0.029,-2.901,-0.158,324.478,0.571,0.611,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,3,Riyadh Golf Club,1,72,,,67,0.559,-1.045,1.033,0.979,0.968,1.526,323.062,0.714,0.778,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,1,Riyadh Golf Club,1,72,,,74,-2.037,-1.846,-0.888,0.736,-1.998,-4.035,313.174,0.5,0.722,,,,,,0,3,11,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,4,Riyadh Golf Club,1,72,,,72,-2.594,-1.02,-1.038,0.494,-1.563,-4.158,327.371,0.5,0.778,,,,,,0,4,11,2,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,3,Riyadh Golf Club,1,72,,,71,0.977,-0.367,-2.677,-0.407,-3.451,-2.474,319.397,0.357,0.667,,,,,,0,5,10,2,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,2,Riyadh Golf Club,1,72,,,68,3.064,-1.067,0.012,-0.114,-1.17,1.895,306.974,0.429,0.667,,,,,,0,5,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Horsfield, Sam",19866,T48,1,Riyadh Golf Club,1,72,,,71,0.137,-0.678,1.006,-1.5,-1.172,-1.035,320.325,0.5,0.833,,,,,,0,4,11,3,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Wolff, Matthew",25919,T51,4,Riyadh Golf Club,1,72,,,67,-1.565,-0.158,1.361,1.204,2.407,0.842,357.35,0.5,0.722,,,,,,0,6,11,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,4,Riyadh Golf Club,1,72,,,69,0.741,-1.037,-0.581,-0.281,-1.899,-1.158,320.036,0.429,0.833,,,,,,0,5,11,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Watson, Bubba",7334,T48,3,Riyadh Golf Club,1,72,,,67,0.559,-1.045,1.033,0.979,0.968,1.526,323.062,0.714,0.778,,,,,,0,6,11,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,1,Riyadh Golf Club,1,72,,,69,4.189,-0.385,-2.7,-0.138,-3.224,0.965,304.043,0.357,0.667,,,,,,0,5,11,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,1,Riyadh Golf Club,1,72,,,69,2.053,-0.028,-0.518,-0.541,-1.088,0.965,287.301,0.429,0.667,,,,,,0,4,13,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,3,Riyadh Golf Club,1,72,,,74,-5.669,-1.067,0.279,0.983,0.196,-5.474,340.489,0.429,0.667,,,,,,0,1,14,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kaymer, Martin",8117,T51,1,Riyadh Golf Club,1,72,,,72,-3.702,-0.437,2.909,-0.805,1.666,-2.035,293.172,0.357,0.944,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,2,Riyadh Golf Club,1,72,,,74,-0.409,-1.014,-0.324,-2.357,-3.696,-4.105,326.778,0.286,0.667,,,,,,0,3,11,3,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,4,Riyadh Golf Club,1,72,,,74,-3.238,0.267,-3.24,0.053,-2.92,-6.158,329.61,0.429,0.778,,,,,,0,3,13,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,4,Riyadh Golf Club,1,72,,,66,-0.121,0.918,1.343,-0.299,1.963,1.842,347.831,0.5,0.778,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,4,Riyadh Golf Club,1,72,,,69,0.741,-1.037,-0.581,-0.281,-1.899,-1.158,320.036,0.429,0.833,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,3,Riyadh Golf Club,1,72,,,76,0.649,-1.458,-6.084,-0.581,-8.123,-7.474,346.185,0.571,0.444,,,,,,0,2,12,2,2
 liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,2,Riyadh Golf Club,1,72,,,71,3.31,-1.895,-1.534,-0.987,-4.415,-1.105,291.01,0.571,0.611,,,,,,0,6,10,1,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,1,Riyadh Golf Club,1,72,,,71,0.27,-0.914,-1.264,0.872,-1.305,-1.035,316.832,0.714,0.722,,,,,,0,4,12,1,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,4,Riyadh Golf Club,1,72,,,69,0.642,1.013,-1.347,-1.466,-1.8,-1.158,316.347,0.357,0.444,,,,,,1,4,10,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,3,Riyadh Golf Club,1,72,,,74,0.378,0.556,-5.352,-1.056,-5.852,-5.474,315.261,0.357,0.444,,,,,,0,4,8,6,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,2,Riyadh Golf Club,1,72,,,71,0.752,-1.644,-0.978,0.765,-1.857,-1.105,308.807,0.714,0.722,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,3,Riyadh Golf Club,1,72,,,74,-5.669,-1.067,0.279,0.983,0.196,-5.474,340.489,0.429,0.667,,,,,,0,1,14,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schniederjans, Ollie",18662,56,1,Riyadh Golf Club,1,72,,,72,-0.538,-1.484,0.008,-0.021,-1.497,-2.035,302.706,0.5,0.778,,,,,,0,2,14,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,2,Riyadh Golf Club,1,72,,,74,-0.409,-1.014,-0.324,-2.357,-3.696,-4.105,326.778,0.286,0.667,,,,,,0,3,11,3,1
-liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,4,Riyadh Golf Club,1,72,,,72,0.073,-0.92,-1.601,-1.71,-4.231,-4.158,307.344,0.429,0.778,,,,,,0,5,9,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,3,Riyadh Golf Club,1,72,,,70,-3.563,-0.431,1.939,0.582,2.09,-1.474,313.307,0.786,0.722,,,,,,0,3,14,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,2,Riyadh Golf Club,1,72,,,74,-1.144,1.018,-1.86,-2.119,-2.961,-4.105,266.554,0.286,0.5,,,,,,0,3,11,3,1
-liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,3,Riyadh Golf Club,1,72,,,71,0.695,0.533,-1.624,-2.078,-3.168,-2.474,310.294,0.286,0.611,,,,,,0,4,12,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,1,Riyadh Golf Club,1,72,,,69,2.053,-0.028,-0.518,-0.541,-1.088,0.965,287.301,0.429,0.667,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,4,Riyadh Golf Club,1,72,,,68,1.137,0.117,2.252,0.337,2.705,-0.158,315.329,0.643,0.833,,,,,,0,5,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,3,Riyadh Golf Club,1,72,,,73,-0.799,-0.487,0.406,-3.594,-3.675,-4.474,316.181,0.571,0.667,,,,,,0,1,15,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,2,Riyadh Golf Club,1,72,,,70,0.083,0.154,1.096,-0.437,0.812,-0.105,281.778,0.5,0.833,,,,,,0,4,12,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Perez, Victor",20730,54,1,Riyadh Golf Club,1,72,,,73,1.608,-0.807,0.609,0.556,0.357,-3.035,291.403,0.643,0.722,,,,,,0,2,14,1,1
-liv,2026,2026,2026-02-07,Riyadh,54,"Burmester, Dean",14424,T51,4,Riyadh Golf Club,1,72,,,66,-0.121,0.918,1.343,-0.299,1.963,1.842,347.831,0.5,0.778,,,,,,0,7,10,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,3,Riyadh Golf Club,1,72,,,70,-3.563,-0.431,1.939,0.582,2.09,-1.474,313.307,0.786,0.722,,,,,,0,3,14,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Steele, Brendan",11019,57,3,Riyadh Golf Club,1,72,,,76,0.649,-1.458,-6.084,-0.581,-8.123,-7.474,346.185,0.571,0.444,,,,,,0,2,12,2,2
+liv,2026,2026,2026-02-07,Riyadh,54,"Bland, Richard",6516,55,4,Riyadh Golf Club,1,72,,,72,0.073,-0.92,-1.601,-1.71,-4.231,-4.158,307.344,0.429,0.778,,,,,,0,5,9,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,3,Riyadh Golf Club,1,72,,,71,0.695,0.533,-1.624,-2.078,-3.168,-2.474,310.294,0.286,0.611,,,,,,0,4,12,1,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,1,Riyadh Golf Club,1,72,,,66,1.124,0.507,1.174,1.16,2.841,3.965,311.401,0.714,0.778,,,,,,0,7,10,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,4,Riyadh Golf Club,1,72,,,75,-3.292,1.09,-2.877,-2.078,-3.865,-7.158,320.526,0.429,0.5,,,,,,0,4,9,4,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,1,Riyadh Golf Club,1,72,,,71,0.773,-1.82,0.423,-0.411,-1.808,-1.035,284.181,0.357,0.722,,,,,,0,3,13,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,4,Riyadh Golf Club,1,72,,,67,-1.315,0.559,1.133,0.464,2.157,0.842,315.618,0.714,0.778,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,3,Riyadh Golf Club,1,72,,,67,0.185,0.011,2.501,-1.17,1.342,1.526,332.451,0.429,0.833,,,,,,0,5,13,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Casey, Paul",7108,T17,2,Riyadh Golf Club,1,72,,,71,-2.697,0.526,0.702,0.364,1.592,-1.105,333.121,0.5,0.889,,,,,,0,2,15,1,0
@@ -237,7 +237,6 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Johnson, Dustin",12422,T17,2,Riyadh Golf Clu
 liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,4,Riyadh Golf Club,1,72,,,71,-2.261,-0.172,-0.998,0.274,-0.897,-3.158,319.571,0.571,0.667,,,,,,0,3,13,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,3,Riyadh Golf Club,1,72,,,67,-0.188,1.175,-0.877,1.416,1.714,1.526,315.056,0.714,0.778,,,,,,0,5,13,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,2,Riyadh Golf Club,1,72,,,67,-0.026,1.348,0.727,0.845,2.92,2.895,306.079,0.714,0.833,,,,,,0,6,11,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,1,Riyadh Golf Club,1,72,,,68,0.323,0.167,1.72,-0.246,1.642,1.965,288.546,0.286,0.889,,,,,,1,3,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,4,Riyadh Golf Club,1,72,,,65,0.787,0.205,1.763,0.087,2.055,2.842,318.424,0.429,0.944,,,,,,0,7,11,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,3,Riyadh Golf Club,1,72,,,65,3.259,-1.21,1.722,-0.244,0.268,3.526,302.296,0.214,0.722,,,,,,0,8,9,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Pieters, Thomas",13944,T4,2,Riyadh Golf Club,1,72,,,68,-1.082,0.769,2.045,0.163,2.977,1.895,311.922,0.571,0.778,,,,,,0,7,8,3,0
@@ -246,9 +245,9 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,4,Riyadh Golf Club,1,7
 liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,3,Riyadh Golf Club,1,72,,,67,2.113,0.232,-1.545,0.726,-0.586,1.526,339.147,0.5,0.833,,,,,,1,5,11,0,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,2,Riyadh Golf Club,1,72,,,67,0.903,-0.291,1.191,1.092,1.991,2.895,329.971,0.5,0.944,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Puig, David",28984,T4,1,Riyadh Golf Club,1,72,,,69,0.473,-0.793,0.047,1.238,0.492,0.965,308.738,0.643,0.889,,,,,,0,3,15,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,2,Riyadh Golf Club,1,72,,,69,0.354,0.818,-0.953,0.677,0.541,0.895,304.55,0.929,0.667,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,4,Riyadh Golf Club,1,72,,,67,-2.223,0.804,2.167,0.094,3.065,0.842,329.432,0.429,0.889,,,,,,0,5,13,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,2,Riyadh Golf Club,1,72,,,69,1.44,0.371,0.834,-1.75,-0.546,0.895,326.443,0.214,0.722,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,1,Riyadh Golf Club,1,72,,,68,0.323,0.167,1.72,-0.246,1.642,1.965,288.546,0.286,0.889,,,,,,1,3,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,3,Riyadh Golf Club,1,72,,,66,-0.298,0.022,2.167,0.635,2.825,2.526,341.831,0.429,0.889,,,,,,0,7,10,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,1,Riyadh Golf Club,1,72,,,65,3.388,0.052,2.126,-0.601,1.577,4.965,290.278,0.357,0.833,,,,,,1,5,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,4,Riyadh Golf Club,1,72,,,63,1.015,0.992,0.303,2.532,3.827,4.842,346.429,0.714,0.833,,,,,,0,9,9,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,3,Riyadh Golf Club,1,72,,,67,-0.44,-0.488,0.979,1.475,1.966,1.526,340.165,0.5,0.889,,,,,,0,6,11,1,0
@@ -257,22 +256,22 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Rahm, Jon",19195,2,1,Riyadh Golf Club,1,72,,
 liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,4,Riyadh Golf Club,1,72,,,64,-0.164,0.346,1.891,1.769,4.006,3.842,335.738,0.857,0.833,,,,,,0,8,10,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,3,Riyadh Golf Club,1,72,,,65,2.008,-0.209,0.271,1.457,1.519,3.526,325.376,0.857,0.778,,,,,,1,5,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Smylie, Elvis",24200,1,2,Riyadh Golf Club,1,72,,,69,1.434,0.0,-0.667,0.128,-0.539,0.895,302.871,0.5,0.667,,,,,,0,4,13,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,3,Riyadh Golf Club,1,72,,,66,-0.298,0.022,2.167,0.635,2.825,2.526,341.831,0.429,0.889,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,2,Riyadh Golf Club,1,72,,,71,0.514,0.01,-1.805,0.175,-1.62,-1.105,282.49,0.5,0.556,,,,,,1,2,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Uihlein, Peter",11357,3,2,Riyadh Golf Club,1,72,,,69,1.44,0.371,0.834,-1.75,-0.546,0.895,326.443,0.214,0.722,,,,,,0,5,11,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,1,Riyadh Golf Club,1,72,,,71,-1.394,1.372,-0.128,-0.885,0.359,-1.035,305.472,0.429,0.778,,,,,,0,4,11,3,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,3,Riyadh Golf Club,1,72,,,65,1.212,-0.588,1.839,1.063,2.314,3.526,314.236,0.714,0.833,,,,,,1,6,10,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,1,Riyadh Golf Club,1,72,,,65,2.593,0.055,-3.46,-2.224,-5.628,4.965,306.228,0.286,0.5,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,2,Riyadh Golf Club,1,72,,,69,0.354,0.818,-0.953,0.677,0.541,0.895,304.55,0.929,0.667,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,4,Riyadh Golf Club,1,72,,,66,0.912,0.225,0.844,-0.139,0.93,1.842,297.982,0.5,0.722,,,,,,0,7,10,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Gooch, Talor",18580,12,1,Riyadh Golf Club,1,72,,,67,2.159,-0.058,-0.032,0.896,0.806,2.965,296.228,0.571,0.722,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,4,Riyadh Golf Club,1,72,,,64,0.393,0.65,1.758,1.041,3.449,3.842,339.529,0.643,0.833,,,,,,0,9,8,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,3,Riyadh Golf Club,1,72,,,65,1.916,0.328,0.221,1.061,1.61,3.526,327.617,0.571,0.722,,,,,,0,7,11,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,2,Riyadh Golf Club,1,72,,,67,0.037,1.212,1.301,0.345,2.858,2.895,327.794,0.571,0.667,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Herbert, Lucas",17064,T9,1,Riyadh Golf Club,1,72,,,75,-1.002,-2.139,-2.602,0.708,-4.033,-5.035,326.207,0.5,0.611,,,,,,0,1,13,4,0
-liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,4,Riyadh Golf Club,1,72,,,67,2.976,0.359,-2.017,-0.476,-2.134,0.842,306.139,0.429,0.667,,,,,,0,8,7,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,3,Riyadh Golf Club,1,72,,,67,-0.366,0.794,0.763,0.336,1.892,1.526,330.022,0.286,0.556,,,,,,0,5,13,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,2,Riyadh Golf Club,1,72,,,70,-2.192,0.695,1.459,-0.067,2.087,-0.105,322.688,0.357,0.778,,,,,,0,3,14,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,1,Riyadh Golf Club,1,72,,,67,1.972,0.175,0.926,-0.108,0.993,2.965,305.2,0.429,0.722,,,,,,0,5,13,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,4,Riyadh Golf Club,1,72,,,66,0.912,0.225,0.844,-0.139,0.93,1.842,297.982,0.5,0.722,,,,,,0,7,10,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,4,Riyadh Golf Club,1,72,,,64,1.701,-0.668,2.812,-0.003,2.141,3.842,315.465,0.429,0.944,,,,,,1,6,11,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,2,Riyadh Golf Club,1,72,,,71,-1.382,2.579,-2.792,0.489,0.277,-1.105,307.897,0.571,0.611,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Ancer, Abraham",18238,T4,3,Riyadh Golf Club,1,72,,,65,1.212,-0.588,1.839,1.063,2.314,3.526,314.236,0.714,0.833,,,,,,1,6,10,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,3,Riyadh Golf Club,1,72,,,67,-0.768,1.278,1.797,-0.78,2.295,1.526,306.689,0.357,0.778,,,,,,1,4,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,1,Riyadh Golf Club,1,72,,,69,0.915,0.722,-1.283,0.612,0.05,0.965,312.69,0.571,0.833,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,4,Riyadh Golf Club,1,72,,,66,2.16,0.532,0.052,-0.901,-0.318,1.842,299.908,0.429,0.722,,,,,,0,7,10,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,3,Riyadh Golf Club,1,72,,,69,-0.797,-0.359,-0.502,1.185,0.323,-0.474,297.11,0.643,0.778,,,,,,1,3,12,2,0
@@ -281,10 +280,12 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Munoz, Sebastian",20770,8,1,Riyadh Golf Club
 liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,4,Riyadh Golf Club,1,72,,,67,1.347,0.435,-3.153,1.214,-1.505,0.842,334.582,0.643,0.611,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,3,Riyadh Golf Club,1,72,,,68,-1.707,-1.301,-2.08,0.614,-2.767,0.526,312.711,0.643,0.722,,,,,,1,3,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,2,Riyadh Golf Club,1,72,,,69,-0.409,-0.099,-0.215,0.617,0.303,0.895,327.361,0.714,0.833,,,,,,0,5,11,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,3,Riyadh Golf Club,1,72,,,67,-0.768,1.278,1.797,-0.78,2.295,1.526,306.689,0.357,0.778,,,,,,1,4,12,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,1,Riyadh Golf Club,1,72,,,71,0.773,-1.82,0.423,-0.411,-1.808,-1.035,284.181,0.357,0.722,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Detry, Thomas",14181,7,1,Riyadh Golf Club,1,72,,,65,2.593,0.055,-3.46,-2.224,-5.628,4.965,306.228,0.286,0.5,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Grace, Branden",11952,T9,2,Riyadh Golf Club,1,72,,,71,-1.382,2.579,-2.792,0.489,0.277,-1.105,307.897,0.571,0.611,,,,,,0,3,14,0,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,2,Riyadh Golf Club,1,72,,,64,4.228,0.999,-0.119,0.787,1.667,5.895,310.533,0.786,0.722,,,,,,0,8,10,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"An, Byeong Hun",14459,T9,4,Riyadh Golf Club,1,72,,,67,2.976,0.359,-2.017,-0.476,-2.134,0.842,306.139,0.429,0.667,,,,,,0,8,7,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,4,Riyadh Golf Club,1,72,,,72,0.244,-2.95,-1.724,0.272,-4.402,-4.158,320.785,0.714,0.778,,,,,,0,3,13,1,1
+liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,4,Riyadh Golf Club,1,72,,,71,-3.165,1.252,-0.481,-0.765,0.007,-3.158,344.533,0.429,0.778,,,,,,0,3,13,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,3,Riyadh Golf Club,1,72,,,67,0.892,-0.283,0.148,0.769,0.634,1.526,346.653,0.571,0.722,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,2,Riyadh Golf Club,1,72,,,73,-1.227,1.394,-2.664,-0.609,-1.878,-3.105,319.053,0.571,0.556,,,,,,0,1,15,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,1,Riyadh Golf Club,1,72,,,69,1.46,-0.177,-1.349,1.03,-0.495,0.965,333.243,0.714,0.833,,,,,,0,6,9,3,0
@@ -293,8 +294,8 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,3,Riyadh Golf Club
 liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,2,Riyadh Golf Club,1,72,,,67,0.797,-0.273,0.984,1.387,2.097,2.895,306.828,0.786,0.833,,,,,,0,5,13,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Surratt, Caleb",30463,T39,1,Riyadh Golf Club,1,72,,,71,-1.757,-0.116,0.477,0.361,0.722,-1.035,298.968,0.571,0.778,,,,,,0,3,13,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,4,Riyadh Golf Club,1,72,,,68,1.329,-1.039,0.344,-0.791,-1.487,-0.158,307.619,0.357,0.722,,,,,,1,5,9,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,1,Riyadh Golf Club,1,72,,,75,0.943,0.177,-4.146,-2.009,-5.978,-5.035,282.671,0.429,0.389,,,,,,0,2,12,3,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,3,Riyadh Golf Club,1,72,,,70,-1.837,2.166,-0.935,-0.867,0.363,-1.474,292.747,0.214,0.667,,,,,,0,2,16,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,2,Riyadh Golf Club,1,72,,,66,3.009,0.879,0.104,-0.097,0.886,3.895,297.635,0.286,0.722,,,,,,0,6,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,1,Riyadh Golf Club,1,72,,,75,-2.655,-0.91,-0.323,-1.148,-2.38,-5.035,289.674,0.286,0.833,,,,,,0,2,12,3,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Masaveu, Luis",30428,T37,4,Riyadh Golf Club,1,72,,,65,1.524,0.689,0.701,-0.072,1.318,2.842,322.454,0.429,0.833,,,,,,1,5,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Masaveu, Luis",30428,T37,3,Riyadh Golf Club,1,72,,,69,-2.936,0.314,3.794,-1.645,2.462,-0.474,325.628,0.429,0.833,,,,,,1,4,10,3,0
@@ -304,10 +305,12 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,4,Riyadh Golf Club
 liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,3,Riyadh Golf Club,1,72,,,68,-0.252,-0.049,-0.437,1.265,0.778,0.526,336.593,0.714,0.833,,,,,,0,5,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,2,Riyadh Golf Club,1,72,,,70,0.925,-0.855,0.81,-0.986,-1.031,-0.105,307.154,0.5,0.833,,,,,,0,5,10,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Canter, Laurie",14795,T37,1,Riyadh Golf Club,1,72,,,72,-2.747,-0.646,0.175,1.183,0.712,-2.035,306.988,0.643,0.889,,,,,,0,3,12,3,0
-liv,2026,2026,2026-02-07,Riyadh,54,"La Sasso, Michael",33755,T41,4,Riyadh Golf Club,1,72,,,71,-3.165,1.252,-0.481,-0.765,0.007,-3.158,344.533,0.429,0.778,,,,,,0,3,13,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,1,Riyadh Golf Club,1,72,,,75,0.943,0.177,-4.146,-2.009,-5.978,-5.035,282.671,0.429,0.389,,,,,,0,2,12,3,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Howell III, Charles",6892,T39,2,Riyadh Golf Club,1,72,,,66,3.009,0.879,0.104,-0.097,0.886,3.895,297.635,0.286,0.722,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,4,Riyadh Golf Club,1,72,,,69,-1.667,-0.474,0.119,0.864,0.509,-1.158,308.475,0.714,0.611,,,,,,1,3,12,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,2,Riyadh Golf Club,1,72,,,71,1.306,0.28,-2.653,-0.038,-2.411,-1.105,277.882,0.643,0.389,,,,,,0,3,13,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,3,Riyadh Golf Club,1,72,,,67,-0.34,-0.866,1.655,1.078,1.866,1.526,311.172,0.786,0.833,,,,,,1,4,12,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,1,Riyadh Golf Club,1,72,,,71,-1.939,1.22,2.26,-2.576,0.904,-1.035,285.806,0.357,0.611,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,4,Riyadh Golf Club,1,72,,,75,-3.292,1.09,-2.877,-2.078,-3.865,-7.158,320.526,0.429,0.5,,,,,,0,4,9,4,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,3,Riyadh Golf Club,1,72,,,68,1.365,-0.49,-1.009,0.659,-0.839,0.526,313.196,0.429,0.722,,,,,,0,4,14,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,3,Riyadh Golf Club,1,72,,,67,0.297,0.353,0.947,-0.071,1.229,1.526,328.833,0.429,0.778,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,2,Riyadh Golf Club,1,72,,,72,-0.011,-1.871,-1.319,1.095,-2.095,-2.105,305.053,0.714,0.667,,,,,,0,5,10,1,2
 liv,2026,2026,2026-02-07,Riyadh,54,"Hatton, Tyrrell",14796,47,1,Riyadh Golf Club,1,72,,,67,0.625,1.346,-0.595,1.588,2.34,2.965,318.396,0.714,0.667,,,,,,0,5,13,0,0
@@ -315,10 +318,10 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,4,Riyadh Golf Club,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,3,Riyadh Golf Club,1,72,,,68,-0.425,0.233,0.722,-0.003,0.952,0.526,326.887,0.357,0.722,,,,,,0,5,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,2,Riyadh Golf Club,1,72,,,74,-0.276,-0.952,-1.529,-1.349,-3.83,-4.105,320.261,0.5,0.556,,,,,,0,4,8,6,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schmidt, Ben",27258,T41,1,Riyadh Golf Club,1,72,,,70,-1.354,0.099,1.123,0.097,1.319,-0.035,317.26,0.286,0.833,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,3,Riyadh Golf Club,1,72,,,67,-0.34,-0.866,1.655,1.078,1.866,1.526,311.172,0.786,0.833,,,,,,1,4,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,4,Riyadh Golf Club,1,72,,,71,-0.604,-0.825,-0.48,-1.249,-2.554,-3.158,295.254,0.429,0.833,,,,,,0,3,13,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,3,Riyadh Golf Club,1,72,,,67,0.596,1.999,0.758,-1.827,0.93,1.526,318.707,0.5,0.611,,,,,,0,6,11,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,4,Riyadh Golf Club,1,72,,,69,-1.667,-0.474,0.119,0.864,0.509,-1.158,308.475,0.714,0.611,,,,,,1,3,12,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,2,Riyadh Golf Club,1,72,,,72,-1.49,-1.235,1.171,-0.552,-0.615,-2.105,284.483,0.571,0.778,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,1,Riyadh Golf Club,1,72,,,70,-0.118,0.494,0.34,-0.751,0.082,-0.035,307.626,0.286,0.778,,,,,,0,3,14,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,4,Riyadh Golf Club,1,72,,,68,1.547,0.435,-2.101,-0.039,-1.705,-0.158,294.613,0.571,0.722,,,,,,0,5,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,3,Riyadh Golf Club,1,72,,,70,1.647,-1.974,-0.672,-0.475,-3.121,-1.474,301.029,0.5,0.667,,,,,,1,3,12,1,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,2,Riyadh Golf Club,1,72,,,70,-1.218,-0.058,0.601,0.569,1.113,-0.105,289.526,0.714,0.722,,,,,,0,4,12,2,0
@@ -326,11 +329,9 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Poulter, Ian",1435,T41,1,Riyadh Golf Club,1,
 liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,4,Riyadh Golf Club,1,72,,,70,-1.813,-0.414,-0.415,0.484,-0.345,-2.158,322.946,0.571,0.889,,,,,,0,3,14,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,3,Riyadh Golf Club,1,72,,,70,-1.227,-0.718,0.49,-0.018,-0.247,-1.474,326.978,0.571,0.778,,,,,,0,5,10,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,2,Riyadh Golf Club,1,72,,,69,1.683,-0.676,-0.293,0.181,-0.788,0.895,255.446,0.643,0.778,,,,,,0,4,13,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Lee, Danny",11826,T41,1,Riyadh Golf Club,1,72,,,71,-1.939,1.22,2.26,-2.576,0.904,-1.035,285.806,0.357,0.611,,,,,,0,3,14,0,1
-liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,4,Riyadh Golf Club,1,72,,,67,-1.078,0.347,1.596,-0.022,1.92,0.842,321.238,0.286,0.667,,,,,,1,3,14,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,1,Riyadh Golf Club,1,72,,,70,-0.118,0.494,0.34,-0.751,0.082,-0.035,307.626,0.286,0.778,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Tringale, Cameron",14013,T41,3,Riyadh Golf Club,1,72,,,67,0.596,1.999,0.758,-1.827,0.93,1.526,318.707,0.5,0.611,,,,,,0,6,11,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,3,Riyadh Golf Club,1,72,,,69,0.534,0.489,-1.584,0.086,-1.008,-0.474,303.069,0.429,0.722,,,,,,0,5,11,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,2,Riyadh Golf Club,1,72,,,70,-0.416,0.702,-0.868,0.476,0.31,-0.105,290.654,0.643,0.611,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Minkyu",20780,T41,4,Riyadh Golf Club,1,72,,,67,-1.078,0.347,1.596,-0.022,1.92,0.842,321.238,0.286,0.667,,,,,,1,3,14,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,1,Riyadh Golf Club,1,72,,,69,0.788,0.206,0.661,-0.69,0.177,0.965,299.476,0.286,0.667,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,4,Riyadh Golf Club,1,72,,,68,1.244,-0.35,-1.878,0.826,-1.402,-0.158,333.626,0.714,0.778,,,,,,0,6,10,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,3,Riyadh Golf Club,1,72,,,70,-0.221,-0.557,-0.454,-0.242,-1.253,-1.474,338.364,0.429,0.667,,,,,,0,4,12,2,0
@@ -339,42 +340,269 @@ liv,2026,2026,2026-02-07,Riyadh,54,"Meronk, Adrian",14196,T27,1,Riyadh Golf Club
 liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,4,Riyadh Golf Club,1,72,,,66,-1.498,-0.456,3.426,0.371,3.34,1.842,343.946,0.357,1.0,,,,,,0,6,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,3,Riyadh Golf Club,1,72,,,66,0.483,0.706,1.052,0.285,2.043,2.526,332.321,0.357,0.833,,,,,,0,6,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,2,Riyadh Golf Club,1,72,,,73,-2.443,-0.943,-0.154,0.434,-0.663,-3.105,296.431,0.357,0.833,,,,,,0,3,11,4,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,1,Riyadh Golf Club,1,72,,,71,-2.181,0.217,0.222,0.707,1.146,-1.035,307.265,0.357,0.778,,,,,,1,0,16,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,4,Riyadh Golf Club,1,72,,,70,-0.766,-0.609,-0.618,-0.165,-1.392,-2.158,272.535,0.643,0.667,,,,,,0,4,12,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,1,Riyadh Golf Club,1,72,,,67,1.053,1.887,-0.081,0.106,1.912,2.965,298.847,0.5,0.778,,,,,,0,5,13,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,3,Riyadh Golf Club,1,72,,,68,2.179,-0.215,-1.45,0.012,-1.653,0.526,302.803,0.571,0.611,,,,,,0,5,12,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,1,Riyadh Golf Club,1,72,,,72,0.496,0.251,-2.241,-0.542,-2.531,-2.035,302.833,0.286,0.778,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,1,Riyadh Golf Club,1,72,,,67,1.053,1.887,-0.081,0.106,1.912,2.965,298.847,0.5,0.778,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,2,Riyadh Golf Club,1,72,,,66,2.541,-0.306,1.447,0.212,1.354,3.895,294.61,0.571,0.889,,,,,,0,6,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,4,Riyadh Golf Club,1,72,,,69,0.267,-0.123,-0.787,-0.515,-1.424,-1.158,299.242,0.5,0.778,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,3,Riyadh Golf Club,1,72,,,68,1.192,0.366,-0.278,-0.753,-0.666,0.526,322.753,0.5,0.667,,,,,,0,7,8,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,2,Riyadh Golf Club,1,72,,,68,0.248,-1.604,3.149,0.102,1.647,1.895,309.919,0.5,0.944,,,,,,0,4,14,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Leishman, Marc",7649,T22,1,Riyadh Golf Club,1,72,,,70,-1.319,0.454,1.149,-0.319,1.284,-0.035,314.003,0.5,0.778,,,,,,0,5,10,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,4,Riyadh Golf Club,1,72,,,66,-0.399,-0.156,2.324,0.073,2.241,1.842,306.318,0.571,0.722,,,,,,0,7,10,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,3,Riyadh Golf Club,1,72,,,69,-1.042,-0.223,0.699,0.091,0.568,-0.474,310.597,0.571,0.778,,,,,,0,3,15,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Lahiri, Anirban",12669,T30,2,Riyadh Golf Club,1,72,,,70,-0.416,0.702,-0.868,0.476,0.31,-0.105,290.654,0.643,0.611,,,,,,0,5,10,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,2,Riyadh Golf Club,1,72,,,72,-1.076,1.215,0.233,-2.477,-1.029,-2.105,281.931,0.357,0.722,,,,,,0,2,15,0,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Kim, Anthony",11641,T22,1,Riyadh Golf Club,1,72,,,68,0.837,-0.08,1.773,-0.565,1.128,1.965,298.931,0.429,0.833,,,,,,0,6,10,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,2,Riyadh Golf Club,1,72,,,66,2.541,-0.306,1.447,0.212,1.354,3.895,294.61,0.571,0.889,,,,,,0,6,12,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Kokrak, Jason",12337,T22,3,Riyadh Golf Club,1,72,,,68,1.365,-0.49,-1.009,0.659,-0.839,0.526,313.196,0.429,0.722,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"McDowell, Graeme",7548,T27,1,Riyadh Golf Club,1,72,,,72,0.496,0.251,-2.241,-0.542,-2.531,-2.035,302.833,0.286,0.778,,,,,,0,3,12,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,2,Riyadh Golf Club,1,72,,,71,-0.358,-0.049,0.312,-1.011,-0.748,-1.105,305.4,0.429,0.778,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-07,Riyadh,54,"Ballester, Jose Luis",28473,T27,1,Riyadh Golf Club,1,72,,,71,-2.181,0.217,0.222,0.707,1.146,-1.035,307.265,0.357,0.778,,,,,,1,0,16,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,4,Riyadh Golf Club,1,72,,,69,-0.857,0.249,-0.854,0.304,-0.301,-1.158,317.61,0.714,0.833,,,,,,0,4,13,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,4,Riyadh Golf Club,1,72,,,67,-0.77,-0.427,1.704,0.334,1.612,0.842,335.881,0.5,0.833,,,,,,1,4,12,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,3,Riyadh Golf Club,1,72,,,71,-2.853,0.437,0.439,-0.497,0.38,-2.474,321.942,0.5,0.778,,,,,,0,2,15,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,2,Riyadh Golf Club,1,72,,,71,-0.808,-0.693,-0.014,0.41,-0.297,-1.105,317.275,0.643,0.667,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,3,Riyadh Golf Club,1,72,,,70,-0.38,-0.733,-0.425,0.064,-1.094,-1.474,304.631,0.571,0.778,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,4,Riyadh Golf Club,1,72,,,67,-0.77,-0.427,1.704,0.334,1.612,0.842,335.881,0.5,0.833,,,,,,1,4,12,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,1,Riyadh Golf Club,1,72,,,68,-1.698,0.202,2.223,1.238,3.663,1.965,320.486,0.643,0.889,,,,,,0,7,8,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,4,Riyadh Golf Club,1,72,,,71,-0.466,0.51,-2.29,-0.912,-2.692,-3.158,308.865,0.571,0.722,,,,,,0,5,10,2,1
 liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,3,Riyadh Golf Club,1,72,,,70,-2.165,-1.101,1.412,0.381,0.692,-1.474,329.982,0.5,0.889,,,,,,0,4,12,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,2,Riyadh Golf Club,1,72,,,68,0.786,0.086,0.76,0.262,1.109,1.895,296.161,0.571,0.722,,,,,,0,4,14,0,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,1,Riyadh Golf Club,1,72,,,68,-1.31,-0.037,2.814,0.497,3.275,1.965,304.179,0.571,0.944,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Varner III, Harold",16602,T30,3,Riyadh Golf Club,1,72,,,71,-2.853,0.437,0.439,-0.497,0.38,-2.474,321.942,0.5,0.778,,,,,,0,2,15,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,4,Riyadh Golf Club,1,72,,,69,0.739,-1.285,-0.516,-0.096,-1.897,-1.158,304.276,0.429,0.722,,,,,,0,4,13,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Oosthuizen, Louis",7672,T30,3,Riyadh Golf Club,1,72,,,70,-0.38,-0.733,-0.425,0.064,-1.094,-1.474,304.631,0.571,0.778,,,,,,0,3,14,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,3,Riyadh Golf Club,1,72,,,68,-1.609,-0.929,2.729,0.335,2.135,0.526,340.831,0.5,0.778,,,,,,0,5,12,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,1,Riyadh Golf Club,1,72,,,70,0.899,0.367,-1.496,0.196,-0.934,-0.035,316.408,0.5,0.722,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,2,Riyadh Golf Club,1,72,,,70,0.82,-0.952,-0.312,0.338,-0.926,-0.105,321.956,0.5,0.556,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Garcia, Sergio",5689,T30,1,Riyadh Golf Club,1,72,,,68,-1.31,-0.037,2.814,0.497,3.275,1.965,304.179,0.571,0.944,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,2,Riyadh Golf Club,1,72,,,67,3.421,0.293,-0.481,-0.338,-0.526,2.895,271.318,0.429,0.667,,,,,,0,5,13,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,4,Riyadh Golf Club,1,72,,,69,-2.718,-0.553,2.173,-0.06,1.56,-1.158,306.153,0.357,0.833,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,3,Riyadh Golf Club,1,72,,,66,1.852,0.031,0.256,0.388,0.674,2.526,309.061,0.571,0.889,,,,,,0,6,12,0,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,2,Riyadh Golf Club,1,72,,,73,-2.178,0.252,-1.703,0.524,-0.927,-3.105,290.471,0.786,0.667,,,,,,0,2,13,3,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Song, Younghan",16160,T30,1,Riyadh Golf Club,1,72,,,69,1.613,0.71,-0.141,-1.217,-0.648,0.965,275.536,0.357,0.778,,,,,,0,4,13,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,4,Riyadh Golf Club,1,72,,,67,2.673,-0.392,-1.877,0.438,-1.831,0.842,313.533,0.643,0.667,,,,,,0,7,9,2,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,3,Riyadh Golf Club,1,72,,,71,-2.144,0.411,-0.567,-0.173,-0.329,-2.474,285.842,0.571,0.778,,,,,,0,2,15,1,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,2,Riyadh Golf Club,1,72,,,67,3.421,0.293,-0.481,-0.338,-0.526,2.895,271.318,0.429,0.667,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,1,Riyadh Golf Club,1,72,,,70,0.899,0.367,-1.496,0.196,-0.934,-0.035,316.408,0.5,0.722,,,,,,0,3,14,1,0
 liv,2026,2026,2026-02-07,Riyadh,54,"Campbell, Ben",14373,T30,1,Riyadh Golf Club,1,72,,,72,-1.824,0.425,0.016,-0.652,-0.211,-2.035,291.096,0.429,0.778,,,,,,0,2,14,2,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Schwartzel, Charl",7398,T30,2,Riyadh Golf Club,1,72,,,70,0.82,-0.952,-0.312,0.338,-0.926,-0.105,321.956,0.5,0.556,,,,,,0,5,10,3,0
-liv,2026,2026,2026-02-07,Riyadh,54,"Tabuena, Miguel",15274,T48,2,Riyadh Golf Club,1,72,,,71,0.514,0.01,-1.805,0.175,-1.62,-1.105,282.49,0.5,0.556,,,,,,1,2,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Garcia, Sergio",5689,T37,2,The Grange Golf Club,1,72,,,72,-2.976,-2.285,1.504,0.791,0.011,-2.965,290.932,0.714,0.722,,,,,,1,2,10,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Garcia, Sergio",5689,T37,1,The Grange Golf Club,1,72,,,71,1.078,0.447,-0.487,-0.792,-0.832,0.246,286.046,0.5,0.667,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Oosthuizen, Louis",7672,T37,4,The Grange Golf Club,1,72,,,68,3.046,-0.195,0.535,-1.614,-1.274,1.772,285.7,0.571,0.667,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Oosthuizen, Louis",7672,T37,3,The Grange Golf Club,1,72,,,69,-0.224,0.774,-0.159,-0.303,0.312,0.088,260.004,0.714,0.667,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Watson, Bubba",7334,T37,3,The Grange Golf Club,1,72,,,71,1.301,-1.434,-1.28,-0.5,-3.213,-1.912,303.826,0.429,0.556,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Oosthuizen, Louis",7672,T37,1,The Grange Golf Club,1,72,,,76,-2.452,-0.948,-1.602,0.248,-2.303,-4.754,289.147,0.643,0.611,,,,,,0,1,12,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Watson, Bubba",7334,T37,1,The Grange Golf Club,1,72,,,72,-1.092,-0.528,1.876,-1.01,0.338,-0.754,294.481,0.643,0.778,,,,,,0,2,14,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Watson, Bubba",7334,T37,2,The Grange Golf Club,1,72,,,73,-0.72,-2.548,-0.86,0.163,-3.245,-3.965,363.957,0.571,0.556,,,,,,0,2,13,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Watson, Bubba",7334,T37,4,The Grange Golf Club,1,72,,,66,1.72,0.069,1.54,0.444,2.052,3.772,295.022,0.714,0.944,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Oosthuizen, Louis",7672,T37,2,The Grange Golf Club,1,72,,,69,-1.019,1.145,-0.654,0.563,1.054,0.035,300.337,0.643,0.667,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Garcia, Sergio",5689,T37,3,The Grange Golf Club,1,72,,,70,-3.962,-1.246,4.639,-0.345,3.049,-0.912,295.062,0.643,0.778,,,,,,1,3,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ormsby, Wade",7532,T37,4,The Grange Golf Club,1,72,,,71,0.732,-0.372,-1.851,0.263,-1.96,-1.228,284.551,0.786,0.611,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Richard",12413,T37,1,The Grange Golf Club,1,72,,,73,0.138,-2.392,-0.432,0.932,-1.892,-1.754,288.61,0.714,0.667,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Richard",12413,T37,2,The Grange Golf Club,1,72,,,67,0.575,0.938,0.62,-0.097,1.46,2.035,316.071,0.5,0.667,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Richard",12413,T37,3,The Grange Golf Club,1,72,,,74,-3.568,-0.844,-0.605,0.105,-1.344,-4.912,294.774,0.5,0.722,,,,,,0,1,14,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Richard",12413,T37,4,The Grange Golf Club,1,72,,,68,3.7,-3.166,0.61,0.627,-1.928,1.772,293.246,0.643,0.778,,,,,,0,6,11,0,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Ormsby, Wade",7532,T37,1,The Grange Golf Club,1,72,,,73,0.611,-0.64,-2.22,0.494,-2.365,-1.754,285.565,0.643,0.444,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ormsby, Wade",7532,T37,2,The Grange Golf Club,1,72,,,67,0.013,-0.346,2.674,-0.306,2.022,2.035,275.653,0.786,0.833,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ormsby, Wade",7532,T37,3,The Grange Golf Club,1,72,,,71,-0.8,-1.885,-0.278,1.05,-1.112,-1.912,281.778,0.857,0.722,,,,,,0,3,14,0,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Ortiz, Carlos",14735,T42,1,The Grange Golf Club,1,72,,,75,-1.475,0.199,-3.115,0.637,-2.28,-3.754,289.404,0.429,0.611,,,,,,0,1,14,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Ortiz, Carlos",14735,T42,4,The Grange Golf Club,1,72,,,68,-2.602,0.139,2.134,2.101,4.374,1.772,310.632,0.786,0.889,,,,,,1,4,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Danny",11826,T32,4,The Grange Golf Club,1,72,,,73,-2.134,-0.452,-0.219,-0.422,-1.094,-3.228,305.394,0.5,0.722,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ortiz, Carlos",14735,T42,2,The Grange Golf Club,1,72,,,68,-1.243,-0.269,1.493,1.055,2.278,1.035,324.276,0.714,0.778,,,,,,1,4,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ortiz, Carlos",14735,T42,3,The Grange Golf Club,1,72,,,72,-3.2,0.356,0.387,-0.455,0.287,-2.912,298.135,0.571,0.778,,,,,,1,1,14,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Garcia, Sergio",5689,T37,4,The Grange Golf Club,1,72,,,69,-1.956,0.843,0.687,1.198,2.728,0.772,284.522,0.786,0.833,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Danny",11826,T32,3,The Grange Golf Club,1,72,,,65,1.828,1.027,2.021,-0.789,2.259,4.088,291.011,0.286,0.889,,,,,,0,9,7,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Detry, Thomas",14181,31,2,The Grange Golf Club,1,72,,,67,0.406,-0.189,-0.339,-0.844,-1.371,2.035,281.571,0.429,0.667,,,,,,1,5,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Danny",11826,T32,1,The Grange Golf Club,1,72,,,75,0.18,-0.719,-1.556,-1.66,-3.935,-3.754,245.986,0.429,0.667,,,,,,0,4,10,2,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Perez, Victor",20730,T27,1,The Grange Golf Club,1,72,,,70,0.576,1.713,-1.915,-0.128,-0.33,1.246,265.861,0.5,0.667,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Meronk, Adrian",14196,T42,1,The Grange Golf Club,1,72,,,75,-3.295,1.276,-2.393,0.657,-0.459,-3.754,304.178,0.714,0.722,,,,,,0,0,15,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smylie, Elvis",24200,T27,4,The Grange Golf Club,1,72,,,69,-0.639,0.579,0.28,0.552,1.411,0.772,316.133,0.571,0.722,,,,,,0,7,7,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Perez, Victor",20730,T27,2,The Grange Golf Club,1,72,,,70,3.674,-1.309,-1.56,0.23,-2.638,-0.965,299.108,0.643,0.611,,,,,,0,6,8,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Perez, Victor",20730,T27,3,The Grange Golf Club,1,72,,,70,0.338,-0.784,-0.261,-0.204,-1.25,-0.912,276.242,0.571,0.556,,,,,,0,5,11,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Perez, Victor",20730,T27,4,The Grange Golf Club,1,72,,,69,1.291,2.623,-2.083,-1.06,-0.519,0.772,286.913,0.643,0.444,,,,,,1,4,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Detry, Thomas",14181,31,1,The Grange Golf Club,1,72,,,71,1.068,-1.165,-0.038,1.381,0.177,0.246,287.889,0.643,0.667,,,,,,0,5,9,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Detry, Thomas",14181,31,3,The Grange Golf Club,1,72,,,68,-0.417,-2.674,0.519,1.66,-0.495,1.088,303.754,0.714,0.833,,,,,,0,6,11,0,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Detry, Thomas",14181,31,4,The Grange Golf Club,1,72,,,74,-1.507,1.011,-0.616,1.884,2.279,-4.228,315.844,0.786,0.667,,,,,,0,3,10,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Minkyu",20780,T32,1,The Grange Golf Club,1,72,,,73,1.531,-0.779,-0.387,-2.119,-3.285,-1.754,277.093,0.357,0.444,,,,,,0,5,7,6,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Minkyu",20780,T32,2,The Grange Golf Club,1,72,,,69,1.76,-0.705,-0.624,-0.396,-1.725,0.035,294.585,0.643,0.611,,,,,,0,6,10,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Minkyu",20780,T32,3,The Grange Golf Club,1,72,,,69,-2.381,1.53,0.493,0.446,2.469,0.088,293.121,0.643,0.722,,,,,,1,5,8,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Minkyu",20780,T32,4,The Grange Golf Club,1,72,,,70,0.897,0.589,-2.18,0.465,-1.125,-0.228,294.942,0.571,0.5,,,,,,0,7,6,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"La Sasso, Michael",33755,T32,1,The Grange Golf Club,1,72,,,73,-0.215,-2.045,0.803,-0.296,-1.539,-1.754,284.767,0.357,0.611,,,,,,0,2,13,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"La Sasso, Michael",33755,T32,2,The Grange Golf Club,1,72,,,71,-3.132,1.291,-0.355,0.23,1.167,-1.965,286.444,0.643,0.833,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"La Sasso, Michael",33755,T32,3,The Grange Golf Club,1,72,,,71,-0.996,-0.369,0.8,-1.347,-0.917,-1.912,295.033,0.357,0.667,,,,,,0,6,8,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"La Sasso, Michael",33755,T32,4,The Grange Golf Club,1,72,,,66,2.126,1.336,-0.121,0.43,1.646,3.772,304.956,0.429,0.778,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ballester, Jose Luis",28473,T32,1,The Grange Golf Club,1,72,,,69,-0.281,1.209,-0.776,2.094,2.526,2.246,315.456,0.571,0.778,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ballester, Jose Luis",28473,T32,2,The Grange Golf Club,1,72,,,72,-2.002,-0.473,0.893,-1.382,-0.963,-2.965,324.194,0.357,0.611,,,,,,0,5,8,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ballester, Jose Luis",28473,T32,3,The Grange Golf Club,1,72,,,70,-1.359,-0.647,0.164,0.929,0.447,-0.912,301.425,0.5,0.667,,,,,,0,5,11,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Ballester, Jose Luis",28473,T32,4,The Grange Golf Club,1,72,,,70,-1.129,-1.097,0.27,1.728,0.901,-0.228,333.868,0.571,0.667,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Howell III, Charles",6892,T32,1,The Grange Golf Club,1,72,,,70,2.833,-0.629,-1.259,0.301,-1.587,1.246,263.672,0.429,0.778,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Howell III, Charles",6892,T32,2,The Grange Golf Club,1,72,,,69,-0.709,-1.082,1.184,0.643,0.744,0.035,295.572,0.714,0.889,,,,,,0,3,15,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Howell III, Charles",6892,T32,3,The Grange Golf Club,1,72,,,72,-0.437,0.675,-1.937,-1.213,-2.475,-2.912,293.462,0.429,0.667,,,,,,0,5,9,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Howell III, Charles",6892,T32,4,The Grange Golf Club,1,72,,,70,1.111,0.335,-1.32,-0.354,-1.339,-0.228,307.596,0.5,0.667,,,,,,0,4,13,0,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Lee, Danny",11826,T32,2,The Grange Golf Club,1,72,,,68,-0.734,5.286,-0.786,-2.731,1.769,1.035,288.488,0.5,0.5,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Meronk, Adrian",14196,T42,2,The Grange Golf Club,1,72,,,69,-0.169,0.121,1.108,-1.024,0.204,0.035,291.433,0.429,0.833,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hellgren, Bjorn",16231,T54,4,The Grange Golf Club,1,72,,,76,-1.354,-3.374,-1.191,-0.309,-4.874,-6.228,284.476,0.571,0.611,,,,,,0,1,13,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Meronk, Adrian",14196,T42,4,The Grange Golf Club,1,72,,,71,-0.414,-0.577,1.322,-1.559,-0.815,-1.228,318.542,0.357,0.611,,,,,,0,5,9,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Puig, David",28984,T51,2,The Grange Golf Club,1,72,,,68,-1.407,-0.609,1.827,1.223,2.442,1.035,342.35,0.643,0.778,,,,,,1,3,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Puig, David",28984,T51,3,The Grange Golf Club,1,72,,,69,-1.474,0.032,0.703,0.827,1.562,0.088,328.553,0.571,0.778,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Puig, David",28984,T51,4,The Grange Golf Club,1,72,,,74,1.437,-1.876,-3.314,-0.475,-5.665,-4.228,316.893,0.714,0.389,,,,,,0,4,10,2,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Catlin, John",18524,T51,1,The Grange Golf Club,1,72,,,69,-0.118,0.933,0.16,1.271,2.364,2.246,287.601,0.714,0.667,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Catlin, John",18524,T51,2,The Grange Golf Club,1,72,,,70,1.151,-1.195,-1.035,0.114,-2.116,-0.965,301.993,0.5,0.722,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Catlin, John",18524,T51,3,The Grange Golf Club,1,72,,,74,-1.903,-1.4,-2.566,0.957,-3.009,-4.912,289.685,0.714,0.5,,,,,,0,4,8,6,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Catlin, John",18524,T51,4,The Grange Golf Club,1,72,,,73,-0.485,-0.485,-2.527,0.27,-2.743,-3.228,298.936,0.571,0.444,,,,,,1,1,12,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Canter, Laurie",14795,53,1,The Grange Golf Club,1,72,,,72,1.197,-0.4,-2.681,1.129,-1.952,-0.754,265.967,0.714,0.667,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Canter, Laurie",14795,53,2,The Grange Golf Club,1,72,,,67,0.015,0.119,-0.492,2.393,2.02,2.035,314.719,0.929,0.778,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Canter, Laurie",14795,53,3,The Grange Golf Club,1,72,,,79,-3.353,-2.312,-3.935,-0.313,-6.56,-9.912,293.656,0.571,0.222,,,,,,0,0,12,5,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Canter, Laurie",14795,53,4,The Grange Golf Club,1,72,,,70,0.727,-1.299,1.894,-1.55,-0.955,-0.228,297.558,0.643,0.778,,,,,,0,6,8,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hellgren, Bjorn",16231,T54,1,The Grange Golf Club,1,72,,,70,-0.205,0.074,1.406,-0.03,1.451,1.246,290.271,0.5,0.722,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hellgren, Bjorn",16231,T54,2,The Grange Golf Club,1,72,,,73,-2.531,1.918,-3.801,0.449,-1.434,-3.965,295.515,0.714,0.611,,,,,,0,5,8,4,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Hellgren, Bjorn",16231,T54,3,The Grange Golf Club,1,72,,,71,-0.346,0.213,-1.672,-0.108,-1.567,-1.912,279.797,0.643,0.611,,,,,,0,2,15,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Casey, Paul",7108,T54,1,The Grange Golf Club,1,72,,,70,0.741,-0.426,1.272,-0.341,0.505,1.246,276.711,0.643,0.667,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Casey, Paul",7108,T54,2,The Grange Golf Club,1,72,,,75,-1.955,-0.273,-3.101,-0.635,-4.01,-5.965,302.914,0.571,0.444,,,,,,0,4,8,5,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Casey, Paul",7108,T54,3,The Grange Golf Club,1,72,,,73,-3.432,-0.937,0.635,-0.179,-0.481,-3.912,287.976,0.429,0.778,,,,,,0,3,12,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Casey, Paul",7108,T54,4,The Grange Golf Club,1,72,,,72,0.334,-0.259,0.99,-3.293,-2.562,-2.228,315.017,0.5,0.778,,,,,,0,4,11,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Horsfield, Sam",19866,56,1,The Grange Golf Club,1,72,,,76,-0.602,1.008,-1.573,-3.587,-4.152,-4.754,284.843,0.286,0.389,,,,,,0,4,8,4,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Horsfield, Sam",19866,56,2,The Grange Golf Club,1,72,,,74,-1.153,0.743,-1.427,-3.128,-3.812,-4.965,284.547,0.286,0.556,,,,,,0,2,12,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Horsfield, Sam",19866,56,3,The Grange Golf Club,1,72,,,68,-1.097,0.194,2.979,-0.988,2.185,1.088,276.647,0.429,0.944,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Horsfield, Sam",19866,56,4,The Grange Golf Club,1,72,,,73,-2.089,-0.543,-0.985,0.389,-1.139,-3.228,298.478,0.571,0.833,,,,,,0,1,15,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tringale, Cameron",14013,57,1,The Grange Golf Club,1,72,,,75,-0.432,-1.737,-0.366,-1.22,-3.323,-3.754,266.492,0.571,0.5,,,,,,0,3,9,6,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smylie, Elvis",24200,T27,3,The Grange Golf Club,1,72,,,69,1.74,-0.203,0.718,-2.167,-1.653,0.088,297.435,0.5,0.611,,,,,,0,7,7,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tringale, Cameron",14013,57,2,The Grange Golf Club,1,72,,,72,-1.29,-0.946,0.243,-0.971,-1.674,-2.965,295.621,0.643,0.833,,,,,,0,2,14,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Puig, David",28984,T51,1,The Grange Golf Club,1,72,,,75,-1.691,-0.735,-1.956,0.627,-2.063,-3.754,301.333,0.429,0.444,,,,,,0,2,12,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Meronk, Adrian",14196,T42,3,The Grange Golf Club,1,72,,,68,-1.902,-0.021,0.69,2.321,2.99,1.088,289.36,0.643,0.778,,,,,,1,6,8,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Lahiri, Anirban",12669,50,4,The Grange Golf Club,1,72,,,72,-1.5,0.025,-0.824,0.071,-0.728,-2.228,301.387,0.571,0.611,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lahiri, Anirban",12669,50,2,The Grange Golf Club,1,72,,,71,-0.439,-0.136,-2.455,1.066,-1.526,-1.965,303.24,0.786,0.611,,,,,,0,6,7,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Varner III, Harold",16602,T44,1,The Grange Golf Club,1,72,,,72,0.468,0.816,-1.538,-0.499,-1.222,-0.754,300.553,0.286,0.611,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Varner III, Harold",16602,T44,2,The Grange Golf Club,1,72,,,74,-4.134,-1.736,0.081,0.824,-0.831,-4.965,312.614,0.5,0.778,,,,,,0,1,14,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Varner III, Harold",16602,T44,3,The Grange Golf Club,1,72,,,68,-1.815,-0.218,0.58,2.541,2.903,1.088,289.41,0.571,0.833,,,,,,1,4,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Varner III, Harold",16602,T44,4,The Grange Golf Club,1,72,,,70,-0.459,-0.563,-0.272,1.066,0.231,-0.228,297.674,0.5,0.722,,,,,,0,6,9,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Song, Younghan",16160,T44,1,The Grange Golf Club,1,72,,,76,-4.795,0.25,-0.636,0.426,0.041,-4.754,274.147,0.714,0.667,,,,,,0,3,9,5,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Song, Younghan",16160,T44,2,The Grange Golf Club,1,72,,,67,1.2,0.588,0.986,-0.74,0.835,2.035,304.799,0.571,0.667,,,,,,1,5,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Song, Younghan",16160,T44,3,The Grange Golf Club,1,72,,,68,1.941,-1.769,-0.094,1.009,-0.854,1.088,277.586,0.714,0.778,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Song, Younghan",16160,T44,4,The Grange Golf Club,1,72,,,73,-0.518,-1.399,0.617,-1.928,-2.71,-3.228,292.992,0.5,0.667,,,,,,0,3,12,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Schmidt, Ben",27258,T44,1,The Grange Golf Club,1,72,,,70,1.924,-1.422,1.116,-0.373,-0.679,1.246,273.514,0.5,0.611,,,,,,0,6,8,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Schmidt, Ben",27258,T44,2,The Grange Golf Club,1,72,,,70,-0.931,-0.749,2.07,-1.355,-0.034,-0.965,296.021,0.429,0.833,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Schmidt, Ben",27258,T44,3,The Grange Golf Club,1,72,,,73,0.07,-2.92,0.415,-1.477,-3.982,-3.912,266.736,0.5,0.722,,,,,,0,4,10,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Schmidt, Ben",27258,T44,4,The Grange Golf Club,1,72,,,71,-1.206,0.124,-0.056,-0.089,-0.022,-1.228,307.915,0.571,0.556,,,,,,1,4,8,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Masaveu, Luis",30428,T44,1,The Grange Golf Club,1,72,,,74,-0.841,-0.676,0.008,-1.245,-1.913,-2.754,289.661,0.357,0.5,,,,,,0,3,11,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Masaveu, Luis",30428,T44,2,The Grange Golf Club,1,72,,,69,0.395,0.588,-2.211,1.263,-0.36,0.035,322.017,0.714,0.722,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Masaveu, Luis",30428,T44,3,The Grange Golf Club,1,72,,,75,-0.617,0.998,-1.542,-4.751,-5.295,-5.912,310.361,0.429,0.5,,,,,,0,3,11,2,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Masaveu, Luis",30428,T44,4,The Grange Golf Club,1,72,,,66,2.521,-0.535,1.655,0.131,1.251,3.772,307.517,0.571,0.778,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McKibbin, Tom",22322,T44,1,The Grange Golf Club,1,72,,,74,-3.226,-1.568,1.926,0.114,0.472,-2.754,286.393,0.571,0.722,,,,,,0,1,15,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"McKibbin, Tom",22322,T44,2,The Grange Golf Club,1,72,,,68,-0.674,1.118,-0.81,1.402,1.709,1.035,323.225,0.786,0.778,,,,,,1,3,13,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McKibbin, Tom",22322,T44,3,The Grange Golf Club,1,72,,,69,-1.239,1.018,-0.334,0.643,1.327,0.088,292.333,0.643,0.722,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McKibbin, Tom",22322,T44,4,The Grange Golf Club,1,72,,,73,-1.63,-0.933,-0.892,0.226,-1.598,-3.228,297.699,0.5,0.611,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tabuena, Miguel",15274,T44,1,The Grange Golf Club,1,72,,,69,1.7,0.344,1.269,-1.067,0.546,2.246,289.165,0.5,0.611,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tabuena, Miguel",15274,T44,2,The Grange Golf Club,1,72,,,71,-1.629,-0.022,-0.757,0.443,-0.336,-1.965,283.403,0.786,0.667,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tabuena, Miguel",15274,T44,3,The Grange Golf Club,1,72,,,71,1.031,-0.31,-2.582,-0.051,-2.943,-1.912,270.658,0.571,0.667,,,,,,0,5,9,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tabuena, Miguel",15274,T44,4,The Grange Golf Club,1,72,,,73,-4.08,1.925,-2.055,0.982,0.852,-3.228,293.164,0.786,0.611,,,,,,1,3,10,2,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Lahiri, Anirban",12669,50,1,The Grange Golf Club,1,72,,,77,-2.26,-0.642,-2.788,-0.064,-3.495,-5.754,277.744,0.643,0.556,,,,,,0,0,13,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Lahiri, Anirban",12669,50,3,The Grange Golf Club,1,72,,,65,0.164,4.125,-0.868,0.667,3.924,4.088,282.028,0.643,0.722,,,,,,0,8,9,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smylie, Elvis",24200,T27,2,The Grange Golf Club,1,72,,,70,-1.009,0.695,-1.592,0.941,0.044,-0.965,327.057,0.714,0.778,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Uihlein, Peter",11357,T3,4,The Grange Golf Club,1,72,,,68,1.884,0.598,0.379,-1.089,-0.112,1.772,304.983,0.429,0.722,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Poulter, Ian",1435,T27,4,The Grange Golf Club,1,72,,,71,1.856,0.94,-1.07,-2.954,-3.084,-1.228,266.421,0.429,0.5,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Leishman, Marc",7649,T8,2,The Grange Golf Club,1,72,,,72,-1.278,0.008,-1.629,-0.066,-1.687,-2.965,284.371,0.5,0.556,,,,,,0,4,10,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Leishman, Marc",7649,T8,3,The Grange Golf Club,1,72,,,70,-0.207,0.819,0.035,-1.56,-0.706,-0.912,295.356,0.429,0.556,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Leishman, Marc",7649,T8,4,The Grange Golf Club,1,72,,,65,2.362,-0.181,0.959,1.632,2.41,4.772,299.333,0.786,0.833,,,,,,0,7,11,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Grace, Branden",11952,T8,1,The Grange Golf Club,1,72,,,71,-0.841,0.477,0.952,-0.343,1.087,0.246,283.154,0.643,0.667,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Grace, Branden",11952,T8,2,The Grange Golf Club,1,72,,,64,2.152,-0.213,2.899,0.197,2.883,5.035,305.143,0.786,0.778,,,,,,0,8,10,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Grace, Branden",11952,T8,3,The Grange Golf Club,1,72,,,69,-1.95,0.103,1.064,0.872,2.038,0.088,266.607,0.714,0.833,,,,,,1,2,14,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Grace, Branden",11952,T8,4,The Grange Golf Club,1,72,,,69,0.097,0.35,0.216,0.108,0.674,0.772,265.339,0.643,0.722,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smith, Cameron",15856,T8,1,The Grange Golf Club,1,72,,,72,-0.083,-0.705,-1.39,1.424,-0.672,-0.754,271.621,0.714,0.5,,,,,,0,4,10,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smith, Cameron",15856,T8,2,The Grange Golf Club,1,72,,,67,1.015,1.053,0.419,-0.452,1.02,2.035,307.062,0.5,0.722,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smith, Cameron",15856,T8,3,The Grange Golf Club,1,72,,,64,2.754,3.207,-0.83,-0.044,2.334,5.088,280.507,0.643,0.667,,,,,,0,8,10,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Smith, Cameron",15856,T8,4,The Grange Golf Club,1,72,,,70,2.165,-1.014,-1.21,-0.169,-2.393,-0.228,283.251,0.5,0.444,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Leishman, Marc",7649,T8,1,The Grange Golf Club,1,72,,,66,2.137,1.413,1.348,0.349,3.109,5.246,279.161,0.571,0.778,,,,,,0,6,12,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Munoz, Sebastian",20770,T8,1,The Grange Golf Club,1,72,,,69,1.257,0.61,0.578,-0.2,0.988,2.246,288.185,0.571,0.722,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Munoz, Sebastian",20770,T8,3,The Grange Golf Club,1,72,,,69,-0.564,-0.966,0.569,1.048,0.651,0.088,275.121,0.857,0.778,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Munoz, Sebastian",20770,T8,4,The Grange Golf Club,1,72,,,68,1.697,1.234,-0.792,-0.366,0.075,1.772,290.201,0.643,0.778,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ancer, Abraham",18238,T12,1,The Grange Golf Club,1,72,,,68,2.625,1.905,-1.643,0.358,0.621,3.246,269.365,0.571,0.611,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ancer, Abraham",18238,T12,2,The Grange Golf Club,1,72,,,70,-0.122,0.302,-1.277,0.132,-0.843,-0.965,300.333,0.571,0.667,,,,,,0,5,10,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ancer, Abraham",18238,T12,3,The Grange Golf Club,1,72,,,69,-0.791,0.315,-0.92,1.484,0.879,0.088,281.914,0.786,0.667,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Ancer, Abraham",18238,T12,4,The Grange Golf Club,1,72,,,67,2.639,0.717,-0.562,-0.022,0.133,2.772,286.994,0.643,0.611,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Niemann, Joaquin",18079,T12,1,The Grange Golf Club,1,72,,,68,-0.017,0.008,0.702,2.553,3.262,3.246,281.238,0.786,0.778,,,,,,1,5,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Niemann, Joaquin",18079,T12,2,The Grange Golf Club,1,72,,,69,1.263,0.391,-1.369,-0.25,-1.228,0.035,299.817,0.571,0.667,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Niemann, Joaquin",18079,T12,3,The Grange Golf Club,1,72,,,69,0.055,-2.119,1.17,0.981,0.032,0.088,310.315,0.643,0.667,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Niemann, Joaquin",18079,T12,4,The Grange Golf Club,1,72,,,68,0.843,1.586,-0.383,-0.273,0.929,1.772,285.243,0.571,0.611,,,,,,1,4,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Steele, Brendan",11019,T14,1,The Grange Golf Club,1,72,,,69,-0.786,1.381,0.48,1.17,3.031,2.246,294.343,0.643,0.722,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Munoz, Sebastian",20770,T8,2,The Grange Golf Club,1,72,,,67,-2.021,-0.14,3.468,0.729,4.056,2.035,308.75,0.714,0.833,,,,,,1,3,14,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Herbert, Lucas",17064,T6,4,The Grange Golf Club,1,72,,,69,-1.997,2.529,-0.31,0.549,2.768,0.772,284.938,0.357,0.611,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Herbert, Lucas",17064,T6,3,The Grange Golf Club,1,72,,,67,2.674,-0.761,-0.039,0.213,-0.586,2.088,290.306,0.5,0.778,,,,,,0,9,5,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Herbert, Lucas",17064,T6,2,The Grange Golf Club,1,72,,,65,1.365,0.649,1.348,0.674,2.67,4.035,322.621,0.571,0.778,,,,,,1,6,10,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tringale, Cameron",14013,57,3,The Grange Golf Club,1,72,,,74,-3.153,-2.29,2.277,-1.746,-1.759,-4.912,285.833,0.5,0.611,,,,,,1,3,9,4,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Anthony",11641,1,1,The Grange Golf Club,1,72,,,67,-1.73,0.777,4.341,0.858,5.976,4.246,288.915,0.5,0.889,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Anthony",11641,1,2,The Grange Golf Club,1,72,,,67,0.388,1.164,0.008,0.474,1.647,2.035,286.682,0.643,0.778,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Anthony",11641,1,3,The Grange Golf Club,1,72,,,68,2.049,-0.318,0.019,-0.661,-0.961,1.088,274.656,0.5,0.778,,,,,,1,4,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kim, Anthony",11641,1,4,The Grange Golf Club,1,72,,,63,4.649,1.211,1.473,-0.56,2.123,6.772,285.408,0.643,0.889,,,,,,0,9,9,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Rahm, Jon",19195,2,1,The Grange Golf Club,1,72,,,68,0.768,0.622,0.426,1.429,2.477,3.246,301.469,0.643,0.778,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Rahm, Jon",19195,2,2,The Grange Golf Club,1,72,,,63,3.753,0.876,0.366,1.04,2.282,6.035,334.397,0.643,0.778,,,,,,1,7,10,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Rahm, Jon",19195,2,3,The Grange Golf Club,1,72,,,66,2.263,0.416,0.32,0.089,0.824,3.088,285.276,0.5,0.667,,,,,,1,7,7,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Rahm, Jon",19195,2,4,The Grange Golf Club,1,72,,,71,-2.191,0.825,0.288,-0.15,0.963,-1.228,304.744,0.5,0.722,,,,,,0,2,15,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"DeChambeau, Bryson",19841,T3,1,The Grange Golf Club,1,72,,,66,-0.448,-0.887,4.111,2.47,5.694,5.246,296.217,0.786,0.778,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"DeChambeau, Bryson",19841,T3,2,The Grange Golf Club,1,72,,,67,3.106,0.059,-1.891,0.761,-1.071,2.035,319.022,0.5,0.667,,,,,,1,5,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"DeChambeau, Bryson",19841,T3,3,The Grange Golf Club,1,72,,,64,1.918,2.187,2.251,-1.268,3.17,5.088,294.268,0.5,0.833,,,,,,0,9,8,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"DeChambeau, Bryson",19841,T3,4,The Grange Golf Club,1,72,,,74,-1.677,-1.906,-0.183,-0.462,-2.551,-4.228,299.164,0.429,0.611,,,,,,0,2,12,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hatton, Tyrrell",14796,T3,1,The Grange Golf Club,1,72,,,69,0.874,-0.333,1.473,0.23,1.371,2.246,287.046,0.571,0.667,,,,,,1,3,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hatton, Tyrrell",14796,T3,2,The Grange Golf Club,1,72,,,69,-0.846,-0.277,1.527,-0.369,0.881,0.035,304.518,0.429,0.611,,,,,,1,5,8,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hatton, Tyrrell",14796,T3,3,The Grange Golf Club,1,72,,,66,2.872,-1.009,1.328,-0.103,0.216,3.088,287.301,0.429,0.833,,,,,,0,8,8,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Hatton, Tyrrell",14796,T3,4,The Grange Golf Club,1,72,,,67,-1.295,0.56,1.823,1.684,4.067,2.772,313.001,0.714,0.833,,,,,,0,7,9,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Uihlein, Peter",11357,T3,1,The Grange Golf Club,1,72,,,69,0.218,0.723,2.005,-0.7,2.028,2.246,264.714,0.357,0.722,,,,,,1,2,14,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Uihlein, Peter",11357,T3,2,The Grange Golf Club,1,72,,,67,0.0,2.372,-0.007,-0.33,2.035,2.035,295.086,0.643,0.667,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Uihlein, Peter",11357,T3,3,The Grange Golf Club,1,72,,,67,-0.679,0.511,1.018,1.237,2.766,2.088,304.946,0.571,0.889,,,,,,0,7,9,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Burmester, Dean",14424,T6,1,The Grange Golf Club,1,72,,,69,-0.275,-1.007,2.001,1.526,2.521,2.246,289.24,0.571,0.778,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Burmester, Dean",14424,T6,2,The Grange Golf Club,1,72,,,71,0.296,-2.646,0.326,0.058,-2.261,-1.965,308.144,0.357,0.611,,,,,,0,5,9,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Burmester, Dean",14424,T6,3,The Grange Golf Club,1,72,,,67,1.693,0.297,-1.638,1.736,0.395,2.088,319.817,0.571,0.722,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Burmester, Dean",14424,T6,4,The Grange Golf Club,1,72,,,65,2.83,-0.212,-0.166,2.319,1.941,4.772,329.243,0.714,0.833,,,,,,1,8,7,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Herbert, Lucas",17064,T6,1,The Grange Golf Club,1,72,,,71,0.012,-0.202,0.134,0.303,0.234,0.246,302.518,0.357,0.611,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Steele, Brendan",11019,T14,2,The Grange Golf Club,1,72,,,70,-0.343,-1.725,1.411,-0.308,-0.622,-0.965,298.469,0.571,0.556,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Steele, Brendan",11019,T14,3,The Grange Golf Club,1,72,,,67,-0.964,0.28,2.844,-0.072,3.052,2.088,298.15,0.5,0.833,,,,,,1,4,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Steele, Brendan",11019,T14,4,The Grange Golf Club,1,72,,,69,-0.709,0.972,0.061,0.448,1.481,0.772,302.818,0.571,0.778,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McDowell, Graeme",7548,T14,1,The Grange Golf Club,1,72,,,68,1.489,1.707,0.45,-0.401,1.756,3.246,278.057,0.571,0.667,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Johnson, Dustin",12422,T17,3,The Grange Golf Club,1,72,,,69,-0.085,0.304,0.134,-0.265,0.173,0.088,297.333,0.571,0.722,,,,,,0,6,10,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Johnson, Dustin",12422,T17,4,The Grange Golf Club,1,72,,,68,1.705,-0.187,0.816,-0.562,0.067,1.772,316.047,0.5,0.722,,,,,,0,6,11,0,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Bland, Richard",6516,23,1,The Grange Golf Club,1,72,,,72,1.876,-0.804,0.281,-2.108,-2.631,-0.754,267.526,0.429,0.667,,,,,,0,5,9,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Bland, Richard",6516,23,2,The Grange Golf Club,1,72,,,70,0.667,0.157,1.107,-2.897,-1.632,-0.965,284.59,0.214,0.778,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Bland, Richard",6516,23,3,The Grange Golf Club,1,72,,,67,1.766,0.105,0.07,0.146,0.322,2.088,294.892,0.571,0.778,,,,,,0,8,7,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Bland, Richard",6516,23,4,The Grange Golf Club,1,72,,,68,-1.993,0.481,2.381,0.903,3.765,1.772,284.768,0.714,0.833,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"An, Byeong Hun",14459,T24,1,The Grange Golf Club,1,72,,,73,-3.43,-0.078,0.689,1.065,1.676,-1.754,293.301,0.571,0.722,,,,,,0,2,13,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"An, Byeong Hun",14459,T24,2,The Grange Golf Club,1,72,,,68,0.012,1.019,-1.402,1.407,1.024,1.035,317.156,0.786,0.722,,,,,,0,4,14,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"An, Byeong Hun",14459,T24,3,The Grange Golf Club,1,72,,,66,2.236,1.487,0.111,-0.746,0.852,3.088,265.261,0.357,0.722,,,,,,0,8,8,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"An, Byeong Hun",14459,T24,4,The Grange Golf Club,1,72,,,71,-2.35,-1.8,1.035,1.887,1.122,-1.228,301.643,0.571,0.667,,,,,,0,6,9,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Vincent, Scott",14559,T24,1,The Grange Golf Club,1,72,,,73,1.568,0.026,-1.717,-1.631,-3.322,-1.754,282.137,0.5,0.5,,,,,,0,3,11,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Vincent, Scott",14559,T24,2,The Grange Golf Club,1,72,,,65,2.738,0.283,-0.025,1.039,1.297,4.035,310.183,0.786,0.722,,,,,,0,8,9,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Vincent, Scott",14559,T24,3,The Grange Golf Club,1,72,,,67,4.178,-0.199,-1.482,-0.41,-2.09,2.088,284.632,0.571,0.722,,,,,,0,7,9,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Vincent, Scott",14559,T24,4,The Grange Golf Club,1,72,,,73,-1.418,-1.737,-0.411,0.339,-1.81,-3.228,298.136,0.643,0.667,,,,,,0,1,15,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Asaji, Yosuke",12637,T24,1,The Grange Golf Club,1,72,,,71,1.67,-1.016,2.372,-2.78,-1.424,0.246,294.171,0.429,0.611,,,,,,0,4,11,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Asaji, Yosuke",12637,T24,2,The Grange Golf Club,1,72,,,68,1.886,-0.129,-1.245,1.523,0.149,1.035,335.56,0.714,0.778,,,,,,0,7,8,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Asaji, Yosuke",12637,T24,3,The Grange Golf Club,1,72,,,70,1.9,0.824,-0.065,-1.572,-0.812,-0.912,288.586,0.286,0.667,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Asaji, Yosuke",12637,T24,4,The Grange Golf Club,1,72,,,69,-0.813,-0.028,-1.852,-1.535,-3.415,0.772,318.015,0.286,0.556,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Pieters, Thomas",13944,T27,1,The Grange Golf Club,1,72,,,73,-0.901,0.652,-1.245,-0.259,-0.853,-1.754,287.637,0.571,0.556,,,,,,0,4,9,5,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Pieters, Thomas",13944,T27,2,The Grange Golf Club,1,72,,,69,1.174,-1.758,-0.111,0.731,-1.139,0.035,316.199,0.643,0.722,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Pieters, Thomas",13944,T27,3,The Grange Golf Club,1,72,,,68,0.423,0.26,-1.328,1.733,0.664,1.088,300.725,0.643,0.722,,,,,,0,6,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Pieters, Thomas",13944,T27,4,The Grange Golf Club,1,72,,,69,1.483,1.384,-2.272,0.177,-0.711,0.772,309.136,0.5,0.556,,,,,,0,4,13,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Poulter, Ian",1435,T27,1,The Grange Golf Club,1,72,,,71,-0.981,0.735,0.123,0.369,1.226,0.246,269.497,0.571,0.778,,,,,,0,4,12,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Poulter, Ian",1435,T27,2,The Grange Golf Club,1,72,,,70,0.358,-0.424,0.864,-1.763,-1.323,-0.965,297.874,0.5,0.722,,,,,,0,5,11,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Poulter, Ian",1435,T27,3,The Grange Golf Club,1,72,,,67,0.645,1.185,0.992,-0.734,1.443,2.088,272.656,0.571,0.778,,,,,,0,5,13,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Johnson, Dustin",12422,T17,2,The Grange Golf Club,1,72,,,72,-2.722,-2.206,2.319,-0.356,-0.243,-2.965,308.803,0.5,0.833,,,,,,1,3,10,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Smylie, Elvis",24200,T27,1,The Grange Golf Club,1,72,,,71,-0.917,0.921,0.302,-0.061,1.162,0.246,295.542,0.357,0.833,,,,,,0,3,13,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Johnson, Dustin",12422,T17,1,The Grange Golf Club,1,72,,,67,1.833,0.841,1.045,0.528,2.413,4.246,301.493,0.643,0.667,,,,,,2,4,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Gooch, Talor",18580,T17,3,The Grange Golf Club,1,72,,,72,-1.371,-0.573,-1.3,0.332,-1.541,-2.912,294.524,0.643,0.722,,,,,,0,4,10,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McDowell, Graeme",7548,T14,2,The Grange Golf Club,1,72,,,72,0.148,-0.793,-0.236,-2.085,-3.113,-2.965,283.353,0.429,0.611,,,,,,0,4,10,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McDowell, Graeme",7548,T14,3,The Grange Golf Club,1,72,,,67,1.27,0.571,0.464,-0.217,0.818,2.088,277.257,0.571,0.833,,,,,,0,6,11,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"McDowell, Graeme",7548,T14,4,The Grange Golf Club,1,72,,,68,-0.125,-0.756,2.741,-0.089,1.897,1.772,283.443,0.714,0.889,,,,,,0,5,12,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Wolff, Matthew",25919,T14,1,The Grange Golf Club,1,72,,,70,0.964,-0.682,0.286,0.678,0.282,1.246,306.465,0.357,0.667,,,,,,0,4,12,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Wolff, Matthew",25919,T14,2,The Grange Golf Club,1,72,,,70,-0.334,-1.176,-0.256,0.801,-0.631,-0.965,329.746,0.5,0.889,,,,,,0,5,11,1,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Wolff, Matthew",25919,T14,3,The Grange Golf Club,1,72,,,66,-0.637,1.659,0.336,1.73,3.725,3.088,324.218,0.5,0.833,,,,,,0,7,10,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Wolff, Matthew",25919,T14,4,The Grange Golf Club,1,72,,,69,-2.511,-0.706,2.933,1.056,3.283,0.772,304.408,0.5,0.722,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Surratt, Caleb",30463,T17,1,The Grange Golf Club,1,72,,,70,-0.41,0.481,-0.004,1.179,1.655,1.246,296.543,0.571,0.722,,,,,,0,6,8,4,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Surratt, Caleb",30463,T17,2,The Grange Golf Club,1,72,,,73,-1.329,-1.497,-0.752,-0.386,-2.635,-3.965,306.449,0.429,0.722,,,,,,0,3,12,2,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Surratt, Caleb",30463,T17,3,The Grange Golf Club,1,72,,,64,0.821,3.455,-0.346,1.159,4.267,5.088,314.267,0.571,0.611,,,,,,0,9,8,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Surratt, Caleb",30463,T17,4,The Grange Golf Club,1,72,,,69,-0.128,0.564,-0.496,0.832,0.899,0.772,310.038,0.571,0.611,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Campbell, Ben",14373,T17,1,The Grange Golf Club,1,72,,,69,3.153,0.724,-1.031,-0.601,-0.908,2.246,274.665,0.714,0.667,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Campbell, Ben",14373,T17,2,The Grange Golf Club,1,72,,,63,2.954,1.223,1.671,0.188,3.081,6.035,285.231,0.786,0.778,,,,,,1,7,10,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Campbell, Ben",14373,T17,3,The Grange Golf Club,1,72,,,72,0.641,-0.191,-3.124,-0.239,-3.554,-2.912,264.282,0.857,0.722,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Campbell, Ben",14373,T17,4,The Grange Golf Club,1,72,,,72,0.577,1.824,-3.831,-0.798,-2.805,-2.228,274.462,0.786,0.667,,,,,,0,5,10,1,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Schwartzel, Charl",7398,T17,1,The Grange Golf Club,1,72,,,75,-1.274,-1.119,0.64,-2.001,-2.48,-3.754,290.458,0.429,0.667,,,,,,0,3,12,1,2
+liv,2026,2026,2026-02-15,Adelaide,55,"Schwartzel, Charl",7398,T17,2,The Grange Golf Club,1,72,,,64,3.499,1.901,0.089,-0.454,1.536,5.035,301.871,0.643,0.722,,,,,,0,9,8,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Schwartzel, Charl",7398,T17,3,The Grange Golf Club,1,72,,,70,-0.302,0.079,-1.223,0.533,-0.61,-0.912,293.01,0.786,0.722,,,,,,0,3,14,1,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Schwartzel, Charl",7398,T17,4,The Grange Golf Club,1,72,,,67,-1.928,0.257,4.942,-0.499,4.7,2.772,271.589,0.5,1.0,,,,,,1,5,10,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kokrak, Jason",12337,T17,1,The Grange Golf Club,1,72,,,69,1.857,1.097,0.249,-0.958,0.388,2.246,277.99,0.429,0.722,,,,,,0,6,9,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kokrak, Jason",12337,T17,2,The Grange Golf Club,1,72,,,70,1.238,-0.448,-0.862,-0.893,-2.203,-0.965,333.136,0.5,0.722,,,,,,0,7,7,3,1
+liv,2026,2026,2026-02-15,Adelaide,55,"Kokrak, Jason",12337,T17,3,The Grange Golf Club,1,72,,,65,6.655,-0.61,-0.335,-1.622,-2.567,4.088,285.001,0.571,0.667,,,,,,1,7,8,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Kokrak, Jason",12337,T17,4,The Grange Golf Club,1,72,,,72,-1.529,0.467,-1.124,-0.042,-0.699,-2.228,297.383,0.643,0.556,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Gooch, Talor",18580,T17,1,The Grange Golf Club,1,72,,,72,-1.273,0.918,-0.073,-0.326,0.519,-0.754,271.794,0.5,0.556,,,,,,0,3,12,3,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Gooch, Talor",18580,T17,2,The Grange Golf Club,1,72,,,63,1.651,2.297,1.416,0.671,4.384,6.035,308.51,0.786,0.889,,,,,,0,9,9,0,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Gooch, Talor",18580,T17,4,The Grange Golf Club,1,72,,,69,1.262,-0.861,3.693,-3.322,-0.49,0.772,307.39,0.429,0.667,,,,,,0,5,11,2,0
+liv,2026,2026,2026-02-15,Adelaide,55,"Tringale, Cameron",14013,57,4,The Grange Golf Club,1,72,,,71,-1.324,0.417,-1.105,0.784,0.096,-1.228,280.583,0.786,0.778,,,,,,0,5,10,2,1
