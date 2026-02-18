@@ -328,12 +328,29 @@ st.markdown("""
     0 2px 10px rgba(0,0,0,0.25);
 }
 
-.dd-photo-card img {
+.dd-photo-card{
   width: 100%;
+  height: 360px;                 /* taller */
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image: bigger, still no-crop */
+.dd-photo-card img{
   height: 100%;
+  width: auto;                   /* don’t stretch to full width */
+  max-width: 100%;               /* don’t overflow */
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 22px;           /* rounding on image itself */
   display: block;
-  object-fit: cover;
-  object-position: center 18%;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -3043,7 +3060,7 @@ elif active_tab == "Deep Dive":
     if ("mst_dd_dg_id" not in st.session_state) or (st.session_state["mst_dd_dg_id"] not in dg_options):
         st.session_state["mst_dd_dg_id"] = default_dg
 
-    DD_HERO_H = 250  # one knob
+    DD_HERO_H = 300 # one knob
 
 
     def _fmt_int(x):
@@ -3081,7 +3098,7 @@ elif active_tab == "Deep Dive":
         return f'<div class="dd-kpi-row">{cards}</div>'
 
 
-    left, right = st.columns([7, 5], gap="medium")
+    left, right = st.columns([8,4], gap="small")
 
     with left:
         dg_id_sel = st.selectbox(
