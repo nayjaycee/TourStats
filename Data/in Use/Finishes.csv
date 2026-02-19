@@ -1,0 +1,1442 @@
+year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_num,win,top_5,top_10,top_25,made_cut,CUT
+2026,The American Express,2,2026-01-25,"Scheffler, Scottie",18417,1,1.0,1,1,1,1,1,0
+2026,The American Express,2,2026-01-25,"Day, Jason",9771,T2,2.0,0,1,1,1,1,0
+2026,The American Express,2,2026-01-25,"Gerard, Ryan",29767,T2,2.0,0,1,1,1,1,0
+2026,The American Express,2,2026-01-25,"McCarty, Matt",28635,T2,2.0,0,1,1,1,1,0
+2026,The American Express,2,2026-01-25,"Putnam, Andrew",14704,T2,2.0,0,1,1,1,1,0
+2026,The American Express,2,2026-01-25,"Kim, Si Woo",14609,T6,6.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Stevens, Sam",25569,T6,6.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Henley, Russell",14578,T8,8.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Hoge, Tom",15575,T8,8.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Li, Haotong",15310,T8,8.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Smotherman, Austin",22985,T8,8.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Theegala, Sahith",23014,T8,8.0,0,0,1,1,1,0
+2026,The American Express,2,2026-01-25,"Bauchou, Zach",19846,T13,13.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Bridgeman, Jacob",29433,T13,13.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Cantlay, Patrick",15466,T13,13.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Clark, Wyndham",23604,T13,13.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Ford, David",31343,T13,13.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Brown, Blades",32152,T18,18.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Coody, Pierceson",28309,T18,18.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Fowler, Rickie",12965,T18,18.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Kim, S.H.",21688,T18,18.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Vilips, Karl",24304,T18,18.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Zalatoris, Will",19428,T18,18.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Griffin, Ben",24968,T24,24.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Hall, Harry",27194,T24,24.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Scott, Adam",6430,T24,24.0,0,0,0,1,1,0
+2026,The American Express,2,2026-01-25,"Burns, Sam",19483,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Cole, Eric",21756,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"English, Harris",14577,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Homa, Max",17538,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Horschel, Billy",11276,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Keefer, Johnny",32457,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"McGreevy, Max",23505,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Pavon, Matthieu",19960,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Ryder, Sam",16715,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Smith, Jordan",18586,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Taylor, Nick",13126,T27,27.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Bezuidenhout, Christiaan",18103,T38,38.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Dahmen, Joel",14509,T38,38.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Kim, Tom",24766,T38,38.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Lee, Min Woo",16841,T38,38.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"MacIntyre, Robert",23323,T38,38.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Poston, J.T.",21554,T38,38.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Campos, Rafael",12909,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Castillo, Ricky",27819,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Ewart, A.J.",21883,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Hisatsune, Ryo",22760,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Hojgaard, Rasmus",23838,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Kuchar, Matt",6169,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Lipsky, David",15980,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Mitchell, Keith",17365,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Rodgers, Patrick",16283,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Smalley, Alex",18474,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Wu, Dylan",25002,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Young, Carson",23656,T44,44.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Berger, Daniel",17606,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Brennan, Michael",29197,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Greyserman, Max",23465,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"McCarthy, Denny",19870,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Moore, Taylor",21944,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Parry, John",13764,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Riley, Davis",19872,T56,56.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Chatfield, Davis",30620,T63,63.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Fitzpatrick, Matt",17646,T63,63.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Meissner, Mac",28159,T63,63.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Phillips, Chandler",27164,T63,63.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Power, Seamus",10104,T63,63.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Ramey, Chad",19840,T63,63.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Dumont de Chassart, Adrien",22002,69,69.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Johnson, Zach",6986,T70,70.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Saddier, Adrien",14792,T70,70.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Woodland, Gary",12577,72,72.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Dou, Zecheng",16757,73,73.0,0,0,0,0,1,0
+2026,The American Express,2,2026-01-25,"Aberg, Ludvig",23950,WD,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Bhatia, Akshay",26096,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Block, Michael",12333,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Brown, Dan",20766,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Capan III, Frankie",21412,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Cauley, Bud",14502,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Clanton, Luke",32330,WD,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Davis, Cam",17786,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Dufner, Jason",7301,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Dunlap, Nick",28270,WD,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Echavarria, Nico",22833,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Eckroat, Austin",26653,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Finau, Tony",11676,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Fishburn, Patrick",25094,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Fisk, Steven",26657,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Ghim, Doug",24550,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Gonzalez, Emilio",28016,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Griffin, Lanto",15330,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Grillo, Emiliano",12808,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Harman, Brian",8825,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hodges, Lee",25157,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hoey, Rico",23504,WD,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hossler, Beau",15470,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hubbard, Mark",16333,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Hughes, Mackenzie",15556,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Jaeger, Stephan",16394,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kanaya, Takumi",19729,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kim, Chan",15004,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kim, Michael",17543,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kirk, Chris",12423,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kitayama, Kurt",21891,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Kizzire, Patton",13470,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Landry, Andrew",14000,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Lee, S.T.",16162,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Long, Adam",15473,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Lower, Justin",17723,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Mouw, William",29770,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Nakajima, Keita",21074,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Noren, Alex",10419,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Novak, Andrew",23475,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Nyholm, Pontus",25475,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Pendrith, Taylor",17780,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Rose, Justin",6093,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Roy, Kevin",18424,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Salinda, Isaiah",27183,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Schmid, Matti",20722,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Stanger, Jimmy",23048,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Straka, Sepp",17511,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Streelman, Kevin",8480,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Suber, Jackson",29279,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Svensson, Jesper",26850,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Thompson, Davis",27364,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Thorbjornsen, Michael",26649,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Valimaki, Sami",23816,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Vegas, Jhonattan",13508,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Villegas, Camilo",9171,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Wallace, Matt",20706,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
+2026,The American Express,2,2026-01-25,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Gotterup, Chris",27774,1,1.0,1,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Matsuyama, Hideki",13562,2,2.0,0,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Bhatia, Akshay",26096,T3,3.0,0,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hojgaard, Nicolai",23602,T3,3.0,0,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kim, Si Woo",14609,T3,3.0,0,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Scheffler, Scottie",18417,T3,3.0,0,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Thorbjornsen, Michael",26649,T3,3.0,0,1,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Knapp, Jake",19396,8,8.0,0,0,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Fitzpatrick, Matt",17646,9,9.0,0,0,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Coody, Pierceson",28309,T10,10.0,0,0,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hisatsune, Ryo",22760,T10,10.0,0,0,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hovland, Viktor",18841,T10,10.0,0,0,1,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Dou, Zecheng",16757,T13,13.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"McNealy, Maverick",18634,T13,13.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Roy, Kevin",18424,T13,13.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Berger, Daniel",17606,T16,16.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Smith, Jordan",18586,T16,16.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Bridgeman, Jacob",29433,T18,18.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Fowler, Rickie",12965,T18,18.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kim, Michael",17543,T18,18.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Meissner, Mac",28159,T18,18.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Straka, Sepp",17511,T18,18.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Theegala, Sahith",23014,T18,18.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Fox, Ryan",11889,T24,24.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hoey, Rico",23504,T24,24.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hojgaard, Rasmus",23838,T24,24.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kitayama, Kurt",21891,T24,24.0,0,0,0,1,1,0
+2026,WM Phoenix Open,3,2026-02-08,"English, Harris",14577,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Ewart, A.J.",21883,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Griffin, Ben",24968,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hughes, Mackenzie",15556,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Jaeger, Stephan",16394,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Lee, Min Woo",16841,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Taylor, Nick",13126,T28,28.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Clark, Wyndham",23604,T35,35.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kim, Tom",24766,T35,35.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Parry, John",13764,T35,35.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Poston, J.T.",21554,T35,35.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Smalley, Alex",18474,T35,35.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Stevens, Sam",25569,T35,35.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Keefer, Johnny",32457,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Mitchell, Keith",17365,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Neergaard-Petersen, Rasmus",23841,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Reitan, Kristoffer",21407,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Schauffele, Xander",19895,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Valimaki, Sami",23816,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Young, Cameron",26651,T41,41.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Bauchou, Zach",19846,T48,48.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Brennan, Michael",29197,T48,48.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Lamprecht, Christo",24343,T48,48.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Lee, S.T.",16162,T48,48.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"McGreevy, Max",23505,T48,48.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Ramey, Chad",19840,T48,48.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Campbell, Brian",18628,T54,54.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Highsmith, Joe",28469,T54,54.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Hirata, Kensei",20954,T54,54.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kim, S.H.",21688,T54,54.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Morikawa, Collin",22085,T54,54.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Yellamaraju, Sudarshan",29925,T54,54.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kanaya, Takumi",19729,T60,60.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Rodgers, Patrick",16283,T60,60.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Saddier, Adrien",14792,T60,60.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"VanDerLaan, John",25319,T60,60.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Thompson, Davis",27364,T64,64.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Woodland, Gary",12577,T64,64.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Homa, Max",17538,T66,66.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Phillips, Chandler",27164,T66,66.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Cauley, Bud",14502,T68,68.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Lebioda, Hank",21943,T68,68.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Shipley, Neal",32055,T68,68.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Nakajima, Keita",21074,71,71.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Kizzire, Patton",13470,72,72.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Davis, Cam",17786,73,73.0,0,0,0,0,1,0
+2026,WM Phoenix Open,3,2026-02-08,"Avant, Thomas",31585,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Bezuidenhout, Christiaan",18103,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Brown, Dan",20766,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Burns, Sam",19483,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Cole, Eric",21756,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Conners, Corey",17576,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Dahmen, Joel",14509,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Dumont de Chassart, Adrien",22002,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Echavarria, Nico",22833,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Eckroat, Austin",26653,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Finau, Tony",11676,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Gonzalez, Emilio",28016,WD,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Greyserman, Max",23465,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Grillo, Emiliano",12808,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Hall, Harry",27194,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Harman, Brian",8825,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Higgo, Garrick",24342,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Hoge, Tom",15575,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Horschel, Billy",11276,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Hubbard, Mark",16333,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Kirk, Chris",12423,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Koepka, Brooks",16243,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"McCarty, Matt",28635,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Mouw, William",29770,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Novak, Andrew",23475,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Nyholm, Pontus",25475,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Olesen, Thorbjorn",13412,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Pavon, Matthieu",19960,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Penge, Marco",22465,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Schmid, Matti",20722,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Simpson, Webb",11049,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Smotherman, Austin",22985,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Spieth, Jordan",14636,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Vilips, Karl",24304,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,WM Phoenix Open,3,2026-02-08,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Rose, Justin",6093,1,1.0,1,1,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Coody, Pierceson",28309,T2,2.0,0,1,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hisatsune, Ryo",22760,T2,2.0,0,1,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Kim, Si Woo",14609,T2,2.0,0,1,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Jaeger, Stephan",16394,T5,5.0,0,1,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Knapp, Jake",19396,T5,5.0,0,1,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Dahmen, Joel",14509,T7,7.0,0,0,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Novak, Andrew",23475,T7,7.0,0,0,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Theegala, Sahith",23014,T7,7.0,0,0,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"McNealy, Maverick",18634,10,10.0,0,0,1,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Finau, Tony",11676,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Gerard, Ryan",29767,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Li, Haotong",15310,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Matsuyama, Hideki",13562,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Mitchell, Keith",17365,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Power, Seamus",10104,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Schenk, Adam",19477,T11,11.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Gotterup, Chris",27774,T18,18.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Lipsky, David",15980,T18,18.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"McCarty, Matt",28635,T18,18.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Thorbjornsen, Michael",26649,T18,18.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"English, Harris",14577,T22,22.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hojgaard, Nicolai",23602,T22,22.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Ramey, Chad",19840,T22,22.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Ventura, Kris",15651,T22,22.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Young, Cameron",26651,T22,22.0,0,0,0,1,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Bezuidenhout, Christiaan",18103,T27,27.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Cole, Eric",21756,T27,27.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Rodgers, Patrick",16283,T27,27.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Brown, Dan",20766,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hojgaard, Rasmus",23838,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Lower, Justin",17723,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"McGreevy, Max",23505,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Reitan, Kristoffer",21407,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Salinda, Isaiah",27183,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Scott, Adam",6430,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Stevens, Sam",25569,T30,30.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Day, Jason",9771,T38,38.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Grillo, Emiliano",12808,T38,38.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Pavon, Matthieu",19960,T38,38.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Vilips, Karl",24304,T38,38.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Walker, Danny",25003,T38,38.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Bradley, Keegan",13872,T43,43.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Castillo, Ricky",27819,T43,43.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Keefer, Johnny",32457,T43,43.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Parry, John",13764,T43,43.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Thompson, Davis",27364,T43,43.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"VanDerLaan, John",25319,T43,43.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Dou, Zecheng",16757,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Eckroat, Austin",26653,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Ewart, A.J.",21883,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"McCarthy, Denny",19870,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Meissner, Mac",28159,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Moore, Taylor",21944,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Neergaard-Petersen, Rasmus",23841,T49,49.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Koepka, Brooks",16243,T56,56.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Schmid, Matti",20722,T56,56.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Yellamaraju, Sudarshan",29925,T56,56.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Bauchou, Zach",19846,T59,59.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Ghim, Doug",24550,T59,59.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hughes, Mackenzie",15556,T59,59.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Ryder, Sam",16715,T59,59.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Kim, S.H.",21688,63,63.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Nakajima, Keita",21074,64,64.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Clark, Wyndham",23604,T65,65.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Gonzalez, Emilio",28016,T65,65.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Kim, Tom",24766,T65,65.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Rozo, Marcelo",16591,T65,65.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hubbard, Mark",16333,69,69.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Davis, Cam",17786,T70,70.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hoey, Rico",23504,T70,70.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hoge, Tom",15575,T70,70.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Suber, Jackson",29279,T70,70.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Hirata, Kensei",20954,74,74.0,0,0,0,0,1,0
+2026,Farmers Insurance Open,4,2026-02-01,"Aberg, Ludvig",23950,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Bhatia, Akshay",26096,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Brennan, Michael",29197,DQ,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Byrd, Marcus",29304,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Cantlay, Patrick",15466,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Capan III, Frankie",21412,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Clanton, Luke",32330,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Dumont de Chassart, Adrien",22002,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Fishburn, Patrick",25094,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Fisk, Steven",26657,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Ford, David",31343,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Geddes, Mark",21886,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Greyserman, Max",23465,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Griffin, Lanto",15330,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Hastings, Justin",31960,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Higgo, Garrick",24342,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Hodges, Lee",25157,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Homa, Max",17538,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Horschel, Billy",11276,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Hossler, Beau",15470,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Kanaya, Takumi",19729,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Kuchar, Matt",6169,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Lee, S.T.",16162,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"List, Luke",7960,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Mouw, William",29770,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Noren, Alex",10419,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Norlander, Henrik",11657,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Nyholm, Pontus",25475,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Olesen, Thorbjorn",13412,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Paul, Jeremy",22087,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Pendrith, Taylor",17780,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Penge, Marco",22465,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Phillips, Chandler",27164,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Putnam, Andrew",14704,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Rosenmueller, Thomas",22736,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Roy, Kevin",18424,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Saddier, Adrien",14792,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Schauffele, Xander",19895,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Smalley, Alex",18474,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Smith, Jordan",18586,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Smotherman, Austin",22985,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Spaun, J.J.",17536,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Streelman, Kevin",8480,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Svensson, Jesper",26850,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Valimaki, Sami",23816,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Vegas, Jhonattan",13508,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Villegas, Camilo",9171,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Wallace, Matt",20706,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Woodland, Gary",12577,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"Zalatoris, Will",19428,CUT,,0,0,0,0,0,1
+2026,Farmers Insurance Open,4,2026-02-01,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Morikawa, Collin",22085,1,1.0,1,1,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Lee, Min Woo",16841,T2,2.0,0,1,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Straka, Sepp",17511,T2,2.0,0,1,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Fleetwood, Tommy",12294,T4,4.0,0,1,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Scheffler, Scottie",18417,T4,4.0,0,1,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Bhatia, Akshay",26096,T6,6.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Burns, Sam",19483,T6,6.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Bridgeman, Jacob",29433,T8,8.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Echavarria, Nico",22833,T8,8.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Hisatsune, Ryo",22760,T8,8.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Knapp, Jake",19396,T8,8.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Lowry, Shane",13900,T8,8.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Matsuyama, Hideki",13562,T8,8.0,0,0,1,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Cantlay, Patrick",15466,T14,14.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Fitzpatrick, Matt",17646,T14,14.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Hoge, Tom",15575,T14,14.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"McIlroy, Rory",10091,T14,14.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Finau, Tony",11676,18,18.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Fowler, Rickie",12965,T19,19.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Harman, Brian",8825,T19,19.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Henley, Russell",14578,T19,19.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Schauffele, Xander",19895,T19,19.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Smalley, Alex",18474,T19,19.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Day, Jason",9771,T24,24.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"English, Harris",14577,T24,24.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Fox, Ryan",11889,T24,24.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Hall, Harry",27194,T24,24.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Taylor, Nick",13126,T24,24.0,0,0,0,1,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Bradley, Keegan",13872,T29,29.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"McGreevy, Max",23505,T29,29.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"McNealy, Maverick",18634,T29,29.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Noren, Alex",10419,T29,29.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Spieth, Jordan",14636,T29,29.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Hughes, Mackenzie",15556,T34,34.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Pendrith, Taylor",17780,T34,34.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Valimaki, Sami",23816,T34,34.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Aberg, Ludvig",23950,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Cauley, Bud",14502,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Gotterup, Chris",27774,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Greyserman, Max",23465,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Griffin, Ben",24968,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"MacIntyre, Robert",23323,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Poston, J.T.",21554,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Rose, Justin",6093,T37,37.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Gerard, Ryan",29767,T45,45.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Kim, Si Woo",14609,T45,45.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Spaun, J.J.",17536,T45,45.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Coody, Pierceson",28309,T48,48.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Horschel, Billy",11276,T48,48.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Kitayama, Kurt",21891,T48,48.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Novak, Andrew",23475,T48,48.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Kirk, Chris",12423,T52,52.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Mitchell, Keith",17365,T52,52.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Rodgers, Patrick",16283,T52,52.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"McCarthy, Denny",19870,T55,55.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Stevens, Sam",25569,T55,55.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Young, Cameron",26651,T55,55.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Clark, Wyndham",23604,T58,58.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Hovland, Viktor",18841,T58,58.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Fisk, Steven",26657,T60,60.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Higgo, Garrick",24342,T60,60.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Potgieter, Aldrich",27900,T60,60.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Theegala, Sahith",23014,T60,60.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Glover, Lucas",7399,T64,64.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Grillo, Emiliano",12808,T64,64.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Penge, Marco",22465,T64,64.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Hoey, Rico",23504,T67,67.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Jaeger, Stephan",16394,T67,67.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"McCarty, Matt",28635,T67,67.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Conners, Corey",17576,T70,70.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Yu, Kevin",17881,T70,70.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Kim, Michael",17543,72,72.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Rai, Aaron",18554,T73,73.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Schmid, Matti",20722,T73,73.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Berger, Daniel",17606,T75,75.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Highsmith, Joe",28469,T75,75.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Schenk, Adam",19477,77,77.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Campbell, Brian",18628,T78,78.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Thorbjornsen, Michael",26649,T78,78.0,0,0,0,0,1,0
+2026,AT&T Pebble Beach Pro-Am,5,2026-02-15,"Vegas, Jhonattan",13508,T78,78.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Gotterup, Chris",27774,1,1.0,1,1,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Gerard, Ryan",29767,2,2.0,0,1,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Rodgers, Patrick",16283,3,3.0,0,1,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Bridgeman, Jacob",29433,T4,4.0,0,1,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"MacIntyre, Robert",23323,T4,4.0,0,1,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Berger, Daniel",17606,T6,6.0,0,0,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Hall, Harry",27194,T6,6.0,0,0,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Hodges, Lee",25157,T6,6.0,0,0,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Pendrith, Taylor",17780,T6,6.0,0,0,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Riley, Davis",19872,T6,6.0,0,0,1,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kim, Si Woo",14609,T11,11.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Knapp, Jake",19396,T11,11.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Coody, Pierceson",28309,T13,13.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kim, S.H.",21688,T13,13.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Matsuyama, Hideki",13562,T13,13.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Roy, Kevin",18424,T13,13.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Taylor, Nick",13126,T13,13.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Yellamaraju, Sudarshan",29925,T13,13.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Brown, Dan",20766,T19,19.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Griffin, Ben",24968,T19,19.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Henley, Russell",14578,T19,19.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Parry, John",13764,T19,19.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Phillips, Chandler",27164,T19,19.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Cauley, Bud",14502,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Conners, Corey",17576,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Dumont de Chassart, Adrien",22002,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Hirata, Kensei",20954,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kizzire, Patton",13470,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"McNealy, Maverick",18634,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Spieth, Jordan",14636,T24,24.0,0,0,0,1,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Castillo, Ricky",27819,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Garnett, Brice",11451,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kanaya, Takumi",19729,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kim, Michael",17543,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Power, Seamus",10104,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Stevens, Sam",25569,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Theegala, Sahith",23014,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Wu, Dylan",25002,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Yonezawa, Ren",25739,T31,31.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Hoge, Tom",15575,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kitayama, Kurt",21891,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"McCarthy, Denny",19870,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Meissner, Mac",28159,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Scott, Adam",6430,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Singh, Vijay",653,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Smalley, Alex",18474,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Spaun, J.J.",17536,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Svensson, Adam",13997,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Whaley, Vince",25908,T40,40.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Blair, Zac",17639,T50,50.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Ford, David",31343,T50,50.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Gonzalez, Emilio",28016,T50,50.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Hoey, Rico",23504,T50,50.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Rai, Aaron",18554,T50,50.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Dou, Zecheng",16757,T55,55.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Ghim, Doug",24550,T55,55.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Li, Haotong",15310,T55,55.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"McCarty, Matt",28635,T55,55.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Pavon, Matthieu",19960,T55,55.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Simpson, Webb",11049,T55,55.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Dunlap, Nick",28270,T61,61.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Harman, Brian",8825,T61,61.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Johnson, Zach",6986,T61,61.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Keefer, Johnny",32457,T61,61.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kim, Tom",24766,T61,61.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Highsmith, Joe",28469,T66,66.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Hubbard, Mark",16333,T66,66.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Mitchell, Keith",17365,T66,66.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Smith, Jordan",18586,T66,66.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Bauchou, Zach",19846,70,70.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Mouw, William",29770,T71,71.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Ramey, Chad",19840,T71,71.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Kaneko, Kota",28268,73,73.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Horschel, Billy",11276,74,74.0,0,0,0,0,1,0
+2026,Sony Open in Hawaii,6,2026-01-18,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Bradley, Keegan",13872,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Brennan, Michael",29197,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Cabello, Anson",34840,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Clanton, Luke",32330,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Cole, Eric",21756,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Davis, Cam",17786,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Echavarria, Nico",22833,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Eckroat, Austin",26653,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Ewart, A.J.",21883,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Finau, Tony",11676,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Fisk, Steven",26657,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Grillo, Emiliano",12808,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Higa, Kazuki",15756,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Hisatsune, Ryo",22760,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Hossler, Beau",15470,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Kirk, Chris",12423,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Kozuma, Corey",34839,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Lee, S.T.",16162,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"McGreevy, Max",23505,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Morikawa, Collin",22085,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Nagasaki, Taisei",32081,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Nakajima, Keita",21074,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Nyholm, Pontus",25475,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Reitan, Kristoffer",21407,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Saddier, Adrien",14792,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Salinda, Isaiah",27183,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Schmid, Matti",20722,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Smotherman, Austin",22985,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Sugiura, Yuta",24223,WD,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"Woodland, Gary",12577,CUT,,0,0,0,0,0,1
+2026,Sony Open in Hawaii,6,2026-01-18,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Adelaide,1012,2026-02-15,"Kim, Anthony",11641,1,1.0,1,1,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"DeChambeau, Bryson",19841,T3,3.0,0,1,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Hatton, Tyrrell",14796,T3,3.0,0,1,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Uihlein, Peter",11357,T3,3.0,0,1,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Burmester, Dean",14424,T6,6.0,0,0,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Herbert, Lucas",17064,T6,6.0,0,0,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Grace, Branden",11952,T8,8.0,0,0,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Leishman, Marc",7649,T8,8.0,0,0,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Munoz, Sebastian",20770,T8,8.0,0,0,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Smith, Cameron",15856,T8,8.0,0,0,1,1,1,0
+2026,Adelaide,1012,2026-02-15,"Ancer, Abraham",18238,T12,12.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Niemann, Joaquin",18079,T12,12.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"McDowell, Graeme",7548,T14,14.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Steele, Brendan",11019,T14,14.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Wolff, Matthew",25919,T14,14.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Campbell, Ben",14373,T17,17.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Gooch, Talor",18580,T17,17.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Johnson, Dustin",12422,T17,17.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Kokrak, Jason",12337,T17,17.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Schwartzel, Charl",7398,T17,17.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Surratt, Caleb",30463,T17,17.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Bland, Richard",6516,23,23.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"An, Byeong Hun",14459,T24,24.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Asaji, Yosuke",12637,T24,24.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Vincent, Scott",14559,T24,24.0,0,0,0,1,1,0
+2026,Adelaide,1012,2026-02-15,"Perez, Victor",20730,T27,27.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Pieters, Thomas",13944,T27,27.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Poulter, Ian",1435,T27,27.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Smylie, Elvis",24200,T27,27.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Detry, Thomas",14181,31,31.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Ballester, Jose Luis",28473,T32,32.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Howell III, Charles",6892,T32,32.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Kim, Minkyu",20780,T32,32.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"La Sasso, Michael",33755,T32,32.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Lee, Danny",11826,T32,32.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Garcia, Sergio",5689,T37,37.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Lee, Richard",12413,T37,37.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Oosthuizen, Louis",7672,T37,37.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Ormsby, Wade",7532,T37,37.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Watson, Bubba",7334,T37,37.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Meronk, Adrian",14196,T42,42.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Ortiz, Carlos",14735,T42,42.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Masaveu, Luis",30428,T44,44.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"McKibbin, Tom",22322,T44,44.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Schmidt, Ben",27258,T44,44.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Song, Younghan",16160,T44,44.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Tabuena, Miguel",15274,T44,44.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Varner III, Harold",16602,T44,44.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Lahiri, Anirban",12669,50,50.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Catlin, John",18524,T51,51.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Puig, David",28984,T51,51.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Canter, Laurie",14795,53,53.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Casey, Paul",7108,T54,54.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Hellgren, Bjorn",16231,T54,54.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Horsfield, Sam",19866,56,56.0,0,0,0,0,1,0
+2026,Adelaide,1012,2026-02-15,"Tringale, Cameron",14013,57,57.0,0,0,0,0,1,0
+2026,Promotions Event,1018,2026-01-11,"Adams, Collin",20000261,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Albertse, Louis",24341,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Ashfield, James",28636,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Bekker, Oliver",12819,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Bjerregaard, Lucas",11619,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Boonma, Danthai",16424,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Brightwell, Jonathan",28536,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Brun, Julien",16363,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Buchanan, Jack",27379,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Carrera, Luis",29579,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Catlin, John",18524,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Clemons, Dominic",32594,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Crawford, Cory",17785,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Crowe, Harrison",24280,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Drewitt, Brett",15162,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Eckhardt, Albert",16405,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Ereno Perez, Pablo",33839,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Florimo, Will",25780,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Foos, Dominic",17022,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Forster, Charlie",20000238,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Geary, Josh",9903,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Hellgren, Bjorn",16231,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Hirschman, Grant",25027,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Hwang, Doyeon",17459,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Ieremia, Denzel",20918,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Ikemura, Tomoyo",18809,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Islas, Jose Cristobal",28142,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Janewattananond, Jazz",14368,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Jeon, Galam",21513,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"John, Cameron",19390,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Jones, Matt",8605,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kaewkanjana, Sadom",19844,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Katsumata, Ryo",22777,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kennedy, Max",31455,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kennon, Scotty",34156,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kieffer, Max",12317,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kim, Anthony",11641,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kim, Hongtaek",17973,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kim, Jaeho",16197,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Kim, Yeongsu",13486,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Koepka, Chase",21997,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Konishi, Takanori",17401,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Lee, Richard",12413,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Lee, Soomin",14614,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Levy, Alexander",14973,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Lewis, Tom",15164,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Loubser, Herman",21197,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Maguire, MJ",19453,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Moscatel, Joel",27815,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Ogletree, Andy",27597,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Pagdin, Joseph",34270,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Park, Sungkug",15550,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Perico, Julian",22812,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Pineau, Pierre",20900,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Plunkett, Marcus",29716,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Prateeptienchai, Suteepat",21231,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Rottluff, Max",19899,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Saksansin, Poom",14951,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Sanchez, Matias",18180,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Schniederjans, Ollie",18662,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Schwab, Matthias",15016,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Scrivener, Jason",12734,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Shinkwin, Callum",18244,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Simpson, Samuel",27415,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Smyth, Trav",19232,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Sordet, Clement",17718,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Suwannarut, Sarit",23638,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Tabuena, Miguel",15274,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Tangkamolprasert, Pavit",11958,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Truslow, Austen",18239,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Vincent, Kieran",19538,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Voke, Nick",24091,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Vorster, Martin",25829,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Wang, Jeunghun",15366,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Wang, Wei-Hsuan",19697,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Wannasrichan, Rattanon",14953,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Wood, Chris",12451,NAN,,0,0,0,0,0,1
+2026,Promotions Event,1018,2026-01-11,"Wood, Christopher",16012,NAN,,0,0,0,0,0,1
+2026,Riyadh,1027,2026-02-07,"Smylie, Elvis",24200,1,1.0,1,1,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Uihlein, Peter",11357,3,3.0,0,1,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Ancer, Abraham",18238,T4,4.0,0,1,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Pieters, Thomas",13944,T4,4.0,0,1,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Puig, David",28984,T4,4.0,0,1,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Detry, Thomas",14181,7,7.0,0,0,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Munoz, Sebastian",20770,8,8.0,0,0,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"An, Byeong Hun",14459,T9,9.0,0,0,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Grace, Branden",11952,T9,9.0,0,0,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Herbert, Lucas",17064,T9,9.0,0,0,1,1,1,0
+2026,Riyadh,1027,2026-02-07,"Gooch, Talor",18580,12,12.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Lee, Richard",12413,T13,13.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Ortiz, Carlos",14735,T13,13.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Smith, Cameron",15856,T13,13.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Vincent, Scott",14559,T13,13.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Asaji, Yosuke",12637,T17,17.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Casey, Paul",7108,T17,17.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"DeChambeau, Bryson",19841,T17,17.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Johnson, Dustin",12422,T17,17.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"McKibbin, Tom",22322,T17,17.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Hellgren, Bjorn",16231,T22,22.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Kim, Anthony",11641,T22,22.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Kokrak, Jason",12337,T22,22.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Leishman, Marc",7649,T22,22.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Niemann, Joaquin",18079,T22,22.0,0,0,0,1,1,0
+2026,Riyadh,1027,2026-02-07,"Ballester, Jose Luis",28473,T27,27.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"McDowell, Graeme",7548,T27,27.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Meronk, Adrian",14196,T27,27.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Campbell, Ben",14373,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Garcia, Sergio",5689,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Lahiri, Anirban",12669,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Oosthuizen, Louis",7672,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Schwartzel, Charl",7398,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Song, Younghan",16160,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Varner III, Harold",16602,T30,30.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Canter, Laurie",14795,T37,37.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Masaveu, Luis",30428,T37,37.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Howell III, Charles",6892,T39,39.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Surratt, Caleb",30463,T39,39.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Kim, Minkyu",20780,T41,41.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"La Sasso, Michael",33755,T41,41.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Lee, Danny",11826,T41,41.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Poulter, Ian",1435,T41,41.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Schmidt, Ben",27258,T41,41.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Tringale, Cameron",14013,T41,41.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Hatton, Tyrrell",14796,47,47.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Horsfield, Sam",19866,T48,48.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Tabuena, Miguel",15274,T48,48.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Watson, Bubba",7334,T48,48.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Burmester, Dean",14424,T51,51.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Kaymer, Martin",8117,T51,51.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Wolff, Matthew",25919,T51,51.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Perez, Victor",20730,54,54.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Bland, Richard",6516,55,55.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Schniederjans, Ollie",18662,56,56.0,0,0,0,0,1,0
+2026,Riyadh,1027,2026-02-07,"Steele, Brendan",11019,57,57.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Puig, David",28984,1,1.0,1,1,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Wenyi, Ding",26193,2,2.0,0,1,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Leishman, Marc",7649,T3,3.0,0,1,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Voke, Nick",24091,T3,3.0,0,1,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Hillier, Daniel",21362,T5,5.0,0,1,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Woo Lee, Min",16841,T5,5.0,0,1,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Scott, Adam",6430,7,7.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Gale, Daniel",19212,T8,8.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Gouveia, Ricardo",18722,T8,8.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Bairstow, Sam",28615,T10,10.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ballester, Jose Luis",28473,T10,10.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Quayle, Anthony",18900,T10,10.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Wiesberger, Bernd",9531,T10,10.0,0,0,1,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Bryant, Davis",32550,T14,14.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"De Leo, Gregorio",26506,T14,14.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Marchesani, James",19258,T14,14.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Munoz, Sebastian",20770,T14,14.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Vaillant, Tom",28157,T14,14.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Brady, Adam",24159,T19,19.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Croker, Quinnton",25813,T19,19.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Fitzpatrick, Alex",25362,T19,19.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Geary, Josh",9903,T19,19.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Smylie, Elvis",24200,T19,19.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Williams, Robin",24093,T19,19.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Bautista, Austin",21152,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Kobori, Kazuma",24369,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Mazzoli, Stefano",20844,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ormsby, Wade",7532,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ortiz, Carlos",14735,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Peake, Ryan",15169,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Penge, Marco",22465,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Yellamaraju, Sudarshan",29925,T25,25.0,0,0,0,1,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ancer, Abraham",18238,T33,33.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Broomhead, Jonothan",30210,T33,33.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Charmasson, Clement",22220,T33,33.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Da Costa Rodrigues, Daniel",27149,T33,33.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Davis, Cameron",17786,T33,33.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Morrison, James",11061,T33,33.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Fox, Ryan",11889,T39,39.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Pulkkanen, Tapio",13139,T39,39.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Florimo, Will",25780,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Law, David",14784,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ogilvy, Geoff",5698,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Rankin, Brett",11820,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Schott, Freddy",27588,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Scrivener, Jason",12734,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Thompson, Jack",25502,T41,41.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Barker, Lachlan",30448,T48,48.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Bland, Adam",10829,T48,48.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Buchanan, Jack",27379,T48,48.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Luck, Curtis",16842,T48,48.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Wood, Christopher",16012,T48,48.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Jonsson, Tobias",28686,T53,53.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"McLeod, Jake",17146,T53,53.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Repetto Taylor, Rocco Paolo",31235,T53,53.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Barbieri, Nathan",24300,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Bekker, Oliver",12819,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Colsaerts, Nicolas",6893,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Coussaud, Ugo",20727,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Crowe, Harrison",24280,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Garcia Rodriguez, Sebastian",12258,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Paul, Yannik",19898,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Pepperell, Eddie",15113,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Senior, Jack",15115,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Sharma, Shubhankar",17081,T56,56.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Aphibarnrat, Kiradech",12321,T66,66.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ieremia, Denzel",20918,T66,66.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Katsuragawa, Yuto",20448,T66,66.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Sordet, Clement",17718,T66,66.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Wood, Tyler",30745,T66,66.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Campos, Rafael",12909,71,71.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Griffin, Matthew",9780,72,72.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Wright, Michael",6535,73,73.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Gumberg, Jordan",23892,74,74.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Martin, Andrew",9774,75,75.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Van Velzen, Ryan",27960,76,76.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Sims, Thomas",31485,77,77.0,0,0,0,0,1,0
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Adam, Cameron",34024,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Barron, Haydn",19068,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Brereton, Darcy",24367,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Bruyeres, William",27485,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Campbell, Andrew",18959,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Campbell, Phoenix",29184,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Carter, Jak",30447,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Chalmers, Greg",5625,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Chamberlain, Lachlan",34736,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Cockerill, Aaron",15596,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Conran, James",21105,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Crawford, Cory",17785,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Crocker, Sean",23610,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Doull, Jordan",21085,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Eccles, Ben",17163,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Evans, Andrew",15589,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Fairfax, Gavin",16018,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Follet-Smith, Benjamin",15211,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Ford, Jayden",29296,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Fraser, Marcus",7070,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Gardner, Dylan",25816,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Guan, Jeffrey",28093,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Halvorsen, Andreas",17747,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Hart, Tim",15920,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Hawkes, Simon",16959,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Henkel, Ben",30680,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Hodge, Tyler",16931,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"John, Cameron",19390,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Johnston, Andrew",14666,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Jones, Brendan",6254,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Jones, Matt",8605,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Kimsey, Nathan",18027,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Klein, Douglas",22821,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Lamb, Corey",27382,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Lee, Mason",21364,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Lonard, Peter",4122,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Mackenzie, Jay",22823,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Malec, Chris",20550,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Martin, Brody",19076,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"McDade, Connor",30485,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Morgan, Jed",22738,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Mountcastle, Kerry",24285,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Munro, Jack",17601,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Neergaard-Petersen, Rasmus",23841,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Niemann, Joaquin",18079,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Norris, Jason",5769,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Pampling, Rod",5668,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Pickin, Jye",25857,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Proverbs, Blake",18157,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Rumford, Brett",6255,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Sanchez, Matias",18180,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Simpson, Alex",11815,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Smith, Cameron",15856,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Smith, Mitchell",20555,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Stubbs, Jasper",25964,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Tarren, Callum",20519,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Thompson, Mako",30756,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Watt, Brady",16845,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Williams, Kameron",28572,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
+2026,BMW Australian PGA Championship,2026100,2025-11-30,"Zheng, Jimmy",26067,CUT,,0,0,0,0,0,1
+2026,Dubai Invitational,2026105,2026-01-18,"Elvira Mijares, Ignacio",12988,1,1.0,1,1,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Hillier, Daniel",21362,2,2.0,0,1,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Guerrier, Julien",10201,T3,3.0,0,1,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lowry, Shane",13900,T3,3.0,0,1,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"McIlroy, Rory",10091,T3,3.0,0,1,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Puig, David",28984,T3,3.0,0,1,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Armitage, Marcus",17813,T7,7.0,0,0,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Olesen, Thorbjorn",13412,T7,7.0,0,0,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Wallace, Matt",20706,T7,7.0,0,0,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Frittelli, Dylan",11955,T10,10.0,0,0,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lawrence, Thriston",18105,T10,10.0,0,0,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Rozner, Antoine",18770,T10,10.0,0,0,1,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Ayora, Angel",30445,T13,13.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Siem, Marcel",6950,T13,13.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Kruyswijk, Jacques",16896,T15,15.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lindell, Oliver",20085,T15,15.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lopez-Chacarra, Eugenio",26745,T15,15.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Otaegui, Adrian",14975,T15,15.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Neergaard-Petersen, Rasmus",23841,19,19.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Ferguson, Ewen",21646,T20,20.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Forrest, Grant",16475,T20,20.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Luiten, Joost",10158,T20,20.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Norris, Shaun",7677,T20,20.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Schaper, Jayden Trey",26991,T20,20.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Fleetwood, Tommy",12294,25,25.0,0,0,0,1,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Reed, Patrick",14838,26,26.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Fox, Ryan",11889,T27,27.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lagergren, Joakim",14780,T27,27.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Waring, Paul",12426,T27,27.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Bradbury, Dan",29971,T30,30.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Olesen, Jacob Skov",25611,T30,30.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Syme, Connor",22089,T30,30.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Johnston, Ryggs",32449,T33,33.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lacroix, Frederic",23733,T33,33.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Lee, Junghwan",13498,T33,33.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Migliozzi, Guido",17357,T33,33.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Moller, Niklas Norgaard",15676,T33,33.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Gavins, Daniel",18241,T38,38.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Hidalgo, Angel",24127,T38,38.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Manassero, Matteo",11460,T38,38.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Mckibbin , Tom",22322,T38,38.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Couvra, Martin",27811,T42,42.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Del Rey, Alejandro",22259,T42,42.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Van Driel, Darius",13374,T42,42.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Willett, Danny",12920,45,45.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Harrington, Padraig",5716,46,46.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Hill, Calum",25131,T47,47.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Hoshino, Rikuya",19190,T47,47.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Katsuragawa, Yuto",20448,T47,47.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Molinari, Francesco",7655,T47,47.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Von Dellingshausen, Nicolai",22231,T47,47.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Hojgaard, Nicolai",23602,T52,52.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Sullivan, Andy",15326,T52,52.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Larrazabal, Pablo",9133,T54,54.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Veerman, Johannes",20522,T54,54.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Strydom, Ockie",13731,56,56.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Ravetto, David",23416,57,57.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Naidoo, Dylan",19429,58,58.0,0,0,0,0,1,0
+2026,Dubai Invitational,2026105,2026-01-18,"Wu, Ashun",11763,WD,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Sullivan, Andy",15326,2,2.0,0,1,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Guerrier, Julien",10201,3,3.0,0,1,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hojgaard, Nicolai",23602,T4,4.0,0,1,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Molinari, Francesco",7655,T4,4.0,0,1,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Schaper, Jayden Trey",26991,T4,4.0,0,1,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Armitage, Marcus",17813,T7,7.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Gouveia, Ricardo",18722,T7,7.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Puig, David",28984,T7,7.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Couvra, Martin",27811,T10,10.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Maas, Christian",27947,T10,10.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Olesen, Thorbjorn",13412,T10,10.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Van Driel, Darius",13374,T10,10.0,0,0,1,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Detry, Thomas",14181,T14,14.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hoshino, Rikuya",19190,T14,14.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hovland, Viktor",18841,T14,14.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Pavan, Andrea",12177,T14,14.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Veerman, Johannes",20522,T14,14.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Cabrera Bello, Rafa",7457,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Campillo, Jorge",14016,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Du Plessis, Hennie",19421,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Fitzpatrick, Alex",25362,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Kruyswijk, Jacques",16896,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Mckibbin , Tom",22322,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Wenyi, Ding",26193,T19,19.0,0,0,0,1,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Ayora, Angel",30445,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Del Rey, Alejandro",22259,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hidalgo, Angel",24127,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hillier, Daniel",21362,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lindell, Oliver",20085,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lombard, Zander",16897,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lowry, Shane",13900,T26,26.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Crocker, Sean",23610,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Ferguson, Ewen",21646,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hatton, Tyrrell",14796,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Langasque, Romain",16652,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"McIlroy, Rory",10091,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Ritchie, JC",18174,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Schneider, Marcel",12522,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Von Dellingshausen, Nicolai",22231,T33,33.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Bradbury, Dan",29971,T41,41.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Cantero Gutierrez, Ivan",19635,T41,41.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Fleetwood, Tommy",12294,T41,41.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Forrest, Grant",16475,T41,41.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Canter, Laurie",14795,T45,45.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Fox, Ryan",11889,T45,45.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lindberg, Mikael",20084,T45,45.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Neergaard-Petersen, Rasmus",23841,T45,45.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Coussaud, Ugo",20727,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Girrbach, Joel",15592,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Katsuragawa, Yuto",20448,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Micheluzzi, David",19224,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Pepperell, Eddie",15113,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Ramsay, Richie",11396,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Schott, Freddy",27588,T49,49.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hollick, Michael",15993,T56,56.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Jarvis, Casey",26947,T56,56.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lacroix, Frederic",23733,T56,56.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Luiten, Joost",10158,T56,56.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Wu, Ashun",11763,T56,56.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Bairstow, Sam",28615,T61,61.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Elvira, Manuel",26008,T61,61.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Meronk, Adrian",14196,T61,61.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Fisher, Ross",9396,T64,64.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Frittelli, Dylan",11955,T64,64.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Perez, Victor",20730,T64,64.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lemke, Niklas",10418,67,67.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Dantorp, Jens",14018,68,68.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Ko, Jeong Weon",26213,69,69.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Winther, Jeff",15680,70,70.0,0,0,0,0,1,0
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Aphibarnrat, Kiradech",12321,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Clements, Todd",22608,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Dean, Joe",16497,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Elvira Mijares, Ignacio",12988,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Fang, Ethan",34025,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Fichardt, Darren",5754,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Gavins, Daniel",18241,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Harrington, Padraig",5716,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Hill, Calum",25131,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Jamieson, Scott",11397,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Johnson, Dustin",12422,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Johnston, Andrew",14666,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Jordan, Matthew",25601,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Kinhult, Marcus",18514,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Kobori, Kazuma",24369,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Laporta, Francesco",14987,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lee, Junghwan",13498,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Lopez-Chacarra, Eugenio",26745,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Manassero, Matteo",11460,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Migliozzi, Guido",17357,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Moller, Niklas Norgaard",15676,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Morrison, James",11061,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Niemann, Joaquin",18079,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Norris, Shaun",7677,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Olesen, Jacob Skov",25611,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Ravetto, David",23416,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Rozner, Antoine",18770,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Schmidt, Ben",27258,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Scrivener, Jason",12734,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Siem, Marcel",6950,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Skaik, Ahmed",22711,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Smylie, Elvis",24200,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Sterne, Richard",7049,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Stone, Brandon",15229,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Strydom, Ockie",13731,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Syme, Connor",22089,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Vaillant, Tom",28157,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Waring, Paul",12426,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Wiesberger, Bernd",9531,CUT,,0,0,0,0,0,1
+2026,Hero Dubai Desert Classic,2026106,2026-01-25,"Willett, Danny",12920,WD,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Schott, Freddy",27588,1,1.0,1,1,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Hill, Calum",25131,T2,2.0,0,1,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Reed, Patrick",14838,T2,2.0,0,1,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Garcia, Sergio",5689,T4,4.0,0,1,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Hillier, Daniel",21362,T4,4.0,0,1,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Coussaud, Ugo",20727,6,6.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Elvira Mijares, Ignacio",12988,T7,7.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Forrest, Grant",16475,T7,7.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Jarvis, Casey",26947,T9,9.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Kimsey, Nathan",18027,T9,9.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lindell, Oliver",20085,T9,9.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Pavan, Andrea",12177,T9,9.0,0,0,1,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Berry, Joshua",31520,T13,13.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Broomhead, Jonothan",30210,T13,13.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lindberg, Mikael",20084,T13,13.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Cabrera Bello, Rafa",7457,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Campillo, Jorge",14016,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Dantorp, Jens",14018,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Du Plessis, Hennie",19421,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Fitzpatrick, Alex",25362,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Laporta, Francesco",14987,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Schmidt, Ben",27258,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Scrivener, Jason",12734,T16,16.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Clements, Todd",22608,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Couvra, Martin",27811,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Guerrier, Julien",10201,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lemke, Niklas",10418,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Luiten, Joost",10158,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ravetto, David",23416,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Stone, Brandon",15229,T24,24.0,0,0,0,1,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Da Costa Rodrigues, Daniel",27149,T31,31.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Girrbach, Joel",15592,T31,31.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Quayle, Anthony",18900,T31,31.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Bairstow, Sam",28615,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Dean, Joe",16497,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Del Rey, Alejandro",22259,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Halvorsen, Andreas",17747,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Jonsson, Tobias",28686,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ritchie, JC",18174,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Veerman, Johannes",20522,T34,34.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Elvira, Manuel",26008,T41,41.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lacroix, Frederic",23733,T41,41.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lopez-Chacarra, Eugenio",26745,T41,41.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Manassero, Matteo",11460,T41,41.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Sterne, Richard",7049,T41,41.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Von Dellingshausen, Nicolai",22231,T41,41.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Hollick, Michael",15993,T47,47.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Johnston, Andrew",14666,T47,47.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Kaneko, Kota",28268,T47,47.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Migliozzi, Guido",17357,T47,47.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Olesen, Jacob Skov",25611,T47,47.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Celli, Filippo",23549,T52,52.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Schaper, Jayden Trey",26991,T52,52.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Cantero Gutierrez, Ivan",19635,T54,54.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Morrison, James",11061,T54,54.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Naidoo, Dylan",19429,T54,54.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Sharma, Shubhankar",17081,T57,57.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Young, Daniel",19908,T57,57.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Canter, Laurie",14795,T59,59.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Paratore, Renato",16549,T59,59.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lee, Junghwan",13498,T61,61.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Townsend, Hugo",31165,T61,61.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"McKinney, Connor",24172,63,63.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Bryant, Davis",32550,T64,64.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"De Leo, Gregorio",26506,T64,64.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Fichardt, Darren",5754,T64,64.0,0,0,0,0,1,0
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Adam, Cameron",34024,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Al Zayed, Ahmed",30586,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Alkowari, Ali",26093,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Aphibarnrat, Kiradech",12321,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ayora, Angel",30445,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Blomme, Adam",23784,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Bradbury, Dan",29971,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Charmasson, Clement",22220,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Crocker, Sean",23610,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Debove , Quentin",25325,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Detry, Thomas",14181,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ferguson, Ewen",21646,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Firdaus, Zubair",25815,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Fisher, Ross",9396,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Follet-Smith, Benjamin",15211,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Garcia Rodriguez, Sebastian",12258,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Gavins, Daniel",18241,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Guillamoundeguy, Oihan",28239,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Harrington, Padraig",5716,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Hoshino, Rikuya",19190,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Jamieson, Scott",11397,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Jordan, Matthew",25601,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Katsuragawa, Yuto",20448,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Kinhult, Marcus",18514,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Kobori, Kazuma",24369,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Langasque, Romain",16652,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Levy, Alexander",14973,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Lombard, Zander",16897,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Mohamed, Khalifa",30481,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Moller, Niklas Norgaard",15676,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Mory , Felix",25089,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Norris, Shaun",7677,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ok, Taehoon",21072,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Palmer, Ryan",7820,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Rozner, Antoine",18770,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Schneider, Marcel",12522,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Siem, Marcel",6950,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Sloman, Tom",24055,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Strydom, Ockie",13731,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Sullivan, Andy",15326,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Vaillant, Tom",28157,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Van Driel, Darius",13374,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Van Tonder, Daniel",15193,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Wenyi, Ding",26193,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Wiesberger, Bernd",9531,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Winther, Jeff",15680,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Wu, Ashun",11763,CUT,,0,0,0,0,0,1
+2026,Bapco Energies Bahrain Championship,2026107,2026-02-01,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Veerman, Johannes",20522,T3,3.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Ayora, Angel",30445,T5,5.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Bradbury, Dan",29971,T5,5.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Lindell, Oliver",20085,T5,5.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Soderberg, Sebastian",18517,T5,5.0,0,1,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"De Leo, Gregorio",26506,T9,9.0,0,0,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Kobori, Kazuma",24369,T9,9.0,0,0,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Micheluzzi, David",19224,T9,9.0,0,0,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Rozner, Antoine",18770,T9,9.0,0,0,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Schaper, Jayden Trey",26991,T9,9.0,0,0,1,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Elvira Mijares, Ignacio",12988,14,14.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Du Plessis, Hennie",19421,T15,15.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Forrest, Grant",16475,T15,15.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Kaneko, Kota",28268,T15,15.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Lagergren, Joakim",14780,T15,15.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Sterne, Richard",7049,T15,15.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Clements, Todd",22608,T20,20.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Frittelli, Dylan",11955,T20,20.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Hillier, Daniel",21362,T20,20.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Wallace, Matt",20706,T20,20.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Debove , Quentin",25325,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Ferguson, Ewen",21646,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Follet-Smith, Benjamin",15211,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Kimsey, Nathan",18027,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Kinhult, Marcus",18514,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Lacroix, Frederic",23733,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Scrivener, Jason",12734,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Svensson, Jesper",26850,T24,24.0,0,0,0,1,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Jordan, Matthew",25601,T32,32.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Waring, Paul",12426,T32,32.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Cabrera Bello, Rafa",7457,T34,34.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Harrington, Padraig",5716,T34,34.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Adam, Cameron",34024,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Blomme, Adam",23784,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Guerrier, Julien",10201,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Lindberg, Mikael",20084,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Migliozzi, Guido",17357,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Moller, Niklas Norgaard",15676,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Stone, Brandon",15229,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Sullivan, Andy",15326,T36,36.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Larrazabal, Pablo",9133,T44,44.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Ok, Taehoon",21072,T44,44.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Peake, Ryan",15169,T44,44.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Vaillant, Tom",28157,T44,44.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Arnaus, Adri",23236,T48,48.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Guillamoundeguy, Oihan",28239,T48,48.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Jonsson, Tobias",28686,T48,48.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Lee, Junghwan",13498,T48,48.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Laporta, Francesco",14987,T52,52.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Otaegui, Adrian",14975,T52,52.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Paratore, Renato",16549,T52,52.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Van Tonder, Daniel",15193,T52,52.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Bairstow, Sam",28615,56,56.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Aphibarnrat, Kiradech",12321,T57,57.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Charmasson, Clement",22220,T57,57.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Crocker, Sean",23610,T57,57.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Kaewkanjana, Sadom",19844,T57,57.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Kruyswijk, Jacques",16896,T57,57.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Armitage, Marcus",17813,T62,62.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Langasque, Romain",16652,T62,62.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Wiesberger, Bernd",9531,T62,62.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Da Costa Rodrigues, Daniel",27149,65,65.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Townsend, Hugo",31165,66,66.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Toorop, Mike",25273,67,67.0,0,0,0,0,1,0
+2026,Qatar Masters,2026145,2026-02-08,"Al Kaabi, Saleh",17056,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Al-Shahrani, Ali",15960,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Broomhead, Jonothan",30210,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Bryant, Davis",32550,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Campillo, Jorge",14016,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Cockerill, Aaron",15596,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Coussaud, Ugo",20727,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Couvra, Martin",27811,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Dantorp, Jens",14018,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Dean, Joe",16497,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Del Rey, Alejandro",22259,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"El hali, Reda",33870,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Elvira, Manuel",26008,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Fichardt, Darren",5754,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Fisher, Oliver",10863,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Fisher, Ross",9396,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Fitzpatrick, Alex",25362,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Garcia Rodriguez, Sebastian",12258,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Halvorsen, Andreas",17747,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Harding, Justin",10886,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Hoshino, Rikuya",19190,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Ikstrums, Andrew Charles",34886,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Jamieson, Scott",11397,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Jarvis, Casey",26947,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Lemke, Niklas",10418,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"List, Luke",7960,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Lombard, Zander",16897,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Lopez-Chacarra, Eugenio",26745,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"McGlinchey, Dominic",31886,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Morrison, James",11061,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Mory , Felix",25089,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Palmer, Ryan",7820,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Pavan, Andrea",12177,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Pepperell, Eddie",15113,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Quayle, Anthony",18900,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Ravetto, David",23416,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Ritchie, JC",18174,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Schneider, Marcel",12522,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Sokolov, Daniil",31827,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Strydom, Ockie",13731,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Syme, Connor",22089,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Von Dellingshausen, Nicolai",22231,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Wenyi, Ding",26193,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Winther, Jeff",15680,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Wood, Chris",12451,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Wu, Ashun",11763,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,Qatar Masters,2026145,2026-02-08,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
