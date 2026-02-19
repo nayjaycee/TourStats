@@ -1,13 +1,15 @@
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
+# --- secrets / env ---
+.env
+.env.*
+*.env
 
-# IDE / OS
-.idea/
-.vscode/
-.DS_Store
-
-# Streamlit secrets
+# Streamlit local secrets (do NOT commit)
 .streamlit/secrets.toml
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
