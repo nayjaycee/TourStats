@@ -105,8 +105,8 @@ def load_eventlevel_2017_2023() -> pd.DataFrame:
 
 
 SEASON_YEAR = 2026
-
-st.title("One and Done")
+APP_VERSION = "1.0.0"
+st.title(f"TourStats - v{APP_VERSION}")
 
 HERO_H = 240  # <-- tune: 230-280
 
