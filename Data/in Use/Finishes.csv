@@ -697,6 +697,321 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,The Genesis Invitational,7,2026-02-22,"Rose, Justin",6093,CUT,,0,0,0,0,0,1
 2026,The Genesis Invitational,7,2026-02-22,"Spaun, J.J.",17536,CUT,,0,0,0,0,0,1
 2026,The Genesis Invitational,7,2026-02-22,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Bhatia, Akshay",26096,1,1.0,1,1,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Berger, Daniel",17606,2,2.0,0,1,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Aberg, Ludvig",23950,T3,3.0,0,1,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Young, Cameron",26651,T3,3.0,0,1,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Morikawa, Collin",22085,5,5.0,0,1,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Henley, Russell",14578,T6,6.0,0,0,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Lee, Min Woo",16841,T6,6.0,0,0,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Theegala, Sahith",23014,T6,6.0,0,0,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Fowler, Rickie",12965,T9,9.0,0,0,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Hall, Harry",27194,T9,9.0,0,0,1,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Scott, Adam",6430,T11,11.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Spieth, Jordan",14636,T11,11.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Horschel, Billy",11276,T13,13.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Hovland, Viktor",18841,T13,13.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Kim, Si Woo",14609,T13,13.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"McNealy, Maverick",18634,T13,13.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Straka, Sepp",17511,T13,13.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Bridgeman, Jacob",29433,T18,18.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Cauley, Bud",14502,T18,18.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Gotterup, Chris",27774,T18,18.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Greyserman, Max",23465,T18,18.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Kitayama, Kurt",21891,T18,18.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Vegas, Jhonattan",13508,T18,18.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"English, Harris",14577,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Fox, Ryan",11889,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Glover, Lucas",7399,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Hojgaard, Nicolai",23602,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"MacIntyre, Robert",23323,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Noren, Alex",10419,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Rodgers, Patrick",16283,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Schauffele, Xander",19895,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Scheffler, Scottie",18417,T24,24.0,0,0,0,1,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Conners, Corey",17576,T33,33.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Hisatsune, Ryo",22760,T33,33.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Kim, Michael",17543,T33,33.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Mitchell, Keith",17365,T33,33.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Thorbjornsen, Michael",26649,T33,33.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Novak, Andrew",23475,T38,38.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Pendrith, Taylor",17780,T38,38.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Taylor, Nick",13126,T38,38.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Fitzpatrick, Matt",17646,T41,41.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Matsuyama, Hideki",13562,T41,41.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"McCarty, Matt",28635,T41,41.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Echavarria, Nico",22833,T44,44.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Moore, Taylor",21944,T44,44.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Putnam, Andrew",14704,T44,44.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Bennett, Daniel",30332,T47,47.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Kirk, Chris",12423,T47,47.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Fleetwood, Tommy",12294,49,49.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Harman, Brian",8825,50,50.0,0,0,0,0,1,0
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Bradley, Keegan",13872,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Burns, Sam",19483,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Cantlay, Patrick",15466,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Coody, Pierceson",28309,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Dahmen, Joel",14509,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Day, Jason",9771,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Gerard, Ryan",29767,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Griffin, Ben",24968,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Hoge, Tom",15575,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Im, Sungjae",17488,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Lowry, Shane",13900,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"McCarthy, Denny",19870,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"McIlroy, Rory",10091,WD,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Poston, J.T.",21554,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Rose, Justin",6093,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Smotherman, Austin",22985,WD,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Spaun, J.J.",17536,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Stevens, Sam",25569,CUT,,0,0,0,0,0,1
+2026,Arnold Palmer Invitational presented by Mastercard,9,2026-03-08,"Thomas, Justin",14139,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Echavarria, Nico",22833,1,1.0,1,1,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Lowry, Shane",13900,T2,2.0,0,1,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Moore, Taylor",21944,T2,2.0,0,1,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Smotherman, Austin",22985,T2,2.0,0,1,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Castillo, Ricky",27819,5,5.0,0,1,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hojgaard, Nicolai",23602,T6,6.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Mitchell, Keith",17365,T6,6.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Mouw, William",29770,T6,6.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Dahmen, Joel",14509,T9,9.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hojgaard, Rasmus",23838,T9,9.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Koepka, Brooks",16243,T9,9.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Schmid, Matti",20722,T9,9.0,0,0,1,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Ewart, A.J.",21883,T13,13.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Homa, Max",17538,T13,13.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kizzire, Patton",13470,T13,13.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Nyholm, Pontus",25475,T13,13.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Dou, Zecheng",16757,T17,17.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kanaya, Takumi",19729,T17,17.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Pavon, Matthieu",19960,T17,17.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Ramey, Chad",19840,T17,17.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Reitan, Kristoffer",21407,T17,17.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Yellamaraju, Sudarshan",29925,T17,17.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Bauchou, Zach",19846,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Dumont de Chassart, Adrien",22002,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Gerard, Ryan",29767,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hossler, Beau",15470,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hubbard, Mark",16333,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hughes, Mackenzie",15556,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Rai, Aaron",18554,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Roy, Kevin",18424,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Smith, Jordan",18586,T23,23.0,0,0,0,1,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Berger, Daniel",17606,T32,32.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Ford, David",31343,T32,32.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Li, Haotong",15310,T32,32.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Stanger, Jimmy",23048,T32,32.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Streelman, Kevin",8480,T32,32.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Bezuidenhout, Christiaan",18103,T37,37.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Cole, Eric",21756,T37,37.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Fisk, Steven",26657,T37,37.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Brown, Dan",20766,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Eckroat, Austin",26653,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Fishburn, Patrick",25094,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Higgo, Garrick",24342,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hodges, Lee",25157,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Lebioda, Hank",21943,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"McGreevy, Max",23505,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Neergaard-Petersen, Rasmus",23841,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Olesen, Thorbjorn",13412,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Silverman, Ben",17381,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Walker, Danny",25003,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Wallace, Matt",20706,T40,40.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Brennan, Michael",29197,T52,52.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Power, Seamus",10104,T52,52.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Smalley, Alex",18474,T52,52.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Young, Carson",23656,T52,52.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Grillo, Emiliano",12808,T56,56.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kim, Chan",15004,T56,56.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Saddier, Adrien",14792,T56,56.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kim, Tom",24766,59,59.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Schenk, Adam",19477,T60,60.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Thompson, Davis",27364,T60,60.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Horschel, Billy",11276,62,62.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Parry, John",13764,T63,63.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Phillips, Chandler",27164,T63,63.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Suber, Jackson",29279,T63,63.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Wu, Dylan",25002,66,66.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Highsmith, Joe",28469,67,67.0,0,0,0,0,1,0
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Brown, Blades",32152,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Capan III, Frankie",21412,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Clanton, Luke",32330,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Davis, Cam",17786,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Dunlap, Nick",28270,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Ghim, Doug",24550,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Griffin, Lanto",15330,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hadwin, Adam",13965,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hicks, Justin",9166,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hoey, Rico",23504,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Jaeger, Stephan",16394,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Keefer, Johnny",32457,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kim, S.H.",21688,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kirk, Chris",12423,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Kuchar, Matt",6169,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Lee, K.H.",13497,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Lipsky, David",15980,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Lower, Justin",17723,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Meissner, Mac",28159,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Nakajima, Keita",21074,WD,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Putnam, Andrew",14704,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Ryder, Sam",16715,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Salinda, Isaiah",27183,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Simpson, Webb",11049,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Svensson, Jesper",26850,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Thorbjornsen, Michael",26649,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Todd, Brendon",12425,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Valimaki, Sami",23816,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Vilips, Karl",24304,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Villegas, Camilo",9171,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Waring, Paul",12426,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Willett, Danny",12920,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Woodland, Gary",12577,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
+2026,Cognizant Classic in The Palm Beaches,10,2026-03-01,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Castillo, Ricky",27819,1,1.0,1,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Blanchet, Chandler",24956,2,2.0,0,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Brown, Blades",32152,3,3.0,0,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Thompson, Davis",27364,4,4.0,0,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Clanton, Luke",32330,T5,5.0,0,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Peterson, Paul",16341,T5,5.0,0,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Schmid, Matti",20722,T5,5.0,0,1,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Bezuidenhout, Christiaan",18103,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Blair, Zac",17639,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Parry, John",13764,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Paul, Jeremy",22087,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Sargent, Gordon",30814,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Skinns, David",10873,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Streelman, Kevin",8480,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Svensson, Jesper",26850,T8,8.0,0,0,1,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Akina, Kihei",32652,T16,16.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Campos, Rafael",12909,T16,16.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Ford, David",31343,T16,16.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Nyholm, Pontus",25475,T16,16.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Silverman, Ben",17381,T16,16.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Barnes, Erik",14799,T21,21.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Bauchou, Zach",19846,T21,21.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Chacarra, Eugenio",26745,T21,21.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Hadwin, Adam",13965,T21,21.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"VanDerLaan, John",25319,T21,21.0,0,0,0,1,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Brehm, Ryan",10423,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Brennan, Michael",29197,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Dumont de Chassart, Adrien",22002,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Ewart, A.J.",21883,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Ghim, Doug",24550,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Kim, Chan",15004,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Malnati, Peter",14926,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Springer, Hayden",21995,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Stanger, Jimmy",23048,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Svensson, Adam",13997,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Whaley, Vince",25908,T26,26.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Biondi, Fred",25614,T37,37.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Daly II, John",32432,T37,37.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Hossler, Beau",15470,T37,37.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Lipsky, David",15980,T37,37.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Yellamaraju, Sudarshan",29925,T37,37.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Chatfield, Davis",30620,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Eckroat, Austin",26653,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Hubbard, Mark",16333,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Kim, S.H.",21688,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Kohles, Ben",16395,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Pavon, Matthieu",19960,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Riley, Davis",19872,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Willett, Danny",12920,T42,42.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Capan III, Frankie",21412,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Duncan, Tyler",18187,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Garnett, Brice",11451,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Lamprecht, Christo",24343,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Russell, Miles",32064,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Salinda, Isaiah",27183,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Wu, Dylan",25002,T50,50.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Dou, Zecheng",16757,T57,57.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Laird, Martin",9586,T57,57.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Norlander, Henrik",11657,T57,57.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Streb, Robert",14852,T57,57.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Lebioda, Hank",21943,T61,61.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Walker, Danny",25003,T61,61.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Villegas, Camilo",9171,63,63.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Hahn, James",11374,64,64.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Rozo, Marcelo",16591,65,65.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Merritt, Troy",13367,T66,66.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Young, Carson",23656,T66,66.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Neergaard-Petersen, Rasmus",23841,68,68.0,0,0,0,0,1,0
+2026,Puerto Rico Open,483,2026-03-08,"Bertagnole, Carson",34966,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Byrd, Jonathan",6931,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Champ, Cameron",23542,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Cole, Eric",21756,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Cook, Austin",18579,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Dufner, Jason",7301,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Dunlap, Nick",28270,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Fishburn, Patrick",25094,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Gomez, Fabian",8571,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Goodwin, Noah",24837,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Griffin, Lanto",15330,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Hadley, Chesson",14967,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Hardy, Nick",19865,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Hojgaard, Rasmus",23838,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Jakubcik, Filip",26482,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Kanaya, Takumi",19729,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Kartrude, Michael",23469,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Lindheim, Nicholas",16713,WD,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"List, Luke",7960,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Long, Adam",15473,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Long, Luke",31193,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Lower, Justin",17723,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Martin, Ben",14007,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"McGirt, William",12477,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Montgomery, Taylor",25442,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Nido, Chris",23094,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Palmer, Ryan",7820,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Pena, Evan",31959,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Piercy, Scott",7899,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Potter, Jr., Ted",8769,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Power, Seamus",10104,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Ramey, Chad",19840,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Ryder, Sam",16715,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Saddier, Adrien",14792,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Sienkiewicz, Chase",31216,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Simoni, Reinaldo",33277,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Suber, Jackson",29279,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Wallace, Matt",20706,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Waring, Paul",12426,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Puerto Rico Open,483,2026-03-08,"van Wyk, Kieron",27300,CUT,,0,0,0,0,0,1
 2026,Adelaide,1012,2026-02-15,"Kim, Anthony",11641,1,1.0,1,1,1,1,1,0
 2026,Adelaide,1012,2026-02-15,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
 2026,Adelaide,1012,2026-02-15,"DeChambeau, Bryson",19841,T3,3.0,0,1,1,1,1,0
@@ -832,6 +1147,63 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Promotions Event,1018,2026-01-11,"Wannasrichan, Rattanon",14953,NAN,,0,0,0,0,0,1
 2026,Promotions Event,1018,2026-01-11,"Wood, Chris",12451,NAN,,0,0,0,0,0,1
 2026,Promotions Event,1018,2026-01-11,"Wood, Christopher",16012,NAN,,0,0,0,0,0,1
+2026,Hong Kong,1020,2026-03-08,"Rahm, Jon",19195,1,1.0,1,1,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Detry, Thomas",14181,2,2.0,0,1,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Pieters, Thomas",13944,3,3.0,0,1,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Varner III, Harold",16602,4,4.0,0,1,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Wolff, Matthew",25919,5,5.0,0,1,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Ortiz, Carlos",14735,6,6.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Burmester, Dean",14424,7,7.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Garcia, Sergio",5689,T8,8.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Herbert, Lucas",17064,T8,8.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"McDowell, Graeme",7548,T8,8.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Oosthuizen, Louis",7672,T8,8.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Puig, David",28984,T8,8.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Smylie, Elvis",24200,T8,8.0,0,0,1,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Bland, Richard",6516,T14,14.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Casey, Paul",7108,T14,14.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Munoz, Sebastian",20770,T16,16.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Perez, Victor",20730,T16,16.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Ancer, Abraham",18238,T18,18.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Gooch, Talor",18580,T18,18.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Howell III, Charles",6892,T18,18.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Lee, Richard",12413,T18,18.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Surratt, Caleb",30463,T18,18.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Westwood, Lee",4052,T18,18.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"DeChambeau, Bryson",19841,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Grace, Branden",11952,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Johnson, Dustin",12422,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Lahiri, Anirban",12669,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Leishman, Marc",7649,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"McKibbin, Tom",22322,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Steele, Brendan",11019,T24,24.0,0,0,0,1,1,0
+2026,Hong Kong,1020,2026-03-08,"Asaji, Yosuke",12637,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Canter, Laurie",14795,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Hellgren, Bjorn",16231,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Kim, Anthony",11641,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Kokrak, Jason",12337,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Schwartzel, Charl",7398,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Song, Younghan",16160,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Tringale, Cameron",14013,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Uihlein, Peter",11357,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Vincent, Scott",14559,T31,31.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Ballester, Jose Luis",28473,T41,41.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Niemann, Joaquin",18079,T41,41.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Ormsby, Wade",7532,T41,41.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Watson, Bubba",7334,T41,41.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"An, Byeong Hun",14459,T45,45.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Hatton, Tyrrell",14796,T45,45.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Meronk, Adrian",14196,T45,45.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Smith, Cameron",15856,48,48.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Poulter, Ian",1435,49,49.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Kim, Minkyu",20780,T50,50.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Masaveu, Luis",30428,T50,50.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Kaymer, Martin",8117,T52,52.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Lee, Danny",11826,T52,52.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Tabuena, Miguel",15274,T52,52.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Campbell, Ben",14373,T55,55.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"La Sasso, Michael",33755,T55,55.0,0,0,0,0,1,0
+2026,Hong Kong,1020,2026-03-08,"Horsfield, Sam",19866,57,57.0,0,0,0,0,1,0
 2026,Riyadh,1027,2026-02-07,"Smylie, Elvis",24200,1,1.0,1,1,1,1,1,0
 2026,Riyadh,1027,2026-02-07,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
 2026,Riyadh,1027,2026-02-07,"Uihlein, Peter",11357,3,3.0,0,1,1,1,1,0
@@ -1512,6 +1884,317 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Magical Kenya Open presented by absa,2026109,2026-02-22,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
 2026,Magical Kenya Open presented by absa,2026109,2026-02-22,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
 2026,Magical Kenya Open presented by absa,2026109,2026-02-22,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Jarvis, Casey",26947,1,1.0,1,1,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Du Plessis, Hennie",19421,T2,2.0,0,1,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Lacroix, Frederic",23733,T2,2.0,0,1,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Laporta, Francesco",14987,T2,2.0,0,1,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Pepperell, Eddie",15113,5,5.0,0,1,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Otaegui, Adrian",14975,T6,6.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Porteous, Haydn",15866,T6,6.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Van Tonder, Daniel",15193,T6,6.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ayora, Angel",30445,T9,9.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Cabrera Bello, Rafa",7457,T9,9.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ferguson, Ewen",21646,T9,9.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Kimsey, Nathan",18027,T9,9.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Nienaber, Wilco",25889,T9,9.0,0,0,1,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Dean, Joe",16497,T14,14.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Del Rey, Alejandro",22259,T14,14.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Fitzpatrick, Alex",25362,T14,14.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Schott, Freddy",27588,T14,14.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Van Wyk, Kieron",27300,T14,14.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Wiesberger, Bernd",9531,T14,14.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Burmester, Dean",14424,T20,20.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Grace, Branden",11952,T20,20.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Hill, Calum",25131,T20,20.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Jordan, Matthew",25601,T20,20.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Clements, Todd",22608,T24,24.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Langasque, Romain",16652,T24,24.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Manassero, Matteo",11460,T24,24.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Rozner, Antoine",18770,T24,24.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Scrivener, Jason",12734,T24,24.0,0,0,0,1,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Albertse, Louis",24341,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Armitage, Marcus",17813,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Basson, Xander",27062,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Couvra, Martin",27811,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Guerrier, Julien",10201,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Jamieson, Scott",11397,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Lindell, Oliver",20085,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Loubser, Herman",21197,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Moller, Niklas Norgaard",15676,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Reed, Patrick",14838,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Schaper, Jayden Trey",26991,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Sullivan, Andy",15326,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Veerman, Johannes",20522,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Wenyi, Ding",26193,T29,29.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bairstow, Sam",28615,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Da Costa Rodrigues, Daniel",27149,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Fichardt, Darren",5754,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Hoshino, Rikuya",19190,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Otto, Hennie",5942,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ravetto, David",23416,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Viallaneix, Pierre",28507,T43,43.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Elvira, Manuel",26008,T50,50.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Norris, Shaun",7677,T50,50.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Stone, Brandon",15229,T50,50.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Van Driel, Darius",13374,T50,50.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Barnard, Charl",33140,T54,54.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Frittelli, Dylan",11955,T54,54.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Mitchell, Malcolm",24344,T54,54.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Aphibarnrat, Kiradech",12321,T57,57.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Follet-Smith, Benjamin",15211,T57,57.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Kaneko, Kota",28268,T57,57.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ritchie, JC",18174,T57,57.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Simpson, Samuel",27415,T57,57.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Williams, Robin",24093,T57,57.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Dantorp, Jens",14018,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Harding, Justin",10886,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Kruger, Dian",33105,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Olesen, Jacob Skov",25611,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Snyders, Tyran",33013,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Van der merwe, Altin",31699,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Walters, Justin",8045,T63,63.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Winther, Jeff",15680,70,70.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Davidse, Keenan",13725,T71,71.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Kinhult, Marcus",18514,T71,71.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Coussaud, Ugo",20727,T73,73.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Strydom, Ockie",13731,T73,73.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Johnston, Ryggs",32449,T75,75.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Mokoena, Karabo",21204,T75,75.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Leisher, Logan",33553,T77,77.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Viljoen, M.J.",19537,T77,77.0,0,0,0,0,1,0
+2026,Investec South African Open Championship,2026110,2026-03-01,"Adam, Cameron",34024,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ahlers, Jaco",11852,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Akesson, Bjorn",11530,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bachem, Nick",23016,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bautista, Austin",21152,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bekker, Oliver",12819,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Blaauw, Jacques",13681,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bradbury, Dan",29971,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bremner, Merrick",10811,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Broomhead, Jonothan",30210,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Brown, Luke",24608,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bruiners, Heinrich",11976,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Bryant, Davis",32550,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Buchanan, Jack",31844,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Campillo, Jorge",14016,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Carrera, Luis",29579,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Chinhoi, Robson",23143,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Cronje, Daniel",33139,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Daffue, Mj",17068,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"De Leo, Gregorio",26506,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Duminy, Jordan",26478,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Easton, Bryce",15181,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Els, Ernie",874,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Enefer, Will",23163,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Enoch, Rhys",12287,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ferreira, Stephen",17409,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Galant, Tristin",29495,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Germishuys, Deon",25888,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Hugo, Jean",6304,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Jerling, Luke",22039,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"John, Allen",10255,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Kaminski, Rupert",25576,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Katsuragawa, Yuto",20448,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Korb, Ruan",24575,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Kruyswijk, Jacques",16896,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Luiten, Joost",10158,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Manchest, Franklin",24593,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Mavundla, Thanda",19426,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Moolman, Pieter",15995,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Mostert, Dylan",24635,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Premlall, Yurav",25890,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Purchase, Warwick",27954,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Rama, Nikhil",27758,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Rebula, Jovan",22912,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Rossouw, Matthew",24644,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Rowe, Lyle",11956,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Rutherford, Jamie",18555,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Schietekat, Neil",11980,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Schmidt, Ben",27258,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Schneider, Marcel",12522,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Schwartzel, Charl",7398,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Senekal, JJ",15185,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Siem, Marcel",6950,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Sterne, Richard",7049,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Strydom, Tristen",19353,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Sundelson, Judd",32584,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Syme, Connor",22089,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Thimba, Toto",11864,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Van Velzen, Ryan",27960,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Van Wyk, Keelan",23596,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Vincent, Kieran",19538,CUT,,0,0,0,0,0,1
+2026,Investec South African Open Championship,2026110,2026-03-01,"Vorster, Martin",25829,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Bradbury, Dan",29971,1,1.0,1,1,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Jarvis, Casey",26947,T2,2.0,0,1,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Robinson-Thompson, Brandon",24497,T2,2.0,0,1,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Du Plessis, Hennie",19421,4,4.0,0,1,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Ravetto, David",23416,5,5.0,0,1,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Albertse, Louis",24341,T6,6.0,0,0,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Fitzpatrick, Alex",25362,T6,6.0,0,0,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Otaegui, Adrian",14975,T6,6.0,0,0,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Van Tonder, Daniel",15193,T6,6.0,0,0,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Harding, Justin",10886,T10,10.0,0,0,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Reed, Patrick",14838,T10,10.0,0,0,1,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Kimsey, Nathan",18027,T12,12.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Strydom, Ockie",13731,T12,12.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Wiesberger, Bernd",9531,T12,12.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Fisher, Ross",9396,T15,15.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Schaper, Jayden Trey",26991,T15,15.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Steinlechner, Maximilian",21677,T15,15.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Ayora, Angel",30445,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Brown, Luke",24608,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Campillo, Jorge",14016,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Garcia Rodriguez, Sebastian",12258,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"John, Allen",10255,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Johnston, Ryggs",32449,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Scrivener, Jason",12734,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Siem, Marcel",6950,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Townsend, Hugo",31165,T18,18.0,0,0,0,1,1,0
+2026,Joburg Open,2026111,2026-03-08,"Stone, Brandon",15229,27,27.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Clements, Todd",22608,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Gumberg, Jordan",23892,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Kruyswijk, Jacques",16896,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Langasque, Romain",16652,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Law, David",14784,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Luiten, Joost",10158,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Pepperell, Eddie",15113,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Prinsloo, Jaco",18204,T28,28.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Adam, Cameron",34024,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Crocker, Sean",23610,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Girrbach, Joel",15592,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Hugo, Jean",6304,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Nienaber, Wilco",25889,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Olesen, Jacob Skov",25611,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Schmidt, Ben",27258,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Syme, Connor",22089,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Vincent, Kieran",19538,T36,36.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Armitage, Marcus",17813,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Burke, Christiaan",26199,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Kaneko, Kota",28268,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Korb, Ruan",24575,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Lombard, Zander",16897,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Rutherford, Jamie",18555,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Van Velzen, Ryan",27960,T45,45.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Conradie, Estiaan",23523,T52,52.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Guerrier, Julien",10201,T52,52.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Hawksby, Jack",28376,T52,52.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Sterne, Richard",7049,T52,52.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Swart, Stals",27994,T52,52.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Del Rey, Alejandro",22259,T57,57.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Ferguson, Ewen",21646,T57,57.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Morrison, James",11061,T57,57.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Schietekat, Neil",11980,T57,57.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Sharma, Shubhankar",17081,T57,57.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Bairstow, Sam",28615,T62,62.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Dean, Joe",16497,T62,62.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Frittelli, Dylan",11955,T62,62.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Ramsay, Richie",11396,T62,62.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Van Driel, Darius",13374,T62,62.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Cantero Gutierrez, Ivan",19635,T67,67.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Senekal, JJ",15185,T67,67.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Williams, Robin",24093,69,69.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Hidalgo, Angel",24127,T70,70.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Moolman, Pieter",15995,T70,70.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Rebula, Jovan",22912,72,72.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Loubser, Herman",21197,73,73.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Vorster, Martin",25829,74,74.0,0,0,0,0,1,0
+2026,Joburg Open,2026111,2026-03-08,"Ahlers, Jaco",11852,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Akesson, Bjorn",11530,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Bachem, Nick",23016,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Barker, Kyle",23951,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Bautista, Austin",21152,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Bekker, Oliver",12819,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Blaauw, Jacques",13681,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Broomhead, Jonothan",30210,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Bruiners, Heinrich",11976,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Carrera, Luis",29579,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Chinhoi, Robson",23143,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Coussaud, Ugo",20727,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Couvra, Martin",27811,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Daffue, Mj",17068,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Davidse, Keenan",13725,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"De Beer, Kyle",27414,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"De Kock, Allister",16037,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Elvira, Manuel",26008,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Enoch, Rhys",12287,WD,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Ferreira, Stephen",17409,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Fichardt, Darren",5754,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Fisher Jr, Trevor",7678,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Follet-Smith, Benjamin",15211,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Germishuys, Deon",25888,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Hill, Calum",25131,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Hoshino, Rikuya",19190,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Jamieson, Scott",11397,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Jerling, Luke",22039,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Johnston, Andrew",14666,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Kaminski, Rupert",25576,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Katsuragawa, Yuto",20448,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Laporta, Francesco",14987,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Maart, Mark",29954,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mack, James",26610,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Manchest, Franklin",24593,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mavundla, Thanda",19426,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mazibuko, Makgetha",16823,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"McClatchie, Kyle",22911,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mitchell, Malcolm",24344,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mokoena, Karabo",21204,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Mostert, Dylan",24635,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Nethunzwi, Musiwalo",13730,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Norris, Shaun",7677,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"O'Kennedy, Hennie",26477,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Otto, Hennie",5942,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Pepler, Gerhard",25530,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Porteous, Haydn",15866,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Premlall, Yurav",25890,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Purchase, Warwick",27954,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Rama, Nikhil",27758,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Ritchie, JC",18174,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Roets, Jason",13811,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Rohwer, Martin",22169,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Rowe, Lyle",11956,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Rozner, Antoine",18770,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Schneider, Marcel",12522,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Simpson, Samuel",27415,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Sullivan, Andy",15326,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Thimba, Toto",11864,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Van Der Merwe, Graham",15911,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Van Wyk, Keelan",23596,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Van der merwe, Altin",31699,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Viljoen, M.J.",19537,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Wears-Taylor, Stefan",24101,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Wykes, Kayle",31353,CUT,,0,0,0,0,0,1
+2026,Joburg Open,2026111,2026-03-08,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
