@@ -2,13 +2,28 @@
 Strokes Gained Tab - Production Version
 Customizable stat analysis with category breakdowns
 """
-
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from typing import List, Optional
+from grass_putting_visuals import render_bermuda_putting_visuals
+
+THIS_FILE = Path(__file__).resolve()
+
+def _pick_repo_root(start: Path) -> Path:
+    candidates = [p for p in [start.parent] + list(start.parents) if (p / "Data").exists()]
+    if not candidates:
+        raise RuntimeError("Could not find repo root containing Data/")
+    return candidates[-1]
+
+REPO_ROOT = _pick_repo_root(THIS_FILE)
+DATA_ROOT = REPO_ROOT / "Data"
+INUSE_DIR = DATA_ROOT / "in Use"
+SCHED_PATH       = INUSE_DIR / "OAD_2026_Schedule.xlsx"
+schedule_df = pd.read_excel(SCHED_PATH)
 
 
 def calculate_rolling_stats(rounds_df, dg_id, stat_cols, windows=[12, 24, 36, 60]):
@@ -47,7 +62,8 @@ def get_form_indicator(trend_value):
 
 
 def render_production_sg_tab(rounds_df, field_ids: Optional[List[int]] = None, all_players=None,
-                             id_to_img: Optional[dict] = None, name_to_img: Optional[dict] = None):
+                             id_to_img: Optional[dict] = None, name_to_img: Optional[dict] = None,
+                             schedule_df=None, field_df=None, event_id=None, cutoff_dt=None):
     """
     Production Strokes Gained tab with customizable stat analysis.
     """
@@ -712,6 +728,21 @@ def render_production_sg_tab(rounds_df, field_ids: Optional[List[int]] = None, a
             st.warning("Insufficient data for player positioning map")
 
         st.markdown("<br>", unsafe_allow_html=True)
+
+        st.divider()
+        st.markdown("### Putting by Grass Type")
+        _field_df = field_df
+        if _field_df is None and all_players is not None and field_ids is not None:
+            _field_df = all_players[all_players['dg_id'].isin(field_ids)][['dg_id', 'player_name']].copy()
+
+        render_bermuda_putting_visuals(
+            rounds_df=rounds_df,
+            schedule_df=schedule_df,
+            field_df=_field_df,
+            event_id=event_id,
+            cutoff_dt=cutoff_dt,
+        )
+
         st.divider()
 
         # ===== FULL FIELD TABLE WITH HEATMAP =====

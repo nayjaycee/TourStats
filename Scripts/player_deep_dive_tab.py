@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from grass_putting_deepdive import render_surface_putting_deepdive
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
@@ -59,6 +59,9 @@ def render_player_deep_dive_tab(
     approach_skill_df: "pd.DataFrame | None" = None,
     field_ids: "list | None" = None,
     season_year: int = 2026,
+    schedule_df: "pd.DataFrame | None" = None,
+    event_id: "int | None" = None,
+    greens_ref_path: "str | None" = None,
 ):
     COL = "rgba(255, 165, 0, 1)"
     COL_FILL = "rgba(255, 165, 0, 0.18)"
@@ -110,7 +113,7 @@ def render_player_deep_dive_tab(
         odds_val = None
 
     # ── L40 rounds ────────────────────────────────────────────────────────────
-    r40 = _last_n_rounds_pre_event(rounds_df, dg_id, cutoff_dt, n=40)
+    r40 = _last_n_rounds_pre_event(rounds_df, dg_id, cutoff_dt, n=60)
 
     ALL_STATS = [
         "sg_total", "sg_t2g", "sg_ott", "sg_app", "sg_arg", "sg_putt",
@@ -198,7 +201,7 @@ def render_player_deep_dive_tab(
     # SECTION 1b — STACKED SG ROUNDS CHART (Last 60 Rounds)
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
-    st.subheader("Form Trend - Last 40 Rounds")
+    st.subheader("Form Trend - Last 60 Rounds")
     st.caption("Rounds without bars indicate non-PGA Tour events (SG breakdown not available).")
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -257,7 +260,7 @@ def render_player_deep_dive_tab(
     else:
         st.info("Not enough round data for form trend.")
 
-    df60 = _last_n_rounds_pre_event(rounds_df, dg_id, cutoff_dt, n=40)
+    df60 = _last_n_rounds_pre_event(rounds_df, dg_id, cutoff_dt, n=60)
     if df60.empty:
         st.info("Not enough round data.")
     else:
@@ -346,7 +349,7 @@ def render_player_deep_dive_tab(
     # SECTION 2 — FIELD PERCENTILE BARS
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
-    st.subheader("Field Percentile — Last 40 Rounds")
+    st.subheader("Field Percentile — Last 60 Rounds")
     _info_expander("How to read this",
         "Each bar shows where this player ranks among everyone in this week's field (0 = last, 100 = best). "
         "Stats marked with † are lower-is-better (bogeys, round score) and are inverted so right is always good."
@@ -494,13 +497,30 @@ def render_player_deep_dive_tab(
         st.info("Not enough field data to compute percentiles.")
 
     # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 2b — PUTTING BY SURFACE
+    # ══════════════════════════════════════════════════════════════════════════
+    if schedule_df is not None:
+        st.divider()
+        st.subheader("Putting by Surface")
+        render_surface_putting_deepdive(
+            rounds_df=rounds_df,
+            schedule_df=schedule_df,
+            event_id=event_id,
+            dg_id=dg_id,
+            player_name=player_name,
+            cutoff_dt=cutoff_dt,
+            field_ids=field_ids,
+            greens_ref_path=greens_ref_path,
+        )
+
+    # ══════════════════════════════════════════════════════════════════════════
     # SECTION 3 — SKILL PROFILE (ridge plot, single player vs field)
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
-    st.subheader("Skill Distribution Profile — Last 40 Rounds")
+    st.subheader("Skill Distribution Profile — Last 60 Rounds")
     _info_expander("How to read this",
         "Each row is a kernel density curve showing the <b>full spread of round-by-round performance</b> "
-        "for one skill over the last 40 rounds. A tall narrow peak = consistent. Wide flat curve = volatile. "
+        "for one skill over the last 60 rounds. A tall narrow peak = consistent. Wide flat curve = volatile. "
         "The dotted line and dot mark the player's mean. The grey shaded area shows the field distribution. "
         "The <span style='color:rgba(80,200,120,0.9)'>green band</span> shows what this course rewards — "
         "wider = more important skill."
@@ -1027,7 +1047,7 @@ def render_player_deep_dive_tab(
                 r = r.merge(ends_r, on=["year", "event_id"], how="left")
                 r["event_end"] = pd.to_datetime(r["event_end"], errors="coerce")
                 if cutoff_dt is not None:
-                    r = r.loc[r["event_end"].notna() & (r["event_end"] <= pd.to_datetime(cutoff_dt))]
+                    r = r.loc[r["event_end"].isna() | (r["event_end"] <= pd.to_datetime(cutoff_dt))]
 
                 fin_col = "fin_text" if "fin_text" in r.columns else "finish_text" if "finish_text" in r.columns else None
                 if fin_col is None:
@@ -1040,8 +1060,15 @@ def render_player_deep_dive_tab(
                     if sg in r.columns:
                         agg[lbl] = (sg, "mean")
 
-                t = r.groupby(["year","event_id","event_name"], as_index=False).agg(**agg).rename(columns={"year":"Year","event_name":"Event"})
-                t["event_end"] = r.groupby(["year","event_id"])["event_end"].max().values
+                t = r.groupby(["year", "event_id", "event_name"], as_index=False).agg(**agg).rename(
+                    columns={"year": "Year", "event_name": "Event"})
+                t["event_end"] = r.groupby(["year", "event_id"])["event_end"].max().values
+                t["Event"] = t.apply(
+                    lambda row: row["Event"] + " ⚠ - Cancelled after R1 "
+                    if int(row["Year"]) == 2020 and int(row["event_id"]) == course_num
+                    else row["Event"],
+                    axis=1,
+                )
                 out_parts.append(t)
 
         if not out_parts:

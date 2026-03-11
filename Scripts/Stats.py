@@ -17,6 +17,7 @@ from course_history_proto import render_course_history_demo
 from approach_skill_tab import render_approach_skill_tab
 from h2h_visual_tab import render_h2h_visual_tab
 from approach_skill_tab import load_approach_skill
+from weather_tab import render_weather_tab
 
 st.set_page_config(
     page_title="Stats",
@@ -46,6 +47,7 @@ BUCKET_PATH_A = INUSE_DIR / "Approach_Buckets.xlsx"
 BUCKET_PATH_B = INUSE_DIR / "Approach Buckets.xlsx"
 BUCKET_PATH   = BUCKET_PATH_A if BUCKET_PATH_A.exists() else BUCKET_PATH_B
 ROUNDS_PATH = INUSE_DIR / "combined_rounds_all_2017_2026.csv"
+schedule_df = pd.read_excel(SCHED_PATH)
 
 required = [
     ALL_PLAYERS_PATH, SCHED_PATH, SKILL_PATH, FIELDS_PATH, BUCKET_PATH,
@@ -92,7 +94,7 @@ def load_fields():
 fields_df = load_fields()
 
 SEASON_YEAR = 2026
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0.1"
 st.title(f"TourStats - v{APP_VERSION}")
 
 HERO_H = 240  # <-- tune: 230-280
@@ -1403,6 +1405,7 @@ if _default_sort:
 summary_top = summary_top.reset_index(drop=True)
 
 TAB_NAMES = [
+    "Event Overview",
     "Field SG",
     "Course History",
     "Approach Skill",
@@ -1413,7 +1416,7 @@ TAB_NAMES = [
 ]
 
 if "active_tab" not in st.session_state or st.session_state.active_tab not in TAB_NAMES:
-    st.session_state.active_tab = "Field SG"
+    st.session_state.active_tab = "Event Overview"
 
 
 active_tab = st.segmented_control(
@@ -1429,7 +1432,10 @@ if active_tab == "Field SG":
         field_ids=field_ids,
         all_players=all_players,
         id_to_img=ID_TO_IMG,
-        name_to_img=NAME_TO_IMG
+        name_to_img=NAME_TO_IMG,
+        schedule_df=schedule_df,
+        event_id=event_id,
+        cutoff_dt=cutoff,
     )
 
 elif active_tab == "Course History":
@@ -1469,6 +1475,9 @@ elif active_tab == "H2H":
         course_fit_df=pd.read_csv(COURSE_FIT_PATH) if COURSE_FIT_PATH.exists() else None,
         course_num=st.session_state.get("selected_course_num"),
         approach_skill_df=load_approach_skill(INUSE_DIR / "approach_skill_all_periods.csv"),
+        schedule_df=schedule_df,
+        event_id=event_id,
+        greens_ref_path=str(INUSE_DIR / "course_greens_reference.csv"),
     )
 
 elif active_tab == "Player Deep Dive":
@@ -1493,6 +1502,9 @@ elif active_tab == "Player Deep Dive":
         approach_skill_df=load_approach_skill(APPROACH_SKILL_PATH),
         field_ids=field_ids,
         season_year=SEASON_YEAR,
+        schedule_df=schedule_df,
+        event_id=event_id,
+        greens_ref_path=str(INUSE_DIR / "course_greens_reference.csv"),
     )
 
 elif active_tab == "Event Archive":
@@ -1505,3 +1517,19 @@ elif active_tab == "Event Archive":
 
 # elif active_tab == "Contender Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)
+
+elif active_tab == "Event Overview":
+    from overview_tab import render_overview_tab
+    render_overview_tab(
+        selected_row=selected_row,
+        rounds_df=rounds_df,
+        field_ev=field_ev,
+        event_id=event_id,
+        course_num=course_num,
+        cutoff_dt=cutoff,
+        course_fit_df=pd.read_csv(COURSE_FIT_PATH) if COURSE_FIT_PATH.exists() else None,
+        id_to_img=ID_TO_IMG,
+        weather_api_key=st.secrets["WEATHER_API_KEY"],
+        schedule_df=schedule_df,
+        tee_times_path=str(INUSE_DIR / "this_week_field.csv"),
+    )

@@ -1,0 +1,43 @@
+course_num,event_id,event_name,course_name,location,n_rounds,first_seen,last_seen,greens_type,fairways_type,rough_type,notes
+5,5,AT&T Pebble Beach Pro-Am,Pebble Beach,"Pebble Beach, CA",476,2025-01-30,2026-02-15,Poa Annua,Rye,Ryegrass,
+500,7,The Genesis Invitational,Riviera Country Club,"Pacific Palisades, CA",246,2026-02-19,2026-02-22,Poa Annua,Kikuyu,Ryegrass,
+977,541,Genesis Scottish Open,The Renaissance Club,"North Berwick, Scotland",468,2025-07-10,2025-07-13,Fescue,Fescue,Fescue,
+9,9,Arnold Palmer Invitational presented by Mastercard,Bay Hill,"Orlando, FL",490,2025-03-06,2026-03-08,Bermuda,Bermuda,Bermuda,
+21,21,Charles Schwab Challenge,Colonial Country Club,"Fort Worth, TX",424,2025-05-22,2025-05-25,Bermuda,Bermuda,Ryegrass,
+928,10,Cognizant Classic in The Palm Beaches,PGA National,"Palm Beach Gardens, FL",803,2025-02-27,2026-03-01,Bermuda,Bermuda,Bermuda,
+513,27,FedEx St. Jude Championship,TPC Southwind,"Memphis, TN",276,2025-08-07,2025-08-10,Bermuda,Zoysia,Bermuda,
+14,14,Masters Tournament,Augusta National,"Augusta, GA",296,2025-04-10,2025-04-13,Bermuda,Bermuda,Bermuda,
+12,12,RBC Heritage,Harbour Town,"Hilton Head Island, SC",288,2025-04-17,2025-04-20,Bermuda,Bermuda,Bermuda,
+11,11,THE PLAYERS Championship,TPC Sawgrass,"Ponte Vedra Beach, FL",431,2025-03-13,2025-03-16,Bermuda,Bermuda,Bermuda,
+897,20,Texas Children's Houston Open,Memorial Park,"Houston, TX",443,2025-03-27,2025-03-30,Bermuda,Bermuda,Bermuda,
+770,41,Valero Texas Open,TPC San Antonio,"San Antonio, TX",420,2025-04-03,2025-04-06,Bermuda,Bermuda,Bermuda,
+665,475,Valspar Championship,Innisbrook Resort,"Palm Harbor, FL",460,2025-03-20,2025-03-23,Bermuda,Bermuda,Bermuda,
+510,3,WM Phoenix Open,TPC Scottsdale,"Scottsdale, AZ",807,2025-02-06,2026-02-08,Bermuda,Bermuda,Mix,
+883,525,3M Open,TPC Twin Cities,"Blaine, MN",463,2025-07-24,2025-07-27,Bentgrass,Bentgrass,Ryegrass,
+669,30,John Deere Classic,TPC Deere Run,"Silvis, IL",438,2025-07-03,2025-07-06,Bentgrass,Bentgrass,Mix,
+935,32,RBC Canadian Open,TPC Toronto,"Oakville, ON, Canada",444,2025-06-05,2025-06-08,Bentgrass,Zoysia,Mix,
+876,524,Rocket Classic,Detroit Golf Club,"Detroit, MI",484,2025-06-26,2025-06-29,Bentgrass,Bentgrass,Mix,
+503,34,Travelers Championship,TPC River Highlands,"Cromwell, CT",278,2025-06-19,2025-06-22,Bentgrass,Bentgrass,Mix,
+752,13,Wyndham Championship,Sedgefield Country Club,"Greensboro, NC",455,2025-07-31,2025-08-03,Bentgrass,Bermuda,Bermuda,
+23,23,the Memorial Tournament presented by Workday,Muirfield Village,"Dublin, OH",257,2025-05-29,2025-06-01,Bentgrass,Bentgrass,Mix,
+205,5,AT&T Pebble Beach Pro-Am,,,160,2025-01-30,2026-02-13,Poa Annua,Poa Annua,Poa Annua,
+882,28,BMW Championship,,,195,2025-08-14,2025-08-17,Bentgrass,Bentgrass,Bentgrass,BMW Championship rotates — Bentgrass typical host profile
+930,554,Bank of Utah Championship,,,391,2025-10-23,2025-10-26,Bentgrass,Bentgrass,Bentgrass,
+4,4,Farmers Insurance Open,,,586,2025-01-22,2026-02-01,Poa Annua,Poa Annua,Poa Annua,
+232,478,Hero World Challenge,,,80,2025-12-04,2025-12-07,Bermuda,Bermuda,Bermuda,
+934,518,ISCO Championship,,,447,2025-07-10,2025-07-13,Bermuda,Bermuda,Bermuda,
+978,540,Mexico Open at VidantaWorld,,,418,2025-02-20,2025-02-23,Bermuda,Bermuda,Bermuda,
+925,553,ONEflight Myrtle Beach Classic,,,402,2025-05-08,2025-05-11,Bermuda,Bermuda,Bermuda,
+241,33,PGA Championship,,,459,2025-05-15,2025-05-18,Bentgrass,Bentgrass,Bentgrass,PGA Championship 2025 @ Quail Hollow
+926,464,Procore Championship,,,432,2025-09-11,2025-09-14,Bermuda,Bermuda,Bermuda,
+746,54,Sanderson Farms Championship,,,398,2025-10-02,2025-10-05,Bermuda,Bermuda,Bermuda,
+6,6,Sony Open in Hawaii,,,823,2025-01-09,2026-01-18,Bermuda,Bermuda,Bermuda,
+921,19,THE CJ CUP Byron Nelson,,,451,2025-05-01,2025-05-04,Bermuda,Bermuda,Bermuda,
+688,60,TOUR Championship,,,120,2025-08-21,2025-08-24,Bermuda,Bermuda,Bermuda,
+704,2,The American Express,,,454,2025-01-16,2026-01-25,Bermuda,Bermuda,Bermuda,
+939,7,The Genesis Invitational,,,252,2025-02-13,2025-02-16,Poa Annua,Poa Annua,Poa Annua,Riviera CC — same course as course_num 500 in OAD schedule
+885,100,The Open Championship,,,452,2025-07-17,2025-07-20,Fescue,Fescue,Fescue,The Open rotates links courses — 2025 Royal Portrush
+776,493,The RSM Classic,,,302,2025-11-20,2025-11-23,Bermuda,Bermuda,Bermuda,
+656,16,The Sentry,,,235,2025-01-02,2025-01-05,Bermuda,Bermuda,Bermuda,
+379,480,Truist Championship,,,283,2025-05-08,2025-05-11,Bentgrass,Bentgrass,Bentgrass,Truist Championship 2025 @ Quail Hollow
+608,26,U.S. Open,,,444,2025-06-12,2025-06-15,Bentgrass,Bentgrass,Bentgrass,U.S. Open 2025 @ Oakmont CC
