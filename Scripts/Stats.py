@@ -1529,7 +1529,7 @@ elif active_tab == "Event Overview":
         cutoff_dt=cutoff,
         course_fit_df=pd.read_csv(COURSE_FIT_PATH) if COURSE_FIT_PATH.exists() else None,
         id_to_img=ID_TO_IMG,
-        weather_api_key=st.secrets["WEATHER_API_KEY"],
+        weather_api_key=st.secrets.get("WEATHER_API_KEY", ""),
         schedule_df=schedule_df,
         tee_times_path=str(INUSE_DIR / "this_week_field.csv"),
     )
