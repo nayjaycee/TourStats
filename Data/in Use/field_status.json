@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 475,
     "event_name": "Valspar Championship",
-    "player_count": 131,
+    "player_count": 133,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
@@ -80,6 +80,7 @@
       "Moore, Taylor",
       "Mouw, William",
       "Neergaard-Petersen, Rasmus",
+      "Norlander, Henrik",
       "Novak, Andrew",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
@@ -90,6 +91,7 @@
       "Penge, Marco",
       "Peterson, Paul",
       "Phillips, Chandler",
+      "Power, Seamus",
       "Putnam, Andrew",
       "Rai, Aaron",
       "Ramey, Chad",
@@ -125,6 +127,7 @@
       "Tosti, Alejandro",
       "Van Rooyen, Erik",
       "VanDerLaan, John",
+      "Ventura, Kris",
       "Vilips, Karl",
       "Walker, Danny",
       "Wallace, Matt",
@@ -133,11 +136,22 @@
       "Willett, Danny",
       "Woodland, Gary",
       "Wu, Dylan",
-      "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-03-15 23:42:43 ET",
+    "last_updated": "2026-03-16 14:20:08 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-16 14:20:08 ET",
+        "added": [
+          "Norlander, Henrik",
+          "Power, Seamus",
+          "Ventura, Kris"
+        ],
+        "withdrawn": [
+          "Yellamaraju, Sudarshan"
+        ],
+        "note": "+3 / -1"
+      },
       {
         "timestamp": "2026-03-15 23:42:43 ET",
         "added": [
