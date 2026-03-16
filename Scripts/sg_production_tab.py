@@ -198,8 +198,25 @@ def render_production_sg_tab(
         live_df, live_label = load_live_stats()
         has_live = live_df is not None and not live_df.empty
 
+        # Determine if live data is for the current field event or a prior one
+        live_is_current = False
+        live_event_name = ""
+        field_event_name = ""
+        if has_live and "event_name" in live_df.columns:
+            live_event_name = str(live_df["event_name"].dropna().iloc[0]).strip() if not live_df["event_name"].dropna().empty else ""
+        if field_df is not None and "event_name" in field_df.columns:
+            field_event_name = str(field_df["event_name"].dropna().iloc[0]).strip() if not field_df["event_name"].dropna().empty else ""
+        if live_event_name and field_event_name:
+            live_is_current = live_event_name.lower() == field_event_name.lower()
+
         if has_live:
-            st.info(f"🔴 **Live data available** — {live_label}", icon=None)
+            if live_is_current:
+                st.info(f"Live data — {live_label}")
+            else:
+                st.info(
+                    f"Showing most recent event data ({live_event_name}). "
+                    f"Not yet updated for {field_event_name or 'this week'}."
+                )
 
         # ── Player list ────────────────────────────────────────────────────
         if field_ids and len(field_ids) > 0:
@@ -259,11 +276,12 @@ def render_production_sg_tab(
         live_col = f"{primary_stat_col}_Live"
         live_blend = 0
         if has_live and live_col in stats_df.columns and primary_stat != "Elite Finish (L36)":
+            blend_event_label = live_event_name if live_event_name else "recent event"
             live_blend = st.slider(
-                "🔴 Blend live SG into ranking",
+                f"Blend {blend_event_label} SG into ranking",
                 min_value=0, max_value=60, value=25, step=5,
                 format="%d%%",
-                help="Adds a live-weighted nudge to the sort. 0% = pure historical. 25% = light live influence.",
+                help="Adds a live-weighted nudge to the sort. 0% = pure historical. 25% = light influence.",
             )
 
         # Filter to players with data for the base historical column
@@ -355,14 +373,15 @@ def render_production_sg_tab(
                             unsafe_allow_html=True,
                         )
 
-                    # Show live stat alongside historical if available and we're in a historical window
-                    if has_live and primary_window != "This Wk":
+                    # Show live stat alongside historical if available
+                    if has_live:
                         live_val = player.get(f"{primary_stat_col}_Live")
                         if pd.notna(live_val):
                             lc = _sg_color(live_val)
+                            badge_label = "This Wk" if live_is_current else "Last Wk"
                             st.markdown(
                                 f"<div style='text-align:center;font-size:10px;margin-top:6px;"
-                                f"color:rgba(200,200,200,0.5)'>🔴 This Wk "
+                                f"color:rgba(200,200,200,0.5)'>{badge_label} "
                                 f"<span style='color:{lc};font-weight:700'>{live_val:+.2f}</span></div>",
                                 unsafe_allow_html=True,
                             )
