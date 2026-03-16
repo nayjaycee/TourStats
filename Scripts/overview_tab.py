@@ -708,7 +708,8 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
             )
         else:
             name = name_by_year.get(yr, "—")
-            score_str = f"{int(ws_row['winning_score'].iloc[0]):+d}" if not ws_row.empty else "—"
+            _ws_val = pd.to_numeric(ws_row['winning_score'].iloc[0], errors='coerce') if not ws_row.empty else None
+            score_str = f"{int(_ws_val):+d}" if _ws_val is not None and pd.notna(_ws_val) else "—"
             course_note = (
                 "<span style='font-size:10px;color:rgba(148,163,184,0.4);margin-left:8px'>◆ diff. course</span>"
                 if diff else ""
