@@ -1579,10 +1579,15 @@ out[num_cols] = out[num_cols].round(1)
 
 odds_candidates = ["close_odds", "decimal_odds", "odds", "win_prob_est"]
 odds_col = next((c for c in odds_candidates if c in field_ev.columns), None)
+_odds_available = False
 if odds_col:
     tmp = field_ev[["dg_id", odds_col]].copy()
     tmp["dg_id"] = pd.to_numeric(tmp["dg_id"], errors="coerce")
     out = out.merge(tmp, on="dg_id", how="left")
+    _odds_available = out[odds_col].notna().any()
+    if not _odds_available and event_id is not None:
+        _event_label = selected_row.get("event_name", "this event") if "event_name" in selected_row.index else "this event"
+        st.sidebar.info(f"📋 Pre-tournament odds not yet released for **{_event_label}**. Odds will appear here once sportsbooks post lines.")
 
 for c in ["ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts"]:
     if c in out.columns:

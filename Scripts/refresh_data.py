@@ -332,32 +332,53 @@ def run_block1() -> None:
     field_event_name = field["event_name"].iloc[0]
     _log(f"Field: event_id={field_event_id} | {field_event_name} | players={len(field):,}")
 
-    # Pull odds
-    try:
-        odds_raw = pull_df(DG_ODDS_URL,
-                           {"tour": "pga", "market": "win", "odds_format": "decimal",
-                            "file_format": "csv", "key": DG_API_KEY},
-                           save_path=THIS_WEEK_ODDS_CSV)
-    except Exception as e:
-        if THIS_WEEK_ODDS_CSV.exists():
-            _log(f"Odds pull failed ({e}), using cache")
-            odds_raw = pd.read_csv(THIS_WEEK_ODDS_CSV)
-        else:
-            raise
-
-    odds_raw = coerce_int(odds_raw, ["event_id", "dg_id"])
-    close_odds_by_id = dict(zip(
-        odds_raw["dg_id"].dropna().astype(int),
-        pd.to_numeric(odds_raw.get("datagolf_base_history_fit"), errors="coerce")
-    ))
-
-    # Load schedule
+    # Load schedule first so we know if the tournament has started before touching odds
     sched = read_excel(SCHED_XLSX)
     sched["event_id"]   = pd.to_numeric(sched["event_id"], errors="coerce").astype("Int64")
     sched["start_date"] = pd.to_datetime(sched["start_date"], errors="coerce")
     field_start = _schedule_start_et(sched, field_event_id)
     field_started = now_et >= field_start
     _log(f"Event start={field_start} | started={field_started}")
+
+    # Pull odds — only save and use when the odds event matches the field event.
+    # Before a tournament the endpoint may still return last week's event; once underway
+    # it returns live odds for the active event. In both mismatch cases we preserve whatever
+    # closing odds were already saved and don't corrupt Fields.xlsx with wrong-event data.
+    odds_event_match = False
+    try:
+        odds_raw = pull_df(DG_ODDS_URL,
+                           {"tour": "pga", "market": "win", "odds_format": "decimal",
+                            "file_format": "csv", "key": DG_API_KEY})
+        odds_event_name = ""
+        if "event_name" in odds_raw.columns:
+            odds_event_name = str(odds_raw["event_name"].dropna().iloc[0]) if not odds_raw["event_name"].dropna().empty else ""
+        odds_event_match = (
+            odds_event_name.strip().lower() == field_event_name.strip().lower()
+        )
+        if odds_event_match and not field_started:
+            odds_raw.to_csv(THIS_WEEK_ODDS_CSV, index=False)
+            _log(f"Saved -> this_week_odds.csv | rows: {len(odds_raw):,}")
+        elif not odds_event_match:
+            _log(f"Odds event mismatch: API returned '{odds_event_name}' but field is '{field_event_name}' — skipping odds save")
+        else:
+            _log("Tournament in progress — odds pulled but this_week_odds.csv NOT overwritten (preserving closing odds)")
+    except Exception as e:
+        if THIS_WEEK_ODDS_CSV.exists():
+            _log(f"Odds pull failed ({e}), using cache")
+            odds_raw = pd.read_csv(THIS_WEEK_ODDS_CSV)
+            odds_event_match = True  # treat cached file as valid
+        else:
+            odds_raw = pd.DataFrame()
+
+    odds_raw = coerce_int(odds_raw, ["event_id", "dg_id"])
+    # Only build close_odds lookup when odds are for the correct event
+    if odds_event_match and not field_started:
+        close_odds_by_id = dict(zip(
+            odds_raw["dg_id"].dropna().astype(int),
+            pd.to_numeric(odds_raw.get("datagolf_base_history_fit"), errors="coerce")
+        ))
+    else:
+        close_odds_by_id = {}  # odds not yet available or wrong event — leave NaN in Fields.xlsx
 
     # Active tournament window: Thu start through Mon 6am
     ACTIVE_WINDOW = pd.Timedelta(days=4, hours=6)
@@ -442,9 +463,10 @@ def run_block1() -> None:
     })
 
     push_paths = [
-        THIS_WEEK_FIELD_CSV, THIS_WEEK_ODDS_CSV,
-        FIELDS_XLSX, ALL_PLAYERS_XLSX, FIELD_STATUS_PATH, CHANGELOG_PATH,
+        THIS_WEEK_FIELD_CSV, FIELDS_XLSX, ALL_PLAYERS_XLSX, FIELD_STATUS_PATH, CHANGELOG_PATH,
     ]
+    if not field_started:
+        push_paths.append(THIS_WEEK_ODDS_CSV)
     if active_tournament_in_window and NEXT_WEEK_FIELD_CSV.exists():
         push_paths.append(NEXT_WEEK_FIELD_CSV)
     git_push(
