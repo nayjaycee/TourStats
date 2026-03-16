@@ -132,7 +132,7 @@ def _compute_surface_stats(rounds_df, schedule_df, dg_id,
         df = df[df["tour"] == "PGA"]
 
     cutoff_ts = pd.to_datetime(cutoff_dt) if cutoff_dt is not None else pd.Timestamp.now()
-    df = df[df[date_col] < cutoff_ts]
+    df = df[df[date_col].isna() | (df[date_col] < cutoff_ts)]
     df = df.dropna(subset=["dg_id", "course_num", "sg_putt"]).copy()
     df["dg_id"]      = df["dg_id"].astype(int)
     df["course_num"] = df["course_num"].astype(int)

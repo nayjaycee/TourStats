@@ -151,7 +151,8 @@ def _compute_putting_stats(rounds_df, schedule_df, field_df, event_id,
         df = df[df["tour"] == "PGA"]
 
     cutoff_ts = pd.to_datetime(cutoff_dt) if cutoff_dt is not None else pd.Timestamp.now()
-    df = df[df[date_col] < cutoff_ts]
+    # Include rows where date is unknown (NaT = pre-2022 data without round_date) OR before cutoff
+    df = df[df[date_col].isna() | (df[date_col] < cutoff_ts)]
     df = df[df["dg_id"].isin(field_ids)]
     df = df.dropna(subset=["dg_id", "course_num", "sg_putt"]).copy()
     df["dg_id"]      = df["dg_id"].astype(int)

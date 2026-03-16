@@ -13,3 +13,34 @@
 .DS_Store
 .vscode/
 .idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# --- Large / rebuilt data files (not needed on Streamlit Cloud) ---
+# Monolithic combined file — app loads per-year files from Data/Clean/Combined/ instead
+Data/in Use/combined_rounds_all_2017_2026.csv
+# Intermediate files only needed locally
+Data/in Use/combined_roundlevel_2024_present.csv
+Data/in Use/combined_eventlevel_pga_2017_2023_mean.csv
+# Live/odds files — fetched at runtime by the app
+Data/in Use/this_week_live_odds.csv
+Data/live/
+# Research/model output files — not used by the app
+Data/in Use/course_adjusted_model_results.csv
+Data/in Use/two_stage_model_results.csv
+Data/in Use/feature_engineering_results.csv
+Data/in Use/optimal_features.json
+Data/in Use/top5_finisher_results_L60_APPROACH.csv
+
+# Raw per-tour CSVs — rebuilt by Block 2 cron, only needed locally
+Data/Raw/
+
+# Research notebooks
+Data/Notebooks/
+
+# Dev/backup scripts
+Scripts/StatsBackupV1.py
+Scripts/export_course_greens_reference.py

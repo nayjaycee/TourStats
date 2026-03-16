@@ -18,6 +18,7 @@ from approach_skill_tab import render_approach_skill_tab
 from h2h_visual_tab import render_h2h_visual_tab
 from approach_skill_tab import load_approach_skill
 from weather_tab import render_weather_tab
+from live_tab import render_live_tab, is_tournament_live
 
 st.set_page_config(
     page_title="Stats",
@@ -46,16 +47,17 @@ FINISHES_PATH = INUSE_DIR / "Finishes.csv"
 BUCKET_PATH_A = INUSE_DIR / "Approach_Buckets.xlsx"
 BUCKET_PATH_B = INUSE_DIR / "Approach Buckets.xlsx"
 BUCKET_PATH   = BUCKET_PATH_A if BUCKET_PATH_A.exists() else BUCKET_PATH_B
-ROUNDS_PATH = INUSE_DIR / "combined_rounds_all_2017_2026.csv"
+CLEAN_COMBINED_DIR = DATA_ROOT / "Clean" / "Combined"
 schedule_df = pd.read_excel(SCHED_PATH)
 
 required = [
     ALL_PLAYERS_PATH, SCHED_PATH, SKILL_PATH, FIELDS_PATH, BUCKET_PATH,
-    ROUNDS_PATH,
     FINISHES_PATH,
 ]
 
 missing = [p for p in required if not p.exists()]
+if not list(CLEAN_COMBINED_DIR.glob("combined_rounds_[0-9][0-9][0-9][0-9].csv")):
+    missing.append(CLEAN_COMBINED_DIR / "combined_rounds_YYYY.csv")
 
 if missing:
     st.error("Missing required file(s):")
@@ -64,9 +66,51 @@ if missing:
     st.stop()
 
 
+def _add_round_positions(df: pd.DataFrame) -> pd.DataFrame:
+    """Compute to_par, cum_to_par, round_position, round_position_text from raw round data."""
+    for col in ["to_par", "cum_to_par", "round_position", "round_position_text"]:
+        if col in df.columns:
+            df = df.drop(columns=[col])
+    df = df.copy()
+    df["to_par"] = df["round_score"] - df["course_par"]
+    df = df.sort_values(["event_id", "season", "dg_id", "round_num"]).reset_index(drop=True)
+    df["cum_to_par"] = df.groupby(["event_id", "season", "dg_id"])["to_par"].cumsum()
+
+    missing_par = df.groupby(["event_id", "season"])["course_par"].apply(lambda x: x.isna().all())
+    missing_keys = missing_par[missing_par].index
+    if len(missing_keys) > 0:
+        mask = df.set_index(["event_id", "season"]).index.isin(missing_keys)
+        df.loc[mask, "cum_to_par"] = (
+            df[mask].groupby(["event_id", "season", "dg_id"])["round_score"].cumsum().values
+        )
+
+    def rank_group(g):
+        valid = g["cum_to_par"].notna()
+        pos = pd.Series(np.nan, index=g.index)
+        if valid.any():
+            pos[valid] = g.loc[valid, "cum_to_par"].rank(method="min", ascending=True).astype(int)
+        return pos
+
+    df["round_position"] = (
+        df.groupby(["event_id", "season", "round_num"], group_keys=False)
+        .apply(lambda g: rank_group(g), include_groups=False)
+    )
+    df["round_position"] = pd.array(
+        df["round_position"].where(df["round_position"].isna(), df["round_position"].astype("Int64")),
+        dtype="Int64",
+    )
+    tie_counts = df.groupby(["event_id", "season", "round_num", "round_position"])["dg_id"].transform("count")
+    df["round_position_text"] = df["round_position"].astype(str)
+    df.loc[df["round_position"].isna(), "round_position_text"] = np.nan
+    df.loc[tie_counts > 1, "round_position_text"] = "T" + df.loc[tie_counts > 1, "round_position"].astype(str)
+    return df
+
+
 @st.cache_data(show_spinner=False)
 def load_rounds_all():
-    df = pd.read_csv(ROUNDS_PATH, low_memory=False)
+    year_files = sorted(CLEAN_COMBINED_DIR.glob("combined_rounds_[0-9][0-9][0-9][0-9].csv"))
+    dfs = [pd.read_csv(fp, low_memory=False) for fp in year_files]
+    df = pd.concat(dfs, ignore_index=True)
 
     for c in ['dg_id', 'event_id', 'year', 'finish_num']:
         if c in df.columns:
@@ -75,6 +119,9 @@ def load_rounds_all():
     date_col = 'round_date' if 'round_date' in df.columns else 'event_completed'
     if date_col in df.columns:
         df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
+
+    if 'round_position' not in df.columns:
+        df = _add_round_positions(df)
 
     return df
 
@@ -324,14 +371,19 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-def show_headshot_cropped_card(img_value: str | None, height_px: int = 250) -> None:
-    if not img_value:
-        st.empty()
-        return
-
-    s = str(img_value).strip().strip('"').strip("'").strip()
+def show_headshot_cropped_card(img_value: str | None, height_px: int = 250, player_name: str | None = None) -> None:
+    s = str(img_value).strip().strip('"').strip("'").strip() if img_value else ""
     if not s or s.lower() in {"none", "nan"}:
-        st.empty()
+        initials = ""
+        if player_name:
+            parts = player_name.replace(",", " ").split()
+            initials = "".join(p[0].upper() for p in parts if p)[:2]
+        st.markdown(
+            f"<div class='dd-photo-card' style='height:{height_px}px;background:rgba(80,80,80,0.2);"
+            f"border-radius:22px;display:flex;align-items:center;justify-content:center;"
+            f"font-size:{height_px // 4}px;font-weight:700;color:rgba(255,255,255,0.2)'>{initials}</div>",
+            unsafe_allow_html=True,
+        )
         return
 
     if s.startswith("http://") or s.startswith("https://"):
@@ -568,21 +620,30 @@ def get_headshot_url(dg_id: int | None, player_name: str | None,
         return name_to_img[player_name]
     return None
 
-def show_headshot(img_value: str | None, width: int = 90) -> None:
-    if not img_value:
+def show_headshot(img_value: str | None, width: int = 90, player_name: str | None = None) -> None:
+    s = str(img_value).strip() if img_value else ""
+    if s and s.lower() not in {"none", "nan"}:
+        p = Path(s)
+        if p.exists():
+            st.image(str(p), width=width)
+            return
+        p2 = REPO_ROOT / s
+        if p2.exists():
+            st.image(str(p2), width=width)
+            return
+        st.image(s, width=width)
         return
-    s = str(img_value).strip()
-    if not s or s.lower() in {"none", "nan"}:
-        return
-    p = Path(s)
-    if p.exists():
-        st.image(str(p), width=width)
-        return
-    p2 = REPO_ROOT / s
-    if p2.exists():
-        st.image(str(p2), width=width)
-        return
-    st.image(s, width=width)
+    # Placeholder when no image
+    initials = ""
+    if player_name:
+        parts = player_name.replace(",", " ").split()
+        initials = "".join(p[0].upper() for p in parts if p)[:2]
+    st.markdown(
+        f"<div style='width:{width}px;height:{width}px;background:rgba(80,80,80,0.25);"
+        f"border-radius:8px;display:flex;align-items:center;justify-content:center;"
+        f"font-size:{width // 3}px;font-weight:700;color:rgba(255,255,255,0.25)'>{initials}</div>",
+        unsafe_allow_html=True,
+    )
 
 @st.cache_data(show_spinner=False)
 def load_schedule() -> pd.DataFrame:
@@ -687,13 +748,12 @@ def render_player_hero(
 
     url = get_headshot_url(dg_id, player_name, ID_TO_IMG, NAME_TO_IMG)
     if image_only:
-        show_headshot(url, width=headshot_width)
+        show_headshot(url, width=headshot_width, player_name=player_name)
         return
-
 
     c_img, c_txt = st.columns([2, 8], vertical_alignment="center")
     with c_img:
-        show_headshot(url, width=headshot_width)
+        show_headshot(url, width=headshot_width, player_name=player_name)
 
     with c_txt:
         parts = []
@@ -762,11 +822,12 @@ def compute_rolling_stats(
     else:
         raise ValueError("Rounds data must include round_date or event_completed.")
 
-    df = df[df[date_col] < ts].copy()
+    # Include rows where date is unknown (NaT = pre-2022 data without round_date) OR before cutoff
+    df = df[df[date_col].isna() | (df[date_col] < ts)].copy()
     if df.empty:
         return pd.DataFrame({"dg_id": list(dg_ids)})
 
-    df = df.sort_values(["dg_id", date_col], ascending=[True, False])
+    df = df.sort_values(["dg_id", date_col], ascending=[True, False], na_position="last")
 
     rolled = (
         df.groupby("dg_id", group_keys=False)
@@ -1016,7 +1077,9 @@ def build_course_history_field_table(
                 rr = rr.merge(ends_r, on=["year", "event_id"], how="left")
                 rr["event_end"] = pd.to_datetime(rr["event_end"], errors="coerce")
 
-                keep = rr["event_end"].notna() & (rr["event_end"] <= cutoff_ts)
+                # Include rows where event_end is unknown (2017–2021 lack round_date)
+                # OR where event_end is known and before the cutoff
+                keep = rr["event_end"].isna() | (rr["event_end"] <= cutoff_ts)
                 if keep.any():
                     r = rr.loc[keep].copy()
                     used_cutoff = True
@@ -1118,11 +1181,15 @@ with st.sidebar:
 
     if date_col2:
         sched[date_col2] = pd.to_datetime(sched[date_col2], errors="coerce")
-        is_upcoming = sched[date_col2] >= today
+        # Keep current-week event as default until Sunday ~8pm (start_date + 3 days + 20 hours).
+        # After that, flip to next week's event.
+        now = pd.Timestamp.now()
+        event_end_window = sched[date_col2] + pd.Timedelta(days=3, hours=20)
+        is_upcoming = event_end_window >= now
         sched = sched.assign(__is_upcoming=is_upcoming)
         sched = sched.sort_values(["__is_upcoming", date_col2], ascending=[False, True]).drop(columns="__is_upcoming")
 
-        upcoming = sched.loc[sched[date_col2] >= today, "__row_id"].tolist()
+        upcoming = sched.loc[event_end_window >= now, "__row_id"].tolist()
         default_row_id = int(upcoming[0]) if len(upcoming) else int(sched["__row_id"].iloc[0])
     else:
         default_row_id = int(sched["__row_id"].iloc[0])
@@ -1146,108 +1213,273 @@ with st.sidebar:
 
     img_url = selected_row.get("image", None)
     img_url = None if img_url is None else str(img_url).strip()
-
     if img_url and img_url.lower() not in {"nan", "none", "null", "<unset>", ""}:
         st.image(img_url, use_container_width=True)
-
-
-    def _clean_text(x) -> str:
-        if x is None:
-            return "—"
-        s = str(x).strip()
-        if s == "" or s.lower() in {"nan", "none", "null", "<unset>"}:
-            return "—"
-        return s
-
-
-    def _as_money(x) -> str:
-        v = pd.to_numeric(x, errors="coerce")
-        return f"${v:,.0f}" if pd.notna(v) else "—"
-
-
-    course = _clean_text(selected_row.get("course_name"))
-    champ = _clean_text(selected_row.get("defending_champ"))
-    purse = _as_money(selected_row.get("purse"))
-    winshr = _as_money(selected_row.get("winner_share"))
-
-    st.markdown(
-        f"""
-        <div style="
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.10);
-            border-radius: 16px;
-            padding: 14px 14px;
-            margin-top: 12px;
-        ">
-          <div style="font-size: 22px; font-weight: 800; margin-bottom: 10px;">Event Details</div>
-
-          <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Course</div>
-            <div style="font-weight:800; font-size:14px; text-align:right;">{course}</div>
-          </div>
-
-          <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Defending Champion</div>
-            <div style="font-weight:800; font-size:14px; text-align:right;">{champ}</div>
-          </div>
-
-          <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Purse</div>
-            <div style="font-weight:900; font-size:15px; text-align:right;">{purse}</div>
-          </div>
-
-          <div style="display:flex; justify-content:space-between; gap:12px; margin:6px 0;">
-            <div style="opacity:0.72; font-size:13px; white-space:nowrap;">Winner&apos;s Share</div>
-            <div style="font-weight:900; font-size:15px; text-align:right;">{winshr}</div>
-          </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
 
     event_id_val = pd.to_numeric(selected_row.get("event_id"), errors="coerce")
     event_id = int(event_id_val) if pd.notna(event_id_val) else None
 
-    field_ids = []
-    field_ev = pd.DataFrame()
+    # ── Data status ───────────────────────────────────────────────────────────
+    import json as _json
 
-    if event_id is not None and "event_id" in fields.columns:
-        tmp = fields.copy()
-        tmp["event_id"] = pd.to_numeric(tmp["event_id"], errors="coerce")
-        tmp["dg_id"] = pd.to_numeric(tmp["dg_id"], errors="coerce")
-        field_ev = tmp[(tmp["event_id"] == int(event_id))].dropna(subset=["dg_id"]).drop_duplicates(subset=["dg_id"])
-        field_ids = field_ev["dg_id"].astype(int).tolist()
+    def _fmt_ts(ts: str) -> str:
+        """'2026-03-15 21:11:16 ET' -> 'Mar 15, 9:11pm ET'"""
+        try:
+            _dt = pd.to_datetime(ts.replace(" ET", "").strip())
+            return _dt.strftime("%-m/%-d %-I:%M%p").lower().replace("am", "am ET").replace("pm", "pm ET")
+        except Exception:
+            return ts
 
-    if "only_in_field" not in st.session_state:
-        st.session_state.only_in_field = True
+    _changelog_path  = INUSE_DIR / "data_changelog.json"
+    _fieldstatus_path = INUSE_DIR / "field_status.json"
 
-    st.markdown("---")
-    st.caption("Filters")
-    only_in_field = st.toggle(
-        "Only players in this week's field",
-        value=st.session_state.only_in_field,
-        key="only_in_field_toggle_sidebar",  # prevents duplicate-id issues if it appears elsewhere later
+    # Last-updated per source type
+    try:
+        _events = _json.loads(_changelog_path.read_text()).get("events", []) if _changelog_path.exists() else []
+        _last = {}
+        for _ev in _events:
+            _t = _ev.get("type", "")
+            if _t not in _last:
+                _last[_t] = _ev.get("timestamp", "")
+    except Exception:
+        _last = {}
+
+    # Field status
+    try:
+        _fs = _json.loads(_fieldstatus_path.read_text()) if _fieldstatus_path.exists() else {}
+    except Exception:
+        _fs = {}
+
+    # ── Data sources ──────────────────────────────────────────────────────────
+    st.markdown(
+        "<div style='font-size:11px;font-weight:700;letter-spacing:0.08em;"
+        "color:rgba(130,130,130,0.6);text-transform:uppercase;margin:16px 0 10px'>"
+        "Data Sources</div>",
+        unsafe_allow_html=True,
     )
-    st.session_state.only_in_field = only_in_field
 
-    if only_in_field and not field_ids:
-        st.warning("Field Not Yet Released - Showing All Players Instead.")
-        only_in_field = False
-    if "excluded_players" not in st.session_state:
-        st.session_state["excluded_players"] = []
+    _SOURCE_ROWS = [
+        ("rounds_refresh",     "Rounds"),
+        ("field_odds_refresh", "Field / Odds"),
+        ("live_odds_refresh",  "Live Odds"),
+        ("approach_refresh",   "Approach Skill"),
+    ]
+    for _type_key, _label in _SOURCE_ROWS:
+        _ts  = _last.get(_type_key, "")
+        _disp = _fmt_ts(_ts) if _ts else "—"
+        _color = "rgba(100,200,100,0.9)" if _ts else "rgba(120,120,120,0.4)"
+        st.markdown(
+            f"<div style='display:flex;justify-content:space-between;align-items:center;"
+            f"padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+            f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_label}</span>"
+            f"<span style='font-size:11px;color:{_color};text-align:right'>{_disp}</span>"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
 
-    player_universe = st.session_state.get("player_universe", [])
+    # ── Field status ──────────────────────────────────────────────────────────
+    # Determine current/next week event_ids from the schedule (not the stale JSON keys)
+    _sched_now = pd.Timestamp.now()
+    _sched_copy = schedule_df.copy() if schedule_df is not None else pd.DataFrame()
+    if not _sched_copy.empty:
+        _date_c = "start_date" if "start_date" in _sched_copy.columns else ("event_date" if "event_date" in _sched_copy.columns else None)
+        if _date_c:
+            _sched_copy[_date_c] = pd.to_datetime(_sched_copy[_date_c], errors="coerce")
+            _sched_copy["_end_w"] = _sched_copy[_date_c] + pd.Timedelta(days=3, hours=20)
+            # In-progress: started and still within the end window
+            _in_progress = _sched_copy.loc[
+                (_sched_copy[_date_c] <= _sched_now) & (_sched_copy["_end_w"] >= _sched_now), "event_id"
+            ].dropna().astype(int).tolist()
+            _upcoming_sorted = _sched_copy.loc[_sched_copy[_date_c] > _sched_now].sort_values(_date_c)
+            _all_upcoming = _upcoming_sorted["event_id"].dropna().astype(int).tolist()
+            # "This Week" = in-progress event OR (if none) the next upcoming event
+            if _in_progress:
+                _current_eids = _in_progress
+                _next_eids    = _all_upcoming
+            else:
+                _current_eids = _all_upcoming[:1]
+                _next_eids    = _all_upcoming[1:]
+        else:
+            _current_eids, _next_eids = [], []
+    else:
+        _current_eids, _next_eids = [], []
 
-    st.markdown("---")
-    if not player_universe:
-        st.caption("Player list will appear once Tab 1 loads for the selected event.")
+    # Build lookup by event_name (DataGolf event_ids don't always match schedule event_ids)
+    _fs_by_name = {
+        str(v.get("event_name", "")).strip().lower(): v
+        for v in _fs.values() if isinstance(v, dict) and v.get("event_name")
+    }
+    # Map schedule event_id -> field status entry via name match
+    _sched_name_col = "event_name" if "event_name" in _sched_copy.columns else None
 
-    excluded = st.multiselect(
-        "Filter OUT players",
-        options=player_universe,
-        key="excluded_players",  # widget owns the value
+    def _lookup_fs(eids):
+        if not eids or not _sched_name_col:
+            return None
+        row = _sched_copy.loc[_sched_copy["event_id"] == eids[0]]
+        if row.empty:
+            return None
+        name = str(row.iloc[0][_sched_name_col]).strip().lower()
+        return _fs_by_name.get(name)
+
+    st.markdown(
+        "<div style='font-size:11px;font-weight:700;letter-spacing:0.08em;"
+        "color:rgba(130,130,130,0.6);text-transform:uppercase;margin:18px 0 10px'>"
+        "Field Status</div>",
+        unsafe_allow_html=True,
     )
 
+    for _week_label, _eids in [("This Week", _current_eids), ("Next Up", _next_eids[:1])]:
+        _wf = _lookup_fs(_eids)
+        if not _wf:
+            st.markdown(
+                f"<div style='padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+                f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_week_label}</span>"
+                f"<span style='font-size:11px;color:rgba(120,120,120,0.4);margin-left:10px'>Not yet loaded</span></div>",
+                unsafe_allow_html=True,
+            )
+            continue
+
+        _ev_name  = _wf.get("event_name", "")
+        _n        = _wf.get("player_count", "?")
+        _updated  = _fmt_ts(_wf.get("last_updated", ""))
+        _changes  = _wf.get("recent_changes", [])
+        _latest_c = _changes[0] if _changes else {}
+        _added    = _latest_c.get("added", [])
+        _dropped  = _latest_c.get("withdrawn", [])
+
+        _change_html = ""
+        if _added:
+            _names = ", ".join(_added[:5]) + ("…" if len(_added) > 5 else "")
+            _change_html += f"<div style='font-size:11px;color:rgba(100,200,100,0.85);margin-top:4px'>↑ {len(_added)} added: {_names}</div>"
+        if _dropped:
+            _names = ", ".join(_dropped[:5]) + ("…" if len(_dropped) > 5 else "")
+            _change_html += f"<div style='font-size:11px;color:rgba(255,120,100,0.85);margin-top:2px'>↓ {len(_dropped)} withdrawn: {_names}</div>"
+
+        st.markdown(
+            f"<div style='padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+            f"<div style='display:flex;justify-content:space-between;align-items:baseline'>"
+            f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_week_label}</span>"
+            f"<span style='font-size:11px;color:rgba(100,200,100,0.9)'>{_updated}</span></div>"
+            f"<div style='font-size:12px;color:rgba(170,170,170,0.7);margin-top:3px'>{_ev_name} · {_n} players</div>"
+            f"{_change_html}"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
+
+    # ── Sidebar weather summary ────────────────────────────────────────────
+    _weather_api_key = st.secrets.get("WEATHER_API_KEY", "")
+    _wx_q = ""
+    for _col in ["weather_q", "weather_location", "location", "course_name"]:
+        if _col in selected_row.index:
+            _v = str(selected_row.get(_col, "")).strip()
+            if _v.lower() not in {"nan", "none", "null", "", "<unset>"}:
+                _wx_q = _v
+                break
+
+    _wx_start = None
+    for _dc in ["start_date", "date_start", "event_date"]:
+        if _dc in selected_row.index:
+            _wx_start = pd.to_datetime(selected_row.get(_dc), errors="coerce")
+            if pd.notna(_wx_start):
+                break
+
+    if _weather_api_key and _wx_q and _wx_start is not None and pd.notna(_wx_start):
+        _today       = pd.Timestamp.now().normalize()
+        _r1_away     = (_wx_start.normalize() - _today).days
+        _r4_away     = _r1_away + 3
+
+        st.markdown(
+            "<div style='font-size:11px;font-weight:700;letter-spacing:0.08em;"
+            "color:rgba(130,130,130,0.6);text-transform:uppercase;margin:18px 0 10px'>"
+            "Weather</div>",
+            unsafe_allow_html=True,
+        )
+
+        if _r4_away < -1:
+            st.markdown(
+                "<div style='font-size:11px;color:rgba(130,130,130,0.5)'>Event concluded.</div>",
+                unsafe_allow_html=True,
+            )
+        elif _r1_away > 6:
+            st.markdown(
+                f"<div style='font-size:11px;color:rgba(130,130,130,0.5)'>"
+                f"Forecast available in ~{_r1_away - 6} days.</div>",
+                unsafe_allow_html=True,
+            )
+        else:
+            try:
+                from weather_tab import _fetch_forecast
+                _days_fetch = max(1, min(_r4_away + 2, 7))
+                _wx_data    = _fetch_forecast(_weather_api_key, _wx_q, _days_fetch)
+                _wx_loc        = _wx_data.get("location", {}).get("name", _wx_q)
+                _wx_updated_raw = _wx_data.get("current", {}).get("last_updated", "")
+                _wx_updated_str = ""
+                if _wx_updated_raw:
+                    try:
+                        _wx_updated_str = pd.to_datetime(_wx_updated_raw).strftime("%-m/%-d %-I:%M%p").lower()
+                    except Exception:
+                        _wx_updated_str = _wx_updated_raw
+
+                st.markdown(
+                    f"<div style='font-size:11px;color:rgba(130,130,130,0.5);margin-bottom:8px'>"
+                    f"{_wx_loc}"
+                    f"{'  ·  <span style=\"font-size:10px\">' + _wx_updated_str + '</span>' if _wx_updated_str else ''}"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+                _WIND_COLORS = [(25, "#ef4444"), (18, "#f97316"), (12, "#fbbf24"), (0, "#22c55e")]
+                _RAIN_COLORS = [(60, "#60a5fa"), (30, "#93c5fd"), (0, "rgba(150,150,150,0.5)")]
+
+                def _wind_color(mph):
+                    for thresh, col in _WIND_COLORS:
+                        if mph >= thresh:
+                            return col
+                    return "#22c55e"
+
+                def _rain_color(pct):
+                    for thresh, col in _RAIN_COLORS:
+                        if pct >= thresh:
+                            return col
+                    return "rgba(150,150,150,0.5)"
+
+                _round_labels = ["R1", "R2", "R3", "R4"]
+                for _ri, _rd in enumerate([_wx_start + pd.Timedelta(days=i) for i in range(4)]):
+                    _rd_str  = _rd.strftime("%Y-%m-%d")
+                    _fd_list = _wx_data.get("forecast", {}).get("forecastday", [])
+                    _fd      = next((d for d in _fd_list if d.get("date") == _rd_str), None)
+                    if _fd is None:
+                        continue
+                    _day      = _fd.get("day", {})
+                    _temp     = _day.get("maxtemp_f")
+                    _wind     = _day.get("maxwind_mph")
+                    _rain     = _day.get("daily_chance_of_rain", 0)
+                    _cond     = (_day.get("condition") or {}).get("text", "")
+                    _label    = _round_labels[_ri]
+                    _date_fmt = _rd.strftime("%-m/%-d")
+                    _wc       = _wind_color(_wind or 0)
+                    _rc       = _rain_color(_rain or 0)
+                    _temp_str = f"{_temp:.0f}°F" if _temp is not None else "—"
+                    _wind_str = f"{_wind:.0f} mph" if _wind is not None else "—"
+                    _rain_str = f"{int(_rain)}%" if _rain is not None else "—"
+
+                    st.markdown(
+                        f"<div style='padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+                        f"<div style='display:flex;justify-content:space-between;align-items:center'>"
+                        f"<span style='font-size:12px;font-weight:700;color:rgba(210,210,210,0.9)'>"
+                        f"{_label} <span style='font-weight:400;color:rgba(150,150,150,0.6);font-size:10px'>{_date_fmt}</span></span>"
+                        f"<span style='font-size:11px;color:rgba(160,160,160,0.6)'>{_cond}</span>"
+                        f"</div>"
+                        f"<div style='display:flex;gap:10px;margin-top:3px'>"
+                        f"<span style='font-size:11px;color:rgba(200,200,200,0.7)'>🌡 {_temp_str}</span>"
+                        f"<span style='font-size:11px;color:{_wc};font-weight:600'>💨 {_wind_str}</span>"
+                        f"<span style='font-size:11px;color:{_rc}'>🌧 {_rain_str}</span>"
+                        f"</div>"
+                        f"</div>",
+                        unsafe_allow_html=True,
+                    )
+            except Exception:
+                pass  # silently skip if weather fetch fails in sidebar
 
 
 sched_row = selected_row
@@ -1281,11 +1513,7 @@ if event_id is not None:
     field_ev = field_ev.drop_duplicates(subset=["dg_id"], keep="last")
     field_ids = field_ev["dg_id"].astype(int).tolist()
 
-if only_in_field and not field_ids:
-    st.warning(
-        "No 2026 field uploaded yet for this event. Showing scouting universe instead."
-    )
-    only_in_field = False
+only_in_field = bool(field_ids)  # default True when field is available, else show full universe
 
 f_univ = fields.copy()
 
@@ -1404,15 +1632,31 @@ if _default_sort:
 
 summary_top = summary_top.reset_index(drop=True)
 
+# Load this week's field for live tab
+_this_week_field_path = INUSE_DIR / "this_week_field.csv"
+_this_week_field_df = pd.read_csv(_this_week_field_path) if _this_week_field_path.exists() else None
+_live_active = is_tournament_live(_this_week_field_df) if _this_week_field_df is not None else False
+
+# Also check schedule directly — keeps Live visible even if field file has rolled over to next week
+if not _live_active:
+    _now_check = pd.Timestamp.now()
+    for _, _sr in schedule_df.iterrows():
+        _sd = pd.to_datetime(_sr.get("start_date"), errors="coerce")
+        if pd.notna(_sd) and _sd <= _now_check <= _sd + pd.Timedelta(days=4):
+            _live_active = True
+            break
+
+_live_label = "🔴 Live" if _live_active else "⚫ Live"
+
 TAB_NAMES = [
     "Event Overview",
+    _live_label,
     "Field SG",
     "Course History",
     "Approach Skill",
     "H2H",
     "Player Deep Dive",
     "Event Archive",
-    # "Contender Model",
 ]
 
 if "active_tab" not in st.session_state or st.session_state.active_tab not in TAB_NAMES:
@@ -1434,6 +1678,7 @@ if active_tab == "Field SG":
         id_to_img=ID_TO_IMG,
         name_to_img=NAME_TO_IMG,
         schedule_df=schedule_df,
+        field_df=_this_week_field_df,
         event_id=event_id,
         cutoff_dt=cutoff,
     )
@@ -1532,4 +1777,21 @@ elif active_tab == "Event Overview":
         weather_api_key=st.secrets.get("WEATHER_API_KEY", ""),
         schedule_df=schedule_df,
         tee_times_path=str(INUSE_DIR / "this_week_field.csv"),
+    )
+
+elif active_tab == _live_label:
+    if not _live_active:
+        st.markdown(
+            "<div style='background:rgba(255,180,0,0.08);border:1px solid rgba(255,180,0,0.25);"
+            "border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px'>"
+            "<span style='font-size:20px'>⚫</span>"
+            "<div><div style='font-size:13px;font-weight:700;color:rgba(255,200,80,0.9)'>No active tournament</div>"
+            "<div style='font-size:12px;color:rgba(180,180,180,0.6);margin-top:2px'>"
+            "Showing last available live data. Once R4 results are finalized they will appear in Event Archive.</div>"
+            "</div></div>",
+            unsafe_allow_html=True,
+        )
+    render_live_tab(
+        field_df=_this_week_field_df,
+        id_to_img=ID_TO_IMG,
     )

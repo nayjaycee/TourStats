@@ -677,9 +677,9 @@ def render_weather_tab(
         st.info("This event has already concluded — forecast not available.")
         return
 
-    # Event is beyond the 14-day forecast window
-    if r1_days_away > 13:
-        days_until_window = r1_days_away - 13
+    # Event is beyond the 7-day forecast window
+    if r1_days_away > 6:
+        days_until_window = r1_days_away - 6
         st.markdown(
             "<div style='background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);"
             "border-radius:10px;padding:20px;text-align:center;color:rgba(180,180,180,0.7)'>"
@@ -691,8 +691,8 @@ def render_weather_tab(
         )
         return
 
-    # WeatherAPI day 1 = today, +2 to avoid off-by-one at boundary, cap at 14
-    days_ahead = max(1, min(r4_days_away + 2, 14))
+    # WeatherAPI day 1 = today, +2 to avoid off-by-one at boundary, cap at 7
+    days_ahead = max(1, min(r4_days_away + 2, 7))
 
     with st.spinner("Fetching forecast..."):
         try:

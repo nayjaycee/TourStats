@@ -483,7 +483,7 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
         date_col = "round_date" if "round_date" in r.columns else "event_completed"
         r[date_col] = pd.to_datetime(r[date_col], errors="coerce")
         cutoff_ts = pd.to_datetime(cutoff_dt) if cutoff_dt is not None else pd.Timestamp.now()
-        r = r[(r["dg_id"].isin(field_ids)) & (r[date_col] < cutoff_ts)].dropna(subset=["sg_total"]).copy()
+        r = r[(r["dg_id"].isin(field_ids)) & (r[date_col].isna() | (r[date_col] < cutoff_ts))].dropna(subset=["sg_total"]).copy()
         r = r.sort_values(["dg_id", date_col], ascending=[True,False])
 
         form = (

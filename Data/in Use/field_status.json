@@ -1,0 +1,38 @@
+{
+  "this_week": {
+    "event_id": 11,
+    "event_name": "THE PLAYERS Championship",
+    "player_count": 123,
+    "player_names": [],
+    "last_updated": "2026-03-15 21:11:02 ET",
+    "recent_changes": [
+      {
+        "timestamp": "2026-03-15 21:11:02 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "Initial pull"
+      }
+    ]
+  },
+  "next_week": {
+    "event_id": 12,
+    "event_name": "Valspar Championship",
+    "player_count": 131,
+    "player_names": [],
+    "last_updated": "2026-03-15 21:11:16 ET",
+    "recent_changes": [
+      {
+        "timestamp": "2026-03-15 21:11:16 ET",
+        "added": ["Fleetwood, Tommy", "Koepka, Brooks"],
+        "withdrawn": ["Harman, Brian"],
+        "note": "+2 / -1"
+      },
+      {
+        "timestamp": "2026-03-14 09:00:44 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "Initial pull"
+      }
+    ]
+  }
+}

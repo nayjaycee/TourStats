@@ -28,11 +28,11 @@ def calculate_player_score(rounds_df, dg_id, cutoff_date, method='volatility_pen
     date_col = 'round_date' if 'round_date' in rounds_df.columns else 'event_completed'
     
     player_rounds = rounds_df[
-        (rounds_df['dg_id'] == dg_id) & 
-        (rounds_df[date_col] < cutoff_date)
+        (rounds_df['dg_id'] == dg_id) &
+        (rounds_df[date_col].isna() | (rounds_df[date_col] < cutoff_date))
     ].copy()
-    
-    player_rounds = player_rounds.sort_values(date_col, ascending=False).head(window)
+
+    player_rounds = player_rounds.sort_values(date_col, ascending=False, na_position="last").head(window)
     
     if len(player_rounds) < 5:
         return None

@@ -144,6 +144,14 @@ def render_course_history_demo(
                     img = name_to_img.get(name)
                 if img:
                     st.image(img, use_container_width=True)
+                else:
+                    initials = "".join(p[0].upper() for p in name.replace(",", " ").split() if p)[:2]
+                    st.markdown(
+                        f"<div style='width:100%;aspect-ratio:200/220;background:rgba(80,80,80,0.25);"
+                        f"border-radius:6px;display:flex;align-items:center;justify-content:center;"
+                        f"font-size:28px;font-weight:700;color:rgba(255,255,255,0.25)'>{initials}</div>",
+                        unsafe_allow_html=True,
+                    )
 
                 sg_val = r.get("SG")
                 sg_txt = f"{float(sg_val):+.1f}" if pd.notna(sg_val) else ""

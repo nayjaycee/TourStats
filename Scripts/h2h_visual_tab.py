@@ -4,6 +4,13 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+from grass_putting_deepdive import (
+    _build_grass_lookup,
+    _compute_surface_stats,
+    _this_week_surface,
+    SURFACE_ORDER,
+    MIN_ROUNDS,
+)
 
 def _info_expander(label: str, content: str):
     with st.expander(f"ⓘ  {label}", expanded=False):
@@ -24,6 +31,9 @@ def render_h2h_visual_tab(
     course_num: "int | None" = None,
     approach_skill_df: "pd.DataFrame | None" = None,
     field_ids: "list | None" = None,
+    schedule_df: "pd.DataFrame | None" = None,
+    event_id: "int | None" = None,
+    greens_ref_path: "str | None" = None,
 ):
     # ------------------------------------------------------------------
     # Colours
@@ -131,8 +141,8 @@ def render_h2h_visual_tab(
     ]
     ALL_STATS = [c for c in ALL_STATS if c in rounds_df.columns]
 
-    ra40 = _last_n_rounds_pre_event(rounds_df, dg_a, cutoff_dt, n=40)
-    rb40 = _last_n_rounds_pre_event(rounds_df, dg_b, cutoff_dt, n=40)
+    ra40 = _last_n_rounds_pre_event(rounds_df, dg_a, cutoff_dt, n=60)
+    rb40 = _last_n_rounds_pre_event(rounds_df, dg_b, cutoff_dt, n=60)
 
     def _safe_mean(df, col):
         if df is None or df.empty or col not in df.columns:
@@ -146,10 +156,10 @@ def render_h2h_visual_tab(
     # 1. SKILL PROFILE — ridge plot with course fit bands
     # ==================================================================
     st.divider()
-    st.subheader("Strokes Gained Profile (Last 40 Rounds)")
+    st.subheader("Strokes Gained Profile (Last 60 Rounds)")
     _info_expander(" How to read this", """
     Each row shows the <b>full distribution of round-by-round performance</b> for one skill —
-    not just an average, but every round played across the last 40.
+    not just an average, but every round played across the last 60.
     A tall, narrow peak means the player is <b>consistent</b>; a wide, flat curve means <b>volatile</b>.
     The dotted vertical line and labeled dot mark each player's <b>mean</b>.
     All skills are converted to tour z-scores so rows are directly comparable.
@@ -436,7 +446,7 @@ def render_h2h_visual_tab(
     ]
 
     # Build field percentiles from summary_top (all players in the field this week)
-    # Pre-compute field means from L40 rounds for all field players
+    # Pre-compute field means from L60 rounds for all field players
     _field_means_cache = {}
     def _get_field_means(col):
         if col in _field_means_cache:
@@ -463,7 +473,7 @@ def render_h2h_visual_tab(
         pct = float(n_below / len(field_vals) * 100)
         return float(100 - pct) if lower_better else pct
 
-    # Compute means from L40 rounds
+    # Compute means from L60 rounds
     valid_rows = []
     for col, label, lower_better in PCTILE_STATS:
         if col not in rounds_df.columns:
@@ -607,7 +617,7 @@ def render_h2h_visual_tab(
     # 3. FORM TREND with confidence band
     # ==================================================================
     st.divider()
-    st.subheader("Form Trend — Last 40 Rounds")
+    st.subheader("Form Trend — Last 60 Rounds")
 
     smooth_window = st.slider("Smoothing window", 1, 15, 5, key="h2h_vis_smooth")
 
@@ -667,7 +677,7 @@ def render_h2h_visual_tab(
     # 4. VIOLIN — SG total distribution
     # ==================================================================
     st.divider()
-    st.subheader("SG Total Distribution (Last 40 Rounds)")
+    st.subheader("SG Total Distribution (Last 60 Rounds)")
 
     if not ra40.empty and not rb40.empty and "sg_total" in rounds_df.columns:
         fig_violin = go.Figure()
@@ -1302,7 +1312,184 @@ def render_h2h_visual_tab(
 
 
     # ==================================================================
-    # 8. RECENT RESULTS (compact)
+    # 8. SURFACE PUTTING COMPARISON
+    # ==================================================================
+    if schedule_df is not None:
+        st.divider()
+        st.subheader("Putting by Surface")
+
+        tw_surface = _this_week_surface(schedule_df, event_id, greens_ref_path)
+        if tw_surface:
+            st.markdown(
+                f"<div style='font-size:11px;color:rgba(255,165,0,0.7);"
+                f"margin-bottom:10px'>★ This week: <b>{tw_surface}</b> greens</div>",
+                unsafe_allow_html=True,
+            )
+
+        col_win, _ = st.columns([2, 5])
+        with col_win:
+            surf_window = st.radio(
+                "Window", options=[12, 24, 36],
+                format_func=lambda x: f"L{x}",
+                index=2,
+                horizontal=True,
+                key="h2h_surf_putt_window",
+            )
+
+        vc  = f"L{surf_window}_vs_career"
+        raw = f"L{surf_window}_avg"
+
+        pa_df, field_df = _compute_surface_stats(
+            rounds_df, schedule_df, dg_a, field_ids, cutoff_dt, greens_ref_path
+        )
+        pb_df, _        = _compute_surface_stats(
+            rounds_df, schedule_df, dg_b, field_ids, cutoff_dt, greens_ref_path
+        )
+
+        if pa_df.empty and pb_df.empty:
+            st.caption("Not enough surface putting data for either player.")
+        else:
+            # ── gather all surfaces present for either player ──────────
+            def _sk(s):
+                try:    return SURFACE_ORDER.index(s)
+                except: return len(SURFACE_ORDER)
+
+            surfaces_all = sorted(
+                set(pa_df["surface"].tolist()) | set(pb_df["surface"].tolist()),
+                key=_sk,
+            )
+
+            def _career_avg(df):
+                return float(df["career_avg"].iloc[0]) if not df.empty and "career_avg" in df.columns else np.nan
+
+            ca_avg = _career_avg(pa_df)
+            cb_avg = _career_avg(pb_df)
+
+            rows = []
+            for surface in surfaces_all:
+                ra = pa_df[pa_df["surface"] == surface]
+                rb = pb_df[pb_df["surface"] == surface]
+                va = float(ra[vc].iloc[0]) if not ra.empty and vc in ra.columns and not ra[vc].isna().all() else np.nan
+                vb = float(rb[vc].iloc[0]) if not rb.empty and vc in rb.columns and not rb[vc].isna().all() else np.nan
+                na = int(ra["n_total"].iloc[0]) if not ra.empty else 0
+                nb = int(rb["n_total"].iloc[0]) if not rb.empty else 0
+                rows.append((surface, va, vb, na, nb))
+
+            # ── side by side bar chart ─────────────────────────────────
+            fig_surf = go.Figure()
+
+            surf_labels = [r[0] for r in rows]
+            vals_a      = [r[1] for r in rows]
+            vals_b      = [r[2] for r in rows]
+            n_a         = [r[3] for r in rows]
+            n_b         = [r[4] for r in rows]
+
+            is_tw = [bool(tw_surface and s.lower() == tw_surface.lower()) for s in surf_labels]
+
+            def _bar_color(base_hex, alpha):
+                h = base_hex.lstrip("#")
+                r2, g2, b2 = int(h[0:2],16), int(h[2:4],16), int(h[4:6],16)
+                return f"rgba({r2},{g2},{b2},{alpha})"
+
+            GREEN = "#00CC96"
+            RED   = "#EF553B"
+
+            def _colors(vals, base_col_pos, base_col_neg, tw_flags):
+                colors, borders, widths = [], [], []
+                for v, tw in zip(vals, tw_flags):
+                    if np.isnan(v):
+                        colors.append("rgba(100,100,100,0.2)")
+                        borders.append("rgba(0,0,0,0)")
+                        widths.append(0)
+                    else:
+                        base = base_col_pos if v >= 0 else base_col_neg
+                        colors.append(_bar_color(base, 1.0 if tw else 0.55))
+                        borders.append("rgba(255,255,255,0.7)" if tw else "rgba(0,0,0,0)")
+                        widths.append(2 if tw else 0)
+                return colors, borders, widths
+
+            col_a_pos = "#f97316"   # orange for player A positive
+            col_a_neg = "#c2440a"
+            col_b_pos = "#38bdf8"   # blue for player B positive
+            col_b_neg = "#1e6a99"
+
+            ca_colors, ca_borders, ca_widths = _colors(vals_a, col_a_pos, col_a_neg, is_tw)
+            cb_colors, cb_borders, cb_widths = _colors(vals_b, col_b_pos, col_b_neg, is_tw)
+
+            hover_a = [
+                f"<b>{s}</b>{'  ★ this week' if tw else ''}<br>"
+                f"{name_a}: {v:+.3f} vs career<br>n={n}"
+                if not np.isnan(v) else f"<b>{s}</b><br>{name_a}: insufficient data"
+                for s, v, n, tw in zip(surf_labels, vals_a, n_a, is_tw)
+            ]
+            hover_b = [
+                f"<b>{s}</b>{'  ★ this week' if tw else ''}<br>"
+                f"{name_b}: {v:+.3f} vs career<br>n={n}"
+                if not np.isnan(v) else f"<b>{s}</b><br>{name_b}: insufficient data"
+                for s, v, n, tw in zip(surf_labels, vals_b, n_b, is_tw)
+            ]
+
+            fig_surf.add_trace(go.Bar(
+                name=name_a,
+                y=surf_labels, x=vals_a,
+                orientation="h",
+                marker=dict(color=ca_colors, line=dict(color=ca_borders, width=ca_widths)),
+                text=[f"{v:+.3f}" if not np.isnan(v) else "—" for v in vals_a],
+                textposition="auto",
+                textfont=dict(size=11, color="white"),
+                hovertext=hover_a, hoverinfo="text",
+            ))
+            fig_surf.add_trace(go.Bar(
+                name=name_b,
+                y=surf_labels, x=vals_b,
+                orientation="h",
+                marker=dict(color=cb_colors, line=dict(color=cb_borders, width=cb_widths)),
+                text=[f"{v:+.3f}" if not np.isnan(v) else "—" for v in vals_b],
+                textposition="auto",
+                textfont=dict(size=11, color="white"),
+                hovertext=hover_b, hoverinfo="text",
+            ))
+
+            # zero line = career baseline
+            fig_surf.add_vline(x=0, line_dash="dash",
+                               line_color="rgba(255,255,255,0.25)", line_width=1)
+
+            window_label = "All rounds" if surf_window == 60 else f"L{surf_window}"
+            ca_str = f"{ca_avg:+.3f}" if np.isfinite(ca_avg) else "—"
+            cb_str = f"{cb_avg:+.3f}" if np.isfinite(cb_avg) else "—"
+
+            fig_surf.update_layout(
+                barmode="group",
+                height=max(400, len(surf_labels) * 120),
+                template="plotly_dark",
+                plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+                margin=dict(l=120, r=40, t=50, b=110),
+                title=dict(
+                    text=(f"{window_label} SG: Putt vs career baseline  "
+                          f"({name_a.split(',')[0]}: {ca_str}  |  "
+                          f"{name_b.split(',')[0]}: {cb_str})"),
+                    font=dict(size=11, color="rgba(180,180,180,0.7)"),
+                    x=0.5, xanchor="center",
+                ),
+                xaxis=dict(
+                    title="SG: Putt above / below career avg",
+                    gridcolor="rgba(128,128,128,0.2)",
+                    zeroline=False, tickfont=dict(size=10),
+                ),
+                yaxis=dict(
+                    tickfont=dict(size=12, color="rgba(210,210,210,0.88)"),
+                    gridcolor="rgba(128,128,128,0.1)", fixedrange=True,
+                    categoryorder="array", categoryarray=list(reversed(surf_labels)),
+                ),
+                legend=dict(orientation="h", yanchor="top", y=-0.28,
+                            xanchor="center", x=0.5, font=dict(size=12)),
+                bargap=0.12,
+                bargroupgap=0.04,
+            )
+            st.plotly_chart(fig_surf, use_container_width=True, config={"displayModeBar": False})
+
+    # ==================================================================
+    # 9. RECENT RESULTS (compact)
     # ==================================================================
     st.divider()
     st.subheader("Recent Tournaments")
