@@ -346,6 +346,126 @@ def render_player_deep_dive_tab(
 
 
     # ══════════════════════════════════════════════════════════════════════════
+    # SECTION 1c — FORM CONTEXT (L12 vs L60 component z-scores)
+    # ══════════════════════════════════════════════════════════════════════════
+    st.divider()
+    st.subheader("Form Context — L12 vs L60 Baseline")
+    _info_expander("How to read this",
+        "Shows how this player's last 12 rounds compare to their last 60 rounds in each SG component. "
+        "Green bars mean the recent stretch is above their own 60-round baseline; red means below. "
+        "The number is how many standard deviations above/below (z-score). "
+        "Putting and Around Green deviations are higher-noise and tend to self-correct quickly. "
+        "Off-Tee and Approach deviations are stickier and may reflect a real trend."
+    )
+
+    SG_DISPLAY = [
+        ("sg_total", "Total SG"),
+        ("sg_ott",   "Off-Tee"),
+        ("sg_app",   "Approach"),
+        ("sg_arg",   "Around Green"),
+        ("sg_putt",  "Putting"),
+    ]
+    NOISE_LABEL = {"sg_total": "", "sg_ott": "sticky", "sg_app": "sticky",
+                   "sg_arg": "reverts fast", "sg_putt": "reverts fast"}
+
+    r60_sg = _last_n_rounds_pre_event(rounds_df, dg_id, cutoff_dt, n=60)
+    r12_sg = _last_n_rounds_pre_event(rounds_df, dg_id, cutoff_dt, n=12)
+
+    fc_rows = []
+    for col, label in SG_DISPLAY:
+        if col not in rounds_df.columns:
+            continue
+        vals60 = pd.to_numeric(r60_sg[col], errors="coerce").dropna() if r60_sg is not None and col in r60_sg.columns else pd.Series(dtype=float)
+        vals12 = pd.to_numeric(r12_sg[col], errors="coerce").dropna() if r12_sg is not None and col in r12_sg.columns else pd.Series(dtype=float)
+        if len(vals60) < 20 or len(vals12) < 4:
+            continue
+        mu   = vals60.mean()
+        sig  = vals60.std()
+        rec  = vals12.mean()
+        z    = (rec - mu) / sig if sig > 0.01 else 0.0
+        fc_rows.append({"col": col, "label": label, "z": z, "rec": rec, "base": mu, "noise": NOISE_LABEL.get(col, "")})
+
+    if fc_rows:
+        fc_df = pd.DataFrame(fc_rows)
+
+        # Summary banner
+        total_z = fc_df.loc[fc_df["col"] == "sg_total", "z"].values
+        if len(total_z):
+            tz = float(total_z[0])
+            if tz <= -0.75:
+                driver_rows = fc_df[fc_df["col"] != "sg_total"].nsmallest(1, "z")
+                driver = driver_rows.iloc[0]["label"] if not driver_rows.empty else "multiple components"
+                noise_tag = driver_rows.iloc[0]["noise"] if not driver_rows.empty else ""
+                color = "rgba(239,68,68,0.12)"; border = "rgba(239,68,68,0.35)"; icon = "Below baseline"
+                note = f"Driven by {driver}" + (f" ({noise_tag})" if noise_tag else "")
+            elif tz >= 0.75:
+                driver_rows = fc_df[fc_df["col"] != "sg_total"].nlargest(1, "z")
+                driver = driver_rows.iloc[0]["label"] if not driver_rows.empty else "multiple components"
+                noise_tag = driver_rows.iloc[0]["noise"] if not driver_rows.empty else ""
+                color = "rgba(34,197,94,0.10)"; border = "rgba(34,197,94,0.30)"; icon = "Above baseline"
+                note = f"Led by {driver}" + (f" ({noise_tag})" if noise_tag else "")
+            else:
+                color = "rgba(148,163,184,0.07)"; border = "rgba(148,163,184,0.2)"; icon = "On baseline"
+                note = "L12 in line with L60 average"
+
+            st.markdown(
+                f"<div style='background:{color};border:1px solid {border};border-radius:8px;"
+                f"padding:10px 16px;margin-bottom:12px;font-size:13px;color:#ccc'>"
+                f"<b>{icon}</b> &nbsp; z = {tz:+.2f} &nbsp;|&nbsp; {note}</div>",
+                unsafe_allow_html=True,
+            )
+
+        # Component bar chart
+        fig_fc = go.Figure()
+        for _, row in fc_df.iterrows():
+            z = row["z"]
+            color = (
+                f"rgba(34,197,94,{min(0.85, 0.3 + abs(z)*0.25)})"  if z > 0.1
+                else f"rgba(239,68,68,{min(0.85, 0.3 + abs(z)*0.25)})" if z < -0.1
+                else "rgba(148,163,184,0.3)"
+            )
+            fig_fc.add_trace(go.Bar(
+                x=[z], y=[row["label"]], orientation="h",
+                marker_color=color,
+                text=f"{z:+.2f}  ({row['rec']:+.2f} vs {row['base']:+.2f} base)",
+                textposition="outside" if abs(z) < 1.2 else "inside",
+                textfont=dict(size=10, color="#aaa"),
+                hovertemplate=(
+                    f"<b>{row['label']}</b><br>"
+                    f"L12 avg: {row['rec']:+.3f}<br>"
+                    f"L60 avg: {row['base']:+.3f}<br>"
+                    f"z-score: {z:+.2f}"
+                    + (f"<br><i>{row['noise']}</i>" if row['noise'] else "")
+                    + "<extra></extra>"
+                ),
+                showlegend=False,
+            ))
+
+        fig_fc.add_vline(x=0, line_color="rgba(255,255,255,0.25)", line_width=1)
+        fig_fc.add_vrect(x0=-0.75, x1=0.75, fillcolor="rgba(255,255,255,0.02)",
+                         line_width=0, annotation_text="normal range",
+                         annotation_position="top right",
+                         annotation_font=dict(size=9, color="rgba(150,150,150,0.4)"))
+        fig_fc.update_layout(
+            height=220, margin=dict(l=10, r=120, t=10, b=10),
+            template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            xaxis=dict(range=[-2.5, 2.5], zeroline=False,
+                       tickvals=[-2, -1, 0, 1, 2],
+                       ticktext=["-2", "-1", "0", "+1", "+2"],
+                       gridcolor="rgba(255,255,255,0.05)"),
+            yaxis=dict(autorange="reversed", gridcolor="rgba(0,0,0,0)"),
+        )
+        st.plotly_chart(fig_fc, use_container_width=True)
+
+        st.caption(
+            "Sticky components (Off-Tee, Approach) tend to persist. "
+            "Fast-reverting components (Putting, Around Green) tend to normalize quickly."
+        )
+    else:
+        st.caption("Not enough rounds to compute form context.")
+
+    # ══════════════════════════════════════════════════════════════════════════
     # SECTION 2 — FIELD PERCENTILE BARS
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
