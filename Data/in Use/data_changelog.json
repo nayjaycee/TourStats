@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-16 16:27:50 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 7,575 rows across 22 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-03-16 16:27:46 ET",
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
