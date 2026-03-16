@@ -1,0 +1,61 @@
+name: GolfStats Data Refresh
+
+on:
+  schedule:
+    - cron: '0 12,16,20 * * 1'       # Mon 8am/12pm/4pm ET — full refresh (blocks 1,2,3)
+    - cron: '0 13,19 * * 2,3'         # Tue/Wed 9am/3pm ET — field + odds (block 1)
+    - cron: '0 13,21 * * 4,5,6,0'    # Thu-Sun 9am/5pm ET — field check (block 1)
+    - cron: '*/30 11-23 * * 4,5,6,0' # Thu-Sun 7am-7:30pm ET — live odds (block 4)
+  workflow_dispatch:
+    inputs:
+      blocks:
+        description: 'Blocks to run (e.g. 1 or 1,2,3)'
+        required: true
+        default: '1'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "golfstats-bot"
+          git config user.email "golfstats-bot@users.noreply.github.com"
+
+      - name: Determine blocks to run
+        id: blocks
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "blocks=${{ inputs.blocks }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 12,16,20 * * 1" ]; then
+            echo "blocks=1,2,3" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "*/30 11-23 * * 4,5,6,0" ]; then
+            echo "blocks=4" >> $GITHUB_OUTPUT
+          else
+            echo "blocks=1" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run data refresh
+        env:
+          DATAGOLF_API_KEY: ${{ secrets.DATAGOLF_API_KEY }}
+        run: |
+          echo "Running blocks: ${{ steps.blocks.outputs.blocks }}"
+          python Scripts/refresh_data.py --blocks ${{ steps.blocks.outputs.blocks }}
