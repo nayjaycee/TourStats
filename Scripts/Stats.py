@@ -1587,7 +1587,7 @@ if odds_col:
     _odds_available = out[odds_col].notna().any()
     if not _odds_available and event_id is not None:
         _event_label = selected_row.get("event_name", "this event") if "event_name" in selected_row.index else "this event"
-        st.sidebar.info(f"📋 Pre-tournament odds not yet released for **{_event_label}**. Odds will appear here once sportsbooks post lines.")
+        st.sidebar.info(f"Pre-tournament odds not yet released for **{_event_label}**. Odds will appear here once the API provider updates lines.")
 
 for c in ["ytd_starts", "ytd_wins", "ytd_top10", "ytd_top25", "ytd_made_cuts"]:
     if c in out.columns:
