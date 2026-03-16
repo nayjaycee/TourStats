@@ -120,8 +120,7 @@ def load_rounds_all():
     if date_col in df.columns:
         df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
 
-    if 'round_position' not in df.columns:
-        df = _add_round_positions(df)
+    df = _add_round_positions(df)
 
     return df
 
