@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-16 16:27:51 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,005 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-03-16 16:27:50 ET",
       "type": "rounds_refresh",
       "event_name": "",
