@@ -579,7 +579,7 @@ def render_production_sg_tab(
                         colorbar=dict(title=primary_stat) if not show_text else None,
                         line=dict(width=1 if show_text else 0.5, color="white"),
                     ),
-                    text=df_part["player_name"] if show_text else None,
+                    text=df_part["player_name"],
                     textposition="top center",
                     textfont=dict(size=8, color="white"),
                     hovertemplate="<b>%{text}</b><br>T2G: %{x:.2f}<br>Short: %{y:.2f}<extra></extra>",

@@ -446,13 +446,15 @@ def render_player_deep_dive_tab(
                          line_width=0, annotation_text="normal range",
                          annotation_position="top right",
                          annotation_font=dict(size=9, color="rgba(150,150,150,0.4)"))
+        max_abs_z = max(abs(fc_df["z"].max()), abs(fc_df["z"].min()), 1.0)
+        x_pad = max(0.5, max_abs_z * 0.25)
+        x_lim = round(max_abs_z + x_pad, 1)
+
         fig_fc.update_layout(
             height=220, margin=dict(l=10, r=120, t=10, b=10),
             template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
-            xaxis=dict(range=[-2.5, 2.5], zeroline=False,
-                       tickvals=[-2, -1, 0, 1, 2],
-                       ticktext=["-2", "-1", "0", "+1", "+2"],
+            xaxis=dict(range=[-x_lim, x_lim], zeroline=False,
                        gridcolor="rgba(255,255,255,0.05)"),
             yaxis=dict(autorange="reversed", gridcolor="rgba(0,0,0,0)"),
         )
