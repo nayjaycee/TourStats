@@ -140,7 +140,7 @@ def load_fields():
 fields_df = load_fields()
 
 SEASON_YEAR = 2026
-APP_VERSION = "1.0.1"
+APP_VERSION = "1.0.3"
 st.title(f"TourStats - v{APP_VERSION}")
 
 HERO_H = 240  # <-- tune: 230-280
