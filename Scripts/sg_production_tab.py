@@ -493,7 +493,7 @@ Elite picks live in the bottom-right: high mean, low variance.
     if has_odds and "odds_rank" in ef_df.columns:
         st.divider()
         st.markdown("### Odds Context")
-        st.caption("Where the model and the market disagree — EF rank vs odds rank")
+        st.caption("Where the model and the market disagree - EF rank vs odds rank")
 
         ef_df["rank_delta"] = ef_df["odds_rank"].astype(float) - ef_df["ef_rank"]
         value_df = ef_df[ef_df["odds"].notna()].copy()
