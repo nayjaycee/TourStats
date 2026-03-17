@@ -823,7 +823,8 @@ def render_overview_tab(
             field_df = None
     _render_hero(selected_row)
     _render_course_dna(course_fit_df, course_num)
-    featured_ids = _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img or {}, field_df=field_df)
+    with st.spinner("Loading field data…"):
+        featured_ids = _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img or {}, field_df=field_df)
     _render_event_history(rounds_df, event_id, course_num)
     if weather_api_key and event_id is not None:
         _render_weather_section(weather_api_key, schedule_df, event_id, tee_times_path, featured_dg_ids=featured_ids)

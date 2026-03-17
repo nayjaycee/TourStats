@@ -81,6 +81,8 @@ def render_player_deep_dive_tab(
 
     if field_ids:
         pool = pool[pool["dg_id"].isin([int(x) for x in field_ids if pd.notna(x)])].copy()
+    else:
+        st.caption("No field data available — showing all players.")
 
     if pool.empty:
         st.info("No players available.")
@@ -91,6 +93,9 @@ def render_player_deep_dive_tab(
     odds_by_id  = dict(zip(pool["dg_id"], pool.get("close_odds", pd.Series())))
 
     weekly_top1 = st.session_state.get("weekly_top1_dg_id")
+    using_default = weekly_top1 and int(weekly_top1) in dg_options and (
+        "dd_dg_id" not in st.session_state or st.session_state["dd_dg_id"] not in dg_options
+    )
     default_dg  = int(weekly_top1) if weekly_top1 and int(weekly_top1) in dg_options else dg_options[0]
 
     if "dd_dg_id" not in st.session_state or st.session_state["dd_dg_id"] not in dg_options:
@@ -105,6 +110,8 @@ def render_player_deep_dive_tab(
         key="dd_dg_id",
     )
     dg_id       = int(dg_id)
+    if using_default:
+        st.caption("Defaulting to top-ranked player from Field SG tab.")
     player_name = name_by_id.get(dg_id, "Unknown")
     odds_val    = odds_by_id.get(dg_id)
     try:

@@ -315,13 +315,12 @@ def render_production_sg_tab(
             st.session_state["weekly_top2_dg_id"] = int(valid.iloc[1]["dg_id"])
 
         # ── Top 10 performer cards ─────────────────────────────────────────
-        st.markdown("### Top Performers")
         blend_note = f" · {live_blend}% live blend" if live_blend > 0 else ""
         st.caption(
-            f"Based on {primary_stat} ({primary_window}){blend_note} · {len(valid)} players · "
-            "Component bars (OTT/APP/ARG/PUTT) use only rounds with full SG data - "
-            "rounds from tours that don't report all components are excluded."
+            f"Ranked by {primary_stat} ({primary_window}){blend_note} · {len(valid)} players · "
+            "Component bars use only rounds with full SG data."
         )
+        st.markdown("### Top Performers")
 
         top10 = valid.head(10)
 
