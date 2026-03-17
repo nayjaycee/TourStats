@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 475,
     "event_name": "Valspar Championship",
-    "player_count": 133,
+    "player_count": 135,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
@@ -42,6 +42,7 @@
       "Greyserman, Max",
       "Griffin, Ben",
       "Grillo, Emiliano",
+      "Guthrie, Luke",
       "Hadwin, Adam",
       "Higgo, Garrick",
       "Highsmith, Joe",
@@ -133,13 +134,23 @@
       "Wallace, Matt",
       "Waring, Paul",
       "Whaley, Vince",
+      "Wilkes, Tyler",
       "Willett, Danny",
       "Woodland, Gary",
       "Wu, Dylan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-03-17 10:18:23 ET",
+    "last_updated": "2026-03-17 15:53:55 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-17 15:53:55 ET",
+        "added": [
+          "Guthrie, Luke",
+          "Wilkes, Tyler"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-03-17 10:18:23 ET",
         "added": [
