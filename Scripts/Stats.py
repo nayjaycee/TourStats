@@ -1656,6 +1656,7 @@ TAB_NAMES = [
     "Event Overview",
     _live_label,
     "Field SG",
+    "Contender Model",
     "Course History",
     "Approach Skill",
     "H2H",
@@ -1766,6 +1767,16 @@ elif active_tab == "Event Archive":
 
 # elif active_tab == "Contender Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)
+
+elif active_tab == "Contender Model":
+    from sg_production_tab import render_elite_finish_analysis
+    render_elite_finish_analysis(
+        rounds_df=rounds_df,
+        field_ids=field_ids,
+        all_players=all_players,
+        cutoff_dt=cutoff,
+        summary_top=summary_top,
+    )
 
 elif active_tab == "Event Overview":
     from overview_tab import render_overview_tab

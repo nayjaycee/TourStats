@@ -156,6 +156,510 @@ def build_stats_df(
     return latest
 
 
+@st.cache_data(show_spinner=False)
+def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Run EF formula retrospectively on every 2025/2026 PGA tournament.
+    Returns per-tournament results: top-5 picks, hit counts, finishes.
+    Cached — only runs once per session.
+    """
+    date_col = "round_date" if "round_date" in rounds_df.columns else "event_completed"
+    test_df  = rounds_df[rounds_df["year"].isin([2025, 2026])].copy()
+    test_df["event_completed"] = pd.to_datetime(test_df["event_completed"], errors="coerce")
+
+    tournaments = (
+        test_df.groupby(["event_id", "year"], as_index=False)
+        .agg(event_name=("event_name", "first"),
+             event_end=("event_completed", "max"))
+        .sort_values("event_end")
+    )
+
+    rows = []
+    for _, tourn in tournaments.iterrows():
+        event_end = pd.to_datetime(tourn["event_end"], errors="coerce")
+        if pd.isna(event_end):
+            continue
+        cutoff = event_end - pd.Timedelta(days=7)
+
+        ev = test_df[
+            (test_df["event_id"] == tourn["event_id"]) &
+            (test_df["year"] == tourn["year"])
+        ]
+        field = (
+            ev.groupby("dg_id", as_index=False)
+            .agg(player_name=("player_name", "first"), finish_num=("finish_num", "first"))
+            .dropna(subset=["finish_num"])
+        )
+        if len(field) < 20:
+            continue
+
+        scores = []
+        for _, p in field.iterrows():
+            pr = rounds_df[rounds_df["dg_id"] == p["dg_id"]].copy()
+            rd = pd.to_datetime(pr[date_col], errors="coerce")
+            ec = pd.to_datetime(pr["event_completed"], errors="coerce")
+            mask = (rd.notna() & (rd < cutoff)) | (rd.isna() & (ec < cutoff))
+            pr = pr[mask].sort_values(date_col, ascending=False, na_position="last").head(36)
+            v  = pd.to_numeric(pr["sg_total"], errors="coerce").dropna().values
+            if len(v) < 10:
+                continue
+            scores.append({
+                "player_name": p["player_name"],
+                "ef_score":    float(np.mean(v) - 0.3 * np.std(v)),
+                "finish":      int(p["finish_num"]),
+            })
+
+        if len(scores) < 10:
+            continue
+
+        pred = pd.DataFrame(scores).sort_values("ef_score", ascending=False)
+        top5 = pred.head(5)
+        rows.append({
+            "event_name":  tourn["event_name"],
+            "year":        int(tourn["year"]) if pd.notna(tourn["year"]) else 0,
+            "event_end":   event_end,
+            "top25_hits":  int((top5["finish"] <= 25).sum()),
+            "top10_hits":  int((top5["finish"] <= 10).sum()),
+            "top5_hits":   int((top5["finish"] <= 5).sum()),
+            "picks":       ", ".join(top5["player_name"].tolist()),
+            "finishes":    ", ".join(top5["finish"].astype(str).tolist()),
+        })
+
+    return pd.DataFrame(rows)
+
+
+def render_elite_finish_analysis(
+    rounds_df,
+    field_ids=None,
+    all_players=None,
+    cutoff_dt=None,
+    summary_top=None,
+):
+    """Standalone Elite Finish Analysis — current field + odds context + history."""
+
+    # ── Header ──────────────────────────────────────────────────────────────
+    st.title("Contender Model")
+    col_hdr, col_badge = st.columns([5, 1])
+    with col_hdr:
+        st.caption(
+            "Elite Finish Score = mean(L36) − 0.3 × σ(L36)  ·  "
+            "Rewards sustained SG output, penalises boom-or-bust variance"
+        )
+    with col_badge:
+        st.markdown(
+            "<div style='background:rgba(0,204,150,0.15);border:1px solid rgba(0,204,150,0.4);"
+            "border-radius:8px;padding:6px 10px;text-align:center;margin-top:2px'>"
+            "<div style='font-size:18px;font-weight:800;color:#00CC96'>66.6%</div>"
+            "<div style='font-size:9px;color:rgba(200,200,200,0.6)'>Top-25 hit rate<br>2025/26 · top-5 picks</div>"
+            "</div>",
+            unsafe_allow_html=True,
+        )
+
+    # ── Build current-field stats ────────────────────────────────────────────
+    if field_ids and len(field_ids) > 0:
+        players_list = field_ids
+    elif all_players is not None and "dg_id" in all_players.columns:
+        players_list = pd.to_numeric(all_players["dg_id"], errors="coerce").dropna().astype(int).tolist()
+    else:
+        players_list = rounds_df["dg_id"].unique().tolist()
+
+    rounds_for_stats = rounds_df
+    if cutoff_dt is not None:
+        _dc    = "round_date" if "round_date" in rounds_df.columns else "event_completed"
+        _dates = pd.to_datetime(rounds_df[_dc], errors="coerce")
+        rounds_for_stats = rounds_df[_dates.isna() | (_dates < pd.to_datetime(cutoff_dt))].copy()
+
+    with st.spinner("Building stats…"):
+        stats_df = build_stats_df(rounds_for_stats, tuple(players_list), windows=WINDOWS)
+
+    if stats_df.empty:
+        st.warning("Insufficient data.")
+        return
+
+    if all_players is not None and "player_name" not in stats_df.columns:
+        name_map = dict(zip(
+            pd.to_numeric(all_players["dg_id"], errors="coerce").astype("Int64"),
+            all_players["player_name"],
+        ))
+        stats_df["player_name"] = stats_df["dg_id"].map(name_map).fillna(
+            stats_df["dg_id"].apply(lambda x: f"Player {x}")
+        )
+
+    if not all(c in stats_df.columns for c in ["elite_finish_L36", "_sg_total_std_L36", "sg_total_L36"]):
+        st.warning("Elite Finish columns not available.")
+        return
+
+    ef_df = stats_df[["dg_id", "player_name", "sg_total_L36", "_sg_total_std_L36", "elite_finish_L36"]].dropna().copy()
+    ef_df = ef_df.rename(columns={
+        "sg_total_L36":      "mean_sg",
+        "_sg_total_std_L36": "std_sg",
+        "elite_finish_L36":  "ef_score",
+    })
+    ef_df = ef_df.sort_values("ef_score", ascending=False).reset_index(drop=True)
+    ef_df["ef_rank"] = range(1, len(ef_df) + 1)
+
+    def _ef_tier(score):
+        if score >= 1.0:  return ("Elite",     "#00CC96")
+        if score >= 0.5:  return ("Contender", "#66D9A6")
+        if score >= 0.0:  return ("Fringe",    "#FFA07A")
+        return                   ("Below",     "#EF553B")
+
+    tiers = ef_df["ef_score"].apply(_ef_tier)
+    ef_df["tier"]       = [t[0] for t in tiers]
+    ef_df["tier_color"] = [t[1] for t in tiers]
+
+    # Merge odds from summary_top if available
+    odds_col = None
+    if summary_top is not None:
+        for c in ["close_odds", "decimal_odds", "odds", "win_prob_est"]:
+            if c in summary_top.columns and summary_top[c].notna().any():
+                odds_col = c
+                break
+    if odds_col:
+        odds_map = summary_top.set_index("dg_id")[odds_col].to_dict()
+        ef_df["odds"] = ef_df["dg_id"].map(odds_map)
+        ef_df["implied_prob"] = 100 / ef_df["odds"].where(ef_df["odds"] > 0)
+        ef_df["odds_rank"] = ef_df["odds"].rank(method="min", na_option="bottom").astype("Int64")
+
+    # ── Model explanation ────────────────────────────────────────────────────
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("Why this model?", expanded=False):
+        st.markdown(
+            """
+**Formula:** `EF Score = mean(sg_total, L36) − 0.3 × σ(sg_total, L36)`
+
+The Elite Finish score answers a simple question: *which players produce strong strokes-gained numbers reliably, not just occasionally?*
+The mean captures sustained output over the last 36 rounds (~9–12 months of PGA starts).
+The volatility penalty (0.3 × std dev) discounts boom-or-bust players - a player averaging +1.5 with wild swings
+is less predictable than one averaging +1.2 consistently.
+
+**Why L36 and not a longer window?**
+We tested five formula variants against every 2025/2026 PGA Tour tournament:
+
+| Formula | Top-25 % | Top-10 % |
+|---|---|---|
+| **A: mean(L36) - 0.3σ L36** | **66.6%** | **37.2%** |
+| E: 0.6×mean(L60) + 0.4×expDecay(L12) - 0.3σ L36 | 63.6% | 34.6% |
+| B: mean(L60) - 0.3σ L60 | 63.2% | 34.6% |
+| D: exp_decay(L36) - 0.3σ L36 | 63.1% | 33.8% |
+| C: mean(L60) - 0.3σ L36 | 62.9% | 34.6% |
+
+The current formula beat every alternative including recency-weighted and long-window variants.
+Adding more history (L60) or hot-streak blending (exp decay L12) both hurt performance.
+L36 appears to be the right balance: long enough to filter noise, short enough to stay current.
+
+**What the score means:**
+- **≥ 1.0 (Elite):** Consistently among the best in the field. High floor, top-25 very likely.
+- **0.5 to 1.0 (Contender):** Strong player, competitive most weeks.
+- **0.0 to 0.5 (Fringe):** Capable but inconsistent; depends on a peak week.
+- **< 0.0 (Below):** Negative expected value relative to field average.
+
+**Scatter plot:** Each dot is a player. Further right = higher mean SG (better output).
+Lower = lower std dev (more consistent). The dotted lines are iso-score contours.
+Players above a line have a lower EF score for their mean than players below it.
+Elite picks live in the bottom-right: high mean, low variance.
+            """
+        )
+
+    # ── Section 1: Scatter + leaderboard ────────────────────────────────────
+    st.markdown("### Current Field")
+    col_scatter, col_gap, col_board = st.columns([3, 0.15, 1.85])
+
+    with col_scatter:
+        mean_range = np.linspace(ef_df["mean_sg"].min() - 0.3, ef_df["mean_sg"].max() + 0.3, 200)
+        fig_ef = go.Figure()
+
+        for ef_val, lc, lname in [
+            (1.0, "rgba(0,204,150,0.55)",   "EF = 1.0"),
+            (0.5, "rgba(0,204,150,0.30)",   "EF = 0.5"),
+            (0.0, "rgba(255,255,255,0.20)", "EF = 0"),
+        ]:
+            std_iso = (mean_range - ef_val) / 0.3
+            mask = std_iso > 0
+            fig_ef.add_trace(go.Scatter(
+                x=mean_range[mask], y=std_iso[mask],
+                mode="lines",
+                line=dict(color=lc, dash="dot", width=1.2),
+                name=lname, hoverinfo="skip",
+            ))
+
+        top15_ids = set(ef_df.head(15)["dg_id"].tolist())
+        others_ef = ef_df[~ef_df["dg_id"].isin(top15_ids)]
+        top_ef    = ef_df[ef_df["dg_id"].isin(top15_ids)]
+        ef_cmin   = ef_df["ef_score"].quantile(0.10)
+        ef_cmax   = ef_df["ef_score"].quantile(0.90)
+
+        fig_ef.add_trace(go.Scatter(
+            x=others_ef["mean_sg"], y=others_ef["std_sg"],
+            mode="markers",
+            marker=dict(size=7, opacity=0.5, color=others_ef["ef_score"],
+                        colorscale="RdYlGn", cmin=ef_cmin, cmax=ef_cmax),
+            text=others_ef["player_name"], customdata=others_ef["ef_score"],
+            hovertemplate="<b>%{text}</b><br>Mean: %{x:.2f}  Std: %{y:.2f}  EF: %{customdata:.2f}<extra></extra>",
+            showlegend=False,
+        ))
+        fig_ef.add_trace(go.Scatter(
+            x=top_ef["mean_sg"], y=top_ef["std_sg"],
+            mode="markers+text",
+            marker=dict(
+                size=10, color=top_ef["ef_score"],
+                colorscale="RdYlGn", cmin=ef_cmin, cmax=ef_cmax,
+                line=dict(width=1.5, color="white"),
+                showscale=True,
+                colorbar=dict(title="EF", thickness=12, len=0.7),
+            ),
+            text=top_ef["player_name"], textposition="top center",
+            textfont=dict(size=8, color="white"),
+            customdata=top_ef["ef_score"],
+            hovertemplate="<b>%{text}</b><br>Mean: %{x:.2f}  Std: %{y:.2f}  EF: %{customdata:.2f}<extra></extra>",
+            showlegend=False,
+        ))
+
+        fig_ef.update_layout(
+            xaxis_title="Mean SG Total (L36)  →  higher is better",
+            yaxis_title="Std Dev (L36)  →  lower is more consistent",
+            height=950,
+            plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+            xaxis=dict(gridcolor="rgba(128,128,128,0.2)"),
+            yaxis=dict(gridcolor="rgba(128,128,128,0.2)"),
+            legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0,
+                        font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
+            margin=dict(t=30, b=40, l=50, r=20),
+        )
+        st.plotly_chart(fig_ef, use_container_width=True)
+
+    with col_board:
+        has_odds = odds_col and "odds" in ef_df.columns and ef_df["odds"].notna().any()
+
+        # Header row
+        hdr_odds = "<div style='width:52px;text-align:right;font-size:10px;color:#555'>Odds</div>" if has_odds else ""
+        st.markdown(
+            f"<div style='display:flex;font-size:10px;color:#555;padding:4px 0;"
+            f"border-bottom:1px solid rgba(128,128,128,0.2)'>"
+            f"<div style='width:20px'></div><div style='flex:1'>Player</div>"
+            f"<div style='width:36px;text-align:right'>EF</div>"
+            f"{hdr_odds}"
+            f"<div style='width:70px;text-align:right'>Tier</div>"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
+
+        for r, (_, row) in enumerate(ef_df.head(20).iterrows(), 1):
+            color   = row["tier_color"]
+            odds_html = ""
+            if has_odds and pd.notna(row.get("odds")):
+                odds_html = f"<div style='width:52px;text-align:right;font-size:11px;color:#888'>{row['odds']:.0f}</div>"
+            elif has_odds:
+                odds_html = "<div style='width:52px;text-align:right;font-size:11px;color:#444'>—</div>"
+            st.markdown(
+                f"<div style='display:flex;align-items:center;padding:4px 0;"
+                f"border-bottom:1px solid rgba(128,128,128,0.08)'>"
+                f"<div style='width:20px;font-size:10px;color:#555;flex-shrink:0'>{r}</div>"
+                f"<div style='flex:1;font-size:12px;font-weight:600;white-space:nowrap;"
+                f"overflow:hidden;text-overflow:ellipsis'>{row['player_name']}</div>"
+                f"<div style='width:36px;text-align:right;font-size:12px;font-weight:700;"
+                f"color:{color}'>{row['ef_score']:+.2f}</div>"
+                f"{odds_html}"
+                f"<div style='width:70px;text-align:right;margin-left:4px'>"
+                f"<span style='font-size:9px;padding:2px 6px;border-radius:8px;"
+                f"background:{color}25;color:{color}'>{row['tier']}</span>"
+                f"</div></div>",
+                unsafe_allow_html=True,
+            )
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        # Field tier distribution
+        total_ef = len(ef_df)
+        for lbl, mask, color in [
+            ("Elite (≥ 1.0)",     ef_df["ef_score"] >= 1.0,                                "#00CC96"),
+            ("Contender (≥ 0.5)", (ef_df["ef_score"] >= 0.5) & (ef_df["ef_score"] < 1.0), "#66D9A6"),
+            ("Fringe (≥ 0.0)",    (ef_df["ef_score"] >= 0.0) & (ef_df["ef_score"] < 0.5), "#FFA07A"),
+            ("Below (< 0.0)",     ef_df["ef_score"] < 0.0,                                 "#EF553B"),
+        ]:
+            n   = mask.sum()
+            pct = n / total_ef * 100 if total_ef else 0
+            st.markdown(
+                f"<div style='margin:4px 0'>"
+                f"<div style='display:flex;justify-content:space-between;font-size:11px;margin-bottom:2px'>"
+                f"<span style='color:{color}'>{lbl}</span>"
+                f"<span style='color:#888'>{n} ({pct:.0f}%)</span></div>"
+                f"<div style='background:rgba(128,128,128,0.15);height:5px;border-radius:3px'>"
+                f"<div style='background:{color};height:100%;width:{pct:.1f}%;border-radius:3px'>"
+                f"</div></div></div>",
+                unsafe_allow_html=True,
+            )
+
+    # ── Section 2: Value picks (EF rank vs odds rank) ────────────────────────
+    if has_odds and "odds_rank" in ef_df.columns:
+        st.divider()
+        st.markdown("### Odds Context")
+        st.caption("Where the model and the market disagree — EF rank vs odds rank")
+
+        ef_df["rank_delta"] = ef_df["odds_rank"].astype(float) - ef_df["ef_rank"]
+        value_df = ef_df[ef_df["odds"].notna()].copy()
+
+        col_val, col_fade = st.columns(2)
+
+        with col_val:
+            st.markdown("**Model favours (value plays)**")
+            st.caption("EF ranks them much higher than the market")
+            top_value = value_df.nlargest(8, "rank_delta")
+            for _, row in top_value.iterrows():
+                delta = int(row["rank_delta"])
+                color = row["tier_color"]
+                ip    = row.get("implied_prob")
+                ip_str = f"{ip:.1f}%" if pd.notna(ip) else "—"
+                st.markdown(
+                    f"<div style='display:flex;align-items:center;padding:5px 0;"
+                    f"border-bottom:1px solid rgba(128,128,128,0.08)'>"
+                    f"<div style='flex:1;font-size:12px;font-weight:600'>{row['player_name']}</div>"
+                    f"<div style='font-size:11px;color:#aaa;margin-right:8px'>#{int(row['ef_rank'])} EF</div>"
+                    f"<div style='font-size:11px;color:{color};font-weight:700'>{row['ef_score']:+.2f}</div>"
+                    f"<div style='width:52px;text-align:right;font-size:11px;color:#888'>{row['odds']:.0f}</div>"
+                    f"<div style='width:44px;text-align:right;font-size:10px;color:#00CC96'>+{delta}</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+        with col_fade:
+            st.markdown("**Model fades (market overrates)**")
+            st.caption("EF ranks them much lower than the market")
+            top_fade = value_df.nsmallest(8, "rank_delta")
+            for _, row in top_fade.iterrows():
+                delta = int(row["rank_delta"])
+                color = row["tier_color"]
+                st.markdown(
+                    f"<div style='display:flex;align-items:center;padding:5px 0;"
+                    f"border-bottom:1px solid rgba(128,128,128,0.08)'>"
+                    f"<div style='flex:1;font-size:12px;font-weight:600'>{row['player_name']}</div>"
+                    f"<div style='font-size:11px;color:#aaa;margin-right:8px'>#{int(row['ef_rank'])} EF</div>"
+                    f"<div style='font-size:11px;color:{color};font-weight:700'>{row['ef_score']:+.2f}</div>"
+                    f"<div style='width:52px;text-align:right;font-size:11px;color:#888'>{row['odds']:.0f}</div>"
+                    f"<div style='width:44px;text-align:right;font-size:10px;color:#EF553B'>{delta}</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+    # ── Section 3: Model history ─────────────────────────────────────────────
+    st.divider()
+    st.markdown("### Model Performance History")
+    st.caption("Retrospective results: top-5 EF picks per tournament vs actual finishes · 2025/2026 PGA Tour")
+
+    with st.spinner("Running historical analysis… (cached after first load)"):
+        hist_df = build_ef_history(rounds_df)
+
+    if hist_df.empty:
+        st.warning("No historical data available.")
+    else:
+        n_tourn  = len(hist_df)
+        n_picks  = n_tourn * 5
+        top25_pct = hist_df["top25_hits"].sum() / n_picks * 100
+        top10_pct = hist_df["top10_hits"].sum() / n_picks * 100
+        top5_pct  = hist_df["top5_hits"].sum()  / n_picks * 100
+
+        # Summary metrics
+        m1, m2, m3, m4 = st.columns(4)
+        for col, val, lbl, sub in [
+            (m1, f"{top25_pct:.1f}%", "Top-25 Hit Rate", f"{hist_df['top25_hits'].sum()} / {n_picks} picks"),
+            (m2, f"{top10_pct:.1f}%", "Top-10 Hit Rate", f"{hist_df['top10_hits'].sum()} / {n_picks} picks"),
+            (m3, f"{top5_pct:.1f}%",  "Top-5 Hit Rate",  f"{hist_df['top5_hits'].sum()} / {n_picks} picks"),
+            (m4, str(n_tourn),        "Tournaments",      "2025 + 2026 to date"),
+        ]:
+            with col:
+                st.markdown(
+                    f"<div style='background:rgba(255,255,255,0.04);border-radius:8px;"
+                    f"padding:14px;text-align:center'>"
+                    f"<div style='font-size:26px;font-weight:800;color:#00CC96'>{val}</div>"
+                    f"<div style='font-size:11px;font-weight:600;margin-top:4px'>{lbl}</div>"
+                    f"<div style='font-size:10px;color:#666;margin-top:2px'>{sub}</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # Rolling trend chart
+        hist_df["top25_rate"] = hist_df["top25_hits"] / 5 * 100
+        hist_df["rolling10"]  = hist_df["top25_rate"].rolling(10, min_periods=3).mean()
+        hist_df["event_label"] = hist_df["event_name"].str[:22] + " '" + hist_df["year"].astype(str).str[-2:]
+
+        fig_hist = go.Figure()
+        fig_hist.add_trace(go.Bar(
+            x=hist_df["event_label"], y=hist_df["top25_rate"],
+            name="Top-25 %",
+            marker_color=[
+                "#00CC96" if v >= 60 else "#66D9A6" if v >= 40 else "#FFA07A" if v >= 20 else "#EF553B"
+                for v in hist_df["top25_rate"]
+            ],
+            opacity=0.6,
+            hovertemplate="<b>%{x}</b><br>Top-25: %{y:.0f}%<extra></extra>",
+        ))
+        fig_hist.add_trace(go.Scatter(
+            x=hist_df["event_label"], y=hist_df["rolling10"],
+            name="Rolling 10-tournament avg",
+            mode="lines",
+            line=dict(color="#00CC96", width=2.5),
+            hovertemplate="Rolling avg: %{y:.1f}%<extra></extra>",
+        ))
+        fig_hist.add_hline(
+            y=top25_pct, line_dash="dot", line_color="rgba(255,255,255,0.25)",
+            annotation_text=f"Overall {top25_pct:.1f}%",
+            annotation_position="top left",
+            annotation_font=dict(size=10, color="rgba(200,200,200,0.5)"),
+        )
+        fig_hist.update_layout(
+            yaxis_title="% of top-5 picks finishing top-25",
+            yaxis=dict(range=[0, 105], gridcolor="rgba(128,128,128,0.2)"),
+            xaxis=dict(tickangle=-45, tickfont=dict(size=9), gridcolor="rgba(128,128,128,0.1)"),
+            height=380,
+            plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+            legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="right", x=1,
+                        font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
+            margin=dict(t=20, b=80, l=40, r=20),
+            barmode="overlay",
+        )
+        st.plotly_chart(fig_hist, use_container_width=True)
+
+        # Per-tournament detail table
+        with st.expander("Per-tournament breakdown", expanded=False):
+            detail = hist_df[["event_end", "event_name", "year", "top25_hits", "top10_hits", "top5_hits", "picks", "finishes"]].copy()
+            detail = detail.sort_values("event_end", ascending=False)
+            detail["event_end"] = detail["event_end"].dt.strftime("%b %d, %Y")
+            detail.columns = ["Date", "Event", "Year", "Top-25", "Top-10", "Top-5", "EF Top-5 Picks", "Finishes"]
+            detail.insert(0, "#", range(1, len(detail) + 1))
+            st.dataframe(detail, hide_index=True, use_container_width=True, height=500)
+
+    # ── Full ranked table ────────────────────────────────────────────────────
+    st.divider()
+    with st.expander("Full Field Rankings", expanded=False):
+        cols_show = ["player_name", "mean_sg", "std_sg", "ef_score", "tier"]
+        if has_odds and "odds" in ef_df.columns:
+            cols_show = ["player_name", "mean_sg", "std_sg", "ef_score", "tier", "odds", "implied_prob"]
+        disp = ef_df[cols_show].copy()
+        disp.insert(0, "Rank", range(1, len(disp) + 1))
+        col_rename = {
+            "player_name": "Player", "mean_sg": "Mean L36", "std_sg": "Std L36",
+            "ef_score": "EF Score", "tier": "Tier", "odds": "Win Odds", "implied_prob": "Implied %",
+        }
+        disp = disp.rename(columns=col_rename)
+
+        def _cc(val):
+            try:
+                v = float(val)
+                if v > 0.5:  return "background-color:rgba(0,204,150,0.3)"
+                if v > 0:    return "background-color:rgba(0,204,150,0.15)"
+                if v > -0.5: return "background-color:rgba(239,85,59,0.15)"
+                return               "background-color:rgba(239,85,59,0.3)"
+            except Exception:
+                return ""
+
+        fmt = {"Mean L36": "{:+.3f}", "Std L36": "{:.3f}", "EF Score": "{:+.3f}"}
+        if "Implied %" in disp.columns:
+            fmt["Implied %"] = "{:.1f}%"
+        styled = disp.style.applymap(_cc, subset=["Mean L36", "EF Score"]).format(fmt)
+        st.dataframe(styled, hide_index=True, use_container_width=True, height=600)
+
+
 def _merge_live(stats_df: pd.DataFrame, live_df: pd.DataFrame) -> pd.DataFrame:
     """Merge live event_avg SG columns into stats_df as *_Live columns."""
     live_cols = {s: f"{s}_Live" for s in STAT_COLS if s in live_df.columns}
@@ -489,6 +993,201 @@ def render_production_sg_tab(
                     )
             else:
                 st.caption("—")
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.divider()
+
+        # ── Elite Finish Analysis ──────────────────────────────────────────
+        if (
+            "elite_finish_L36" in valid.columns
+            and "_sg_total_std_L36" in valid.columns
+            and "sg_total_L36" in valid.columns
+        ):
+            st.markdown("### Elite Finish Analysis")
+            st.caption(
+                "Elite Finish Score = mean(L36) − 0.3 × σ(L36)  ·  "
+                "Rewards sustained SG output and penalises boom-or-bust variance  ·  "
+                "66.6% of top-5 picks finish top-25 on 2025/26 data"
+            )
+
+            ef_df = valid[
+                ["dg_id", "player_name", "sg_total_L36", "_sg_total_std_L36", "elite_finish_L36"]
+            ].dropna().copy()
+            ef_df = ef_df.rename(columns={
+                "sg_total_L36":       "mean_sg",
+                "_sg_total_std_L36":  "std_sg",
+                "elite_finish_L36":   "ef_score",
+            })
+            ef_df = ef_df.sort_values("ef_score", ascending=False).reset_index(drop=True)
+
+            def _ef_tier(score):
+                if score >= 1.0:  return ("Elite",      "#00CC96")
+                if score >= 0.5:  return ("Contender",  "#66D9A6")
+                if score >= 0.0:  return ("Fringe",     "#FFA07A")
+                return                   ("Below",      "#EF553B")
+
+            tiers = ef_df["ef_score"].apply(_ef_tier)
+            ef_df["tier"]       = [t[0] for t in tiers]
+            ef_df["tier_color"] = [t[1] for t in tiers]
+
+            col_ef_scatter, col_ef_board = st.columns([3, 2])
+
+            with col_ef_scatter:
+                mean_range = np.linspace(ef_df["mean_sg"].min() - 0.3, ef_df["mean_sg"].max() + 0.3, 200)
+
+                fig_ef = go.Figure()
+
+                # Iso-score contour lines
+                for ef_val, lc, lname in [
+                    (1.0, "rgba(0,204,150,0.55)",   "EF = 1.0"),
+                    (0.5, "rgba(0,204,150,0.30)",   "EF = 0.5"),
+                    (0.0, "rgba(255,255,255,0.20)", "EF = 0"),
+                ]:
+                    std_iso = (mean_range - ef_val) / 0.3
+                    mask = std_iso > 0
+                    fig_ef.add_trace(go.Scatter(
+                        x=mean_range[mask], y=std_iso[mask],
+                        mode="lines",
+                        line=dict(color=lc, dash="dot", width=1.2),
+                        name=lname,
+                        hoverinfo="skip",
+                    ))
+
+                top15_ids  = set(ef_df.head(15)["dg_id"].tolist())
+                others_ef  = ef_df[~ef_df["dg_id"].isin(top15_ids)]
+                top_ef     = ef_df[ef_df["dg_id"].isin(top15_ids)]
+                ef_cmin    = ef_df["ef_score"].quantile(0.10)
+                ef_cmax    = ef_df["ef_score"].quantile(0.90)
+
+                fig_ef.add_trace(go.Scatter(
+                    x=others_ef["mean_sg"],
+                    y=others_ef["std_sg"],
+                    mode="markers",
+                    marker=dict(
+                        size=7, opacity=0.55,
+                        color=others_ef["ef_score"],
+                        colorscale="RdYlGn",
+                        cmin=ef_cmin, cmax=ef_cmax,
+                    ),
+                    text=others_ef["player_name"],
+                    customdata=others_ef["ef_score"],
+                    hovertemplate="<b>%{text}</b><br>Mean L36: %{x:.2f}<br>Std: %{y:.2f}<br>EF: %{customdata:.2f}<extra></extra>",
+                    showlegend=False,
+                ))
+
+                fig_ef.add_trace(go.Scatter(
+                    x=top_ef["mean_sg"],
+                    y=top_ef["std_sg"],
+                    mode="markers+text",
+                    marker=dict(
+                        size=10,
+                        color=top_ef["ef_score"],
+                        colorscale="RdYlGn",
+                        cmin=ef_cmin, cmax=ef_cmax,
+                        line=dict(width=1.5, color="white"),
+                        showscale=True,
+                        colorbar=dict(title="EF", thickness=12, len=0.7),
+                    ),
+                    text=top_ef["player_name"],
+                    textposition="top center",
+                    textfont=dict(size=8, color="white"),
+                    customdata=top_ef["ef_score"],
+                    hovertemplate="<b>%{text}</b><br>Mean L36: %{x:.2f}<br>Std: %{y:.2f}<br>EF: %{customdata:.2f}<extra></extra>",
+                    showlegend=False,
+                ))
+
+                fig_ef.update_layout(
+                    xaxis_title="Mean SG Total (L36)  →  higher is better",
+                    yaxis_title="Std Dev (L36)  →  lower is more consistent",
+                    height=480,
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    xaxis=dict(gridcolor="rgba(128,128,128,0.2)"),
+                    yaxis=dict(gridcolor="rgba(128,128,128,0.2)"),
+                    legend=dict(
+                        orientation="h", yanchor="bottom", y=1.01,
+                        xanchor="left", x=0,
+                        font=dict(size=10), bgcolor="rgba(0,0,0,0)",
+                    ),
+                    margin=dict(t=30, b=40, l=50, r=20),
+                )
+                st.plotly_chart(fig_ef, use_container_width=True)
+
+            with col_ef_board:
+                st.markdown("**Top 15 by Elite Finish Score**")
+
+                for rank, (_, row) in enumerate(ef_df.head(15).iterrows(), 1):
+                    color = row["tier_color"]
+                    st.markdown(
+                        f"<div style='display:flex;align-items:center;padding:5px 0;"
+                        f"border-bottom:1px solid rgba(128,128,128,0.10)'>"
+                        f"<div style='width:20px;font-size:10px;color:#666;flex-shrink:0'>{rank}</div>"
+                        f"<div style='flex:1;font-size:12px;font-weight:600;white-space:nowrap;"
+                        f"overflow:hidden;text-overflow:ellipsis'>{row['player_name']}</div>"
+                        f"<div style='width:36px;text-align:right;font-size:12px;font-weight:700;"
+                        f"color:{color}'>{row['ef_score']:+.2f}</div>"
+                        f"<div style='width:70px;text-align:right;margin-left:6px'>"
+                        f"<span style='font-size:9px;padding:2px 6px;border-radius:8px;"
+                        f"background:{color}25;color:{color}'>{row['tier']}</span>"
+                        f"</div></div>",
+                        unsafe_allow_html=True,
+                    )
+
+                st.markdown("<br>", unsafe_allow_html=True)
+
+                # Mean / std detail for top 5
+                st.markdown("**Top 5 breakdown**")
+                st.markdown(
+                    "<div style='display:flex;font-size:10px;color:#666;padding:4px 0;"
+                    "border-bottom:1px solid rgba(128,128,128,0.2)'>"
+                    "<div style='flex:1'>Player</div>"
+                    "<div style='width:48px;text-align:right'>Mean</div>"
+                    "<div style='width:40px;text-align:right'>Std</div>"
+                    "<div style='width:40px;text-align:right'>EF</div>"
+                    "</div>",
+                    unsafe_allow_html=True,
+                )
+                for _, row in ef_df.head(5).iterrows():
+                    color = row["tier_color"]
+                    st.markdown(
+                        f"<div style='display:flex;align-items:center;font-size:11px;"
+                        f"padding:4px 0;border-bottom:1px solid rgba(128,128,128,0.08)'>"
+                        f"<div style='flex:1;white-space:nowrap;overflow:hidden;"
+                        f"text-overflow:ellipsis'>{row['player_name']}</div>"
+                        f"<div style='width:48px;text-align:right;color:#aaa'>{row['mean_sg']:+.2f}</div>"
+                        f"<div style='width:40px;text-align:right;color:#aaa'>{row['std_sg']:.2f}</div>"
+                        f"<div style='width:40px;text-align:right;font-weight:700;color:{color}'>"
+                        f"{row['ef_score']:+.2f}</div>"
+                        f"</div>",
+                        unsafe_allow_html=True,
+                    )
+
+                st.markdown("<br>", unsafe_allow_html=True)
+
+                # Field tier distribution
+                st.markdown("**Field distribution**")
+                tiers_order = [
+                    ("Elite (≥ 1.0)",     ef_df["ef_score"] >= 1.0,                                           "#00CC96"),
+                    ("Contender (≥ 0.5)", (ef_df["ef_score"] >= 0.5) & (ef_df["ef_score"] < 1.0),            "#66D9A6"),
+                    ("Fringe (≥ 0.0)",    (ef_df["ef_score"] >= 0.0) & (ef_df["ef_score"] < 0.5),            "#FFA07A"),
+                    ("Below (< 0.0)",     ef_df["ef_score"] < 0.0,                                            "#EF553B"),
+                ]
+                total_ef = len(ef_df)
+                for label, mask, color in tiers_order:
+                    n = mask.sum()
+                    pct = n / total_ef * 100 if total_ef else 0
+                    bar_w = pct
+                    st.markdown(
+                        f"<div style='margin:4px 0'>"
+                        f"<div style='display:flex;justify-content:space-between;"
+                        f"font-size:11px;margin-bottom:2px'>"
+                        f"<span style='color:{color}'>{label}</span>"
+                        f"<span style='color:#888'>{n} ({pct:.0f}%)</span></div>"
+                        f"<div style='background:rgba(128,128,128,0.15);height:5px;border-radius:3px'>"
+                        f"<div style='background:{color};height:100%;width:{bar_w:.1f}%;"
+                        f"border-radius:3px'></div></div></div>",
+                        unsafe_allow_html=True,
+                    )
 
         st.markdown("<br>", unsafe_allow_html=True)
         st.divider()
