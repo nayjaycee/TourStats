@@ -112,7 +112,7 @@ def build_stats_df(
     if df.empty:
         return pd.DataFrame()
 
-    df = df.sort_values(["dg_id", date_col])
+    df = df.sort_values(["dg_id", date_col], na_position="first")
 
     # Coerce all stat columns to numeric once
     for stat in STAT_COLS:
@@ -129,9 +129,8 @@ def build_stats_df(
 
     # Std for Elite Finish Score and Consistent/Volatile
     if "sg_total" in df.columns:
-        grp_tot = df.groupby("dg_id")["sg_total"]
-        df["_sg_total_std_L36"] = grp_tot.transform(lambda x: x.rolling(36, min_periods=5).std())
-        df["_sg_total_std_L24"] = grp_tot.transform(lambda x: x.rolling(24, min_periods=5).std())
+        df["_sg_total_std_L36"] = df.groupby("dg_id")["sg_total"].transform(lambda x: x.rolling(36, min_periods=5).std())
+        df["_sg_total_std_L24"] = df.groupby("dg_id")["sg_total"].transform(lambda x: x.rolling(24, min_periods=5).std())
 
     # Take the most-recent row per player (= rolling value at latest round)
     keep = (
@@ -227,8 +226,16 @@ def render_production_sg_tab(
             players_list = rounds_df["dg_id"].unique().tolist()
 
         # ── Build stats (vectorized + cached) ──────────────────────────────
+        # Apply cutoff_dt so current-tournament rounds are excluded from rolling stats
+        # (mirrors the same filter used in the overview tab's _render_field_snapshot)
+        rounds_for_stats = rounds_df
+        if cutoff_dt is not None:
+            _date_col = "round_date" if "round_date" in rounds_df.columns else "event_completed"
+            _dates = pd.to_datetime(rounds_df[_date_col], errors="coerce")
+            rounds_for_stats = rounds_df[_dates.isna() | (_dates < pd.to_datetime(cutoff_dt))].copy()
+
         with st.spinner("Loading stats…"):
-            stats_df = build_stats_df(rounds_df, tuple(players_list), windows=WINDOWS)
+            stats_df = build_stats_df(rounds_for_stats, tuple(players_list), windows=WINDOWS)
             if stats_df.empty:
                 st.warning("Insufficient data to calculate stats.")
                 return
@@ -272,16 +279,15 @@ def render_production_sg_tab(
             st.warning(f"No data available for {primary_stat} ({primary_window}).")
             return
 
-        # ── Live blend slider ──────────────────────────────────────────────
+        # ── Live blend slider — only during an active/current tournament ──
         live_col = f"{primary_stat_col}_Live"
         live_blend = 0
-        if has_live and live_col in stats_df.columns and primary_stat != "Elite Finish (L36)":
-            blend_event_label = live_event_name if live_event_name else "recent event"
+        if has_live and live_is_current and live_col in stats_df.columns and primary_stat != "Elite Finish (L36)":
             live_blend = st.slider(
-                f"Blend {blend_event_label} SG into ranking",
+                f"Blend live {live_event_name} SG into ranking",
                 min_value=0, max_value=60, value=25, step=5,
                 format="%d%%",
-                help="Adds a live-weighted nudge to the sort. 0% = pure historical. 25% = light influence.",
+                help="Blends in-progress round data into the sort. Only available during an active event.",
             )
 
         # Filter to players with data for the base historical column
@@ -311,7 +317,11 @@ def render_production_sg_tab(
         # ── Top 10 performer cards ─────────────────────────────────────────
         st.markdown("### Top Performers")
         blend_note = f" · {live_blend}% live blend" if live_blend > 0 else ""
-        st.caption(f"Based on {primary_stat} ({primary_window}){blend_note} · {len(valid)} players")
+        st.caption(
+            f"Based on {primary_stat} ({primary_window}){blend_note} · {len(valid)} players · "
+            "Component bars (OTT/APP/ARG/PUTT) use only rounds with full SG data - "
+            "rounds from tours that don't report all components are excluded."
+        )
 
         top10 = valid.head(10)
 
@@ -349,15 +359,32 @@ def render_production_sg_tab(
                         unsafe_allow_html=True,
                     )
 
-                    # Determine which window to use for the breakdown bars
+                    # Component breakdown bars
+                    # Scale bars against the primary_val total so visual proportions match.
+                    # Raw component values are shown as labels; bars are sized relative to total.
                     bar_window = "L12" if primary_window in ("This Wk", "L12") else primary_window
+                    raw_vals = {
+                        stat: float(player.get(f"{stat}_{bar_window}") or 0)
+                        for stat in CAT_STATS
+                    }
+                    comp_sum = sum(raw_vals.values())
+                    # If components sum within 10% of the displayed total, use raw values.
+                    # Otherwise scale them so bars reflect share of total (component data
+                    # may cover fewer rounds than the total when some tours omit SG breakdown).
+                    if abs(primary_val) > 0.01 and abs(comp_sum) > 0.01 and abs(comp_sum - primary_val) / max(abs(primary_val), 0.01) > 0.10:
+                        scale_factor = primary_val / comp_sum
+                        display_vals = {s: v * scale_factor for s, v in raw_vals.items()}
+                    else:
+                        display_vals = raw_vals
+
+                    scale = 25
                     for cat, stat in zip(CAT_LABELS, CAT_STATS):
-                        val = player.get(f"{stat}_{bar_window}") or 0
-                        bar_color = _sg_color(val)
-                        scale = 25
+                        val = display_vals[stat]
+                        raw = raw_vals[stat]
+                        bar_color = _sg_color(raw)
                         if val >= 0:
                             bw = min(val * scale, 50)
-                            bp = f"margin-left:50%;"
+                            bp = "margin-left:50%;"
                         else:
                             bw = min(abs(val) * scale, 50)
                             bp = f"margin-left:{50 - bw:.1f}%;"
@@ -368,7 +395,7 @@ def render_production_sg_tab(
                             f"<div style='position:absolute;left:50%;width:1px;height:100%;background:rgba(255,255,255,0.3)'></div>"
                             f"<div style='background:{bar_color};height:100%;width:{bw:.1f}%;{bp}'></div>"
                             f"</div>"
-                            f"<div style='width:35px;text-align:left;margin-left:4px;font-weight:600;color:{bar_color}'>{val:+.1f}</div>"
+                            f"<div style='width:35px;text-align:left;margin-left:4px;font-weight:600;color:{bar_color}'>{raw:+.1f}</div>"
                             f"</div>",
                             unsafe_allow_html=True,
                         )
