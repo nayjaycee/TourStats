@@ -27,13 +27,13 @@ WINDOWS   = (12, 24, 36, 60)
 
 STAT_LABELS = {
     "Total SG":             "sg_total",
-    "Elite Finish (L36)":   "elite_finish",
+    "Contender Score (L36)":   "elite_finish",
     "Driving (OTT)":        "sg_ott",
     "Approach (APP)":       "sg_app",
     "Short Game (ARG)":     "sg_arg",
     "Putting":              "sg_putt",
 }
-METRICS_LABELS = {k: v for k, v in STAT_LABELS.items() if k != "Elite Finish (L36)"}
+METRICS_LABELS = {k: v for k, v in STAT_LABELS.items() if k != "Contender Score (L36)"}
 
 CAT_LABELS = ["OTT", "APP", "ARG", "PUTT"]
 CAT_STATS  = ["sg_ott", "sg_app", "sg_arg", "sg_putt"]
@@ -242,7 +242,7 @@ def render_elite_finish_analysis(
     col_hdr, col_badge = st.columns([5, 1])
     with col_hdr:
         st.caption(
-            "Elite Finish Score = mean(L36) − 0.3 × σ(L36)  ·  "
+            "Contender Score = mean(L36) − 0.3 × σ(L36)  ·  "
             "Rewards sustained SG output, penalises boom-or-bust variance"
         )
     with col_badge:
@@ -286,7 +286,7 @@ def render_elite_finish_analysis(
         )
 
     if not all(c in stats_df.columns for c in ["elite_finish_L36", "_sg_total_std_L36", "sg_total_L36"]):
-        st.warning("Elite Finish columns not available.")
+        st.warning("Contender Score columns not available.")
         return
 
     ef_df = stats_df[["dg_id", "player_name", "sg_total_L36", "_sg_total_std_L36", "elite_finish_L36"]].dropna().copy()
@@ -326,9 +326,9 @@ def render_elite_finish_analysis(
     with st.expander("Why this model?", expanded=False):
         st.markdown(
             """
-**Formula:** `EF Score = mean(sg_total, L36) − 0.3 × σ(sg_total, L36)`
+**Formula:** `Contender Score = mean(sg_total, L36) − 0.3 × σ(sg_total, L36)`
 
-The Elite Finish score answers a simple question: *which players produce strong strokes-gained numbers reliably, not just occasionally?*
+The Contender Score answers a simple question: *which players produce strong strokes-gained numbers reliably, not just occasionally?*
 The mean captures sustained output over the last 36 rounds (~9–12 months of PGA starts).
 The volatility penalty (0.3 × std dev) discounts boom-or-bust players - a player averaging +1.5 with wild swings
 is less predictable than one averaging +1.2 consistently.
@@ -765,7 +765,7 @@ def render_production_sg_tab(
             primary_stat = st.selectbox("Primary Metric", list(STAT_LABELS.keys()), index=0)
 
         with col_window:
-            if primary_stat == "Elite Finish (L36)":
+            if primary_stat == "Contender Score (L36)":
                 primary_window = "L36"
                 st.selectbox("Window", ["L36"], disabled=True)
             else:
@@ -774,7 +774,7 @@ def render_production_sg_tab(
         primary_stat_col = STAT_LABELS[primary_stat]
 
         # Resolve base sort column (always historical)
-        if primary_stat == "Elite Finish (L36)":
+        if primary_stat == "Contender Score (L36)":
             sort_col = "elite_finish_L36"
         else:
             sort_col = f"{primary_stat_col}_{primary_window}"
@@ -786,7 +786,7 @@ def render_production_sg_tab(
         # ── Live blend slider — only during an active/current tournament ──
         live_col = f"{primary_stat_col}_Live"
         live_blend = 0
-        if has_live and live_is_current and live_col in stats_df.columns and primary_stat != "Elite Finish (L36)":
+        if has_live and live_is_current and live_col in stats_df.columns and primary_stat != "Contender Score (L36)":
             live_blend = st.slider(
                 f"Blend live {live_event_name} SG into ranking",
                 min_value=0, max_value=60, value=25, step=5,
@@ -1003,9 +1003,9 @@ def render_production_sg_tab(
             and "_sg_total_std_L36" in valid.columns
             and "sg_total_L36" in valid.columns
         ):
-            st.markdown("### Elite Finish Analysis")
+            st.markdown("### Contender Score")
             st.caption(
-                "Elite Finish Score = mean(L36) − 0.3 × σ(L36)  ·  "
+                "Contender Score = mean(L36) − 0.3 × σ(L36)  ·  "
                 "Rewards sustained SG output and penalises boom-or-bust variance  ·  "
                 "66.6% of top-5 picks finish top-25 on 2025/26 data"
             )
@@ -1114,7 +1114,7 @@ def render_production_sg_tab(
                 st.plotly_chart(fig_ef, use_container_width=True)
 
             with col_ef_board:
-                st.markdown("**Top 15 by Elite Finish Score**")
+                st.markdown("**Top 15 by Contender Score**")
 
                 for rank, (_, row) in enumerate(ef_df.head(15).iterrows(), 1):
                     color = row["tier_color"]
