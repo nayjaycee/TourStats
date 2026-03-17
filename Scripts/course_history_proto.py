@@ -295,7 +295,7 @@ def render_course_history_demo(
         if year_cols:
             perf_year = st.selectbox(
                 "Tournament Year",
-                options=year_cols[:5],   # show up to 5 most recent years
+                options=year_cols,
                 index=0,
                 key="perf_year",
             )
@@ -327,14 +327,21 @@ def render_course_history_demo(
                 fin_num = int(finish_num) if finish_text != "CUT" else 999
                 dg_id = int(dg_id)
 
-                # Rolling stats from rounds_df BEFORE this event
+                # Rolling stats from rounds_df BEFORE this event.
+                # Rounds with a round_date: filter by date. Rounds without
+                # (NaT, pre-2022 data): fall back to year < event_year.
                 rounds_df["round_date"] = pd.to_datetime(rounds_df["round_date"], errors="coerce")
+                _rd = rounds_df["round_date"]
+                _yr = pd.to_numeric(rounds_df.get("year", np.nan), errors="coerce")
                 prior = (
                     rounds_df[
                         (rounds_df["dg_id"] == dg_id)
-                        & (rounds_df["round_date"] < event_cutoff_date)
+                        & (
+                            (_rd.notna() & (_rd < event_cutoff_date))
+                            | (_rd.isna() & (_yr < event_year))
+                        )
                     ]
-                    .sort_values("round_date", ascending=False)
+                    .sort_values("round_date", ascending=False, na_position="last")
                     .head(window_num)
                 )
 
@@ -455,10 +462,10 @@ def render_course_history_demo(
     # Uses rounds_df for ALL years — single source of truth
     # =========================================================================
     st.markdown("### Recent Tournament Results")
-    st.caption("Actual top 10 finishers from the last 3 years")
 
     years_to_show = [season_year - 1, season_year - 2, season_year - 3]
-    year_columns  = st.columns(len(years_to_show), gap="large")
+    st.caption("Actual top 10 finishers from the last 3 years")
+    year_columns = st.columns(len(years_to_show), gap="large")
 
     for idx, year in enumerate(years_to_show):
         with year_columns[idx]:
@@ -470,19 +477,16 @@ def render_course_history_demo(
                 cr_year = cr_all[cr_all["year"] == year].copy()
 
                 if not cr_year.empty:
-                    # One row per player (deduplicate rounds)
                     one_row = _one_row_per_player_event(cr_year)
                     one_row["finish_num"] = pd.to_numeric(one_row["finish_num"], errors="coerce")
-
-                    # Drop missed cuts and WDs for top-10 display
                     one_row = one_row[one_row["finish_num"].notna()]
                     top10 = one_row.nsmallest(10, "finish_num")
 
                     for _, player in top10.iterrows():
                         top10_data.append({
-                            "name":         player.get("player_name", "Unknown"),
-                            "finish_text":  player.get("fin_text", ""),
-                            "finish_num":   player.get("finish_num", 999),
+                            "name":        player.get("player_name", "Unknown"),
+                            "finish_text": player.get("fin_text", ""),
+                            "finish_num":  player.get("finish_num", 999),
                         })
 
             if top10_data:
