@@ -1655,7 +1655,7 @@ _live_label = "🔴 Live" if _live_active else "⚫ Live"
 TAB_NAMES = [
     "Event Overview",
     _live_label,
-    "Field SG",
+    "Field Analysis",
     "Contender Model",
     "Course History",
     "Approach Skill",
@@ -1675,7 +1675,7 @@ active_tab = st.segmented_control(
     key="active_tab",
 )
 
-if active_tab == "Field SG":
+if active_tab == "Field Analysis":
     render_production_sg_tab(
         rounds_df=rounds_df,
         field_ids=field_ids,
