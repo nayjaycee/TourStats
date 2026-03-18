@@ -6,7 +6,6 @@
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
-      "Bhatia, Akshay",
       "Blair, Zac",
       "Blanchet, Chandler",
       "Bradley, Keegan",
@@ -101,6 +100,7 @@
       "Rodgers, Patrick",
       "Roy, Kevin",
       "Rozo, Marcelo",
+      "Ryder, Sam",
       "Saddier, Adrien",
       "Salinda, Isaiah",
       "Sargent, Gordon",
@@ -140,8 +140,18 @@
       "Wu, Dylan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-03-18 10:21:44 ET",
+    "last_updated": "2026-03-18 15:47:44 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-18 15:47:44 ET",
+        "added": [
+          "Ryder, Sam"
+        ],
+        "withdrawn": [
+          "Bhatia, Akshay"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-18 10:21:44 ET",
         "added": [
