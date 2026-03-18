@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-18 16:59:14 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,005 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-03-18 15:47:44 ET",
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
