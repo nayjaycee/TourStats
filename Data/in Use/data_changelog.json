@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-18 10:21:44 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Valspar Championship",
+      "details": "Field (135 players) and odds updated for Valspar Championship"
+    },
+    {
       "timestamp": "2026-03-17 15:02:49 ET",
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
