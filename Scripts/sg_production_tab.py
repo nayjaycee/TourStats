@@ -147,10 +147,10 @@ def build_stats_df(
         if ott in latest.columns and app in latest.columns:
             latest[f"ball_striking_L{w}"] = latest[ott].fillna(0) + latest[app].fillna(0)
 
-    # Elite Finish Score = mean(L36) − 0.3 × std(L36)
+    # Contender Score = mean(L36) − 0.25 × std(L36)
     if "sg_total_L36" in latest.columns and "_sg_total_std_L36" in latest.columns:
         latest["elite_finish_L36"] = (
-            latest["sg_total_L36"] - 0.3 * latest["_sg_total_std_L36"].fillna(0)
+            latest["sg_total_L36"] - 0.25 * latest["_sg_total_std_L36"].fillna(0)
         )
 
     return latest
@@ -205,7 +205,7 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
                 continue
             scores.append({
                 "player_name": p["player_name"],
-                "ef_score":    float(np.mean(v) - 0.3 * np.std(v)),
+                "ef_score":    float(np.mean(v) - 0.25 * np.std(v)),
                 "finish":      int(p["finish_num"]),
             })
 
@@ -239,18 +239,30 @@ def render_elite_finish_analysis(
 
     # ── Header ──────────────────────────────────────────────────────────────
     st.title("Contender Model")
+
+    # Compute live accuracy from history (cached — no extra cost after first load)
+    _hist_early = build_ef_history(rounds_df)
+    if not _hist_early.empty:
+        _n_picks = len(_hist_early) * 5
+        _top25_rate = _hist_early["top25_hits"].sum() / _n_picks * 100
+        _badge_pct  = f"{_top25_rate:.1f}%"
+        _badge_sub  = f"{len(_hist_early)} tournaments · top-5 picks"
+    else:
+        _badge_pct = "—"
+        _badge_sub = "2025/26 · top-5 picks"
+
     col_hdr, col_badge = st.columns([5, 1])
     with col_hdr:
         st.caption(
-            "Contender Score = mean(L36) − 0.3 × σ(L36)  ·  "
+            "Contender Score = mean(L36) − 0.25 × σ(L36)  ·  "
             "Rewards sustained SG output, penalises boom-or-bust variance"
         )
     with col_badge:
         st.markdown(
             "<div style='background:rgba(0,204,150,0.15);border:1px solid rgba(0,204,150,0.4);"
             "border-radius:8px;padding:6px 10px;text-align:center;margin-top:2px'>"
-            "<div style='font-size:18px;font-weight:800;color:#00CC96'>66.6%</div>"
-            "<div style='font-size:9px;color:rgba(200,200,200,0.6)'>Top-25 hit rate<br>2025/26 · top-5 picks</div>"
+            f"<div style='font-size:18px;font-weight:800;color:#00CC96'>{_badge_pct}</div>"
+            f"<div style='font-size:9px;color:rgba(200,200,200,0.6)'>Top-25 hit rate<br>{_badge_sub}</div>"
             "</div>",
             unsafe_allow_html=True,
         )
@@ -326,7 +338,7 @@ def render_elite_finish_analysis(
     with st.expander("Why this model?", expanded=False):
         st.markdown(
             """
-**Formula:** `Contender Score = mean(sg_total, L36) − 0.3 × σ(sg_total, L36)`
+**Formula:** `Contender Score = mean(sg_total, L36) − 0.25 × σ(sg_total, L36)`
 
 The Contender Score answers a simple question: *which players produce strong strokes-gained numbers reliably, not just occasionally?*
 The mean captures sustained output over the last 36 rounds (~9–12 months of PGA starts).
@@ -338,7 +350,7 @@ We tested five formula variants against every 2025/2026 PGA Tour tournament:
 
 | Formula | Top-25 % | Top-10 % |
 |---|---|---|
-| **A: mean(L36) - 0.3σ L36** | **66.6%** | **37.2%** |
+| **A: mean(L36) - 0.25σ L36** | **66.5%** | **35.9%** |
 | E: 0.6×mean(L60) + 0.4×expDecay(L12) - 0.3σ L36 | 63.6% | 34.6% |
 | B: mean(L60) - 0.3σ L60 | 63.2% | 34.6% |
 | D: exp_decay(L36) - 0.3σ L36 | 63.1% | 33.8% |
