@@ -34,6 +34,23 @@ def render_course_history_demo(
         st.info("No course_num found for this schedule row.")
         return
 
+    # ── name lookup fallback from all_players ─────────────────────────────────
+    _name_map = {}
+    if all_players is not None and not all_players.empty:
+        _ids   = pd.to_numeric(all_players["dg_id"], errors="coerce")
+        _names = all_players["player_name"]
+        _name_map = dict(zip(_ids, _names))
+
+    def _resolve_name(row):
+        name = row.get("player_name", "")
+        if not name or (isinstance(name, float)):
+            dg_id = row.get("dg_id")
+            try:
+                return _name_map.get(float(dg_id), "Unknown")
+            except Exception:
+                return "Unknown"
+        return name
+
     # ── helpers ──────────────────────────────────────────────────────────────
     def _course_rounds(df, cn):
         """All rows for this course from the combined rounds table."""
@@ -316,7 +333,7 @@ def render_course_history_demo(
             positioning_data = []
 
             for _, player_row in cr_year_one.iterrows():
-                player_name = player_row.get("player_name", "Unknown")
+                player_name = _resolve_name(player_row)
                 dg_id = player_row.get("dg_id")
                 finish_num = player_row.get("finish_num")
                 finish_text = player_row.get("fin_text", "")
@@ -484,7 +501,7 @@ def render_course_history_demo(
 
                     for _, player in top10.iterrows():
                         top10_data.append({
-                            "name":        player.get("player_name", "Unknown"),
+                            "name":        _resolve_name(player),
                             "finish_text": player.get("fin_text", ""),
                             "finish_num":  player.get("finish_num", 999),
                         })

@@ -153,6 +153,10 @@ def build_stats_df(
             latest["sg_total_L36"] - 0.25 * latest["_sg_total_std_L36"].fillna(0)
         )
 
+    # Momentum = mean(L12) − mean(L36): positive = improving form
+    if "sg_total_L12" in latest.columns and "sg_total_L36" in latest.columns:
+        latest["momentum"] = latest["sg_total_L12"] - latest["sg_total_L36"]
+
     return latest
 
 
@@ -203,9 +207,18 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
             v  = pd.to_numeric(pr["sg_total"], errors="coerce").dropna().values
             if len(v) < 10:
                 continue
+            mean_L36 = float(np.mean(v))
+            ef_score = mean_L36 - 0.25 * float(np.std(v))
+            # L12 momentum: most recent 12 rounds (already sorted desc)
+            v12 = v[:12]
+            mean_L12 = float(np.mean(v12)) if len(v12) >= 3 else mean_L36
+            momentum = mean_L12 - mean_L36
+            composite = 0.6 * ef_score + 0.4 * momentum
             scores.append({
                 "player_name": p["player_name"],
-                "ef_score":    float(np.mean(v) - 0.25 * np.std(v)),
+                "ef_score":    ef_score,
+                "momentum":    momentum,
+                "composite":   composite,
                 "finish":      int(p["finish_num"]),
             })
 
@@ -214,15 +227,27 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
 
         pred = pd.DataFrame(scores).sort_values("ef_score", ascending=False)
         top5 = pred.head(5)
+
+        # Stage 2: model pick = highest composite within top-5 EF pool
+        mp_idx = top5["composite"].idxmax()
+        mp_row = top5.loc[mp_idx]
+
         rows.append({
-            "event_name":  tourn["event_name"],
-            "year":        int(tourn["year"]) if pd.notna(tourn["year"]) else 0,
-            "event_end":   event_end,
-            "top25_hits":  int((top5["finish"] <= 25).sum()),
-            "top10_hits":  int((top5["finish"] <= 10).sum()),
-            "top5_hits":   int((top5["finish"] <= 5).sum()),
-            "picks":       ", ".join(top5["player_name"].tolist()),
-            "finishes":    ", ".join(top5["finish"].astype(str).tolist()),
+            "event_name":       tourn["event_name"],
+            "year":             int(tourn["year"]) if pd.notna(tourn["year"]) else 0,
+            "event_end":        event_end,
+            "top25_hits":       int((top5["finish"] <= 25).sum()),
+            "top10_hits":       int((top5["finish"] <= 10).sum()),
+            "top5_hits":        int((top5["finish"] <= 5).sum()),
+            "pool_wins":        int((top5["finish"] == 1).sum()),
+            "picks":            ", ".join(top5["player_name"].tolist()),
+            "finishes":         ", ".join(top5["finish"].astype(str).tolist()),
+            "model_pick":       mp_row["player_name"],
+            "model_pick_finish": int(mp_row["finish"]),
+            "model_pick_top25": int(mp_row["finish"] <= 25),
+            "model_pick_top10": int(mp_row["finish"] <= 10),
+            "model_pick_top5":  int(mp_row["finish"] <= 5),
+            "model_pick_win":   int(mp_row["finish"] == 1),
         })
 
     return pd.DataFrame(rows)
@@ -237,35 +262,35 @@ def render_elite_finish_analysis(
 ):
     """Standalone Elite Finish Analysis — current field + odds context + history."""
 
-    # ── Header ──────────────────────────────────────────────────────────────
-    st.title("Contender Model")
-
-    # Compute live accuracy from history (cached — no extra cost after first load)
+    # ── Header — title + badge in one row ───────────────────────────────────
     _hist_early = build_ef_history(rounds_df)
     if not _hist_early.empty:
-        _n_picks = len(_hist_early) * 5
+        _n_picks    = len(_hist_early) * 5
         _top25_rate = _hist_early["top25_hits"].sum() / _n_picks * 100
         _badge_pct  = f"{_top25_rate:.1f}%"
-        _badge_sub  = f"{len(_hist_early)} tournaments · top-5 picks"
+        _badge_sub  = f"{len(_hist_early)} tournaments · top-5 pool"
     else:
         _badge_pct = "—"
-        _badge_sub = "2025/26 · top-5 picks"
+        _badge_sub = "2025/26 · top-5 pool"
 
-    col_hdr, col_badge = st.columns([5, 1])
-    with col_hdr:
-        st.caption(
-            "Contender Score = mean(L36) − 0.25 × σ(L36)  ·  "
-            "Rewards sustained SG output, penalises boom-or-bust variance"
-        )
-    with col_badge:
-        st.markdown(
-            "<div style='background:rgba(0,204,150,0.15);border:1px solid rgba(0,204,150,0.4);"
-            "border-radius:8px;padding:6px 10px;text-align:center;margin-top:2px'>"
-            f"<div style='font-size:18px;font-weight:800;color:#00CC96'>{_badge_pct}</div>"
-            f"<div style='font-size:9px;color:rgba(200,200,200,0.6)'>Top-25 hit rate<br>{_badge_sub}</div>"
-            "</div>",
-            unsafe_allow_html=True,
-        )
+    st.markdown(
+        f"<div style='display:flex;align-items:center;justify-content:space-between;"
+        f"margin-bottom:4px'>"
+        f"<div>"
+        f"<div style='font-size:28px;font-weight:800;line-height:1.1'>Contender Model</div>"
+        f"<div style='font-size:12px;color:#666;margin-top:3px'>"
+        f"mean(L36) &minus; 0.25 &times; &sigma;(L36) &nbsp;&middot;&nbsp; "
+        f"Rewards sustained output, penalises variance</div>"
+        f"</div>"
+        f"<div style='background:rgba(0,204,150,0.12);border:1px solid rgba(0,204,150,0.35);"
+        f"border-radius:10px;padding:10px 16px;text-align:center;flex-shrink:0;margin-left:20px'>"
+        f"<div style='font-size:22px;font-weight:800;color:#00CC96;line-height:1'>{_badge_pct}</div>"
+        f"<div style='font-size:9px;color:rgba(200,200,200,0.5);margin-top:3px'>"
+        f"Top-25 hit rate<br>{_badge_sub}</div>"
+        f"</div>"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
 
     # ── Build current-field stats ────────────────────────────────────────────
     if field_ids and len(field_ids) > 0:
@@ -301,9 +326,12 @@ def render_elite_finish_analysis(
         st.warning("Contender Score columns not available.")
         return
 
-    ef_df = stats_df[["dg_id", "player_name", "sg_total_L36", "_sg_total_std_L36", "elite_finish_L36"]].dropna().copy()
+    _ef_cols = ["dg_id", "player_name", "sg_total_L36", "sg_total_L12", "_sg_total_std_L36", "elite_finish_L36", "momentum"]
+    _ef_cols = [c for c in _ef_cols if c in stats_df.columns]
+    ef_df = stats_df[_ef_cols].dropna(subset=["sg_total_L36", "_sg_total_std_L36", "elite_finish_L36"]).copy()
     ef_df = ef_df.rename(columns={
         "sg_total_L36":      "mean_sg",
+        "sg_total_L12":      "mean_L12",
         "_sg_total_std_L36": "std_sg",
         "elite_finish_L36":  "ef_score",
     })
@@ -333,8 +361,54 @@ def render_elite_finish_analysis(
         ef_df["implied_prob"] = 100 / ef_df["odds"].where(ef_df["odds"] > 0)
         ef_df["odds_rank"] = ef_df["odds"].rank(method="min", na_option="bottom").astype("Int64")
 
+    # ── Stage 2: Model Pick — composite from top-5 EF pool ───────────────────
+    has_momentum = "momentum" in ef_df.columns and ef_df["momentum"].notna().any()
+
+    # Compute composite for ALL players (used in leaderboard column)
+    if has_momentum:
+        ef_df["composite"] = 0.6 * ef_df["ef_score"] + 0.4 * ef_df["momentum"]
+    else:
+        ef_df["composite"] = ef_df["ef_score"]
+
+    top5_pool = ef_df.head(5).copy()
+    mp_row = top5_pool.sort_values("composite", ascending=False).iloc[0]
+
+    mp_ef   = mp_row["ef_score"]
+    mp_mom  = mp_row.get("momentum") if has_momentum else None
+    mp_comp = mp_row["composite"]
+    mp_rank = int(mp_row["ef_rank"])
+    mp_name = mp_row["player_name"]
+    mp_tier, mp_color = (("Elite", "#00CC96") if mp_ef >= 1.0 else ("Contender", "#66D9A6") if mp_ef >= 0.5 else ("Fringe", "#FFA07A"))
+    mp_stats = (
+        f"EF: <b>{mp_ef:+.2f}</b> &nbsp;|&nbsp; Momentum: <b>{mp_mom:+.2f}</b> &nbsp;|&nbsp; Composite: <b>{mp_comp:+.2f}</b>"
+        if mp_mom is not None else f"Contender Score: <b>{mp_ef:+.2f}</b>"
+    )
+
+    st.markdown(
+        f"<div style='background:rgba(0,204,150,0.08);border:1px solid rgba(0,204,150,0.35);"
+        f"border-left:4px solid #00CC96;border-radius:10px;padding:14px 20px;margin-top:12px'>"
+        f"<div style='display:flex;align-items:center;justify-content:space-between'>"
+        f"<div style='display:flex;align-items:center;gap:14px'>"
+        f"<div>"
+        f"<div style='font-size:10px;text-transform:uppercase;letter-spacing:1px;"
+        f"color:#00CC96;font-weight:700;margin-bottom:2px'>Model Pick</div>"
+        f"<div style='font-size:24px;font-weight:800;line-height:1.1'>{mp_name}</div>"
+        f"</div>"
+        f"<span style='font-size:10px;padding:3px 8px;border-radius:6px;"
+        f"background:{mp_color}25;color:{mp_color};font-weight:600'>{mp_tier}</span>"
+        f"<span style='font-size:11px;color:#888'>#{mp_rank} EF rank</span>"
+        f"</div>"
+        f"<div style='text-align:right;font-size:11px;color:#666'>"
+        f"top-5 pool &nbsp;&middot;&nbsp; 0.6 &times; EF + 0.4 &times; momentum</div>"
+        f"</div>"
+        f"<div style='font-size:12px;color:#aaa;margin-top:8px;padding-top:8px;"
+        f"border-top:1px solid rgba(255,255,255,0.06)'>{mp_stats}</div>"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
+
     # ── Model explanation ────────────────────────────────────────────────────
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top:12px'></div>", unsafe_allow_html=True)
     with st.expander("Why this model?", expanded=False):
         st.markdown(
             """
@@ -374,7 +448,7 @@ Elite picks live in the bottom-right: high mean, low variance.
         )
 
     # ── Section 1: Scatter + leaderboard ────────────────────────────────────
-    st.markdown("### Current Field")
+    st.divider()
     col_scatter, col_gap, col_board = st.columns([3, 0.15, 1.85])
 
     with col_scatter:
@@ -427,13 +501,17 @@ Elite picks live in the bottom-right: high mean, low variance.
             showlegend=False,
         ))
 
+        _y_min = max(ef_df["std_sg"].min() - 0.1, 0)
+        _y_max = ef_df["std_sg"].max() + 0.15
+        _x_min = ef_df["mean_sg"].min() - 0.15
+        _x_max = ef_df["mean_sg"].max() + 0.15
         fig_ef.update_layout(
             xaxis_title="Mean SG Total (L36)  →  higher is better",
             yaxis_title="Std Dev (L36)  →  lower is more consistent",
             height=950,
             plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
-            xaxis=dict(gridcolor="rgba(128,128,128,0.2)"),
-            yaxis=dict(gridcolor="rgba(128,128,128,0.2)"),
+            xaxis=dict(range=[_x_min, _x_max], gridcolor="rgba(128,128,128,0.2)"),
+            yaxis=dict(range=[_y_min, _y_max], gridcolor="rgba(128,128,128,0.2)"),
             legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0,
                         font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
             margin=dict(t=30, b=40, l=50, r=20),
@@ -442,46 +520,55 @@ Elite picks live in the bottom-right: high mean, low variance.
 
     with col_board:
         has_odds = odds_col and "odds" in ef_df.columns and ef_df["odds"].notna().any()
+        mp_dg_id = mp_row["dg_id"]
 
-        # Header row
-        hdr_odds = "<div style='width:52px;text-align:right;font-size:10px;color:#555'>Odds</div>" if has_odds else ""
-        st.markdown(
+        # Build entire right column as one HTML block inside a fixed-height container
+        hdr_odds = "<div style='width:44px;text-align:right;font-size:10px;color:#555'>Odds</div>" if has_odds else ""
+        hdr_comp = "<div style='width:38px;text-align:right;font-size:10px;color:#888'>Comp</div>" if has_momentum else ""
+
+        html = (
+            "<div style='height:950px;overflow-y:auto;padding-right:4px'>"
+            # Header
             f"<div style='display:flex;font-size:10px;color:#555;padding:4px 0;"
-            f"border-bottom:1px solid rgba(128,128,128,0.2)'>"
+            f"border-bottom:1px solid rgba(128,128,128,0.2);position:sticky;top:0;"
+            f"background:#0e1117;z-index:1'>"
             f"<div style='width:20px'></div><div style='flex:1'>Player</div>"
             f"<div style='width:36px;text-align:right'>EF</div>"
-            f"{hdr_odds}"
-            f"<div style='width:70px;text-align:right'>Tier</div>"
-            f"</div>",
-            unsafe_allow_html=True,
+            f"{hdr_comp}{hdr_odds}</div>"
         )
 
         for r, (_, row) in enumerate(ef_df.head(20).iterrows(), 1):
             color   = row["tier_color"]
-            odds_html = ""
+            is_pick = row["dg_id"] == mp_dg_id
+            row_bg  = "background:rgba(0,204,150,0.06);" if is_pick else ""
+            fw      = "700" if is_pick else "600"
+            dot     = "<div style='width:6px;height:6px;border-radius:50%;background:#00CC96;flex-shrink:0;margin-right:4px'></div>" if is_pick else "<div style='width:10px;flex-shrink:0'></div>"
+            odds_h  = ""
             if has_odds and pd.notna(row.get("odds")):
-                odds_html = f"<div style='width:52px;text-align:right;font-size:11px;color:#888'>{row['odds']:.0f}</div>"
+                odds_h = f"<div style='width:44px;text-align:right;font-size:11px;color:#888'>{row['odds']:.0f}</div>"
             elif has_odds:
-                odds_html = "<div style='width:52px;text-align:right;font-size:11px;color:#444'>—</div>"
-            st.markdown(
-                f"<div style='display:flex;align-items:center;padding:4px 0;"
+                odds_h = "<div style='width:44px;text-align:right;font-size:11px;color:#444'>-</div>"
+            comp_h = ""
+            if has_momentum and pd.notna(row.get("composite")):
+                cc = "#00CC96" if row["composite"] >= row["ef_score"] else "#FFA07A"
+                comp_h = f"<div style='width:38px;text-align:right;font-size:11px;color:{cc}'>{row['composite']:+.2f}</div>"
+            elif has_momentum:
+                comp_h = "<div style='width:38px;text-align:right;font-size:11px;color:#444'>-</div>"
+            html += (
+                f"<div style='display:flex;align-items:center;padding:4px 0;{row_bg}"
                 f"border-bottom:1px solid rgba(128,128,128,0.08)'>"
                 f"<div style='width:20px;font-size:10px;color:#555;flex-shrink:0'>{r}</div>"
-                f"<div style='flex:1;font-size:12px;font-weight:600;white-space:nowrap;"
+                f"{dot}"
+                f"<div style='flex:1;font-size:12px;font-weight:{fw};white-space:nowrap;"
                 f"overflow:hidden;text-overflow:ellipsis'>{row['player_name']}</div>"
                 f"<div style='width:36px;text-align:right;font-size:12px;font-weight:700;"
                 f"color:{color}'>{row['ef_score']:+.2f}</div>"
-                f"{odds_html}"
-                f"<div style='width:70px;text-align:right;margin-left:4px'>"
-                f"<span style='font-size:9px;padding:2px 6px;border-radius:8px;"
-                f"background:{color}25;color:{color}'>{row['tier']}</span>"
-                f"</div></div>",
-                unsafe_allow_html=True,
+                f"{comp_h}{odds_h}</div>"
             )
 
-        st.markdown("<br>", unsafe_allow_html=True)
-        # Field tier distribution
+        # Tier distribution
         total_ef = len(ef_df)
+        html += "<div style='margin-top:16px'>"
         for lbl, mask, color in [
             ("Elite (≥ 1.0)",     ef_df["ef_score"] >= 1.0,                                "#00CC96"),
             ("Contender (≥ 0.5)", (ef_df["ef_score"] >= 0.5) & (ef_df["ef_score"] < 1.0), "#66D9A6"),
@@ -490,16 +577,17 @@ Elite picks live in the bottom-right: high mean, low variance.
         ]:
             n   = mask.sum()
             pct = n / total_ef * 100 if total_ef else 0
-            st.markdown(
-                f"<div style='margin:4px 0'>"
+            html += (
+                f"<div style='margin:6px 0'>"
                 f"<div style='display:flex;justify-content:space-between;font-size:11px;margin-bottom:2px'>"
                 f"<span style='color:{color}'>{lbl}</span>"
                 f"<span style='color:#888'>{n} ({pct:.0f}%)</span></div>"
                 f"<div style='background:rgba(128,128,128,0.15);height:5px;border-radius:3px'>"
                 f"<div style='background:{color};height:100%;width:{pct:.1f}%;border-radius:3px'>"
-                f"</div></div></div>",
-                unsafe_allow_html=True,
+                f"</div></div></div>"
             )
+        html += "</div></div>"
+        st.markdown(html, unsafe_allow_html=True)
 
     # ── Section 2: Value picks (EF rank vs odds rank) ────────────────────────
     if has_odds and "odds_rank" in ef_df.columns:
@@ -569,24 +657,56 @@ Elite picks live in the bottom-right: high mean, low variance.
         top10_pct = hist_df["top10_hits"].sum() / n_picks * 100
         top5_pct  = hist_df["top5_hits"].sum()  / n_picks * 100
 
-        # Summary metrics
-        m1, m2, m3, m4 = st.columns(4)
-        for col, val, lbl, sub in [
-            (m1, f"{top25_pct:.1f}%", "Top-25 Hit Rate", f"{hist_df['top25_hits'].sum()} / {n_picks} picks"),
-            (m2, f"{top10_pct:.1f}%", "Top-10 Hit Rate", f"{hist_df['top10_hits'].sum()} / {n_picks} picks"),
-            (m3, f"{top5_pct:.1f}%",  "Top-5 Hit Rate",  f"{hist_df['top5_hits'].sum()} / {n_picks} picks"),
-            (m4, str(n_tourn),        "Tournaments",      "2025 + 2026 to date"),
-        ]:
+        # Model Pick history stats (if available)
+        has_mp_history = "model_pick_top25" in hist_df.columns and hist_df["model_pick_top25"].notna().any()
+        if has_mp_history:
+            mp_top25_pct = hist_df["model_pick_top25"].sum() / n_tourn * 100
+            mp_top10_pct = hist_df["model_pick_top10"].sum() / n_tourn * 100
+            mp_top5_pct  = hist_df["model_pick_top5"].sum()  / n_tourn * 100
+            mp_win_pct   = hist_df["model_pick_win"].sum()   / n_tourn * 100 if "model_pick_win" in hist_df.columns else None
+            pool_win_pct = hist_df["pool_wins"].sum() / n_picks * 100 if "pool_wins" in hist_df.columns else None
+        else:
+            mp_top25_pct = mp_top10_pct = mp_top5_pct = mp_win_pct = pool_win_pct = None
+
+        def _stat_card(val, lbl, sub, highlight=False):
+            bg = "rgba(0,204,150,0.06);border:1px solid rgba(0,204,150,0.25);" if highlight else "rgba(255,255,255,0.04);"
+            return (
+                f"<div style='background:{bg}border-radius:8px;padding:14px;text-align:center'>"
+                f"<div style='font-size:26px;font-weight:800;color:#00CC96'>{val}</div>"
+                f"<div style='font-size:11px;font-weight:600;margin-top:4px'>{lbl}</div>"
+                f"<div style='font-size:10px;color:#666;margin-top:2px'>{sub}</div>"
+                f"</div>"
+            )
+
+        # Pool stats row
+        st.markdown("**Top-5 Pool**")
+        st.caption("How many of the 5 EF picks finish in each position band, per tournament")
+        pool_cols = st.columns(4)
+        pool_col_data = [
+            (f"{top25_pct:.1f}%", "Top-25 Hit Rate", f"{hist_df['top25_hits'].sum()} / {n_picks} picks"),
+            (f"{top10_pct:.1f}%", "Top-10 Hit Rate", f"{hist_df['top10_hits'].sum()} / {n_picks} picks"),
+            (f"{top5_pct:.1f}%",  "Top-5 Hit Rate",  f"{hist_df['top5_hits'].sum()} / {n_picks} picks"),
+            (f"{pool_win_pct:.1f}%" if pool_win_pct is not None else "-", "Win Rate", f"{hist_df.get('pool_wins', pd.Series([0])).sum()} / {n_picks} picks"),
+        ]
+        for col, (v, l, s) in zip(pool_cols, pool_col_data):
             with col:
-                st.markdown(
-                    f"<div style='background:rgba(255,255,255,0.04);border-radius:8px;"
-                    f"padding:14px;text-align:center'>"
-                    f"<div style='font-size:26px;font-weight:800;color:#00CC96'>{val}</div>"
-                    f"<div style='font-size:11px;font-weight:600;margin-top:4px'>{lbl}</div>"
-                    f"<div style='font-size:10px;color:#666;margin-top:2px'>{sub}</div>"
-                    f"</div>",
-                    unsafe_allow_html=True,
-                )
+                st.markdown(_stat_card(v, l, s), unsafe_allow_html=True)
+
+        # Model pick row
+        if has_mp_history:
+            st.markdown("<br>", unsafe_allow_html=True)
+            st.markdown("**Model Pick (single)**")
+            st.caption("Single player per tournament via 0.6 x EF + 0.4 x momentum")
+            mp_cols = st.columns(4)
+            mp_col_data = [
+                (f"{mp_top25_pct:.1f}%", "Top-25 Hit Rate", f"{hist_df['model_pick_top25'].sum()} / {n_tourn} picks"),
+                (f"{mp_top10_pct:.1f}%", "Top-10 Hit Rate", f"{hist_df['model_pick_top10'].sum()} / {n_tourn} picks"),
+                (f"{mp_top5_pct:.1f}%",  "Top-5 Hit Rate",  f"{hist_df['model_pick_top5'].sum()} / {n_tourn} picks"),
+                (f"{mp_win_pct:.1f}%" if mp_win_pct is not None else "-", "Win Rate", f"{hist_df.get('model_pick_win', pd.Series([0])).sum()} / {n_tourn} picks"),
+            ]
+            for col, (v, l, s) in zip(mp_cols, mp_col_data):
+                with col:
+                    st.markdown(_stat_card(v, l, s, highlight=True), unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
 
@@ -598,32 +718,53 @@ Elite picks live in the bottom-right: high mean, low variance.
         fig_hist = go.Figure()
         fig_hist.add_trace(go.Bar(
             x=hist_df["event_label"], y=hist_df["top25_rate"],
-            name="Top-25 %",
+            name="Top-5 pool top-25 %",
             marker_color=[
                 "#00CC96" if v >= 60 else "#66D9A6" if v >= 40 else "#FFA07A" if v >= 20 else "#EF553B"
                 for v in hist_df["top25_rate"]
             ],
-            opacity=0.6,
-            hovertemplate="<b>%{x}</b><br>Top-25: %{y:.0f}%<extra></extra>",
+            opacity=0.5,
+            hovertemplate="<b>%{x}</b><br>Pool top-25: %{y:.0f}%<extra></extra>",
         ))
         fig_hist.add_trace(go.Scatter(
             x=hist_df["event_label"], y=hist_df["rolling10"],
-            name="Rolling 10-tournament avg",
+            name="Pool rolling 10-tournament avg",
             mode="lines",
             line=dict(color="#00CC96", width=2.5),
-            hovertemplate="Rolling avg: %{y:.1f}%<extra></extra>",
+            hovertemplate="Pool rolling avg: %{y:.1f}%<extra></extra>",
         ))
+        if has_mp_history:
+            # Model pick dots: gold = winner, green = top-25 hit, red = miss
+            has_win_col = "model_pick_win" in hist_df.columns
+            for _mask, _color, _label in [
+                (hist_df["model_pick_win"] == 1 if has_win_col else pd.Series(False, index=hist_df.index), "#FFD700", "Model Pick: winner"),
+                ((hist_df["model_pick_top25"] == 1) & (~(hist_df["model_pick_win"].astype(bool)) if has_win_col else True), "#00CC96", "Model Pick: top-25"),
+                (hist_df["model_pick_top25"] == 0, "#EF553B", "Model Pick: missed top-25"),
+            ]:
+                if _mask.any():
+                    fig_hist.add_trace(go.Scatter(
+                        x=hist_df.loc[_mask, "event_label"],
+                        y=[107] * _mask.sum(),
+                        mode="markers",
+                        marker=dict(
+                            size=10, color=_color, symbol="circle",
+                            line=dict(width=2, color="rgba(20,20,20,0.8)"),
+                        ),
+                        name=_label,
+                        hovertemplate="<b>%{customdata[0]}</b><br>Finish: T%{customdata[1]}<extra></extra>",
+                        customdata=hist_df.loc[_mask, ["model_pick", "model_pick_finish"]].values,
+                    ))
         fig_hist.add_hline(
             y=top25_pct, line_dash="dot", line_color="rgba(255,255,255,0.25)",
-            annotation_text=f"Overall {top25_pct:.1f}%",
+            annotation_text=f"Pool avg {top25_pct:.1f}%",
             annotation_position="top left",
             annotation_font=dict(size=10, color="rgba(200,200,200,0.5)"),
         )
         fig_hist.update_layout(
             yaxis_title="% of top-5 picks finishing top-25",
-            yaxis=dict(range=[0, 105], gridcolor="rgba(128,128,128,0.2)"),
+            yaxis=dict(range=[0, 110], gridcolor="rgba(128,128,128,0.2)"),
             xaxis=dict(tickangle=-45, tickfont=dict(size=9), gridcolor="rgba(128,128,128,0.1)"),
-            height=380,
+            height=400,
             plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
             legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="right", x=1,
                         font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
@@ -634,10 +775,15 @@ Elite picks live in the bottom-right: high mean, low variance.
 
         # Per-tournament detail table
         with st.expander("Per-tournament breakdown", expanded=False):
-            detail = hist_df[["event_end", "event_name", "year", "top25_hits", "top10_hits", "top5_hits", "picks", "finishes"]].copy()
+            _detail_cols = ["event_end", "event_name", "year", "top25_hits", "top10_hits", "top5_hits", "picks", "finishes"]
+            _col_names   = ["Date", "Event", "Year", "Top-25", "Top-10", "Top-5", "EF Top-5 Picks", "Finishes"]
+            if has_mp_history:
+                _detail_cols += ["model_pick", "model_pick_finish"]
+                _col_names   += ["Model Pick", "Pick Finish"]
+            detail = hist_df[_detail_cols].copy()
             detail = detail.sort_values("event_end", ascending=False)
             detail["event_end"] = detail["event_end"].dt.strftime("%b %d, %Y")
-            detail.columns = ["Date", "Event", "Year", "Top-25", "Top-10", "Top-5", "EF Top-5 Picks", "Finishes"]
+            detail.columns = _col_names
             detail.insert(0, "#", range(1, len(detail) + 1))
             st.dataframe(detail, hide_index=True, use_container_width=True, height=500)
 
