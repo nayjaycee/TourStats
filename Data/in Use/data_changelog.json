@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-21 17:18:47 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Valspar Championship",
+      "details": "Field (135 players) and odds updated for Valspar Championship"
+    },
+    {
       "timestamp": "2026-03-21 09:38:00 ET",
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
@@ -113,12 +119,6 @@
       "type": "rounds_refresh",
       "event_name": "",
       "details": "Rounds refreshed \u2014 7,204 rows across 18 events (PGA/EURO/LIV). Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-03-16 08:01:58 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE PLAYERS Championship",
-      "details": "Field (123 players) and odds updated for THE PLAYERS Championship"
     }
   ]
 }
