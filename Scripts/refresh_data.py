@@ -314,129 +314,26 @@ def build_finishes(full_path: Path, out_path: Path, year: int = YEAR) -> None:
 
 # ── Blocks ────────────────────────────────────────────────────────────────────
 
+def _pull_field(tour_param: str) -> Optional[pd.DataFrame]:
+    """Fetch field for the given DataGolf tour param. Returns None on failure."""
+    try:
+        df = pull_df(DG_FIELD_URL, {"tour": tour_param, "file_format": "csv", "key": DG_API_KEY})
+        df = coerce_int(df, ["event_id", "dg_id"])
+        return df
+    except Exception as e:
+        _log(f"Field pull failed for tour={tour_param}: {e}")
+        return None
+
+
 def run_block1() -> None:
-    """Field + Odds -> Fields.xlsx, this_week_field.csv, All_players.xlsx"""
+    """Field + Odds -> Fields.xlsx, this_week_field.csv, next_week_field.csv, All_players.xlsx"""
     _log("=== BLOCK 1: Field + Odds ===")
     now_et = pd.Timestamp.now(tz=ET)
 
-    # Pull field (don't save yet)
-    field_raw = pull_df(DG_FIELD_URL, {"tour": "PGA", "file_format": "csv", "key": DG_API_KEY})
-    field_raw = coerce_int(field_raw, ["event_id", "dg_id"])
-    field = field_raw[["event_name", "event_id", "dg_id", "player_name", "owgr_rank"]].dropna(
-        subset=["event_id", "dg_id", "player_name"]).copy()
-
-    ids = sorted(field["event_id"].dropna().unique().tolist())
-    if len(ids) == 0:
-        raise RuntimeError("No event_id found in field feed")
-    # DataGolf occasionally returns two events (transition period between weeks).
-    # Use the one with the latest start_date as the "primary" field event.
-    if len(ids) > 1:
-        _log(f"Multiple event_ids in field feed: {ids} — selecting latest by start_date")
-        sched_tmp = read_excel(SCHED_XLSX)
-        sched_tmp["event_id"]   = pd.to_numeric(sched_tmp["event_id"], errors="coerce").astype("Int64")
-        sched_tmp["start_date"] = pd.to_datetime(sched_tmp["start_date"], errors="coerce")
-        id_to_start = dict(zip(sched_tmp["event_id"].dropna().astype(int), sched_tmp["start_date"]))
-        ids_sorted  = sorted(ids, key=lambda x: id_to_start.get(int(x), pd.NaT) or pd.Timestamp.min)
-        field_event_id = int(ids_sorted[-1])  # latest start_date = next week
-        # Save secondary (older) event as this_week if it's still active
-        other_id = int(ids_sorted[0])
-        other_raw = field_raw[field_raw["event_id"] == other_id]
-        if not other_raw.empty:
-            other_raw.to_csv(THIS_WEEK_FIELD_CSV, index=False)
-            _log(f"Saved this_week_field.csv (event_id={other_id}) | rows: {len(other_raw):,}")
-        # Primary (next week) goes to next_week_field.csv
-        field_raw = field_raw[field_raw["event_id"] == field_event_id]
-        field     = field[field["event_id"] == field_event_id]
-        field_raw.to_csv(NEXT_WEEK_FIELD_CSV, index=False)
-        _log(f"Saved next_week_field.csv (event_id={field_event_id}) | rows: {len(field_raw):,}")
-    else:
-        field_event_id = int(ids[0])
-    field_event_name = field[field["event_id"] == field_event_id]["event_name"].iloc[0]
-    _log(f"Field: event_id={field_event_id} | {field_event_name} | players={len(field):,}")
-
-    # Load schedule first so we know if the tournament has started before touching odds
     sched = read_excel(SCHED_XLSX)
     sched["event_id"]   = pd.to_numeric(sched["event_id"], errors="coerce").astype("Int64")
     sched["start_date"] = pd.to_datetime(sched["start_date"], errors="coerce")
-    field_start = _schedule_start_et(sched, field_event_id)
-    field_started = now_et >= field_start
-    _log(f"Event start={field_start} | started={field_started}")
 
-    # Pull odds — only save and use when the odds event matches the field event.
-    # Before a tournament the endpoint may still return last week's event; once underway
-    # it returns live odds for the active event. In both mismatch cases we preserve whatever
-    # closing odds were already saved and don't corrupt Fields.xlsx with wrong-event data.
-    odds_event_match = False
-    try:
-        odds_raw = pull_df(DG_ODDS_URL,
-                           {"tour": "pga", "market": "win", "odds_format": "decimal",
-                            "file_format": "csv", "key": DG_API_KEY})
-        odds_event_name = ""
-        if "event_name" in odds_raw.columns:
-            odds_event_name = str(odds_raw["event_name"].dropna().iloc[0]) if not odds_raw["event_name"].dropna().empty else ""
-        odds_event_match = (
-            odds_event_name.strip().lower() == field_event_name.strip().lower()
-        )
-        if odds_event_match and not field_started:
-            odds_raw.to_csv(THIS_WEEK_ODDS_CSV, index=False)
-            _log(f"Saved -> this_week_odds.csv | rows: {len(odds_raw):,}")
-        elif not odds_event_match:
-            _log(f"Odds event mismatch: API returned '{odds_event_name}' but field is '{field_event_name}' — skipping odds save")
-        else:
-            _log("Tournament in progress — odds pulled but this_week_odds.csv NOT overwritten (preserving closing odds)")
-    except Exception as e:
-        if THIS_WEEK_ODDS_CSV.exists():
-            _log(f"Odds pull failed ({e}), using cache")
-            odds_raw = pd.read_csv(THIS_WEEK_ODDS_CSV)
-            odds_event_match = True  # treat cached file as valid
-        else:
-            odds_raw = pd.DataFrame()
-
-    odds_raw = coerce_int(odds_raw, ["event_id", "dg_id"])
-    # Only build close_odds lookup when odds are for the correct event
-    if odds_event_match and not field_started:
-        close_odds_by_id = dict(zip(
-            odds_raw["dg_id"].dropna().astype(int),
-            pd.to_numeric(odds_raw.get("datagolf_base_history_fit"), errors="coerce")
-        ))
-    else:
-        close_odds_by_id = {}  # odds not yet available or wrong event — leave NaN in Fields.xlsx
-
-    # Active tournament window: Thu start through Mon 6am
-    ACTIVE_WINDOW = pd.Timedelta(days=4, hours=6)
-
-    # Determine if an *existing* this_week_field.csv belongs to a still-active tournament
-    active_tournament_in_window = False
-    if THIS_WEEK_FIELD_CSV.exists():
-        try:
-            ex = pd.read_csv(THIS_WEEK_FIELD_CSV)
-            ex_ids = pd.to_numeric(ex.get("event_id", pd.Series(dtype=float)), errors="coerce").dropna().astype(int).unique()
-            if len(ex_ids) == 1:
-                ex_eid = int(ex_ids[0])
-                ex_row = sched.loc[sched["event_id"] == ex_eid]
-                if not ex_row.empty and ex_eid != field_event_id:
-                    ex_start = pd.to_datetime(ex_row["start_date"].iloc[0], errors="coerce")
-                    ex_end   = pd.Timestamp(ex_start.date()).tz_localize(ET) + ACTIVE_WINDOW
-                    if now_et <= ex_end:
-                        active_tournament_in_window = True
-                        _log(f"Active tournament (event_id={ex_eid}) still in window until {ex_end} — routing to next_week_field.csv")
-        except Exception as e:
-            _log(f"Could not check existing field ({e}) — saving as this_week")
-
-    player_names = sorted(field["player_name"].dropna().tolist())
-
-    if active_tournament_in_window:
-        # Save as next week's field
-        field_raw.to_csv(NEXT_WEEK_FIELD_CSV, index=False)
-        _log(f"Saved next_week_field.csv | rows: {len(field_raw):,}")
-        _update_field_status("next_week", field_event_id, field_event_name, player_names, now_et)
-    else:
-        # Save as this week's field
-        field_raw.to_csv(THIS_WEEK_FIELD_CSV, index=False)
-        _log(f"Saved this_week_field.csv | rows: {len(field_raw):,}")
-        _update_field_status("this_week", field_event_id, field_event_name, player_names, now_et)
-
-    # Update Fields.xlsx
     def _ensure_cols(df):
         for c in ["year", "event_name", "event_id", "event_completed",
                   "player_name", "dg_id", "close_odds", "field_pulled_at", "odds_pulled_at"]:
@@ -445,52 +342,128 @@ def run_block1() -> None:
         return coerce_int(df, ["year", "event_id", "dg_id"])
 
     fields = _ensure_cols(read_excel(FIELDS_XLSX))
-    mask   = (fields["year"] == YEAR) & (fields["event_id"] == field_event_id)
-    existing_odds = dict(zip(fields.loc[mask, "dg_id"].dropna().astype(int), fields.loc[mask, "close_odds"]))
 
-    wk = field[["event_name", "event_id", "dg_id", "player_name"]].copy()
-    wk["year"]            = YEAR
-    wk["event_completed"] = pd.Timestamp(field_start.date())
-    wk["field_pulled_at"] = now_et.strftime("%Y-%m-%d %H:%M:%S %Z")
-    if field_started:
-        wk["close_odds"]     = wk["dg_id"].astype(int).map(existing_odds)
-        wk["odds_pulled_at"] = pd.NA
-    else:
-        wk["close_odds"]     = wk["dg_id"].astype(int).map(close_odds_by_id)
-        wk["odds_pulled_at"] = now_et.strftime("%Y-%m-%d %H:%M:%S %Z")
+    # ── Pull this week (tour=PGA) and next week (tour=upcoming_pga) ────────────
+    this_raw = _pull_field("PGA")
+    next_raw = _pull_field("upcoming_pga")
 
-    wk = wk[["year", "event_name", "event_id", "event_completed",
-              "player_name", "dg_id", "close_odds", "field_pulled_at", "odds_pulled_at"]]
-    fields_new = pd.concat([fields.loc[~mask], wk], ignore_index=True)
-    fields_new["player_name"] = fields_new["player_name"].astype(str)
-    fields_new["event_name"]  = fields_new["event_name"].astype(str)
-    write_excel(FIELDS_XLSX, fields_new)
-    _log(f"Fields.xlsx updated | total={len(fields_new):,}")
+    processed_event_ids: list[int] = []
 
-    # Update owgr in All_players.xlsx
-    ap = read_excel(ALL_PLAYERS_XLSX)
-    ap["dg_id"] = pd.to_numeric(ap["dg_id"], errors="coerce").astype("Int64")
-    owgr_map = dict(zip(field["dg_id"].dropna().astype(int), field["owgr_rank"]))
-    ap["owgr"] = ap.apply(
-        lambda r: owgr_map.get(int(r["dg_id"]), r.get("owgr")) if pd.notna(r["dg_id"]) else r.get("owgr"), axis=1
-    )
-    write_excel(ALL_PLAYERS_XLSX, ap)
-    _log(f"All_players.xlsx owgr updated for {len(owgr_map):,} players")
+    for label, raw, csv_path, fs_key in [
+        ("this_week", this_raw, THIS_WEEK_FIELD_CSV, "this_week"),
+        ("next_week", next_raw, NEXT_WEEK_FIELD_CSV, "next_week"),
+    ]:
+        if raw is None or raw.empty:
+            _log(f"{label}: no data returned, skipping")
+            continue
+
+        ids = raw["event_id"].dropna().astype(int).unique().tolist()
+        if not ids:
+            _log(f"{label}: no event_id, skipping")
+            continue
+        event_id = int(ids[0])
+
+        # Skip next_week if it's the same event as this_week
+        if label == "next_week" and event_id in processed_event_ids:
+            _log(f"next_week event_id={event_id} same as this_week — skipping")
+            if NEXT_WEEK_FIELD_CSV.exists():
+                NEXT_WEEK_FIELD_CSV.unlink()
+                _log("Removed stale next_week_field.csv")
+            continue
+
+        event_name = str(raw["event_name"].dropna().iloc[0]) if "event_name" in raw.columns and not raw["event_name"].dropna().empty else ""
+        field      = raw[["event_name", "event_id", "dg_id", "player_name", "owgr_rank"]].dropna(
+                        subset=["event_id", "dg_id", "player_name"]).copy()
+
+        # Determine if this event has started
+        try:
+            field_start   = _schedule_start_et(sched, event_id)
+            field_started = now_et >= field_start
+        except Exception:
+            field_start   = now_et
+            field_started = False
+        _log(f"{label}: event_id={event_id} | {event_name} | {len(field):,} players | started={field_started}")
+
+        # Save field CSV
+        raw.to_csv(csv_path, index=False)
+        _log(f"Saved {csv_path.name} | rows: {len(raw):,}")
+        _update_field_status(fs_key, event_id, event_name,
+                             sorted(field["player_name"].dropna().tolist()), now_et)
+        processed_event_ids.append(event_id)
+
+        # Update Fields.xlsx
+        mask = (fields["year"] == YEAR) & (fields["event_id"] == event_id)
+        existing_odds = dict(zip(
+            fields.loc[mask, "dg_id"].dropna().astype(int),
+            fields.loc[mask, "close_odds"]
+        ))
+        wk = field[["event_name", "event_id", "dg_id", "player_name"]].copy()
+        wk["year"]            = YEAR
+        wk["event_completed"] = pd.Timestamp(field_start.date())
+        wk["field_pulled_at"] = now_et.strftime("%Y-%m-%d %H:%M:%S %Z")
+        wk["close_odds"]      = wk["dg_id"].astype(int).map(existing_odds)
+        wk["odds_pulled_at"]  = pd.NA
+        wk = wk[["year", "event_name", "event_id", "event_completed",
+                  "player_name", "dg_id", "close_odds", "field_pulled_at", "odds_pulled_at"]]
+        fields = pd.concat([fields.loc[~mask], wk], ignore_index=True)
+
+    fields["player_name"] = fields["player_name"].astype(str)
+    fields["event_name"]  = fields["event_name"].astype(str)
+    write_excel(FIELDS_XLSX, fields)
+    _log(f"Fields.xlsx updated | total={len(fields):,}")
+
+    # ── Odds (this week's event only) ─────────────────────────────────────────
+    this_event_id   = processed_event_ids[0] if processed_event_ids else None
+    this_event_name = ""
+    if this_raw is not None and "event_name" in this_raw.columns:
+        this_event_name = str(this_raw["event_name"].dropna().iloc[0]) if not this_raw["event_name"].dropna().empty else ""
+
+    this_field_started = False
+    if this_event_id:
+        try:
+            this_field_started = now_et >= _schedule_start_et(sched, this_event_id)
+        except Exception:
+            pass
+
+    try:
+        odds_raw = pull_df(DG_ODDS_URL,
+                           {"tour": "pga", "market": "win", "odds_format": "decimal",
+                            "file_format": "csv", "key": DG_API_KEY})
+        odds_event_name = str(odds_raw["event_name"].dropna().iloc[0]) if "event_name" in odds_raw.columns and not odds_raw["event_name"].dropna().empty else ""
+        odds_match = odds_event_name.strip().lower() == this_event_name.strip().lower()
+        if odds_match and not this_field_started:
+            odds_raw.to_csv(THIS_WEEK_ODDS_CSV, index=False)
+            _log(f"Saved this_week_odds.csv | rows: {len(odds_raw):,}")
+        elif not odds_match:
+            _log(f"Odds event mismatch ('{odds_event_name}' vs '{this_event_name}') — skipping odds save")
+        else:
+            _log("Tournament in progress — preserving closing odds")
+    except Exception as e:
+        _log(f"Odds pull failed: {e}")
+
+    # ── OWGR update ───────────────────────────────────────────────────────────
+    if this_raw is not None:
+        owgr_field = this_raw[["dg_id", "owgr_rank"]].dropna(subset=["dg_id"])
+        owgr_map   = dict(zip(owgr_field["dg_id"].astype(int), owgr_field["owgr_rank"]))
+        ap = read_excel(ALL_PLAYERS_XLSX)
+        ap["dg_id"] = pd.to_numeric(ap["dg_id"], errors="coerce").astype("Int64")
+        ap["owgr"]  = ap.apply(
+            lambda r: owgr_map.get(int(r["dg_id"]), r.get("owgr")) if pd.notna(r["dg_id"]) else r.get("owgr"), axis=1
+        )
+        write_excel(ALL_PLAYERS_XLSX, ap)
+        _log(f"All_players.xlsx owgr updated for {len(owgr_map):,} players")
 
     write_changelog({
         "timestamp": now_et.strftime("%Y-%m-%d %H:%M:%S ET"),
         "type": "field_odds_refresh",
-        "event_name": field_event_name,
-        "details": f"Field ({len(field):,} players) and odds updated for {field_event_name}",
+        "event_name": this_event_name,
+        "details": f"Field updated: {', '.join(str(e) for e in processed_event_ids)}",
     })
 
     push_paths = [
-        THIS_WEEK_FIELD_CSV, FIELDS_XLSX, ALL_PLAYERS_XLSX, FIELD_STATUS_PATH, CHANGELOG_PATH,
+        THIS_WEEK_FIELD_CSV, NEXT_WEEK_FIELD_CSV, FIELDS_XLSX,
+        ALL_PLAYERS_XLSX, FIELD_STATUS_PATH, CHANGELOG_PATH, THIS_WEEK_ODDS_CSV,
     ]
-    if not field_started:
-        push_paths.append(THIS_WEEK_ODDS_CSV)
-    if active_tournament_in_window and NEXT_WEEK_FIELD_CSV.exists():
-        push_paths.append(NEXT_WEEK_FIELD_CSV)
     git_push(
         [p for p in push_paths if Path(p).exists()],
         f"data: field/odds refresh {now_et.strftime('%Y-%m-%d %H:%M ET')}",

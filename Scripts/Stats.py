@@ -1706,7 +1706,7 @@ if active_tab == "Field Analysis":
         id_to_img=ID_TO_IMG,
         name_to_img=NAME_TO_IMG,
         schedule_df=schedule_df,
-        field_df=_this_week_field_df,
+        field_df=_field_df_for_event(event_id) if event_id is not None else _this_week_field_df,
         event_id=event_id,
         cutoff_dt=cutoff,
     )
