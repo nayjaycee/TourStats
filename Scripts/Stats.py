@@ -1636,10 +1636,33 @@ if _default_sort:
 
 summary_top = summary_top.reset_index(drop=True)
 
-# Load this week's field for live tab
+# Load this week's and next week's field files
 _this_week_field_path = INUSE_DIR / "this_week_field.csv"
+_next_week_field_path = INUSE_DIR / "next_week_field.csv"
 _this_week_field_df = pd.read_csv(_this_week_field_path) if _this_week_field_path.exists() else None
+_next_week_field_df = pd.read_csv(_next_week_field_path) if _next_week_field_path.exists() else None
 _live_active = is_tournament_live(_this_week_field_df) if _this_week_field_df is not None else False
+
+# Determine which field file matches the selected event (for tee times / weather)
+def _field_df_for_event(eid):
+    """Return the field DataFrame whose event_id matches eid, checking next week first."""
+    for fdf in [_next_week_field_df, _this_week_field_df]:
+        if fdf is None or fdf.empty:
+            continue
+        ids = pd.to_numeric(fdf["event_id"], errors="coerce").dropna().astype(int).unique()
+        if eid in ids:
+            return fdf
+    return _this_week_field_df
+
+def _field_path_for_event(eid):
+    """Return the CSV path whose event_id matches eid."""
+    for path, fdf in [(_next_week_field_path, _next_week_field_df), (_this_week_field_path, _this_week_field_df)]:
+        if fdf is None or fdf.empty:
+            continue
+        ids = pd.to_numeric(fdf["event_id"], errors="coerce").dropna().astype(int).unique()
+        if eid in ids:
+            return str(path)
+    return str(_this_week_field_path)
 
 # Also check schedule directly — keeps Live visible even if field file has rolled over to next week
 if not _live_active:
@@ -1791,7 +1814,7 @@ elif active_tab == "Event Overview":
         id_to_img=ID_TO_IMG,
         weather_api_key=st.secrets.get("WEATHER_API_KEY", ""),
         schedule_df=schedule_df,
-        tee_times_path=str(INUSE_DIR / "this_week_field.csv"),
+        tee_times_path=_field_path_for_event(event_id) if event_id is not None else str(_this_week_field_path),
     )
 
 elif active_tab == _live_label:
@@ -1807,6 +1830,6 @@ elif active_tab == _live_label:
             unsafe_allow_html=True,
         )
     render_live_tab(
-        field_df=_this_week_field_df,
+        field_df=_this_week_field_df,  # live tab always uses current week
         id_to_img=ID_TO_IMG,
     )

@@ -326,10 +326,32 @@ def run_block1() -> None:
         subset=["event_id", "dg_id", "player_name"]).copy()
 
     ids = sorted(field["event_id"].dropna().unique().tolist())
-    if len(ids) != 1:
-        raise RuntimeError(f"Expected 1 event_id in field feed; got {ids}")
-    field_event_id   = int(ids[0])
-    field_event_name = field["event_name"].iloc[0]
+    if len(ids) == 0:
+        raise RuntimeError("No event_id found in field feed")
+    # DataGolf occasionally returns two events (transition period between weeks).
+    # Use the one with the latest start_date as the "primary" field event.
+    if len(ids) > 1:
+        _log(f"Multiple event_ids in field feed: {ids} — selecting latest by start_date")
+        sched_tmp = read_excel(SCHED_XLSX)
+        sched_tmp["event_id"]   = pd.to_numeric(sched_tmp["event_id"], errors="coerce").astype("Int64")
+        sched_tmp["start_date"] = pd.to_datetime(sched_tmp["start_date"], errors="coerce")
+        id_to_start = dict(zip(sched_tmp["event_id"].dropna().astype(int), sched_tmp["start_date"]))
+        ids_sorted  = sorted(ids, key=lambda x: id_to_start.get(int(x), pd.NaT) or pd.Timestamp.min)
+        field_event_id = int(ids_sorted[-1])  # latest start_date = next week
+        # Save secondary (older) event as this_week if it's still active
+        other_id = int(ids_sorted[0])
+        other_raw = field_raw[field_raw["event_id"] == other_id]
+        if not other_raw.empty:
+            other_raw.to_csv(THIS_WEEK_FIELD_CSV, index=False)
+            _log(f"Saved this_week_field.csv (event_id={other_id}) | rows: {len(other_raw):,}")
+        # Primary (next week) goes to next_week_field.csv
+        field_raw = field_raw[field_raw["event_id"] == field_event_id]
+        field     = field[field["event_id"] == field_event_id]
+        field_raw.to_csv(NEXT_WEEK_FIELD_CSV, index=False)
+        _log(f"Saved next_week_field.csv (event_id={field_event_id}) | rows: {len(field_raw):,}")
+    else:
+        field_event_id = int(ids[0])
+    field_event_name = field[field["event_id"] == field_event_id]["event_name"].iloc[0]
     _log(f"Field: event_id={field_event_id} | {field_event_name} | players={len(field):,}")
 
     # Load schedule first so we know if the tournament has started before touching odds
