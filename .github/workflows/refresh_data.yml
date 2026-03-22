@@ -3,9 +3,8 @@ name: GolfStats Data Refresh
 on:
   schedule:
     - cron: '0 12,16,20 * * 1'       # Mon 8am/12pm/4pm ET — full refresh (blocks 1,2,3)
-    - cron: '0 13,19 * * 2,3'         # Tue/Wed 9am/3pm ET — field + odds (block 1)
-    - cron: '0 11,13,15,17,19,21,23 * * 4,5,6,0'  # Thu-Sun every 2h 7am-7pm ET — field check (block 1)
-    - cron: '*/30 11-23 * * 4,5,6,0' # Thu-Sun 7am-7:30pm ET — live odds (block 4)
+    - cron: '0 6,12,18 * * *'        # Every day every 6h — field check (block 1)
+    - cron: '*/30 11-23 * * 4,5,6,0' # Thu-Sun 7am-7pm ET — live odds (block 4)
   workflow_dispatch:
     inputs:
       blocks:
@@ -49,6 +48,8 @@ jobs:
             echo "blocks=1,2,3" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "*/30 11-23 * * 4,5,6,0" ]; then
             echo "blocks=4" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 6,12,18 * * *" ]; then
+            echo "blocks=1" >> $GITHUB_OUTPUT
           else
             echo "blocks=1" >> $GITHUB_OUTPUT
           fi
