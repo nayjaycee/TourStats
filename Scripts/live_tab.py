@@ -737,7 +737,7 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
             f"</div>"
         )
 
-    cards_html += "</div>"
+    cards_html += "</div><div style='margin-bottom:24px'></div>"
     st.markdown(cards_html, unsafe_allow_html=True)
 
 
