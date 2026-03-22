@@ -140,8 +140,14 @@
       "Wu, Dylan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-03-22 12:29:01 ET",
+    "last_updated": "2026-03-22 12:36:44 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-22 12:36:44 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-22 12:29:01 ET",
         "added": [],
@@ -209,18 +215,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-16 14:20:08 ET",
-        "added": [
-          "Norlander, Henrik",
-          "Power, Seamus",
-          "Ventura, Kris"
-        ],
-        "withdrawn": [
-          "Yellamaraju, Sudarshan"
-        ],
-        "note": "+3 / -1"
       }
     ]
   },
