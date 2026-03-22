@@ -622,6 +622,7 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
         default=[p for p in st.session_state.get("live_watchlist", []) if p in all_names],
         placeholder="Search and add players…",
         label_visibility="collapsed",
+        max_selections=3,
         key="live_watchlist_select",
     )
     st.session_state["live_watchlist"] = picked
@@ -654,6 +655,10 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
             _m = df[_c].abs().quantile(0.95)
             if pd.notna(_m) and _m > _field_max:
                 _field_max = float(_m)
+
+    n_cards   = len(watch_df)
+    gap_px    = 12
+    card_width = {1: "100%", 2: f"calc(50% - {gap_px//2}px)", 3: f"calc(33.33% - {gap_px*2//3}px)"}.get(n_cards, "100%")
 
     def _bar(row):
         parts = [("sg_ott","OTT",_SG_COLORS["sg_ott"]),("sg_app","APP",_SG_COLORS["sg_app"]),
@@ -712,7 +717,7 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
 
         cards_html += (
             f"<div style='background:rgba(255,255,255,0.03);border:1px solid {border_color};"
-            f"border-radius:10px;padding:14px 16px;min-width:210px;flex:1;max-width:300px'>"
+            f"border-radius:10px;padding:14px 16px;width:{card_width};box-sizing:border-box'>"
             f"<div style='display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px'>"
             f"<span style='font-size:13px;font-weight:700;color:rgba(255,255,255,0.9);white-space:nowrap;"
             f"overflow:hidden;text-overflow:ellipsis;max-width:140px'>{name}</span>"
