@@ -716,7 +716,9 @@ if __name__ == "__main__":
     parser.add_argument("--blocks", default="1,2,3,4",
                         help="Comma-separated block numbers to run (default: 1,2,3,4)")
     args    = parser.parse_args()
-    blocks  = [int(b.strip()) for b in args.blocks.split(",")]
+    blocks  = [int(b.strip()) for b in args.blocks.split(",") if b.strip().isdigit()]
+    if not blocks:
+        blocks = [1]
 
     _log(f"Running blocks: {blocks}")
     if 1 in blocks:
