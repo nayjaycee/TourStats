@@ -607,6 +607,136 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# E — Watchlist  (My Players)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
+    _divider()
+    st.markdown(f"<div style='{_SEC}'>My Players</div>", unsafe_allow_html=True)
+
+    all_names = sorted(df["player_name"].dropna().astype(str).unique().tolist())
+
+    picked = st.multiselect(
+        "Track players",
+        options=all_names,
+        default=[p for p in st.session_state.get("live_watchlist", []) if p in all_names],
+        placeholder="Search and add players…",
+        label_visibility="collapsed",
+        key="live_watchlist_select",
+    )
+    st.session_state["live_watchlist"] = picked
+
+    if not picked:
+        st.markdown(
+            "<div style='font-size:12px;color:rgba(130,130,130,0.45);padding:10px 0'>"
+            "Search above to start tracking players.</div>",
+            unsafe_allow_html=True,
+        )
+        return
+
+    watch_df = df[df["player_name"].astype(str).isin(picked)].copy()
+    if watch_df.empty:
+        return
+
+    def _pos_sort(p):
+        try: return (0, int(str(p).lstrip("T")))
+        except Exception: return (1, 999)
+
+    watch_df["_pos_sort"] = watch_df["position"].apply(_pos_sort)
+    watch_df = watch_df.sort_values("_pos_sort").drop(columns="_pos_sort")
+
+    has_odds = "dk_odds" in watch_df.columns and watch_df["dk_odds"].notna().any()
+
+    sg_scale_cols = ["sg_ott", "sg_app", "sg_arg", "sg_putt"]
+    _field_max = 1.0
+    for _c in sg_scale_cols:
+        if _c in df.columns:
+            _m = df[_c].abs().quantile(0.95)
+            if pd.notna(_m) and _m > _field_max:
+                _field_max = float(_m)
+
+    def _bar(row):
+        parts = [("sg_ott","OTT",_SG_COLORS["sg_ott"]),("sg_app","APP",_SG_COLORS["sg_app"]),
+                 ("sg_arg","ARG",_SG_COLORS["sg_arg"]),("sg_putt","PUTT",_SG_COLORS["sg_putt"])]
+        vals = [(lbl,c,pd.to_numeric(row.get(col,np.nan),errors="coerce")) for col,lbl,c in parts]
+        vals = [(lbl,c,v) for lbl,c,v in vals if pd.notna(v)]
+        if not vals: return ""
+        bars = ""
+        for lbl, color, v in vals:
+            w = min(abs(v) / _field_max * 100, 100)
+            dir_style = "margin-left:auto" if v < 0 else ""
+            bars += (
+                f"<div style='display:flex;align-items:center;gap:4px;margin-bottom:2px'>"
+                f"<span style='font-size:9px;color:rgba(150,150,150,0.5);width:28px;text-align:right'>{lbl}</span>"
+                f"<div style='flex:1;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden'>"
+                f"<div style='height:100%;width:{w:.1f}%;background:{color};border-radius:3px;{dir_style}'></div></div>"
+                f"<span style='font-size:9px;color:rgba(180,180,180,0.6);width:34px'>{v:+.2f}</span></div>"
+            )
+        return f"<div style='padding:2px 0'>{bars}</div>"
+
+    cards_html = "<div style='display:flex;flex-wrap:wrap;gap:12px;padding:4px 0'>"
+
+    for _, row in watch_df.iterrows():
+        pos   = str(row.get("position", "—"))
+        if pos.lower() == "waiting": pos = "—"
+        name  = str(row.get("player_name", "—"))
+        total = row.get("total", np.nan)
+        rnd   = row.get("round", np.nan)
+        thru  = row.get("thru", np.nan)
+        sg    = row.get("sg_total", np.nan)
+
+        total_s = _par_fmt(total); total_c = _par_color(total)
+        rnd_s   = _par_fmt(rnd);   rnd_c   = _par_color(rnd)
+        sg_s    = f"{sg:+.2f}" if pd.notna(sg) else "—"
+        sg_c    = "#34d399" if pd.notna(sg) and sg > 0 else "#ef4444" if pd.notna(sg) and sg < 0 else "rgba(180,180,180,0.6)"
+
+        not_started = pd.isna(thru) or (pd.notna(thru) and int(float(thru)) == 0)
+        if not_started and tee_map:
+            dg_id = row.get("dg_id")
+            try: tee_time = tee_map.get(int(float(dg_id)), "") if pd.notna(dg_id) else ""
+            except Exception: tee_time = ""
+            thru_s = tee_time if tee_time else "—"
+        else:
+            thru_s = _thru_fmt(thru)
+
+        dk_raw = row.get("dk_odds", np.nan)
+        if has_odds and pd.notna(dk_raw):
+            dk_dec = float(dk_raw)
+            dk_s = f"+{int(round((dk_dec-1)*100))}" if dk_dec >= 2.0 else f"{int(round(-100/(dk_dec-1)))}"
+            odds_html = f"<div style='font-size:11px;color:rgba(0,163,255,0.85);font-weight:700;margin-top:6px'>{dk_s} DK</div>"
+        else:
+            odds_html = ""
+
+        border_color = "#fbbf24" if pos == "1" else "rgba(255,255,255,0.08)"
+        pos_color    = "#fbbf24" if pos == "1" else "rgba(255,255,255,0.45)"
+
+        cards_html += (
+            f"<div style='background:rgba(255,255,255,0.03);border:1px solid {border_color};"
+            f"border-radius:10px;padding:14px 16px;min-width:210px;flex:1;max-width:300px'>"
+            f"<div style='display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px'>"
+            f"<span style='font-size:13px;font-weight:700;color:rgba(255,255,255,0.9);white-space:nowrap;"
+            f"overflow:hidden;text-overflow:ellipsis;max-width:140px'>{name}</span>"
+            f"<span style='font-size:18px;font-weight:900;color:{pos_color};margin-left:8px'>#{pos}</span>"
+            f"</div>"
+            f"<div style='display:flex;gap:14px;margin-bottom:10px;align-items:flex-end'>"
+            f"<div><div style='font-size:24px;font-weight:900;color:{total_c};line-height:1'>{total_s}</div>"
+            f"<div style='font-size:9px;color:rgba(120,120,120,0.5);text-transform:uppercase;margin-top:2px'>Total</div></div>"
+            f"<div><div style='font-size:16px;font-weight:700;color:{rnd_c}'>{rnd_s}</div>"
+            f"<div style='font-size:9px;color:rgba(120,120,120,0.5);text-transform:uppercase;margin-top:2px'>Round</div></div>"
+            f"<div><div style='font-size:13px;font-weight:600;color:rgba(160,160,160,0.7)'>{thru_s}</div>"
+            f"<div style='font-size:9px;color:rgba(120,120,120,0.5);text-transform:uppercase;margin-top:2px'>Thru</div></div>"
+            f"<div><div style='font-size:16px;font-weight:700;color:{sg_c}'>{sg_s}</div>"
+            f"<div style='font-size:9px;color:rgba(120,120,120,0.5);text-transform:uppercase;margin-top:2px'>SG Tot</div></div>"
+            f"</div>"
+            f"{_bar(row)}{odds_html}"
+            f"</div>"
+        )
+
+    cards_html += "</div>"
+    st.markdown(cards_html, unsafe_allow_html=True)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # D — SG snapshot  (horizontal bar, top 15 by SG total)
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1712,6 +1842,7 @@ def render_live_tab(*, field_df, id_to_img, cut_line=None):
                     pass
 
     # Sections
+    _render_watchlist(df, tee_map=tee_map)
     _render_hero_row(df)
     _render_movers(df)
     _render_leaderboard(df, id_to_img or {}, tee_map=tee_map)
