@@ -12,8 +12,16 @@ on:
         required: true
         default: '1'
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
+
+# Prevent concurrent runs of the same workflow to avoid git push conflicts
+concurrency:
+  group: golfstats-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -48,8 +56,6 @@ jobs:
             echo "blocks=1,2,3" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "*/30 11-23 * * 4,5,6,0" ]; then
             echo "blocks=4" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "0 6,12,18 * * *" ]; then
-            echo "blocks=1" >> $GITHUB_OUTPUT
           else
             echo "blocks=1" >> $GITHUB_OUTPUT
           fi
@@ -59,4 +65,4 @@ jobs:
           DATAGOLF_API_KEY: ${{ secrets.DATAGOLF_API_KEY }}
         run: |
           echo "Running blocks: ${{ steps.blocks.outputs.blocks }}"
-          python Scripts/refresh_data.py --blocks ${{ steps.blocks.outputs.blocks }}
+          python Scripts/refresh_data.py --blocks "${{ steps.blocks.outputs.blocks }}"
