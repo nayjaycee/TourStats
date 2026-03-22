@@ -434,7 +434,7 @@ def _render_hero_row(df: pd.DataFrame) -> None:
 # C — Live leaderboard table
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _render_leaderboard(df: pd.DataFrame, id_to_img: dict) -> None:
+def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None) -> None:
     _divider()
     st.markdown(f"<div style='{_SEC}'>Leaderboard</div>", unsafe_allow_html=True)
 
@@ -525,6 +525,8 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict) -> None:
         html = ""
         for idx, (_, row) in enumerate(slice_df.iterrows()):
             pos      = str(row.get("position", "—"))
+            if pos.lower() == "waiting":
+                pos = "—"
             name     = str(row.get("player_name", "—"))
             total    = row.get("total", np.nan)
             rnd      = row.get("round", np.nan)
@@ -535,7 +537,18 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict) -> None:
             total_c = _par_color(total)
             rnd_s   = _par_fmt(rnd)
             rnd_c   = _par_color(rnd)
-            thru_s  = _thru_fmt(thru)
+
+            # Show tee time for players who haven't started (thru = 0 or NaN)
+            not_started = pd.isna(thru) or (pd.notna(thru) and int(float(thru)) == 0)
+            if not_started and tee_map:
+                dg_id = row.get("dg_id")
+                try:
+                    tee_time = tee_map.get(int(float(dg_id)), "") if pd.notna(dg_id) else ""
+                except Exception:
+                    tee_time = ""
+                thru_s = f"<span style='color:rgba(150,150,150,0.6);font-size:10px'>{tee_time}</span>" if tee_time else "—"
+            else:
+                thru_s = _thru_fmt(thru)
             sg_s    = f"{sg_total:+.2f}" if pd.notna(sg_total) else "—"
             sg_c    = "#34d399" if pd.notna(sg_total) and sg_total > 0 else "#ef4444" if pd.notna(sg_total) and sg_total < 0 else "rgba(180,180,180,0.6)"
             sg_bar  = _sg_bar_html(row)
@@ -1678,10 +1691,30 @@ def render_live_tab(*, field_df, id_to_img, cut_line=None):
 
     _render_header(df)
 
+    # Build tee time map for current round so leaderboard can show tee times
+    # for players who haven't teed off yet
+    tee_map = {}
+    if field_df is not None and not field_df.empty:
+        fdf = field_df.copy()
+        fdf.columns = [c.lower().strip() for c in fdf.columns]
+        fdf["dg_id"] = pd.to_numeric(fdf["dg_id"], errors="coerce")
+        cur_rnd = int(fdf["current_round"].dropna().iloc[0]) if "current_round" in fdf.columns and not fdf["current_round"].dropna().empty else 1
+        tee_col = f"r{cur_rnd}_teetime"
+        if tee_col in fdf.columns:
+            for _, fr in fdf.dropna(subset=["dg_id", tee_col]).iterrows():
+                try:
+                    raw = str(fr[tee_col]).strip()
+                    # Format "2026-03-19 09:19" → "9:19 AM"
+                    t = pd.to_datetime(raw, errors="coerce")
+                    if pd.notna(t):
+                        tee_map[int(fr["dg_id"])] = t.strftime("%-I:%M %p")
+                except Exception:
+                    pass
+
     # Sections
     _render_hero_row(df)
     _render_movers(df)
-    _render_leaderboard(df, id_to_img or {})
+    _render_leaderboard(df, id_to_img or {}, tee_map=tee_map)
     _render_cut_strip(df)
     _render_winning_with_what(df)
     _render_sg_quad(df)
