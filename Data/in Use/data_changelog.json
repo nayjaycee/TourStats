@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-23 10:21:32 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Texas Children's Houston Open",
+      "details": "Field updated: 20"
+    },
+    {
       "timestamp": "2026-03-22 23:30:13 ET",
       "type": "live_odds_refresh",
       "event_name": "",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,005 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-03-22 13:09:24 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 7,575 rows across 22 events. Finishes rebuilt."
     }
   ]
 }
