@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-23 12:00:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Texas Children's Houston Open",
+      "details": "Field updated: 20"
+    },
+    {
       "timestamp": "2026-03-23 10:21:32 ET",
       "type": "field_odds_refresh",
       "event_name": "Texas Children's Houston Open",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
       "details": "Field updated: 475, 20"
-    },
-    {
-      "timestamp": "2026-03-22 13:09:25 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,005 rows (l12/l24/ytd)"
     }
   ]
 }
