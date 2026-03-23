@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 20,
     "event_name": "Texas Children's Houston Open",
-    "player_count": 131,
+    "player_count": 133,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
@@ -36,6 +36,7 @@
       "Fox, Ryan",
       "Garnett, Brice",
       "Gerard, Ryan",
+      "Ghim, Doug",
       "Glover, Lucas",
       "Gotterup, Chris",
       "Greyserman, Max",
@@ -78,7 +79,6 @@
       "Lowry, Shane",
       "Malnati, Peter",
       "McCarthy, Denny",
-      "McCarty, Matt",
       "McGreevy, Max",
       "Meissner, Mac",
       "Mitchell, Keith",
@@ -94,6 +94,7 @@
       "Phillips, Chandler",
       "Poston, J.T.",
       "Potgieter, Aldrich",
+      "Putnam, Andrew",
       "Rai, Aaron",
       "Ramey, Chad",
       "Reitan, Kristoffer",
@@ -123,6 +124,7 @@
       "Van Rooyen, Erik",
       "VanDerLaan, John",
       "Vegas, Jhonattan",
+      "Ventura, Kris",
       "Vilips, Karl",
       "Walker, Danny",
       "Wallace, Matt",
@@ -136,8 +138,20 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-23 12:44:55 ET",
+    "last_updated": "2026-03-23 15:04:22 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-23 15:04:22 ET",
+        "added": [
+          "Ghim, Doug",
+          "Putnam, Andrew",
+          "Ventura, Kris"
+        ],
+        "withdrawn": [
+          "McCarty, Matt"
+        ],
+        "note": "+3 / -1"
+      },
       {
         "timestamp": "2026-03-23 12:44:55 ET",
         "added": [],
@@ -266,12 +280,6 @@
       },
       {
         "timestamp": "2026-03-22 12:43:35 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 12:36:44 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
