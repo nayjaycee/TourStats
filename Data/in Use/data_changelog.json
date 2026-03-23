@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-23 16:28:45 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,013 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-03-23 16:28:44 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -113,12 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 74 players"
-    },
-    {
-      "timestamp": "2026-03-22 18:00:04 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valspar Championship",
-      "details": "Field updated: 475, 20"
     }
   ]
 }
