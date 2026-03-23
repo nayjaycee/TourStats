@@ -721,7 +721,7 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
             f"<div style='display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px'>"
             f"<span style='font-size:13px;font-weight:700;color:rgba(255,255,255,0.9);white-space:nowrap;"
             f"overflow:hidden;text-overflow:ellipsis;max-width:140px'>{name}</span>"
-            f"<span style='font-size:18px;font-weight:900;color:{pos_color};margin-left:8px'>#{pos}</span>"
+            f"<span style='font-size:18px;font-weight:900;color:{pos_color};margin-left:8px'>{pos}</span>"
             f"</div>"
             f"<div style='display:flex;gap:14px;margin-bottom:10px;align-items:flex-end'>"
             f"<div><div style='font-size:24px;font-weight:900;color:{total_c};line-height:1'>{total_s}</div>"

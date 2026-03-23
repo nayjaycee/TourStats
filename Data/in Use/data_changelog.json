@@ -1,6 +1,60 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-22 22:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 22:01:49 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 21:30:12 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 21:00:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 20:30:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 20:00:14 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 19:30:24 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 19:00:12 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
+      "timestamp": "2026-03-22 18:31:12 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 74 players"
+    },
+    {
       "timestamp": "2026-03-22 18:00:04 ET",
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
@@ -65,60 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
       "details": "Field updated: 475, 20"
-    },
-    {
-      "timestamp": "2026-03-22 12:43:35 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valspar Championship",
-      "details": "Field updated: 475, 20"
-    },
-    {
-      "timestamp": "2026-03-22 12:36:44 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valspar Championship",
-      "details": "Field (135 players) and odds updated for Valspar Championship"
-    },
-    {
-      "timestamp": "2026-03-22 12:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 74 players"
-    },
-    {
-      "timestamp": "2026-03-22 12:29:01 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valspar Championship",
-      "details": "Field (135 players) and odds updated for Valspar Championship"
-    },
-    {
-      "timestamp": "2026-03-22 12:21:10 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valspar Championship",
-      "details": "Field (135 players) and odds updated for Valspar Championship"
-    },
-    {
-      "timestamp": "2026-03-22 12:00:08 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 74 players"
-    },
-    {
-      "timestamp": "2026-03-22 11:31:16 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 74 players"
-    },
-    {
-      "timestamp": "2026-03-22 11:05:01 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 74 players"
-    },
-    {
-      "timestamp": "2026-03-22 09:00:41 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valspar Championship",
-      "details": "Field (135 players) and odds updated for Valspar Championship"
     }
   ]
 }

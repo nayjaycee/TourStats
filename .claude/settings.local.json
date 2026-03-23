@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i '' 's|^0 8,12,16 \\\\* \\\\* 1 |0 8,12,16 * * 1 cd /Users/joshmacbook/python_projects/GolfStats \\\\&\\\\& |' /tmp/mycron.txt)",
+      "Read(//private/tmp/**)",
+      "Bash(source:*)",
+      "Bash(python:*)",
+      "Bash(git add:*)",
+      "Bash(curl:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}

@@ -268,7 +268,7 @@ _IMP_COLS = {
 
 def _render_course_dna(course_fit_df, course_num) -> None:
     _divider()
-    st.markdown(_label("Course DNA — What It Takes to Win"), unsafe_allow_html=True)
+    st.markdown(_label("Course DNA — What Stands Out vs. Other Courses"), unsafe_allow_html=True)
 
     if course_fit_df is None or course_num is None:
         st.caption("Course fit data not available."); return
@@ -288,12 +288,24 @@ def _render_course_dna(course_fit_df, course_num) -> None:
 
     weights = {k: float(pd.to_numeric(row[k], errors="coerce") or 0) for k in avail}
     total   = sum(weights.values()) or 1
-    sorted_keys = sorted(weights, key=lambda k: weights[k], reverse=True)
 
-    primary = _clean(row.get("primary_skill",""))
-    primary_key = f"imp_{primary.lower()}" if primary != "—" else sorted_keys[0]
-    primary_label = avail.get(primary_key, avail[sorted_keys[0]])[0]
-    primary_color = avail.get(primary_key, avail[sorted_keys[0]])[1]
+    # Compute cross-course mean for each skill and derive deviations.
+    # Bars/ranking are based on how much THIS course stands out vs. the average,
+    # not raw weights (distance is high everywhere and doesn't signal course identity).
+    means = {}
+    for k in avail:
+        if k in cf.columns:
+            means[k] = float(pd.to_numeric(cf[k], errors="coerce").mean(skipna=True) or 0)
+        else:
+            means[k] = 0.0
+    deviations = {k: weights[k] - means[k] for k in avail}
+
+    sorted_keys = sorted(deviations, key=lambda k: deviations[k], reverse=True)
+
+    # Primary = the skill that stands out most vs. other courses (highest positive deviation)
+    primary_key = sorted_keys[0]
+    primary_label = avail[primary_key][0]
+    primary_color = avail[primary_key][1]
 
     pred_pct = float(pd.to_numeric(row.get("predictability_pct", 0), errors="coerce") or 0)
     if pred_pct >= 0.80:
@@ -309,102 +321,155 @@ def _render_course_dna(course_fit_df, course_num) -> None:
         pred_color = "#f87171"
         pred_blurb = "Course history and hot form may matter more than rankings."
 
-    # ── Left: horizontal bar tiles ────────────────────────────────────────────
-    col_bars, col_meta = st.columns([3, 2], gap="large")
+    # ── Build left (dumbbell) and right (donut) as one flex block ────────────
+    import math
 
-    with col_bars:
-        bars_html = "<div style='display:flex;flex-direction:column;gap:6px;padding-top:4px'>"
-        max_val = max(weights[k] for k in sorted_keys) * 100
-        for k in sorted_keys:
-            label, color, icon = avail[k]
-            pct   = weights[k] * 100
-            width = max(4, pct / max(max_val, 1) * 100)
-            is_primary = (k == primary_key)
-            border = f"border:1px solid {color}44;" if is_primary else "border:1px solid rgba(255,255,255,0.04);"
-            glow   = f"box-shadow:0 0 12px {color}22;" if is_primary else ""
-            bars_html += (
-                f"<div style='background:rgba(255,255,255,0.03);{border}{glow}"
-                f"border-radius:8px;padding:9px 12px;display:flex;align-items:center;gap:10px'>"
-                # icon + label
-                f"<span style='font-size:14px;flex-shrink:0'>{icon}</span>"
-                f"<div style='flex:1;min-width:0'>"
-                f"<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:5px'>"
-                f"<span style='font-size:12px;font-weight:{'800' if is_primary else '600'};"
-                f"color:{'rgba(255,255,255,0.95)' if is_primary else 'rgba(200,200,200,0.7)'}'>{label}"
-                + (f" <span style='font-size:9px;font-weight:700;color:{color};"
-                   f"background:{color}22;border-radius:3px;padding:1px 5px;margin-left:4px'>PRIMARY</span>"
-                   if is_primary else "") +
-                f"</span>"
-                f"<span style='font-size:13px;font-weight:800;color:{color}'>{pct:.1f}%</span>"
-                f"</div>"
-                # bar track
-                f"<div style='height:5px;background:rgba(255,255,255,0.05);border-radius:3px'>"
-                f"<div style='height:5px;width:{width:.0f}%;border-radius:3px;"
-                f"background:linear-gradient(90deg,{color}cc,{color}55)'></div>"
-                f"</div>"
-                f"</div></div>"
-            )
-        bars_html += "</div>"
-        st.markdown(bars_html, unsafe_allow_html=True)
+    # Per-skill min/max across all courses for track scale
+    track_min = {}
+    track_max = {}
+    for k in avail:
+        if k in cf.columns:
+            vals = pd.to_numeric(cf[k], errors="coerce").dropna()
+            track_min[k] = float(vals.min()) if not vals.empty else 0.0
+            track_max[k] = float(vals.max()) if not vals.empty else 1.0
+        else:
+            track_min[k] = 0.0
+            track_max[k] = 1.0
 
-    # ── Right: primary skill card + predictability ─────────────────────────────
-    with col_meta:
-        # Donut-style ring using an inline SVG — shows skill split visually
-        # Build SVG arc segments
-        cx, cy, r_outer, r_inner = 80, 80, 68, 44
-        import math
-        def arc_path(start_deg, end_deg, ro, ri, cx, cy):
-            def pt(deg, radius):
-                rad = math.radians(deg - 90)
-                return cx + radius * math.cos(rad), cy + radius * math.sin(rad)
-            x1o,y1o = pt(start_deg, ro); x2o,y2o = pt(end_deg, ro)
-            x1i,y1i = pt(start_deg, ri); x2i,y2i = pt(end_deg, ri)
-            large = 1 if (end_deg - start_deg) > 180 else 0
-            return (f"M {x1o:.1f} {y1o:.1f} A {ro} {ro} 0 {large} 1 {x2o:.1f} {y2o:.1f} "
-                    f"L {x2i:.1f} {y2i:.1f} A {ri} {ri} 0 {large} 0 {x1i:.1f} {y1i:.1f} Z")
-
-        gap_deg = 3
-        current = 0
-        segments = ""
-        for k in sorted_keys:
-            label, color, icon = avail[k]
-            pct = weights[k] / total
-            sweep = pct * 360 - gap_deg
-            if sweep > 0:
-                path = arc_path(current, current + sweep, r_outer, r_inner, cx, cy)
-                opacity = "1" if k == primary_key else "0.35"
-                segments += f"<path d='{path}' fill='{color}' opacity='{opacity}'/>"
-            current += pct * 360
-
-        donut_svg = (
-            f"<svg width='160' height='160' viewBox='0 0 160 160'>"
-            f"{segments}"
-            f"<text x='80' y='74' text-anchor='middle' font-size='11' font-weight='700' "
-            f"fill='rgba(150,150,150,0.6)' font-family='sans-serif'>PRIMARY</text>"
-            f"<text x='80' y='92' text-anchor='middle' font-size='14' font-weight='900' "
-            f"fill='{primary_color}' font-family='sans-serif'>{primary_label}</text>"
-            f"</svg>"
+    # Left panel: dumbbell rows (no % numbers)
+    left_html = "<div style='display:flex;flex-direction:column;gap:4px;padding-top:4px;height:100%'>"
+    for k in sorted_keys:
+        label, color, icon = avail[k]
+        course_val = weights[k]
+        avg_val    = means[k]
+        t_min, t_max = track_min[k], track_max[k]
+        span = t_max - t_min or 1
+        avg_pos    = max(2, min(98, (avg_val    - t_min) / span * 100))
+        course_pos = max(2, min(98, (course_val - t_min) / span * 100))
+        left_pos   = min(avg_pos, course_pos)
+        line_width = max(avg_pos, course_pos) - left_pos
+        is_primary = (k == primary_key)
+        label_weight = "800" if is_primary else "600"
+        label_color  = "rgba(255,255,255,0.95)" if is_primary else "rgba(190,190,190,0.7)"
+        border = f"border:1px solid {color}33;" if is_primary else "border:1px solid rgba(255,255,255,0.04);"
+        glow   = f"box-shadow:0 0 10px {color}18;" if is_primary else ""
+        primary_badge = (
+            f"<span style='font-size:9px;font-weight:700;color:{color};"
+            f"background:{color}22;border-radius:3px;padding:1px 5px;margin-left:5px'>PRIMARY</span>"
+            if is_primary else ""
         )
-
-        st.markdown(
-            f"<div style='background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);"
-            f"border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center'>"
-            f"<div style='display:flex;justify-content:center'>{donut_svg}</div>"
-            # Predictability row
-            f"<div style='width:100%;margin-top:10px'>"
-            f"<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:6px'>"
-            f"<span style='font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;"
-            f"color:rgba(120,120,120,0.5)'>Predictability</span>"
-            f"<span style='font-size:11px;font-weight:800;color:{pred_color}'>{pred_label}</span>"
+        dev = deviations[k] * 100
+        dev_sign  = "+" if dev >= 0 else ""
+        dev_color = f"rgba(100,220,130,0.8)" if dev > 0 else "rgba(150,150,150,0.45)"
+        left_html += (
+            f"<div style='background:rgba(255,255,255,0.02);{border}{glow}"
+            f"border-radius:8px;padding:8px 12px;flex:1'>"
+            f"<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:7px'>"
+            f"<span style='font-size:12px;font-weight:{label_weight};color:{label_color}'>"
+            f"{label}{primary_badge}</span>"
+            f"<span style='font-size:10px;font-weight:600;color:{dev_color}'>{dev_sign}{dev:.1f}%</span>"
             f"</div>"
-            f"<div style='height:5px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:8px'>"
-            f"<div style='height:5px;width:{pred_pct*100:.0f}%;border-radius:3px;"
-            f"background:linear-gradient(90deg,{pred_color},{pred_color}88)'></div></div>"
-            f"<div style='font-size:11px;color:rgba(140,140,140,0.6);line-height:1.5;text-align:center'>"
-            f"{pred_blurb}</div>"
-            f"</div></div>",
-            unsafe_allow_html=True,
+            f"<div style='position:relative;height:14px'>"
+            f"<div style='position:absolute;top:6px;left:0;right:0;height:2px;"
+            f"background:rgba(255,255,255,0.06);border-radius:1px'></div>"
+            f"<div style='position:absolute;top:6px;left:{left_pos:.1f}%;width:{line_width:.1f}%;height:2px;"
+            f"background:{color}55;border-radius:1px'></div>"
+            f"<div style='position:absolute;top:3px;left:{avg_pos:.1f}%;transform:translateX(-50%);"
+            f"width:8px;height:8px;border-radius:50%;border:2px solid rgba(160,160,160,0.45);"
+            f"background:rgba(30,30,30,0.8)'></div>"
+            f"<div style='position:absolute;top:2px;left:{course_pos:.1f}%;transform:translateX(-50%);"
+            f"width:10px;height:10px;border-radius:50%;background:{color};"
+            f"box-shadow:0 0 6px {color}88'></div>"
+            f"</div>"
+            f"<div style='position:relative;height:12px;margin-top:1px'>"
+            f"<span style='position:absolute;left:{avg_pos:.1f}%;transform:translateX(-50%);"
+            f"font-size:8px;color:rgba(120,120,120,0.4);white-space:nowrap'>avg</span>"
+            f"</div>"
+            f"</div>"
         )
+    left_html += "</div>"
+
+    # Right panel: donut + legend + predictability
+    cx, cy, r_outer, r_inner = 80, 80, 68, 44
+    def arc_path(start_deg, end_deg, ro, ri, cx, cy):
+        def pt(deg, radius):
+            rad = math.radians(deg - 90)
+            return cx + radius * math.cos(rad), cy + radius * math.sin(rad)
+        x1o,y1o = pt(start_deg, ro); x2o,y2o = pt(end_deg, ro)
+        x1i,y1i = pt(start_deg, ri); x2i,y2i = pt(end_deg, ri)
+        large = 1 if (end_deg - start_deg) > 180 else 0
+        return (f"M {x1o:.1f} {y1o:.1f} A {ro} {ro} 0 {large} 1 {x2o:.1f} {y2o:.1f} "
+                f"L {x2i:.1f} {y2i:.1f} A {ri} {ri} 0 {large} 0 {x1i:.1f} {y1i:.1f} Z")
+
+    gap_deg = 3
+    current = 0
+    segments = ""
+    for k in sorted_keys:
+        label, color, icon = avail[k]
+        pct_w = weights[k] / total
+        sweep = pct_w * 360 - gap_deg
+        if sweep > 0:
+            path = arc_path(current, current + sweep, r_outer, r_inner, cx, cy)
+            opacity = "1" if k == primary_key else "0.35"
+            segments += f"<path d='{path}' fill='{color}' opacity='{opacity}'/>"
+        current += pct_w * 360
+
+    donut_svg = (
+        f"<svg width='160' height='160' viewBox='0 0 160 160'>"
+        f"{segments}"
+        f"<text x='80' y='74' text-anchor='middle' font-size='11' font-weight='700' "
+        f"fill='rgba(150,150,150,0.6)' font-family='sans-serif'>PRIMARY</text>"
+        f"<text x='80' y='92' text-anchor='middle' font-size='14' font-weight='900' "
+        f"fill='{primary_color}' font-family='sans-serif'>{primary_label}</text>"
+        f"</svg>"
+    )
+
+    legend_rows = ""
+    for k in sorted_keys:
+        lbl, col, _ = avail[k]
+        pct = weights[k] * 100
+        is_p = (k == primary_key)
+        legend_rows += (
+            f"<div style='display:flex;justify-content:space-between;align-items:center;"
+            f"padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04)'>"
+            f"<div style='display:flex;align-items:center;gap:6px'>"
+            f"<div style='width:8px;height:8px;border-radius:50%;background:{col};"
+            f"opacity:{'1' if is_p else '0.45'};flex-shrink:0'></div>"
+            f"<span style='font-size:11px;font-weight:{'700' if is_p else '400'};"
+            f"color:{'rgba(220,220,220,0.9)' if is_p else 'rgba(150,150,150,0.6)'}'>{lbl}</span>"
+            f"</div>"
+            f"<span style='font-size:11px;font-weight:{'700' if is_p else '400'};"
+            f"color:{'rgba(220,220,220,0.85)' if is_p else 'rgba(120,120,120,0.5)'}'>{pct:.1f}%</span>"
+            f"</div>"
+        )
+
+    right_html = (
+        f"<div style='background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);"
+        f"border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center;height:100%'>"
+        f"<div style='display:flex;justify-content:center'>{donut_svg}</div>"
+        f"<div style='width:100%;margin-top:8px;margin-bottom:10px'>{legend_rows}</div>"
+        f"<div style='width:100%;margin-top:auto'>"
+        f"<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:6px'>"
+        f"<span style='font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;"
+        f"color:rgba(120,120,120,0.5)'>Predictability</span>"
+        f"<span style='font-size:11px;font-weight:800;color:{pred_color}'>{pred_label}</span>"
+        f"</div>"
+        f"<div style='height:5px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:8px'>"
+        f"<div style='height:5px;width:{pred_pct*100:.0f}%;border-radius:3px;"
+        f"background:linear-gradient(90deg,{pred_color},{pred_color}88)'></div></div>"
+        f"<div style='font-size:11px;color:rgba(140,140,140,0.6);line-height:1.5;text-align:center'>"
+        f"{pred_blurb}</div>"
+        f"</div></div>"
+    )
+
+    # Single flex row — align-items:stretch forces equal height
+    st.markdown(
+        f"<div style='display:flex;gap:24px;align-items:stretch'>"
+        f"<div style='flex:3'>{left_html}</div>"
+        f"<div style='flex:2'>{right_html}</div>"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
 
 
 # ─────────────────────────────────────────────────────────────────────────────
