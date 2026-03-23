@@ -357,6 +357,10 @@ def run_block1() -> None:
             _log(f"{label}: no data returned, skipping")
             continue
 
+        if "event_id" not in raw.columns:
+            _log(f"{label}: API response missing event_id column (columns: {list(raw.columns)[:10]}) — skipping")
+            continue
+
         ids = raw["event_id"].dropna().astype(int).unique().tolist()
         if not ids:
             _log(f"{label}: no event_id, skipping")
