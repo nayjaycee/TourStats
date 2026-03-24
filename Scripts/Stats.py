@@ -1576,6 +1576,27 @@ if event_id is not None:
     field_ev = field_ev.drop_duplicates(subset=["dg_id"], keep="last")
     field_ids = field_ev["dg_id"].astype(int).tolist()
 
+    # Fallback: if close_odds is missing, pull from this_week_odds.csv
+    _odds_csv_path = INUSE_DIR / "this_week_odds.csv"
+    if (
+        _odds_csv_path.exists()
+        and "close_odds" in field_ev.columns
+        and field_ev["close_odds"].isna().all()
+    ):
+        try:
+            _odds_csv = pd.read_csv(_odds_csv_path)
+            _odds_csv["dg_id"] = pd.to_numeric(_odds_csv["dg_id"], errors="coerce")
+            # Pick best available bookmaker column
+            _bookie_prefs = ["draftkings", "betmgm", "datagolf_baseline", "bovada", "betonline"]
+            _bookie_col = next((c for c in _bookie_prefs if c in _odds_csv.columns and _odds_csv[c].notna().any()), None)
+            if _bookie_col:
+                _odds_merge = _odds_csv[["dg_id", _bookie_col]].rename(columns={_bookie_col: "_tmp_odds"}).dropna(subset=["dg_id"])
+                field_ev = field_ev.merge(_odds_merge, on="dg_id", how="left")
+                field_ev["close_odds"] = field_ev["close_odds"].fillna(field_ev["_tmp_odds"])
+                field_ev = field_ev.drop(columns=["_tmp_odds"])
+        except Exception:
+            pass
+
 only_in_field = bool(field_ids)  # default True when field is available, else show full universe
 
 f_univ = fields.copy()
