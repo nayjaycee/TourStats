@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 20,
     "event_name": "Texas Children's Houston Open",
-    "player_count": 133,
+    "player_count": 135,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
@@ -103,6 +103,7 @@
       "Roy, Kevin",
       "Rozo, Marcelo",
       "Russell, Casey",
+      "Ryder, Sam",
       "Saddier, Adrien",
       "Salinda, Isaiah",
       "Sargent, Gordon",
@@ -115,6 +116,7 @@
       "Smith, Jordan",
       "Stanger, Jimmy",
       "Stevens, Sam",
+      "Suber, Jackson",
       "Svensson, Adam",
       "Svensson, Jesper",
       "Theegala, Sahith",
@@ -138,8 +140,17 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-23 18:00:15 ET",
+    "last_updated": "2026-03-24 06:00:13 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-24 06:00:13 ET",
+        "added": [
+          "Ryder, Sam",
+          "Suber, Jackson"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-03-23 18:00:15 ET",
         "added": [
@@ -274,12 +285,6 @@
       },
       {
         "timestamp": "2026-03-22 12:43:35 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 12:36:44 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
