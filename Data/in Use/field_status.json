@@ -14,7 +14,6 @@
       "Campbell, Brian",
       "Campos, Rafael",
       "Castillo, Ricky",
-      "Cauley, Bud",
       "Chatfield, Davis",
       "Clanton, Luke",
       "Clark, Wyndham",
@@ -70,6 +69,7 @@
       "Kizzire, Patton",
       "Knapp, Jake",
       "Koepka, Brooks",
+      "Kuchar, Matt",
       "Lamprecht, Christo",
       "Lebioda, Hank",
       "Lee, K.H.",
@@ -94,6 +94,7 @@
       "Phillips, Chandler",
       "Poston, J.T.",
       "Potgieter, Aldrich",
+      "Power, Seamus",
       "Putnam, Andrew",
       "Rai, Aaron",
       "Ramey, Chad",
@@ -107,7 +108,6 @@
       "Saddier, Adrien",
       "Salinda, Isaiah",
       "Sargent, Gordon",
-      "Scheffler, Scottie",
       "Schenk, Adam",
       "Schmid, Matti",
       "Scott, Adam",
@@ -140,8 +140,20 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-24 06:00:13 ET",
+    "last_updated": "2026-03-24 12:04:19 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-24 12:04:19 ET",
+        "added": [
+          "Kuchar, Matt",
+          "Power, Seamus"
+        ],
+        "withdrawn": [
+          "Cauley, Bud",
+          "Scheffler, Scottie"
+        ],
+        "note": "+2 / -2"
+      },
       {
         "timestamp": "2026-03-24 06:00:13 ET",
         "added": [
@@ -279,12 +291,6 @@
       },
       {
         "timestamp": "2026-03-22 12:43:56 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 12:43:35 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
