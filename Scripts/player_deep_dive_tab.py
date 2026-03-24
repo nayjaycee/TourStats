@@ -14,7 +14,7 @@ from typing import Optional, List
 
 def _info_expander(label: str, content: str, section: str = "", btn_key: str = ""):
     if st.button(f"ⓘ  {label}", key=btn_key or f"_doc_dd_{section}", help="Open in Guide tab"):
-        st.session_state["active_tab"] = "Guide"
+        st.session_state["_pending_tab"] = "Guide"
         st.session_state["doc_section"] = section or "strokes_gained"
         st.rerun()
 

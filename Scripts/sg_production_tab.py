@@ -410,7 +410,7 @@ def render_elite_finish_analysis(
     # ── Model explanation ────────────────────────────────────────────────────
     st.markdown("<div style='margin-top:12px'></div>", unsafe_allow_html=True)
     if st.button("ⓘ  Why this model?", key="_doc_sg_contender", help="Open in Guide tab"):
-        st.session_state["active_tab"] = "Guide"
+        st.session_state["_pending_tab"] = "Guide"
         st.session_state["doc_section"] = "contender_model"
         st.rerun()
 

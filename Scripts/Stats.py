@@ -1776,6 +1776,12 @@ TAB_NAMES = [
     "Guide",
 ]
 
+# Apply any pending tab navigation (set by tab modules before rerun)
+if "_pending_tab" in st.session_state:
+    _pending = st.session_state.pop("_pending_tab")
+    if _pending in TAB_NAMES:
+        st.session_state.active_tab = _pending
+
 if "active_tab" not in st.session_state or st.session_state.active_tab not in TAB_NAMES:
     st.session_state.active_tab = "Event Overview"
 
