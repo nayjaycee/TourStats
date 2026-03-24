@@ -149,11 +149,11 @@ def render_elite_finish_tab(rounds_df, fields_df=None, event_id=None):
     st.markdown("**Validated Model for Identifying Top 25% Finishers (Pre-Cut Field)**")
     
     # Create tabs
-    tab1, tab2, tab3, tab4 = st.tabs([
-        "Documentation",
-        "This Week's Picks", 
+    tab2, tab3, tab4, tab1 = st.tabs([
+        "This Week's Picks",
         "Custom Model Builder",
-        "2026 Results"
+        "2026 Results",
+        "How It Works",
     ])
     
     # ===== TAB 1: COMPREHENSIVE MODEL EXPLANATION =====

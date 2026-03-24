@@ -12,6 +12,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import html
 from elite_finish_tab import render_elite_finish_tab
+from documentation_tab import render_documentation_tab
 from sg_production_tab import render_production_sg_tab
 from course_history_proto import render_course_history_demo
 from approach_skill_tab import render_approach_skill_tab
@@ -369,6 +370,71 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+
+# ── Mobile / responsive CSS ───────────────────────────────────────────────────
+st.markdown("""
+<style>
+@media (max-width: 768px) {
+  /* Stack st.columns() layouts vertically */
+  [data-testid="stHorizontalBlock"] {
+    flex-direction: column !important;
+  }
+  [data-testid="stColumn"] {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* KPI pill rows: wrap to 2 columns */
+  .dd-kpi-row {
+    flex-wrap: wrap !important;
+  }
+  .dd-kpi {
+    flex: 1 1 calc(50% - 7px) !important;
+    min-width: calc(50% - 7px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* KPI pills: full width on very small screens */
+  .dd-kpi {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+/* Course Horses: wrap to 2-per-row on tablet, 1 on phone */
+@media (max-width: 768px) {
+  [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"]:nth-child(5)) {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+  [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"]:nth-child(5)) > [data-testid="stColumn"] {
+    flex: 1 1 45% !important;
+    min-width: 45% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 480px) {
+  [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"]:nth-child(5)) > [data-testid="stColumn"] {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Live leaderboard: horizontal scroll on mobile */
+.live-leaderboard-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+.live-leaderboard-wrap table {
+  min-width: 640px;
+}
+</style>
+""", unsafe_allow_html=True)
+# ─────────────────────────────────────────────────────────────────────────────
 
 def show_headshot_cropped_card(img_value: str | None, height_px: int = 250, player_name: str | None = None) -> None:
     s = str(img_value).strip().strip('"').strip("'").strip() if img_value else ""
@@ -1202,6 +1268,7 @@ with st.sidebar:
         format_func=lambda rid: label_by_id.get(int(rid), "Unknown event"),
         index=row_ids.index(int(default_row_id)),
         key="event_select_row_id",
+        help="Select the tournament to analyze. Defaults to the current or next scheduled event.",
     )
 
     selected_row = sched.loc[sched["__row_id"].astype(int) == int(selected_row_id)].iloc[0]
@@ -1250,31 +1317,25 @@ with st.sidebar:
         _fs = {}
 
     # ── Data sources ──────────────────────────────────────────────────────────
-    st.markdown(
-        "<div style='font-size:11px;font-weight:700;letter-spacing:0.08em;"
-        "color:rgba(130,130,130,0.6);text-transform:uppercase;margin:16px 0 10px'>"
-        "Data Sources</div>",
-        unsafe_allow_html=True,
-    )
-
-    _SOURCE_ROWS = [
-        ("rounds_refresh",     "Rounds"),
-        ("field_odds_refresh", "Field / Odds"),
-        ("live_odds_refresh",  "Live Odds"),
-        ("approach_refresh",   "Approach Skill"),
-    ]
-    for _type_key, _label in _SOURCE_ROWS:
-        _ts  = _last.get(_type_key, "")
-        _disp = _fmt_ts(_ts) if _ts else "—"
-        _color = "rgba(100,200,100,0.9)" if _ts else "rgba(120,120,120,0.4)"
-        st.markdown(
-            f"<div style='display:flex;justify-content:space-between;align-items:center;"
-            f"padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
-            f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_label}</span>"
-            f"<span style='font-size:11px;color:{_color};text-align:right'>{_disp}</span>"
-            f"</div>",
-            unsafe_allow_html=True,
-        )
+    with st.expander("Data Sources", expanded=False):
+        _SOURCE_ROWS = [
+            ("rounds_refresh",     "Rounds"),
+            ("field_odds_refresh", "Field / Odds"),
+            ("live_odds_refresh",  "Live Odds"),
+            ("approach_refresh",   "Approach Skill"),
+        ]
+        for _type_key, _label in _SOURCE_ROWS:
+            _ts  = _last.get(_type_key, "")
+            _disp = _fmt_ts(_ts) if _ts else "—"
+            _color = "rgba(100,200,100,0.9)" if _ts else "rgba(120,120,120,0.4)"
+            st.markdown(
+                f"<div style='display:flex;justify-content:space-between;align-items:center;"
+                f"padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+                f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_label}</span>"
+                f"<span style='font-size:11px;color:{_color};text-align:right'>{_disp}</span>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
 
     # ── Field status ──────────────────────────────────────────────────────────
     # Determine current/next week event_ids from the schedule (not the stale JSON keys)
@@ -1320,50 +1381,44 @@ with st.sidebar:
         name = str(row.iloc[0][_sched_name_col]).strip().lower()
         return _fs_by_name.get(name)
 
-    st.markdown(
-        "<div style='font-size:11px;font-weight:700;letter-spacing:0.08em;"
-        "color:rgba(130,130,130,0.6);text-transform:uppercase;margin:18px 0 10px'>"
-        "Field Status</div>",
-        unsafe_allow_html=True,
-    )
+    with st.expander("Field Status", expanded=False):
+        for _week_label, _eids in [("This Week", _current_eids), ("Next Up", _next_eids[:1])]:
+            _wf = _lookup_fs(_eids)
+            if not _wf:
+                st.markdown(
+                    f"<div style='padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+                    f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_week_label}</span>"
+                    f"<span style='font-size:11px;color:rgba(120,120,120,0.4);margin-left:10px'>Not yet loaded</span></div>",
+                    unsafe_allow_html=True,
+                )
+                continue
 
-    for _week_label, _eids in [("This Week", _current_eids), ("Next Up", _next_eids[:1])]:
-        _wf = _lookup_fs(_eids)
-        if not _wf:
+            _ev_name  = _wf.get("event_name", "")
+            _n        = _wf.get("player_count", "?")
+            _updated  = _fmt_ts(_wf.get("last_updated", ""))
+            _changes  = _wf.get("recent_changes", [])
+            _latest_c = _changes[0] if _changes else {}
+            _added    = _latest_c.get("added", [])
+            _dropped  = _latest_c.get("withdrawn", [])
+
+            _change_html = ""
+            if _added:
+                _names = ", ".join(_added[:5]) + ("…" if len(_added) > 5 else "")
+                _change_html += f"<div style='font-size:11px;color:rgba(100,200,100,0.85);margin-top:4px'>↑ {len(_added)} added: {_names}</div>"
+            if _dropped:
+                _names = ", ".join(_dropped[:5]) + ("…" if len(_dropped) > 5 else "")
+                _change_html += f"<div style='font-size:11px;color:rgba(255,120,100,0.85);margin-top:2px'>↓ {len(_dropped)} withdrawn: {_names}</div>"
+
             st.markdown(
                 f"<div style='padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
+                f"<div style='display:flex;justify-content:space-between;align-items:baseline'>"
                 f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_week_label}</span>"
-                f"<span style='font-size:11px;color:rgba(120,120,120,0.4);margin-left:10px'>Not yet loaded</span></div>",
+                f"<span style='font-size:11px;color:rgba(100,200,100,0.9)'>{_updated}</span></div>"
+                f"<div style='font-size:12px;color:rgba(170,170,170,0.7);margin-top:3px'>{_ev_name} · {_n} players</div>"
+                f"{_change_html}"
+                f"</div>",
                 unsafe_allow_html=True,
             )
-            continue
-
-        _ev_name  = _wf.get("event_name", "")
-        _n        = _wf.get("player_count", "?")
-        _updated  = _fmt_ts(_wf.get("last_updated", ""))
-        _changes  = _wf.get("recent_changes", [])
-        _latest_c = _changes[0] if _changes else {}
-        _added    = _latest_c.get("added", [])
-        _dropped  = _latest_c.get("withdrawn", [])
-
-        _change_html = ""
-        if _added:
-            _names = ", ".join(_added[:5]) + ("…" if len(_added) > 5 else "")
-            _change_html += f"<div style='font-size:11px;color:rgba(100,200,100,0.85);margin-top:4px'>↑ {len(_added)} added: {_names}</div>"
-        if _dropped:
-            _names = ", ".join(_dropped[:5]) + ("…" if len(_dropped) > 5 else "")
-            _change_html += f"<div style='font-size:11px;color:rgba(255,120,100,0.85);margin-top:2px'>↓ {len(_dropped)} withdrawn: {_names}</div>"
-
-        st.markdown(
-            f"<div style='padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
-            f"<div style='display:flex;justify-content:space-between;align-items:baseline'>"
-            f"<span style='font-size:13px;font-weight:600;color:rgba(210,210,210,0.85)'>{_week_label}</span>"
-            f"<span style='font-size:11px;color:rgba(100,200,100,0.9)'>{_updated}</span></div>"
-            f"<div style='font-size:12px;color:rgba(170,170,170,0.7);margin-top:3px'>{_ev_name} · {_n} players</div>"
-            f"{_change_html}"
-            f"</div>",
-            unsafe_allow_html=True,
-        )
 
     # ── Sidebar weather summary ────────────────────────────────────────────
     _weather_api_key = st.secrets.get("WEATHER_API_KEY", "")
@@ -1477,8 +1532,8 @@ with st.sidebar:
                         f"</div>",
                         unsafe_allow_html=True,
                     )
-            except Exception:
-                pass  # silently skip if weather fetch fails in sidebar
+            except Exception as _wx_err:
+                st.caption(f"Weather data unavailable — {_wx_err}")
 
 
 sched_row = selected_row
@@ -1491,7 +1546,16 @@ else:
     cutoff = pd.Timestamp.today()
 
 if event_id is None:
-    st.info("This schedule row has no event_id yet, so field/odds/YTD-by-event can’t be shown for it.")
+    st.markdown(
+        "<div style=’background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);"
+        "border-radius:12px;padding:32px 24px;text-align:center;margin-top:40px’>"
+        "<div style=’font-size:18px;font-weight:700;color:rgba(200,200,200,0.7);margin-bottom:8px’>"
+        "No event data yet</div>"
+        "<div style=’font-size:13px;color:rgba(130,130,130,0.5)’>"
+        "This event doesn’t have an ID assigned yet. Field, odds, and player stats will appear once the event goes live."
+        "</div></div>",
+        unsafe_allow_html=True,
+    )
 
 
 
@@ -1579,6 +1643,9 @@ out[num_cols] = out[num_cols].round(1)
 odds_candidates = ["close_odds", "decimal_odds", "odds", "win_prob_est"]
 odds_col = next((c for c in odds_candidates if c in field_ev.columns), None)
 _odds_available = False
+if odds_col is None and event_id is not None:
+    _event_label_no_odds = selected_row.get("event_name", "this event") if "event_name" in selected_row.index else "this event"
+    st.sidebar.caption(f"No odds column found for **{_event_label_no_odds}**.")
 if odds_col:
     tmp = field_ev[["dg_id", odds_col]].copy()
     tmp["dg_id"] = pd.to_numeric(tmp["dg_id"], errors="coerce")
@@ -1677,14 +1744,15 @@ _live_label = "🔴 Live" if _live_active else "⚫ Live"
 
 TAB_NAMES = [
     "Event Overview",
-    _live_label,
     "Field Analysis",
     "Contender Model",
     "Course History",
     "Approach Skill",
     "H2H",
     "Player Deep Dive",
+    _live_label,
     "Event Archive",
+    "Guide",
 ]
 
 if "active_tab" not in st.session_state or st.session_state.active_tab not in TAB_NAMES:
@@ -1697,6 +1765,47 @@ active_tab = st.segmented_control(
     default=st.session_state.active_tab,
     key="active_tab",
 )
+
+# ── Event context bar ─────────────────────────────────────────────────────────
+_ctx_name   = str(selected_row.get("event_name", "")).strip()
+_ctx_course = ""
+for _cc in ["course_name", "course", "location"]:
+    _cv = str(selected_row.get(_cc, "")).strip()
+    if _cv.lower() not in {"nan", "none", "null", "", "<unset>"}:
+        _ctx_course = _cv
+        break
+_ctx_date = ""
+for _dc in ["start_date", "event_date"]:
+    _dv = selected_row.get(_dc)
+    _ts = pd.to_datetime(_dv, errors="coerce")
+    if pd.notna(_ts):
+        _ctx_date = _ts.strftime("%b %-d")
+        _ctx_date_end = (_ts + pd.Timedelta(days=3)).strftime("%-d, %Y")
+        _ctx_date = f"{_ctx_date}–{_ctx_date_end}"
+        break
+_ctx_purse = ""
+for _pc in ["total_purse", "purse", "prize_fund"]:
+    _pv = selected_row.get(_pc)
+    try:
+        _pf = float(str(_pv).replace("$", "").replace(",", ""))
+        _ctx_purse = f"${_pf/1_000_000:.1f}M"
+        break
+    except Exception:
+        pass
+_ctx_parts = [p for p in [_ctx_course, _ctx_date, _ctx_purse] if p]
+_ctx_meta  = " · ".join(_ctx_parts)
+if _ctx_name:
+    st.markdown(
+        f"<div style='font-size:12px;color:rgba(160,160,160,0.65);padding:4px 2px 10px;'>"
+        f"<span style='font-weight:600;color:rgba(200,200,200,0.8)'>{_ctx_name}</span>"
+        + (f"<span style='margin-left:10px'>{_ctx_meta}</span>" if _ctx_meta else "")
+        + "</div>",
+        unsafe_allow_html=True,
+    )
+# ─────────────────────────────────────────────────────────────────────────────
+
+if event_id is None and active_tab not in {"Event Archive", "Guide", _live_label}:
+    st.stop()
 
 if active_tab == "Field Analysis":
     render_production_sg_tab(
@@ -1787,6 +1896,9 @@ elif active_tab == "Event Archive":
         ID_TO_IMG=ID_TO_IMG,
         NAME_TO_IMG=NAME_TO_IMG,
     )
+
+elif active_tab == "Guide":
+    render_documentation_tab()
 
 # elif active_tab == "Contender Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)

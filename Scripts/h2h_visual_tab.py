@@ -12,9 +12,11 @@ from grass_putting_deepdive import (
     MIN_ROUNDS,
 )
 
-def _info_expander(label: str, content: str):
-    with st.expander(f"ⓘ  {label}", expanded=False):
-        st.markdown(content, unsafe_allow_html=True)
+def _info_expander(label: str, content: str, section: str = "", btn_key: str = ""):
+    if st.button(f"ⓘ  {label}", key=btn_key or f"_doc_h2h_{section}", help="Open in Guide tab"):
+        st.session_state["active_tab"] = "Guide"
+        st.session_state["doc_section"] = section or "strokes_gained"
+        st.rerun()
 
 def render_h2h_visual_tab(
     *,
@@ -157,15 +159,7 @@ def render_h2h_visual_tab(
     # ==================================================================
     st.divider()
     st.subheader("Strokes Gained Profile (Last 60 Rounds)")
-    _info_expander(" How to read this", """
-    Each row shows the <b>full distribution of round-by-round performance</b> for one skill —
-    not just an average, but every round played across the last 60.
-    A tall, narrow peak means the player is <b>consistent</b>; a wide, flat curve means <b>volatile</b>.
-    The dotted vertical line and labeled dot mark each player's <b>mean</b>.
-    All skills are converted to tour z-scores so rows are directly comparable.
-    The <span style='color:rgba(80,200,120,0.9)'>green band</span> shows the SG range
-    this course rewards — a player whose peak sits inside the band fits this track.
-    """)
+    _info_expander("How to read this", "", section="sg_profile", btn_key="_doc_h2h_sgprofile")
 
     def _sg_series(df, col):
         if df is None or df.empty or col not in df.columns:
@@ -423,12 +417,7 @@ def render_h2h_visual_tab(
     # ==================================================================
     st.divider()
     st.subheader("Stat Comparison — Field Percentile")
-    _info_expander(" How to read this", """
-        Each bar shows where a player ranks in the current field (0 = last, 100 = best).
-        Dots are colored by who wins that stat. The gap between dots shows how meaningful
-        the edge is relative to everyone they're competing against this week.
-        </span></div>
-    """)
+    _info_expander("How to read this", "", section="field_percentile", btn_key="_doc_h2h_pctile")
 
     PCTILE_STATS = [
         ("sg_total",    "SG: Total",           False),
@@ -927,23 +916,7 @@ def render_h2h_visual_tab(
             if scores_valid:
 
                 # Methodology explainer
-                _info_expander("How course fit is calculated", """
-                    Each course has regression-derived betas that measure how much each skill
-                    predicted actual scoring outcomes at that venue across thousands of rounds.
-                    A higher score means the player's strengths align with what this course rewards.
-                    <b> Course Fit Score = (course <span style='color:rgba(80,200,120,0.9)'>beta</span> × player <span style='color:rgba(80,200,120,0.9)'>z-score</span>)</b>
-                    <br><br>
-                    <span style='color:rgba(80,200,120,0.9)'>
-                    beta:</span> coefficient measuring the strength of relationship between a skill
-                    stat and scoring at that course.
-                    <br>
-
-                    <span style='color:rgba(80,200,120,0.9)'>
-                    z-score:</span> how many standard deviations a player's stat sits above or below
-                    the tour average.
-                    </span>
-                    </div>
-                """)
+                _info_expander("How course fit is calculated", "", section="course_fit", btn_key="_doc_h2h_fit")
 
                 st.markdown("**Skill-by-skill breakdown**")
 
@@ -1066,13 +1039,7 @@ def render_h2h_visual_tab(
     if approach_skill_df is not None and not approach_skill_df.empty:
         st.divider()
         st.subheader("Approach Proximity from Fairway")
-        _info_expander(" How to read this","""
-            <span style='color:rgba(220,220,220,0.85);font-size:13px;line-height:1.7'>
-            Top-down view looking at the green. The center dot is the hole.
-            <b>Smaller ring = closer to the hole = better.</b>
-            White dashed ring = tour avg.
-            </span></div>
-        """)
+        _info_expander("How to read this", "", section="approach_skill", btn_key="_doc_h2h_prox")
 
         FW_BUCKETS_PROX = [
             ("50–100 yds",  "50_100_fw",  60.0),

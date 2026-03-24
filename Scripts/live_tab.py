@@ -71,6 +71,7 @@ def _par_color(val) -> str:
         return "rgba(200,200,200,0.7)"
 
 
+
 def _thru_fmt(val) -> str:
     try:
         v = int(float(val))
@@ -552,8 +553,9 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
             sg_s    = f"{sg_total:+.2f}" if pd.notna(sg_total) else "—"
             sg_c    = "#34d399" if pd.notna(sg_total) and sg_total > 0 else "#ef4444" if pd.notna(sg_total) and sg_total < 0 else "rgba(180,180,180,0.6)"
             sg_bar  = _sg_bar_html(row)
-            stripe  = "rgba(255,255,255,0.015)" if idx % 2 == 0 else "transparent"
-            opacity = "opacity:0.45;" if muted else ""
+
+            stripe     = "rgba(255,255,255,0.015)" if idx % 2 == 0 else "transparent"
+            opacity    = "opacity:0.45;" if muted else ""
             top_border = "border-top:2px solid #fbbf24;" if pos == "1" else ""
 
             # DK odds — convert decimal to American
@@ -599,7 +601,7 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
 
     # Each row is ~88px tall (4 bars + padding). 25 rows ≈ 2200px + header
     st.markdown(
-        f"<div style='background:rgba(255,255,255,0.02);border-radius:10px;"
+        f"<div class='live-leaderboard-wrap' style='background:rgba(255,255,255,0.02);border-radius:10px;"
         f"border:1px solid rgba(255,255,255,0.07);overflow-x:auto;"
         f"overflow-y:auto;max-height:2300px'>{table}</div>",
         unsafe_allow_html=True,

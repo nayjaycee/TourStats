@@ -409,43 +409,10 @@ def render_elite_finish_analysis(
 
     # ── Model explanation ────────────────────────────────────────────────────
     st.markdown("<div style='margin-top:12px'></div>", unsafe_allow_html=True)
-    with st.expander("Why this model?", expanded=False):
-        st.markdown(
-            """
-**Formula:** `Contender Score = mean(sg_total, L36) − 0.25 × σ(sg_total, L36)`
-
-The Contender Score answers a simple question: *which players produce strong strokes-gained numbers reliably, not just occasionally?*
-The mean captures sustained output over the last 36 rounds (~9–12 months of PGA starts).
-The volatility penalty (0.3 × std dev) discounts boom-or-bust players - a player averaging +1.5 with wild swings
-is less predictable than one averaging +1.2 consistently.
-
-**Why L36 and not a longer window?**
-We tested five formula variants against every 2025/2026 PGA Tour tournament:
-
-| Formula | Top-25 % | Top-10 % |
-|---|---|---|
-| **A: mean(L36) - 0.25σ L36** | **66.5%** | **35.9%** |
-| E: 0.6×mean(L60) + 0.4×expDecay(L12) - 0.3σ L36 | 63.6% | 34.6% |
-| B: mean(L60) - 0.3σ L60 | 63.2% | 34.6% |
-| D: exp_decay(L36) - 0.3σ L36 | 63.1% | 33.8% |
-| C: mean(L60) - 0.3σ L36 | 62.9% | 34.6% |
-
-The current formula beat every alternative including recency-weighted and long-window variants.
-Adding more history (L60) or hot-streak blending (exp decay L12) both hurt performance.
-L36 appears to be the right balance: long enough to filter noise, short enough to stay current.
-
-**What the score means:**
-- **≥ 1.0 (Elite):** Consistently among the best in the field. High floor, top-25 very likely.
-- **0.5 to 1.0 (Contender):** Strong player, competitive most weeks.
-- **0.0 to 0.5 (Fringe):** Capable but inconsistent; depends on a peak week.
-- **< 0.0 (Below):** Negative expected value relative to field average.
-
-**Scatter plot:** Each dot is a player. Further right = higher mean SG (better output).
-Lower = lower std dev (more consistent). The dotted lines are iso-score contours.
-Players above a line have a lower EF score for their mean than players below it.
-Elite picks live in the bottom-right: high mean, low variance.
-            """
-        )
+    if st.button("ⓘ  Why this model?", key="_doc_sg_contender", help="Open in Guide tab"):
+        st.session_state["active_tab"] = "Guide"
+        st.session_state["doc_section"] = "contender_model"
+        st.rerun()
 
     # ── Section 1: Scatter + leaderboard ────────────────────────────────────
     st.divider()

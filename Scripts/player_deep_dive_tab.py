@@ -12,9 +12,11 @@ from typing import Optional, List
 # Helpers
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _info_expander(label: str, content: str):
-    with st.expander(f"ⓘ  {label}", expanded=False):
-        st.markdown(content, unsafe_allow_html=True)
+def _info_expander(label: str, content: str, section: str = "", btn_key: str = ""):
+    if st.button(f"ⓘ  {label}", key=btn_key or f"_doc_dd_{section}", help="Open in Guide tab"):
+        st.session_state["active_tab"] = "Guide"
+        st.session_state["doc_section"] = section or "strokes_gained"
+        st.rerun()
 
 
 def _safe_mean(df, col):
@@ -216,10 +218,7 @@ def render_player_deep_dive_tab(
     # ══════════════════════════════════════════════════════════════════════════
     # st.divider()
     # st.subheader("Form Trend — Last 40 Rounds")
-    _info_expander("How to read this",
-        "SG Total per round (grey dots) with a smoothed moving average (orange line) and ±1 std deviation band. "
-        "Rising line = improving form. Wide band = inconsistent."
-    )
+    _info_expander("How to read this", "", section="form_trend", btn_key="_doc_dd_formtrend")
 
     smooth_w = st.slider("Smoothing window", 1, 15, 5, key="dd_smooth")
 
@@ -357,13 +356,7 @@ def render_player_deep_dive_tab(
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Form Context — L12 vs L60 Baseline")
-    _info_expander("How to read this",
-        "Shows how this player's last 12 rounds compare to their last 60 rounds in each SG component. "
-        "Green bars mean the recent stretch is above their own 60-round baseline; red means below. "
-        "The number is how many standard deviations above/below (z-score). "
-        "Putting and Around Green deviations are higher-noise and tend to self-correct quickly. "
-        "Off-Tee and Approach deviations are stickier and may reflect a real trend."
-    )
+    _info_expander("How to read this", "", section="form_context", btn_key="_doc_dd_formctx")
 
     SG_DISPLAY = [
         ("sg_total", "Total SG"),
@@ -479,10 +472,7 @@ def render_player_deep_dive_tab(
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Field Percentile — Last 60 Rounds")
-    _info_expander("How to read this",
-        "Each bar shows where this player ranks among everyone in this week's field (0 = last, 100 = best). "
-        "Stats marked with † are lower-is-better (bogeys, round score) and are inverted so right is always good."
-    )
+    _info_expander("How to read this", "", section="field_percentile", btn_key="_doc_dd_pctile")
 
     PCTILE_STATS = [
         ("sg_total",     "SG: Total",          False),
@@ -647,13 +637,7 @@ def render_player_deep_dive_tab(
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Skill Distribution Profile — Last 60 Rounds")
-    _info_expander("How to read this",
-        "Each row is a kernel density curve showing the <b>full spread of round-by-round performance</b> "
-        "for one skill over the last 60 rounds. A tall narrow peak = consistent. Wide flat curve = volatile. "
-        "The dotted line and dot mark the player's mean. The grey shaded area shows the field distribution. "
-        "The <span style='color:rgba(80,200,120,0.9)'>green band</span> shows what this course rewards — "
-        "wider = more important skill."
-    )
+    _info_expander("How to read this", "", section="sg_profile", btn_key="_doc_dd_sgprofile")
 
     RIDGE_CATS = ["driving_dist", "driving_acc", "sg_app", "sg_arg", "sg_putt"]
     RIDGE_FULL = ["Distance", "Accuracy", "Approach", "Around Green", "Putting"]
@@ -856,11 +840,7 @@ def render_player_deep_dive_tab(
     if course_fit_df is not None and course_num is not None:
         st.divider()
         st.subheader("Course Fit")
-        _info_expander("How to read this",
-            "Course fit is computed as the sum of <b>course beta × player z-score</b> for each skill. "
-            "A positive score means the player's strengths align with what this course historically rewards. "
-            "The bar chart shows the per-skill contribution."
-        )
+        _info_expander("How to read this", "", section="course_fit", btn_key="_doc_dd_fit")
 
         IMP_LABELS  = ["Distance", "Accuracy", "Approach", "Around Green", "Putting"]
         SKILL_COLS  = ["driving_dist", "driving_acc", "sg_app", "sg_arg", "sg_putt"]
@@ -957,11 +937,7 @@ def render_player_deep_dive_tab(
     if approach_skill_df is not None and not approach_skill_df.empty:
         st.divider()
         st.subheader("Approach Proximity")
-        _info_expander("How to read this",
-            "Top-down view of a green. Each ring is a distance bucket — smaller ring = closer to the hole = better. "
-            "Left green = from fairway (4 buckets). Right green = from rough (2 buckets). "
-            "The radius spoke shows the exact distance. Tour avg shown below."
-        )
+        _info_expander("How to read this", "", section="approach_skill", btn_key="_doc_dd_prox")
 
         PROX_COL  = "proximity_per_shot"
         FIXED_MAX = 60.0
@@ -1149,10 +1125,7 @@ def render_player_deep_dive_tab(
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Course History")
-    _info_expander("How to read this",
-        "Past results at this specific venue going back to 2017. SG columns are per-round averages. "
-        "Green = above average, red = below average."
-    )
+    _info_expander("How to read this", "", section="course_history", btn_key="_doc_dd_history")
 
     if course_num is None:
         st.info("No course selected.")
