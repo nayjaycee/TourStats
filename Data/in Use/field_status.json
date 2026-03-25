@@ -140,8 +140,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-25 09:26:38 ET",
+    "last_updated": "2026-03-25 15:08:23 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-25 15:08:23 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-25 09:26:38 ET",
         "added": [],
@@ -288,12 +294,6 @@
           "Wilkes, Tyler"
         ],
         "note": "+36 / -40"
-      },
-      {
-        "timestamp": "2026-03-22 18:00:04 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
