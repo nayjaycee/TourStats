@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-25 09:26:38 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Texas Children's Houston Open",
+      "details": "Field updated: 20"
+    },
+    {
       "timestamp": "2026-03-25 03:12:07 ET",
       "type": "field_odds_refresh",
       "event_name": "Texas Children's Houston Open",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Valspar Championship",
       "details": "Field updated: 475, 20"
-    },
-    {
-      "timestamp": "2026-03-22 18:00:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 74 players"
     }
   ]
 }
