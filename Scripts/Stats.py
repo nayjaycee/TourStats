@@ -1733,23 +1733,35 @@ _live_active = is_tournament_live(_this_week_field_df) if _this_week_field_df is
 
 # Determine which field file matches the selected event (for tee times / weather)
 def _field_df_for_event(eid):
-    """Return the field DataFrame whose event_id matches eid, checking next week first."""
+    """Return the field DataFrame whose event_id matches eid.
+    Prefer this_week over next_week when both match — it has current tee times."""
+    candidates = []
     for fdf in [_next_week_field_df, _this_week_field_df]:
         if fdf is None or fdf.empty:
             continue
         ids = pd.to_numeric(fdf["event_id"], errors="coerce").dropna().astype(int).unique()
         if eid in ids:
-            return fdf
+            tee_count = fdf["r1_teetime"].notna().sum() if "r1_teetime" in fdf.columns else 0
+            candidates.append((tee_count, fdf))
+    if candidates:
+        return max(candidates, key=lambda x: x[0])[1]
     return _this_week_field_df
 
 def _field_path_for_event(eid):
-    """Return the CSV path whose event_id matches eid."""
+    """Return the CSV path whose event_id matches eid.
+    Prefer this_week over next_week when both match the same event —
+    this_week is refreshed more frequently and has current tee times."""
+    candidates = []
     for path, fdf in [(_next_week_field_path, _next_week_field_df), (_this_week_field_path, _this_week_field_df)]:
         if fdf is None or fdf.empty:
             continue
         ids = pd.to_numeric(fdf["event_id"], errors="coerce").dropna().astype(int).unique()
         if eid in ids:
-            return str(path)
+            # Count how many r1_teetime values are non-null — more = better
+            tee_count = fdf["r1_teetime"].notna().sum() if "r1_teetime" in fdf.columns else 0
+            candidates.append((tee_count, str(path)))
+    if candidates:
+        return max(candidates, key=lambda x: x[0])[1]
     return str(_this_week_field_path)
 
 # Also check schedule directly — keeps Live visible even if field file has rolled over to next week
