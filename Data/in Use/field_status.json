@@ -140,8 +140,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-26 09:44:05 ET",
+    "last_updated": "2026-03-26 15:18:16 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-26 15:18:16 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-26 09:44:05 ET",
         "added": [],
@@ -214,12 +220,6 @@
           "McCarty, Matt"
         ],
         "note": "+3 / -1"
-      },
-      {
-        "timestamp": "2026-03-23 12:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
