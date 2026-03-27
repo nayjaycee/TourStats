@@ -83,6 +83,7 @@
       "McGreevy, Max",
       "Meissner, Mac",
       "Mitchell, Keith",
+      "Moore, Taylor",
       "Mouw, William",
       "Mullinax, Trey",
       "Neergaard-Petersen, Rasmus",
@@ -97,7 +98,6 @@
       "Potgieter, Aldrich",
       "Power, Seamus",
       "Putnam, Andrew",
-      "Rai, Aaron",
       "Ramey, Chad",
       "Reitan, Kristoffer",
       "Riley, Davis",
@@ -140,8 +140,18 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-26 15:18:16 ET",
+    "last_updated": "2026-03-27 03:19:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-27 03:19:04 ET",
+        "added": [
+          "Moore, Taylor"
+        ],
+        "withdrawn": [
+          "Rai, Aaron"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-26 15:18:16 ET",
         "added": [],
@@ -208,18 +218,6 @@
         ],
         "withdrawn": [],
         "note": "+2 / -0"
-      },
-      {
-        "timestamp": "2026-03-23 18:00:15 ET",
-        "added": [
-          "Ghim, Doug",
-          "Putnam, Andrew",
-          "Ventura, Kris"
-        ],
-        "withdrawn": [
-          "McCarty, Matt"
-        ],
-        "note": "+3 / -1"
       }
     ]
   },
