@@ -140,8 +140,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-27 03:19:04 ET",
+    "last_updated": "2026-03-27 09:21:47 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-27 09:21:47 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-27 03:19:04 ET",
         "added": [
@@ -209,15 +215,6 @@
           "Scheffler, Scottie"
         ],
         "note": "+2 / -2"
-      },
-      {
-        "timestamp": "2026-03-24 06:00:13 ET",
-        "added": [
-          "Ryder, Sam",
-          "Suber, Jackson"
-        ],
-        "withdrawn": [],
-        "note": "+2 / -0"
       }
     ]
   },
