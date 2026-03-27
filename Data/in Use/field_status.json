@@ -140,8 +140,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-27 09:21:47 ET",
+    "last_updated": "2026-03-27 15:04:56 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-27 15:04:56 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-27 09:21:47 ET",
         "added": [],
@@ -203,18 +209,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-24 12:04:19 ET",
-        "added": [
-          "Kuchar, Matt",
-          "Power, Seamus"
-        ],
-        "withdrawn": [
-          "Cauley, Bud",
-          "Scheffler, Scottie"
-        ],
-        "note": "+2 / -2"
       }
     ]
   },
