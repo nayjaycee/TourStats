@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-29 14:54:38 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Texas Children's Houston Open",
+      "details": "Field updated: 20, 41"
+    },
+    {
       "timestamp": "2026-03-28 18:00:11 ET",
       "type": "field_odds_refresh",
       "event_name": "Texas Children's Houston Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-03-27 23:00:10 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-27 22:00:21 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 134 players"

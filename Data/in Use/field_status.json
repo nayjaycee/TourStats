@@ -140,8 +140,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-28 18:00:11 ET",
+    "last_updated": "2026-03-29 14:54:38 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-29 14:54:38 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-28 18:00:11 ET",
         "added": [],
@@ -200,12 +206,6 @@
       },
       {
         "timestamp": "2026-03-29 03:14:11 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-28 14:53:06 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
@@ -347,8 +347,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-28 18:00:11 ET",
+    "last_updated": "2026-03-29 14:54:38 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-29 14:54:38 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-28 18:00:11 ET",
         "added": [
@@ -610,17 +616,6 @@
         ],
         "withdrawn": [],
         "note": "+131 / -0"
-      },
-      {
-        "timestamp": "2026-03-15 21:11:16 ET",
-        "added": [
-          "Fleetwood, Tommy",
-          "Koepka, Brooks"
-        ],
-        "withdrawn": [
-          "Harman, Brian"
-        ],
-        "note": "+2 / -1"
       }
     ]
   }
