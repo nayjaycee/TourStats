@@ -1775,6 +1775,8 @@ if not _live_active:
 
 _live_label = "🔴 Live" if _live_active else "⚫ Live"
 
+_MODEL_LAB_AVAILABLE = (Path(__file__).parent / "model_lab_tab.py").exists()
+
 TAB_NAMES = [
     "Event Overview",
     "Field Analysis",
@@ -1786,7 +1788,7 @@ TAB_NAMES = [
     _live_label,
     "Event Archive",
     "Guide",
-]
+] + (["Model Lab"] if _MODEL_LAB_AVAILABLE else [])
 
 # Apply any pending tab navigation (set by tab modules before rerun)
 if "_pending_tab" in st.session_state:
@@ -1938,6 +1940,18 @@ elif active_tab == "Event Archive":
 
 elif active_tab == "Guide":
     render_documentation_tab()
+
+elif active_tab == "Model Lab" and _MODEL_LAB_AVAILABLE:
+    from model_lab_tab import render_model_lab_tab
+    render_model_lab_tab(
+        rounds_df=rounds_df,
+        field_ids=field_ids,
+        all_players=all_players,
+        cutoff_dt=cutoff,
+        summary_top=summary_top,
+        event_id=event_id,
+        schedule_df=schedule_df,
+    )
 
 # elif active_tab == "Contender Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)

@@ -44,3 +44,8 @@ Data/Notebooks/
 # Dev/backup scripts
 Scripts/StatsBackupV1.py
 Scripts/export_course_greens_reference.py
+
+# Private model lab — local only, never push
+Scripts/model_lab_tab.py
+Scripts/validate_boost_metrics.py
+Scripts/boost_validation_results.csv
