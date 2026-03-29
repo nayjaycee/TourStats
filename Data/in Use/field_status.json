@@ -140,8 +140,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-29 03:14:11 ET",
+    "last_updated": "2026-03-29 09:10:53 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-29 09:10:53 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-29 03:14:11 ET",
         "added": [],
@@ -199,16 +205,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-26 03:20:11 ET",
-        "added": [
-          "Lower, Justin"
-        ],
-        "withdrawn": [
-          "Rozo, Marcelo"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -347,8 +343,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-29 03:14:11 ET",
+    "last_updated": "2026-03-29 09:10:53 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-29 09:10:53 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-29 03:14:11 ET",
         "added": [],
@@ -610,17 +612,6 @@
         ],
         "withdrawn": [],
         "note": "+131 / -0"
-      },
-      {
-        "timestamp": "2026-03-15 21:11:16 ET",
-        "added": [
-          "Fleetwood, Tommy",
-          "Koepka, Brooks"
-        ],
-        "withdrawn": [
-          "Harman, Brian"
-        ],
-        "note": "+2 / -1"
       }
     ]
   }
