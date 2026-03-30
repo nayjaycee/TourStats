@@ -135,8 +135,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-30 08:52:13 ET",
+    "last_updated": "2026-03-30 09:49:46 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 09:49:46 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-30 08:52:13 ET",
         "added": [],
@@ -265,16 +271,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-26 12:00:04 ET",
-        "added": [
-          "Lower, Justin"
-        ],
-        "withdrawn": [
-          "Rozo, Marcelo"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -377,8 +373,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-30 08:52:13 ET",
+    "last_updated": "2026-03-30 09:49:46 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 09:49:46 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-30 08:52:13 ET",
         "added": [],
@@ -677,12 +679,6 @@
       },
       {
         "timestamp": "2026-03-22 14:48:38 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 13:09:20 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
