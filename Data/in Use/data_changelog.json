@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-30 12:45:20 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 9,806 rows across 28 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-03-30 12:45:15 ET",
       "type": "field_odds_refresh",
       "event_name": "Valero Texas Open",
@@ -113,12 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 12:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Texas Children's Houston Open",
-      "details": "Field updated: 20, 41"
     }
   ]
 }
