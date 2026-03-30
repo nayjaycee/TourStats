@@ -17,7 +17,7 @@
       "Chatfield, Davis",
       "Clanton, Luke",
       "Cole, Eric",
-      "Coody, Pierceson",
+      "Dahmen, Joel",
       "Dou, Zecheng",
       "Dumont De Chassart, Adrien",
       "Dunlap, Nick",
@@ -43,7 +43,6 @@
       "Hoey, Rico",
       "Hoffman, Charley",
       "Hoge, Tom",
-      "Hojgaard, Nicolai",
       "Homa, Max",
       "Horschel, Billy",
       "Hossler, Beau",
@@ -75,6 +74,7 @@
       "McNealy, Maverick",
       "Meissner, Mac",
       "Mitchell, Keith",
+      "Moore, Taylor",
       "Morikawa, Collin",
       "Mouw, William",
       "Noren, Alex",
@@ -94,10 +94,10 @@
       "Rodgers, Patrick",
       "Roy, Kevin",
       "Rozo, Marcelo",
+      "Ryder, Sam",
       "Saddier, Adrien",
       "Sargent, Gordon",
       "Schenk, Adam",
-      "Schmid, Matti",
       "Shipley, Neal",
       "Simpson, Webb",
       "Smalley, Alex",
@@ -135,8 +135,22 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-30 09:49:46 ET",
+    "last_updated": "2026-03-30 12:45:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 12:45:15 ET",
+        "added": [
+          "Dahmen, Joel",
+          "Moore, Taylor",
+          "Ryder, Sam"
+        ],
+        "withdrawn": [
+          "Coody, Pierceson",
+          "Hojgaard, Nicolai",
+          "Schmid, Matti"
+        ],
+        "note": "+3 / -3"
+      },
       {
         "timestamp": "2026-03-30 09:49:46 ET",
         "added": [],
@@ -265,12 +279,6 @@
           "Rai, Aaron"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-03-26 18:00:04 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -373,8 +381,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-30 09:49:46 ET",
+    "last_updated": "2026-03-30 12:45:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 12:45:15 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-30 09:49:46 ET",
         "added": [],
@@ -673,12 +687,6 @@
       },
       {
         "timestamp": "2026-03-22 18:00:04 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 14:48:38 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
