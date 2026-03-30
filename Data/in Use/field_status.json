@@ -109,6 +109,7 @@
       "Stanger, Jimmy",
       "Straka, Sepp",
       "Streelman, Kevin",
+      "Suber, Jackson",
       "Svensson, Adam",
       "Svensson, Jesper",
       "Taylor, Nick",
@@ -128,15 +129,24 @@
       "Wallace, Matt",
       "Waring, Paul",
       "Whaley, Vince",
-      "Woodland, Gary",
       "Wu, Dylan",
       "Wylie, Austin",
       "Yellamaraju, Sudarshan",
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-30 12:00:05 ET",
+    "last_updated": "2026-03-30 18:02:57 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 18:02:57 ET",
+        "added": [
+          "Suber, Jackson"
+        ],
+        "withdrawn": [
+          "Woodland, Gary"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-30 12:00:05 ET",
         "added": [
@@ -271,12 +281,6 @@
           "Rozo, Marcelo"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-03-25 15:08:23 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -379,8 +383,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-30 12:00:05 ET",
+    "last_updated": "2026-03-30 18:02:57 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 18:02:57 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-30 12:00:05 ET",
         "added": [
@@ -679,12 +689,6 @@
       },
       {
         "timestamp": "2026-03-22 13:09:20 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 12:43:56 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
