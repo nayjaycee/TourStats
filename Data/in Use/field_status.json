@@ -109,6 +109,7 @@
       "Stanger, Jimmy",
       "Straka, Sepp",
       "Streelman, Kevin",
+      "Suber, Jackson",
       "Svensson, Adam",
       "Svensson, Jesper",
       "Taylor, Nick",
@@ -128,15 +129,24 @@
       "Wallace, Matt",
       "Waring, Paul",
       "Whaley, Vince",
-      "Woodland, Gary",
       "Wu, Dylan",
       "Wylie, Austin",
       "Yellamaraju, Sudarshan",
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-30 15:10:05 ET",
+    "last_updated": "2026-03-30 16:34:53 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 16:34:53 ET",
+        "added": [
+          "Suber, Jackson"
+        ],
+        "withdrawn": [
+          "Woodland, Gary"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-30 15:10:05 ET",
         "added": [],
@@ -269,12 +279,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-27 18:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -377,8 +381,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-30 15:10:05 ET",
+    "last_updated": "2026-03-30 16:34:53 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-30 16:34:53 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-30 15:10:05 ET",
         "added": [],
@@ -611,81 +621,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-27 18:00:03 ET",
-        "added": [
-          "Aberg, Ludvig",
-          "Berger, Daniel",
-          "Fleetwood, Tommy",
-          "Ghim, Doug",
-          "Harman, Brian",
-          "Henley, Russell",
-          "Homa, Max",
-          "Kim, Si Woo",
-          "Kuchar, Matt",
-          "MacIntyre, Robert",
-          "Matsuyama, Hideki",
-          "McNealy, Maverick",
-          "Morikawa, Collin",
-          "Noren, Alex",
-          "Novak, Andrew",
-          "Power, Seamus",
-          "Putnam, Andrew",
-          "Simpson, Webb",
-          "Snedeker, Brandt",
-          "Spaun, J.J.",
-          "Spieth, Jordan",
-          "Stanger, Jimmy",
-          "Straka, Sepp",
-          "Streelman, Kevin",
-          "Svensson, Jesper",
-          "Taylor, Nick",
-          "Todd, Brendon",
-          "Valimaki, Sami",
-          "Ventura, Kris",
-          "Villegas, Camilo",
-          "Walker, Jimmy",
-          "Waring, Paul",
-          "Wylie, Austin"
-        ],
-        "withdrawn": [
-          "Brennan, Michael",
-          "Burgoon, Bronson",
-          "Burns, Sam",
-          "Campbell, Brian",
-          "Clark, Wyndham",
-          "Davis, Cam",
-          "Day, Jason",
-          "Echavarria, Nico",
-          "English, Harris",
-          "Fox, Ryan",
-          "Gotterup, Chris",
-          "Greyserman, Max",
-          "Griffin, Ben",
-          "Hall, Harry",
-          "Hammer, Cole",
-          "Hojgaard, Rasmus",
-          "Howell, Mason",
-          "Im, Sungjae",
-          "Kitayama, Kurt",
-          "Knapp, Jake",
-          "Koepka, Brooks",
-          "Lee, Min Woo",
-          "Lowry, Shane",
-          "Mullinax, Trey",
-          "Neergaard-Petersen, Rasmus",
-          "Pendrith, Taylor",
-          "Potgieter, Aldrich",
-          "Rai, Aaron",
-          "Riley, Davis",
-          "Russell, Casey",
-          "Scheffler, Scottie",
-          "Scott, Adam",
-          "Stevens, Sam",
-          "Theegala, Sahith"
-        ],
-        "note": "+33 / -34"
       }
     ]
   }
