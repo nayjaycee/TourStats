@@ -1,6 +1,66 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-30 12:00:05 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Valero Texas Open",
+      "details": "Field updated: 41, 14"
+    },
+    {
+      "timestamp": "2026-03-29 23:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 23:00:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 22:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 22:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 21:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 21:00:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 20:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 20:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
+      "timestamp": "2026-03-29 19:34:25 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 75 players"
+    },
+    {
       "timestamp": "2026-03-29 18:04:20 ET",
       "type": "field_odds_refresh",
       "event_name": "Texas Children's Houston Open",
@@ -59,66 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 75 players"
-    },
-    {
-      "timestamp": "2026-03-28 19:00:12 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 75 players"
-    },
-    {
-      "timestamp": "2026-03-28 18:30:10 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 75 players"
-    },
-    {
-      "timestamp": "2026-03-28 18:00:11 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Texas Children's Houston Open",
-      "details": "Field updated: 20, 41"
-    },
-    {
-      "timestamp": "2026-03-28 18:00:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 17:30:17 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 17:00:13 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 16:30:10 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 16:03:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 15:30:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 15:00:12 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
     }
   ]
 }
