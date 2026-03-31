@@ -11,6 +11,7 @@
       "Brown, Dan",
       "Burgoon, Bronson",
       "Campos, Rafael",
+      "Capan III, Frankie",
       "Castillo, Ricky",
       "Cauley, Bud",
       "Chatfield, Davis",
@@ -65,7 +66,6 @@
       "Lebioda, Hank",
       "Lee, K.H.",
       "Li, Haotong",
-      "Lipsky, David",
       "Lower, Justin",
       "MacIntyre, Robert",
       "Malnati, Peter",
@@ -77,7 +77,6 @@
       "Meissner, Mac",
       "Mitchell, Keith",
       "Moore, Taylor",
-      "Morikawa, Collin",
       "Mouw, William",
       "Noren, Alex",
       "Novak, Andrew",
@@ -134,11 +133,24 @@
       "Wu, Dylan",
       "Wylie, Austin",
       "Yellamaraju, Sudarshan",
+      "Young, Carson",
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-31 12:00:04 ET",
+    "last_updated": "2026-03-31 18:00:11 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-31 18:00:11 ET",
+        "added": [
+          "Capan III, Frankie",
+          "Young, Carson"
+        ],
+        "withdrawn": [
+          "Lipsky, David",
+          "Morikawa, Collin"
+        ],
+        "note": "+2 / -2"
+      },
       {
         "timestamp": "2026-03-31 12:00:04 ET",
         "added": [
@@ -276,16 +288,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-27 12:00:04 ET",
-        "added": [
-          "Moore, Taylor"
-        ],
-        "withdrawn": [
-          "Rai, Aaron"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -388,8 +390,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-31 12:00:04 ET",
+    "last_updated": "2026-03-31 18:00:11 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-31 18:00:11 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-31 12:00:04 ET",
         "added": [],
@@ -691,12 +699,6 @@
           "Theegala, Sahith"
         ],
         "note": "+33 / -34"
-      },
-      {
-        "timestamp": "2026-03-22 18:00:04 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   }
