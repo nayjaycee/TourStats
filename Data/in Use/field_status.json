@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 41,
     "event_name": "Valero Texas Open",
-    "player_count": 130,
+    "player_count": 132,
     "player_names": [
       "Aberg, Ludvig",
       "Bauchou, Zach",
@@ -17,6 +17,7 @@
       "Chatfield, Davis",
       "Clanton, Luke",
       "Cole, Eric",
+      "Crockett, Charlie",
       "Dahmen, Joel",
       "Dou, Zecheng",
       "Dumont De Chassart, Adrien",
@@ -33,6 +34,7 @@
       "Ghim, Doug",
       "Glover, Lucas",
       "Grillo, Emiliano",
+      "Hardy, Nick",
       "Harman, Brian",
       "Henley, Russell",
       "Higgo, Garrick",
@@ -135,8 +137,17 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-30 18:02:57 ET",
+    "last_updated": "2026-03-31 06:00:22 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-31 06:00:22 ET",
+        "added": [
+          "Crockett, Charlie",
+          "Hardy, Nick"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-03-30 18:02:57 ET",
         "added": [
@@ -271,16 +282,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-26 12:00:04 ET",
-        "added": [
-          "Lower, Justin"
-        ],
-        "withdrawn": [
-          "Rozo, Marcelo"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -383,8 +384,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-30 18:02:57 ET",
+    "last_updated": "2026-03-31 06:00:22 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-31 06:00:22 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-30 18:02:57 ET",
         "added": [],
@@ -683,12 +690,6 @@
       },
       {
         "timestamp": "2026-03-22 14:48:38 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 13:09:20 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
