@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-03-31 15:12:23 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Valero Texas Open",
+      "details": "Field updated: 41, 14"
+    },
+    {
       "timestamp": "2026-03-31 09:49:16 ET",
       "type": "field_odds_refresh",
       "event_name": "Valero Texas Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-03-28 17:00:13 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 134 players"
-    },
-    {
-      "timestamp": "2026-03-28 16:30:10 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 134 players"
