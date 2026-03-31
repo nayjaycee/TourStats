@@ -6,7 +6,6 @@
     "player_names": [
       "Aberg, Ludvig",
       "Bauchou, Zach",
-      "Berger, Daniel",
       "Bezuidenhout, Christiaan",
       "Blanchet, Chandler",
       "Brown, Dan",
@@ -33,6 +32,7 @@
       "Garnett, Brice",
       "Ghim, Doug",
       "Glover, Lucas",
+      "Griffin, Lanto",
       "Grillo, Emiliano",
       "Hardy, Nick",
       "Harman, Brian",
@@ -137,8 +137,18 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-31 06:00:22 ET",
+    "last_updated": "2026-03-31 12:00:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-31 12:00:04 ET",
+        "added": [
+          "Griffin, Lanto"
+        ],
+        "withdrawn": [
+          "Berger, Daniel"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-31 06:00:22 ET",
         "added": [
@@ -276,12 +286,6 @@
           "Rai, Aaron"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-03-26 18:00:04 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -384,8 +388,14 @@
       "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-31 06:00:22 ET",
+    "last_updated": "2026-03-31 12:00:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-03-31 12:00:04 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-03-31 06:00:22 ET",
         "added": [],
@@ -684,12 +694,6 @@
       },
       {
         "timestamp": "2026-03-22 18:00:04 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-22 14:48:38 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
