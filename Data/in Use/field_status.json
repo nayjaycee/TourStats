@@ -12,7 +12,6 @@
       "Burgoon, Bronson",
       "Campos, Rafael",
       "Capan III, Frankie",
-      "Castillo, Ricky",
       "Cauley, Bud",
       "Chatfield, Davis",
       "Clanton, Luke",
@@ -55,6 +54,7 @@
       "Kanaya, Takumi",
       "Kang, Jeffrey",
       "Keefer, Johnny",
+      "Kim, Chan",
       "Kim, Michael",
       "Kim, S.H.",
       "Kim, Si Woo",
@@ -137,8 +137,18 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-31 18:00:11 ET",
+    "last_updated": "2026-04-01 18:00:05 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-01 18:00:05 ET",
+        "added": [
+          "Kim, Chan"
+        ],
+        "withdrawn": [
+          "Castillo, Ricky"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-31 18:00:11 ET",
         "added": [
@@ -282,19 +292,13 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-27 18:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
     "event_id": 14,
     "event_name": "Masters Tournament",
-    "player_count": 93,
+    "player_count": 92,
     "player_names": [
       "Aberg, Ludvig",
       "Berger, Daniel",
@@ -387,11 +391,18 @@
       "Weir, Mike",
       "Willett, Danny",
       "Woodland, Gary",
-      "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-31 18:00:11 ET",
+    "last_updated": "2026-04-01 18:00:05 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-01 18:00:05 ET",
+        "added": [],
+        "withdrawn": [
+          "Woods, Tiger"
+        ],
+        "note": "+0 / -1"
+      },
       {
         "timestamp": "2026-03-31 18:00:11 ET",
         "added": [],
@@ -624,81 +635,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-27 18:00:03 ET",
-        "added": [
-          "Aberg, Ludvig",
-          "Berger, Daniel",
-          "Fleetwood, Tommy",
-          "Ghim, Doug",
-          "Harman, Brian",
-          "Henley, Russell",
-          "Homa, Max",
-          "Kim, Si Woo",
-          "Kuchar, Matt",
-          "MacIntyre, Robert",
-          "Matsuyama, Hideki",
-          "McNealy, Maverick",
-          "Morikawa, Collin",
-          "Noren, Alex",
-          "Novak, Andrew",
-          "Power, Seamus",
-          "Putnam, Andrew",
-          "Simpson, Webb",
-          "Snedeker, Brandt",
-          "Spaun, J.J.",
-          "Spieth, Jordan",
-          "Stanger, Jimmy",
-          "Straka, Sepp",
-          "Streelman, Kevin",
-          "Svensson, Jesper",
-          "Taylor, Nick",
-          "Todd, Brendon",
-          "Valimaki, Sami",
-          "Ventura, Kris",
-          "Villegas, Camilo",
-          "Walker, Jimmy",
-          "Waring, Paul",
-          "Wylie, Austin"
-        ],
-        "withdrawn": [
-          "Brennan, Michael",
-          "Burgoon, Bronson",
-          "Burns, Sam",
-          "Campbell, Brian",
-          "Clark, Wyndham",
-          "Davis, Cam",
-          "Day, Jason",
-          "Echavarria, Nico",
-          "English, Harris",
-          "Fox, Ryan",
-          "Gotterup, Chris",
-          "Greyserman, Max",
-          "Griffin, Ben",
-          "Hall, Harry",
-          "Hammer, Cole",
-          "Hojgaard, Rasmus",
-          "Howell, Mason",
-          "Im, Sungjae",
-          "Kitayama, Kurt",
-          "Knapp, Jake",
-          "Koepka, Brooks",
-          "Lee, Min Woo",
-          "Lowry, Shane",
-          "Mullinax, Trey",
-          "Neergaard-Petersen, Rasmus",
-          "Pendrith, Taylor",
-          "Potgieter, Aldrich",
-          "Rai, Aaron",
-          "Riley, Davis",
-          "Russell, Casey",
-          "Scheffler, Scottie",
-          "Scott, Adam",
-          "Stevens, Sam",
-          "Theegala, Sahith"
-        ],
-        "note": "+33 / -34"
       }
     ]
   }
