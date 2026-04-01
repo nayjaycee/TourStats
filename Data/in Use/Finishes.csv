@@ -1014,6 +1014,141 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,THE PLAYERS Championship,11,2026-03-15,"Woodland, Gary",12577,CUT,,0,0,0,0,0,1
 2026,THE PLAYERS Championship,11,2026-03-15,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
 2026,THE PLAYERS Championship,11,2026-03-15,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Woodland, Gary",12577,1,1.0,1,1,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hojgaard, Nicolai",23602,2,2.0,0,1,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Keefer, Johnny",32457,T3,3.0,0,1,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Lee, Min Woo",16841,T3,3.0,0,1,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Stevens, Sam",25569,5,5.0,0,1,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Day, Jason",9771,T6,6.0,0,0,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Gotterup, Chris",27774,T6,6.0,0,0,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Knapp, Jake",19396,T6,6.0,0,0,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Yellamaraju, Sudarshan",29925,T6,6.0,0,0,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Burgoon, Bronson",11082,T10,10.0,0,0,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Theegala, Sahith",23014,T10,10.0,0,0,1,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Dumont de Chassart, Adrien",22002,T12,12.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"McCarthy, Denny",19870,T12,12.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Mitchell, Keith",17365,T14,14.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Nyholm, Pontus",25475,T14,14.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Olesen, Thorbjorn",13412,T14,14.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Thorbjornsen, Michael",26649,T14,14.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Vegas, Jhonattan",13508,T14,14.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"McGreevy, Max",23505,T19,19.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Vilips, Karl",24304,T19,19.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Burns, Sam",19483,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Dou, Zecheng",16757,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"English, Harris",14577,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hossler, Beau",15470,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Potgieter, Aldrich",27900,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Scott, Adam",6430,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Smalley, Alex",18474,T21,21.0,0,0,0,1,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Brennan, Michael",29197,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Griffin, Ben",24968,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hall, Harry",27194,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hoey, Rico",23504,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hojgaard, Rasmus",23838,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Jaeger, Stephan",16394,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Lowry, Shane",13900,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Meissner, Mac",28159,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Ramey, Chad",19840,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Suber, Jackson",29279,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Whaley, Vince",25908,T28,28.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Eckroat, Austin",26653,T39,39.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Finau, Tony",11676,T39,39.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Kang, Jeffrey",21889,T39,39.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Saddier, Adrien",14792,T39,39.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Waring, Paul",12426,T39,39.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Castillo, Ricky",27819,T44,44.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Mouw, William",29770,T44,44.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Putnam, Andrew",14704,T44,44.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Smith, Jordan",18586,T44,44.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Fisk, Steven",26657,T48,48.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Parry, John",13764,T48,48.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"van Rooyen, Erik",17550,T48,48.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Bezuidenhout, Christiaan",18103,T51,51.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Cole, Eric",21756,T51,51.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Kirk, Chris",12423,T51,51.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Pavon, Matthieu",19960,T51,51.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Wallace, Matt",20706,T51,51.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Kim, Tom",24766,T56,56.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Kuchar, Matt",6169,T56,56.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Stanger, Jimmy",23048,T56,56.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Willett, Danny",12920,T56,56.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Im, Sungjae",17488,T60,60.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Kanaya, Takumi",19729,T60,60.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Kitayama, Kurt",21891,T60,60.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Riley, Davis",19872,T60,60.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Ryder, Sam",16715,T60,60.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hodges, Lee",25157,T65,65.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Malnati, Peter",14926,T65,65.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Roy, Kevin",18424,T65,65.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Walker, Danny",25003,68,68.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Higgo, Garrick",24342,T69,69.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Svensson, Jesper",26850,T69,69.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Garnett, Brice",11451,T71,71.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Grillo, Emiliano",12808,T71,71.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Hoge, Tom",15575,T71,71.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Schmid, Matti",20722,74,74.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Clanton, Luke",32330,75,75.0,0,0,0,0,1,0
+2026,Texas Children's Houston Open,20,2026-03-29,"Bauchou, Zach",19846,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Brown, Dan",20766,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Clark, Wyndham",23604,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Coody, Pierceson",28309,WD,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Dunlap, Nick",28270,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Echavarria, Nico",22833,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Ewart, A.J.",21883,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Fishburn, Patrick",25094,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Ford, David",31343,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Fowler, Rickie",12965,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Fox, Ryan",11889,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Gerard, Ryan",29767,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Ghim, Doug",24550,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Glover, Lucas",7399,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Greyserman, Max",23465,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Hammer, Cole",19864,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Horschel, Billy",11276,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Howell, Mason",33759,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Hubbard, Mark",16333,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Hughes, Mackenzie",15556,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Kim, S.H.",21688,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Kizzire, Patton",13470,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Koepka, Brooks",16243,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Lee, K.H.",13497,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Lipsky, David",15980,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Lower, Justin",17723,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Moore, Taylor",21944,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Mullinax, Trey",18761,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Neergaard-Petersen, Rasmus",23841,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Pendrith, Taylor",17780,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Penge, Marco",22465,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Phillips, Chandler",27164,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Poston, J.T.",21554,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Power, Seamus",10104,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Reitan, Kristoffer",21407,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Rodgers, Patrick",16283,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Russell, Casey",23133,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Salinda, Isaiah",27183,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Thompson, Davis",27364,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
+2026,Texas Children's Houston Open,20,2026-03-29,"Zalatoris, Will",19428,CUT,,0,0,0,0,0,1
 2026,South Africa,58,2026-03-22,"DeChambeau, Bryson",19841,1,1.0,1,1,1,1,1,0
 2026,South Africa,58,2026-03-22,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
 2026,South Africa,58,2026-03-22,"Ancer, Abraham",18238,T3,3.0,0,1,1,1,1,0
@@ -1632,6 +1767,149 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Riyadh,1027,2026-02-07,"Bland, Richard",6516,55,55.0,0,0,0,0,1,0
 2026,Riyadh,1027,2026-02-07,"Schniederjans, Ollie",18662,56,56.0,0,0,0,0,1,0
 2026,Riyadh,1027,2026-02-07,"Steele, Brendan",11019,57,57.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Peng, Ian",32452,1,1.0,1,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chan, Chia-Han",33412,T2,2.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ieamgaew, Warun",22884,T2,2.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ban, Shotaro",22304,4,4.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chieh-po, Lee",16563,T5,5.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tsai, Shang-kai",32957,T5,5.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu, Sean Sung-Po",32008,T5,5.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chien-Yao, Hung",11738,T8,8.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ching-hung, Su",24106,T8,8.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ting-Wei, Hsieh",24096,T8,8.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"De Barba, Gabriele",18492,11,11.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Furuya, Ryoto",29313,T12,12.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Hung, Chao-hsin",27247,T12,12.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lee, Jui-shen",30422,T12,12.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wei Hsuan, Wang",19697,T12,12.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kobayashi, Shintaro",10560,T16,16.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Morioka, Shunichiro",16296,T16,16.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Sun-Yi, Lu",20881,T16,16.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Hsi-An, Wang",25681,T19,19.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tse-yu, Chang",25515,T19,19.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Inmee, Jakkanat",27434,T21,21.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Mako, Shapiyate",30395,T21,21.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu-Chen, Yeh",17771,T21,21.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chi-Hsien, Hsieh",13484,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Ta-yu",33058,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ohishi, Atsuya",28782,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu-jui, Liu",17880,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chin-hung, He",27411,T28,28.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yen-hung, Liu",18798,T28,28.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu-cheng, Ho",22754,T28,28.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chang Chien, Ko-yen",33063,T31,31.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Hsiang-hao, Huang",18037,T31,31.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Oda, Nobuaki",24108,T31,31.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Panyathanasedh, Peradol",8380,T31,31.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yoshikuwa, Yuta",28252,T31,31.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Bruminhent, Pattanan",34241,T36,36.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Yi-tong",23206,T36,36.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kudo, Jun",27056,T36,36.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chin-chou, Lee",17764,T39,39.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Klinpeng (Am), Tantikorn",34665,T39,39.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wei-chih, Lu",8170,T39,39.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kao, Teng",17922,T42,42.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Mizuno, Shinichi",15143,T42,42.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wang, Sheng-hui",33059,T42,42.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu chen, Chen",24451,T42,42.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Arbole, Art",15973,T46,46.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chi, Huang",23208,T46,46.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Takeuchi, Shingo",26231,48,48.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wu, Yao-wei",32956,49,49.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tseng Seng, Tzu Hao",23629,50,50.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tsung-yu, Tsai",14504,51,51.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chao-hua, Lee",17763,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Chieh-Sheng",31005,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Hui-hung",33062,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Po-hao",30424,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Ting-yu",33753,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Wei-sheng",30398,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chen, Yen-Yu",33566,WD,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Cheng, Christopher",29909,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Cheng-Chi, Wang",19090,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chiang, Ian",33568,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chiang, Jung-Pin",33393,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chih-kai, Hsu",21182,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chin(Am), Xi-en",34206,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chiu, Yu-chia",30613,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chuangprayoon(Am), Jessada",34079,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ding-Sheng, Lin",16298,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Duangphaichoom, Jaturon",19321,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Fukuhara, Shota",15388,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Han-Ting, Chiu",20880,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ho (Am), Peter",35001,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Hsieh, Tung-hung",14095,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Hsu, Chao-Wei",34650,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Huang, Chih-yi",33415,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Huang, Kuan-hsun",30402,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Huang, Yi-tseng",24105,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Hung Hsuan, Hsu",25579,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"IIda, Yusuke",16184,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ikeuchi, Kei",29862,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ishige, Takumi",15389,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Iwama Gamma, Takanari",21390,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kai-jen, Tsai",18978,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kashimoto, Kohei",25711,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kung, Te-shu",34446,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Kuo(Am), Chieh-Lun",33419,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lai, Chia-i",30401,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lee, Tony",33064,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lepkurte, Kasidit",15653,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Li, Tung",33565,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Chen-chu",33060,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Hsin-yu (AM)",33402,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Keng-wei",17662,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Ming-yeh",33572,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Yi-Yuan",31680,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Yu-te",35002,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lin, Yuan-Wei",19491,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Liu, Tse Sen",23628,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Lu-Sen, Lien",11582,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Matsumoto, Ryo",32933,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Min-hsuan, Hsieh",25517,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Mishima, Taiki",33754,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Morii, Akinori",14155,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Noro, Ryo",24222,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Okada, Keita",33143,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Pan, Anson",34448,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Sakuma, Hayato",29720,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Seki, Shota",21033,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Shih, Chun-Yu",33399,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Shinno, Yohei",16297,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Shinzato, Rinkei ",34999,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Su, Yen-Wei",33395,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Sui, Justin",34345,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Sukkoed, Tunyapat",29067,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Suwanpanang, Worrasorn",18597,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Takeda, Shinnosuke",35000,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tokumitsu, Yuya",19164,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tokunaga, Hiroki",26455,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tsai, Chen-Kai",34538,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tsai, Chin-Yang",33408,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tseng, Fu-tung",30396,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tsuriura, Ikuma",30866,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tsurumi, Daiki",26077,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Tzu Ming, Wang",17769,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wakaari, Nobuhiko",31357,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Walker, Johnny",34998,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wang, Li-Wei",33398,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Watanabe, Ryunosuke",28565,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wei Lun, Chang",19494,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wei-Chen, Hsu",33920,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wei-cheng, Shen",25521,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Wen, Cheng-Hsiang",19698,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yaginuma, Yuki",34997,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yamaura, Kazuki",28928,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yamaura, Taiki",15739,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yang, Hao",18649,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yang, Hsiao-che",33411,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yang, Jay",33409,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yeh, Chia-Yin",31679,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yokokawa, Kosuke",30439,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu-chen, Yu",25682,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu-cheng, Hsu",25680,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yung Hua, Liu",19492,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
 2026,Dubai Invitational,2026105,2026-01-18,"Elvira Mijares, Ignacio",12988,1,1.0,1,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Hillier, Daniel",21362,2,2.0,0,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Guerrier, Julien",10201,T3,3.0,0,1,1,1,1,0
@@ -2530,6 +2808,144 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Hainan Classic presented by MAEXTRO,2026112,2026-03-22,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
 2026,Hainan Classic presented by MAEXTRO,2026112,2026-03-22,"Zhang, Xinjun",13026,CUT,,0,0,0,0,0,1
 2026,Hainan Classic presented by MAEXTRO,2026112,2026-03-22,"Zi, Wang",28225,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Fitzpatrick, Alex",25362,1,1.0,1,1,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Lopez-Chacarra, Eugenio",26745,2,2.0,0,1,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Coussaud, Ugo",20727,T3,3.0,0,1,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Daffue, Mj",17068,T3,3.0,0,1,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Sullivan, Andy",15326,T3,3.0,0,1,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Ferguson, Ewen",21646,T6,6.0,0,0,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Hill, Calum",25131,T6,6.0,0,0,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Molinari, Francesco",7655,T6,6.0,0,0,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Law, David",14784,T9,9.0,0,0,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Manassero, Matteo",11460,T9,9.0,0,0,1,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Ayora, Angel",30445,T11,11.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Walker, Euan",27147,T11,11.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Jarvis, Casey",26947,T13,13.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Lindell, Oliver",20085,T13,13.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Vidal, Quim",29712,T13,13.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Olesen, Jacob Skov",25611,T16,16.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Voke, Nick",24091,T16,16.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Townsend, Hugo",31165,T18,18.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Van Driel, Darius",13374,T18,18.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Campillo, Jorge",14016,T20,20.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Couvra, Martin",27811,T20,20.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Frittelli, Dylan",11955,T20,20.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Schott, Freddy",27588,T20,20.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Guerrier, Julien",10201,T24,24.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Kaneko, Kota",28268,T24,24.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Lee, Junghwan",13498,T24,24.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Morrison, James",11061,T24,24.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Peake, Ryan",15169,T24,24.0,0,0,0,1,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Jordan, Matthew",25601,T29,29.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"McKinney, Connor",24172,T29,29.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Mory , Felix",25089,T31,31.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Premlall, Yurav",25890,T31,31.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Young, Daniel",19908,T31,31.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Baldwin, Matthew",13344,T34,34.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Dean, Joe",16497,T34,34.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Elvira Mijares, Ignacio",12988,T34,34.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Gumberg, Jordan",23892,T34,34.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Senior, Jack",15115,T34,34.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Steinlechner, Maximilian",21677,T34,34.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Lawrence, Thriston",18105,40,40.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Lacroix, Frederic",23733,T41,41.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Quayle, Anthony",18900,T41,41.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Adam, Cameron",34024,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Aphibarnrat, Kiradech",12321,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Chouhan, Om Prakash",13794,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Elvira, Manuel",26008,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Garcia Rodriguez, Sebastian",12258,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Hollick, Michael",15993,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"S, Manoj",33187,T43,43.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Dantorp, Jens",14018,T50,50.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Kinhult, Marcus",18514,T50,50.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Kobori, Kazuma",24369,T50,50.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Vaillant, Tom",28157,T50,50.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"De Leo, Gregorio",26506,T54,54.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Forrest, Grant",16475,T54,54.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Moller, Niklas Norgaard",15676,T54,54.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Bryant, Davis",32550,T57,57.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Robinson-Thompson, Brandon",24497,T57,57.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Bradbury, Dan",29971,T59,59.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Soderberg, Sebastian",18517,T59,59.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Blomme, Adam",23784,T61,61.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Cantero Gutierrez, Ivan",19635,T61,61.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Otaegui, Adrian",14975,T61,61.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Kaul, Kshitij Naveed",23825,64,64.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Mazzoli, Stefano",20844,65,65.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Buchanan, Jack",27379,66,66.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Debove , Quentin",25325,67,67.0,0,0,0,0,1,0
+2026,Hero Indian Open,2026113,2026-03-29,"Ahlawat, Veer",22897,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Armitage, Marcus",17813,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Azhar, Mohd",27449,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Bairstow, Sam",28615,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Baisoya, Honey",16013,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Berry, Joshua",31520,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Bhatia, Akshay",26096,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Bhattacharya, Shaurya",29312,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Broomhead, Jonothan",30210,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Charmasson, Clement",22220,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Chauhan, Kanav",34567,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Cheema, Angad",15816,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Cockerill, Aaron",15596,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Crocker, Sean",23610,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Crowe, Harrison",24280,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Da Costa Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Dhole Patil, Rohan",28070,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Doull, Jordan",21085,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Fisher, Ross",9396,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Gandas, Manu",18058,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Ghai, Tapy",24674,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Guillamoundeguy, Oihan",28239,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Hoshino, Rikuya",19190,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Hossain, Badal",19720,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Hossain, Jamal",15206,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Jaglan, Shubham",33943,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Joshi, Khalin H",15156,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Kabthiyal, Anshul",29225,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Katsuragawa, Yuto",20448,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Khan, Rashid",12668,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Kimsey, Nathan",18027,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Langasque, Romain",16652,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Laporta, Francesco",14987,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Lindberg, Mikael",20084,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Lohan, Abhinav",15157,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Luiten, Joost",10158,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Malik, Amardip",10763,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Mishra, Anshul",33189,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Molinari, Edoardo",7033,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Prasad, Arjun",21392,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Puig, David",28984,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Ravetto, David",23416,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Rebula, Jovan",22912,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Schmidt, Ben",27258,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Sharma, Akshay",16085,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Sheoran, Dhruv",24466,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Singh Sandhu, Jairaj",28071,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Singh, Kartik",31786,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Singh, Sukhman",29378,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Smylie, Elvis",24200,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Talwar, Saptak",28553,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Thangaraja, N",18234,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Thomas, Rayhan",21234,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Wiesberger, Bernd",9531,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Yadav, Deepak",31841,WD,,0,0,0,0,0,1
+2026,Hero Indian Open,2026113,2026-03-29,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
