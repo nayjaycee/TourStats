@@ -12,7 +12,6 @@
       "Burgoon, Bronson",
       "Campos, Rafael",
       "Capan III, Frankie",
-      "Castillo, Ricky",
       "Cauley, Bud",
       "Chatfield, Davis",
       "Clanton, Luke",
@@ -55,6 +54,7 @@
       "Kanaya, Takumi",
       "Kang, Jeffrey",
       "Keefer, Johnny",
+      "Kim, Chan",
       "Kim, Michael",
       "Kim, S.H.",
       "Kim, Si Woo",
@@ -137,8 +137,18 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-03-31 15:12:23 ET",
+    "last_updated": "2026-04-01 03:44:42 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-01 03:44:42 ET",
+        "added": [
+          "Kim, Chan"
+        ],
+        "withdrawn": [
+          "Castillo, Ricky"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-03-31 15:12:23 ET",
         "added": [
@@ -288,19 +298,13 @@
           "Wise, Aaron"
         ],
         "note": "+32 / -37"
-      },
-      {
-        "timestamp": "2026-03-29 14:54:38 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
     "event_id": 14,
     "event_name": "Masters Tournament",
-    "player_count": 93,
+    "player_count": 92,
     "player_names": [
       "Aberg, Ludvig",
       "Berger, Daniel",
@@ -393,11 +397,18 @@
       "Weir, Mike",
       "Willett, Danny",
       "Woodland, Gary",
-      "Woods, Tiger",
       "Young, Cameron"
     ],
-    "last_updated": "2026-03-31 15:12:23 ET",
+    "last_updated": "2026-04-01 03:44:42 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-01 03:44:42 ET",
+        "added": [],
+        "withdrawn": [
+          "Woods, Tiger"
+        ],
+        "note": "+0 / -1"
+      },
       {
         "timestamp": "2026-03-31 15:12:23 ET",
         "added": [],
@@ -623,12 +634,6 @@
           "Zalatoris, Will"
         ],
         "note": "+67 / -103"
-      },
-      {
-        "timestamp": "2026-03-29 14:54:38 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   }
