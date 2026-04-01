@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-01 19:26:33 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 9,806 rows across 28 events. Finishes rebuilt."
+    },
+    {
+      "timestamp": "2026-04-01 19:23:42 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 9,806 rows across 28 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-01 19:19:30 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -107,18 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Texas Children's Houston Open",
       "details": "Field updated: 20, 41"
-    },
-    {
-      "timestamp": "2026-03-29 18:04:21 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 75 players"
-    },
-    {
-      "timestamp": "2026-03-29 14:00:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 75 players"
     }
   ]
 }
