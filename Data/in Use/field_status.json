@@ -137,8 +137,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-04-02 03:23:39 ET",
+    "last_updated": "2026-04-02 09:42:27 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-02 09:42:27 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-02 03:23:39 ET",
         "added": [],
@@ -213,20 +219,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-30 12:45:15 ET",
-        "added": [
-          "Dahmen, Joel",
-          "Moore, Taylor",
-          "Ryder, Sam"
-        ],
-        "withdrawn": [
-          "Coody, Pierceson",
-          "Hojgaard, Nicolai",
-          "Schmid, Matti"
-        ],
-        "note": "+3 / -3"
       }
     ]
   },
@@ -328,8 +320,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-02 03:23:39 ET",
+    "last_updated": "2026-04-02 09:42:27 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-02 09:42:27 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-02 03:23:39 ET",
         "added": [],
@@ -382,12 +380,6 @@
       },
       {
         "timestamp": "2026-03-30 15:10:05 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-30 12:45:15 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
