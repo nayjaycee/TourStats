@@ -137,8 +137,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-04-02 12:00:03 ET",
+    "last_updated": "2026-04-02 18:00:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-02 18:00:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-02 12:00:03 ET",
         "added": [],
@@ -286,19 +292,13 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-28 18:00:11 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
     "event_id": 14,
     "event_name": "Masters Tournament",
-    "player_count": 92,
+    "player_count": 91,
     "player_names": [
       "Aberg, Ludvig",
       "Berger, Daniel",
@@ -358,7 +358,6 @@
       "McIlroy, Rory",
       "McKibbin, Tom",
       "McNealy, Maverick",
-      "Mickelson, Phil",
       "Morikawa, Collin",
       "Neergaard-Petersen, Rasmus",
       "Noren, Alex",
@@ -393,8 +392,16 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-02 12:00:03 ET",
+    "last_updated": "2026-04-02 18:00:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-02 18:00:03 ET",
+        "added": [],
+        "withdrawn": [
+          "Mickelson, Phil"
+        ],
+        "note": "+0 / -1"
+      },
       {
         "timestamp": "2026-04-02 12:00:03 ET",
         "added": [],
@@ -622,19 +629,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-28 18:00:11 ET",
-        "added": [
-          "Lower, Justin",
-          "Moore, Taylor"
-        ],
-        "withdrawn": [
-          "Gerard, Ryan",
-          "Salinda, Isaiah",
-          "Wise, Aaron"
-        ],
-        "note": "+2 / -3"
       }
     ]
   }
