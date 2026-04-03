@@ -137,8 +137,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-04-02 18:00:03 ET",
+    "last_updated": "2026-04-03 06:00:25 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-03 06:00:25 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-02 18:00:03 ET",
         "added": [],
@@ -286,12 +292,6 @@
           "Wise, Aaron"
         ],
         "note": "+33 / -38"
-      },
-      {
-        "timestamp": "2026-03-29 18:04:20 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -392,8 +392,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-02 18:00:03 ET",
+    "last_updated": "2026-04-03 06:00:25 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-03 06:00:25 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-02 18:00:03 ET",
         "added": [],
@@ -623,12 +629,6 @@
           "Zalatoris, Will"
         ],
         "note": "+67 / -103"
-      },
-      {
-        "timestamp": "2026-03-29 18:04:20 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   }
