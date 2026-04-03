@@ -137,8 +137,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-04-03 09:18:46 ET",
+    "last_updated": "2026-04-03 14:57:48 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-03 14:57:48 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-03 09:18:46 ET",
         "added": [],
@@ -202,16 +208,6 @@
           "Morikawa, Collin"
         ],
         "note": "+2 / -2"
-      },
-      {
-        "timestamp": "2026-03-31 09:49:16 ET",
-        "added": [
-          "Griffin, Lanto"
-        ],
-        "withdrawn": [
-          "Berger, Daniel"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -312,8 +308,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-03 09:18:46 ET",
+    "last_updated": "2026-04-03 14:57:48 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-03 14:57:48 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-03 09:18:46 ET",
         "added": [],
@@ -368,12 +370,6 @@
       },
       {
         "timestamp": "2026-03-31 15:12:23 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-03-31 09:49:16 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
