@@ -137,8 +137,14 @@
       "Yu, Kevin",
       "Zalatoris, Will"
     ],
-    "last_updated": "2026-04-04 03:10:14 ET",
+    "last_updated": "2026-04-04 09:10:52 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-04 09:10:52 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-04 03:10:14 ET",
         "added": [],
@@ -192,16 +198,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-01 03:44:42 ET",
-        "added": [
-          "Kim, Chan"
-        ],
-        "withdrawn": [
-          "Castillo, Ricky"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -302,8 +298,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-04 03:10:14 ET",
+    "last_updated": "2026-04-04 09:10:52 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-04 09:10:52 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-04 03:10:14 ET",
         "added": [],
@@ -359,14 +361,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-01 03:44:42 ET",
-        "added": [],
-        "withdrawn": [
-          "Woods, Tiger"
-        ],
-        "note": "+0 / -1"
       }
     ]
   }
