@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-06 12:35:24 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,023 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-04-06 12:35:23 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-02 03:23:39 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valero Texas Open",
-      "details": "Field updated: 41, 14"
-    },
-    {
-      "timestamp": "2026-04-01 15:13:42 ET",
       "type": "field_odds_refresh",
       "event_name": "Valero Texas Open",
       "details": "Field updated: 41, 14"
