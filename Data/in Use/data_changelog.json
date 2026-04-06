@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-06 12:35:23 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 10,208 rows across 29 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-06 12:35:18 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-01 15:13:42 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valero Texas Open",
-      "details": "Field updated: 41, 14"
-    },
-    {
-      "timestamp": "2026-04-01 09:52:07 ET",
       "type": "field_odds_refresh",
       "event_name": "Valero Texas Open",
       "details": "Field updated: 41, 14"
