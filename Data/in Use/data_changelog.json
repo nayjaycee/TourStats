@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-08 03:45:59 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Masters Tournament",
+      "details": "Field updated: 14"
+    },
+    {
       "timestamp": "2026-04-07 15:15:25 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-04 14:53:48 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valero Texas Open",
-      "details": "Field updated: 41, 14"
-    },
-    {
-      "timestamp": "2026-04-04 09:10:52 ET",
       "type": "field_odds_refresh",
       "event_name": "Valero Texas Open",
       "details": "Field updated: 41, 14"
