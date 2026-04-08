@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-07 20:57:18 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Masters Tournament",
+      "details": "Field updated: 14"
+    },
+    {
+      "timestamp": "2026-04-05 16:30:11 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-04-05 16:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-04-05 15:38:11 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-04-05 13:30:18 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-04-05 13:03:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
       "timestamp": "2026-04-05 12:00:26 ET",
       "type": "field_odds_refresh",
       "event_name": "Valero Texas Open",
@@ -80,42 +116,6 @@
     },
     {
       "timestamp": "2026-04-03 21:00:26 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 132 players"
-    },
-    {
-      "timestamp": "2026-04-03 20:30:13 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 132 players"
-    },
-    {
-      "timestamp": "2026-04-03 20:00:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 132 players"
-    },
-    {
-      "timestamp": "2026-04-03 19:00:22 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 132 players"
-    },
-    {
-      "timestamp": "2026-04-03 18:30:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 132 players"
-    },
-    {
-      "timestamp": "2026-04-03 18:03:02 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Valero Texas Open",
-      "details": "Field updated: 41, 14"
-    },
-    {
-      "timestamp": "2026-04-03 18:03:03 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 132 players"
