@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-09 15:18:50 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Masters Tournament",
+      "details": "Field updated: 14"
+    },
+    {
       "timestamp": "2026-04-09 09:59:36 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-06 08:44:47 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Masters Tournament",
-      "details": "Field updated: 14"
-    },
-    {
-      "timestamp": "2026-04-06 03:55:16 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
       "details": "Field updated: 14"
