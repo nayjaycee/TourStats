@@ -96,8 +96,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-09 12:00:04 ET",
+    "last_updated": "2026-04-09 18:00:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-09 18:00:04 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-09 12:00:04 ET",
         "added": [],
@@ -332,16 +338,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-01 18:00:05 ET",
-        "added": [
-          "Kim, Chan"
-        ],
-        "withdrawn": [
-          "Castillo, Ricky"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
