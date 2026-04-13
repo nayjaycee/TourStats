@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-12 20:19:30 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Masters Tournament",
+      "details": "Field updated: 14, 12"
+    },
+    {
+      "timestamp": "2026-04-12 19:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 54 players"
+    },
+    {
+      "timestamp": "2026-04-12 18:30:38 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 54 players"
+    },
+    {
       "timestamp": "2026-04-12 18:00:31 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
@@ -98,24 +116,6 @@
     },
     {
       "timestamp": "2026-04-11 14:00:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 91 players"
-    },
-    {
-      "timestamp": "2026-04-11 13:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 91 players"
-    },
-    {
-      "timestamp": "2026-04-11 13:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 91 players"
-    },
-    {
-      "timestamp": "2026-04-11 12:30:05 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 91 players"
