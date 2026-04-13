@@ -1014,6 +1014,97 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,THE PLAYERS Championship,11,2026-03-15,"Woodland, Gary",12577,CUT,,0,0,0,0,0,1
 2026,THE PLAYERS Championship,11,2026-03-15,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
 2026,THE PLAYERS Championship,11,2026-03-15,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"McIlroy, Rory",10091,1,1.0,1,1,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Scheffler, Scottie",18417,2,2.0,0,1,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Hatton, Tyrrell",14796,T3,3.0,0,1,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Henley, Russell",14578,T3,3.0,0,1,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Rose, Justin",6093,T3,3.0,0,1,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Young, Cameron",26651,T3,3.0,0,1,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Burns, Sam",19483,T7,7.0,0,0,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Morikawa, Collin",22085,T7,7.0,0,0,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Homa, Max",17538,T9,9.0,0,0,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Schauffele, Xander",19895,T9,9.0,0,0,1,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Knapp, Jake",19396,11,11.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Cantlay, Patrick",15466,T12,12.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Day, Jason",9771,T12,12.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Koepka, Brooks",16243,T12,12.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Matsuyama, Hideki",13562,T12,12.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Reed, Patrick",14838,T12,12.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Spieth, Jordan",14636,T12,12.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Fitzpatrick, Matt",17646,T18,18.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Hovland, Viktor",18841,T18,18.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"McNealy, Maverick",18634,T18,18.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Aberg, Ludvig",23950,T21,21.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Bradley, Keegan",13872,T21,21.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Clark, Wyndham",23604,T21,21.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Brennan, Michael",29197,T24,24.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Campbell, Brian",18628,T24,24.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Gotterup, Chris",27774,T24,24.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"McCarty, Matt",28635,T24,24.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Scott, Adam",6430,T24,24.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"Stevens, Sam",25569,T24,24.0,0,0,0,1,1,0
+2026,Masters Tournament,14,2026-04-12,"English, Harris",14577,T30,30.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Lowry, Shane",13900,T30,30.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Noren, Alex",10419,T30,30.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Fleetwood, Tommy",12294,T33,33.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Griffin, Ben",24968,T33,33.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Harman, Brian",8825,T33,33.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Johnson, Dustin",12422,T33,33.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Woodland, Gary",12577,T33,33.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Gerard, Ryan",29767,T38,38.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Li, Haotong",15310,T38,38.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Rahm, Jon",19195,T38,38.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Bridgeman, Jacob",29433,T41,41.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Reitan, Kristoffer",21407,T41,41.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Straka, Sepp",17511,T41,41.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Taylor, Nick",13126,T41,41.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Thomas, Justin",14139,T41,41.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Im, Sungjae",17488,46,46.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Kim, Si Woo",14609,47,47.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Rai, Aaron",18554,48,48.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Conners, Corey",17576,T49,49.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Penge, Marco",22465,T49,49.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Kitayama, Kurt",21891,51,51.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Garcia, Sergio",5689,52,52.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Hojgaard, Rasmus",23838,53,53.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Schwartzel, Charl",7398,54,54.0,0,0,0,0,1,0
+2026,Masters Tournament,14,2026-04-12,"Berger, Daniel",17606,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Bhatia, Akshay",26096,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Cabrera, Angel",5717,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Couples, Fred",44,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"DeChambeau, Bryson",19841,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Echavarria, Nico",22833,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Fang, Ethan",34025,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Fox, Ryan",11889,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Greyserman, Max",23465,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Hall, Harry",27194,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Herrington, Jackson",35015,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Hojgaard, Nicolai",23602,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Holtz, Brandon",35014,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Howell, Mason",33759,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Jarvis, Casey",26947,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Johnson, Zach",6986,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Kataoka, Naoyuki",18994,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Keefer, Johnny",32457,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Kim, Michael",17543,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Laopakdee, Fifa",27019,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Lee, Min Woo",16841,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"MacIntyre, Robert",23323,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"McKibbin, Tom",22322,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Neergaard-Petersen, Rasmus",23841,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Novak, Andrew",23475,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Olazabal, Jose Maria",3485,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Ortiz, Carlos",14735,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Pulcini, Mateo",35013,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Singh, Vijay",653,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Smith, Cameron",15856,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Spaun, J.J.",17536,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Valimaki, Sami",23816,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Watson, Bubba",7334,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Weir, Mike",5513,CUT,,0,0,0,0,0,1
+2026,Masters Tournament,14,2026-04-12,"Willett, Danny",12920,CUT,,0,0,0,0,0,1
 2026,Texas Children's Houston Open,20,2026-03-29,"Woodland, Gary",12577,1,1.0,1,1,1,1,1,0
 2026,Texas Children's Houston Open,20,2026-03-29,"Hojgaard, Nicolai",23602,2,2.0,0,1,1,1,1,0
 2026,Texas Children's Houston Open,20,2026-03-29,"Keefer, Johnny",32457,T3,3.0,0,1,1,1,1,0
