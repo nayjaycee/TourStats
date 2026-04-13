@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-13 16:42:17 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,032 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-04-13 16:42:15 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-10 09:26:15 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Masters Tournament",
-      "details": "Field updated: 14"
-    },
-    {
-      "timestamp": "2026-04-10 03:52:18 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
       "details": "Field updated: 14"
