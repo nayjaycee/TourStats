@@ -66,7 +66,6 @@
       "Potgieter, Aldrich",
       "Putnam, Andrew",
       "Rodgers, Patrick",
-      "Rose, Justin",
       "Schauffele, Xander",
       "Scheffler, Scottie",
       "Schenk, Adam",
@@ -79,6 +78,7 @@
       "Taylor, Nick",
       "Theegala, Sahith",
       "Thomas, Justin",
+      "Thorbjornsen, Michael",
       "Valimaki, Sami",
       "Vegas, Jhonattan",
       "Vilips, Karl",
@@ -87,8 +87,18 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-13 09:56:59 ET",
+    "last_updated": "2026-04-13 12:53:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-13 12:53:15 ET",
+        "added": [
+          "Thorbjornsen, Michael"
+        ],
+        "withdrawn": [
+          "Rose, Justin"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-04-13 09:56:59 ET",
         "added": [],
@@ -206,12 +216,6 @@
       },
       {
         "timestamp": "2026-04-11 03:09:49 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-10 15:04:20 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
