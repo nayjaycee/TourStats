@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-12 20:19:36 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 10,208 rows across 29 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-12 20:19:30 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-11 15:00:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 91 players"
-    },
-    {
-      "timestamp": "2026-04-11 14:00:05 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 91 players"
