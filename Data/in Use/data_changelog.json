@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-14 18:00:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Heritage",
+      "details": "Field updated: 12"
+    },
+    {
       "timestamp": "2026-04-14 12:00:24 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
@@ -113,12 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 54 players"
-    },
-    {
-      "timestamp": "2026-04-11 18:02:09 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Masters Tournament",
-      "details": "Field updated: 14, 12"
     }
   ]
 }
