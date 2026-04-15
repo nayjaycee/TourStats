@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-14 20:48:35 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 10,498 rows across 30 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-14 18:00:03 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-11 22:00:36 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 54 players"
-    },
-    {
-      "timestamp": "2026-04-11 21:30:19 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 54 players"
