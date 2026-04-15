@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-15 15:28:06 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Heritage",
+      "details": "Field updated: 12"
+    },
+    {
       "timestamp": "2026-04-15 09:54:14 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-12 09:15:59 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Masters Tournament",
-      "details": "Field updated: 14, 12"
-    },
-    {
-      "timestamp": "2026-04-12 03:24:24 ET",
       "type": "field_odds_refresh",
       "event_name": "Masters Tournament",
       "details": "Field updated: 14, 12"
