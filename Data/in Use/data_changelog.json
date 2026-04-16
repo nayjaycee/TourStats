@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-16 12:00:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Heritage",
+      "details": "Field updated: 12"
+    },
+    {
+      "timestamp": "2026-04-16 12:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 82 players"
+    },
+    {
+      "timestamp": "2026-04-16 11:30:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 82 players"
+    },
+    {
       "timestamp": "2026-04-14 20:48:35 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -98,24 +116,6 @@
     },
     {
       "timestamp": "2026-04-12 11:30:51 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 54 players"
-    },
-    {
-      "timestamp": "2026-04-12 11:00:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 54 players"
-    },
-    {
-      "timestamp": "2026-04-11 23:08:46 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 54 players"
-    },
-    {
-      "timestamp": "2026-04-11 22:00:36 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 54 players"
