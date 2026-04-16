@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-16 15:25:38 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Heritage",
+      "details": "Field updated: 12"
+    },
+    {
       "timestamp": "2026-04-16 10:03:34 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-13 08:59:02 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Heritage",
-      "details": "Field updated: 12"
-    },
-    {
-      "timestamp": "2026-04-13 04:14:43 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
       "details": "Field updated: 12"
