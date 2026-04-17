@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-17 15:11:58 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Heritage",
+      "details": "Field updated: 12"
+    },
+    {
       "timestamp": "2026-04-17 09:46:12 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
       "details": "Field updated: 12"
-    },
-    {
-      "timestamp": "2026-04-13 08:59:09 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,023 rows (l12/l24/ytd)"
     }
   ]
 }
