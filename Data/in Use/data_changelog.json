@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-20 16:35:33 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 11,054 rows across 32 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-20 16:35:29 ET",
       "type": "field_odds_refresh",
       "event_name": "Zurich Classic of New Orleans",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-16 10:03:34 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Heritage",
-      "details": "Field updated: 12"
-    },
-    {
-      "timestamp": "2026-04-16 04:01:10 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Heritage",
       "details": "Field updated: 12"
