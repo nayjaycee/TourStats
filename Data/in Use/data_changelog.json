@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-20 16:06:12 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 11,054 rows across 32 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-20 16:06:05 ET",
       "type": "field_odds_refresh",
       "event_name": "Zurich Classic of New Orleans",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-18 16:01:42 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 82 players"
-    },
-    {
-      "timestamp": "2026-04-18 15:33:21 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 82 players"
