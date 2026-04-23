@@ -153,8 +153,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-04-20 16:06:05 ET",
+    "last_updated": "2026-04-23 12:08:26 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-23 12:08:26 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-04-20 16:06:05 ET",
         "added": [
@@ -455,12 +461,6 @@
           "Willett, Danny"
         ],
         "note": "+28 / -37"
-      },
-      {
-        "timestamp": "2026-04-12 20:19:30 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },

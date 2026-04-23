@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-23 12:08:26 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Zurich Classic of New Orleans",
+      "details": "Field updated: 18"
+    },
+    {
+      "timestamp": "2026-04-23 12:08:27 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 82 players"
+    },
+    {
+      "timestamp": "2026-04-20 16:06:14 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 82 players"
+    },
+    {
       "timestamp": "2026-04-20 16:06:13 ET",
       "type": "approach_refresh",
       "event_name": "",
@@ -98,24 +116,6 @@
     },
     {
       "timestamp": "2026-04-18 21:00:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 82 players"
-    },
-    {
-      "timestamp": "2026-04-18 20:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 82 players"
-    },
-    {
-      "timestamp": "2026-04-18 20:00:10 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 82 players"
-    },
-    {
-      "timestamp": "2026-04-18 19:30:04 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 82 players"
