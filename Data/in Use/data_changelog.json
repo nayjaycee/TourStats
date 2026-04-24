@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-24 04:14:28 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Zurich Classic of New Orleans",
+      "details": "Field updated: 18"
+    },
+    {
       "timestamp": "2026-04-23 15:22:41 ET",
       "type": "field_odds_refresh",
       "event_name": "Zurich Classic of New Orleans",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Zurich Classic of New Orleans",
       "details": "Field updated: 18"
-    },
-    {
-      "timestamp": "2026-04-19 15:01:20 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Heritage",
-      "details": "Field updated: 12, 18"
     }
   ]
 }
