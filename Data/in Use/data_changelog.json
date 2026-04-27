@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-27 15:20:26 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 11,491 rows across 33 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-27 15:20:20 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-23 12:08:27 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 82 players"
-    },
-    {
-      "timestamp": "2026-04-20 16:06:14 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 82 players"

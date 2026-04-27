@@ -3309,6 +3309,161 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Hero Indian Open,2026113,2026-03-29,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
 2026,Hero Indian Open,2026113,2026-03-29,"Yadav, Deepak",31841,WD,,0,0,0,0,0,1
 2026,Hero Indian Open,2026113,2026-03-29,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Wiesberger, Bernd",9531,1,1.0,1,1,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Otaegui, Adrian",14975,2,2.0,0,1,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Lindberg, Mikael",20084,3,3.0,0,1,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Norris, Shaun",7677,4,4.0,0,1,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Schott, Freddy",27588,5,5.0,0,1,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Kimsey, Nathan",18027,T6,6.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Vaillant, Tom",28157,T6,6.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Del Rey, Alejandro",22259,T8,8.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Quayle, Anthony",18900,T8,8.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Rozner, Antoine",18770,T8,8.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Van Driel, Darius",13374,T8,8.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Wu, Ashun",11763,T8,8.0,0,0,1,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Aphibarnrat, Kiradech",12321,T13,13.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Migliozzi, Guido",17357,T13,13.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Peng, Bo",22156,T13,13.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Da Costa Rodrigues, Daniel",27149,T16,16.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"De Leo, Gregorio",26506,T16,16.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Guillamoundeguy, Oihan",28239,T16,16.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Bryant, Davis",32550,T19,19.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Hidalgo, Angel",24127,T19,19.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Jin, Zihao",31187,T19,19.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Kaneko, Kota",28268,T19,19.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Vidal, Quim",29712,T19,19.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Young, Daniel",19908,T19,19.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Cabrera Bello, Rafa",7457,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Chen, Kuangyu",33939,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Johnston, Andrew",14666,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Kinhult, Marcus",18514,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Naidoo, Dylan",19429,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Steinlechner, Maximilian",21677,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Wenyi, Ding",26193,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Winther, Jeff",15680,T25,25.0,0,0,0,1,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Ayora, Angel",30445,T33,33.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Kruyswijk, Jacques",16896,T33,33.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Lindell, Oliver",20085,T33,33.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Lombard, Zander",16897,T33,33.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Lopez-Chacarra, Eugenio",26745,T33,33.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Chai, Bowen",31731,T38,38.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Kuang, Yang",25723,T38,38.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Law, David",14784,T38,38.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Levy, Alexander",14973,T38,38.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Zheng, Sampson-yunhe",26764,T38,38.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Bairstow, Sam",28615,T43,43.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Hoshino, Rikuya",19190,T43,43.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Cockerill, Aaron",15596,T45,45.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Fisher, Ross",9396,T45,45.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Katsuragawa, Yuto",20448,T45,45.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Ravetto, David",23416,T45,45.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Baldwin, Matthew",13344,T49,49.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Berry, Joshua",31520,T49,49.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Schneider, Marcel",12522,T49,49.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Cao, Senshou",19777,T52,52.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Garcia Rodriguez, Sebastian",12258,T52,52.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Langasque, Romain",16652,T52,52.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Luo, Xuewen",17349,T52,52.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Townsend, Hugo",31165,T52,52.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Zhou, Yanhan",29119,T52,52.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Adam, Cameron",34024,T58,58.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Kobori, Kazuma",24369,T58,58.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Lam, Isaac",31898,T60,60.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Na, Kevin",7452,T60,60.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Yeung, Motin",24541,T60,60.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Lagergren, Joakim",14780,T63,63.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Liu, Yue",24457,T63,63.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Jefferson Go, Lloyd",15978,65,65.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Xiao, Bowen",18624,66,66.0,0,0,0,0,1,0
+2026,Volvo China Open,2026115,2026-04-26,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Bai, Zheng-Kai",17346,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Burton, Jeffrey",16320,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Campillo, Jorge",14016,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Chen, Guxin",24504,WD,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Chen, Zihao",15405,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Cheng, Xirong",22032,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Clements, Todd",22608,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Daffue, Mj",17068,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Dantorp, Jens",14018,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Debove , Quentin",25325,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Elvira Mijares, Ignacio",12988,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Elvira, Manuel",26008,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Fan, Jicheng",30150,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ferguson, Ewen",21646,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Hak, Shun Yat",13568,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Han, Jin",35089,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Hayashi, Takumi",32269,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Hillier, Daniel",21362,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Huang, Zijie",27117,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Jamieson, Scott",11397,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Jin, Bo",25893,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Jordansson, Felix",20404,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Lacroix, Frederic",23733,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Lee, Jui-Shen",30422,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Lee, Junseo",29639,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Li, Mengyang",32715,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Liu , Enhua",24781,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Liu, Yanwei",16156,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Lu, Shawn",21207,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Manassero, Matteo",11460,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Mizuno, Shinichi",15143,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Moller, Niklas Norgaard",15676,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Mory , Felix",25089,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ozeki, Kakeru",20957,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Sandhu, Yuvraj Singh",23060,WD,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Schmidt, Ben",27258,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Schneider, Jan",30900,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Scrivener, Jason",12734,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"She, Zihan",17983,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Shen, Wang Ngai",31771,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Siem, Marcel",6950,WD,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Sterne, Richard",7049,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Sui, Justin",34345,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Sullivan, Andy",15326,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Syme, Connor",22089,WD,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Tang, Haizhao",28435,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Tao, Deng",28255,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ting, Lawrence",19582,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ting, Malcolm",25224,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Tong, Yang",26910,WD,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Um, Junghyun",30755,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Van Tonder, Daniel",15193,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Vincent, Jake",29707,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Von Dellingshausen, Nicolai",22231,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Wang, Charles",21376,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Wang, Haoyi",30125,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Wu, Di",25666,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Wu, Hongfu",13459,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Wu, Tuxuan",14954,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Xue, Han",22171,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Ye, Wo-Cheng",17350,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Yu, Fang",26245,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Zhang, Xinjun",13026,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Zhang, Yuze",32042,CUT,,0,0,0,0,0,1
+2026,Volvo China Open,2026115,2026-04-26,"Zi, Wang",28225,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
