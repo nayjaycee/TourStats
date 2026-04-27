@@ -818,6 +818,8 @@ def render_production_sg_tab(
     field_df=None,
     event_id=None,
     cutoff_dt=None,
+    course_fit_df=None,
+    course_num=None,
 ):
     try:
         st.title("Strokes Gained Analysis")
@@ -841,10 +843,7 @@ def render_production_sg_tab(
             if live_is_current:
                 st.info(f"Live data — {live_label}")
             else:
-                st.info(
-                    f"Showing most recent event data ({live_event_name}). "
-                    f"Not yet updated for {field_event_name or 'this week'}."
-                )
+                st.info(f"Showing most recent event data ({live_event_name}).")
 
         # ── Player list ────────────────────────────────────────────────────
         if field_ids and len(field_ids) > 0:
@@ -1274,6 +1273,149 @@ def render_production_sg_tab(
             event_id=event_id,
             cutoff_dt=cutoff_dt,
         )
+
+        st.divider()
+
+        # ── Course Fit — Full Field ────────────────────────────────────────
+        # Same constants, norms, and formula as H2H and Deep Dive tabs.
+        _CF_NORMS = {
+            "driving_dist": (295.0, 12.0),
+            "driving_acc":  (0.60,  0.08),
+            "sg_app":       (0.0,   0.80),
+            "sg_arg":       (0.0,   0.45),
+            "sg_putt":      (0.0,   0.55),
+        }
+        _CF_BETA_MAP = [
+            ("beta_dist_shrunk", "driving_dist"),
+            ("beta_acc_shrunk",  "driving_acc"),
+            ("beta_app_shrunk",  "sg_app"),
+            ("beta_arg_shrunk",  "sg_arg"),
+            ("beta_putt_shrunk", "sg_putt"),
+        ]
+        _CF_IMP_COLS   = ["imp_dist", "imp_acc", "imp_app", "imp_arg", "imp_putt"]
+        _CF_IMP_LABELS = ["Distance", "Accuracy", "Approach", "Around Green", "Putting"]
+        _CF_COLORS     = ["#63B3ED", "#9ACD32", "#FFA500", "#DA70D6", "#40E0D0"]
+
+        if course_fit_df is not None and not course_fit_df.empty and course_num is not None:
+            _cfit_row = course_fit_df[
+                pd.to_numeric(course_fit_df["course_num"], errors="coerce") == int(course_num)
+            ]
+            if not _cfit_row.empty:
+                _cfit = _cfit_row.iloc[0]
+                st.markdown("### Course Fit")
+                _cname = _cfit.get("course_name", f"Course {course_num}")
+
+                # DNA bar
+                _imp_vals = [float(_cfit.get(c, np.nan)) for c in _CF_IMP_COLS]
+                if any(np.isfinite(v) for v in _imp_vals):
+                    st.caption(f"**{_cname}** — skill importance")
+                    _dna_fig = go.Figure()
+                    for _lbl, _val, _col in zip(_CF_IMP_LABELS, _imp_vals, _CF_COLORS):
+                        if not np.isfinite(_val):
+                            continue
+                        _dna_fig.add_trace(go.Bar(
+                            x=[_val * 100], y=[""],
+                            orientation="h",
+                            marker_color=_col,
+                            name=_lbl,
+                            text=f"<b>{_lbl}</b>  {_val*100:.0f}%",
+                            textposition="inside",
+                            insidetextanchor="middle",
+                            hovertemplate=f"{_lbl}: {_val*100:.1f}%<extra></extra>",
+                            width=0.5,
+                        ))
+                    _dna_fig.update_layout(
+                        barmode="stack", height=70,
+                        template="plotly_dark",
+                        margin=dict(l=0, r=0, t=0, b=0),
+                        xaxis=dict(range=[0, 100], showticklabels=False, showgrid=False, zeroline=False),
+                        yaxis=dict(showticklabels=False, showgrid=False),
+                        showlegend=False,
+                        plot_bgcolor="rgba(0,0,0,0)",
+                        paper_bgcolor="rgba(0,0,0,0)",
+                    )
+                    st.plotly_chart(_dna_fig, use_container_width=True)
+
+                # Compute per-player means: last 60 rounds, simple mean.
+                # Mirrors _last_n_rounds_pre_event(n=60) + _safe_mean() used in H2H / Deep Dive.
+                # rounds_for_stats already has the pre-event cutoff applied.
+                _all_cf_stats = ["driving_dist", "driving_acc", "sg_app", "sg_arg", "sg_putt"]
+                _cf_stat_cols = [c for c in _all_cf_stats if c in rounds_for_stats.columns]
+
+                # Use the full rounds_df (not rounds_for_stats) so NaT-filtered rows
+                # don't corrupt the tail(60). Apply cutoff via combined date, drop undated rows.
+                _cf_rounds = rounds_df[rounds_df["dg_id"].isin(players_list)].copy()
+                for _c in _cf_stat_cols:
+                    _cf_rounds[_c] = pd.to_numeric(_cf_rounds[_c], errors="coerce")
+                _cf_rounds["round_date"] = pd.to_datetime(_cf_rounds.get("round_date"), errors="coerce")
+                _cf_rounds["event_completed"] = pd.to_datetime(_cf_rounds.get("event_completed"), errors="coerce")
+                # Fill date from event_completed when round_date is missing (mirrors _last_n_rounds_pre_event)
+                _cf_rounds["_sort_date"] = _cf_rounds["round_date"].fillna(_cf_rounds["event_completed"])
+                _cf_rounds = _cf_rounds.dropna(subset=["_sort_date"])
+                if cutoff_dt is not None:
+                    _cf_rounds = _cf_rounds[_cf_rounds["_sort_date"] < pd.to_datetime(cutoff_dt)]
+                _cf_rounds = _cf_rounds.sort_values(["dg_id", "_sort_date"], ascending=True)
+
+                # Build name map from rounds data (broader than valid)
+                _cf_name_map = (
+                    _cf_rounds.dropna(subset=["player_name"])
+                    .groupby("dg_id")["player_name"].last()
+                    .to_dict()
+                )
+
+                # Per-player: tail(60) → simple mean, exactly like _safe_mean
+                _rows = []
+                for _did, _grp in _cf_rounds.groupby("dg_id"):
+                    _tail = _grp.tail(60)
+                    _row = {"dg_id": _did, "player_name": _cf_name_map.get(_did, str(_did))}
+                    for _c in _cf_stat_cols:
+                        _row[_c] = float(pd.to_numeric(_tail[_c], errors="coerce").mean())
+                    _rows.append(_row)
+
+                _cf_means = pd.DataFrame(_rows)
+
+                # Fit score: Σ(beta_shrunk × z_score(player_stat)) — same formula as H2H / Deep Dive
+                def _fit_score_row(row):
+                    total = 0.0
+                    for beta_col, stat_col in _CF_BETA_MAP:
+                        if stat_col not in _cf_stat_cols:
+                            continue
+                        beta = pd.to_numeric(_cfit.get(beta_col, np.nan), errors="coerce")
+                        raw  = row.get(stat_col, np.nan)
+                        if not np.isfinite(float(beta)) or not np.isfinite(float(raw)):
+                            continue
+                        mu, sd = _CF_NORMS[stat_col]
+                        total += float(beta) * ((float(raw) - mu) / sd)
+                    return total
+
+                _cf_means["fit_score"] = _cf_means.apply(_fit_score_row, axis=1)
+                _cf_means = _cf_means.dropna(subset=["fit_score", "player_name"]).sort_values("fit_score", ascending=True)
+
+                if not _cf_means.empty:
+                    _bar_colors = ["#22c55e" if v >= 0 else "#ef4444" for v in _cf_means["fit_score"]]
+                    _bar_fig = go.Figure()
+                    _bar_fig.add_trace(go.Bar(
+                        x=_cf_means["fit_score"],
+                        y=_cf_means["player_name"],
+                        orientation="h",
+                        marker_color=_bar_colors,
+                        hovertemplate="<b>%{y}</b>: %{x:+.3f}<extra></extra>",
+                        text=_cf_means["fit_score"].apply(lambda v: f"{v:+.2f}"),
+                        textposition="outside",
+                        textfont=dict(size=10),
+                    ))
+                    _bar_fig.update_layout(
+                        template="plotly_dark",
+                        height=max(400, len(_cf_means) * 22),
+                        margin=dict(l=160, r=60, t=10, b=30),
+                        xaxis=dict(title="Fit Score", zeroline=True, zerolinecolor="rgba(255,255,255,0.2)"),
+                        yaxis=dict(tickfont=dict(size=11)),
+                        plot_bgcolor="rgba(0,0,0,0)",
+                        paper_bgcolor="rgba(0,0,0,0)",
+                        showlegend=False,
+                    )
+                    st.plotly_chart(_bar_fig, use_container_width=True)
+                    st.caption("Fit score = Σ(course beta × z-scored player stat) using last 60 rounds. Matches H2H and Deep Dive.")
 
         st.divider()
 

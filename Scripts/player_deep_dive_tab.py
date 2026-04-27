@@ -70,12 +70,15 @@ def render_player_deep_dive_tab(
     COL_FIELD = "rgba(150,150,150,0.5)"
 
     # ── Pool ─────────────────────────────────────────────────────────────────
+    _pool_cols = ["dg_id", "player_name"] + (["close_odds"] if "close_odds" in summary_top.columns else [])
     pool = (
-        summary_top[["dg_id", "player_name", "close_odds"]]
+        summary_top[_pool_cols]
         .dropna(subset=["dg_id", "player_name"])
         .drop_duplicates(subset=["dg_id"])
         .copy()
     )
+    if "close_odds" not in pool.columns:
+        pool["close_odds"] = pd.NA
     pool["dg_id"] = pd.to_numeric(pool["dg_id"], errors="coerce")
     pool = pool.dropna(subset=["dg_id"]).copy()
     pool["dg_id"] = pool["dg_id"].astype(int)
@@ -1165,9 +1168,10 @@ def render_player_deep_dive_tab(
                 t = r.groupby(["year", "event_id", "event_name"], as_index=False).agg(**agg).rename(
                     columns={"year": "Year", "event_name": "Event"})
                 t["event_end"] = r.groupby(["year", "event_id"])["event_end"].max().values
+                # Only The Players Championship 2020 (event_id 11) was cancelled mid-round
                 t["Event"] = t.apply(
                     lambda row: row["Event"] + " ⚠ - Cancelled after R1 "
-                    if int(row["Year"]) == 2020 and int(row["event_id"]) == course_num
+                    if int(row["Year"]) == 2020 and int(row["event_id"]) == 11
                     else row["Event"],
                     axis=1,
                 )

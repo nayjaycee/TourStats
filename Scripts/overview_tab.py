@@ -22,6 +22,12 @@ _CANCELLED_YEARS: dict[tuple[int, int], str] = {
     (11, 2020): "Cancelled after R1 — COVID-19 (Hideki Matsuyama led)",
 }
 
+# Some events were assigned a different event_id in a given year (e.g. COVID reschedules).
+# Key: canonical event_id → list of alternate event_ids that represent the same event.
+_EVENT_ID_ALIASES: dict[int, list[int]] = {
+    14: [536],   # Masters Tournament — 2021 edition stored as event_id 536 ("The Masters #2")
+}
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Helpers
@@ -476,7 +482,7 @@ def _render_course_dna(course_fit_df, course_num) -> None:
 # C — Odds + Form  (with OWGR badges)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=None) -> list:
+def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=None, all_players_df=None) -> list:
     """Returns list of featured dg_ids (favourites + hottest) for weather tee-time filtering."""
     _divider()
     if field_ev.empty:
@@ -491,19 +497,24 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
     fev = fev.dropna(subset=["dg_id"]).copy()
     fev["dg_id"] = fev["dg_id"].astype(int)
 
-    # Merge owgr_rank from field_df (this_week_field.csv) if not already present or all null
-    if field_df is not None and not field_df.empty and "dg_id" in field_df.columns and "owgr_rank" in field_df.columns:
-        fdf = field_df[["dg_id","owgr_rank"]].copy()
-        fdf["dg_id"] = pd.to_numeric(fdf["dg_id"], errors="coerce").dropna().astype(int)
-        fdf["owgr_rank"] = pd.to_numeric(fdf["owgr_rank"], errors="coerce")
-        fdf = fdf.drop_duplicates("dg_id")
-        if fev["owgr_rank"].isna().all() if "owgr_rank" in fev.columns else True:
-            fev = fev.drop(columns=["owgr_rank"], errors="ignore").merge(fdf, on="dg_id", how="left")
-        else:
-            # fill nulls only
-            fev = fev.merge(fdf.rename(columns={"owgr_rank":"_owgr_fill"}), on="dg_id", how="left")
-            fev["owgr_rank"] = fev["owgr_rank"].fillna(fev["_owgr_fill"])
-            fev = fev.drop(columns=["_owgr_fill"])
+    # Merge owgr_rank from All_players.xlsx (authoritative source)
+    # Falls back to field_df (this_week_field.csv) only if all_players doesn't have it
+    _owgr_source = None
+    if all_players_df is not None and not all_players_df.empty and "dg_id" in all_players_df.columns:
+        _ap = all_players_df[["dg_id", "owgr"]].copy() if "owgr" in all_players_df.columns else pd.DataFrame()
+        if not _ap.empty:
+            _ap["dg_id"] = pd.to_numeric(_ap["dg_id"], errors="coerce").dropna().astype(int)
+            _ap["owgr"] = pd.to_numeric(_ap["owgr"], errors="coerce")
+            _ap = _ap.drop_duplicates("dg_id").rename(columns={"owgr": "owgr_rank"})
+            _owgr_source = _ap
+    if _owgr_source is None and field_df is not None and not field_df.empty \
+            and "dg_id" in field_df.columns and "owgr_rank" in field_df.columns:
+        _owgr_source = field_df[["dg_id","owgr_rank"]].copy()
+        _owgr_source["dg_id"] = pd.to_numeric(_owgr_source["dg_id"], errors="coerce").dropna().astype(int)
+        _owgr_source["owgr_rank"] = pd.to_numeric(_owgr_source["owgr_rank"], errors="coerce")
+        _owgr_source = _owgr_source.drop_duplicates("dg_id")
+    if _owgr_source is not None:
+        fev = fev.drop(columns=["owgr_rank"], errors="ignore").merge(_owgr_source, on="dg_id", how="left")
 
     col_odds, col_form = st.columns(2, gap="large")
 
@@ -618,7 +629,8 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
     for c in ["event_id","year","finish_num","round_num","course_num","sg_total","round_score","cum_to_par","to_par"]:
         if c in r.columns: r[c] = pd.to_numeric(r[c], errors="coerce")
     if "round_date" in r.columns: r["round_date"] = pd.to_datetime(r["round_date"], errors="coerce")
-    r = r[r["event_id"] == int(event_id)].copy()
+    all_eids = {eid_int} | set(_EVENT_ID_ALIASES.get(eid_int, []))
+    r = r[r["event_id"].isin(all_eids)].copy()
     if r.empty: st.caption("No historical data found for this event."); return
 
     score_col = "cum_to_par" if "cum_to_par" in r.columns else ("to_par" if "to_par" in r.columns else None)
@@ -878,6 +890,7 @@ def render_overview_tab(
     schedule_df=None,
     tee_times_path=None,
     field_df=None,
+    all_players=None,
 ) -> None:
     # Auto-load field_df from tee_times_path if not provided
     if field_df is None and tee_times_path:
@@ -889,7 +902,7 @@ def render_overview_tab(
     _render_hero(selected_row)
     _render_course_dna(course_fit_df, course_num)
     with st.spinner("Loading field data…"):
-        featured_ids = _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img or {}, field_df=field_df)
+        featured_ids = _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img or {}, field_df=field_df, all_players_df=all_players)
     _render_event_history(rounds_df, event_id, course_num)
     if weather_api_key and event_id is not None:
         _render_weather_section(weather_api_key, schedule_df, event_id, tee_times_path, featured_dg_ids=featured_ids)

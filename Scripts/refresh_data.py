@@ -401,14 +401,14 @@ def run_block1() -> None:
             fields.loc[mask, "dg_id"].dropna().astype(int),
             fields.loc[mask, "close_odds"]
         ))
-        wk = field[["event_name", "event_id", "dg_id", "player_name"]].copy()
+        wk = field[["event_name", "event_id", "dg_id", "player_name", "owgr_rank"]].copy()
         wk["year"]            = YEAR
         wk["event_completed"] = pd.Timestamp(field_start.date())
         wk["field_pulled_at"] = now_et.strftime("%Y-%m-%d %H:%M:%S %Z")
         wk["close_odds"]      = wk["dg_id"].astype(int).map(existing_odds)
         wk["odds_pulled_at"]  = pd.NA
         wk = wk[["year", "event_name", "event_id", "event_completed",
-                  "player_name", "dg_id", "close_odds", "field_pulled_at", "odds_pulled_at"]]
+                  "player_name", "dg_id", "owgr_rank", "close_odds", "field_pulled_at", "odds_pulled_at"]]
         fields = pd.concat([fields.loc[~mask], wk], ignore_index=True)
 
     fields["player_name"] = fields["player_name"].astype(str)
@@ -517,6 +517,16 @@ def run_block2() -> None:
     _log(f"Clean year file: {len(combined):,} rows (with positions)")
 
     build_finishes(CLEAN_YEAR_PATH, FINISHES_PATH)
+
+    # Rebuild combined_rounds_all by merging all year files
+    year_files = sorted(CLEAN_DIR.glob("combined_rounds_20*.csv"))
+    all_years = pd.concat(
+        [pd.read_csv(f) for f in year_files if "_all_" not in f.name],
+        ignore_index=True,
+    )
+    all_path = CLEAN_DIR / "combined_rounds_all_2017_2026.csv"
+    all_years.to_csv(all_path, index=False)
+    _log(f"combined_rounds_all: {len(all_years):,} rows across {all_years['year'].nunique()} years")
 
     write_changelog({
         "timestamp": pd.Timestamp.now(tz=ET).strftime("%Y-%m-%d %H:%M:%S ET"),

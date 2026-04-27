@@ -10,7 +10,15 @@
       "Bash(git pull:*)",
       "Bash(git fetch:*)",
       "Bash(git stash:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(wc -l /Users/joshmacbook/python_projects/GolfStats/Scripts/*.py)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)",
+      "Bash(ls -la \"Data/in Use/\"*field*.csv)",
+      "Bash(brew upgrade:*)",
+      "Bash(npm update:*)"
     ]
   }
 }

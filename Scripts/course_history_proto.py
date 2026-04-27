@@ -11,6 +11,25 @@ from plotly.subplots import make_subplots
 from typing import List, Optional
 
 
+
+# ── Same-venue course_num aliases ─────────────────────────────────────────────
+# Maps a course_num to other course_nums that represent the same physical venue
+# but were used for a different event (e.g. a major at a regular tour venue).
+# Both directions are handled automatically — no need to add reverse entries.
+SAME_VENUE_COURSE_NUMS: dict[int, list[int]] = {
+    872: [241],   # Quail Hollow Club — Truist(872) + PGA Championship setup(241)
+}
+
+# ── Rotating major event IDs ───────────────────────────────────────────────────
+# These events change venue each year, so course-specific history is limited.
+# We supplement with event-specific (all-time) performance for these event_ids.
+ROTATING_MAJOR_EVENT_IDS: dict[int, str] = {
+    33:  "PGA Championship",
+    26:  "U.S. Open",
+    100: "The Open Championship",
+}
+
+
 def render_course_history_demo(
     course_num,
     rounds_df,
@@ -21,7 +40,9 @@ def render_course_history_demo(
     build_course_history_func,  # Pass the function as parameter
     ev_2017_2023=None,          # Kept for signature compatibility but not used
     id_to_img: Optional[dict] = None,
-    name_to_img: Optional[dict] = None
+    name_to_img: Optional[dict] = None,
+    event_id=None,
+    extra_course_nums: Optional[List[int]] = None,
 ):
     """
     Demo Course History tab - visual and digestible.
@@ -33,6 +54,38 @@ def render_course_history_demo(
     if course_num is None:
         st.info("No course_num found for this schedule row.")
         return
+
+    # ── Doral / Cadillac Championship note ───────────────────────────────────
+    if int(course_num) == 8:
+        st.info(
+            "**Note:** There has not been a PGA Tour event at Trump National Doral since 2016. "
+            "Course history and course horses data shown below is sourced from LIV Tour events "
+            "(2024-2025). Results should be interpreted with that context in mind."
+        )
+
+    # ── Rotating major banner ─────────────────────────────────────────────────
+    _eid = int(event_id) if event_id is not None else None
+    _is_rotating_major = _eid in ROTATING_MAJOR_EVENT_IDS
+    if _is_rotating_major:
+        _major_name = ROTATING_MAJOR_EVENT_IDS[_eid]
+        st.info(
+            f"**{_major_name}** rotates to a new venue each year. "
+            "Course history below reflects rounds played at this specific venue. "
+            "The **Major Record** section at the bottom shows each player's overall performance across all editions of this event."
+        )
+
+    # ── Same-venue cross-event note ───────────────────────────────────────────
+    _alias_course_nums = []
+    for k, aliases in SAME_VENUE_COURSE_NUMS.items():
+        if int(course_num) == k:
+            _alias_course_nums = aliases
+        elif int(course_num) in aliases:
+            _alias_course_nums = [k] + [a for a in aliases if a != int(course_num)]
+    if _alias_course_nums:
+        st.caption(
+            "Course history includes rounds from other events played at this venue "
+            "(e.g. a major or alternate-year setup at the same course)."
+        )
 
     # ── name lookup fallback from all_players ─────────────────────────────────
     _name_map = {}
@@ -53,10 +106,17 @@ def render_course_history_demo(
 
     # ── helpers ──────────────────────────────────────────────────────────────
     def _course_rounds(df, cn):
-        """All rows for this course from the combined rounds table."""
+        """All rows for this course (including same-venue aliases) from the combined rounds table."""
         if df is None or df.empty:
             return pd.DataFrame()
-        return df[df["course_num"] == cn].copy()
+        course_nums = {int(cn)}
+        for k, aliases in SAME_VENUE_COURSE_NUMS.items():
+            if int(cn) == k:
+                course_nums.update(aliases)
+            elif int(cn) in aliases:
+                course_nums.add(k)
+                course_nums.update(a for a in aliases if a != int(cn))
+        return df[df["course_num"].isin(course_nums)].copy()
 
     def _one_row_per_player_event(df):
         """
@@ -97,6 +157,7 @@ def render_course_history_demo(
             cutoff_dt=cutoff_dt,
             season_year=season_year,
             years_back=9,
+            extra_course_nums=extra_course_nums or [],
         )
 
     # ── pre-compute wins directly from rounds_df (single source of truth) ─────
@@ -476,22 +537,44 @@ def render_course_history_demo(
 
     # =========================================================================
     # SECTION 4: RECENT TOURNAMENT RESULTS
-    # Uses rounds_df for ALL years — single source of truth
+    # For rotating majors: filter by event_id across all venues
+    # For regular/sig events: filter by course_num only (exclude same-venue aliases)
     # =========================================================================
     st.markdown("### Recent Tournament Results")
 
     years_to_show = [season_year - 1, season_year - 2, season_year - 3]
-    st.caption("Actual top 10 finishers from the last 3 years")
+
+    # Build the results source differently based on event type
+    if _is_rotating_major and rounds_df is not None and not rounds_df.empty:
+        st.caption(f"Top 10 finishers from the last 3 editions of the {_major_name} (all venues shown)")
+        _results_df = rounds_df[
+            pd.to_numeric(rounds_df.get("event_id", pd.Series(dtype=float)), errors="coerce") == _eid
+        ].copy()
+    else:
+        # Exclude same-venue alias rounds — those belong only in Course History
+        _primary_course_rounds = rounds_df[rounds_df["course_num"] == int(course_num)].copy() \
+            if rounds_df is not None and not rounds_df.empty else pd.DataFrame()
+        _results_df = _primary_course_rounds
+        st.caption("Top 10 finishers from the last 3 years at this course")
+
     year_columns = st.columns(len(years_to_show), gap="large")
 
     for idx, year in enumerate(years_to_show):
         with year_columns[idx]:
-            st.markdown(f"#### {year}")
 
             top10_data = []
 
-            if not cr_all.empty and "year" in cr_all.columns:
-                cr_year = cr_all[cr_all["year"] == year].copy()
+            if not _results_df.empty and "year" in _results_df.columns:
+                cr_year = _results_df[_results_df["year"] == year].copy()
+
+                # For rotating majors, show venue name as subtitle
+                if _is_rotating_major and not cr_year.empty and "course_name" in cr_year.columns:
+                    _venue = cr_year["course_name"].dropna().iloc[0] if not cr_year["course_name"].dropna().empty else ""
+                    st.markdown(f"#### {year}")
+                    if _venue:
+                        st.caption(_venue)
+                else:
+                    st.markdown(f"#### {year}")
 
                 if not cr_year.empty:
                     one_row = _one_row_per_player_event(cr_year)
@@ -505,6 +588,10 @@ def render_course_history_demo(
                             "finish_text": player.get("fin_text", ""),
                             "finish_num":  player.get("finish_num", 999),
                         })
+
+            # Render year header if we didn't already (empty results_df path)
+            if _results_df.empty or "year" not in _results_df.columns:
+                st.markdown(f"#### {year}")
 
             if top10_data:
                 for player_data in top10_data:
@@ -534,7 +621,10 @@ def render_course_history_demo(
     # SECTION 5: COMPLETE COURSE HISTORY TABLE
     # =========================================================================
     st.markdown("### Complete Course History")
-    st.caption("Full finish history for all players in this week's field")
+    _hist_caption = "Full finish history for all players in this week's field"
+    if _alias_course_nums:
+        _hist_caption += " · Includes rounds from other events played at this venue (e.g. a major held here)"
+    st.caption(_hist_caption)
 
     if course_hist is not None and not course_hist.empty:
         ch = course_hist.copy()
@@ -584,3 +674,63 @@ def render_course_history_demo(
             hide_index=True,
             height=700,
         )
+
+    # =========================================================================
+    # SECTION 6: MAJOR RECORD (rotating majors only)
+    # Shows all-time performance in this event regardless of venue
+    # =========================================================================
+    if _is_rotating_major and rounds_df is not None and not rounds_df.empty and effective_base_ids:
+        st.divider()
+        st.markdown(f"### Major Record — {_major_name}")
+        st.caption(f"Career performance in the {_major_name} across all editions (all venues)")
+
+        maj_rounds = rounds_df[
+            (pd.to_numeric(rounds_df.get("event_id", pd.Series(dtype=float)), errors="coerce") == _eid)
+            & (rounds_df["dg_id"].isin(effective_base_ids))
+        ].copy()
+
+        if maj_rounds.empty:
+            st.info(f"No {_major_name} data found in rounds database.")
+        else:
+            maj_rounds["finish_num"] = pd.to_numeric(maj_rounds.get("finish_num", np.nan), errors="coerce")
+            maj_rounds["sg_total"]   = pd.to_numeric(maj_rounds.get("sg_total", np.nan), errors="coerce")
+
+            # One row per player-year for finish stats
+            maj_one = _one_row_per_player_event(maj_rounds)
+
+            records = []
+            for dg_id, grp in maj_rounds.groupby("dg_id"):
+                name = _resolve_name(grp.iloc[0])
+                appearances = grp["year"].nunique() if "year" in grp.columns else 0
+                best_finish = maj_one[maj_one["dg_id"] == dg_id]["finish_num"].min()
+                wins = int((maj_one[maj_one["dg_id"] == dg_id]["finish_num"] == 1).sum())
+                top5 = int((maj_one[maj_one["dg_id"] == dg_id]["finish_num"] <= 5).sum())
+                top10 = int((maj_one[maj_one["dg_id"] == dg_id]["finish_num"] <= 10).sum())
+                avg_sg = grp["sg_total"].mean()
+                records.append({
+                    "Player": name,
+                    "Apps": appearances,
+                    "Wins": wins,
+                    "Top 5": top5,
+                    "Top 10": top10,
+                    "Best Finish": int(best_finish) if pd.notna(best_finish) else None,
+                    "Avg SG": round(avg_sg, 2) if pd.notna(avg_sg) else None,
+                })
+
+            if records:
+                maj_df = (
+                    pd.DataFrame(records)
+                    .sort_values(["Wins", "Top 5", "Top 10", "Avg SG"], ascending=False)
+                    .reset_index(drop=True)
+                )
+                maj_df = maj_df[maj_df["Apps"] >= 1]
+
+                def _style_major(val):
+                    if pd.isna(val): return ""
+                    return ""
+
+                st.dataframe(
+                    maj_df.style.background_gradient(subset=["Avg SG"], cmap="RdYlGn", vmin=-2, vmax=2),
+                    use_container_width=True,
+                    hide_index=True,
+                )

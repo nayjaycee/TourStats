@@ -14,12 +14,13 @@ import html
 from elite_finish_tab import render_elite_finish_tab
 from documentation_tab import render_documentation_tab
 from sg_production_tab import render_production_sg_tab
-from course_history_proto import render_course_history_demo
+from course_history_proto import render_course_history_demo, SAME_VENUE_COURSE_NUMS
 from approach_skill_tab import render_approach_skill_tab
 from h2h_visual_tab import render_h2h_visual_tab
 from approach_skill_tab import load_approach_skill
 from weather_tab import render_weather_tab
 from live_tab import render_live_tab, is_tournament_live
+from field_adjusted_sg import compute_field_adjusted_sg
 
 st.set_page_config(
     page_title="Stats",
@@ -128,6 +129,12 @@ def load_rounds_all():
 
 # Call it
 rounds_df = load_rounds_all()
+
+
+@st.cache_data(show_spinner=False)
+def get_adjusted_rounds(rounds_df: pd.DataFrame, decay_lambda: float) -> pd.DataFrame:
+    """Cached wrapper around compute_field_adjusted_sg.  Keyed on decay_lambda."""
+    return compute_field_adjusted_sg(rounds_df, n_iter=8, decay_lambda=decay_lambda, min_rounds=15)
 
 
 # Load fields (optional, for predictions tab)
@@ -421,6 +428,14 @@ st.markdown("""
     min-width: 100% !important;
     max-width: 100% !important;
   }
+}
+
+/* Compact segmented control — smaller font + tighter padding */
+[data-testid="stSegmentedControl"] button {
+  font-size: 9px !important;
+  padding: 2px 5px !important;
+  min-height: 0 !important;
+  line-height: 1.2 !important;
 }
 
 /* Live leaderboard: horizontal scroll on mobile */
@@ -867,6 +882,7 @@ def compute_rolling_stats(
     as_of_date: pd.Timestamp,
     dg_ids: Iterable[int],
     windows: Sequence[int] = (40, 24, 12),
+    all_tours: bool = False,
 ) -> pd.DataFrame:
     ts = pd.to_datetime(as_of_date, errors="coerce")
     if pd.isna(ts):
@@ -874,7 +890,7 @@ def compute_rolling_stats(
 
     df = rounds_df.copy()
 
-    if "tour" in df.columns:
+    if "tour" in df.columns and not all_tours:
         df = df[df["tour"] == "pga"].copy()
 
     df["dg_id"] = pd.to_numeric(df["dg_id"], errors="coerce")
@@ -1079,6 +1095,7 @@ def build_course_history_field_table(
     cutoff_dt: Optional[pd.Timestamp],
     season_year: int,
     years_back: int = 9,
+    extra_course_nums: list[int] | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
 
     if course_num is None:
@@ -1123,7 +1140,10 @@ def build_course_history_field_table(
     if course_col_r is None:
         r = r.iloc[0:0].copy()
     else:
-        r = r.loc[r[course_col_r] == course_num].copy()
+        _all_course_nums = {course_num}
+        if extra_course_nums:
+            _all_course_nums.update(extra_course_nums)
+        r = r.loc[r[course_col_r].isin(_all_course_nums)].copy()
 
     if "dg_id" in r.columns and base_ids:
         r = r.loc[r["dg_id"].isin(base_ids)].copy()
@@ -1535,6 +1555,35 @@ with st.sidebar:
             except Exception as _wx_err:
                 st.caption(f"Weather data unavailable — {_wx_err}")
 
+    # ── Field-Adjusted SG toggle ───────────────────────────────────────────
+    st.divider()
+    use_adjusted_sg = st.toggle(
+        "Field-Adjusted SG",
+        value=False,
+        key="use_adjusted_sg",
+        help=(
+            "Adjusts all SG metrics for field strength across tours. "
+            "Rounds from PGA, DP World, and LIV are weighted by the quality of the field played, "
+            "anchored to a typical PGA Tour event. "
+            "Useful for comparing players across tours on a level scale."
+        ),
+    )
+    if use_adjusted_sg:
+        decay_lambda = st.slider(
+            "Recency decay",
+            min_value=0.00,
+            max_value=0.10,
+            value=0.03,
+            step=0.01,
+            key="sg_decay_lambda",
+            help=(
+                "How fast older rounds lose influence on the field-quality estimate. "
+                "0 = equal weight all time  |  0.03 = half-life ~23 rounds (default)  |  0.10 = half-life ~7 rounds"
+            ),
+        )
+    else:
+        decay_lambda = 0.03  # unused but keeps the cached call consistent
+
 
 sched_row = selected_row
 
@@ -1576,12 +1625,75 @@ if event_id is not None:
     field_ev = field_ev.drop_duplicates(subset=["dg_id"], keep="last")
     field_ids = field_ev["dg_id"].astype(int).tolist()
 
+    # Synthetic field fallback for future events with no real field data yet
+    if not field_ids and schedule is not None and not schedule.empty:
+        try:
+            _MAJOR_IDS = {14, 26, 33, 100}
+            _SIG_IDS   = {5, 7, 9, 11, 12, 23, 34, 480, 541}
+            _sched_row = schedule[
+                pd.to_numeric(schedule.get("event_id", pd.Series(dtype=float)), errors="coerce") == int(event_id)
+            ].head(1)
+            _etype = str(_sched_row["event_type"].iloc[0]).upper() if not _sched_row.empty and "event_type" in _sched_row.columns else "REGULAR"
+
+            _rdf = pd.read_csv(
+                INUSE_DIR / "combined_roundlevel_2024_present.csv",
+                usecols=["dg_id", "player_name", "tour", "event_id", "round_date"],
+                low_memory=False,
+            )
+            _rdf["round_date"] = pd.to_datetime(_rdf["round_date"], errors="coerce")
+            _cutoff = pd.Timestamp.now() - pd.Timedelta(days=365)
+
+            if _etype == "MAJOR":
+                _pool = _rdf[
+                    (_rdf["event_id"].isin(_MAJOR_IDS)) &
+                    (_rdf["round_date"] >= _cutoff)
+                ].drop_duplicates("dg_id")[["dg_id", "player_name"]]
+            elif _etype == "SIGNATURE":
+                _pool = _rdf[
+                    (_rdf["tour"].str.lower() == "pga") &
+                    (_rdf["event_id"].isin(_SIG_IDS)) &
+                    (_rdf["round_date"] >= _cutoff)
+                ].drop_duplicates("dg_id")[["dg_id", "player_name"]]
+            else:
+                _pga_recent = _rdf[
+                    (_rdf["tour"].str.lower() == "pga") &
+                    (_rdf["round_date"] >= _cutoff)
+                ]
+                _ecounts = _pga_recent.groupby("dg_id")["event_id"].nunique()
+                _qualified = _ecounts[_ecounts >= 10].index
+                _pool = _pga_recent[_pga_recent["dg_id"].isin(_qualified)].drop_duplicates("dg_id")[["dg_id", "player_name"]]
+
+            if not _pool.empty:
+                field_ids = _pool["dg_id"].astype(int).tolist()
+                field_ev = _pool.copy()
+                field_ev["event_id"] = event_id
+                field_ev["year"] = SEASON_YEAR
+                field_ev["close_odds"] = pd.NA
+        except Exception as _e:
+            st.sidebar.warning(f"Synthetic field error: {_e}")
+
     # Fallback: if close_odds is missing, pull from this_week_odds.csv
+    # Only apply when the selected event matches this week's field — odds have no event_id
+    # so applying them to a different/future event would show the wrong tournament's odds.
+    _this_week_event_id = None
+    _tw_field_path = INUSE_DIR / "this_week_field.csv"
+    if _tw_field_path.exists():
+        try:
+            _tw_ids = pd.to_numeric(
+                pd.read_csv(_tw_field_path, usecols=["event_id"])["event_id"], errors="coerce"
+            ).dropna().unique()
+            _this_week_event_id = int(_tw_ids[0]) if len(_tw_ids) > 0 else None
+        except Exception:
+            pass
+
     _odds_csv_path = INUSE_DIR / "this_week_odds.csv"
     if (
         _odds_csv_path.exists()
         and "close_odds" in field_ev.columns
         and field_ev["close_odds"].isna().all()
+        and event_id is not None
+        and _this_week_event_id is not None
+        and int(event_id) == _this_week_event_id
     ):
         try:
             _odds_csv = pd.read_csv(_odds_csv_path)
@@ -1623,7 +1735,13 @@ starts_2025 = (
 )
 
 ids_2025_4plus = set(starts_2025.loc[starts_2025["starts_2025"] >= 4, "dg_id"].astype(int).tolist())
-ids_2026_all   = set(f_univ.loc[f_univ["year"] == 2026, "dg_id"].astype(int).unique().tolist())
+# Exclude DP World Tour events (IDs >= 10000, e.g. 2026105) — only PGA/LIV events have small IDs
+ids_2026_all   = set(
+    f_univ.loc[
+        (f_univ["year"] == 2026) & (f_univ["event_id"].fillna(0).astype(int) < 10000),
+        "dg_id"
+    ].astype(int).unique().tolist()
+)
 
 universe_ids = sorted(ids_2026_all | ids_2025_4plus)
 
@@ -1632,6 +1750,17 @@ name_pool["is_2026"] = (name_pool["year"] == 2026).astype(int)
 name_pool = name_pool.sort_values(["dg_id", "is_2026", "year"], ascending=[True, False, False])
 
 universe = name_pool.drop_duplicates(subset=["dg_id"], keep="first")[["dg_id", "player_name"]].copy()
+
+# Fill blank player_name from rounds_df (covers players missing from Fields.xlsx)
+if "player_name" in rounds_df.columns:
+    _rnd_names = (
+        rounds_df.dropna(subset=["player_name"])
+        .assign(_pn=lambda d: d["player_name"].astype(str).str.strip())
+        .query("_pn != '' and _pn != 'nan' and _pn != 'None'")
+        .groupby("dg_id")["_pn"].first()
+    )
+    _blank = universe["player_name"].isna() | universe["player_name"].astype(str).str.strip().isin(["", "nan", "None"])
+    universe.loc[_blank, "player_name"] = universe.loc[_blank, "dg_id"].map(_rnd_names)
 
 if only_in_field:
     base_ids = field_ids
@@ -1642,7 +1771,24 @@ base = universe[universe["dg_id"].isin(base_ids)].copy()
 
 
 with st.spinner("Computing rolling stats (L40/L24/L12) from round-level data..."):
-    rolling = compute_rolling_stats(rounds_df=rounds_df, as_of_date=cutoff, dg_ids=base_ids, windows=(40, 24, 12))
+    if use_adjusted_sg:
+        # Compute or retrieve cached field-adjusted rounds
+        _adj_rounds = get_adjusted_rounds(rounds_df, decay_lambda=decay_lambda)
+        # Replace raw sg_* columns with adj_sg_* so every consumer is unaware of the swap
+        _adj_sg_cols = {c: c.replace("adj_sg_", "sg_") for c in _adj_rounds.columns if c.startswith("adj_sg_")}
+        _sg_originals = list(_adj_sg_cols.values())  # e.g. ["sg_total", "sg_putt", ...]
+        active_rounds_df = (
+            _adj_rounds
+            .drop(columns=[c for c in _sg_originals if c in _adj_rounds.columns])
+            .rename(columns=_adj_sg_cols)
+        )
+        rolling = compute_rolling_stats(
+            rounds_df=active_rounds_df, as_of_date=cutoff, dg_ids=base_ids,
+            windows=(40, 24, 12), all_tours=True,
+        )
+    else:
+        active_rounds_df = rounds_df
+        rolling = compute_rolling_stats(rounds_df=rounds_df, as_of_date=cutoff, dg_ids=base_ids, windows=(40, 24, 12))
 for w in (12, 24, 40):
     b = f"birdies_L{w}"
     e = f"eagles_or_better_L{w}"
@@ -1718,6 +1864,17 @@ def heat_table(df: pd.DataFrame, sg_cols, precision=2):
 
 summary_top = out.copy()
 
+# Fill any remaining blank player_name from rounds_df
+if "player_name" in summary_top.columns and "player_name" in rounds_df.columns:
+    _rnd_names = (
+        rounds_df.dropna(subset=["player_name"])
+        .assign(_pn=lambda d: d["player_name"].astype(str).str.strip())
+        .query("_pn != '' and _pn != 'nan' and _pn != 'None'")
+        .groupby("dg_id")["_pn"].first()
+    )
+    _blank = summary_top["player_name"].isna() | summary_top["player_name"].astype(str).str.strip().isin(["", "nan", "None"])
+    summary_top.loc[_blank, "player_name"] = summary_top.loc[_blank, "dg_id"].map(_rnd_names)
+
 _default_sort = "sg_total_L12" if "sg_total_L12" in summary_top.columns else None
 if _default_sort:
     summary_top = summary_top.sort_values(_default_sort, ascending=False)
@@ -1776,19 +1933,19 @@ if not _live_active:
 _live_label = "🔴 Live" if _live_active else "⚫ Live"
 
 _MODEL_LAB_AVAILABLE = (Path(__file__).parent / "model_lab_tab.py").exists()
+_OAD_GT_AVAILABLE = (Path(__file__).parent / "oad_game_theory_tab.py").exists()
 
 TAB_NAMES = [
-    "Event Overview",
-    "Field Analysis",
-    "Contender Model",
-    "Course History",
-    "Approach Skill",
+    "Overview",
+    "Field",
+    "Model",
+    "Course",
+    "Approach",
     "H2H",
-    "Player Deep Dive",
+    "Deep Dive",
     _live_label,
-    "Event Archive",
-    "Guide",
-] + (["Model Lab"] if _MODEL_LAB_AVAILABLE else [])
+    "Archive",
+] + (["Lab"] if _MODEL_LAB_AVAILABLE else []) + (["OAD"] if _OAD_GT_AVAILABLE else []) + ["Guide"]
 
 # Apply any pending tab navigation (set by tab modules before rerun)
 if "_pending_tab" in st.session_state:
@@ -1797,7 +1954,7 @@ if "_pending_tab" in st.session_state:
         st.session_state.active_tab = _pending
 
 if "active_tab" not in st.session_state or st.session_state.active_tab not in TAB_NAMES:
-    st.session_state.active_tab = "Event Overview"
+    st.session_state.active_tab = "Overview"
 
 
 active_tab = st.segmented_control(
@@ -1845,12 +2002,12 @@ if _ctx_name:
     )
 # ─────────────────────────────────────────────────────────────────────────────
 
-if event_id is None and active_tab not in {"Event Archive", "Guide", _live_label}:
+if event_id is None and active_tab not in {"Archive", "Guide", _live_label}:
     st.stop()
 
-if active_tab == "Field Analysis":
+if active_tab == "Field":
     render_production_sg_tab(
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         field_ids=field_ids,
         all_players=all_players,
         id_to_img=ID_TO_IMG,
@@ -1859,12 +2016,23 @@ if active_tab == "Field Analysis":
         field_df=_field_df_for_event(event_id) if event_id is not None else _this_week_field_df,
         event_id=event_id,
         cutoff_dt=cutoff,
+        course_fit_df=pd.read_csv(COURSE_FIT_PATH) if COURSE_FIT_PATH.exists() else None,
+        course_num=course_num_val if pd.notna(course_num_val) else None,
     )
 
-elif active_tab == "Course History":
+elif active_tab == "Course":
+    _cn = st.session_state.get("selected_course_num")
+    _extra_cns = []
+    if _cn is not None:
+        _cn_int = int(_cn)
+        for k, aliases in SAME_VENUE_COURSE_NUMS.items():
+            if _cn_int == k:
+                _extra_cns = aliases
+            elif _cn_int in aliases:
+                _extra_cns = [k] + [a for a in aliases if a != _cn_int]
     render_course_history_demo(
-        course_num=st.session_state.get("selected_course_num"),
-        rounds_df=rounds_df,
+        course_num=_cn,
+        rounds_df=active_rounds_df,
         ev_2017_2023=None,
         all_players=all_players,
         field_ids=field_ids,
@@ -1872,10 +2040,12 @@ elif active_tab == "Course History":
         season_year=SEASON_YEAR,
         build_course_history_func=build_course_history_field_table,
         id_to_img=ID_TO_IMG,
-        name_to_img=NAME_TO_IMG
+        name_to_img=NAME_TO_IMG,
+        event_id=event_id,
+        extra_course_nums=_extra_cns,
     )
 
-elif active_tab == "Approach Skill":
+elif active_tab == "Approach":
     render_approach_skill_tab(
         approach_skill_path=INUSE_DIR / "approach_skill_all_periods.csv",
         approach_buckets_path=BUCKET_PATH,
@@ -1887,7 +2057,7 @@ elif active_tab == "Approach Skill":
 elif active_tab == "H2H":
     render_h2h_visual_tab(
         summary_top=summary_top,
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         cutoff_dt=get_pre_event_cutoff_date(sched, int(event_id)) if event_id else None,
         all_players=all_players,
         ID_TO_IMG=ID_TO_IMG,
@@ -1903,11 +2073,11 @@ elif active_tab == "H2H":
         greens_ref_path=str(INUSE_DIR / "course_greens_reference.csv"),
     )
 
-elif active_tab == "Player Deep Dive":
+elif active_tab == "Deep Dive":
     from player_deep_dive_tab import render_player_deep_dive_tab
     render_player_deep_dive_tab(
         summary_top=summary_top,
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         cutoff_dt=get_pre_event_cutoff_date(sched, int(event_id)) if event_id else None,
         all_players=all_players,
         ID_TO_IMG=ID_TO_IMG,
@@ -1930,10 +2100,10 @@ elif active_tab == "Player Deep Dive":
         greens_ref_path=str(INUSE_DIR / "course_greens_reference.csv"),
     )
 
-elif active_tab == "Event Archive":
+elif active_tab == "Archive":
     from event_browser_tab import render_event_browser_tab
     render_event_browser_tab(
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         ID_TO_IMG=ID_TO_IMG,
         NAME_TO_IMG=NAME_TO_IMG,
     )
@@ -1941,10 +2111,10 @@ elif active_tab == "Event Archive":
 elif active_tab == "Guide":
     render_documentation_tab()
 
-elif active_tab == "Model Lab" and _MODEL_LAB_AVAILABLE:
+elif active_tab == "Lab" and _MODEL_LAB_AVAILABLE:
     from model_lab_tab import render_model_lab_tab
     render_model_lab_tab(
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         field_ids=field_ids,
         all_players=all_players,
         cutoff_dt=cutoff,
@@ -1953,24 +2123,28 @@ elif active_tab == "Model Lab" and _MODEL_LAB_AVAILABLE:
         schedule_df=schedule_df,
     )
 
-# elif active_tab == "Contender Model":
+elif active_tab == "OAD" and _OAD_GT_AVAILABLE:
+    from oad_game_theory_tab import render_oad_game_theory_tab
+    render_oad_game_theory_tab()
+
+# elif active_tab == "Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)
 
-elif active_tab == "Contender Model":
+elif active_tab == "Model":
     from sg_production_tab import render_elite_finish_analysis
     render_elite_finish_analysis(
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         field_ids=field_ids,
         all_players=all_players,
         cutoff_dt=cutoff,
         summary_top=summary_top,
     )
 
-elif active_tab == "Event Overview":
+elif active_tab == "Overview":
     from overview_tab import render_overview_tab
     render_overview_tab(
         selected_row=selected_row,
-        rounds_df=rounds_df,
+        rounds_df=active_rounds_df,
         field_ev=field_ev,
         event_id=event_id,
         course_num=course_num,
@@ -1980,6 +2154,7 @@ elif active_tab == "Event Overview":
         weather_api_key=st.secrets.get("WEATHER_API_KEY", ""),
         schedule_df=schedule_df,
         tee_times_path=_field_path_for_event(event_id) if event_id is not None else str(_this_week_field_path),
+        all_players=all_players,
     )
 
 elif active_tab == _live_label:

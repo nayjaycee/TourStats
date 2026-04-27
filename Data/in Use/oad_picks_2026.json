@@ -1,0 +1,156 @@
+{
+  "season": 2026,
+  "league1": {
+    "name": "League 1 \u2014 Purse (ends BMW Championship)",
+    "started_at": "Sony Open",
+    "used_players": [
+      {
+        "dg_id": 17536,
+        "name": "Spaun, J.J."
+      },
+      {
+        "dg_id": 23323,
+        "name": "Macintyre, Robert"
+      },
+      {
+        "dg_id": 14609,
+        "name": "Kim, Si Woo"
+      },
+      {
+        "dg_id": 13562,
+        "name": "Matsuyama, Hideki"
+      },
+      {
+        "dg_id": 18417,
+        "name": "Scheffler, Scottie"
+      },
+      {
+        "dg_id": 23602,
+        "name": "Hojgaard, Nicolai"
+      },
+      {
+        "dg_id": 10091,
+        "name": "McIlroy, Rory"
+      },
+      {
+        "dg_id": 22085,
+        "name": "Morikawa, Collin"
+      },
+      {
+        "dg_id": 29433,
+        "name": "Bridgeman, Jacob"
+      },
+      {
+        "dg_id": 19483,
+        "name": "Burns, Sam"
+      },
+      {
+        "dg_id": 24968,
+        "name": "Griffin, Ben"
+      },
+      {
+        "dg_id": 29925,
+        "name": "Yellamaraju, Sudarshan"
+      },
+      {
+        "dg_id": 19895,
+        "name": "Schauffele, Xander"
+      }
+    ],
+    "must_use": [],
+    "excluded": [
+      {
+        "dg_id": 28159,
+        "name": "Meissner, Mac"
+      },
+      {
+        "dg_id": 13412,
+        "name": "Olesen, Thorbjorn"
+      },
+      {
+        "dg_id": 10419,
+        "name": "Noren, Alex"
+      },
+      {
+        "dg_id": 18103,
+        "name": "Bezuidenhout, Christiaan"
+      }
+    ]
+  },
+  "league2": {
+    "name": "League 2 \u2014 OAD Purse (ends Tour Championship)",
+    "started_at": "WM Phoenix Open",
+    "used_players": [
+      {
+        "dg_id": 26651,
+        "name": "Young, Cameron"
+      },
+      {
+        "dg_id": 14578,
+        "name": "Henley, Russell"
+      },
+      {
+        "dg_id": 19895,
+        "name": "Schauffele, Xander"
+      },
+      {
+        "dg_id": 18554,
+        "name": "Rai, Aaron"
+      },
+      {
+        "dg_id": 10091,
+        "name": "McIlroy, Rory"
+      },
+      {
+        "dg_id": 14609,
+        "name": "Kim, Si Woo"
+      },
+      {
+        "dg_id": 14139,
+        "name": "Thomas, Justin"
+      },
+      {
+        "dg_id": 19396,
+        "name": "Knapp, Jake"
+      },
+      {
+        "dg_id": 23323,
+        "name": "MacIntyre, Robert"
+      },
+      {
+        "dg_id": 18417,
+        "name": "Scheffler, Scottie"
+      }
+    ],
+    "excluded": [
+      {
+        "dg_id": 28309,
+        "name": "Coody, Pierceson"
+      }
+    ],
+    "must_use": []
+  },
+  "planned_picks": {
+    "league1": {
+      "14": 19195,
+      "33": 19195
+    }
+  },
+  "skipped_events": [],
+  "formula": "bl24+cf_0.15+hist_0.25+app_0.1",
+  "preset": "Balanced",
+  "league": "oad",
+  "swap_picks": {
+    "league2": {
+      "41": 23323,
+      "33": 19841,
+      "12": 15466
+    },
+    "league1": {
+      "14": 19195,
+      "480": 19895,
+      "12": 17646,
+      "33": 19195
+    }
+  }
+}
