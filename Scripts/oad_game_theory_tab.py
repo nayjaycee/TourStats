@@ -75,12 +75,61 @@ def _load_events() -> pd.DataFrame:
     return combined
 
 
+LEADERBOARD_META_PATH = OAD_DIR / "leaderboard_meta.json"
+
 @st.cache_data(ttl=300)
 def _load_leaderboard() -> pd.DataFrame:
+    import json as _json
+
     lb = pd.read_csv(LEADERBOARD_PATH) if LEADERBOARD_PATH.exists() else pd.DataFrame()
-    if not lb.empty:
-        lb["_username"] = lb["PLAYER"].str.extract(r"^(.+)\(\d+\)$")[0].str.strip().str.lower()
-        lb["EARNINGS"]  = pd.to_numeric(lb["EARNINGS"], errors="coerce").fillna(0).astype(int)
+    if lb.empty:
+        return lb
+
+    lb["_username"] = lb["PLAYER"].str.extract(r"^(.+)\(\d+\)$")[0].str.strip().str.lower()
+    lb["EARNINGS"]  = pd.to_numeric(lb["EARNINGS"], errors="coerce").fillna(0).astype(int)
+
+    # Auto-apply earnings from any event files not yet included in the leaderboard
+    try:
+        meta = _json.loads(LEADERBOARD_META_PATH.read_text()) if LEADERBOARD_META_PATH.exists() else {}
+        applied: list[str] = meta.get("applied_events", [])
+        updated = False
+
+        lb_idx = lb.set_index("PLAYER")
+
+        for ev_path in sorted(EVENTS_DIR.glob("*.csv")):
+            slug = ev_path.stem
+            if slug in applied:
+                continue
+            ev = pd.read_csv(ev_path)
+            if "dg_id" not in ev.columns:
+                continue
+            ev["_earn"] = (
+                ev["Earnings"].astype(str)
+                .str.replace(r'[\$,\"]', "", regex=True).str.strip()
+                .replace({"--": "0", "": "0"})
+                .pipe(pd.to_numeric, errors="coerce").fillna(0)
+            )
+            ev["_player"] = ev["Username"].astype(str).str.strip()
+            # One pick per team per event
+            ev_earn = ev.dropna(subset=["_player"]).groupby("_player")["_earn"].max().astype(int)
+            for player, earn in ev_earn.items():
+                if player in lb_idx.index:
+                    lb_idx.at[player, "EARNINGS"] += earn
+            applied.append(slug)
+            updated = True
+
+        if updated:
+            lb = lb_idx.reset_index()
+            lb["EARNINGS"] = lb["EARNINGS"].astype(int)
+            # Persist updated leaderboard + metadata
+            lb.to_csv(LEADERBOARD_PATH, index=False)
+            LEADERBOARD_META_PATH.write_text(_json.dumps({"applied_events": applied}, indent=2))
+    except Exception:
+        pass
+
+    # Always recompute PLACE from current EARNINGS
+    lb = lb.sort_values("EARNINGS", ascending=False).reset_index(drop=True)
+    lb["PLACE"] = lb["EARNINGS"].rank(method="min", ascending=False).astype(int)
     return lb
 
 
