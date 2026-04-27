@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-27 13:14:40 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 11,491 rows across 33 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-04-27 13:14:35 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-22 15:24:02 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Zurich Classic of New Orleans",
-      "details": "Field updated: 18"
-    },
-    {
-      "timestamp": "2026-04-22 09:59:19 ET",
       "type": "field_odds_refresh",
       "event_name": "Zurich Classic of New Orleans",
       "details": "Field updated: 18"
