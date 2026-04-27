@@ -1188,6 +1188,9 @@ def build_course_history_field_table(
 
     combined = r_year.copy()
 
+    if combined.empty or "year" not in combined.columns:
+        return pd.DataFrame(), pd.DataFrame()
+
     years_present = sorted([y for y in combined["year"].dropna().astype(int).unique() if y in target_years])
 
     pivot = (
