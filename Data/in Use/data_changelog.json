@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-27 09:15:41 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Cadillac Championship",
+      "details": "Field updated: 556"
+    },
+    {
       "timestamp": "2026-04-27 04:36:28 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Zurich Classic of New Orleans",
       "details": "Field updated: 18"
-    },
-    {
-      "timestamp": "2026-04-20 16:35:35 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,033 rows (l12/l24/ytd)"
     }
   ]
 }
