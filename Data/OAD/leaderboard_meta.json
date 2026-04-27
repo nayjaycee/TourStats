@@ -1,15 +1,15 @@
 {
   "applied_events": [
-    "wm_phoenix_open",
+    "arnold_palmer_invitational_presented_by_mastercard",
     "at_t_pebble_beach_pro_am",
     "cognizant_classic",
-    "the_genesis_invitational",
-    "arnold_palmer_invitational_presented_by_mastercard",
-    "the_players_championship",
-    "valspar_championship",
-    "texas_children_s_houston_open",
-    "valero_texas_open",
     "masters_tournament",
-    "rbc_heritage"
+    "rbc_heritage",
+    "texas_children_s_houston_open",
+    "the_genesis_invitational",
+    "the_players_championship",
+    "valero_texas_open",
+    "valspar_championship",
+    "wm_phoenix_open"
   ]
 }
