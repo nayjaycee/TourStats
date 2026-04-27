@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-04-27 15:42:22 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Cadillac Championship",
+      "details": "Field updated: 556"
+    },
+    {
       "timestamp": "2026-04-27 15:20:28 ET",
       "type": "live_odds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-23 17:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 82 players"
-    },
-    {
-      "timestamp": "2026-04-23 16:05:20 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 82 players"
