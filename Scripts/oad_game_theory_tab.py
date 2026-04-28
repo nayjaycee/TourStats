@@ -554,7 +554,7 @@ def render_oad_game_theory_tab() -> None:
             "dg_id":              did,
             "Player":             name,
             "Tier":               tier,
-            "DG w/ History":      dg_hist,
+            "DG w/ Fit":      dg_hist,
             "DG Model %":         dg_model,
             "Win % (odds)":       win_pct,
             "Best Odds":          f"{best_dec:.1f}" if pd.notna(best_dec) else "-",
@@ -571,13 +571,13 @@ def render_oad_game_theory_tab() -> None:
         })
 
     gt_df    = pd.DataFrame(rows)
-    sort_col = "DG w/ History" if odds_available else "% Burned (ahead)"
+    sort_col = "DG w/ Fit" if odds_available else "% Burned (ahead)"
     gt_df    = gt_df.sort_values(sort_col, ascending=False, na_position="last").reset_index(drop=True)
 
     # -- Differentiation scatter ───────────────────────────────────────────────
     st.markdown(f"### Differentiation - {sel_name}")
-    y_col   = "DG w/ History" if odds_available else "% Burned (league)"
-    y_title = "DG w/ History Win %  ->  higher is better" if odds_available else "% Burned (league)  ->  popularity proxy"
+    y_col   = "DG w/ Fit" if odds_available else "% Burned (league)"
+    y_title = "DG w/ Fit Win %  ->  higher is better" if odds_available else "% Burned (league)  ->  popularity proxy"
     st.caption(
         "X = % of teams ahead that have burned (can't reuse) this player.  "
         f"Y = {'DG model w/ history win %' if odds_available else '% burned league-wide'}.  "
@@ -600,7 +600,7 @@ def render_oad_game_theory_tab() -> None:
     _hover = (
         "<b>%{customdata[0]}</b><br>"
         + (
-            "DG w/ History: %{y:.1f}%<br>"
+            "DG w/ Fit: %{y:.1f}%<br>"
             "DG Model: %{customdata[1]:.1f}%<br>"
             "Win % (odds): %{customdata[2]:.1f}%  -  %{customdata[5]}<br>"
             if odds_available else
@@ -665,7 +665,7 @@ def render_oad_game_theory_tab() -> None:
     fc1, fc2, fc3 = st.columns(3)
     show_avail = fc1.checkbox("Available to us only", value=False, key="gt_avail")
     min_burned = fc2.slider("Min % burned (ahead)", 0, 100, 0, 5, key="gt_min_used")
-    min_model  = fc3.slider("Min DG w/ History %", 0.0, 25.0, 0.0, 0.5, key="gt_min_model",
+    min_model  = fc3.slider("Min DG w/ Fit %", 0.0, 25.0, 0.0, 0.5, key="gt_min_model",
                             disabled=not odds_available)
 
     disp = gt_df.copy()
@@ -674,25 +674,25 @@ def render_oad_game_theory_tab() -> None:
     if min_burned > 0:
         disp = disp[disp["% Burned (ahead)"] >= min_burned]
     if min_model > 0 and odds_available:
-        disp = disp[disp["DG w/ History"].notna() & (disp["DG w/ History"] >= min_model)]
+        disp = disp[disp["DG w/ Fit"].notna() & (disp["DG w/ Fit"] >= min_model)]
 
     show_cols = [
         "Player", "Tier",
-        "DG w/ History", "DG Model %", "Win % (odds)", "Best Odds",
+        "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
         "% Burned (ahead)", "% Burned (jump)", "% Burned (chasers)", "% Burned (league)",
         "Picking Now (ahead)", "Own % this week",
         "Avg Rank (users)", "New Rank",
         "We Can Use", "We Used",
     ]
     if not odds_available:
-        show_cols = [c for c in show_cols if c not in ("DG w/ History", "DG Model %", "Win % (odds)", "Best Odds")]
+        show_cols = [c for c in show_cols if c not in ("DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds")]
     if not have_this_week:
         show_cols = [c for c in show_cols if c not in ("Picking Now (ahead)", "New Rank")]
     if n_chasers == 0:
         show_cols = [c for c in show_cols if c != "% Burned (chasers)"]
 
     fmt = {
-        "DG w/ History":       "{:.1f}%",
+        "DG w/ Fit":       "{:.1f}%",
         "DG Model %":          "{:.1f}%",
         "Win % (odds)":        "{:.1f}%",
         "% Burned (ahead)":    "{:.0f}%",
@@ -717,8 +717,8 @@ def render_oad_game_theory_tab() -> None:
     # -- Recommendation ────────────────────────────────────────────────────────
     st.markdown("### Recommendation - Available to Us")
     if odds_available:
-        st.caption("Score = DG w/ History % x (1 + % Burned (ahead) / 100)")
-        score_col = "DG w/ History"
+        st.caption("Score = DG w/ Fit % x (1 + % Burned (ahead) / 100)")
+        score_col = "DG w/ Fit"
     else:
         st.caption("Score = % Burned (league) x (1 + % Burned (ahead) / 100)  -  odds not yet available")
         score_col = "% Burned (league)"
@@ -730,13 +730,13 @@ def render_oad_game_theory_tab() -> None:
     if not avail.empty:
         rec_cols = [
             "Player", "Tier",
-            "DG w/ History", "DG Model %", "Win % (odds)", "Best Odds",
+            "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
             "% Burned (ahead)", "% Burned (jump)", "% Burned (chasers)", "% Burned (league)",
             "Picking Now (ahead)", "Own % this week",
             "Avg Rank (users)", "New Rank", "Score",
         ]
         if not odds_available:
-            rec_cols = [c for c in rec_cols if c not in ("DG w/ History", "DG Model %", "Win % (odds)", "Best Odds")]
+            rec_cols = [c for c in rec_cols if c not in ("DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds")]
         if not have_this_week:
             rec_cols = [c for c in rec_cols if c not in ("Picking Now (ahead)", "New Rank")]
         if n_chasers == 0:
@@ -756,7 +756,7 @@ def render_oad_game_theory_tab() -> None:
 
     # -- Teams ahead: best available ───────────────────────────────────────────
     st.markdown("### Teams Ahead - Best Available Picks")
-    sort_key = "DG w/ History" if odds_available else "% Burned (league)"
+    sort_key = "DG w/ Fit" if odds_available else "% Burned (league)"
     st.caption(f"Top 5 players each team ahead can still use, ranked by {sort_key}.")
 
     player_info = gt_df.set_index("dg_id")[["Player", sort_key, "Tier"]].to_dict("index")

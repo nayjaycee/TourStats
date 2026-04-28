@@ -1936,7 +1936,8 @@ if not _live_active:
 _live_label = "🔴 Live" if _live_active else "⚫ Live"
 
 _MODEL_LAB_AVAILABLE = (Path(__file__).parent / "model_lab_tab.py").exists()
-_OAD_GT_AVAILABLE = (Path(__file__).parent / "oad_game_theory_tab.py").exists()
+_OAD_GT_AVAILABLE   = (Path(__file__).parent / "oad_game_theory_tab.py").exists()
+_OAD_SOLO_AVAILABLE = (Path(__file__).parent / "oad_solo_tab.py").exists()
 
 TAB_NAMES = [
     "Overview",
@@ -1948,7 +1949,7 @@ TAB_NAMES = [
     "Deep Dive",
     _live_label,
     "Archive",
-] + (["Lab"] if _MODEL_LAB_AVAILABLE else []) + (["OAD"] if _OAD_GT_AVAILABLE else []) + ["Guide"]
+] + (["Lab"] if _MODEL_LAB_AVAILABLE else []) + (["3.5k"] if _OAD_GT_AVAILABLE else []) + (["1k"] if _OAD_SOLO_AVAILABLE else []) + ["Guide"]
 
 # Apply any pending tab navigation (set by tab modules before rerun)
 if "_pending_tab" in st.session_state:
@@ -2126,9 +2127,13 @@ elif active_tab == "Lab" and _MODEL_LAB_AVAILABLE:
         schedule_df=schedule_df,
     )
 
-elif active_tab == "OAD" and _OAD_GT_AVAILABLE:
+elif active_tab == "3.5k" and _OAD_GT_AVAILABLE:
     from oad_game_theory_tab import render_oad_game_theory_tab
     render_oad_game_theory_tab()
+
+elif active_tab == "1k" and _OAD_SOLO_AVAILABLE:
+    from oad_solo_tab import render_oad_solo_tab
+    render_oad_solo_tab()
 
 # elif active_tab == "Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)
