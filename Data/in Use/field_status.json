@@ -40,7 +40,6 @@
       "Kim, Michael",
       "Kim, Si Woo",
       "Kitayama, Kurt",
-      "Knapp, Jake",
       "Lee, Min Woo",
       "Lipsky, David",
       "Lowry, Shane",
@@ -56,6 +55,7 @@
       "Poston, J.T.",
       "Potgieter, Aldrich",
       "Putnam, Andrew",
+      "Reitan, Kristoffer",
       "Rodgers, Patrick",
       "Rose, Justin",
       "Scheffler, Scottie",
@@ -77,8 +77,18 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-30 12:01:15 ET",
+    "last_updated": "2026-04-30 18:04:59 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-04-30 18:04:59 ET",
+        "added": [
+          "Reitan, Kristoffer"
+        ],
+        "withdrawn": [
+          "Knapp, Jake"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-04-30 12:01:15 ET",
         "added": [
@@ -492,12 +502,6 @@
           "Young, Cameron"
         ],
         "note": "+120 / -54"
-      },
-      {
-        "timestamp": "2026-04-17 18:00:15 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
