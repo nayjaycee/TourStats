@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-02 03:53:17 ET",
+    "last_updated": "2026-05-02 09:26:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-02 09:26:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-02 03:53:17 ET",
         "added": [],
@@ -136,16 +142,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-29 04:28:30 ET",
-        "added": [
-          "Thorbjornsen, Michael"
-        ],
-        "withdrawn": [
-          "Cantlay, Patrick"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
@@ -226,8 +222,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-02 03:53:17 ET",
+    "last_updated": "2026-05-02 09:26:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-02 09:26:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-02 03:53:17 ET",
         "added": [
@@ -374,12 +376,6 @@
           "Mickelson, Phil"
         ],
         "note": "+0 / -1"
-      },
-      {
-        "timestamp": "2026-04-02 12:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   }
