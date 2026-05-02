@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-01 15:21:03 ET",
+    "last_updated": "2026-05-02 03:53:17 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-02 03:53:17 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-01 15:21:03 ET",
         "added": [],
@@ -140,26 +146,19 @@
           "Cantlay, Patrick"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-04-28 15:50:15 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
-    "event_id": 12,
-    "event_name": "RBC Heritage",
-    "player_count": 80,
+    "event_id": 480,
+    "event_name": "Truist Championship",
+    "player_count": 71,
     "player_names": [
       "Aberg, Ludvig",
       "Berger, Daniel",
       "Bhatia, Akshay",
       "Blanchet, Chandler",
       "Bradley, Keegan",
-      "Brennan, Michael",
       "Bridgeman, Jacob",
       "Burns, Sam",
       "Campbell, Brian",
@@ -172,7 +171,7 @@
       "Echavarria, Nico",
       "English, Harris",
       "Finau, Tony",
-      "Fisk, Steven",
+      "Fitzpatrick, Alex",
       "Fitzpatrick, Matt",
       "Fleetwood, Tommy",
       "Fowler, Rickie",
@@ -183,26 +182,24 @@
       "Griffin, Ben",
       "Hall, Harry",
       "Harman, Brian",
-      "Henley, Russell",
-      "Higgo, Garrick",
-      "Highsmith, Joe",
       "Hisatsune, Ryo",
       "Hoge, Tom",
       "Hojgaard, Nicolai",
       "Homa, Max",
       "Hovland, Viktor",
+      "Hughes, Mackenzie",
       "Im, Sungjae",
-      "Keefer, Johnny",
       "Kim, Michael",
       "Kim, Si Woo",
       "Kitayama, Kurt",
       "Knapp, Jake",
       "Lee, Min Woo",
       "Lipsky, David",
-      "Lowry, Shane",
       "MacIntyre, Robert",
+      "Matsuyama, Hideki",
       "McCarthy, Denny",
       "McCarty, Matt",
+      "McIlroy, Rory",
       "McNealy, Maverick",
       "Morikawa, Collin",
       "Noren, Alex",
@@ -210,13 +207,11 @@
       "Pendrith, Taylor",
       "Poston, J.T.",
       "Potgieter, Aldrich",
-      "Putnam, Andrew",
       "Rodgers, Patrick",
       "Rose, Justin",
       "Schauffele, Xander",
-      "Scheffler, Scottie",
-      "Schenk, Adam",
-      "Smith, Jordan",
+      "Scott, Adam",
+      "Smalley, Alex",
       "Smotherman, Austin",
       "Spaun, J.J.",
       "Spieth, Jordan",
@@ -225,17 +220,42 @@
       "Taylor, Nick",
       "Theegala, Sahith",
       "Thomas, Justin",
-      "Thorbjornsen, Michael",
-      "Valimaki, Sami",
       "Vegas, Jhonattan",
-      "Vilips, Karl",
       "Wallace, Matt",
       "Woodland, Gary",
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-04-12 20:19:30 ET",
+    "last_updated": "2026-05-02 03:53:17 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-02 03:53:17 ET",
+        "added": [
+          "Fitzpatrick, Alex",
+          "Hughes, Mackenzie",
+          "Matsuyama, Hideki",
+          "McIlroy, Rory",
+          "Scott, Adam",
+          "Smalley, Alex"
+        ],
+        "withdrawn": [
+          "Brennan, Michael",
+          "Fisk, Steven",
+          "Henley, Russell",
+          "Higgo, Garrick",
+          "Highsmith, Joe",
+          "Keefer, Johnny",
+          "Lowry, Shane",
+          "Putnam, Andrew",
+          "Scheffler, Scottie",
+          "Schenk, Adam",
+          "Smith, Jordan",
+          "Thorbjornsen, Michael",
+          "Valimaki, Sami",
+          "Vilips, Karl"
+        ],
+        "note": "+6 / -14"
+      },
       {
         "timestamp": "2026-04-12 20:19:30 ET",
         "added": [],
@@ -357,12 +377,6 @@
       },
       {
         "timestamp": "2026-04-02 12:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-01 19:19:26 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
