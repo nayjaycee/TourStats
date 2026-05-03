@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-03 09:26:09 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Cadillac Championship",
+      "details": "Field updated: 556, 480"
+    },
+    {
       "timestamp": "2026-05-03 04:08:42 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-27 16:51:02 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Cadillac Championship",
-      "details": "Field updated: 556"
-    },
-    {
-      "timestamp": "2026-04-27 15:42:22 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
       "details": "Field updated: 556"
