@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-04 16:57:46 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,033 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-05-04 16:57:44 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-01 09:42:01 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Cadillac Championship",
-      "details": "Field updated: 556"
-    },
-    {
-      "timestamp": "2026-05-01 04:21:33 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
       "details": "Field updated: 556"
