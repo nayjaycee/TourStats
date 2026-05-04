@@ -51,12 +51,12 @@
       "McCarty, Matt",
       "McIlroy, Rory",
       "McNealy, Maverick",
-      "Morikawa, Collin",
       "Noren, Alex",
       "Novak, Andrew",
       "Pendrith, Taylor",
       "Poston, J.T.",
       "Potgieter, Aldrich",
+      "Putnam, Andrew",
       "Reitan, Kristoffer",
       "Rodgers, Patrick",
       "Rose, Justin",
@@ -77,8 +77,18 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-04 04:38:29 ET",
+    "last_updated": "2026-05-04 09:19:45 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-04 09:19:45 ET",
+        "added": [
+          "Putnam, Andrew"
+        ],
+        "withdrawn": [
+          "Morikawa, Collin"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-05-04 04:38:29 ET",
         "added": [
@@ -151,12 +161,6 @@
       },
       {
         "timestamp": "2026-05-01 09:42:01 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-01 04:21:33 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
