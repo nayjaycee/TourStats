@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-04 09:19:55 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 12,247 rows across 35 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-05-04 09:19:45 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-04-28 10:29:52 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Cadillac Championship",
-      "details": "Field updated: 556"
-    },
-    {
-      "timestamp": "2026-04-28 04:35:00 ET",
       "type": "field_odds_refresh",
       "event_name": "Cadillac Championship",
       "details": "Field updated: 556"
