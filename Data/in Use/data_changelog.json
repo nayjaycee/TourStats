@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-06 10:51:02 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480"
+    },
+    {
+      "timestamp": "2026-05-04 19:29:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-05-04 19:29:06 ET",
       "type": "approach_refresh",
       "event_name": "",
@@ -104,18 +116,6 @@
     },
     {
       "timestamp": "2026-05-03 14:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-03 12:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Cadillac Championship",
-      "details": "Field updated: 556, 480"
-    },
-    {
-      "timestamp": "2026-05-03 12:00:05 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"

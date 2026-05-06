@@ -42,7 +42,6 @@
       "Kim, Michael",
       "Kim, Si Woo",
       "Kitayama, Kurt",
-      "Knapp, Jake",
       "Lee, Min Woo",
       "Lipsky, David",
       "MacIntyre, Robert",
@@ -64,6 +63,7 @@
       "Scott, Adam",
       "Simpson, Webb",
       "Smalley, Alex",
+      "Smotherman, Austin",
       "Spaun, J.J.",
       "Spieth, Jordan",
       "Stevens, Sam",
@@ -77,8 +77,18 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-04 19:28:58 ET",
+    "last_updated": "2026-05-06 10:51:02 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-06 10:51:02 ET",
+        "added": [
+          "Smotherman, Austin"
+        ],
+        "withdrawn": [
+          "Knapp, Jake"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-05-04 19:28:58 ET",
         "added": [],
@@ -163,12 +173,6 @@
       },
       {
         "timestamp": "2026-04-27 16:51:02 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-27 15:42:22 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
