@@ -503,23 +503,19 @@ def render_oad_game_theory_tab() -> None:
         model_score = dg_hist if pd.notna(dg_hist) else (dg_model if pd.notna(dg_model) else np.nan)
         tier        = _model_tier(model_score) if pd.notna(model_score) else ""
 
-        # % of teams ahead who burned this player (can't use again)
-        burned_ahead     = [u for u, ids in team_used.items() if u in ahead_usernames and did in ids]
-        burned_ahead_pct = round(len(burned_ahead) / n_ahead * 100) if n_ahead > 0 else 0
-        ranks            = [team_rank[u] for u in burned_ahead if u in team_rank]
-        avg_rank         = round(float(np.mean(ranks)), 1) if ranks else np.nan
-
-        # % of jumpable teams who burned this player
-        jump_burned  = [u for u in burned_ahead if u in jumpable_usernames]
-        jump_pct     = round(len(jump_burned) / n_jumpable * 100) if n_jumpable > 0 else 0
-
-        # % of chasers who burned this player (can't use against us)
-        chaser_burned    = [u for u, ids in team_used.items() if u in chaser_usernames and did in ids]
-        chaser_pct       = round(len(chaser_burned) / n_chasers * 100) if n_chasers > 0 else 0
-
         # League-wide burned %
-        league_burned = [u for u, ids in team_used.items() if did in ids]
-        league_pct    = round(len(league_burned) / n_league * 100) if n_league > 0 else 0
+        league_burned     = [u for u, ids in team_used.items() if did in ids]
+        n_burned          = len(league_burned)
+        league_pct        = round(n_burned / n_league * 100) if n_league > 0 else 0
+
+        # Of those who burned him, what % are ahead of us vs behind us
+        burned_ahead      = [u for u in league_burned if u in ahead_usernames]
+        burned_chasers    = [u for u in league_burned if u in chaser_usernames]
+        burned_ahead_pct  = round(len(burned_ahead)   / n_burned * 100) if n_burned > 0 else 0
+        chaser_pct        = round(len(burned_chasers) / n_burned * 100) if n_burned > 0 else 0
+
+        ranks    = [team_rank[u] for u in burned_ahead if u in team_rank]
+        avg_rank = round(float(np.mean(ranks)), 1) if ranks else np.nan
 
         # Own % this week (filed event data)
         own_week = round(this_week_ownership.get(did, 0) / n_league * 100) if n_league > 0 else 0
@@ -558,10 +554,9 @@ def render_oad_game_theory_tab() -> None:
             "DG Model %":         dg_model,
             "Win % (odds)":       win_pct,
             "Best Odds":          f"{best_dec:.1f}" if pd.notna(best_dec) else "-",
-            "% Burned (ahead)":   burned_ahead_pct,
-            "% Burned (jump)":    jump_pct,
-            "% Burned (chasers)": chaser_pct,
             "% Burned (league)":  league_pct,
+            "% Burned (ahead)":   burned_ahead_pct,
+            "% Burned (chasers)": chaser_pct,
             "Picking Now (ahead)": picking_ahead_pct,
             "Own % this week":    own_week,
             "Avg Rank (users)":   avg_rank,
@@ -571,7 +566,7 @@ def render_oad_game_theory_tab() -> None:
         })
 
     gt_df    = pd.DataFrame(rows)
-    sort_col = "DG w/ Fit" if odds_available else "% Burned (ahead)"
+    sort_col = "DG w/ Fit" if odds_available else "% Burned (league)"
     gt_df    = gt_df.sort_values(sort_col, ascending=False, na_position="last").reset_index(drop=True)
 
     # -- Differentiation scatter ───────────────────────────────────────────────
@@ -579,9 +574,9 @@ def render_oad_game_theory_tab() -> None:
     y_col   = "DG w/ Fit" if odds_available else "% Burned (league)"
     y_title = "DG w/ Fit Win %  ->  higher is better" if odds_available else "% Burned (league)  ->  popularity proxy"
     st.caption(
-        "X = % of teams ahead that have burned (can't reuse) this player.  "
+        "X = % of those who burned this player that are ahead of us.  "
         f"Y = {'DG model w/ history win %' if odds_available else '% burned league-wide'}.  "
-        "Top-right = high win chance + fewer competitors ahead."
+        "Top-left = high win chance + burned mostly by teams behind us."
     )
 
     chart_df = gt_df.dropna(subset=[y_col]).copy()
@@ -607,10 +602,10 @@ def render_oad_game_theory_tab() -> None:
             "League burned: %{y:.0f}%<br>"
         )
         + "% Burned (ahead): %{x:.0f}%  -  Avg rank: %{customdata[3]}<br>"
-          "% Burned (jump): %{customdata[4]:.0f}%"
+          "% Burned (chasers): %{customdata[4]:.0f}%"
           "<extra></extra>"
     )
-    cd_cols = ["Player", "DG Model %", "Win % (odds)", "Avg Rank (users)", "% Burned (jump)", "Best Odds"]
+    cd_cols = ["Player", "DG Model %", "Win % (odds)", "Avg Rank (users)", "% Burned (chasers)", "Best Odds"]
 
     fig = go.Figure()
     for status, color in color_map.items():
@@ -648,7 +643,7 @@ def render_oad_game_theory_tab() -> None:
     fig.update_layout(
         plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
         height=520,
-        xaxis=dict(title="% of Teams Ahead - Burned (can't reuse)", gridcolor="rgba(128,128,128,0.2)", zeroline=False),
+        xaxis=dict(title="% of Those Who Burned Him - Ahead of Us", gridcolor="rgba(128,128,128,0.2)", zeroline=False),
         yaxis=dict(title=y_title, gridcolor="rgba(128,128,128,0.2)", zeroline=False),
         legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0,
                     font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
@@ -679,7 +674,7 @@ def render_oad_game_theory_tab() -> None:
     show_cols = [
         "Player", "Tier",
         "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
-        "% Burned (ahead)", "% Burned (jump)", "% Burned (chasers)", "% Burned (league)",
+        "% Burned (league)", "% Burned (ahead)", "% Burned (chasers)",
         "Picking Now (ahead)", "Own % this week",
         "Avg Rank (users)", "New Rank",
         "We Can Use", "We Used",
@@ -692,13 +687,12 @@ def render_oad_game_theory_tab() -> None:
         show_cols = [c for c in show_cols if c != "% Burned (chasers)"]
 
     fmt = {
-        "DG w/ Fit":       "{:.1f}%",
+        "DG w/ Fit":           "{:.1f}%",
         "DG Model %":          "{:.1f}%",
         "Win % (odds)":        "{:.1f}%",
-        "% Burned (ahead)":    "{:.0f}%",
-        "% Burned (jump)":     "{:.0f}%",
-        "% Burned (chasers)":  "{:.0f}%",
         "% Burned (league)":   "{:.0f}%",
+        "% Burned (ahead)":    "{:.0f}%",
+        "% Burned (chasers)":  "{:.0f}%",
         "Picking Now (ahead)": "{:.0f}%",
         "Own % this week":     "{:.0f}%",
         "Avg Rank (users)":    "{:.1f}",
@@ -717,21 +711,21 @@ def render_oad_game_theory_tab() -> None:
     # -- Recommendation ────────────────────────────────────────────────────────
     st.markdown("### Recommendation - Available to Us")
     if odds_available:
-        st.caption("Score = DG w/ Fit % x (1 + % Burned (ahead) / 100)")
+        st.caption("Score = DG w/ Fit % x (1 + % Burned (league) / 100)")
         score_col = "DG w/ Fit"
     else:
-        st.caption("Score = % Burned (league) x (1 + % Burned (ahead) / 100)  -  odds not yet available")
+        st.caption("Score = % Burned (league)  -  odds not yet available")
         score_col = "% Burned (league)"
 
     avail = gt_df[gt_df["We Can Use"] & gt_df[score_col].notna()].copy()
-    avail["Score"] = avail[score_col] * (1 + avail["% Burned (ahead)"] / 100)
+    avail["Score"] = avail[score_col] * (1 + avail["% Burned (league)"] / 100)
     avail = avail.sort_values("Score", ascending=False).head(15)
 
     if not avail.empty:
         rec_cols = [
             "Player", "Tier",
             "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
-            "% Burned (ahead)", "% Burned (jump)", "% Burned (chasers)", "% Burned (league)",
+            "% Burned (league)", "% Burned (ahead)", "% Burned (chasers)",
             "Picking Now (ahead)", "Own % this week",
             "Avg Rank (users)", "New Rank", "Score",
         ]
@@ -757,7 +751,7 @@ def render_oad_game_theory_tab() -> None:
     # -- Teams ahead: best available ───────────────────────────────────────────
     st.markdown("### Teams Ahead - Best Available Picks")
     sort_key = "DG w/ Fit" if odds_available else "% Burned (league)"
-    st.caption(f"Top 5 players each team ahead can still use, ranked by {sort_key}.")
+    st.caption(f"Top 5 players each team ahead can still use, ranked by {sort_key if odds_available else 'league burn %'}.")
 
     player_info = gt_df.set_index("dg_id")[["Player", sort_key, "Tier"]].to_dict("index")
 
