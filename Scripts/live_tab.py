@@ -9,7 +9,7 @@ from io import StringIO
 from datetime import datetime, timezone
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Constants — match overview_tab / weather_tab style exactly
+# Constants - match overview_tab / weather_tab style exactly
 # ─────────────────────────────────────────────────────────────────────────────
 
 _BASE_URL = "https://feeds.datagolf.com/preds/live-tournament-stats"
@@ -58,7 +58,7 @@ def _par_fmt(val) -> str:
         if v == 0:  return "E"
         return f"+{v}" if v > 0 else str(v)
     except Exception:
-        return "—"
+        return "-"
 
 
 def _par_color(val) -> str:
@@ -77,7 +77,7 @@ def _thru_fmt(val) -> str:
         v = int(float(val))
         return "F" if v == 18 else str(v)
     except Exception:
-        return "—"
+        return "-"
 
 
 def _pct_fmt(val) -> str:
@@ -88,21 +88,21 @@ def _pct_fmt(val) -> str:
             return f"{v * 100:.1f}%"
         return f"{v:.1f}%"
     except Exception:
-        return "—"
+        return "-"
 
 
 def _yds_fmt(val) -> str:
     try:
         return f"{float(val):.1f} yds"
     except Exception:
-        return "—"
+        return "-"
 
 
 def _ft_fmt(val) -> str:
     try:
         return f"{float(val):.1f} ft"
     except Exception:
-        return "—"
+        return "-"
 
 
 def _short(name: str) -> str:
@@ -178,7 +178,7 @@ def get_current_round(field_df: pd.DataFrame) -> int:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Data fetch  — cached 60 s, manual override via session state
+# Data fetch  - cached 60 s, manual override via session state
 # ─────────────────────────────────────────────────────────────────────────────
 
 @st.cache_data(ttl=60, show_spinner=False)
@@ -195,7 +195,7 @@ def _fetch_live(api_key: str, round_param: str) -> pd.DataFrame:
     df = pd.read_csv(StringIO(resp.text))
     df.columns = [c.lower().strip() for c in df.columns]
 
-    # Forward-fill event_name / last_updated — only populated on first row
+    # Forward-fill event_name / last_updated - only populated on first row
     for col in ["event_name", "last_updated", "stat_display", "course"]:
         if col in df.columns:
             df[col] = df[col].replace("", np.nan).ffill()
@@ -220,7 +220,7 @@ def _load_live(api_key: str, round_param: str) -> pd.DataFrame:
     return _fetch_live(api_key, round_param)
 
 
-@st.cache_data(ttl=1800, show_spinner=False)  # 30 min — odds move slowly
+@st.cache_data(ttl=1800, show_spinner=False)  # 30 min - odds move slowly
 def _fetch_dk_odds(api_key: str) -> dict:
     """Fetch DraftKings win odds from DataGolf. Returns dg_id -> decimal odds dict."""
     try:
@@ -252,11 +252,11 @@ def _fetch_dk_odds(api_key: str) -> dict:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# A — Header bar  (event name, last updated, refresh button)
+# A - Header bar  (event name, last updated, refresh button)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_header(df: pd.DataFrame) -> None:
-    """Renders the top control bar — event name, freshness indicator, refresh button."""
+    """Renders the top control bar - event name, freshness indicator, refresh button."""
     event_name   = df["event_name"].iloc[0]  if "event_name"   in df.columns else "Live Tournament"
     last_updated = df["last_updated"].iloc[0] if "last_updated" in df.columns else ""
 
@@ -298,7 +298,7 @@ def _render_header(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# B — Summary stat chips (leader, low round SG, field avg SG total)
+# B - Summary stat chips (leader, low round SG, field avg SG total)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_hero_row(df: pd.DataFrame) -> None:
@@ -385,7 +385,7 @@ def _render_hero_row(df: pd.DataFrame) -> None:
     # Sort by delta descending so biggest separator is first
     sorted_sg = sorted(sg_available, key=lambda c: deltas[c], reverse=True)
 
-    # Build one HTML block — label | bar (proportional) | top-10 avg | vs field delta
+    # Build one HTML block - label | bar (proportional) | top-10 avg | vs field delta
     items_html = ""
     for c in sorted_sg:
         label   = _SG_LABELS.get(c, c)
@@ -424,7 +424,7 @@ def _render_hero_row(df: pd.DataFrame) -> None:
         f"border-radius:10px'>"
         f"<div style='font-size:9px;font-weight:700;text-transform:uppercase;"
         f"letter-spacing:0.08em;color:rgba(100,100,100,0.5);margin-bottom:6px'>"
-        f"What's winning — Top 10 SG vs field avg</div>"
+        f"What's winning - Top 10 SG vs field avg</div>"
         f"{items_html}"
         f"</div>",
         unsafe_allow_html=True,
@@ -432,7 +432,7 @@ def _render_hero_row(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# C — Live leaderboard table
+# C - Live leaderboard table
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None) -> None:
@@ -485,7 +485,7 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
                 for col, lbl, color in components]
         vals = [(lbl, color, v) for lbl, color, v in vals if pd.notna(v)]
         if not vals:
-            return "<span style='color:rgba(100,100,100,0.4);font-size:11px'>—</span>"
+            return "<span style='color:rgba(100,100,100,0.4);font-size:11px'>-</span>"
 
         # Center-baseline layout: label | [neg bar←][→pos bar] | value
         # Half-width = 50% of available space, bar fills proportionally from center
@@ -525,10 +525,10 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
     def _rows_html(slice_df, muted=False) -> str:
         html = ""
         for idx, (_, row) in enumerate(slice_df.iterrows()):
-            pos      = str(row.get("position", "—"))
+            pos      = str(row.get("position", "-"))
             if pos.lower() == "waiting":
-                pos = "—"
-            name     = str(row.get("player_name", "—"))
+                pos = "-"
+            name     = str(row.get("player_name", "-"))
             total    = row.get("total", np.nan)
             rnd      = row.get("round", np.nan)
             thru     = row.get("thru", np.nan)
@@ -547,10 +547,10 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
                     tee_time = tee_map.get(int(float(dg_id)), "") if pd.notna(dg_id) else ""
                 except Exception:
                     tee_time = ""
-                thru_s = f"<span style='color:rgba(150,150,150,0.6);font-size:10px'>{tee_time}</span>" if tee_time else "—"
+                thru_s = f"<span style='color:rgba(150,150,150,0.6);font-size:10px'>{tee_time}</span>" if tee_time else "-"
             else:
                 thru_s = _thru_fmt(thru)
-            sg_s    = f"{sg_total:+.2f}" if pd.notna(sg_total) else "—"
+            sg_s    = f"{sg_total:+.2f}" if pd.notna(sg_total) else "-"
             sg_c    = "#34d399" if pd.notna(sg_total) and sg_total > 0 else "#ef4444" if pd.notna(sg_total) and sg_total < 0 else "rgba(180,180,180,0.6)"
             sg_bar  = _sg_bar_html(row)
 
@@ -558,7 +558,7 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
             opacity    = "opacity:0.45;" if muted else ""
             top_border = "border-top:2px solid #fbbf24;" if pos == "1" else ""
 
-            # DK odds — convert decimal to American
+            # DK odds - convert decimal to American
             dk_raw = row.get("dk_odds", np.nan)
             if pd.notna(dk_raw) and not muted:
                 dk_dec = float(dk_raw)
@@ -569,14 +569,17 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
                 dk_cell = (f"<td style='padding:6px 4px;text-align:center;font-size:12px;"
                            f"font-weight:700;color:rgba(0,163,255,0.85)'>{dk_s}</td>")
             else:
-                dk_cell = "<td style='padding:6px 4px;text-align:center;font-size:11px;color:rgba(80,80,80,0.5)'>—</td>"
+                dk_cell = "<td style='padding:6px 4px;text-align:center;font-size:11px;color:rgba(80,80,80,0.5)'>-</td>"
 
+            _dg = row.get("dg_id")
+            _nav = f"<a href='?nav_dd={int(float(_dg))}' style='color:inherit;text-decoration:none'>" if pd.notna(_dg) else ""
+            _nav_end = "</a>" if pd.notna(_dg) else ""
             html += (
                 f"<tr style='border-bottom:1px solid rgba(255,255,255,0.04);"
                 f"background:{stripe};{opacity}{top_border}'>"
                 f"<td style='padding:6px 8px;font-weight:700;color:rgba(255,255,255,0.75);font-size:13px'>{pos}</td>"
                 f"<td style='padding:6px 8px;font-weight:600;color:rgba(255,255,255,0.9);font-size:12px;"
-                f"white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px'>{name}</td>"
+                f"white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px'>{_nav}{name}{_nav_end}</td>"
                 f"<td style='padding:6px 4px;text-align:center;font-size:15px;font-weight:800;color:{total_c}'>{total_s}</td>"
                 f"<td style='padding:6px 4px;text-align:center;font-size:13px;font-weight:600;color:{rnd_c}'>{rnd_s}</td>"
                 f"<td style='padding:6px 4px;text-align:center;font-size:12px;color:rgba(170,170,170,0.6)'>{thru_s}</td>"
@@ -609,7 +612,7 @@ def _render_leaderboard(df: pd.DataFrame, id_to_img: dict, tee_map: dict = None)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# E — Watchlist  (My Players)
+# E - Watchlist  (My Players)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
@@ -684,9 +687,9 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
     cards_html = "<div style='display:flex;flex-wrap:wrap;gap:12px;padding:4px 0'>"
 
     for _, row in watch_df.iterrows():
-        pos   = str(row.get("position", "—"))
-        if pos.lower() == "waiting": pos = "—"
-        name  = str(row.get("player_name", "—"))
+        pos   = str(row.get("position", "-"))
+        if pos.lower() == "waiting": pos = "-"
+        name  = str(row.get("player_name", "-"))
         total = row.get("total", np.nan)
         rnd   = row.get("round", np.nan)
         thru  = row.get("thru", np.nan)
@@ -694,7 +697,7 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
 
         total_s = _par_fmt(total); total_c = _par_color(total)
         rnd_s   = _par_fmt(rnd);   rnd_c   = _par_color(rnd)
-        sg_s    = f"{sg:+.2f}" if pd.notna(sg) else "—"
+        sg_s    = f"{sg:+.2f}" if pd.notna(sg) else "-"
         sg_c    = "#34d399" if pd.notna(sg) and sg > 0 else "#ef4444" if pd.notna(sg) and sg < 0 else "rgba(180,180,180,0.6)"
 
         not_started = pd.isna(thru) or (pd.notna(thru) and int(float(thru)) == 0)
@@ -702,7 +705,7 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
             dg_id = row.get("dg_id")
             try: tee_time = tee_map.get(int(float(dg_id)), "") if pd.notna(dg_id) else ""
             except Exception: tee_time = ""
-            thru_s = tee_time if tee_time else "—"
+            thru_s = tee_time if tee_time else "-"
         else:
             thru_s = _thru_fmt(thru)
 
@@ -744,14 +747,14 @@ def _render_watchlist(df: pd.DataFrame, tee_map: dict = None) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# D — SG snapshot  (horizontal bar, top 15 by SG total)
+# D - SG snapshot  (horizontal bar, top 15 by SG total)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_sg_snapshot(df: pd.DataFrame) -> None:
     _divider()
     st.markdown(f"<div style='{_SEC}'>Strokes Gained Snapshot</div>", unsafe_allow_html=True)
     st.markdown(
-        f"<div style='{_SUB}'>Top 15 by SG Total — component breakdown</div>",
+        f"<div style='{_SUB}'>Top 15 by SG Total - component breakdown</div>",
         unsafe_allow_html=True,
     )
 
@@ -771,7 +774,7 @@ def _render_sg_snapshot(df: pd.DataFrame) -> None:
             name=_SG_LABELS[comp],
             orientation="h",
             marker=dict(color=_SG_COLORS[comp], opacity=0.85),
-            hovertemplate=f"<b>%{{y}}</b> — {_SG_LABELS[comp]}: <b>%{{x:+.2f}}</b><extra></extra>",
+            hovertemplate=f"<b>%{{y}}</b> - {_SG_LABELS[comp]}: <b>%{{x:+.2f}}</b><extra></extra>",
         ))
 
     # SG total diamond markers
@@ -785,7 +788,7 @@ def _render_sg_snapshot(df: pd.DataFrame) -> None:
             color="rgba(255,255,255,0.9)",
             line=dict(color="rgba(0,0,0,0.4)", width=1),
         ),
-        hovertemplate="<b>%{y}</b> — SG Total: <b>%{x:+.2f}</b><extra></extra>",
+        hovertemplate="<b>%{y}</b> - SG Total: <b>%{x:+.2f}</b><extra></extra>",
     ))
 
     fig.update_layout(
@@ -810,7 +813,7 @@ def _render_sg_snapshot(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# E — Movers strip  (requires previous snapshot stored in session state)
+# E - Movers strip  (requires previous snapshot stored in session state)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_movers(df: pd.DataFrame) -> None:
@@ -893,7 +896,7 @@ def _render_movers(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# F — Player strengths map  (T2G vs Short Game, colored by cut status)
+# F - Player strengths map  (T2G vs Short Game, colored by cut status)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_strengths_map(df: pd.DataFrame, cut_line=None) -> None:
@@ -1034,7 +1037,7 @@ def _render_strengths_map(df: pd.DataFrame, cut_line=None) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# G — Proximity table  (prox_fw and prox_rgh, top 15)
+# G - Proximity table  (prox_fw and prox_rgh, top 15)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_proximity(df: pd.DataFrame) -> None:
@@ -1070,7 +1073,7 @@ def _render_proximity(df: pd.DataFrame) -> None:
             name="Fairway",
             orientation="h",
             marker=dict(color="rgba(56,189,248,0.75)"),
-            hovertemplate="<b>%{y}</b> — Fairway: <b>%{x:.1f} ft</b><extra></extra>",
+            hovertemplate="<b>%{y}</b> - Fairway: <b>%{x:.1f} ft</b><extra></extra>",
         ))
 
     if "prox_rgh" in prox_df.columns:
@@ -1080,7 +1083,7 @@ def _render_proximity(df: pd.DataFrame) -> None:
             name="Rough",
             orientation="h",
             marker=dict(color="rgba(249,115,22,0.65)"),
-            hovertemplate="<b>%{y}</b> — Rough: <b>%{x:.1f} ft</b><extra></extra>",
+            hovertemplate="<b>%{y}</b> - Rough: <b>%{x:.1f} ft</b><extra></extra>",
         ))
 
     fig.update_layout(
@@ -1104,7 +1107,7 @@ def _render_proximity(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# H — SG quad panel  (top 10 per category: OTT, APP, ARG, PUTT)
+# H - SG quad panel  (top 10 per category: OTT, APP, ARG, PUTT)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_sg_quad(df: pd.DataFrame) -> None:
@@ -1166,7 +1169,7 @@ def _render_sg_quad(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# I — "Winning with what"  (stacked 100% bar for top 10 by total score)
+# I - "Winning with what"  (stacked 100% bar for top 10 by total score)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_winning_with_what(df: pd.DataFrame) -> None:
@@ -1178,7 +1181,7 @@ def _render_winning_with_what(df: pd.DataFrame) -> None:
     _divider()
     st.markdown(f"<div style='{_SEC}'>Winning With What</div>", unsafe_allow_html=True)
     st.markdown(
-        f"<div style='{_SUB}'>SG composition for top 10 on the leaderboard — where strokes are coming from</div>",
+        f"<div style='{_SUB}'>SG composition for top 10 on the leaderboard - where strokes are coming from</div>",
         unsafe_allow_html=True,
     )
 
@@ -1209,7 +1212,7 @@ def _render_winning_with_what(df: pd.DataFrame) -> None:
             x=[_short(n) for n in top10["player_name"]],
             y=pos_vals,
             marker_color=color,
-            hovertemplate=f"<b>%{{x}}</b> — {label}: <b>%{{y:+.2f}}</b><extra></extra>",
+            hovertemplate=f"<b>%{{x}}</b> - {label}: <b>%{{y:+.2f}}</b><extra></extra>",
             legendgroup=comp,
         ))
         # Negative portion (same color, slightly more transparent)
@@ -1220,7 +1223,7 @@ def _render_winning_with_what(df: pd.DataFrame) -> None:
                 y=neg_vals,
                 marker_color=color,
                 opacity=0.45,
-                hovertemplate=f"<b>%{{x}}</b> — {label}: <b>%{{y:+.2f}}</b><extra></extra>",
+                hovertemplate=f"<b>%{{x}}</b> - {label}: <b>%{{y:+.2f}}</b><extra></extra>",
                 legendgroup=comp,
                 showlegend=False,
             ))
@@ -1237,7 +1240,7 @@ def _render_winning_with_what(df: pd.DataFrame) -> None:
                 color="rgba(255,255,255,0.9)",
                 line=dict(color="rgba(0,0,0,0.4)", width=1),
             ),
-            hovertemplate="<b>%{x}</b> — SG Total: <b>%{y:+.2f}</b><extra></extra>",
+            hovertemplate="<b>%{x}</b> - SG Total: <b>%{y:+.2f}</b><extra></extra>",
         ))
 
     fig.update_layout(
@@ -1262,7 +1265,7 @@ def _render_winning_with_what(df: pd.DataFrame) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# J — Cut line strip  (projected cut on the leaderboard)
+# J - Cut line strip  (projected cut on the leaderboard)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_cut_strip(df, cut_line=None):
@@ -1280,7 +1283,7 @@ def _render_cut_strip(df, cut_line=None):
     if n < 10:
         return
 
-    # Infer cut position — standard 65+ties, use 65 as hard cutoff
+    # Infer cut position - standard 65+ties, use 65 as hard cutoff
     _cut_n = int(cut_line) if cut_line else 65
     cut_pos = min(_cut_n, n - 1)
     cut_score = float(scores.iloc[cut_pos - 1])
@@ -1306,7 +1309,7 @@ def _render_cut_strip(df, cut_line=None):
         hovertemplate="Score %{x}: <b>%{y} players</b><extra></extra>",
     ))
 
-    # Cut line annotation — use shape+annotation (add_vline doesn't work on categorical axes)
+    # Cut line annotation - use shape+annotation (add_vline doesn't work on categorical axes)
     cut_x_label = _par_fmt(cut_score)
     cut_x_idx   = score_range.index(int(cut_score)) if int(cut_score) in score_range else None
     if cut_x_idx is not None:
@@ -1388,7 +1391,7 @@ def _render_cut_strip(df, cut_line=None):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# K — Round delta scatter  (R1 vs R2 SG total)
+# K - Round delta scatter  (R1 vs R2 SG total)
 # ─────────────────────────────────────────────────────────────────────────────
 
 @st.cache_data(ttl=60, show_spinner=False)
@@ -1425,7 +1428,7 @@ def _render_round_delta(api_key: str, current_round: int) -> None:
     _divider()
     st.markdown(f"<div style='{_SEC}'>Round-over-Round SG Delta</div>", unsafe_allow_html=True)
     st.markdown(
-        f"<div style='{_SUB}'>R1 vs R2 SG Total — who improved, who regressed</div>",
+        f"<div style='{_SUB}'>R1 vs R2 SG Total - who improved, who regressed</div>",
         unsafe_allow_html=True,
     )
 
@@ -1582,7 +1585,7 @@ def _render_round_delta(api_key: str, current_round: int) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# L — SG success analysis  (what's driving leaderboard performance)
+# L - SG success analysis  (what's driving leaderboard performance)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_sg_success_analysis(df: pd.DataFrame) -> None:
@@ -1614,7 +1617,7 @@ def _render_sg_success_analysis(df: pd.DataFrame) -> None:
     sg_all    = [clean[c].mean()  for c in sg_cats]
     deltas    = [t - b for t, b in zip(sg_top, sg_bot)]
 
-    # Extra axes: GIR and scrambling — convert to pct if 0-1
+    # Extra axes: GIR and scrambling - convert to pct if 0-1
     extra_axes = []
     for col, lbl in [("gir", "GIR"), ("scrambling", "Scramble")]:
         if col in clean.columns:
@@ -1672,14 +1675,14 @@ def _render_sg_success_analysis(df: pd.DataFrame) -> None:
     _divider()
     st.markdown(f"<div style='{_SEC}'>What's Driving Success This Week</div>", unsafe_allow_html=True)
     st.markdown(
-        f"<div style='{_SUB}'>SG profile + GIR & scrambling — Top 10 vs Field vs Bottom third</div>",
+        f"<div style='{_SUB}'>SG profile + GIR & scrambling - Top 10 vs Field vs Bottom third</div>",
         unsafe_allow_html=True,
     )
 
     # Full width spider
     fig = go.Figure()
 
-        # Bottom third — faint outline only
+        # Bottom third - faint outline only
     fig.add_trace(go.Scatterpolar(
             r=bot_r, theta=theta,
             fill="toself",
@@ -1699,7 +1702,7 @@ def _render_sg_success_analysis(df: pd.DataFrame) -> None:
             customdata=all_hover,
             hovertemplate="<b>%{theta}</b>: %{customdata:+.2f}<extra>Field avg</extra>",
         ))
-        # Top 10 — bold filled
+        # Top 10 - bold filled
     fig.add_trace(go.Scatterpolar(
             r=top_r, theta=theta,
             fill="toself",
@@ -1782,13 +1785,13 @@ def _render_sg_success_analysis(df: pd.DataFrame) -> None:
 
 def render_live_tab(*, field_df, id_to_img, cut_line=None):
     """
-    Main entry point — called from Stats.py.
+    Main entry point - called from Stats.py.
 
     Parameters
     ----------
     field_df : this_week_field.csv loaded as a DataFrame (used for OWGR)
     id_to_img : dg_id → headshot URL dict
-    cut_line  : int or None — cut line from schedule
+    cut_line  : int or None - cut line from schedule
     """
     api_key = st.secrets.get("DATAGOLF_API_KEY", "")
     if not api_key:
@@ -1818,10 +1821,10 @@ def render_live_tab(*, field_df, id_to_img, cut_line=None):
             return
 
     if df.empty:
-        st.info("No live data returned — the tournament may not have started yet.")
+        st.info("No live data returned - the tournament may not have started yet.")
         return
 
-    # Merge DK odds — fetched from API, cached 30 min in memory
+    # Merge DK odds - fetched from API, cached 30 min in memory
     dk_map = _fetch_dk_odds(api_key)
     df["dg_id"]   = pd.to_numeric(df["dg_id"], errors="coerce")
     df["dk_odds"] = df["dg_id"].map(lambda x: dk_map.get(int(x)) if pd.notna(x) else np.nan)

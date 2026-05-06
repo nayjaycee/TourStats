@@ -87,7 +87,7 @@ def render_player_deep_dive_tab(
     if field_ids:
         pool = pool[pool["dg_id"].isin([int(x) for x in field_ids if pd.notna(x)])].copy()
     else:
-        st.caption("No field data available — showing all players.")
+        st.caption("No field data available - showing all players.")
 
     if pool.empty:
         st.info("No players available.")
@@ -136,7 +136,7 @@ def render_player_deep_dive_tab(
     m = {c: _safe_mean(r40, c) for c in ALL_STATS}
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 1 — HERO + KPIs
+    # SECTION 1 - HERO + KPIs
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     hero_l, hero_r = st.columns([7, 3], gap="large")
@@ -153,14 +153,14 @@ def render_player_deep_dive_tab(
         yrow = ytd.loc[ytd["dg_id"] == dg_id].iloc[0] if not ytd.loc[ytd["dg_id"] == dg_id].empty else None
 
         def _fv(key, fmt="{:.0f}"):
-            if yrow is None: return "—"
+            if yrow is None: return "-"
             v = yrow.get(key)
-            if v is None or (isinstance(v, float) and pd.isna(v)): return "—"
+            if v is None or (isinstance(v, float) and pd.isna(v)): return "-"
             try: return fmt.format(float(v))
             except: return str(v)
 
         kpi_items = [
-            ("Odds",    f"{odds_val:.1f}" if odds_val else "—"),
+            ("Odds",    f"{odds_val:.1f}" if odds_val else "-"),
             ("Starts",  _fv("ytd_starts")),
             ("Cut %",   _fv("ytd_made_cut_pct", "{:.0%}")),
             ("Top 10",  _fv("ytd_top10")),
@@ -210,17 +210,17 @@ def render_player_deep_dive_tab(
             st.plotly_chart(fig_gauge, use_container_width=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 1b — STACKED SG ROUNDS CHART (Last 60 Rounds)
+    # SECTION 1b - STACKED SG ROUNDS CHART (Last 60 Rounds)
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Form Trend - Last 60 Rounds")
     st.caption("Rounds without bars indicate non-PGA Tour events (SG breakdown not available).")
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 6 — FORM TREND
+    # SECTION 6 - FORM TREND
     # ══════════════════════════════════════════════════════════════════════════
     # st.divider()
-    # st.subheader("Form Trend — Last 40 Rounds")
+    # st.subheader("Form Trend - Last 40 Rounds")
     _info_expander("How to read this", "", section="form_trend", btn_key="_doc_dd_formtrend")
 
     smooth_w = st.slider("Smoothing window", 1, 15, 5, key="dd_smooth")
@@ -355,10 +355,10 @@ def render_player_deep_dive_tab(
 
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 1c — FORM CONTEXT (L12 vs L60 component z-scores)
+    # SECTION 1c - FORM CONTEXT (L12 vs L60 component z-scores)
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
-    st.subheader("Form Context — L12 vs L60 Baseline")
+    st.subheader("Form Context - L12 vs L60 Baseline")
     _info_expander("How to read this", "", section="form_context", btn_key="_doc_dd_formctx")
 
     SG_DISPLAY = [
@@ -471,10 +471,10 @@ def render_player_deep_dive_tab(
         st.caption("Not enough rounds to compute form context.")
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 2 — FIELD PERCENTILE BARS
+    # SECTION 2 - FIELD PERCENTILE BARS
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
-    st.subheader("Field Percentile — Last 60 Rounds")
+    st.subheader("Field Percentile - Last 60 Rounds")
     _info_expander("How to read this", "", section="field_percentile", btn_key="_doc_dd_pctile")
 
     PCTILE_STATS = [
@@ -619,7 +619,7 @@ def render_player_deep_dive_tab(
         st.info("Not enough field data to compute percentiles.")
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 2b — PUTTING BY SURFACE
+    # SECTION 2b - PUTTING BY SURFACE
     # ══════════════════════════════════════════════════════════════════════════
     if schedule_df is not None:
         st.divider()
@@ -636,10 +636,10 @@ def render_player_deep_dive_tab(
         )
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 3 — SKILL PROFILE (ridge plot, single player vs field)
+    # SECTION 3 - SKILL PROFILE (ridge plot, single player vs field)
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
-    st.subheader("Skill Distribution Profile — Last 60 Rounds")
+    st.subheader("Skill Distribution Profile - Last 60 Rounds")
     _info_expander("How to read this", "", section="sg_profile", btn_key="_doc_dd_sgprofile")
 
     RIDGE_CATS = ["driving_dist", "driving_acc", "sg_app", "sg_arg", "sg_putt"]
@@ -780,7 +780,7 @@ def render_player_deep_dive_tab(
                     marker=dict(size=13, color=COL, line=dict(color="white", width=2)),
                     showlegend=False,
                     hovertemplate=(
-                        f"<b>{player_name}</b> — {full_name}<br>"
+                        f"<b>{player_name}</b> - {full_name}<br>"
                         f"Mean: <b>{mean_z:+.2f}σ</b>  ·  Spread: {std_z:.2f}σ"
                         "<extra></extra>"
                     ),
@@ -838,7 +838,7 @@ def render_player_deep_dive_tab(
         st.plotly_chart(fig_ridge, use_container_width=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 4 — COURSE FIT
+    # SECTION 4 - COURSE FIT
     # ══════════════════════════════════════════════════════════════════════════
     if course_fit_df is not None and course_num is not None:
         st.divider()
@@ -925,7 +925,7 @@ def render_player_deep_dive_tab(
                     f"<div style='background:rgba(255,165,0,0.08);border-radius:6px;"
                     f"border-left:3px solid rgba(255,165,0,0.6);padding:8px 12px;"
                     f"font-size:12px;color:rgba(220,200,150,0.9)'>"
-                    f"High randomness course — {course_name} ranks in the "
+                    f"High randomness course - {course_name} ranks in the "
                     f"{int(round(randomness_pct*100))}th percentile for randomness. "
                     f"Course fit is a weaker signal here."
                     f"</div>",
@@ -935,7 +935,7 @@ def render_player_deep_dive_tab(
 
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 5 — APPROACH PROXIMITY (two combined greens)
+    # SECTION 5 - APPROACH PROXIMITY (two combined greens)
     # ══════════════════════════════════════════════════════════════════════════
     if approach_skill_df is not None and not approach_skill_df.empty:
         st.divider()
@@ -995,7 +995,7 @@ def render_player_deep_dive_tab(
                 showarrow=False, xanchor="center",
             )
 
-            # Rings — draw largest first so smaller ones sit on top
+            # Rings - draw largest first so smaller ones sit on top
             sorted_buckets = sorted(buckets, key=lambda b: _pv(b[1]) if np.isfinite(_pv(b[1])) else 999, reverse=True)
 
             # Angle offsets so radius spokes don't collide (spread around clock)
@@ -1124,7 +1124,7 @@ def render_player_deep_dive_tab(
                 )
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 7 — COURSE HISTORY
+    # SECTION 7 - COURSE HISTORY
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Course History")
@@ -1190,7 +1190,7 @@ def render_player_deep_dive_tab(
             st.dataframe(heat_table(ch[show], sg_cols=sg_cols, precision=2), use_container_width=True, hide_index=True)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 8 — RECENT TOURNAMENTS
+    # SECTION 8 - RECENT TOURNAMENTS
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.subheader("Recent Tournaments")
@@ -1281,7 +1281,7 @@ def render_player_deep_dive_tab(
                 lambda x: f"{int(x)}" if pd.notna(x) else ""
             )
 
-            # Heat scale finish and position — lower number = better (invert colormap)
+            # Heat scale finish and position - lower number = better (invert colormap)
             heat_num_cols = []
             sty = heat_table(rnd_df.drop(columns=[c for c in ["_pos_num", "_fin_num"] if c in rnd_df.columns]),
                              sg_cols=sg_only, precision=2)

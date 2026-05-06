@@ -15,9 +15,9 @@ from typing import List, Optional
 # ── Same-venue course_num aliases ─────────────────────────────────────────────
 # Maps a course_num to other course_nums that represent the same physical venue
 # but were used for a different event (e.g. a major at a regular tour venue).
-# Both directions are handled automatically — no need to add reverse entries.
+# Both directions are handled automatically - no need to add reverse entries.
 SAME_VENUE_COURSE_NUMS: dict[int, list[int]] = {
-    872: [241],   # Quail Hollow Club — Truist(872) + PGA Championship setup(241)
+    872: [241],   # Quail Hollow Club - Truist(872) + PGA Championship setup(241)
 }
 
 # ── Rotating major event IDs ───────────────────────────────────────────────────
@@ -164,7 +164,7 @@ def render_course_history_demo(
     cr_all = _course_rounds(rounds_df, int(course_num))
     # Cancelled/incomplete events where finish_num == 1 should not count as wins
     CANCELLED_EVENT_EXCLUSIONS = {
-        # (player_name_substring, year) — The Players 2020 was cancelled mid-round (COVID)
+        # (player_name_substring, year) - The Players 2020 was cancelled mid-round (COVID)
         ("Matsuyama", 2020),
     }
 
@@ -220,27 +220,31 @@ def render_course_history_demo(
                     img = id_to_img.get(dg_id)
                 if img is None and name_to_img and name:
                     img = name_to_img.get(name)
-                if img:
-                    st.image(img, use_container_width=True)
-                else:
-                    initials = "".join(p[0].upper() for p in name.replace(",", " ").split() if p)[:2]
-                    st.markdown(
-                        f"<div style='width:100%;aspect-ratio:200/220;background:rgba(80,80,80,0.25);"
-                        f"border-radius:6px;display:flex;align-items:center;justify-content:center;"
-                        f"font-size:28px;font-weight:700;color:rgba(255,255,255,0.25)'>{initials}</div>",
-                        unsafe_allow_html=True,
-                    )
+                _nav_open  = f"<a href='?nav_dd={dg_id}' style='text-decoration:none;color:inherit;display:block'>" if dg_id else ""
+                _nav_close = "</a>" if dg_id else ""
+                initials = "".join(p[0].upper() for p in name.replace(",", " ").split() if p)[:2]
+                img_html = (
+                    f"<img src='{img}' style='width:100%;border-radius:6px;display:block;"
+                    f"transition:opacity .15s' onmouseover=\"this.style.opacity='0.75'\" onmouseout=\"this.style.opacity='1'\" />"
+                    if img else
+                    f"<div style='width:100%;aspect-ratio:200/220;background:rgba(80,80,80,0.25);"
+                    f"border-radius:6px;display:flex;align-items:center;justify-content:center;"
+                    f"font-size:28px;font-weight:700;color:rgba(255,255,255,0.25)'>{initials}</div>"
+                )
 
                 sg_val = r.get("SG")
                 sg_txt = f"{float(sg_val):+.1f}" if pd.notna(sg_val) else ""
                 rounds_val = r.get("ROUNDS", 0)
 
                 st.markdown(
-                    f"<div style='text-align: center; margin-top: 8px;'>"
-                    f"<div style='font-weight: 700; font-size: 14px;'>{name}</div>"
-                    f"<div style='font-size: 20px; font-weight: 800; color: #00CC96; margin: 4px 0;'>{sg_txt}</div>"
-                    f"<div style='font-size: 11px; color: #888;'>{int(rounds_val)} rounds</div>"
-                    f"</div>",
+                    f"{_nav_open}"
+                    f"<div style='transition:opacity .15s' onmouseover=\"this.style.opacity='0.8'\" onmouseout=\"this.style.opacity='1'\">"
+                    f"{img_html}"
+                    f"<div style='text-align:center;margin-top:8px'>"
+                    f"<div style='font-weight:700;font-size:14px'>{name}</div>"
+                    f"<div style='font-size:20px;font-weight:800;color:#00CC96;margin:4px 0'>{sg_txt}</div>"
+                    f"<div style='font-size:11px;color:#888'>{int(rounds_val)} rounds</div>"
+                    f"</div></div>{_nav_close}",
                     unsafe_allow_html=True,
                 )
 
@@ -347,7 +351,7 @@ def render_course_history_demo(
 
     # =========================================================================
     # SECTION 3: PAST PERFORMANCE ANALYSIS
-    # Uses rounds_df for ALL years — no ev_2017_2023 branch
+    # Uses rounds_df for ALL years - no ev_2017_2023 branch
     # =========================================================================
     st.markdown("### Past Performance Analysis")
     st.caption("Player positioning vs actual finish at this course")
@@ -382,7 +386,7 @@ def render_course_history_demo(
         window_num = int(perf_window[1:])
         event_year = int(perf_year)
 
-        # Approximate cutoff — day before the event year ends
+        # Approximate cutoff - day before the event year ends
         event_cutoff_date = pd.Timestamp(f"{event_year}-01-01")
 
         # Get finishes for this course + year (one row per player)
@@ -551,7 +555,7 @@ def render_course_history_demo(
             pd.to_numeric(rounds_df.get("event_id", pd.Series(dtype=float)), errors="coerce") == _eid
         ].copy()
     else:
-        # Exclude same-venue alias rounds — those belong only in Course History
+        # Exclude same-venue alias rounds - those belong only in Course History
         _primary_course_rounds = rounds_df[rounds_df["course_num"] == int(course_num)].copy() \
             if rounds_df is not None and not rounds_df.empty else pd.DataFrame()
         _results_df = _primary_course_rounds
@@ -681,7 +685,7 @@ def render_course_history_demo(
     # =========================================================================
     if _is_rotating_major and rounds_df is not None and not rounds_df.empty and effective_base_ids:
         st.divider()
-        st.markdown(f"### Major Record — {_major_name}")
+        st.markdown(f"### Major Record - {_major_name}")
         st.caption(f"Career performance in the {_major_name} across all editions (all venues)")
 
         maj_rounds = rounds_df[

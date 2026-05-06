@@ -21,7 +21,7 @@ def _strokes_gained():
     st.markdown("## Strokes Gained")
     st.markdown(
         "Strokes Gained (SG) is the golf analytics standard for measuring performance. "
-        "Every shot is compared to the tour average from the same situation — lie, distance, surface. "
+        "Every shot is compared to the tour average from the same situation - lie, distance, surface. "
         "A positive SG means the player did better than average on that shot; negative means worse. "
         "Totals accumulate across an entire round or tournament."
     )
@@ -31,11 +31,11 @@ def _strokes_gained():
         ("SG: Approach (APP)",          "Full shots into the green. The single biggest differentiator between elite and average players."),
         ("SG: Around the Green (ARG)",  "Chips, pitches, and bunker shots within ~30 yards of the green. Often called the 'scoring zone'."),
         ("SG: Putting (PUTT)",          "All putts. Measured relative to the average make probability from each distance."),
-        ("SG: Tee-to-Green (T2G)",      "OTT + APP + ARG combined. The 'ball-striking' composite — excludes putting."),
+        ("SG: Tee-to-Green (T2G)",      "OTT + APP + ARG combined. The 'ball-striking' composite - excludes putting."),
         ("SG: Total",                   "Sum of all four components. The best single-number summary of performance."),
     ]
     for name, desc in rows:
-        st.markdown(f"**{name}** — {desc}")
+        st.markdown(f"**{name}** - {desc}")
 
     st.markdown("### Interpreting values")
     st.markdown(
@@ -46,10 +46,10 @@ def _strokes_gained():
 
 
 def _rolling_windows():
-    st.markdown("## Rolling Windows — L12 / L24 / L40 / L60")
+    st.markdown("## Rolling Windows - L12 / L24 / L40 / L60")
     st.markdown(
         "Rolling windows count the most recent N rounds a player has played, regardless of how long "
-        "ago they happened. A player who took three weeks off still has the same L36 — it doesn't "
+        "ago they happened. A player who took three weeks off still has the same L36 - it doesn't "
         "go stale the way a fixed calendar window would."
     )
     rows = [
@@ -80,7 +80,7 @@ def _contender_model():
     st.markdown(
         "The Contender Score answers: *which players produce strong SG reliably, not just occasionally?* "
         "The mean captures sustained output over the last 36 rounds (~9–12 months). "
-        "The volatility penalty discounts boom-or-bust players — a player averaging +1.5 with wild swings "
+        "The volatility penalty discounts boom-or-bust players - a player averaging +1.5 with wild swings "
         "is less predictable than one averaging +1.2 consistently."
     )
 
@@ -106,11 +106,11 @@ def _contender_model():
         ("< 0.0",       "Below",      "Negative expected value relative to field average."),
     ]
     for score, label, desc in rows:
-        st.markdown(f"**{score} ({label})** — {desc}")
+        st.markdown(f"**{score} ({label})** - {desc}")
 
     st.markdown("### Why not a more complex model?")
     st.markdown(
-        "After testing 288 configurations — linear regression, random forest, multi-window ensembles — "
+        "After testing 288 configurations - linear regression, random forest, multi-window ensembles - "
         "every complex model underperformed the simple L36 mean/volatility formula out-of-sample. "
         "Complex models learn noise as signal and overfit to training data. Simplicity wins in golf."
     )
@@ -126,7 +126,7 @@ def _contender_model():
 def _sg_profile():
     st.markdown("## SG Profile Chart (Ridge / Density)")
     st.markdown(
-        "Each row shows the **full distribution of round-by-round performance** for one skill — "
+        "Each row shows the **full distribution of round-by-round performance** for one skill - "
         "not just an average, but every round played across the last 60. "
         "Think of it as a histogram smoothed into a curve."
     )
@@ -163,7 +163,7 @@ def _form_trend():
 
 
 def _form_context():
-    st.markdown("## Form Context — L12 vs L60 Baseline")
+    st.markdown("## Form Context - L12 vs L60 Baseline")
     st.markdown(
         "Shows how this player's last 12 rounds compare to their own long-term baseline "
         "(last 60 rounds) in each SG component."
@@ -208,9 +208,9 @@ def _course_fit():
     )
     st.markdown(
         "**Formula:** `Course Fit = Σ (course beta × player z-score)` for each skill\n\n"
-        "- **Course beta** — regression coefficient measuring how strongly each skill predicted "
+        "- **Course beta** - regression coefficient measuring how strongly each skill predicted "
         "actual scoring at that venue across thousands of rounds. Higher beta = more important skill.\n"
-        "- **Player z-score** — how many standard deviations a player's stat sits above or below tour average.\n"
+        "- **Player z-score** - how many standard deviations a player's stat sits above or below tour average.\n"
         "- **Positive fit score** → player's strengths align with what this course rewards.\n"
         "- **Bar chart** shows the per-skill contribution, so you can see *why* a player fits or doesn't."
     )
@@ -218,7 +218,7 @@ def _course_fit():
     st.markdown("### Course DNA")
     st.markdown(
         "The Course DNA dumbbell chart shows which skills this course rewards *relative to other courses* "
-        "— not just raw weight."
+        "- not just raw weight."
     )
     st.markdown(
         "- **Grey hollow dot** → tour-average course weight for that skill.\n"
@@ -264,7 +264,7 @@ def _course_history():
     st.markdown("## Course History")
     st.markdown(
         "Past results at a specific venue going back to 2017. "
-        "Shows how each player has historically performed at this exact course — "
+        "Shows how each player has historically performed at this exact course - "
         "not just finishes, but strokes gained averages per round."
     )
     st.markdown(

@@ -114,8 +114,8 @@ def _compute_surface_stats(rounds_df, schedule_df, dg_id,
                            field_ids, cutoff_dt, greens_ref_path):
     """
     Returns:
-      player_df  — one row per surface with window avgs + career_avg_all_surfaces
-      field_df   — one row per (dg_id, surface) for percentile calcs
+      player_df  - one row per surface with window avgs + career_avg_all_surfaces
+      field_df   - one row per (dg_id, surface) for percentile calcs
     """
     grass_lk = _build_grass_lookup(schedule_df, greens_ref_path)
     if not grass_lk:

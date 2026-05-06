@@ -19,13 +19,13 @@ from typing import Optional
 # ─────────────────────────────────────────────────────────────────────────────
 
 _CANCELLED_YEARS: dict[tuple[int, int], str] = {
-    (11, 2020): "Cancelled after R1 — COVID-19 (Hideki Matsuyama led)",
+    (11, 2020): "Cancelled after R1 - COVID-19 (Hideki Matsuyama led)",
 }
 
 # Some events were assigned a different event_id in a given year (e.g. COVID reschedules).
 # Key: canonical event_id → list of alternate event_ids that represent the same event.
 _EVENT_ID_ALIASES: dict[int, list[int]] = {
-    14: [536],   # Masters Tournament — 2021 edition stored as event_id 536 ("The Masters #2")
+    14: [536],   # Masters Tournament - 2021 edition stored as event_id 536 ("The Masters #2")
 }
 
 
@@ -34,24 +34,24 @@ _EVENT_ID_ALIASES: dict[int, list[int]] = {
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _clean(x) -> str:
-    if x is None: return "—"
+    if x is None: return "-"
     s = str(x).strip()
-    return "—" if s.lower() in {"nan","none","null","","<unset>"} else s
+    return "-" if s.lower() in {"nan","none","null","","<unset>"} else s
 
 def _money(x) -> str:
     v = pd.to_numeric(x, errors="coerce")
-    return f"${v:,.0f}" if pd.notna(v) else "—"
+    return f"${v:,.0f}" if pd.notna(v) else "-"
 
 def _odds_to_american(d) -> str:
     try:
         d = float(d)
-        if d <= 1.0: return "—"
+        if d <= 1.0: return "-"
         return f"+{int(round((d-1)*100))}" if d >= 2.0 else f"{int(round(-100/(d-1)))}"
-    except: return "—"
+    except: return "-"
 
 def _odds_to_implied(d) -> str:
     try: return f"{1/float(d)*100:.1f}%"
-    except: return "—"
+    except: return "-"
 
 def _label(text: str) -> str:
     return (
@@ -80,9 +80,9 @@ def _headshot(name: str, img_url, size: int = 32) -> str:
     )
 
 def _owgr_badge(owgr) -> str:
-    """Coloured rank pill — gold top10, silver top50, muted otherwise."""
+    """Coloured rank pill - gold top10, silver top50, muted otherwise."""
     if owgr is None or (isinstance(owgr, float) and np.isnan(owgr)):
-        return "<span style='font-size:10px;color:rgba(100,100,100,0.45)'>OWGR —</span>"
+        return "<span style='font-size:10px;color:rgba(100,100,100,0.45)'>OWGR -</span>"
     n = int(owgr)
     if n <= 10:
         color, bg = "#fbbf24", "rgba(251,191,36,0.12)"
@@ -97,7 +97,7 @@ def _owgr_badge(owgr) -> str:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# A — Hero header
+# A - Hero header
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_hero(selected_row: pd.Series) -> None:
@@ -114,7 +114,7 @@ def _render_hero(selected_row: pd.Series) -> None:
     try:
         start_dt = pd.to_datetime(selected_row.get("start_date") or selected_row.get("event_date"))
         date_str = f"{start_dt.strftime('%b %d')} – {(start_dt + pd.Timedelta(days=3)).strftime('%b %d, %Y')}"
-    except: date_str = "—"
+    except: date_str = "-"
 
     if img_url:
         st.markdown(
@@ -126,13 +126,13 @@ def _render_hero(selected_row: pd.Series) -> None:
         )
 
     badge = ""
-    if event_type not in {"—","REGULAR"}:
+    if event_type not in {"-","REGULAR"}:
         badge = (
             f"<span style='font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;"
             f"background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.3);"
             f"border-radius:4px;padding:2px 7px;vertical-align:middle;margin-left:10px'>{event_type}</span>"
         )
-    loc_part = f" · {location}" if location != "—" else ""
+    loc_part = f" · {location}" if location != "-" else ""
     st.markdown(
         f"<div style='margin-bottom:6px'>"
         f"<div style='font-size:28px;font-weight:900;line-height:1.1'>{event_name}{badge}</div>"
@@ -193,7 +193,7 @@ def _render_hero(selected_row: pd.Series) -> None:
     par_val = selected_row.get("par")
     par_fmt = _fmt_par(par_val)
     if par_fmt:
-        course_stat_items.append(("", par_fmt, "#60a5fa"))          # blue pill — most prominent
+        course_stat_items.append(("", par_fmt, "#60a5fa"))          # blue pill - most prominent
 
     yardage_val = selected_row.get("yardage")
     yardage_fmt = _fmt_yardage(yardage_val)
@@ -210,22 +210,22 @@ def _render_hero(selected_row: pd.Series) -> None:
         course_stat_items.append(("Rating", rating_fmt, None))
 
     greens_val = _clean(selected_row.get("greens_type"))
-    if greens_val and greens_val != "—":
+    if greens_val and greens_val != "-":
         course_stat_items.append(("Greens", greens_val, None))
 
     fairways_val = _clean(selected_row.get("fairways_type"))
-    if fairways_val and fairways_val != "—":
+    if fairways_val and fairways_val != "-":
         course_stat_items.append(("Fairways", fairways_val, None))
 
     rough_val = _clean(selected_row.get("rough_type"))
-    if rough_val and rough_val != "—":
+    if rough_val and rough_val != "-":
         course_stat_items.append(("Rough", rough_val, None))
 
     record_val  = _clean(selected_row.get("course_record"))
     record_holder = _clean(selected_row.get("course_record_holder"))
-    if record_val and record_val != "—":
+    if record_val and record_val != "-":
         record_display = record_val
-        if record_holder and record_holder != "—":
+        if record_holder and record_holder != "-":
             record_display = f"{record_val} ({record_holder})"
         course_stat_items.append(("Course Record", record_display, None))
 
@@ -261,7 +261,7 @@ def _render_hero(selected_row: pd.Series) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# B — Course DNA  (redesigned)
+# B - Course DNA  (redesigned)
 # ─────────────────────────────────────────────────────────────────────────────
 
 _IMP_COLS = {
@@ -274,7 +274,7 @@ _IMP_COLS = {
 
 def _render_course_dna(course_fit_df, course_num) -> None:
     _divider()
-    st.markdown(_label("Course DNA — What Stands Out vs. Other Courses"), unsafe_allow_html=True)
+    st.markdown(_label("Course DNA - What Stands Out vs. Other Courses"), unsafe_allow_html=True)
 
     if course_fit_df is None or course_num is None:
         st.caption("Course fit data not available."); return
@@ -317,7 +317,7 @@ def _render_course_dna(course_fit_df, course_num) -> None:
     if pred_pct >= 0.80:
         pred_label = "High"
         pred_color = "#34d399"
-        pred_blurb = "Elite ball-strikers have a reliable edge — skill beats luck here."
+        pred_blurb = "Elite ball-strikers have a reliable edge - skill beats luck here."
     elif pred_pct >= 0.50:
         pred_label = "Medium"
         pred_color = "#fbbf24"
@@ -468,7 +468,7 @@ def _render_course_dna(course_fit_df, course_num) -> None:
         f"</div></div>"
     )
 
-    # Single flex row — align-items:stretch forces equal height
+    # Single flex row - align-items:stretch forces equal height
     st.markdown(
         f"<div style='display:flex;gap:24px;align-items:stretch'>"
         f"<div style='flex:3'>{left_html}</div>"
@@ -479,7 +479,7 @@ def _render_course_dna(course_fit_df, course_num) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# C — Odds + Form  (with OWGR badges)
+# C - Odds + Form  (with OWGR badges)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=None, all_players_df=None) -> list:
@@ -551,7 +551,7 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
             st.caption("Odds not yet available for this event.")
 
     with col_form:
-        st.markdown(_label("Hottest Players — Last 12 Rounds"), unsafe_allow_html=True)
+        st.markdown(_label("Hottest Players - Last 12 Rounds"), unsafe_allow_html=True)
         field_ids = fev["dg_id"].tolist()
         r = rounds_df.copy()
         for c in ["dg_id","sg_total"]:
@@ -589,9 +589,14 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
                 hs     = _headshot(name, id_to_img.get(int(p["dg_id"])))
                 owgr_html = _owgr_badge(owgr)
                 featured_ids.append(int(p["dg_id"]))
+                dg_id_val = int(p["dg_id"])
                 st.markdown(
+                    f"<a href='?nav_dd={dg_id_val}' style='text-decoration:none;color:inherit;display:contents'>"
                     f"<div style='display:flex;align-items:center;gap:10px;padding:6px 0;"
-                    f"height:52px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.04)'>"
+                    f"height:52px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.04);"
+                    f"transition:background .15s;cursor:pointer' "
+                    f"onmouseover=\"this.style.background='rgba(255,255,255,0.04)'\" "
+                    f"onmouseout=\"this.style.background='transparent'\">"
                     f"<span style='font-size:10px;color:rgba(100,100,100,0.4);min-width:14px;text-align:right'>"
                     f"{rank_pos}</span>"
                     f"{hs}<div style='flex:1;min-width:0;overflow:hidden'>"
@@ -605,7 +610,7 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
                     f"<div style='text-align:right;flex-shrink:0'>"
                     f"<div style='font-size:15px;font-weight:800;color:#34d399'>+{sg_val:.2f}</div>"
                     f"<div style='font-size:10px;color:rgba(110,110,110,0.4)'>SG/Rnd</div>"
-                    f"</div></div>",
+                    f"</div></div></a>",
                     unsafe_allow_html=True,
                 )
 
@@ -613,13 +618,13 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# D — Event history chart + past winners  (with cancelled year support)
+# D - Event history chart + past winners  (with cancelled year support)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_event_history(rounds_df, event_id, course_num) -> None:
     _divider()
     st.markdown(_label("Event History"), unsafe_allow_html=True)
-    if event_id is None: st.caption("No event_id — history unavailable."); return
+    if event_id is None: st.caption("No event_id - history unavailable."); return
 
     # Build cancelled years relevant to THIS event only
     eid_int = int(event_id)
@@ -737,7 +742,7 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
     if diff_years:
         st.markdown(
             f"<div style='font-size:11px;color:rgba(148,163,184,0.45);margin-top:-8px;margin-bottom:8px'>"
-            f"◆ {', '.join(str(y) for y in sorted(diff_years))} — played at a different course. "
+            f"◆ {', '.join(str(y) for y in sorted(diff_years))} - played at a different course. "
             f"Scores may not be directly comparable.</div>",
             unsafe_allow_html=True,
         )
@@ -750,7 +755,7 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
         .drop_duplicates(subset=["year"]).sort_values("year", ascending=False)
     )
 
-    # Build a set of all years to display — include cancelled years even if no winner row
+    # Build a set of all years to display - include cancelled years even if no winner row
     displayed_years = set(winners["year"].astype(int).tolist()) | set(cancelled_this_event.keys())
     all_winner_years = sorted(displayed_years, reverse=True)
 
@@ -781,12 +786,12 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
                 f"<span style='font-size:13px;font-style:italic;color:rgba(180,180,180,0.5)'>No champion</span>"
                 f"<span style='font-size:10px;color:rgba(239,68,68,0.6);background:rgba(239,68,68,0.08);"
                 f"border-radius:3px;padding:1px 5px;margin-left:4px'>✕ CANCELLED *</span>"
-                f"</div><span style='font-size:12px;color:rgba(100,100,100,0.4)'>—</span></div>"
+                f"</div><span style='font-size:12px;color:rgba(100,100,100,0.4)'>-</span></div>"
             )
         else:
-            name = name_by_year.get(yr, "—")
+            name = name_by_year.get(yr, "-")
             _ws_val = pd.to_numeric(ws_row['winning_score'].iloc[0], errors='coerce') if not ws_row.empty else None
-            score_str = f"{int(_ws_val):+d}" if _ws_val is not None and pd.notna(_ws_val) else "—"
+            score_str = f"{int(_ws_val):+d}" if _ws_val is not None and pd.notna(_ws_val) else "-"
             course_note = (
                 "<span style='font-size:10px;color:rgba(148,163,184,0.4);margin-left:8px'>◆ diff. course</span>"
                 if diff else ""
@@ -817,7 +822,7 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# E — Weather (delegates to weather_tab)
+# E - Weather (delegates to weather_tab)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_weather_section(api_key, schedule_df, event_id, tee_times_path, featured_dg_ids=None) -> None:
@@ -856,7 +861,7 @@ def _render_weather_section(api_key, schedule_df, event_id, tee_times_path, feat
         if tee_times_path and not tee_times_match:
             st.markdown(
                 "<div style='font-size:11px;color:rgba(148,163,184,0.45);margin-bottom:8px'>"
-                "Tee times not available for this event — field data is for a different week. "
+                "Tee times not available for this event - field data is for a different week. "
                 "Wave windows and featured groups will not be shown.</div>",
                 unsafe_allow_html=True,
             )

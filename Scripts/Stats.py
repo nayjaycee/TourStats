@@ -430,7 +430,7 @@ st.markdown("""
   }
 }
 
-/* Compact segmented control — smaller font + tighter padding */
+/* Compact segmented control - smaller font + tighter padding */
 [data-testid="stSegmentedControl"] button {
   font-size: 9px !important;
   padding: 2px 5px !important;
@@ -700,18 +700,21 @@ def get_headshot_url(dg_id: int | None, player_name: str | None,
         return name_to_img[player_name]
     return None
 
-def show_headshot(img_value: str | None, width: int = 90, player_name: str | None = None) -> None:
+def show_headshot(img_value: str | None, width: int = 90, player_name: str | None = None, dg_id: int | None = None) -> None:
     s = str(img_value).strip() if img_value else ""
+    _link_open  = f"<a href='?nav_dd={dg_id}' style='display:inline-block;cursor:pointer'>" if dg_id else ""
+    _link_close = "</a>" if dg_id else ""
     if s and s.lower() not in {"none", "nan"}:
-        p = Path(s)
-        if p.exists():
-            st.image(str(p), width=width)
-            return
-        p2 = REPO_ROOT / s
-        if p2.exists():
-            st.image(str(p2), width=width)
-            return
-        st.image(s, width=width)
+        # Use markdown img so we can wrap in a nav link
+        safe_src = html.escape(s, quote=True)
+        st.markdown(
+            f"{_link_open}<img src='{safe_src}' "
+            f"style='width:{width}px;border-radius:8px;display:block;"
+            f"transition:opacity .15s' "
+            f"onmouseover=\"this.style.opacity='0.75'\" onmouseout=\"this.style.opacity='1'\" />"
+            f"{_link_close}",
+            unsafe_allow_html=True,
+        )
         return
     # Placeholder when no image
     initials = ""
@@ -719,9 +722,9 @@ def show_headshot(img_value: str | None, width: int = 90, player_name: str | Non
         parts = player_name.replace(",", " ").split()
         initials = "".join(p[0].upper() for p in parts if p)[:2]
     st.markdown(
-        f"<div style='width:{width}px;height:{width}px;background:rgba(80,80,80,0.25);"
+        f"{_link_open}<div style='width:{width}px;height:{width}px;background:rgba(80,80,80,0.25);"
         f"border-radius:8px;display:flex;align-items:center;justify-content:center;"
-        f"font-size:{width // 3}px;font-weight:700;color:rgba(255,255,255,0.25)'>{initials}</div>",
+        f"font-size:{width // 3}px;font-weight:700;color:rgba(255,255,255,0.25);cursor:{'pointer' if dg_id else 'default'}'>{initials}</div>{_link_close}",
         unsafe_allow_html=True,
     )
 
@@ -828,12 +831,12 @@ def render_player_hero(
 
     url = get_headshot_url(dg_id, player_name, ID_TO_IMG, NAME_TO_IMG)
     if image_only:
-        show_headshot(url, width=headshot_width, player_name=player_name)
+        show_headshot(url, width=headshot_width, player_name=player_name, dg_id=dg_id)
         return
 
     c_img, c_txt = st.columns([2, 8], vertical_alignment="center")
     with c_img:
-        show_headshot(url, width=headshot_width, player_name=player_name)
+        show_headshot(url, width=headshot_width, player_name=player_name, dg_id=dg_id)
 
     with c_txt:
         parts = []
@@ -849,7 +852,10 @@ def render_player_hero(
         st.markdown(
             f"""
             <div class="hero-card">
-              <div class="hero-title">{player_name}</div>
+              <a href='?nav_dd={dg_id}' style='text-decoration:none;color:inherit'>
+                <div class="hero-title" style='cursor:pointer;transition:opacity .15s'
+                     onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">{player_name}</div>
+              </a>
               {meta_html}
             </div>
             """,
@@ -873,7 +879,13 @@ def _player_rolling_for_windows(g: pd.DataFrame, windows: Sequence[int]) -> pd.S
         sub = g.head(w)
         for stat in stats:
             col = f"{stat}_L{w}"
-            out[col] = float(sub[stat].mean()) if stat in sub.columns else np.nan
+            if stat in sub.columns and len(sub) > 0:
+                # Treat untracked rounds (NaN) as 0 so Euro/LIV players without
+                # sub-stat tracking still get a valid 0 rather than NaN or a
+                # misleading average from only the tracked subset.
+                out[col] = float(sub[stat].fillna(0).mean())
+            else:
+                out[col] = 0.0
     return pd.Series(out)
 
 @st.cache_data(show_spinner=False)
@@ -882,7 +894,7 @@ def compute_rolling_stats(
     as_of_date: pd.Timestamp,
     dg_ids: Iterable[int],
     windows: Sequence[int] = (40, 24, 12),
-    all_tours: bool = False,
+    all_tours: bool = True,
 ) -> pd.DataFrame:
     ts = pd.to_datetime(as_of_date, errors="coerce")
     if pd.isna(ts):
@@ -1240,6 +1252,31 @@ def build_course_history_field_table(
 schedule = load_schedule()
 fields = load_fields()
 all_players = load_all_players()
+
+# Supplement all_players with any players present in rounds_df but missing from the xlsx.
+# This ensures no tab ever shows NaN for a player we have round data for.
+if not rounds_df.empty and "player_name" in rounds_df.columns:
+    _rnd_name_map = (
+        rounds_df.dropna(subset=["player_name"])
+        .assign(_pn=lambda d: d["player_name"].astype(str).str.strip())
+        .query("_pn != '' and _pn != 'nan' and _pn != 'None'")
+        .groupby("dg_id")["_pn"].first()
+        .reset_index()
+        .rename(columns={"_pn": "player_name"})
+    )
+    _rnd_name_map["dg_id"] = _rnd_name_map["dg_id"].astype(int)
+    # Fill NaN names within existing all_players rows
+    _ap_blank = all_players["player_name"].isna() | all_players["player_name"].astype(str).str.strip().isin(["", "nan", "None"])
+    all_players.loc[_ap_blank, "player_name"] = all_players.loc[_ap_blank, "dg_id"].map(
+        _rnd_name_map.set_index("dg_id")["player_name"]
+    )
+    # Add entirely missing players (in rounds but not in all_players xlsx)
+    _missing_ids = set(_rnd_name_map["dg_id"]) - set(all_players["dg_id"])
+    if _missing_ids:
+        _new_rows = _rnd_name_map[_rnd_name_map["dg_id"].isin(_missing_ids)].copy()
+        _new_rows["image"] = None
+        all_players = pd.concat([all_players, _new_rows], ignore_index=True)
+
 ID_TO_IMG, NAME_TO_IMG = build_headshot_maps(all_players)
 
 with st.sidebar:
@@ -1349,7 +1386,7 @@ with st.sidebar:
         ]
         for _type_key, _label in _SOURCE_ROWS:
             _ts  = _last.get(_type_key, "")
-            _disp = _fmt_ts(_ts) if _ts else "—"
+            _disp = _fmt_ts(_ts) if _ts else "-"
             _color = "rgba(100,200,100,0.9)" if _ts else "rgba(120,120,120,0.4)"
             st.markdown(
                 f"<div style='display:flex;justify-content:space-between;align-items:center;"
@@ -1536,9 +1573,9 @@ with st.sidebar:
                     _date_fmt = _rd.strftime("%-m/%-d")
                     _wc       = _wind_color(_wind or 0)
                     _rc       = _rain_color(_rain or 0)
-                    _temp_str = f"{_temp:.0f}°F" if _temp is not None else "—"
-                    _wind_str = f"{_wind:.0f} mph" if _wind is not None else "—"
-                    _rain_str = f"{int(_rain)}%" if _rain is not None else "—"
+                    _temp_str = f"{_temp:.0f}°F" if _temp is not None else "-"
+                    _wind_str = f"{_wind:.0f} mph" if _wind is not None else "-"
+                    _rain_str = f"{int(_rain)}%" if _rain is not None else "-"
 
                     st.markdown(
                         f"<div style='padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05)'>"
@@ -1556,7 +1593,7 @@ with st.sidebar:
                         unsafe_allow_html=True,
                     )
             except Exception as _wx_err:
-                st.caption(f"Weather data unavailable — {_wx_err}")
+                st.caption(f"Weather data unavailable - {_wx_err}")
 
     # ── Field-Adjusted SG toggle ───────────────────────────────────────────
     st.divider()
@@ -1644,27 +1681,24 @@ if event_id is not None:
                 low_memory=False,
             )
             _rdf["round_date"] = pd.to_datetime(_rdf["round_date"], errors="coerce")
-            _cutoff = pd.Timestamp.now() - pd.Timedelta(days=365)
+            _cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
+            _cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
+            _pga_all = _rdf[(_rdf["tour"].str.lower() == "pga") & (_rdf["round_date"] >= _cutoff_365)]
+            _recent_ids = set(_pga_all[_pga_all["round_date"] >= _cutoff_120]["dg_id"].unique())
 
             if _etype == "MAJOR":
-                _pool = _rdf[
-                    (_rdf["event_id"].isin(_MAJOR_IDS)) &
-                    (_rdf["round_date"] >= _cutoff)
+                _pool = _pga_all[
+                    _pga_all["event_id"].isin(_MAJOR_IDS) &
+                    _pga_all["dg_id"].isin(_recent_ids)
                 ].drop_duplicates("dg_id")[["dg_id", "player_name"]]
             elif _etype == "SIGNATURE":
-                _pool = _rdf[
-                    (_rdf["tour"].str.lower() == "pga") &
-                    (_rdf["event_id"].isin(_SIG_IDS)) &
-                    (_rdf["round_date"] >= _cutoff)
-                ].drop_duplicates("dg_id")[["dg_id", "player_name"]]
+                _sig_counts = _pga_all[_pga_all["event_id"].isin(_SIG_IDS)].groupby("dg_id")["event_id"].nunique()
+                _qualified = set(_sig_counts[_sig_counts >= 2].index) & _recent_ids
+                _pool = _pga_all[_pga_all["dg_id"].isin(_qualified)].drop_duplicates("dg_id")[["dg_id", "player_name"]]
             else:
-                _pga_recent = _rdf[
-                    (_rdf["tour"].str.lower() == "pga") &
-                    (_rdf["round_date"] >= _cutoff)
-                ]
-                _ecounts = _pga_recent.groupby("dg_id")["event_id"].nunique()
-                _qualified = _ecounts[_ecounts >= 10].index
-                _pool = _pga_recent[_pga_recent["dg_id"].isin(_qualified)].drop_duplicates("dg_id")[["dg_id", "player_name"]]
+                _ecounts = _pga_all.groupby("dg_id")["event_id"].nunique()
+                _qualified = set(_ecounts[_ecounts >= 15].index) & _recent_ids
+                _pool = _pga_all[_pga_all["dg_id"].isin(_qualified)].drop_duplicates("dg_id")[["dg_id", "player_name"]]
 
             if not _pool.empty:
                 field_ids = _pool["dg_id"].astype(int).tolist()
@@ -1676,7 +1710,7 @@ if event_id is not None:
             st.sidebar.warning(f"Synthetic field error: {_e}")
 
     # Fallback: if close_odds is missing, pull from this_week_odds.csv
-    # Only apply when the selected event matches this week's field — odds have no event_id
+    # Only apply when the selected event matches this week's field - odds have no event_id
     # so applying them to a different/future event would show the wrong tournament's odds.
     _this_week_event_id = None
     _tw_field_path = INUSE_DIR / "this_week_field.csv"
@@ -1738,7 +1772,7 @@ starts_2025 = (
 )
 
 ids_2025_4plus = set(starts_2025.loc[starts_2025["starts_2025"] >= 4, "dg_id"].astype(int).tolist())
-# Exclude DP World Tour events (IDs >= 10000, e.g. 2026105) — only PGA/LIV events have small IDs
+# Exclude DP World Tour events (IDs >= 10000, e.g. 2026105) - only PGA/LIV events have small IDs
 ids_2026_all   = set(
     f_univ.loc[
         (f_univ["year"] == 2026) & (f_univ["event_id"].fillna(0).astype(int) < 10000),
@@ -1889,12 +1923,20 @@ _this_week_field_path = INUSE_DIR / "this_week_field.csv"
 _next_week_field_path = INUSE_DIR / "next_week_field.csv"
 _this_week_field_df = pd.read_csv(_this_week_field_path) if _this_week_field_path.exists() else None
 _next_week_field_df = pd.read_csv(_next_week_field_path) if _next_week_field_path.exists() else None
+
+# Fill NaN player_name in field files from rounds_df - no player should ever show as NaN
+_field_name_lookup = _rnd_name_map.set_index("dg_id")["player_name"] if "_rnd_name_map" in dir() else None
+for _fdf in [_this_week_field_df, _next_week_field_df]:
+    if _fdf is not None and "player_name" in _fdf.columns and _field_name_lookup is not None:
+        _fdf["dg_id"] = pd.to_numeric(_fdf["dg_id"], errors="coerce")
+        _fblank = _fdf["player_name"].isna() | _fdf["player_name"].astype(str).str.strip().isin(["", "nan", "None"])
+        _fdf.loc[_fblank, "player_name"] = _fdf.loc[_fblank, "dg_id"].map(_field_name_lookup)
 _live_active = is_tournament_live(_this_week_field_df) if _this_week_field_df is not None else False
 
 # Determine which field file matches the selected event (for tee times / weather)
 def _field_df_for_event(eid):
     """Return the field DataFrame whose event_id matches eid.
-    Prefer this_week over next_week when both match — it has current tee times."""
+    Prefer this_week over next_week when both match - it has current tee times."""
     candidates = []
     for fdf in [_next_week_field_df, _this_week_field_df]:
         if fdf is None or fdf.empty:
@@ -1909,7 +1951,7 @@ def _field_df_for_event(eid):
 
 def _field_path_for_event(eid):
     """Return the CSV path whose event_id matches eid.
-    Prefer this_week over next_week when both match the same event —
+    Prefer this_week over next_week when both match the same event -
     this_week is refreshed more frequently and has current tee times."""
     candidates = []
     for path, fdf in [(_next_week_field_path, _next_week_field_df), (_this_week_field_path, _this_week_field_df)]:
@@ -1917,14 +1959,14 @@ def _field_path_for_event(eid):
             continue
         ids = pd.to_numeric(fdf["event_id"], errors="coerce").dropna().astype(int).unique()
         if eid in ids:
-            # Count how many r1_teetime values are non-null — more = better
+            # Count how many r1_teetime values are non-null - more = better
             tee_count = fdf["r1_teetime"].notna().sum() if "r1_teetime" in fdf.columns else 0
             candidates.append((tee_count, str(path)))
     if candidates:
         return max(candidates, key=lambda x: x[0])[1]
     return str(_this_week_field_path)
 
-# Also check schedule directly — keeps Live visible even if field file has rolled over to next week
+# Also check schedule directly - keeps Live visible even if field file has rolled over to next week
 if not _live_active:
     _now_check = pd.Timestamp.now()
     for _, _sr in schedule_df.iterrows():
@@ -1950,6 +1992,17 @@ TAB_NAMES = [
     _live_label,
     "Archive",
 ] + (["Lab"] if _MODEL_LAB_AVAILABLE else []) + (["3.5k"] if _OAD_GT_AVAILABLE else []) + (["1k"] if _OAD_SOLO_AVAILABLE else []) + ["Guide"]
+
+# Handle ?nav_dd=<dg_id> query param - clicking a player name/photo anywhere in the
+# app sets this param; we intercept it here, clear it, and navigate to Deep Dive.
+_nav_dd = st.query_params.get("nav_dd")
+if _nav_dd:
+    try:
+        st.query_params.clear()
+        st.session_state["dd_dg_id"] = int(_nav_dd)
+        st.session_state["active_tab"] = "Deep Dive"
+    except (ValueError, TypeError):
+        pass
 
 # Apply any pending tab navigation (set by tab modules before rerun)
 if "_pending_tab" in st.session_state:

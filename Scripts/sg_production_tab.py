@@ -1,5 +1,5 @@
 """
-Strokes Gained Tab — Production Version
+Strokes Gained Tab - Production Version
 """
 from io import StringIO
 from pathlib import Path
@@ -119,7 +119,7 @@ def build_stats_df(
         if stat in df.columns:
             df[stat] = pd.to_numeric(df[stat], errors="coerce")
 
-    # Rolling averages — all windows, all stats, in one vectorized pass
+    # Rolling averages - all windows, all stats, in one vectorized pass
     for stat in STAT_COLS:
         if stat not in df.columns:
             continue
@@ -139,7 +139,13 @@ def build_stats_df(
         + [c for c in ["_sg_total_std_L36", "_sg_total_std_L24"] if c in df.columns]
     )
     keep = [c for c in keep if c in df.columns]
-    latest = df.groupby("dg_id")[keep].last().reset_index(drop=True)
+    # Use drop_duplicates(keep='last') so we take the actual most recent row per player,
+    # not the last non-NaN value per column (which is what groupby.last() does by default).
+    latest = df.drop_duplicates(subset=["dg_id"], keep="last")[keep].reset_index(drop=True)
+    # Fill NaN rolling stats with 0 - players whose recent rounds are on tours that
+    # don't track sub-stats (e.g. Euro Tour) should show 0, not blank.
+    stat_cols = [c for c in latest.columns if any(c.startswith(s) for s in STAT_COLS)]
+    latest[stat_cols] = latest[stat_cols].fillna(0)
 
     # Derived: ball striking composite
     for w in windows:
@@ -165,7 +171,7 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
     """
     Run EF formula retrospectively on every 2025/2026 PGA tournament.
     Returns per-tournament results: top-5 picks, hit counts, finishes.
-    Cached — only runs once per session.
+    Cached - only runs once per session.
     """
     date_col = "round_date" if "round_date" in rounds_df.columns else "event_completed"
     test_df  = rounds_df[rounds_df["year"].isin([2025, 2026])].copy()
@@ -260,9 +266,9 @@ def render_elite_finish_analysis(
     cutoff_dt=None,
     summary_top=None,
 ):
-    """Standalone Elite Finish Analysis — current field + odds context + history."""
+    """Standalone Elite Finish Analysis - current field + odds context + history."""
 
-    # ── Header — title + badge in one row ───────────────────────────────────
+    # ── Header - title + badge in one row ───────────────────────────────────
     _hist_early = build_ef_history(rounds_df)
     if not _hist_early.empty:
         _n_picks    = len(_hist_early) * 5
@@ -270,7 +276,7 @@ def render_elite_finish_analysis(
         _badge_pct  = f"{_top25_rate:.1f}%"
         _badge_sub  = f"{len(_hist_early)} tournaments · top-5 pool"
     else:
-        _badge_pct = "—"
+        _badge_pct = "-"
         _badge_sub = "2025/26 · top-5 pool"
 
     st.markdown(
@@ -361,7 +367,7 @@ def render_elite_finish_analysis(
         ef_df["implied_prob"] = 100 / ef_df["odds"].where(ef_df["odds"] > 0)
         ef_df["odds_rank"] = ef_df["odds"].rank(method="min", na_option="bottom").astype("Int64")
 
-    # ── Stage 2: Model Pick — composite from top-5 EF pool ───────────────────
+    # ── Stage 2: Model Pick - composite from top-5 EF pool ───────────────────
     has_momentum = "momentum" in ef_df.columns and ef_df["momentum"].notna().any()
 
     # Compute composite for ALL players (used in leaderboard column)
@@ -575,7 +581,7 @@ def render_elite_finish_analysis(
                 delta = int(row["rank_delta"])
                 color = row["tier_color"]
                 ip    = row.get("implied_prob")
-                ip_str = f"{ip:.1f}%" if pd.notna(ip) else "—"
+                ip_str = f"{ip:.1f}%" if pd.notna(ip) else "-"
                 st.markdown(
                     f"<div style='display:flex;align-items:center;padding:5px 0;"
                     f"border-bottom:1px solid rgba(128,128,128,0.08)'>"
@@ -841,7 +847,7 @@ def render_production_sg_tab(
 
         if has_live:
             if live_is_current:
-                st.info(f"Live data — {live_label}")
+                st.info(f"Live data - {live_label}")
             else:
                 st.info(f"Showing most recent event data ({live_event_name}).")
 
@@ -907,7 +913,7 @@ def render_production_sg_tab(
             st.warning(f"No data available for {primary_stat} ({primary_window}).")
             return
 
-        # ── Live blend slider — only during an active/current tournament ──
+        # ── Live blend slider - only during an active/current tournament ──
         live_col = f"{primary_stat_col}_Live"
         live_blend = 0
         if has_live and live_is_current and live_col in stats_df.columns and primary_stat != "Contender Score (L36)":
@@ -961,20 +967,23 @@ def render_production_sg_tab(
                     pname   = player.get("player_name", f"Player {dg_id}")
                     img_url = (id_to_img or {}).get(dg_id) or (name_to_img or {}).get(pname)
 
-                    if img_url:
-                        st.image(img_url, use_container_width=True)
-                    else:
-                        initials = "".join(p[0].upper() for p in pname.split(", ")[::-1] if p)[:2]
-                        st.markdown(
-                            f"<div style='width:100%;aspect-ratio:200/220;background:rgba(80,80,80,0.25);"
-                            f"border-radius:6px;display:flex;align-items:center;justify-content:center;"
-                            f"font-size:28px;font-weight:700;color:rgba(255,255,255,0.25)'>{initials}</div>",
-                            unsafe_allow_html=True,
-                        )
-
+                    img_inner = (
+                        f"<img src='{img_url}' style='width:100%;border-radius:6px;display:block'/>"
+                        if img_url else
+                        f"<div style='width:100%;aspect-ratio:200/220;background:rgba(80,80,80,0.25);"
+                        f"border-radius:6px;display:flex;align-items:center;justify-content:center;"
+                        f"font-size:28px;font-weight:700;color:rgba(255,255,255,0.25)'>"
+                        + "".join(p[0].upper() for p in pname.split(", ")[::-1] if p)[:2]
+                        + "</div>"
+                    )
                     st.markdown(
+                        f"<a href='?nav_dd={dg_id}' style='text-decoration:none;color:inherit;display:contents'>"
+                        f"<div style='transition:opacity .15s' onmouseover=\"this.style.opacity='0.75'\" onmouseout=\"this.style.opacity='1'\">"
+                        f"{img_inner}"
                         f"<div style='text-align:center;font-size:11px;color:#888;margin-top:8px'>#{rank}</div>"
-                        f"<div style='text-align:center;font-weight:700;font-size:13px;margin-bottom:6px'>{pname}</div>",
+                        f"<div style='text-align:center;font-weight:700;font-size:13px;margin-bottom:6px;"
+                        f"color:rgba(215,215,215,0.9)'>{pname}</div>"
+                        f"</div></a>",
                         unsafe_allow_html=True,
                     )
 
@@ -1000,7 +1009,13 @@ def render_production_sg_tab(
                     # may cover fewer rounds than the total when some tours omit SG breakdown).
                     if abs(primary_val) > 0.01 and abs(comp_sum) > 0.01 and abs(comp_sum - primary_val) / max(abs(primary_val), 0.01) > 0.10:
                         scale_factor = primary_val / comp_sum
-                        display_vals = {s: v * scale_factor for s, v in raw_vals.items()}
+                        # Only scale if same direction - opposite sign means components and
+                        # total are contradictory (e.g. Euro player with sparse sub-stats).
+                        # Scaling with a negative factor would flip bar directions, so skip.
+                        if scale_factor > 0:
+                            display_vals = {s: v * scale_factor for s, v in raw_vals.items()}
+                        else:
+                            display_vals = raw_vals
                     else:
                         display_vals = raw_vals
 
@@ -1099,7 +1114,7 @@ def render_production_sg_tab(
                         unsafe_allow_html=True,
                     )
             else:
-                st.caption("—")
+                st.caption("-")
 
         with col4:
             st.markdown("#### Volatile")
@@ -1116,7 +1131,7 @@ def render_production_sg_tab(
                         unsafe_allow_html=True,
                     )
             else:
-                st.caption("—")
+                st.caption("-")
 
         st.markdown("<br>", unsafe_allow_html=True)
         st.divider()
@@ -1276,7 +1291,7 @@ def render_production_sg_tab(
 
         st.divider()
 
-        # ── Course Fit — Full Field ────────────────────────────────────────
+        # ── Course Fit - Full Field ────────────────────────────────────────
         # Same constants, norms, and formula as H2H and Deep Dive tabs.
         _CF_NORMS = {
             "driving_dist": (295.0, 12.0),
@@ -1308,7 +1323,7 @@ def render_production_sg_tab(
                 # DNA bar
                 _imp_vals = [float(_cfit.get(c, np.nan)) for c in _CF_IMP_COLS]
                 if any(np.isfinite(v) for v in _imp_vals):
-                    st.caption(f"**{_cname}** — skill importance")
+                    st.caption(f"**{_cname}** - skill importance")
                     _dna_fig = go.Figure()
                     for _lbl, _val, _col in zip(_CF_IMP_LABELS, _imp_vals, _CF_COLORS):
                         if not np.isfinite(_val):
@@ -1374,7 +1389,7 @@ def render_production_sg_tab(
 
                 _cf_means = pd.DataFrame(_rows)
 
-                # Fit score: Σ(beta_shrunk × z_score(player_stat)) — same formula as H2H / Deep Dive
+                # Fit score: Σ(beta_shrunk × z_score(player_stat)) - same formula as H2H / Deep Dive
                 def _fit_score_row(row):
                     total = 0.0
                     for beta_col, stat_col in _CF_BETA_MAP:

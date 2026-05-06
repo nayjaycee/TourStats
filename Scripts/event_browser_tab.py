@@ -146,11 +146,11 @@ def _build_narrative(ev, sel_rnd, rounds_avail, rnd_sel):
         if pd.notna(avg) and pd.notna(par):
             diff = avg - par
             if diff < -0.5:
-                lines.append(f"R{sel_rnd} played easy — field averaged **{diff:+.1f}** to par ({avg:.1f}).")
+                lines.append(f"R{sel_rnd} played easy - field averaged **{diff:+.1f}** to par ({avg:.1f}).")
             elif diff > 0.5:
-                lines.append(f"R{sel_rnd} was tough — field averaged **{diff:+.1f}** to par ({avg:.1f}).")
+                lines.append(f"R{sel_rnd} was tough - field averaged **{diff:+.1f}** to par ({avg:.1f}).")
             else:
-                lines.append(f"R{sel_rnd} played close to par — field average **{avg:.1f}**.")
+                lines.append(f"R{sel_rnd} played close to par - field average **{avg:.1f}**.")
 
     if "birdies" in rdata.columns and "bogies" in rdata.columns:
         ab = rdata["birdies"].mean(); abg = rdata["bogies"].mean()
@@ -259,7 +259,7 @@ def render_event_browser_tab(*, rounds_df: pd.DataFrame, ID_TO_IMG: dict = None,
     )
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION A — OVERVIEW
+    # SECTION A - OVERVIEW
     # ══════════════════════════════════════════════════════════════════════════
     narrative = _build_narrative(ev, sel_rnd, rounds_avail, rnd_sel)
 
@@ -374,7 +374,7 @@ def render_event_browser_tab(*, rounds_df: pd.DataFrame, ID_TO_IMG: dict = None,
     _render_superlatives(ev, ev_rnd, sel_rnd, rounds_avail, is_final, ID_TO_IMG, NAME_TO_IMG)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION B — SCORING CONDITIONS + LEADERBOARD
+    # SECTION B - SCORING CONDITIONS + LEADERBOARD
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     st.markdown(f"<div style='{_SEC}'>Scoring Conditions by Round</div>", unsafe_allow_html=True)
@@ -421,34 +421,34 @@ def render_event_browser_tab(*, rounds_df: pd.DataFrame, ID_TO_IMG: dict = None,
                         has_to_par, has_cum_to_par, has_course_par)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION C — SCORE TRACKER
+    # SECTION C - SCORE TRACKER
     # ══════════════════════════════════════════════════════════════════════════
     st.divider()
     _render_score_tracker(ev, sel_rnd, rounds_avail, is_final, final_rd)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION D — TOP 5 BREAKDOWN
+    # SECTION D - TOP 5 BREAKDOWN
     # ══════════════════════════════════════════════════════════════════════════
     if sg_avail:
         st.divider()
         _render_top5_breakdown(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd, sg_avail)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION E — SHOT QUALITY HEATMAP
+    # SECTION E - SHOT QUALITY HEATMAP
     # ══════════════════════════════════════════════════════════════════════════
     if all(c in ev.columns for c in ["birdies","bogies","doubles_or_worse"]):
         st.divider()
         _render_heatmap(ev, sel_rnd, rounds_avail, final_rd)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION F — STROKES GAINED
+    # SECTION F - STROKES GAINED
     # ══════════════════════════════════════════════════════════════════════════
     if sg_avail:
         st.divider()
         _render_sg_section(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd, sg_avail)
 
     # ══════════════════════════════════════════════════════════════════════════
-    # SECTION G — BALL STRIKING
+    # SECTION G - BALL STRIKING
     # ══════════════════════════════════════════════════════════════════════════
     has_driving  = all(c in ev.columns for c in ["driving_dist","driving_acc"])
     has_approach = all(c in ev.columns for c in ["gir","scrambling"])
@@ -648,12 +648,12 @@ def _render_leaderboard(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd,
             else:
                 pos_txt = str(row.get("_fin_text", "")).strip()
                 if not pos_txt or pos_txt == "nan":
-                    pos_txt = str(int(fin_num)) if pd.notna(fin_num) else "—"
+                    pos_txt = str(int(fin_num)) if pd.notna(fin_num) else "-"
         else:
             pos_txt = str(row.get("round_position_text","")).strip()
             if not pos_txt or pos_txt == "nan":
                 rp = row.get("round_position")
-                pos_txt = str(int(rp)) if pd.notna(rp) else "—"
+                pos_txt = str(int(rp)) if pd.notna(rp) else "-"
 
         pname     = str(row.get("player_name","")).strip()
         move_html = _move_html(row.get("round_position"), row.get("prev_pos"))
@@ -1131,7 +1131,7 @@ def _render_ball_striking(ev, ev_rnd, sel_rnd, is_final, final_rd, has_driving, 
 def _render_top5_breakdown(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd, sg_avail):
     src_label = "Full event averages" if is_final else f"R{sel_rnd} only"
 
-    st.markdown(f"<div style='{_SEC}'>Top 5 Breakdown — What Separated Them</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='{_SEC}'>Top 5 Breakdown - What Separated Them</div>", unsafe_allow_html=True)
     st.markdown(
         f"<div style='{_SUB}'>Top 5 finishers vs field average · {src_label}</div>",
         unsafe_allow_html=True,
@@ -1218,9 +1218,9 @@ def _render_top5_breakdown(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd
 
     st.markdown("<div style='margin-top:20px'></div>", unsafe_allow_html=True)
 
-    # ── Section 2: SG — Top 5 vs Field (grouped bar) ──────────────────────────
+    # ── Section 2: SG - Top 5 vs Field (grouped bar) ──────────────────────────
     st.markdown(
-        f"<div style='{_SUB}'>Strokes Gained — Top 5 vs Field Average · {src_label}</div>",
+        f"<div style='{_SUB}'>Strokes Gained - Top 5 vs Field Average · {src_label}</div>",
         unsafe_allow_html=True,
     )
 
@@ -1267,7 +1267,7 @@ def _render_top5_breakdown(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd
     stat_cols_avail = [c for c in ["birdies","bogies","doubles_or_worse","to_par"] if c in player_avg.columns]
     if stat_cols_avail:
         st.markdown(
-            f"<div style='{_SUB}'>Scoring Stats — Top 5 vs Field Average · {src_label}</div>",
+            f"<div style='{_SUB}'>Scoring Stats - Top 5 vs Field Average · {src_label}</div>",
             unsafe_allow_html=True,
         )
 
@@ -1328,7 +1328,7 @@ def _render_top5_breakdown(ev, ev_rnd, sel_rnd, rounds_avail, is_final, final_rd
     # ── Section 4: How they won it ─────────────────────────────────────────────
     st.markdown("<div style='margin-top:20px'></div>", unsafe_allow_html=True)
     st.markdown(
-        f"<div style='{_SUB}'>How They Won It — biggest SG edge vs field · {src_label}</div>",
+        f"<div style='{_SUB}'>How They Won It - biggest SG edge vs field · {src_label}</div>",
         unsafe_allow_html=True,
     )
 

@@ -152,47 +152,53 @@ def _load_field_odds():
 
 @st.cache_data(ttl=3600)
 def _get_major_player_pool() -> pd.DataFrame:
-    """Players who played in a major (Masters/US Open/PGA Champ/Open) in the last 365 days."""
+    """Players who played in a major in last 365 days AND have recent PGA activity (120 days)."""
     if not ROUNDS_PATH.exists():
         return pd.DataFrame()
-    df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "event_id", "round_date"], low_memory=False)
+    df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "tour", "event_id", "round_date"], low_memory=False)
     df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
-    cutoff = pd.Timestamp.now() - pd.Timedelta(days=365)
-    pool = df[
-        (df["event_id"].isin(_MAJOR_EVENT_IDS)) &
-        (df["round_date"] >= cutoff)
+    cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
+    cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
+    pga = df[(df["tour"].str.lower() == "pga") & (df["round_date"] >= cutoff_365)]
+    recent_ids = set(pga[pga["round_date"] >= cutoff_120]["dg_id"].unique())
+    pool = pga[
+        pga["event_id"].isin(_MAJOR_EVENT_IDS) &
+        pga["dg_id"].isin(recent_ids)
     ].drop_duplicates("dg_id")
     return pool[["dg_id", "player_name"]].reset_index(drop=True)
 
 
 @st.cache_data(ttl=3600)
 def _get_signature_player_pool() -> pd.DataFrame:
-    """Players who played in a PGA signature event (not majors) in the last 365 days."""
+    """Players who played 2+ PGA signature events in last 365 days AND have recent PGA activity (120 days)."""
     if not ROUNDS_PATH.exists():
         return pd.DataFrame()
     df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "tour", "event_id", "round_date"], low_memory=False)
     df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
-    cutoff = pd.Timestamp.now() - pd.Timedelta(days=365)
-    pool = df[
-        (df["tour"].str.lower() == "pga") &
-        (df["event_id"].isin(_SIG_EVENT_IDS)) &
-        (df["round_date"] >= cutoff)
-    ].drop_duplicates("dg_id")
+    cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
+    cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
+    pga = df[(df["tour"].str.lower() == "pga") & (df["round_date"] >= cutoff_365)]
+    recent_ids = set(pga[pga["round_date"] >= cutoff_120]["dg_id"].unique())
+    sig_counts = pga[pga["event_id"].isin(_SIG_EVENT_IDS)].groupby("dg_id")["event_id"].nunique()
+    qualified = set(sig_counts[sig_counts >= 2].index) & recent_ids
+    pool = pga[pga["dg_id"].isin(qualified)].drop_duplicates("dg_id")
     return pool[["dg_id", "player_name"]].reset_index(drop=True)
 
 
 @st.cache_data(ttl=3600)
-def _get_regular_player_pool(min_events: int = 10) -> pd.DataFrame:
-    """Players who played min_events+ PGA Tour events in the last 365 days."""
+def _get_regular_player_pool(min_events: int = 15) -> pd.DataFrame:
+    """Players who played min_events+ PGA Tour events in last 365 days AND have recent PGA activity (120 days)."""
     if not ROUNDS_PATH.exists():
         return pd.DataFrame()
     df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "tour", "event_id", "round_date"], low_memory=False)
     df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
-    cutoff = pd.Timestamp.now() - pd.Timedelta(days=365)
-    pga_recent = df[(df["tour"].str.lower() == "pga") & (df["round_date"] >= cutoff)]
-    event_counts = pga_recent.groupby("dg_id")["event_id"].nunique()
-    qualified = event_counts[event_counts >= min_events].index
-    pool = pga_recent[pga_recent["dg_id"].isin(qualified)].drop_duplicates("dg_id")
+    cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
+    cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
+    pga = df[(df["tour"].str.lower() == "pga") & (df["round_date"] >= cutoff_365)]
+    recent_ids = set(pga[pga["round_date"] >= cutoff_120]["dg_id"].unique())
+    event_counts = pga.groupby("dg_id")["event_id"].nunique()
+    qualified = set(event_counts[event_counts >= min_events].index) & recent_ids
+    pool = pga[pga["dg_id"].isin(qualified)].drop_duplicates("dg_id")
     return pool[["dg_id", "player_name"]].reset_index(drop=True)
 
 
@@ -312,8 +318,8 @@ def render_oad_game_theory_tab() -> None:
     gap_to_next   = (target_earn - our_earnings) if target_earn is not None else None
     can_reach_next = (winner_share > gap_to_next) if gap_to_next is not None else False
 
-    # Rank 40 reference specifically
-    rank40_row      = lb[lb["PLACE"] == 40]
+    # Rank 20 reference specifically
+    rank40_row      = lb[lb["PLACE"] == 20]
     rank40_earnings = int(rank40_row["EARNINGS"].iloc[0]) if not rank40_row.empty else None
     gap_to_40       = (rank40_earnings - our_earnings) if rank40_earnings is not None else None
 
@@ -440,12 +446,12 @@ def render_oad_game_theory_tab() -> None:
     if gap_to_40 is not None:
         label_40 = "In range" if (winner_share > gap_to_40) else "Out of range"
         c3.metric(
-            "Gap to #40", f"${gap_to_40:,.0f}",
+            "Gap to #20", f"${gap_to_40:,.0f}",
             delta=label_40,
             delta_color="normal" if (winner_share > gap_to_40) else "inverse",
         )
     else:
-        c3.metric("Gap to #40", "-")
+        c3.metric("Gap to #20", "-")
     c4.metric("Winner's Share", f"${winner_share:,.0f}" if winner_share else "-")
     c5.metric(
         "Best rank if pick wins", f"#{best_pos}" if best_pos else "-",

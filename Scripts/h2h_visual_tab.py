@@ -59,7 +59,7 @@ def render_h2h_visual_tab(
     pool["dg_id"] = pool["dg_id"].astype(int)
     pool["player_name"] = pool["player_name"].astype(str)
 
-    # Filter to this week's field if provided — matches the only_in_field behaviour
+    # Filter to this week's field if provided - matches the only_in_field behaviour
     if field_ids:
         pool = pool[pool["dg_id"].isin([int(x) for x in field_ids if pd.notna(x)])].copy()
 
@@ -95,7 +95,7 @@ def render_h2h_visual_tab(
     # ------------------------------------------------------------------
     # Header + selectors
     # ------------------------------------------------------------------
-    st.header("Head-to-Head  —  Visual")
+    st.header("Head-to-Head  -  Visual")
 
     selA, selB = st.columns(2, gap="large")
     with selA:
@@ -155,7 +155,7 @@ def render_h2h_visual_tab(
     mb = {c: _safe_mean(rb40, c) for c in ALL_STATS}
 
     # ==================================================================
-    # 1. SKILL PROFILE — ridge plot with course fit bands
+    # 1. SKILL PROFILE - ridge plot with course fit bands
     # ==================================================================
     st.divider()
     st.subheader("Strokes Gained Profile (Last 60 Rounds)")
@@ -166,7 +166,7 @@ def render_h2h_visual_tab(
             return pd.Series(dtype=float)
         return pd.to_numeric(df[col], errors="coerce").dropna()
 
-    # All 5 skills — SG cats + driving stats
+    # All 5 skills - SG cats + driving stats
     RIDGE_CATS  = ["driving_dist", "driving_acc", "sg_app", "sg_arg", "sg_putt"]
     RIDGE_FULL  = ["Distance", "Accuracy", "Approach", "Around Green", "Putting"]
     IMP_KEYS    = ["imp_dist",   "imp_acc",   "imp_app", "imp_arg",  "imp_putt"]
@@ -296,7 +296,7 @@ def render_h2h_visual_tab(
                 ))
                 legend_added[leg_key] = True
 
-                # Mean tick — vertical line + prominent dot at top
+                # Mean tick - vertical line + prominent dot at top
                 peak = float(_kde(series, np.array([mean_z]), bw=0.40)[0]) * CURVE_HEIGHT + offset
                 fig_ridge.add_trace(go.Scatter(
                     x=[mean_z, mean_z],
@@ -319,13 +319,13 @@ def render_h2h_visual_tab(
                     ),
                     showlegend=False,
                     hovertemplate=(
-                        f"<b>{name_t}</b>  —  {full_name}<br>"
+                        f"<b>{name_t}</b>  -  {full_name}<br>"
                         f"Mean: <b>{mean_z:+.2f}σ</b>  ·  Spread: {std_z:.2f}σ"
                         "<extra></extra>"
                     ),
                 ))
 
-            # Mean value labels — stagger vertically if players are close
+            # Mean value labels - stagger vertically if players are close
             items = list(means_this_row.items())
             label_positions = []
             for name_t, (mean_z, std_z, col_t) in items:
@@ -340,7 +340,7 @@ def render_h2h_visual_tab(
             y_offsets = [0.0] * len(label_positions)
             if len(label_positions) == 2:
                 gap = abs(label_positions[1][1] - label_positions[0][1])
-                if gap < 0.5:  # too close — stagger vertically
+                if gap < 0.5:  # too close - stagger vertically
                     y_offsets = [0.25, -0.25]
 
             for (name_t, mean_z, std_z, col_t, peak), y_off in zip(label_positions, y_offsets):
@@ -413,10 +413,10 @@ def render_h2h_visual_tab(
 
 
     # ==================================================================
-    # 2. PERCENTILE BARS — stat comparison with field context
+    # 2. PERCENTILE BARS - stat comparison with field context
     # ==================================================================
     st.divider()
-    st.subheader("Stat Comparison — Field Percentile")
+    st.subheader("Stat Comparison - Field Percentile")
     _info_expander("How to read this", "", section="field_percentile", btn_key="_doc_h2h_pctile")
 
     PCTILE_STATS = [
@@ -606,7 +606,7 @@ def render_h2h_visual_tab(
     # 3. FORM TREND with confidence band
     # ==================================================================
     st.divider()
-    st.subheader("Form Trend — Last 60 Rounds")
+    st.subheader("Form Trend - Last 60 Rounds")
 
     smooth_window = st.slider("Smoothing window", 1, 15, 5, key="h2h_vis_smooth")
 
@@ -663,7 +663,7 @@ def render_h2h_visual_tab(
         st.info("Not enough 2024+ round data to plot both players.")
 
     # ==================================================================
-    # 4. VIOLIN — SG total distribution
+    # 4. VIOLIN - SG total distribution
     # ==================================================================
     st.divider()
     st.subheader("SG Total Distribution (Last 60 Rounds)")
@@ -755,11 +755,11 @@ def render_h2h_visual_tab(
     IMP_COLS   = ["imp_dist", "imp_acc", "imp_app", "imp_arg", "imp_putt"]
     IMP_LABELS = ["Distance", "Accuracy", "Approach", "Around Green", "Putting"]
     SKILL_COLORS = [
-        "#63B3ED",  # Distance      — blue
-        "#9ACD32",  # Accuracy      — yellow-green
-        "#FFA500",  # Approach      — orange
-        "#DA70D6",  # Around Green  — orchid
-        "#40E0D0",  # Putting       — turquoise
+        "#63B3ED",  # Distance      - blue
+        "#9ACD32",  # Accuracy      - yellow-green
+        "#FFA500",  # Approach      - orange
+        "#DA70D6",  # Around Green  - orchid
+        "#40E0D0",  # Putting       - turquoise
     ]
 
     # The betas were fit on z-scored inputs, so we must z-score player stats
@@ -912,7 +912,7 @@ def render_h2h_visual_tab(
                 else:
                     st.info("Insufficient data for fit scores.")
 
-            # ── Skill breakdown — one row per skill, both players side by side ──
+            # ── Skill breakdown - one row per skill, both players side by side ──
             if scores_valid:
 
                 # Methodology explainer
@@ -920,7 +920,7 @@ def render_h2h_visual_tab(
 
                 st.markdown("**Skill-by-skill breakdown**")
 
-                # Build one Plotly row per skill with both players — clean & readable
+                # Build one Plotly row per skill with both players - clean & readable
                 valid_skills = [
                     (lbl, color, breakdown_a.get(lbl, np.nan), breakdown_b.get(lbl, np.nan))
                     for lbl, color in zip(IMP_LABELS, SKILL_COLORS)
@@ -946,13 +946,13 @@ def render_h2h_visual_tab(
                     raw_b = mb.get(stat_col, np.nan) if stat_col else np.nan
 
                     hover_a = (
-                        f"<b>{name_a}</b> — {lbl}<br>"
+                        f"<b>{name_a}</b> - {lbl}<br>"
                         f"Fit contribution: <b>{va:+.3f}</b><br>"
                         + (f"L40 avg: {fmt.format(raw_a)}" if np.isfinite(raw_a) else "")
                         + "<extra></extra>"
                     )
                     hover_b = (
-                        f"<b>{name_b}</b> — {lbl}<br>"
+                        f"<b>{name_b}</b> - {lbl}<br>"
                         f"Fit contribution: <b>{vb:+.3f}</b><br>"
                         + (f"L40 avg: {fmt.format(raw_b)}" if np.isfinite(raw_b) else "")
                         + "<extra></extra>"
@@ -1026,7 +1026,7 @@ def render_h2h_visual_tab(
                         f"<div style='background:rgba(255,165,0,0.08);border-radius:6px;"
                         f"border-left:3px solid rgba(255,165,0,0.6);padding:8px 12px;"
                         f"font-size:12px;color:rgba(220,200,150,0.9)'>"
-                        f"High randomness course — {course_name_display} ranks in the "
+                        f"High randomness course - {course_name_display} ranks in the "
                         f"{int(round(randomness_pct*100))}th percentile for randomness. "
                         f"Course fit is a weaker signal here; variance will play a larger role."
                         f"</div>",
@@ -1034,7 +1034,7 @@ def render_h2h_visual_tab(
                     )
 
     # ==================================================================
-    # 7. APPROACH PROXIMITY — top-down green view
+    # 7. APPROACH PROXIMITY - top-down green view
     # ==================================================================
     if approach_skill_df is not None and not approach_skill_df.empty:
         st.divider()
@@ -1182,7 +1182,7 @@ def render_h2h_visual_tab(
                 ))
 
                 # ── Radius lines with labels ───────────────────────────
-                # Player A radius line — points right (positive x axis)
+                # Player A radius line - points right (positive x axis)
                 if np.isfinite(pa):
                     fig_prox.add_shape(
                         type="line", x0=0, y0=0, x1=pa, y1=0,
@@ -1195,7 +1195,7 @@ def render_h2h_visual_tab(
                         font=dict(size=10, color=COL_A),
                     )
 
-                # Player B radius line — points left (negative x axis)
+                # Player B radius line - points left (negative x axis)
                 if np.isfinite(pb):
                     fig_prox.add_shape(
                         type="line", x0=0, y0=0, x1=-pb, y1=0,
@@ -1208,7 +1208,7 @@ def render_h2h_visual_tab(
                         font=dict(size=10, color=COL_B),
                     )
 
-                # Tour avg radius line — points down
+                # Tour avg radius line - points down
                 if np.isfinite(pt):
                     fig_prox.add_shape(
                         type="line", x0=0, y0=0, x1=0, y1=-pt,
@@ -1242,7 +1242,7 @@ def render_h2h_visual_tab(
                 # ── Stats below chart ──────────────────────────────────
                 def _prox_txt(v, ref):
                     if not np.isfinite(v):
-                        return "—"
+                        return "-"
                     diff = v - ref
                     arrow = "▲" if diff > 0 else "▼"
                     color = "#ef4444" if diff > 0 else "#22c55e"
@@ -1255,7 +1255,7 @@ def render_h2h_visual_tab(
                 rows_html = ""
                 for name_t, val, col_t in [(name_a, pa, COL_A), (name_b, pb, COL_B)]:
                     label = name_t.split(",")[0]
-                    val_html = _prox_txt(val, pt) if np.isfinite(pt) else (f"{val:.1f} ft" if np.isfinite(val) else "—")
+                    val_html = _prox_txt(val, pt) if np.isfinite(pt) else (f"{val:.1f} ft" if np.isfinite(val) else "-")
                     rows_html += (
                         f"<div style='display:flex;justify-content:space-between;"
                         f"align-items:center;margin:2px 0'>"
@@ -1401,7 +1401,7 @@ def render_h2h_visual_tab(
                 y=surf_labels, x=vals_a,
                 orientation="h",
                 marker=dict(color=ca_colors, line=dict(color=ca_borders, width=ca_widths)),
-                text=[f"{v:+.3f}" if not np.isnan(v) else "—" for v in vals_a],
+                text=[f"{v:+.3f}" if not np.isnan(v) else "-" for v in vals_a],
                 textposition="auto",
                 textfont=dict(size=11, color="white"),
                 hovertext=hover_a, hoverinfo="text",
@@ -1411,7 +1411,7 @@ def render_h2h_visual_tab(
                 y=surf_labels, x=vals_b,
                 orientation="h",
                 marker=dict(color=cb_colors, line=dict(color=cb_borders, width=cb_widths)),
-                text=[f"{v:+.3f}" if not np.isnan(v) else "—" for v in vals_b],
+                text=[f"{v:+.3f}" if not np.isnan(v) else "-" for v in vals_b],
                 textposition="auto",
                 textfont=dict(size=11, color="white"),
                 hovertext=hover_b, hoverinfo="text",
@@ -1422,8 +1422,8 @@ def render_h2h_visual_tab(
                                line_color="rgba(255,255,255,0.25)", line_width=1)
 
             window_label = "All rounds" if surf_window == 60 else f"L{surf_window}"
-            ca_str = f"{ca_avg:+.3f}" if np.isfinite(ca_avg) else "—"
-            cb_str = f"{cb_avg:+.3f}" if np.isfinite(cb_avg) else "—"
+            ca_str = f"{ca_avg:+.3f}" if np.isfinite(ca_avg) else "-"
+            cb_str = f"{cb_avg:+.3f}" if np.isfinite(cb_avg) else "-"
 
             fig_surf.update_layout(
                 barmode="group",

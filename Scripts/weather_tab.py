@@ -14,19 +14,19 @@ from urllib.parse import urljoin
 # ─────────────────────────────────────────────────────────────────────────────
 
 _BASE_URL  = "http://api.weatherapi.com/v1/"
-_C_WIND    = "#4C78A8"   # blue  — wind
-_C_GUST    = "#F58518"   # orange — gust
-_C_RAIN    = "#54A24B"   # green — chance of rain
-_C_PRECIP  = "#72B7B2"   # teal  — precip
-_C_TEMP    = "#E45756"   # red   — temperature
+_C_WIND    = "#4C78A8"   # blue  - wind
+_C_GUST    = "#F58518"   # orange - gust
+_C_RAIN    = "#54A24B"   # green - chance of rain
+_C_PRECIP  = "#72B7B2"   # teal  - precip
+_C_TEMP    = "#E45756"   # red   - temperature
 _C_AM      = "#38bdf8"   # early wave marker
 _C_PM      = "#f97316"   # late wave marker
 
 _WIND_THRESHOLDS = [
-    (25, "#ef4444", "Extreme — likely scoring carnage"),
-    (18, "#f97316", "Very windy — major scoring factor"),
-    (12, "#fbbf24", "Moderate — will matter on exposed holes"),
-    (0,  "#22c55e", "Benign — minimal wind impact"),
+    (25, "#ef4444", "Extreme - likely scoring carnage"),
+    (18, "#f97316", "Very windy - major scoring factor"),
+    (12, "#fbbf24", "Moderate - will matter on exposed holes"),
+    (0,  "#22c55e", "Benign - minimal wind impact"),
 ]
 
 _SEC = ("font-size:11px;font-weight:700;letter-spacing:0.08em;"
@@ -157,7 +157,7 @@ def _get_top_groups(
     """
     Returns groups containing featured players (from favourites + hottest panels).
     If featured_dg_ids is empty/None, falls back to top n_groups by best OWGR.
-    Groups are deduplicated — if two featured players share a tee time, the group
+    Groups are deduplicated - if two featured players share a tee time, the group
     appears only once. Within each group all players are shown.
     Each entry: {"teetime": pd.Timestamp, "players": [str, ...], "best_owgr": int, "start_hole": str}
     """
@@ -197,7 +197,7 @@ def _get_top_groups(
         players    = grp["player_name"].dropna().tolist()
         dg_ids     = set(grp["dg_id"].dropna().astype(int).tolist()) if "dg_id" in grp.columns else set()
         best_owgr  = int(grp["owgr_rank"].dropna().min()) if grp["owgr_rank"].notna().any() else 9999
-        start_hole = str(int(grp[col_hole].iloc[0])) if col_hole in grp.columns and pd.notna(grp[col_hole].iloc[0]) else "—"
+        start_hole = str(int(grp[col_hole].iloc[0])) if col_hole in grp.columns and pd.notna(grp[col_hole].iloc[0]) else "-"
         all_groups.append({
             "teetime": teetime, "players": players, "dg_ids": dg_ids,
             "best_owgr": best_owgr, "start_hole": start_hole,
@@ -224,7 +224,7 @@ def _wind_badge(peak_wind: float) -> str:
             return (
                 f"<div style='display:inline-block;background:{color}22;border:1px solid {color};"
                 f"border-radius:6px;padding:3px 10px;font-size:11px;font-weight:700;color:{color}'>"
-                f"Peak {peak_wind:.0f} mph — {label}</div>"
+                f"Peak {peak_wind:.0f} mph - {label}</div>"
             )
     return ""
 
@@ -260,7 +260,7 @@ def _render_daily_cards(hourly_df: pd.DataFrame, round_dates: list[pd.Timestamp]
             # wind color
             wc = next(c for t, c, _ in _WIND_THRESHOLDS if peak_wind >= t)
 
-            rain_s = f"{max_rain:.0f}%" if max_rain > 5 else "—"
+            rain_s = f"{max_rain:.0f}%" if max_rain > 5 else "-"
             rain_c = "#60a5fa" if max_rain > 40 else "#f97316" if max_rain > 15 else "rgba(140,140,140,0.5)"
 
             st.markdown(
@@ -278,7 +278,7 @@ def _render_daily_cards(hourly_df: pd.DataFrame, round_dates: list[pd.Timestamp]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Main chart — single wind panel, rain strip, group timeline
+# Main chart - single wind panel, rain strip, group timeline
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _render_weather_chart(
@@ -301,16 +301,16 @@ def _render_weather_chart(
 
     peak_wind = float(wind.max())
     wind_color, _, _ = next((c, s, d) for t, c, s, d in [
-        (25, "#ef4444", "Extreme", "Extreme — likely scoring carnage"),
-        (18, "#f97316", "Very windy", "Very windy — major scoring factor"),
-        (12, "#fbbf24", "Moderate", "Moderate — will matter on exposed holes"),
-        (0,  "#22c55e", "Benign", "Benign — minimal wind impact"),
+        (25, "#ef4444", "Extreme", "Extreme - likely scoring carnage"),
+        (18, "#f97316", "Very windy", "Very windy - major scoring factor"),
+        (12, "#fbbf24", "Moderate", "Moderate - will matter on exposed holes"),
+        (0,  "#22c55e", "Benign", "Benign - minimal wind impact"),
     ] if peak_wind >= t)
 
     # ── Single wind panel ─────────────────────────────────────────────────────
     fig = go.Figure()
 
-    # Wave background tints — AM steel blue, PM warm amber, clearly distinct
+    # Wave background tints - AM steel blue, PM warm amber, clearly distinct
     for wave_key, fill_color in [
         ("early", "rgba(56,189,248,0.10)"),   # steel blue
         ("late",  "rgba(251,191,36,0.08)"),    # warm amber
@@ -335,7 +335,7 @@ def _render_weather_chart(
         showlegend=False, hoverinfo="skip",
     ))
 
-    # Gust line — thin, muted, same color family as wind
+    # Gust line - thin, muted, same color family as wind
     fig.add_trace(go.Scatter(
         x=x, y=gust,
         mode="lines",
@@ -344,18 +344,18 @@ def _render_weather_chart(
         hovertemplate="Gust: <b>%{y:.0f} mph</b><extra></extra>",
     ))
 
-    # Wind line — always blue, fill tinted by severity
+    # Wind line - always blue, fill tinted by severity
     fig.add_trace(go.Scatter(
         x=x, y=wind,
         mode="lines",
         line=dict(color=_C_WIND, width=3),
         name="Wind",
-        hovertemplate="%{x|%H:%M} — <b>%{y:.0f} mph</b><extra></extra>",
+        hovertemplate="%{x|%H:%M} - <b>%{y:.0f} mph</b><extra></extra>",
         fill="tozeroy",
         fillcolor=f"rgba({int(wind_color[1:3],16)},{int(wind_color[3:5],16)},{int(wind_color[5:7],16)},0.08)",
     ))
 
-    # Rain chance — scaled to primary y-axis so 100% = top of chart
+    # Rain chance - scaled to primary y-axis so 100% = top of chart
     y_max = max(float(gust.max()) * 1.15, 5)
     rain_scaled = rain / 100.0 * y_max
     fig.add_trace(go.Scatter(
@@ -369,7 +369,7 @@ def _render_weather_chart(
         hovertemplate="Rain: <b>%{customdata:.0f}%</b><extra></extra>",
     ))
 
-    # Top 3 peak rain labels — above the fill at the peak x position
+    # Top 3 peak rain labels - above the fill at the peak x position
     import numpy as np
     rain_vals   = rain.values
     scaled_vals = rain_scaled.values
@@ -398,7 +398,7 @@ def _render_weather_chart(
             )
             labeled.append(x_vals[i])
 
-    # Temp line — right axis, very subtle
+    # Temp line - right axis, very subtle
     fig.add_trace(go.Scatter(
         x=x, y=temp,
         mode="lines",
@@ -444,7 +444,7 @@ def _render_weather_chart(
 
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # Wind badge — inline, compact
+    # Wind badge - inline, compact
     badge = _wind_badge(peak_wind)
     if badge:
         st.markdown(badge, unsafe_allow_html=True)
@@ -468,7 +468,7 @@ def _render_weather_chart(
     items = [
         (_swatch("#4C78A8", "line"),     "Wind speed"),
         (_swatch("rgba(76,120,168,0.4)", "dot-line"), "Gust"),
-        (_swatch(fill_rgba, "fill"),     "Wind fill — color = severity"),
+        (_swatch(fill_rgba, "fill"),     "Wind fill - color = severity"),
         (_swatch("rgba(228,87,86,0.4)", "dot-line"), "Temp °F"),
         (_swatch("rgba(84,162,75,0.5)", "fill"),     "Rain chance"),
         (_swatch("rgba(56,189,248,0.18)", "fill"),   "AM wave window"),
@@ -534,7 +534,7 @@ def _render_group_timeline(top_groups: list, round_date: pd.Timestamp) -> None:
         col      = wave_color(grp["teetime"])
         num      = gi + 1
         tee_str  = grp["teetime"].strftime("%-I:%M %p")
-        hole_str = f"· H{grp['start_hole']}" if grp.get("start_hole", "—") != "—" else ""
+        hole_str = f"· H{grp['start_hole']}" if grp.get("start_hole", "-") != "-" else ""
         names    = "  ·  ".join(grp["players"])
         badge    = (
             f"<span style='display:inline-flex;align-items:center;justify-content:center;"
@@ -568,7 +568,7 @@ def _render_group_table(top_groups: list) -> None:
     for gi, grp in enumerate(top_groups):
         symbol     = _CIRCLE[gi] if gi < len(_CIRCLE) else str(gi + 1)
         tee_str    = grp["teetime"].strftime("%-I:%M %p")
-        hole_str   = f"Hole {grp['start_hole']}" if grp.get("start_hole", "—") != "—" else ""
+        hole_str   = f"Hole {grp['start_hole']}" if grp.get("start_hole", "-") != "-" else ""
         meta       = f"{tee_str}  {hole_str}".strip()
         names      = "  ·  ".join(grp["players"])
         owgr_str   = f"OWGR #{grp['best_owgr']}" if grp['best_owgr'] < 9999 else ""
@@ -647,7 +647,7 @@ def render_weather_tab(
                 weather_q = _val
                 break
 
-    # Fall back to course_name — WeatherAPI handles venue names well
+    # Fall back to course_name - WeatherAPI handles venue names well
     if not weather_q and course_name and course_name.lower() not in {"nan", "none", "null"}:
         weather_q = course_name
 
@@ -658,7 +658,7 @@ def render_weather_tab(
         if pd.isna(start_date):
             missing.append("a start date (tried: start_date, date_start, event_date)")
         st.warning(
-            f"Weather unavailable — could not find {chr(39).join(missing)} "
+            f"Weather unavailable - could not find {chr(39).join(missing)} "
             f"for event_id={event_id}. "
             f"Schedule columns present: {list(sdf.columns)}"
         )
@@ -674,7 +674,7 @@ def render_weather_tab(
 
     # Event already finished
     if r4_days_away < -1:
-        st.info("This event has already concluded — forecast not available.")
+        st.info("This event has already concluded - forecast not available.")
         return
 
     # Event is beyond the 7-day forecast window

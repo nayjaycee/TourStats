@@ -1,5 +1,5 @@
 """
-grass_putting_visuals.py  [v6 — uses course_greens_reference.csv]
+grass_putting_visuals.py  [v6 - uses course_greens_reference.csv]
 ─────────────────────────────────────────────────────────────────
 SG: Putting on this week's greens grass type.
 
@@ -67,7 +67,7 @@ def _build_grass_lookup(schedule_df=None, greens_ref_path=None):
             for _, row in sched.dropna(subset=["course_num","greens_type"]).iterrows():
                 lk[int(row["course_num"])] = row["greens_type"]
 
-    # 2. Reference file overrides (higher priority — more complete)
+    # 2. Reference file overrides (higher priority - more complete)
     if greens_ref_path is not None:
         ref_path = Path(greens_ref_path)
         if ref_path.exists():
@@ -250,7 +250,7 @@ def _render_bar_chart(df, greens, window):
         paper_bgcolor="rgba(0,0,0,0)",
         margin=dict(l=160, r=80, t=44, b=50),
         title=dict(
-            text=f"SG: Putt on {greens} Greens — L{window} Average  (top 10 / bottom 10)",
+            text=f"SG: Putt on {greens} Greens - L{window} Average  (top 10 / bottom 10)",
             font=dict(size=13, color="rgba(200,200,200,0.85)"),
             x=0.5, xanchor="center",
         ),
@@ -350,7 +350,7 @@ def _render_bump_chart(df, greens):
         plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
         margin=dict(l=120, r=120, t=40, b=30),
         title=dict(
-            text=f"Rank Movement on {greens} Greens — L60→L36→L24→L12  (top 10 by L12)",
+            text=f"Rank Movement on {greens} Greens - L60→L36→L24→L12  (top 10 by L12)",
             font=dict(size=12, color="rgba(160,160,160,0.65)"),
             x=0.5, xanchor="center",
         ),
@@ -368,7 +368,7 @@ def _render_bump_chart(df, greens):
         f"color:rgba(140,140,140,0.7)'>"
         f"<span style='color:{GREEN_STRONG}'>▲ Climbing ({MOVER_THRESHOLD}+ spots)</span>"
         f"<span style='color:{RED_STRONG}'>▼ Falling ({MOVER_THRESHOLD}+ spots)</span>"
-        f"<span style='color:{STABLE_GREY}'>— Stable</span></div>",
+        f"<span style='color:{STABLE_GREY}'>- Stable</span></div>",
         unsafe_allow_html=True,
     )
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})

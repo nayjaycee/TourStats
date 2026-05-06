@@ -55,6 +55,10 @@
       {
         "dg_id": 19895,
         "name": "Schauffele, Xander"
+      },
+      {
+        "dg_id": 14578,
+        "name": "Henley, Russell"
       }
     ],
     "must_use": [],
@@ -120,6 +124,10 @@
       {
         "dg_id": 18417,
         "name": "Scheffler, Scottie"
+      },
+      {
+        "dg_id": 22085,
+        "name": "Morikawa, Collin"
       }
     ],
     "excluded": [
@@ -132,14 +140,13 @@
   },
   "planned_picks": {
     "league1": {
-      "14": 19195,
-      "33": 19195
+      "14": 19195
     }
   },
   "skipped_events": [],
   "formula": "bl24+cf_0.15+hist_0.25+app_0.1",
   "preset": "Balanced",
-  "league": "oad",
+  "league": "purse",
   "swap_picks": {
     "league2": {
       "41": 23323,
@@ -148,9 +155,7 @@
     },
     "league1": {
       "14": 19195,
-      "480": 19895,
-      "12": 17646,
-      "33": 19195
+      "12": 17646
     }
   }
 }

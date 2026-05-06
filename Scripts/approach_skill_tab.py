@@ -68,38 +68,38 @@ def get_col(bucket_prefix: str, metric_suffix: str) -> str:
 
 def fmt_rate(val):
     if pd.isna(val):
-        return "—"
+        return "-"
     try:
         return f"{float(val) * 100:.1f}%"
     except Exception:
-        return "—"
+        return "-"
 
 
 def fmt_sg(val):
     if pd.isna(val):
-        return "—"
+        return "-"
     try:
         return f"{float(val):+.3f}"
     except Exception:
-        return "—"
+        return "-"
 
 
 def fmt_prox(val):
     if pd.isna(val):
-        return "—"
+        return "-"
     try:
         return f"{float(val):.1f} ft"
     except Exception:
-        return "—"
+        return "-"
 
 
 def fmt_count(val):
     if pd.isna(val):
-        return "—"
+        return "-"
     try:
         return f"{int(val):,}"
     except Exception:
-        return "—"
+        return "-"
 
 
 METRIC_FORMATTERS = {
@@ -212,7 +212,7 @@ def render_approach_skill_tab(
         pct_cols = st.columns(len(bucket_pcts))
         for ci, (label, val) in enumerate(bucket_pcts.items()):
             with pct_cols[ci]:
-                val_str = f"{val * 100:.1f}%" if pd.notna(val) else "—"
+                val_str = f"{val * 100:.1f}%" if pd.notna(val) else "-"
                 st.markdown(
                     f"<div style='font-size:13px; color:#aaa; margin-bottom:4px;'>{label}</div>"
                     f"<div style='font-size:42px; font-weight:900; color:{pct_colors[ci]};'>{val_str}</div>",
@@ -221,7 +221,7 @@ def render_approach_skill_tab(
 
     st.divider()
 
-    # ── Selectors — single row ────────────────────────────────────────────────
+    # ── Selectors - single row ────────────────────────────────────────────────
     ctrl1, ctrl2, _ = st.columns([5, 5, 5])
 
     with ctrl1:
@@ -257,7 +257,7 @@ def render_approach_skill_tab(
     st.divider()
 
     # ═════════════════════════════════════════════════════════════════════════
-    # SECTION D — KPI CARDS + MINI HISTOGRAMS
+    # SECTION D - KPI CARDS + MINI HISTOGRAMS
     # ═════════════════════════════════════════════════════════════════════════
     st.markdown("### Field Averages by Bucket")
     st.caption("Field median SG/Shot per bucket with distribution of the full field below each card.")
@@ -275,9 +275,9 @@ def render_approach_skill_tab(
             med_prox = prox_vals.median() if len(prox_vals) > 0 else None
 
             sg_color = "#00CC96" if (med_sg is not None and med_sg > 0) else "#EF553B"
-            sg_txt   = f"{med_sg:+.3f}"       if med_sg   is not None else "—"
-            gir_txt  = f"{med_gir * 100:.1f}%" if med_gir  is not None else "—"
-            prox_txt = f"{med_prox:.1f} ft"    if med_prox is not None else "—"
+            sg_txt   = f"{med_sg:+.3f}"       if med_sg   is not None else "-"
+            gir_txt  = f"{med_gir * 100:.1f}%" if med_gir  is not None else "-"
+            prox_txt = f"{med_prox:.1f} ft"    if med_prox is not None else "-"
 
             st.markdown(
                 f"""
@@ -323,7 +323,7 @@ def render_approach_skill_tab(
     st.divider()
 
     # ═════════════════════════════════════════════════════════════════════════
-    # SECTION C — TOP 5 PLAYER CARDS
+    # SECTION C - TOP 5 PLAYER CARDS
     # ═════════════════════════════════════════════════════════════════════════
     st.markdown("### Top 5 by Bucket")
     st.caption("Best players per distance bucket, sorted by SG/Shot.")
@@ -359,11 +359,11 @@ def render_approach_skill_tab(
                 poor_v = pd.to_numeric(prow.get(top5_poor_col, np.nan), errors="coerce")
                 cnt_v  = pd.to_numeric(prow.get(top5_cnt_col,  np.nan), errors="coerce")
 
-                sg_txt   = f"{sg_v:+.3f}"         if pd.notna(sg_v)   else "—"
-                gir_txt  = f"{gir_v * 100:.1f}%"  if pd.notna(gir_v)  else "—"
-                prox_txt = f"{prox_v:.1f} ft"      if pd.notna(prox_v) else "—"
-                good_txt = f"{good_v * 100:.1f}%"  if pd.notna(good_v) else "—"
-                poor_txt = f"{poor_v * 100:.1f}%"  if pd.notna(poor_v) else "—"
+                sg_txt   = f"{sg_v:+.3f}"         if pd.notna(sg_v)   else "-"
+                gir_txt  = f"{gir_v * 100:.1f}%"  if pd.notna(gir_v)  else "-"
+                prox_txt = f"{prox_v:.1f} ft"      if pd.notna(prox_v) else "-"
+                good_txt = f"{good_v * 100:.1f}%"  if pd.notna(good_v) else "-"
+                poor_txt = f"{poor_v * 100:.1f}%"  if pd.notna(poor_v) else "-"
                 cnt_txt  = f"{int(cnt_v):,} shots" if pd.notna(cnt_v)  else ""
                 sg_color = "#00CC96" if (pd.notna(sg_v) and sg_v > 0) else "#EF553B"
                 short    = shorten_name(name)
@@ -409,7 +409,7 @@ def render_approach_skill_tab(
     st.divider()
 
     # ═════════════════════════════════════════════════════════════════════════
-    # SECTION B — FIELD SCATTER
+    # SECTION B - FIELD SCATTER
     # ═════════════════════════════════════════════════════════════════════════
     st.markdown("### Field Scatter")
     st.caption("Each dot = a player. X = SG/Shot, Y = GIR%, color = Good Shot Rate. Top 5 labelled.")
@@ -520,7 +520,7 @@ def render_approach_skill_tab(
     st.divider()
 
     # ═════════════════════════════════════════════════════════════════════════
-    # SECTION 1 — BUCKET LEADERBOARDS
+    # SECTION 1 - BUCKET LEADERBOARDS
     # ═════════════════════════════════════════════════════════════════════════
     st.markdown("### Bucket Leaderboards")
     st.caption("Heatmap across all approach metrics. Dimmed rows have low sample size.")
@@ -582,7 +582,7 @@ def render_approach_skill_tab(
     st.divider()
 
     # ═════════════════════════════════════════════════════════════════════════
-    # SECTION 2 — PLAYER DEEP DIVE
+    # SECTION 2 - PLAYER DEEP DIVE
     # ═════════════════════════════════════════════════════════════════════════
     st.markdown("### Player Deep Dive")
     st.caption("Select a player to see their full breakdown across all buckets and all time periods.")
@@ -604,7 +604,7 @@ def render_approach_skill_tab(
             all_buckets   = FW_BUCKETS + RGH_BUCKETS
             period_colors = {"l12": "#636EFA", "l24": "#00CC96", "ytd": "#FFA15A"}
 
-            st.markdown("#### SG per Shot — All Buckets")
+            st.markdown("#### SG per Shot - All Buckets")
             fig_sg = go.Figure()
             for p in PERIODS:
                 p_data = player_all_periods[player_all_periods["time_period"] == p]
@@ -633,7 +633,7 @@ def render_approach_skill_tab(
             )
             st.plotly_chart(fig_sg, use_container_width=True)
 
-            st.markdown(f"#### Full Metric Breakdown — {PERIOD_LABELS[period]}")
+            st.markdown(f"#### Full Metric Breakdown - {PERIOD_LABELS[period]}")
             st.caption("Each panel = one metric. Bars = buckets (fairway left, rough right).")
 
             p_data = player_all_periods[player_all_periods["time_period"] == period]
@@ -698,7 +698,7 @@ def render_approach_skill_tab(
     st.divider()
 
     # ═════════════════════════════════════════════════════════════════════════
-    # SECTION 3 — WEAKNESS FINDER
+    # SECTION 3 - WEAKNESS FINDER
     # ═════════════════════════════════════════════════════════════════════════
     st.markdown("### Weakness Finder")
     st.caption("Ranks players by their weakest bucket relative to the field.")
