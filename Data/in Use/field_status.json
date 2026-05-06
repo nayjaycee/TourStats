@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-06 10:31:14 ET",
+    "last_updated": "2026-05-06 15:54:38 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-06 15:54:38 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-06 10:31:14 ET",
         "added": [
@@ -140,34 +146,6 @@
           "Morikawa, Collin"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-05-04 04:38:29 ET",
-        "added": [
-          "Aberg, Ludvig",
-          "Cantlay, Patrick",
-          "Finau, Tony",
-          "Fitzpatrick, Matt",
-          "Hughes, Mackenzie",
-          "Knapp, Jake",
-          "MacIntyre, Robert",
-          "McIlroy, Rory",
-          "Schauffele, Xander",
-          "Simpson, Webb"
-        ],
-        "withdrawn": [
-          "Dahmen, Joel",
-          "Greyserman, Max",
-          "Henley, Russell",
-          "Lowry, Shane",
-          "Mitchell, Keith",
-          "Putnam, Andrew",
-          "Scheffler, Scottie",
-          "Smith, Jordan",
-          "Smotherman, Austin",
-          "Thorbjornsen, Michael"
-        ],
-        "note": "+10 / -10"
       }
     ]
   },
