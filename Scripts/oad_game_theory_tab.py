@@ -426,12 +426,9 @@ def render_oad_game_theory_tab() -> None:
     n_jumpable         = len(jumpable)
     jumpable_usernames = set(jumpable["_username"].dropna())
 
-    # -- Chasers: teams behind us within one winner_share of catching us ───────
-    if our_place and winner_share > 0:
-        chasers = lb[
-            (lb["EARNINGS"] < our_earnings) &
-            (lb["EARNINGS"] > our_earnings - winner_share)
-        ].copy()
+    # -- Chasers: all teams behind us ─────────────────────────────────────────
+    if our_place:
+        chasers = lb[lb["EARNINGS"] < our_earnings].copy()
     else:
         chasers = pd.DataFrame()
     n_chasers         = len(chasers)
@@ -459,10 +456,7 @@ def render_oad_game_theory_tab() -> None:
     )
 
     if n_chasers > 0:
-        st.caption(
-            f"**{n_chasers} teams** are within one winner's share of catching us "
-            f"(earnings between ${our_earnings - winner_share:,.0f} and ${our_earnings:,.0f})."
-        )
+        st.caption(f"**{n_chasers} teams** are behind us in the standings.")
 
     st.divider()
 
