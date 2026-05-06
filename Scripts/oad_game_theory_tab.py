@@ -35,7 +35,7 @@ SCHEDULE_PATH    = INUSE / "OAD_2026_Schedule.xlsx"
 ROUNDS_PATH      = INUSE / "combined_roundlevel_2024_present.csv"
 
 OUR_TEAM     = "McKenzie Scotts Tots(1)"
-OUR_USERNAME = "mckenzie scotts tots"
+OUR_USERNAME = "mckenzie scotts tots(1)"
 
 MAJOR_TYPES = {"MAJOR"}
 
@@ -65,7 +65,7 @@ def _load_events() -> pd.DataFrame:
         return pd.DataFrame()
     combined = pd.concat(dfs, ignore_index=True)
     combined["Username"]  = combined["Username"].astype(str).str.strip().str.strip('"')
-    combined["_username"] = combined["Username"].str.extract(r"^(.+)\(\d+\)$")[0].str.strip().str.lower()
+    combined["_username"] = combined["Username"].str.lower().str.strip()
     combined["_earnings_num"] = (
         combined["Earnings"].astype(str)
         .str.replace(r'[\$,\"]', "", regex=True).str.strip()
@@ -85,7 +85,7 @@ def _load_leaderboard() -> pd.DataFrame:
     if lb.empty:
         return lb
 
-    lb["_username"] = lb["PLAYER"].str.extract(r"^(.+)\(\d+\)$")[0].str.strip().str.lower()
+    lb["_username"] = lb["PLAYER"].str.lower().str.strip()
     lb["EARNINGS"]  = pd.to_numeric(lb["EARNINGS"], errors="coerce").fillna(0).astype(int)
 
     # Auto-apply earnings from any event files not yet included in the leaderboard
