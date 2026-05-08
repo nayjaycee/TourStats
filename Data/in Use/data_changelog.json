@@ -1,6 +1,66 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-08 06:00:10 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480, 33"
+    },
+    {
+      "timestamp": "2026-05-07 23:30:17 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 23:00:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 22:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 22:00:17 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 21:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 21:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 20:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 19:02:50 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-07 18:31:09 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-05-07 18:03:33 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
@@ -56,66 +116,6 @@
     },
     {
       "timestamp": "2026-05-04 19:29:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-04 19:29:06 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,033 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-05-04 19:29:05 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 12,247 rows across 35 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-05-04 19:28:58 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480"
-    },
-    {
-      "timestamp": "2026-05-04 18:00:15 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480"
-    },
-    {
-      "timestamp": "2026-05-04 06:00:04 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480"
-    },
-    {
-      "timestamp": "2026-05-03 23:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-03 23:00:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-03 22:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-03 22:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-03 21:30:04 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
