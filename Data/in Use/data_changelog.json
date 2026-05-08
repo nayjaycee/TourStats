@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-08 12:00:20 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480, 33"
+    },
+    {
+      "timestamp": "2026-05-08 12:00:21 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-08 11:30:19 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-05-08 11:00:13 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-05-08 06:00:10 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
@@ -92,30 +116,6 @@
     },
     {
       "timestamp": "2026-05-06 10:51:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-06 10:51:10 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,033 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-05-06 10:51:09 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 12,247 rows across 35 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-05-06 10:51:02 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480"
-    },
-    {
-      "timestamp": "2026-05-04 19:29:07 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
