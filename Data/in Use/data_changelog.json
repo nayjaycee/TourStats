@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-10 04:17:43 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480, 33"
+    },
+    {
       "timestamp": "2026-05-09 15:12:56 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-04 18:00:15 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480"
-    },
-    {
-      "timestamp": "2026-05-04 06:00:04 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
       "details": "Field updated: 480"
