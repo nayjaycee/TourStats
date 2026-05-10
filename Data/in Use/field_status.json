@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-09 18:00:10 ET",
+    "last_updated": "2026-05-10 06:00:10 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-10 06:00:10 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-09 18:00:10 ET",
         "added": [],
@@ -140,34 +146,6 @@
           "Morikawa, Collin"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-05-04 06:00:04 ET",
-        "added": [
-          "Aberg, Ludvig",
-          "Cantlay, Patrick",
-          "Finau, Tony",
-          "Fitzpatrick, Matt",
-          "Hughes, Mackenzie",
-          "Knapp, Jake",
-          "MacIntyre, Robert",
-          "McIlroy, Rory",
-          "Schauffele, Xander",
-          "Simpson, Webb"
-        ],
-        "withdrawn": [
-          "Dahmen, Joel",
-          "Greyserman, Max",
-          "Henley, Russell",
-          "Lowry, Shane",
-          "Mitchell, Keith",
-          "Putnam, Andrew",
-          "Scheffler, Scottie",
-          "Smith, Jordan",
-          "Smotherman, Austin",
-          "Thorbjornsen, Michael"
-        ],
-        "note": "+10 / -10"
       }
     ]
   },
@@ -331,8 +309,14 @@
       "Yang, Y.E.",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-09 18:00:10 ET",
+    "last_updated": "2026-05-10 06:00:10 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-10 06:00:10 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-09 18:00:10 ET",
         "added": [],
@@ -501,81 +485,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-04-11 18:02:09 ET",
-        "added": [
-          "Blanchet, Chandler",
-          "Castillo, Ricky",
-          "Cauley, Bud",
-          "Coody, Pierceson",
-          "Finau, Tony",
-          "Fisk, Steven",
-          "Fowler, Rickie",
-          "Glover, Lucas",
-          "Higgo, Garrick",
-          "Highsmith, Joe",
-          "Hisatsune, Ryo",
-          "Hoge, Tom",
-          "Lipsky, David",
-          "McCarthy, Denny",
-          "Mouw, William",
-          "Pendrith, Taylor",
-          "Poston, J.T.",
-          "Putnam, Andrew",
-          "Rodgers, Patrick",
-          "Schenk, Adam",
-          "Smith, Jordan",
-          "Smotherman, Austin",
-          "Theegala, Sahith",
-          "Thorbjornsen, Michael",
-          "Vegas, Jhonattan",
-          "Vilips, Karl",
-          "Wallace, Matt",
-          "Yellamaraju, Sudarshan"
-        ],
-        "withdrawn": [
-          "Cabrera, Angel",
-          "Clark, Wyndham",
-          "Couples, Fred",
-          "DeChambeau, Bryson",
-          "Fang, Ethan",
-          "Garcia, Sergio",
-          "Greyserman, Max",
-          "Hatton, Tyrrell",
-          "Herrington, Jackson",
-          "Hojgaard, Rasmus",
-          "Holtz, Brandon",
-          "Howell, Mason",
-          "Jarvis, Casey",
-          "Johnson, Dustin",
-          "Johnson, Zach",
-          "Kataoka, Naoyuki",
-          "Koepka, Brooks",
-          "Laopakdee, Fifa",
-          "Li, Haotong",
-          "Matsuyama, Hideki",
-          "McIlroy, Rory",
-          "McKibbin, Tom",
-          "Neergaard-Petersen, Rasmus",
-          "Olazabal, Jose Maria",
-          "Ortiz, Carlos",
-          "Penge, Marco",
-          "Pulcini, Mateo",
-          "Rahm, Jon",
-          "Rai, Aaron",
-          "Reed, Patrick",
-          "Reitan, Kristoffer",
-          "Riley, Davis",
-          "Schwartzel, Charl",
-          "Scott, Adam",
-          "Singh, Vijay",
-          "Smith, Cameron",
-          "Watson, Bubba",
-          "Weir, Mike",
-          "Willett, Danny"
-        ],
-        "note": "+28 / -39"
       }
     ]
   }
