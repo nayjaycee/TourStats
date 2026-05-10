@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-10 04:17:43 ET",
+    "last_updated": "2026-05-10 09:42:45 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-10 09:42:45 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-10 04:17:43 ET",
         "added": [],
@@ -129,12 +135,6 @@
       },
       {
         "timestamp": "2026-05-07 10:32:37 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-07 04:43:34 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
@@ -301,8 +301,14 @@
       "Yang, Y.E.",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-10 04:17:43 ET",
+    "last_updated": "2026-05-10 09:42:45 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-10 09:42:45 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-10 04:17:43 ET",
         "added": [],
@@ -449,34 +455,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-01 18:01:25 ET",
-        "added": [
-          "Fitzpatrick, Alex",
-          "Hughes, Mackenzie",
-          "Matsuyama, Hideki",
-          "McIlroy, Rory",
-          "Scott, Adam",
-          "Smalley, Alex"
-        ],
-        "withdrawn": [
-          "Brennan, Michael",
-          "Fisk, Steven",
-          "Henley, Russell",
-          "Higgo, Garrick",
-          "Highsmith, Joe",
-          "Keefer, Johnny",
-          "Lowry, Shane",
-          "Putnam, Andrew",
-          "Scheffler, Scottie",
-          "Schenk, Adam",
-          "Smith, Jordan",
-          "Thorbjornsen, Michael",
-          "Valimaki, Sami",
-          "Vilips, Karl"
-        ],
-        "note": "+6 / -14"
       }
     ]
   }
