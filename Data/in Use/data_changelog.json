@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-11 10:24:47 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 13,626 rows across 39 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-05-11 10:23:08 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
       "details": "Field updated: 480"
-    },
-    {
-      "timestamp": "2026-05-04 19:29:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
     }
   ]
 }

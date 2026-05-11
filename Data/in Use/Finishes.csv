@@ -1646,6 +1646,78 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Valspar Championship,475,2026-03-22,"Wilkes, Tyler",34969,CUT,,0,0,0,0,0,1
 2026,Valspar Championship,475,2026-03-22,"Willett, Danny",12920,CUT,,0,0,0,0,0,1
 2026,Valspar Championship,475,2026-03-22,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
+2026,Truist Championship,480,2026-05-10,"Reitan, Kristoffer",21407,1,1.0,1,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Fowler, Rickie",12965,T2,2.0,0,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Hojgaard, Nicolai",23602,T2,2.0,0,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Fitzpatrick, Alex",25362,4,4.0,0,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Fleetwood, Tommy",12294,T5,5.0,0,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Im, Sungjae",17488,T5,5.0,0,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Spaun, J.J.",17536,T5,5.0,0,1,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Aberg, Ludvig",23950,T8,8.0,0,0,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Hall, Harry",27194,T8,8.0,0,0,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Cantlay, Patrick",15466,T10,10.0,0,0,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"McCarty, Matt",28635,T10,10.0,0,0,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Young, Cameron",26651,T10,10.0,0,0,1,1,1,0
+2026,Truist Championship,480,2026-05-10,"Thomas, Justin",14139,13,13.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Gotterup, Chris",27774,T14,14.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Lee, Min Woo",16841,T14,14.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Taylor, Nick",13126,T14,14.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Smalley, Alex",18474,T17,17.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Woodland, Gary",12577,T17,17.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Bradley, Keegan",13872,T19,19.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Kitayama, Kurt",21891,T19,19.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"McIlroy, Rory",10091,T19,19.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Smotherman, Austin",22985,T19,19.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Yellamaraju, Sudarshan",29925,T19,19.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Coody, Pierceson",28309,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"English, Harris",14577,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Lipsky, David",15980,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Novak, Andrew",23475,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Poston, J.T.",21554,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Rodgers, Patrick",16283,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Scott, Adam",6430,T24,24.0,0,0,0,1,1,0
+2026,Truist Championship,480,2026-05-10,"Conners, Corey",17576,T31,31.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Echavarria, Nico",22833,T31,31.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Finau, Tony",11676,T31,31.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Harman, Brian",8825,T31,31.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Hovland, Viktor",18841,T31,31.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Noren, Alex",10419,T31,31.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Bhatia, Akshay",26096,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Burns, Sam",19483,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Cauley, Bud",14502,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Glover, Lucas",7399,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"McNealy, Maverick",18634,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Pendrith, Taylor",17780,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Putnam, Andrew",14704,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Wallace, Matt",20706,T37,37.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Berger, Daniel",17606,T45,45.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Hisatsune, Ryo",22760,T45,45.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Rose, Justin",6093,T45,45.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Kim, Michael",17543,T48,48.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"McCarthy, Denny",19870,T48,48.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Potgieter, Aldrich",27900,T48,48.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Simpson, Webb",11049,T48,48.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Blanchet, Chandler",24956,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Bridgeman, Jacob",29433,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Campbell, Brian",18628,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Fitzpatrick, Matt",17646,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Homa, Max",17538,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Hughes, Mackenzie",15556,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Spieth, Jordan",14636,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Vegas, Jhonattan",13508,T52,52.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Castillo, Ricky",27819,T60,60.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"MacIntyre, Robert",23323,T60,60.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Schauffele, Xander",19895,T60,60.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Griffin, Ben",24968,T63,63.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Straka, Sepp",17511,T63,63.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Gerard, Ryan",29767,T65,65.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Kim, Si Woo",14609,T65,65.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Fox, Ryan",11889,67,67.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Day, Jason",9771,68,68.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Theegala, Sahith",23014,69,69.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Stevens, Sam",25569,70,70.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Matsuyama, Hideki",13562,71,71.0,0,0,0,0,1,0
+2026,Truist Championship,480,2026-05-10,"Hoge, Tom",15575,72,72.0,0,0,0,0,1,0
 2026,Puerto Rico Open,483,2026-03-08,"Castillo, Ricky",27819,1,1.0,1,1,1,1,1,0
 2026,Puerto Rico Open,483,2026-03-08,"Blanchet, Chandler",24956,2,2.0,0,1,1,1,1,0
 2026,Puerto Rico Open,483,2026-03-08,"Brown, Blades",32152,3,3.0,0,1,1,1,1,0
@@ -1766,6 +1838,129 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Puerto Rico Open,483,2026-03-08,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
 2026,Puerto Rico Open,483,2026-03-08,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
 2026,Puerto Rico Open,483,2026-03-08,"van Wyk, Kieron",27300,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Snedeker, Brandt",8820,1,1.0,1,1,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hubbard, Mark",16333,2,2.0,0,1,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hossler, Beau",15470,T3,3.0,0,1,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Roy, Kevin",18424,T3,3.0,0,1,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Rai, Aaron",18554,5,5.0,0,1,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Bezuidenhout, Christiaan",18103,T6,6.0,0,0,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Cole, Eric",21756,T6,6.0,0,0,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kim, Tom",24766,T6,6.0,0,0,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Brown, Blades",32152,T9,9.0,0,0,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Meissner, Mac",28159,T9,9.0,0,0,1,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Koepka, Brooks",16243,T11,11.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Peterson, Paul",16341,T11,11.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Dou, Zecheng",16757,T13,13.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Griffin, Lanto",15330,T13,13.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Nakajima, Keita",21074,T13,13.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Thompson, Davis",27364,T13,13.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Moore, Taylor",21944,T17,17.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Ryder, Sam",16715,T17,17.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Eckroat, Austin",26653,T19,19.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Fishburn, Patrick",25094,T19,19.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Garnett, Brice",11451,T19,19.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Ghim, Doug",24550,T19,19.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Suber, Jackson",29279,T19,19.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Bauchou, Zach",19846,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Dunlap, Nick",28270,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hojgaard, Rasmus",23838,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kuchar, Matt",6169,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Skinns, David",10873,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Springer, Hayden",21995,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Vilips, Karl",24304,T24,24.0,0,0,0,1,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Dumont de Chassart, Adrien",22002,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Greyserman, Max",23465,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hruby, Petr",26710,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Keefer, Johnny",32457,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kohles, Ben",16395,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Nyholm, Pontus",25475,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Parry, John",13764,T31,31.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Fisk, Steven",26657,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Jarvis, Casey",26947,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kanaya, Takumi",19729,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Shipley, Neal",32055,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Stanger, Jimmy",23048,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Walker, Danny",25003,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"van Rooyen, Erik",17550,T38,38.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kim, Chan",15004,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Lower, Justin",17723,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Riley, Davis",19872,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Ruffels, Ryan",17169,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Svensson, Adam",13997,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Villegas, Camilo",9171,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Willett, Danny",12920,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Wood, Grayson",35196,T45,45.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Doyal, Connor",33466,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hadwin, Adam",13965,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hoey, Rico",23504,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Horschel, Billy",11276,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Malnati, Peter",14926,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Rozo, Marcelo",16591,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Yu, Kevin",17881,T53,53.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Blair, Zac",17639,T60,60.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Clanton, Luke",32330,T60,60.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Lamprecht, Christo",24343,T60,60.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Power, Seamus",10104,T60,60.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"VanDerLaan, John",25319,T60,60.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hirata, Kensei",20954,T65,65.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Laird, Martin",9586,T65,65.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Crowe, Trace",27780,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Davis, Cam",17786,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Higgo, Garrick",24342,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Highsmith, Joe",28469,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hodges, Lee",25157,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Todd, Brendon",12425,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Young, Carson",23656,T67,67.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Lebioda, Hank",21943,74,74.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Collet, Tyler",28077,T75,75.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Merritt, Troy",13367,T75,75.0,0,0,0,0,1,0
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Brehm, Ryan",10423,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Brown, Dan",20766,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Dahmen, Joel",14509,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Duncan, Tyler",18187,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Ewart, A.J.",21883,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Goodwin, Noah",24837,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Grillo, Emiliano",12808,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Haefner, Grant",33757,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hahn, James",11374,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hardy, Nick",19865,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Harmeling, Evan",16909,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hrabak, Cooper",35195,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Jaeger, Stephan",16394,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Kizzire, Patton",13470,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Marchese, Nicholas",35197,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Martin, Ben",14007,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"McGreevy, Max",23505,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Montgomery, Taylor",25442,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Neergaard-Petersen, Rasmus",23841,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Norlander, Henrik",11657,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Paul, Jeremy",22087,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Pavon, Matthieu",19960,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Petronzio, Nathan",29915,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Phillips, Chandler",27164,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Phillips, Trent",26913,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Ramey, Chad",19840,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Rosenmueller, Thomas",22736,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Schmid, Matti",20722,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Silverman, Ben",17381,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Streb, Robert",14852,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Streelman, Kevin",8480,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Svensson, Jesper",26850,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Valimaki, Sami",23816,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Williams, Wells",32328,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
 2026,Cadillac Championship,556,2026-05-03,"Young, Cameron",26651,1,1.0,1,1,1,1,1,0
 2026,Cadillac Championship,556,2026-05-03,"Scheffler, Scottie",18417,2,2.0,0,1,1,1,1,0
 2026,Cadillac Championship,556,2026-05-03,"Griffin, Ben",24968,3,3.0,0,1,1,1,1,0
@@ -2202,6 +2397,63 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Mexico City,1028,2026-04-19,"Campbell, Ben",14373,56,56.0,0,0,0,0,1,0
 2026,Mexico City,1028,2026-04-19,"Carrera, Luis",29579,NAN,,0,0,0,0,0,1
 2026,Mexico City,1028,2026-04-19,"DeChambeau, Bryson",19841,WD,,0,0,0,0,0,1
+2026,Virginia,1030,2026-05-10,"Herbert, Lucas",17064,1,1.0,1,1,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Garcia, Sergio",5689,2,2.0,0,1,1,1,1,0
+2026,Virginia,1030,2026-05-10,"DeChambeau, Bryson",19841,3,3.0,0,1,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Burmester, Dean",14424,4,4.0,0,1,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Ballester, Jose Luis",28473,5,5.0,0,1,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Detry, Thomas",14181,T6,6.0,0,0,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Kim, Anthony",11641,T6,6.0,0,0,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Niemann, Joaquin",18079,T8,8.0,0,0,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Rahm, Jon",19195,T8,8.0,0,0,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Vincent, Scott",14559,T8,8.0,0,0,1,1,1,0
+2026,Virginia,1030,2026-05-10,"Perez, Victor",20730,11,11.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Puig, David",28984,T12,12.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Surratt, Caleb",30463,T12,12.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Casey, Paul",7108,T14,14.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Howell III, Charles",6892,T14,14.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Leishman, Marc",7649,T14,14.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Hatton, Tyrrell",14796,17,17.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Johnson, Dustin",12422,T18,18.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"McDowell, Graeme",7548,T18,18.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Poulter, Ian",1435,T18,18.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Grace, Branden",11952,T21,21.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Ham, Jeong Woo",17872,T21,21.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"McKibbin, Tom",22322,T21,21.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Meronk, Adrian",14196,T21,21.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Tabuena, Miguel",15274,25,25.0,0,0,0,1,1,0
+2026,Virginia,1030,2026-05-10,"Bland, Richard",6516,T26,26.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Pieters, Thomas",13944,T26,26.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Schwartzel, Charl",7398,T26,26.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Smith, Cameron",15856,T26,26.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Lee, Richard",12413,T30,30.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Munoz, Sebastian",20770,T30,30.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Ortiz, Carlos",14735,T30,30.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Song, Younghan",16160,T30,30.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Westwood, Lee",4052,T30,30.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"An, Byeong Hun",14459,T35,35.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Asaji, Yosuke",12637,T35,35.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Hellgren, Bjorn",16231,T35,35.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Watson, Bubba",7334,T35,35.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Gooch, Talor",18580,T39,39.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Kaymer, Martin",8117,T39,39.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Steele, Brendan",11019,T39,39.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Oosthuizen, Louis",7672,42,42.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Ancer, Abraham",18238,43,43.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Lahiri, Anirban",12669,T44,44.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Wolff, Matthew",25919,T44,44.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Canter, Laurie",14795,T46,46.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Kokrak, Jason",12337,T46,46.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"La Sasso, Michael",33755,T46,46.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Smylie, Elvis",24200,T46,46.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Tringale, Cameron",14013,T46,46.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Masaveu, Luis",30428,T51,51.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Varner III, Harold",16602,T51,51.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Campbell, Ben",14373,53,53.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Uihlein, Peter",11357,54,54.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Horsfield, Sam",19866,55,55.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Kim, Minkyu",20780,56,56.0,0,0,0,0,1,0
+2026,Virginia,1030,2026-05-10,"Lee, Danny",11826,WD,,0,0,0,0,0,1
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Peng, Ian",32452,1,1.0,1,1,1,1,1,0
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chan, Chia-Han",33412,T2,2.0,0,1,1,1,1,0
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ieamgaew, Warun",22884,T2,2.0,0,1,1,1,1,0
@@ -3691,6 +3943,162 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Turkish Airlines Open,2026116,2026-05-03,"Yamac, Taner",23577,CUT,,0,0,0,0,0,1
 2026,Turkish Airlines Open,2026116,2026-05-03,"Yanakiev, Yordan",35121,CUT,,0,0,0,0,0,1
 2026,Turkish Airlines Open,2026116,2026-05-03,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Premlall, Yurav",25890,1,1.0,1,1,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Norris, Shaun",7677,2,2.0,0,1,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Del Rey, Alejandro",22259,T3,3.0,0,1,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Guillamoundeguy, Oihan",28239,T3,3.0,0,1,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ritchie, JC",18174,T3,3.0,0,1,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Aphibarnrat, Kiradech",12321,T6,6.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Bradbury, Dan",29971,T6,6.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Cabrera Bello, Rafa",7457,T6,6.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kobori, Kazuma",24369,T6,6.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Couvra, Martin",27811,T10,10.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Lindell, Oliver",20085,T10,10.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Lopez-Chacarra, Eugenio",26745,T10,10.0,0,0,1,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Gouveia, Ricardo",18722,T13,13.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Mazzoli, Stefano",20844,T13,13.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Waring, Paul",12426,T13,13.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Wiesberger, Bernd",9531,T13,13.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Bjerregaard, Lucas",11619,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Blomme, Adam",23784,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Cantero Gutierrez, Ivan",19635,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Lagergren, Joakim",14780,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Law, David",14784,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Pepperell, Eddie",15113,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ramsay, Richie",11396,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Rozner, Antoine",18770,T17,17.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Campillo, Jorge",14016,T25,25.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Coussaud, Ugo",20727,T25,25.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Elvira Mijares, Ignacio",12988,T25,25.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ferguson, Ewen",21646,T25,25.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Garcia-Heredia, Alfredo",7887,T25,25.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Schaper, Jayden Trey",26991,T25,25.0,0,0,0,1,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Bryant, Davis",32550,T31,31.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Follet-Smith, Benjamin",15211,T31,31.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Halvorsen, Andreas",17747,T31,31.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Levy, Alexander",14973,T31,31.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Sandhu, Yuvraj Singh",23060,T31,31.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Vaillant, Tom",28157,T31,31.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Broomhead, Jonothan",30210,T37,37.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Johnston, Andrew",14666,T37,37.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Katsuragawa, Yuto",20448,T37,37.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Schneider, Marcel",12522,T37,37.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Scrivener, Jason",12734,T37,37.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Senior, Jack",15115,T37,37.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Bairstow, Sam",28615,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Bergstrom, Albin",23620,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Da Costa Rodrigues, Daniel",27149,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Hoshino, Rikuya",19190,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Paul, Yannik",19898,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ravetto, David",23416,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Townsend, Hugo",31165,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Winther, Jeff",15680,T43,43.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Celli, Filippo",23549,T51,51.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Fisher, Ross",9396,T51,51.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Moller, Niklas Norgaard",15676,T51,51.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Arnaus, Adri",23236,T54,54.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Baldwin, Matthew",13344,T54,54.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Jamieson, Scott",11397,T54,54.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kinhult, Marcus",18514,T54,54.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Repetto Taylor, Rocco Paolo",31235,T54,54.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Gallegos, Andres German",19296,T59,59.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kruyswijk, Jacques",16896,T59,59.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Rebula, Jovan",22912,T59,59.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Vidal, Quim",29712,T59,59.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Wenyi, Ding",26193,T59,59.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Cockerill, Aaron",15596,T64,64.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Daffue, Mj",17068,T64,64.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Dean, Joe",16497,T64,64.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Hidalgo, Angel",24127,T64,64.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Naidoo, Dylan",19429,T64,64.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Yule, Jack",22496,T64,64.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"De Leo, Gregorio",26506,T70,70.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Hollick, Michael",15993,T70,70.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Jonsson, Tobias",28686,T70,70.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Langasque, Romain",16652,T70,70.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Tarren, Callum",20519,T70,70.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Lombard, Zander",16897,75,75.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kaewkanjana, Sadom",19844,T76,76.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Morrison, James",11061,T76,76.0,0,0,0,0,1,0
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Adam, Cameron",34024,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ahlawat, Veer",22897,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Armitage, Marcus",17813,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ayora, Angel",30445,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Boneta, Albert",29948,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Buchanan, Jack",27379,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Charmasson, Clement",22220,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Clements, Todd",22608,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Crocker, Sean",23610,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Dantorp, Jens",14018,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Debove , Quentin",25325,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Du Plessis, Hennie",19421,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Elvira, Manuel",26008,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ereno, Pablo",33839,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Erickson, Dan",29520,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Fdez-Castano, Gonzalo",8262,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Forrest, Grant",16475,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Forsstrom, Simon",19806,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Garcia Rodriguez, Sebastian",12258,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Green, Gavin",12530,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Guerrier, Julien",10201,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Helligkilde, Marcus",20190,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Jackson, Palmer",30464,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kaneko, Kota",28268,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kieffer, Maximilian",12317,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Kimsey, Nathan",18027,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Laporta, Francesco",14987,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Lee, Junghwan",13498,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"List, Luke",7960,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Luiten, Joost",10158,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Manassero, Matteo",11460,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Mestre Carceller, Vicente",35194,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Migliozzi, Guido",17357,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Mjaaseth, Michael",27717,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Molinari, Edoardo",7033,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Molinari, Francesco",7655,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Mory , Felix",25089,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Moscatel, Joel",27815,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Olesen, Jacob Skov",25611,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Pastor, Victor",24133,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Pulkkanen, Tapio",13139,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Quayle, Anthony",18900,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Schmidt, Ben",27258,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Schott, Freddy",27588,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Sekne, Herman Wibe",23797,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Serra, Josep Maria",29822,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Sordet, Clement",17718,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Southgate, Matthew",15191,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Sterne, Richard",7049,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Stone, Brandon",15229,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Strydom, Ockie",13731,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Tarrio Ben, Santiago",20704,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Van Driel, Darius",13374,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Van Tonder, Daniel",15193,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Von Dellingshausen, Nicolai",22231,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
+2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
