@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-10 22:19:05 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 12,247 rows across 35 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-05-10 22:18:58 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-09 14:00:29 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-09 13:32:54 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
