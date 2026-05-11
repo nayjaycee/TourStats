@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-11 17:09:39 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-05-11 17:09:37 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-08 10:04:36 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480, 33"
-    },
-    {
-      "timestamp": "2026-05-08 03:50:02 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
       "details": "Field updated: 480, 33"
