@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-12 04:49:11 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
+    },
+    {
       "timestamp": "2026-05-11 17:09:39 ET",
       "type": "approach_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-08 15:27:49 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Truist Championship",
-      "details": "Field updated: 480, 33"
-    },
-    {
-      "timestamp": "2026-05-08 10:04:36 ET",
       "type": "field_odds_refresh",
       "event_name": "Truist Championship",
       "details": "Field updated: 480, 33"
