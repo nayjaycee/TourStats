@@ -30,6 +30,7 @@ LEADERBOARD_PATH = OAD_DIR / "OaD_Leaderboard.csv"
 EVENTS_DIR       = OAD_DIR / "OAD_events"
 OAD_SAVE_PATH    = INUSE / "oad_picks_2026.json"
 THIS_WEEK_PATH   = INUSE / "this_week_field.csv"
+NEXT_WEEK_PATH   = INUSE / "next_week_field.csv"
 ODDS_PATH        = INUSE / "this_week_odds.csv"
 SCHEDULE_PATH    = INUSE / "OAD_2026_Schedule.xlsx"
 ROUNDS_PATH      = INUSE / "combined_roundlevel_2024_present.csv"
@@ -109,7 +110,7 @@ def _load_leaderboard() -> pd.DataFrame:
                 .replace({"--": "0", "": "0"})
                 .pipe(pd.to_numeric, errors="coerce").fillna(0)
             )
-            ev["_player"] = ev["Username"].astype(str).str.strip()
+            ev["_player"] = ev["Username"].astype(str).str.strip().str.strip('"')
             # One pick per team per event
             ev_earn = ev.dropna(subset=["_player"]).groupby("_player")["_earn"].max().astype(int)
             for player, earn in ev_earn.items():
@@ -145,9 +146,10 @@ def _load_schedule() -> pd.DataFrame:
 
 @st.cache_data(ttl=300)
 def _load_field_odds():
-    field = pd.read_csv(THIS_WEEK_PATH) if THIS_WEEK_PATH.exists() else pd.DataFrame()
-    odds  = pd.read_csv(ODDS_PATH)      if ODDS_PATH.exists()      else pd.DataFrame()
-    return field, odds
+    this_week = pd.read_csv(THIS_WEEK_PATH) if THIS_WEEK_PATH.exists() else pd.DataFrame()
+    next_week = pd.read_csv(NEXT_WEEK_PATH) if NEXT_WEEK_PATH.exists() else pd.DataFrame()
+    odds      = pd.read_csv(ODDS_PATH)      if ODDS_PATH.exists()      else pd.DataFrame()
+    return this_week, next_week, odds
 
 
 @st.cache_data(ttl=3600)
@@ -238,13 +240,14 @@ def render_oad_game_theory_tab() -> None:
     events_df         = _load_events()
     lb                = _load_leaderboard()
     sched             = _load_schedule()
-    field_df, odds_df = _load_field_odds()
+    this_week_df, next_week_df, odds_df = _load_field_odds()
 
     if events_df.empty or lb.empty:
         st.warning("OAD data not found.")
         return
 
     # -- Event selector ────────────────────────────────────────────────────────
+    field_df = this_week_df  # for current-event slug matching
     current_event_name = field_df["event_name"].iloc[0] if not field_df.empty else ""
     current_slug       = _to_slug(current_event_name)
     today              = pd.Timestamp.now().normalize()
@@ -257,13 +260,15 @@ def render_oad_game_theory_tab() -> None:
             name       = row["event_name"]
             start      = row["start_date"]
             etype      = str(row.get("event_type", "REGULAR")).upper()
-            winner_sh  = int(row["oad_winner_share"]) if pd.notna(row.get("oad_winner_share")) else 0
+            # 3.5k tab always uses oad_winner_share
+            winner_sh = int(row["oad_winner_share"]) if pd.notna(row.get("oad_winner_share")) else 0
             is_filed   = slug in filed_slugs
             is_current = slug == current_slug
             is_future  = pd.notna(start) and start > today
             is_major   = etype in MAJOR_TYPES
 
-            if is_filed or (is_future and pd.notna(start)):
+            is_recent = pd.notna(start) and start >= (today - pd.Timedelta(days=4))
+            if is_recent or is_future:
                 label = name
                 if is_current:
                     label = f"{name} (current)"
@@ -277,17 +282,30 @@ def render_oad_game_theory_tab() -> None:
                     "event_type": etype,
                 })
 
-    default_idx = next((i for i, e in enumerate(event_options) if e["is_current"]), 0)
-
     st.subheader("OAD Game Theory")
     st.caption("McKenzie Scotts Tots")
 
+    valid_labels = [e["label"] for e in event_options]
+
+    # Default: if this week's event has already started, jump to next week
+    if event_options:
+        first_start = event_options[0]["start_date"]
+        if pd.notna(first_start) and first_start <= today:
+            default_idx = 1 if len(event_options) > 1 else 0
+        else:
+            default_idx = 0
+    else:
+        default_idx = 0
+
+    if st.session_state.get("gt_event_select") not in valid_labels:
+        st.session_state.pop("gt_event_select", None)
     sel_label = st.selectbox(
-        "Event", options=[e["label"] for e in event_options],
+        "Event", options=valid_labels,
         index=default_idx, key="gt_event_select",
     )
     sel_event = next((e for e in event_options if e["label"] == sel_label),
                      event_options[default_idx] if event_options else None)
+
     if sel_event is None:
         st.info("No events found in schedule.")
         return
@@ -330,7 +348,7 @@ def render_oad_game_theory_tab() -> None:
     }
 
     all_usernames = set(events_df["_username"].dropna().unique())
-    n_league = len(all_usernames)
+    n_league = len(lb)  # total teams in league from leaderboard
 
     # -- Cutoff: team_used = only events before selected event ─────────────────
     slug_to_date: dict[str, pd.Timestamp] = {}
@@ -370,9 +388,25 @@ def render_oad_game_theory_tab() -> None:
     field_ids: set[int]        = set()
     field_name_map: dict[int, str] = {}
 
-    if sel_event["is_current"] and not field_df.empty:
-        field_ids      = set(field_df["dg_id"].dropna().astype(int).tolist())
-        field_name_map = {int(r["dg_id"]): str(r["player_name"]) for _, r in field_df.iterrows()}
+    # Match field file by event_id from schedule
+    _eid_series = sched.loc[sched["_slug"] == sel_slug, "event_id"] if not sched.empty else pd.Series(dtype=float)
+    sel_event_id = int(_eid_series.iloc[0]) if not _eid_series.empty and pd.notna(_eid_series.iloc[0]) else None
+
+    def _field_event_id(df):
+        return int(df["event_id"].iloc[0]) if not df.empty and "event_id" in df.columns and pd.notna(df["event_id"].iloc[0]) else None
+
+    matched_field = pd.DataFrame()
+    matched_from_this_week = False
+    if sel_event_id is not None:
+        if _field_event_id(this_week_df) == sel_event_id:
+            matched_field = this_week_df
+            matched_from_this_week = True
+        elif _field_event_id(next_week_df) == sel_event_id:
+            matched_field = next_week_df
+
+    if not matched_field.empty:
+        field_ids      = set(matched_field["dg_id"].dropna().astype(int).tolist())
+        field_name_map = {int(r["dg_id"]): str(r["player_name"]) for _, r in matched_field.iterrows()}
         st.info(f"Using live field ({len(field_ids)} players).")
     else:
         if sel_is_major:
@@ -396,7 +430,7 @@ def render_oad_game_theory_tab() -> None:
     dg_hist_map: dict[int, float]   = {}
     best_odds_map: dict[int, float] = {}
 
-    odds_available = sel_event["is_current"] and not odds_df.empty
+    odds_available = matched_from_this_week and not odds_df.empty
     if odds_available:
         win_odds = odds_df[odds_df["market"] == "win"] if "market" in odds_df.columns else odds_df
         for _, row in win_odds.iterrows():
@@ -409,14 +443,12 @@ def render_oad_game_theory_tab() -> None:
             if pd.notna(row.get("datagolf_base_history_fit")):
                 dg_hist_map[did]  = round(_dec_to_pct(float(row["datagolf_base_history_fit"])), 1)
 
-    # -- Our used players (from picks JSON) ────────────────────────────────────
-    our_used: set[int]     = set()
+    # -- Our used players (from events CSVs, supplemented by JSON excluded list) ─
+    our_used: set[int] = team_used.get(OUR_USERNAME, set())
     our_excluded: set[int] = set()
     if OAD_SAVE_PATH.exists():
         with open(OAD_SAVE_PATH) as f:
             oad_data = json.load(f)
-        for p in oad_data.get("league2", {}).get("used_players", []):
-            our_used.add(p["dg_id"])
         for p in oad_data.get("league2", {}).get("excluded", []):
             our_excluded.add(p["dg_id"])
 
@@ -503,15 +535,17 @@ def render_oad_game_theory_tab() -> None:
         model_score = dg_hist if pd.notna(dg_hist) else (dg_model if pd.notna(dg_model) else np.nan)
         tier        = _model_tier(model_score) if pd.notna(model_score) else ""
 
-        # League-wide burned %
+        # League-wide burned — % always uses total league as denominator
         league_burned    = [u for u, ids in team_used.items() if did in ids]
-        league_pct       = round(len(league_burned) / n_league * 100) if n_league > 0 else 0
+        n_used           = len(league_burned)
+        league_pct       = round(n_used / n_league * 100) if n_league > 0 else 0
 
-        # Rate within each group: % of teams ahead / behind who burned him
         burned_ahead     = [u for u in league_burned if u in ahead_usernames]
         burned_chasers   = [u for u in league_burned if u in chaser_usernames]
-        burned_ahead_pct = round(len(burned_ahead)   / n_ahead   * 100) if n_ahead   > 0 else 0
-        chaser_pct       = round(len(burned_chasers) / n_chasers * 100) if n_chasers > 0 else 0
+        n_ahead_used     = len(burned_ahead)
+        n_behind_used    = len(burned_chasers)
+        burned_ahead_pct = round(n_ahead_used  / n_league * 100) if n_league > 0 else 0
+        chaser_pct       = round(n_behind_used / n_league * 100) if n_league > 0 else 0
 
         ranks    = [team_rank[u] for u in burned_ahead if u in team_rank]
         avg_rank = round(float(np.mean(ranks)), 1) if ranks else np.nan
@@ -549,13 +583,16 @@ def render_oad_game_theory_tab() -> None:
             "dg_id":              did,
             "Player":             name,
             "Tier":               tier,
-            "DG w/ Fit":      dg_hist,
+            "DG w/ Fit":          dg_hist,
             "DG Model %":         dg_model,
             "Win % (odds)":       win_pct,
             "Best Odds":          f"{best_dec:.1f}" if pd.notna(best_dec) else "-",
-            "% League Used":  league_pct,
-            "% Ahead Used":   burned_ahead_pct,
-            "% Behind Used":  chaser_pct,
+            "Used":               f"{n_used} ({league_pct}%)",
+            "Ahead Used":         f"{n_ahead_used} ({burned_ahead_pct}%)",
+            "Behind Used":        f"{n_behind_used} ({chaser_pct}%)",
+            "% Used":             league_pct,
+            "% Ahead Used":       burned_ahead_pct,
+            "% Behind Used":      chaser_pct,
             "Picking Now (ahead)": picking_ahead_pct,
             "Own % this week":    own_week,
             "Avg Rank (users)":   avg_rank,
@@ -565,13 +602,13 @@ def render_oad_game_theory_tab() -> None:
         })
 
     gt_df    = pd.DataFrame(rows)
-    sort_col = "DG w/ Fit" if odds_available else "% League Used"
+    sort_col = "DG w/ Fit" if odds_available else "% Used"
     gt_df    = gt_df.sort_values(sort_col, ascending=False, na_position="last").reset_index(drop=True)
 
     # -- Differentiation scatter ───────────────────────────────────────────────
     st.markdown(f"### Differentiation - {sel_name}")
-    y_col   = "DG w/ Fit" if odds_available else "% League Used"
-    y_title = "DG w/ Fit Win %  ->  higher is better" if odds_available else "% League Used  ->  popularity proxy"
+    y_col   = "DG w/ Fit" if odds_available else "% Used"
+    y_title = "DG w/ Fit Win %  ->  higher is better" if odds_available else "% Used  ->  popularity proxy"
     st.caption(
         "X = % of teams ahead that have used this player.  "
         f"Y = {'DG model w/ history win %' if odds_available else '% used league-wide'}.  "
@@ -673,7 +710,7 @@ def render_oad_game_theory_tab() -> None:
     show_cols = [
         "Player", "Tier",
         "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
-        "% League Used", "% Ahead Used", "% Behind Used",
+        "Used", "Ahead Used", "Behind Used",
         "Picking Now (ahead)", "Own % this week",
         "Avg Rank (users)", "New Rank",
         "We Can Use", "We Used",
@@ -683,15 +720,12 @@ def render_oad_game_theory_tab() -> None:
     if not have_this_week:
         show_cols = [c for c in show_cols if c not in ("Picking Now (ahead)", "New Rank")]
     if n_chasers == 0:
-        show_cols = [c for c in show_cols if c != "% Behind Used"]
+        show_cols = [c for c in show_cols if c != "Behind Used"]
 
     fmt = {
         "DG w/ Fit":           "{:.1f}%",
         "DG Model %":          "{:.1f}%",
         "Win % (odds)":        "{:.1f}%",
-        "% League Used":   "{:.0f}%",
-        "% Ahead Used":    "{:.0f}%",
-        "% Behind Used":  "{:.0f}%",
         "Picking Now (ahead)": "{:.0f}%",
         "Own % this week":     "{:.0f}%",
         "Avg Rank (users)":    "{:.1f}",
@@ -710,21 +744,21 @@ def render_oad_game_theory_tab() -> None:
     # -- Recommendation ────────────────────────────────────────────────────────
     st.markdown("### Recommendation - Available to Us")
     if odds_available:
-        st.caption("Score = DG w/ Fit % x (1 + % League Used / 100)")
+        st.caption("Score = DG w/ Fit % x (1 + % Used / 100)")
         score_col = "DG w/ Fit"
     else:
-        st.caption("Score = % League Used  -  odds not yet available")
-        score_col = "% League Used"
+        st.caption("Score = % Used  -  odds not yet available")
+        score_col = "% Used"
 
     avail = gt_df[gt_df["We Can Use"] & gt_df[score_col].notna()].copy()
-    avail["Score"] = avail[score_col] * (1 + avail["% League Used"] / 100)
+    avail["Score"] = avail[score_col] * (1 + avail["% Used"] / 100)
     avail = avail.sort_values("Score", ascending=False).head(15)
 
     if not avail.empty:
         rec_cols = [
             "Player", "Tier",
             "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
-            "% League Used", "% Ahead Used", "% Behind Used",
+            "Used", "Ahead Used", "Behind Used",
             "Picking Now (ahead)", "Own % this week",
             "Avg Rank (users)", "New Rank", "Score",
         ]
@@ -749,7 +783,7 @@ def render_oad_game_theory_tab() -> None:
 
     # -- Teams ahead: best available ───────────────────────────────────────────
     st.markdown("### Teams Ahead - Best Available Picks")
-    sort_key = "DG w/ Fit" if odds_available else "% League Used"
+    sort_key = "DG w/ Fit" if odds_available else "% Used"
     st.caption(f"Top 5 players each team ahead can still use, ranked by {sort_key if odds_available else 'league burn %'}.")
 
     player_info = gt_df.set_index("dg_id")[["Player", sort_key, "Tier"]].to_dict("index")

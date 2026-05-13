@@ -524,6 +524,7 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
         st.markdown(_label("Outright Favourites"), unsafe_allow_html=True)
         has_odds = fev["_odds"].notna().any() and (fev["_odds"] > 1).any()
         if has_odds:
+            odds_html = "<div>"
             for rank_pos, (_, p) in enumerate(fev[fev["_odds"] > 1].nsmallest(10, "_odds").iterrows(), 1):
                 name     = _clean(p.get("player_name"))
                 american = _odds_to_american(p["_odds"])
@@ -532,7 +533,7 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
                 hs       = _headshot(name, id_to_img.get(int(p["dg_id"])))
                 owgr_html = _owgr_badge(owgr)
                 featured_ids.append(int(p["dg_id"]))
-                st.markdown(
+                odds_html += (
                     f"<div style='display:flex;align-items:center;gap:10px;padding:6px 0;"
                     f"height:52px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.04)'>"
                     f"<span style='font-size:10px;color:rgba(100,100,100,0.4);min-width:14px;text-align:right'>"
@@ -544,9 +545,10 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
                     f"</div><div style='text-align:right;flex-shrink:0'>"
                     f"<div style='font-size:15px;font-weight:800;color:#fbbf24'>{american}</div>"
                     f"<div style='font-size:10px;color:rgba(110,110,110,0.5)'>{implied}</div>"
-                    f"</div></div>",
-                    unsafe_allow_html=True,
+                    f"</div></div>"
                 )
+            odds_html += "</div>"
+            st.markdown(odds_html, unsafe_allow_html=True)
         else:
             st.caption("Odds not yet available for this event.")
 
@@ -581,6 +583,7 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
             st.caption("Not enough round data.")
         else:
             sg_max = float(form["sg_l12"].max())
+            form_html = "<div>"
             for rank_pos, (_, p) in enumerate(form.iterrows(), 1):
                 name   = _clean(p.get("player_name"))
                 sg_val = float(p["sg_l12"])
@@ -590,8 +593,8 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
                 owgr_html = _owgr_badge(owgr)
                 featured_ids.append(int(p["dg_id"]))
                 dg_id_val = int(p["dg_id"])
-                st.markdown(
-                    f"<a href='?nav_dd={dg_id_val}' style='text-decoration:none;color:inherit;display:contents'>"
+                form_html += (
+                    f"<a href='?nav_dd={dg_id_val}' style='text-decoration:none;color:inherit;display:block'>"
                     f"<div style='display:flex;align-items:center;gap:10px;padding:6px 0;"
                     f"height:52px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.04);"
                     f"transition:background .15s;cursor:pointer' "
@@ -610,9 +613,10 @@ def _render_field_snapshot(field_ev, rounds_df, cutoff_dt, id_to_img, field_df=N
                     f"<div style='text-align:right;flex-shrink:0'>"
                     f"<div style='font-size:15px;font-weight:800;color:#34d399'>+{sg_val:.2f}</div>"
                     f"<div style='font-size:10px;color:rgba(110,110,110,0.4)'>SG/Rnd</div>"
-                    f"</div></div></a>",
-                    unsafe_allow_html=True,
+                    f"</div></div></a>"
                 )
+            form_html += "</div>"
+            st.markdown(form_html, unsafe_allow_html=True)
 
     return list(dict.fromkeys(featured_ids))  # deduplicated, order preserved
 
