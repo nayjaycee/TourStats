@@ -1,124 +1,124 @@
 {
   "events": [
     {
-      "timestamp": "2026-05-12 18:00:12 ET",
+      "timestamp": "2026-05-13 10:49:49 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-12 12:00:05 ET",
+      "timestamp": "2026-05-13 04:53:02 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-11 19:28:59 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "timestamp": "2026-05-12 16:02:31 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-11 19:28:58 ET",
+      "timestamp": "2026-05-12 10:38:51 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
+    },
+    {
+      "timestamp": "2026-05-12 04:49:11 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
+    },
+    {
+      "timestamp": "2026-05-11 17:09:39 ET",
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
     },
     {
-      "timestamp": "2026-05-11 19:28:57 ET",
+      "timestamp": "2026-05-11 17:09:37 ET",
       "type": "rounds_refresh",
       "event_name": "",
       "details": "Rounds refreshed \u2014 13,626 rows across 39 events. Finishes rebuilt."
     },
     {
-      "timestamp": "2026-05-11 19:28:51 ET",
+      "timestamp": "2026-05-11 17:09:26 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-11 18:00:13 ET",
+      "timestamp": "2026-05-11 15:57:02 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-11 12:00:05 ET",
-      "type": "field_odds_refresh",
-      "event_name": "PGA Championship",
-      "details": "Field updated: 33"
-    },
-    {
-      "timestamp": "2026-05-10 23:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-10 23:00:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-10 22:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-10 22:19:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-05-10 22:19:06 ET",
+      "timestamp": "2026-05-11 13:48:33 ET",
       "type": "approach_refresh",
       "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,033 rows (l12/l24/ytd)"
+      "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
     },
     {
-      "timestamp": "2026-05-10 22:19:05 ET",
+      "timestamp": "2026-05-11 13:48:32 ET",
       "type": "rounds_refresh",
       "event_name": "",
-      "details": "Rounds refreshed \u2014 12,247 rows across 35 events. Finishes rebuilt."
+      "details": "Rounds refreshed \u2014 13,626 rows across 39 events. Finishes rebuilt."
     },
     {
-      "timestamp": "2026-05-10 22:18:58 ET",
+      "timestamp": "2026-05-11 13:48:21 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-10 22:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
+      "timestamp": "2026-05-11 11:27:32 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-10 21:30:03 ET",
-      "type": "live_odds_refresh",
+      "timestamp": "2026-05-11 10:24:49 ET",
+      "type": "approach_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
+      "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
     },
     {
-      "timestamp": "2026-05-10 21:00:04 ET",
-      "type": "live_odds_refresh",
+      "timestamp": "2026-05-11 10:24:47 ET",
+      "type": "rounds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
+      "details": "Rounds refreshed \u2014 13,626 rows across 39 events. Finishes rebuilt."
     },
     {
-      "timestamp": "2026-05-10 20:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
+      "timestamp": "2026-05-11 10:23:08 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
     },
     {
-      "timestamp": "2026-05-10 20:00:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
+      "timestamp": "2026-05-11 05:53:18 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
+    },
+    {
+      "timestamp": "2026-05-10 15:14:35 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480, 33"
+    },
+    {
+      "timestamp": "2026-05-10 09:42:45 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480, 33"
+    },
+    {
+      "timestamp": "2026-05-10 04:17:43 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Truist Championship",
+      "details": "Field updated: 480, 33"
     }
   ]
 }
