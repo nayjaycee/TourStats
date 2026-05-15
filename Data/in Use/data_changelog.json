@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-15 12:00:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33"
+    },
+    {
+      "timestamp": "2026-05-15 12:00:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-05-15 11:30:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-05-15 11:00:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
       "timestamp": "2026-05-15 06:04:45 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
@@ -95,30 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33"
-    },
-    {
-      "timestamp": "2026-05-12 16:02:31 ET",
-      "type": "field_odds_refresh",
-      "event_name": "PGA Championship",
-      "details": "Field updated: 33"
-    },
-    {
-      "timestamp": "2026-05-12 10:38:51 ET",
-      "type": "field_odds_refresh",
-      "event_name": "PGA Championship",
-      "details": "Field updated: 33"
-    },
-    {
-      "timestamp": "2026-05-12 04:49:11 ET",
-      "type": "field_odds_refresh",
-      "event_name": "PGA Championship",
-      "details": "Field updated: 33"
-    },
-    {
-      "timestamp": "2026-05-11 17:09:39 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
     }
   ]
 }
