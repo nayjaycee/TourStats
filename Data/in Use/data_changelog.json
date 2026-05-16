@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-16 09:46:48 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33, 19"
+    },
+    {
       "timestamp": "2026-05-16 04:11:56 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-05-11 13:48:32 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 13,626 rows across 39 events. Finishes rebuilt."
     }
   ]
 }
