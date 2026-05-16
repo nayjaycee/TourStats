@@ -1,6 +1,54 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-16 06:04:26 ET",
+      "type": "field_odds_refresh",
+      "event_name": "PGA Championship",
+      "details": "Field updated: 33, 19"
+    },
+    {
+      "timestamp": "2026-05-15 22:30:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 82 players"
+    },
+    {
+      "timestamp": "2026-05-15 22:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 82 players"
+    },
+    {
+      "timestamp": "2026-05-15 20:30:53 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-05-15 20:00:14 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-05-15 19:30:11 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-05-15 19:00:09 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-05-15 18:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
       "timestamp": "2026-05-15 18:00:16 ET",
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
@@ -68,54 +116,6 @@
     },
     {
       "timestamp": "2026-05-15 12:00:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-15 11:30:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-15 11:00:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-15 06:04:45 ET",
-      "type": "field_odds_refresh",
-      "event_name": "PGA Championship",
-      "details": "Field updated: 33"
-    },
-    {
-      "timestamp": "2026-05-14 23:04:33 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-14 22:45:14 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-14 22:05:19 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-14 21:30:51 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-14 19:34:57 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 156 players"
