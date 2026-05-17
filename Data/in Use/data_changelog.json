@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-17 11:59:27 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,051 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-05-17 11:59:26 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-15 16:30:49 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
-    },
-    {
-      "timestamp": "2026-05-15 15:30:12 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 156 players"
