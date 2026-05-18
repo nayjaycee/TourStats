@@ -544,8 +544,8 @@ def render_oad_game_theory_tab() -> None:
         burned_chasers   = [u for u in league_burned if u in chaser_usernames]
         n_ahead_used     = len(burned_ahead)
         n_behind_used    = len(burned_chasers)
-        burned_ahead_pct = round(n_ahead_used  / n_league * 100) if n_league > 0 else 0
-        chaser_pct       = round(n_behind_used / n_league * 100) if n_league > 0 else 0
+        burned_ahead_pct = round(n_ahead_used  / n_ahead    * 100) if n_ahead    > 0 else 0
+        chaser_pct       = round(n_behind_used / n_chasers  * 100) if n_chasers  > 0 else 0
 
         ranks    = [team_rank[u] for u in burned_ahead if u in team_rank]
         avg_rank = round(float(np.mean(ranks)), 1) if ranks else np.nan

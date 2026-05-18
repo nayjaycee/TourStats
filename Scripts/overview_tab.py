@@ -28,6 +28,12 @@ _EVENT_ID_ALIASES: dict[int, list[int]] = {
     14: [536],   # Masters Tournament - 2021 edition stored as event_id 536 ("The Masters #2")
 }
 
+# Course numbers that represent the same physical venue (different IDs assigned over the years)
+_COURSE_NUM_EQUIV: dict[int, set[int]] = {
+    894: {894, 921},   # TPC Craig Ranch (Byron Nelson) - same course, two IDs
+    921: {894, 921},
+}
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Helpers
@@ -657,7 +663,8 @@ def _render_event_history(rounds_df, event_id, course_num) -> None:
     if course_num is not None and "course_num" in r.columns:
         cby = r.groupby("year")["course_num"].first().reset_index()
         cby["year"] = cby["year"].astype(int)
-        diff_years = set(cby.loc[cby["course_num"] != int(course_num), "year"].tolist())
+        equiv = _COURSE_NUM_EQUIV.get(int(course_num), {int(course_num)})
+        diff_years = set(cby.loc[~cby["course_num"].isin(equiv), "year"].tolist())
 
     avg_score = (
         r.dropna(subset=["year","round_score"])

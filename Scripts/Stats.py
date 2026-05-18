@@ -1734,6 +1734,12 @@ if event_id is not None:
     ):
         try:
             _odds_csv = pd.read_csv(_odds_csv_path)
+            # Verify odds are actually for this event (event_name must match field)
+            if "event_name" in _odds_csv.columns and "event_name" in field_ev.columns:
+                _odds_event = str(_odds_csv["event_name"].iloc[0]).strip().lower()
+                _field_event = str(field_ev["event_name"].iloc[0]).strip().lower() if not field_ev.empty else ""
+                if _odds_event != _field_event:
+                    raise ValueError(f"Odds event mismatch: {_odds_event!r} vs {_field_event!r}")
             _odds_csv["dg_id"] = pd.to_numeric(_odds_csv["dg_id"], errors="coerce")
             # Pick best available bookmaker column
             _bookie_prefs = ["draftkings", "betmgm", "datagolf_baseline", "bovada", "betonline"]
