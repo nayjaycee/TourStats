@@ -1322,6 +1322,162 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Texas Children's Houston Open,20,2026-03-29,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
 2026,Texas Children's Houston Open,20,2026-03-29,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
 2026,Texas Children's Houston Open,20,2026-03-29,"Zalatoris, Will",19428,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Rai, Aaron",18554,1,1.0,1,1,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Rahm, Jon",19195,T2,2.0,0,1,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Smalley, Alex",18474,T2,2.0,0,1,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Aberg, Ludvig",23950,T4,4.0,0,1,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Schmid, Matti",20722,T4,4.0,0,1,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Thomas, Justin",14139,T4,4.0,0,1,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"McIlroy, Rory",10091,T7,7.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Schauffele, Xander",19895,T7,7.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Smith, Cameron",15856,T7,7.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Gotterup, Chris",27774,T10,10.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Kitayama, Kurt",21891,T10,10.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Reed, Patrick",14838,T10,10.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Rose, Justin",6093,T10,10.0,0,0,1,1,1,0
+2026,PGA Championship,33,2026-05-17,"Fitzpatrick, Matt",17646,T14,14.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Greyserman, Max",23465,T14,14.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Griffin, Ben",24968,T14,14.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Scheffler, Scottie",18417,T14,14.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"English, Harris",14577,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Harrington, Padraig",5716,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Jaeger, Stephan",16394,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Lee, Min Woo",16841,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"McNealy, Maverick",18634,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Niemann, Joaquin",18079,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Puig, David",28984,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Spieth, Jordan",14636,T18,18.0,0,0,0,1,1,0
+2026,PGA Championship,33,2026-05-17,"Burns, Sam",19483,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Cauley, Bud",14502,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Hillier, Daniel",21362,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Hoge, Tom",15575,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Matsuyama, Hideki",13562,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Noren, Alex",10419,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Novak, Andrew",23475,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Taylor, Nick",13126,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Young, Cameron",26651,T26,26.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Berger, Daniel",17606,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Bezuidenhout, Christiaan",18103,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Cantlay, Patrick",15466,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Fox, Ryan",11889,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Hisatsune, Ryo",22760,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Kaymer, Martin",8117,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Kim, Si Woo",14609,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Li, Haotong",15310,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Potgieter, Aldrich",27900,T35,35.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Blanchet, Chandler",24956,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Hojgaard, Nicolai",23602,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Johnson, Dustin",12422,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Kim, Michael",17543,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Kirk, Chris",12423,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Lowry, Shane",13900,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"McCarthy, Denny",19870,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Pendrith, Taylor",17780,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Reitan, Kristoffer",21407,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Vegas, Jhonattan",13508,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Wallace, Matt",20706,T44,44.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Conners, Corey",17576,T55,55.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Koepka, Brooks",16243,T55,55.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Lindberg, Mikael",20084,T55,55.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Morikawa, Collin",22085,T55,55.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Putnam, Andrew",14704,T55,55.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Fowler, Rickie",12965,T60,60.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Harman, Brian",8825,T60,60.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Hoey, Rico",23504,T60,60.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Theegala, Sahith",23014,T60,60.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Valimaki, Sami",23816,T60,60.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Day, Jason",9771,T65,65.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Hojgaard, Rasmus",23838,T65,65.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Jarvis, Casey",26947,T65,65.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Mitchell, Keith",17365,T65,65.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Stevens, Sam",25569,T65,65.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Donald, Luke",4163,T70,70.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Gerard, Ryan",29767,T70,70.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Higa, Kazuki",15756,T70,70.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Mouw, William",29770,T70,70.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Parry, John",13764,T70,70.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Brown, Dan",20766,T75,75.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Fitzpatrick, Alex",25362,T75,75.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Neergaard-Petersen, Rasmus",23841,T75,75.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Smylie, Elvis",24200,T75,75.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Keefer, Johnny",32457,79,79.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Kern, Ben",25439,80,80.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Brennan, Michael",29197,81,81.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Campbell, Brian",18628,82,82.0,0,0,0,0,1,0
+2026,PGA Championship,33,2026-05-17,"Ayora, Angel",30445,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Berg, Derek",17617,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Bhatia, Akshay",26096,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Bide, Francisco",16776,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Block, Michael",12333,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Bradley, Keegan",13872,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Bridgeman, Jacob",29433,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Castillo, Ricky",27819,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Cink, Stewart",5665,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Clark, Wyndham",23604,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Collet, Tyler",28077,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Coody, Pierceson",28309,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"DeChambeau, Bryson",19841,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Detry, Thomas",14181,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Droemer, Jesse",24584,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Dufner, Jason",7301,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Echavarria, Nico",22833,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Fisher, Bryce",10621,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Fisk, Steven",26657,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Fleetwood, Tommy",12294,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Gabriele, Chris",35228,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Geddes, Mark",21886,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Glover, Lucas",7399,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Grillo, Emiliano",12808,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Hall, Harry",27194,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Hatton, Tyrrell",14796,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Haynes, Zach",35229,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Henley, Russell",14578,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Higgo, Garrick",24342,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Holt, Ian",25036,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Homa, Max",17538,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Horschel, Billy",11276,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Hovland, Viktor",18841,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Hurt, Austin",29498,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Im, Sungjae",17488,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Jones, Jared",29501,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Kaneko, Kota",28268,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Kartrude, Michael",23469,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Lenahan, Ryan",18711,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Lipsky, David",15980,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"MacIntyre, Robert",23323,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"McCarty, Matt",28635,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"McClure, Paul",35227,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"McGreevy, Max",23505,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"McKibbin, Tom",22322,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Micheel, Shaun",4377,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Penge, Marco",22465,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Polland, Ben",20344,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Poston, J.T.",21554,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Rodgers, Patrick",16283,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Saddier, Adrien",14792,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Sapp, Garrett",13196,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Schaper, Jayden",26991,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Scott, Adam",6430,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Shattuck, Braden",31027,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Smith, Jordan",18586,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Smotherman, Austin",22985,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Smyth, Trav",19232,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Spaun, J.J.",17536,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Straka, Sepp",17511,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Sullivan, Andy",15326,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Thorbjornsen, Michael",26649,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Vermeer, Ryan",7326,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Walker, Jimmy",7293,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Wiesberger, Bernd",9531,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Wiseman, Timothy",25085,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Woodland, Gary",12577,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Yang, Y.E.",6629,CUT,,0,0,0,0,0,1
+2026,PGA Championship,33,2026-05-17,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
 2026,Valero Texas Open,41,2026-04-05,"Spaun, J.J.",17536,1,1.0,1,1,1,1,1,0
 2026,Valero Texas Open,41,2026-04-05,"Kim, Michael",17543,T2,2.0,0,1,1,1,1,0
 2026,Valero Texas Open,41,2026-04-05,"MacIntyre, Robert",23323,T2,2.0,0,1,1,1,1,0
@@ -2597,6 +2753,155 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yu-cheng, Hsu",25680,CUT,,0,0,0,0,0,1
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yung Hua, Liu",19492,CUT,,0,0,0,0,0,1
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wei Lun, Chang",19494,1,1.0,1,1,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ieamgaew, Warun",22884,2,2.0,0,1,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Sun-Yi, Lu",20881,3,3.0,0,1,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chien-Yao, Hung",11738,T4,4.0,0,1,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ting-Wei, Hsieh",24096,T4,4.0,0,1,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Prateeptienchai, Suteepat",21231,6,6.0,0,0,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ban, Shotaro",22304,T7,7.0,0,0,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chan, Chia-Han",33412,T7,7.0,0,0,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Yi-tong",23206,T7,7.0,0,0,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Huang, Yi-tseng",24105,T7,7.0,0,0,1,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Kai-jen, Tsai",18978,T11,11.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Mako, Shapiyate",30395,T11,11.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wang, Sheng-hui",33059,T11,11.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ching-hung, Su",24106,T14,14.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Polthai, Tawit",20793,T14,14.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wei-chih, Lu",8170,T16,16.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu, Sean Sung-Po",32008,T16,16.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tsai, Shang-kai",32957,18,18.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chi, Huang",23208,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Fung, Nicholas",12889,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Mizuno, Shinichi",15143,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Noro, Ryo",24222,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Peng, Ian",32452,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Shih-chang, Chan",9698,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Sudsom, Charng-Tai ",21721,T19,19.0,0,0,0,1,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yoshikuwa, Yuta",28252,T26,26.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu-cheng, Ho",22754,T26,26.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yung Hua, Liu",19492,T26,26.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu-Chen, Yeh",17771,29,29.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chin-hung, He",27411,T30,30.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tse-yu, Chang",25515,T30,30.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yen-hung, Liu",18798,T30,30.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Duangphaichoom, Jaturon",19321,33,33.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Jaraula, Reymon",15359,T34,34.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Chen-chu",33060,T34,34.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chang Chien, Ko-yen",33063,T36,36.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Charoenkul, Gunn",14128,T36,36.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lai, Chia-i",30401,T36,36.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Ting-yu",33753,T39,39.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"De Barba, Gabriele",18492,T39,39.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Kuo, Feng-chuan",30400,T39,39.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chao-hua, Lee",17763,T42,42.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Huang, Chih-yi",33415,T42,42.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ishizuka, Shori",22851,T44,44.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tokumitsu, Yuya",19164,T44,44.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tseng, Fu-tung",30396,T44,44.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wu, Yao-wei",32956,T44,44.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yeh, Chia-Yin",31679,T44,44.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Wei",33564,49,49.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Fukuhara, Shota",15388,T50,50.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ikeuchi, Kei",29862,T50,50.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wei-cheng, Shen",25521,52,52.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"IIda, Yusuke",16184,T53,53.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Jui-cheng, Hung",25519,T53,53.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chiang, Ian",33568,T55,55.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wen, Cheng-Hsiang",19698,T55,55.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Yen-Yu",33566,T57,57.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Watanabe, Ryunosuke",28565,T57,57.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yin Jen, Fang",19490,59,59.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Huang(Am), Chih Chen",34034,60,60.0,0,0,0,0,1,0
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Abe, Kenjo",35302,DQ,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Arbole, Art",15973,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Bautista, Russel",33171,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Bruminhent, Pattanan",34241,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chang, Yu-Cheng",31654,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Chieh-Sheng",31005,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Hui-hung",33062,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Ke-yi",33061,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Po-hao",30424,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Shou-Cheng",33574,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Wei-hao",33569,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chen, Wei-sheng",30398,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Cheng, Christopher",29909,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chi-Hsien, Hsieh",13484,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chih-kai, Hsu",21182,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chin-chou, Lee",17764,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Chiu, Yu-chia",30613,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ding-Sheng, Lin",16298,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Fang, Chuan-wei",31669,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Fei-hao, Yang",15042,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Fujita, Tsubasa",25533,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Furuya, Ryoto",29313,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Godfrey, Grant",29490,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Han-Ting, Chiu",20880,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hao-ching, Ho",15804,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hsi-An, Wang",25681,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hsiang-hao, Huang",18037,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hsieh, Tung-hung",14095,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hsu, Chao-Wei",34650,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hung Hsuan, Hsu",25579,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Hung, Chao-hsin",27247,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ishige, Takumi",15389,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Iwama Gamma, Takanari",21390,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Kao, Teng",17922,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Kashimoto, Kohei",25711,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Kobayashi, Shintaro",10560,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Kudo, Jun",27056,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lee, Jui-shen",30422,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lee, Shang-Jung",33573,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lee, Tony",33064,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lepkurte, Kasidit",15653,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, K.P.",15023,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Kai-jie",33563,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Keng-wei",17662,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Ming-yeh",33572,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Ta-yu",33058,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Yi-Yuan",31680,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lin, Yuan-Wei",19491,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Liu, Tse Sen",23628,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Lo, Cheng-Yuan",33567,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Matsumoto, Ryo",32933,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Min-hsuan, Hsieh",25517,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Mishima, Taiki",33754,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Morii, Akinori",14155,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Morioka, Shunichiro",16296,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Murakami, Takumi",24217,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Ohishi, Atsuya",28782,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Okada, Keita",33143,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Panyathanasedh, Peradol",8380,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Sakuma, Hayato",29720,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Seki, Shota",21033,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Sekito, Yuji",25823,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Shih-hung, Lee",17735,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Sukkoed, Tunyapat",29067,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Suwanpanang, Worrasorn",18597,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Takeda, Shinnosuke",35000,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Takeuchi, Shingo",26231,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tokunaga, Hiroki",26455,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tsai, Chen-Kai",34538,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tsai, Chin-Yang",33408,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tseng Seng, Tzu Hao",23629,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tsung-yu, Tsai",14504,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tsuriura, Ikuma",30866,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tsurumi, Daiki",26077,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tzu Hsuan, Tseng",19695,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Tzu Ming, Wang",17769,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wakaari, Nobuhiko",31357,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Walker, Johnny",34998,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wei-Chen, Hsu",33920,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Wen, Xin",33562,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yaginuma, Yuki",34997,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yamaura, Kazuki",28928,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yang, Hsiao-che",33411,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yang, Jay",33409,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yokokawa, Kosuke",30439,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu chen, Chen",24451,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu-chen, Yu",25682,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu-cheng, Hsu",25680,CUT,,0,0,0,0,0,1
+2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
 2026,Dubai Invitational,2026105,2026-01-18,"Elvira Mijares, Ignacio",12988,1,1.0,1,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Hillier, Daniel",21362,2,2.0,0,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Guerrier, Julien",10201,T3,3.0,0,1,1,1,1,0
