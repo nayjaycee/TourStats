@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 19,
     "event_name": "THE CJ CUP Byron Nelson",
-    "player_count": 143,
+    "player_count": 140,
     "player_names": [
       "Bae, Yongjun",
       "Bauchou, Zach",
@@ -59,7 +59,6 @@
       "Hojgaard, Rasmus",
       "Horschel, Billy",
       "Hossler, Beau",
-      "Howell, Mason",
       "Hubbard, Mark",
       "Hughes, Mackenzie",
       "Im, Sungjae",
@@ -97,14 +96,12 @@
       "Norlander, Henrik",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
-      "Palmer, Ryan",
       "Parry, John",
       "Paul, Jeremy",
       "Pavon, Matthieu",
       "Pendrith, Taylor",
       "Peterson, Paul",
       "Phillips, Chandler",
-      "Piercy, Scott",
       "Power, Seamus",
       "Ramey, Chad",
       "Riley, Davis",
@@ -148,41 +145,39 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-18 14:21:57 ET",
+    "last_updated": "2026-05-18 13:51:46 ET",
     "recent_changes": [
       {
-        "timestamp": "2026-05-18 14:21:57 ET",
+        "timestamp": "2026-05-18 13:51:46 ET",
         "added": [
-          "Howell, Mason",
-          "Palmer, Ryan",
-          "Piercy, Scott"
-        ],
-        "withdrawn": [],
-        "note": "+3 / -0"
-      },
-      {
-        "timestamp": "2026-05-18 14:00:33 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-18 12:58:31 ET",
-        "added": [
-          "Byrd, Jonathan",
           "Cook, Austin",
           "Noh, S.Y."
         ],
         "withdrawn": [
           "Palmer, Ryan",
-          "Potgieter, Aldrich",
           "Putnam, Andrew",
           "Rai, Aaron"
+        ],
+        "note": "+2 / -3"
+      },
+      {
+        "timestamp": "2026-05-18 11:47:21 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
+      {
+        "timestamp": "2026-05-18 10:51:42 ET",
+        "added": [
+          "Byrd, Jonathan"
+        ],
+        "withdrawn": [
+          "Potgieter, Aldrich"
         ],
         "note": "+3 / -4"
       },
       {
-        "timestamp": "2026-05-18 06:00:51 ET",
+        "timestamp": "2026-05-18 06:17:56 ET",
         "added": [
           "Bae, Yongjun",
           "Bauchou, Zach",
@@ -403,37 +398,37 @@
         "note": "+99 / -114"
       },
       {
-        "timestamp": "2026-05-17 12:00:03 ET",
+        "timestamp": "2026-05-17 15:18:33 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-17 11:59:18 ET",
+        "timestamp": "2026-05-17 09:45:53 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-16 06:04:26 ET",
+        "timestamp": "2026-05-17 04:29:01 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-15 18:00:16 ET",
+        "timestamp": "2026-05-16 15:15:07 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-15 12:00:03 ET",
+        "timestamp": "2026-05-16 09:46:48 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-15 06:04:45 ET",
+        "timestamp": "2026-05-16 04:11:56 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
@@ -587,22 +582,40 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-17 12:00:03 ET",
+    "last_updated": "2026-05-17 15:18:33 ET",
     "recent_changes": [
       {
-        "timestamp": "2026-05-17 12:00:03 ET",
+        "timestamp": "2026-05-17 15:18:33 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-17 11:59:18 ET",
+        "timestamp": "2026-05-17 09:45:53 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
       },
       {
-        "timestamp": "2026-05-16 06:04:26 ET",
+        "timestamp": "2026-05-17 04:29:01 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
+      {
+        "timestamp": "2026-05-16 15:15:07 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
+      {
+        "timestamp": "2026-05-16 09:46:48 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
+      {
+        "timestamp": "2026-05-16 04:11:56 ET",
         "added": [
           "Bae, Yongjun",
           "Bauchou, Zach",
@@ -836,24 +849,6 @@
       },
       {
         "timestamp": "2026-05-09 15:12:56 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-09 09:40:26 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-09 04:04:17 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-08 15:27:49 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
