@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 19,
     "event_name": "THE CJ CUP Byron Nelson",
-    "player_count": 140,
+    "player_count": 143,
     "player_names": [
       "Bae, Yongjun",
       "Bauchou, Zach",
@@ -59,6 +59,7 @@
       "Hojgaard, Rasmus",
       "Horschel, Billy",
       "Hossler, Beau",
+      "Howell, Mason",
       "Hubbard, Mark",
       "Hughes, Mackenzie",
       "Im, Sungjae",
@@ -96,12 +97,14 @@
       "Norlander, Henrik",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
+      "Palmer, Ryan",
       "Parry, John",
       "Paul, Jeremy",
       "Pavon, Matthieu",
       "Pendrith, Taylor",
       "Peterson, Paul",
       "Phillips, Chandler",
+      "Piercy, Scott",
       "Power, Seamus",
       "Ramey, Chad",
       "Riley, Davis",
@@ -145,8 +148,18 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-18 13:51:46 ET",
+    "last_updated": "2026-05-18 15:53:06 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-18 15:53:06 ET",
+        "added": [
+          "Howell, Mason",
+          "Palmer, Ryan",
+          "Piercy, Scott"
+        ],
+        "withdrawn": [],
+        "note": "+3 / -0"
+      },
       {
         "timestamp": "2026-05-18 13:51:46 ET",
         "added": [
@@ -423,12 +436,6 @@
       },
       {
         "timestamp": "2026-05-16 09:46:48 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-16 04:11:56 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
