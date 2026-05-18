@@ -14,6 +14,7 @@
       "Brown, Blades",
       "Brown, Dan",
       "Buchanan, Jackson",
+      "Byrd, Jonathan",
       "Campos, Rafael",
       "Champ, Cameron",
       "Chatfield, Davis",
@@ -100,7 +101,6 @@
       "Pendrith, Taylor",
       "Peterson, Paul",
       "Phillips, Chandler",
-      "Potgieter, Aldrich",
       "Power, Seamus",
       "Putnam, Andrew",
       "Rai, Aaron",
@@ -146,8 +146,18 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-18 06:17:56 ET",
+    "last_updated": "2026-05-18 10:51:42 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-18 10:51:42 ET",
+        "added": [
+          "Byrd, Jonathan"
+        ],
+        "withdrawn": [
+          "Potgieter, Aldrich"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-05-18 06:17:56 ET",
         "added": [
@@ -413,12 +423,6 @@
       },
       {
         "timestamp": "2026-05-15 10:23:14 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-15 04:57:09 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
