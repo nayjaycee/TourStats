@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 19,
     "event_name": "THE CJ CUP Byron Nelson",
-    "player_count": 141,
+    "player_count": 140,
     "player_names": [
       "Bae, Yongjun",
       "Bauchou, Zach",
@@ -14,6 +14,7 @@
       "Brown, Blades",
       "Brown, Dan",
       "Buchanan, Jackson",
+      "Byrd, Jonathan",
       "Campos, Rafael",
       "Champ, Cameron",
       "Chatfield, Davis",
@@ -21,6 +22,7 @@
       "Clark, Wyndham",
       "Cole, Eric",
       "Coody, Pierceson",
+      "Cook, Austin",
       "Crowe, Trace",
       "Dahmen, Joel",
       "Davis, Cam",
@@ -90,20 +92,17 @@
       "Mouw, William",
       "Nakajima, Keita",
       "Neergaard-Petersen, Rasmus",
+      "Noh, S.Y.",
       "Norlander, Henrik",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
-      "Palmer, Ryan",
       "Parry, John",
       "Paul, Jeremy",
       "Pavon, Matthieu",
       "Pendrith, Taylor",
       "Peterson, Paul",
       "Phillips, Chandler",
-      "Potgieter, Aldrich",
       "Power, Seamus",
-      "Putnam, Andrew",
-      "Rai, Aaron",
       "Ramey, Chad",
       "Riley, Davis",
       "Rodgers, Patrick",
@@ -146,8 +145,23 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-18 06:00:51 ET",
+    "last_updated": "2026-05-18 12:58:31 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-18 12:58:31 ET",
+        "added": [
+          "Byrd, Jonathan",
+          "Cook, Austin",
+          "Noh, S.Y."
+        ],
+        "withdrawn": [
+          "Palmer, Ryan",
+          "Potgieter, Aldrich",
+          "Putnam, Andrew",
+          "Rai, Aaron"
+        ],
+        "note": "+3 / -4"
+      },
       {
         "timestamp": "2026-05-18 06:00:51 ET",
         "added": [
@@ -413,12 +427,6 @@
       },
       {
         "timestamp": "2026-05-13 12:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-13 10:49:49 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
