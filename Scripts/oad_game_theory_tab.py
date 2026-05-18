@@ -102,8 +102,6 @@ def _load_leaderboard() -> pd.DataFrame:
             if slug in applied:
                 continue
             ev = pd.read_csv(ev_path)
-            if "dg_id" not in ev.columns:
-                continue
             ev["_earn"] = (
                 ev["Earnings"].astype(str)
                 .str.replace(r'[\$,\"]', "", regex=True).str.strip()
