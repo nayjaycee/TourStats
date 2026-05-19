@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-19 15:59:26 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19"
+    },
+    {
       "timestamp": "2026-05-19 11:38:50 ET",
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "PGA Championship",
       "details": "Field updated: 33, 19"
-    },
-    {
-      "timestamp": "2026-05-15 10:23:14 ET",
-      "type": "field_odds_refresh",
-      "event_name": "PGA Championship",
-      "details": "Field updated: 33"
     }
   ]
 }
