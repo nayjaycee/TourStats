@@ -36,9 +36,9 @@
       "Finau, Tony",
       "Fishburn, Patrick",
       "Fisk, Steven",
-      "Ford, David",
       "Garnett, Brice",
       "Ghim, Doug",
+      "Gomez, Fabian",
       "Goodwin, Noah",
       "Gordon, Will",
       "Gregory, Greg",
@@ -152,8 +152,18 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-19 12:00:02 ET",
+    "last_updated": "2026-05-19 18:00:12 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-19 18:00:12 ET",
+        "added": [
+          "Gomez, Fabian"
+        ],
+        "withdrawn": [
+          "Ford, David"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-05-19 12:00:02 ET",
         "added": [],
@@ -438,12 +448,6 @@
       },
       {
         "timestamp": "2026-05-17 09:45:53 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-17 04:29:01 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
