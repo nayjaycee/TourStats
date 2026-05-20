@@ -152,8 +152,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-20 11:39:51 ET",
+    "last_updated": "2026-05-20 16:25:33 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-20 16:25:33 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-20 11:39:51 ET",
         "added": [],
@@ -227,16 +233,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-18 10:51:42 ET",
-        "added": [
-          "Byrd, Jonathan"
-        ],
-        "withdrawn": [
-          "Potgieter, Aldrich"
-        ],
-        "note": "+3 / -4"
       }
     ]
   },
