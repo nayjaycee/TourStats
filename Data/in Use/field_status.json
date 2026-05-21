@@ -152,8 +152,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-21 05:55:15 ET",
+    "last_updated": "2026-05-21 11:42:22 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-21 11:42:22 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-21 05:55:15 ET",
         "added": [],
@@ -220,19 +226,6 @@
         ],
         "withdrawn": [],
         "note": "+3 / -0"
-      },
-      {
-        "timestamp": "2026-05-18 13:51:46 ET",
-        "added": [
-          "Cook, Austin",
-          "Noh, S.Y."
-        ],
-        "withdrawn": [
-          "Palmer, Ryan",
-          "Putnam, Andrew",
-          "Rai, Aaron"
-        ],
-        "note": "+2 / -3"
       }
     ]
   },
