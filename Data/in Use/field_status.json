@@ -152,8 +152,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-21 11:42:22 ET",
+    "last_updated": "2026-05-21 16:02:09 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-21 16:02:09 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-21 11:42:22 ET",
         "added": [],
@@ -216,16 +222,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-18 15:53:06 ET",
-        "added": [
-          "Howell, Mason",
-          "Palmer, Ryan",
-          "Piercy, Scott"
-        ],
-        "withdrawn": [],
-        "note": "+3 / -0"
       }
     ]
   },
