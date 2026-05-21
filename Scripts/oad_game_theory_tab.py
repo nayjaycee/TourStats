@@ -551,11 +551,20 @@ def render_oad_game_theory_tab() -> None:
         # Own % this week (filed event data)
         own_week = round(this_week_ownership.get(did, 0) / n_league * 100) if n_league > 0 else 0
 
-        # % of teams ahead actually picking this player THIS week
+        # This week ownership counts
         if have_this_week:
-            picking_ahead     = [u for u, d in this_week_picks.items() if u in ahead_usernames and d == did]
-            picking_ahead_pct = round(len(picking_ahead) / n_ahead * 100) if n_ahead > 0 else 0
+            picking_ahead      = [u for u, d in this_week_picks.items() if u in ahead_usernames and d == did]
+            picking_behind     = [u for u, d in this_week_picks.items() if u in chaser_usernames and d == did]
+            n_used_wk          = this_week_ownership.get(did, 0)
+            n_ahead_used_wk    = len(picking_ahead)
+            n_behind_used_wk   = len(picking_behind)
+            used_wk_pct        = round(n_used_wk       / n_league  * 100) if n_league  > 0 else 0
+            ahead_used_wk_pct  = round(n_ahead_used_wk / n_ahead   * 100) if n_ahead   > 0 else 0
+            behind_used_wk_pct = round(n_behind_used_wk/ n_chasers * 100) if n_chasers > 0 else 0
+            picking_ahead_pct  = ahead_used_wk_pct
         else:
+            n_used_wk = n_ahead_used_wk = n_behind_used_wk = 0
+            used_wk_pct = ahead_used_wk_pct = behind_used_wk_pct = 0
             picking_ahead_pct = np.nan
 
         # Exact new rank if this player wins (requires this week's picks)
@@ -591,6 +600,12 @@ def render_oad_game_theory_tab() -> None:
             "% Used":             league_pct,
             "% Ahead Used":       burned_ahead_pct,
             "% Behind Used":      chaser_pct,
+            "Used (wk)":          f"{n_used_wk} ({used_wk_pct}%)"        if have_this_week else "-",
+            "Ahead Used (wk)":    f"{n_ahead_used_wk} ({ahead_used_wk_pct}%)"  if have_this_week else "-",
+            "Behind Used (wk)":   f"{n_behind_used_wk} ({behind_used_wk_pct}%)" if have_this_week else "-",
+            "% Used (wk)":        used_wk_pct        if have_this_week else 0,
+            "% Ahead Used (wk)":  ahead_used_wk_pct  if have_this_week else 0,
+            "% Behind Used (wk)": behind_used_wk_pct if have_this_week else 0,
             "Picking Now (ahead)": picking_ahead_pct,
             "Own % this week":    own_week,
             "Avg Rank (users)":   avg_rank,
@@ -709,6 +724,7 @@ def render_oad_game_theory_tab() -> None:
         "Player", "Tier",
         "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
         "Used", "Ahead Used", "Behind Used",
+        "Used (wk)", "Ahead Used (wk)", "Behind Used (wk)",
         "Picking Now (ahead)", "Own % this week",
         "Avg Rank (users)", "New Rank",
         "We Can Use", "We Used",
@@ -716,9 +732,9 @@ def render_oad_game_theory_tab() -> None:
     if not odds_available:
         show_cols = [c for c in show_cols if c not in ("DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds")]
     if not have_this_week:
-        show_cols = [c for c in show_cols if c not in ("Picking Now (ahead)", "New Rank")]
+        show_cols = [c for c in show_cols if c not in ("Picking Now (ahead)", "New Rank", "Used (wk)", "Ahead Used (wk)", "Behind Used (wk)")]
     if n_chasers == 0:
-        show_cols = [c for c in show_cols if c != "Behind Used"]
+        show_cols = [c for c in show_cols if c not in ("Behind Used", "Behind Used (wk)")]
 
     fmt = {
         "DG w/ Fit":           "{:.1f}%",
@@ -757,15 +773,16 @@ def render_oad_game_theory_tab() -> None:
             "Player", "Tier",
             "DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds",
             "Used", "Ahead Used", "Behind Used",
+            "Used (wk)", "Ahead Used (wk)", "Behind Used (wk)",
             "Picking Now (ahead)", "Own % this week",
             "Avg Rank (users)", "New Rank", "Score",
         ]
         if not odds_available:
             rec_cols = [c for c in rec_cols if c not in ("DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds")]
         if not have_this_week:
-            rec_cols = [c for c in rec_cols if c not in ("Picking Now (ahead)", "New Rank")]
+            rec_cols = [c for c in rec_cols if c not in ("Picking Now (ahead)", "New Rank", "Used (wk)", "Ahead Used (wk)", "Behind Used (wk)")]
         if n_chasers == 0:
-            rec_cols = [c for c in rec_cols if c != "% Behind Used"]
+            rec_cols = [c for c in rec_cols if c not in ("Behind Used", "Behind Used (wk)", "% Behind Used")]
 
         fmt_rec = {**fmt, "Score": "{:.2f}"}
         styled_rec = (
