@@ -152,8 +152,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-22 10:55:30 ET",
+    "last_updated": "2026-05-22 15:57:32 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-22 15:57:32 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-22 10:55:30 ET",
         "added": [],
@@ -211,12 +217,6 @@
           "Ford, David"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-05-19 11:38:50 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
