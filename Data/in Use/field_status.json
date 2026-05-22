@@ -152,8 +152,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-22 05:40:27 ET",
+    "last_updated": "2026-05-22 10:55:30 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-22 10:55:30 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-22 05:40:27 ET",
         "added": [],
@@ -211,17 +217,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-19 05:58:15 ET",
-        "added": [
-          "Banerjee, Ronin",
-          "Gregory, Greg",
-          "Huang, Alex",
-          "Petronzio, Nathan"
-        ],
-        "withdrawn": [],
-        "note": "+4 / -0"
       }
     ]
   },
