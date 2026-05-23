@@ -232,6 +232,97 @@ def _style_avail(val):
     return ""
 
 
+def _render_standings_chart_3k(events_df: pd.DataFrame, sched: pd.DataFrame, lb: pd.DataFrame) -> None:
+    """Line chart: rank over time for our team + current top 3."""
+    today = pd.Timestamp.now().normalize()
+
+    slug_info: dict[str, tuple] = {}
+    for _, row in sched.iterrows():
+        if pd.notna(row.get("start_date")) and pd.notna(row.get("_slug")):
+            slug_info[row["_slug"]] = (row["start_date"], str(row["event_name"]))
+
+    def _resolve_slug(stem: str) -> str | None:
+        if stem in slug_info:
+            return stem
+        for sslug in slug_info:
+            if stem in sslug or sslug in stem:
+                return sslug
+        return None
+
+    filed_slugs: list[str] = []
+    stem_to_sched: dict[str, str] = {}
+    for stem in events_df["_slug"].unique():
+        sslug = _resolve_slug(stem)
+        if sslug and slug_info[sslug][0] <= today:
+            stem_to_sched[stem] = sslug
+            filed_slugs.append(stem)
+    filed_slugs.sort(key=lambda s: slug_info[stem_to_sched[s]][0])
+    if not filed_slugs:
+        return
+
+    picks = events_df.groupby(["_username", "_slug"])["_earnings_num"].max().reset_index()
+    all_users = list(picks["_username"].unique())
+    pivot = (
+        picks.pivot(index="_username", columns="_slug", values="_earnings_num")
+        .reindex(columns=filed_slugs, fill_value=0).fillna(0)
+    )
+    ranks = pivot.cumsum(axis=1).rank(method="min", ascending=False, axis=0).astype(int)
+
+    last_slug     = filed_slugs[-1]
+    current_ranks = ranks[last_slug].sort_values()
+    top3_users    = list(current_ranks.index[:3])
+    highlight     = list(dict.fromkeys([OUR_USERNAME] + top3_users))
+
+    lb_rank: dict[str, int] = {
+        str(row.get("_username", "")).lower(): int(row.get("PLACE", 999))
+        for _, row in lb.iterrows()
+    } if not lb.empty else {}
+
+    disp_names: dict[str, str] = {}
+    for u in highlight:
+        rows = events_df[events_df["_username"] == u]["Username"]
+        disp_names[u] = str(rows.iloc[0]) if not rows.empty else u
+
+    short_labels = []
+    for s in filed_slugs:
+        name = slug_info[stem_to_sched[s]][1]
+        name = name.replace("THE ", "").replace("The ", "").replace("presented by", "").strip()
+        short_labels.append(name[:22] + "\u2026" if len(name) > 22 else name)
+
+    fig = go.Figure()
+    line_colors = ["#c084fc", "#818cf8", "#94a3b8"]
+    for user in highlight:
+        y_vals   = [int(ranks.loc[user, s]) if user in ranks.index and s in ranks.columns else None for s in filed_slugs]
+        rank_now = lb_rank.get(user, int(current_ranks.get(user, len(all_users))))
+        if user == OUR_USERNAME:
+            color, width, label = "#facc15", 3, f"Us (#{rank_now})"
+        else:
+            idx   = top3_users.index(user)
+            color = line_colors[idx]
+            width = 2
+            label = f"#{rank_now}: {disp_names[user]}"
+        fig.add_trace(go.Scatter(
+            x=short_labels, y=y_vals, mode="lines+markers", name=label,
+            line=dict(color=color, width=width), marker=dict(size=5), connectgaps=True,
+        ))
+
+    fig.add_hline(
+        y=20, line_dash="dash",
+        line_color="rgba(74,222,128,0.45)", line_width=1.5,
+        annotation_text=" Top 20", annotation_position="right",
+        annotation_font_color="rgba(74,222,128,0.8)", annotation_font_size=11,
+    )
+    n_users = max(len(all_users), 22)
+    fig.update_layout(
+        yaxis=dict(autorange="reversed", title="Rank", range=[n_users + 1, 0], dtick=25, gridcolor="rgba(128,128,128,0.2)"),
+        xaxis=dict(tickangle=-30, gridcolor="rgba(128,128,128,0.1)"),
+        plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+        height=400, margin=dict(t=10, b=80, l=50, r=110),
+        legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0, font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 
 def render_oad_game_theory_tab() -> None:
@@ -243,6 +334,11 @@ def render_oad_game_theory_tab() -> None:
     if events_df.empty or lb.empty:
         st.warning("OAD data not found.")
         return
+
+    # -- Standings over time ───────────────────────────────────────────────────
+    st.markdown("### Season Standings")
+    _render_standings_chart_3k(events_df, sched, lb)
+    st.divider()
 
     # -- Event selector ────────────────────────────────────────────────────────
     field_df = this_week_df  # for current-event slug matching
