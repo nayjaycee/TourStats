@@ -1,7 +1,37 @@
 {
   "events": [
     {
-      "timestamp": "2026-05-22 20:34:24 ET",
+      "timestamp": "2026-05-22 15:57:32 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19"
+    },
+    {
+      "timestamp": "2026-05-22 10:55:30 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19"
+    },
+    {
+      "timestamp": "2026-05-22 05:40:27 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19"
+    },
+    {
+      "timestamp": "2026-05-21 16:02:09 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19"
+    },
+    {
+      "timestamp": "2026-05-21 11:42:22 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19"
+    },
+    {
+      "timestamp": "2026-05-21 05:55:15 ET",
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
       "details": "Field updated: 19, 21"
@@ -28,97 +58,7 @@
       "timestamp": "2026-05-22 18:30:28 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 18:00:30 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19"
-    },
-    {
-      "timestamp": "2026-05-22 18:00:30 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 17:30:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 17:01:08 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 16:33:23 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 16:00:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 15:30:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 15:00:13 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 14:30:13 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 14:00:19 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 13:30:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 13:00:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 12:30:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 12:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19"
-    },
-    {
-      "timestamp": "2026-05-22 12:00:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
+      "details": "Rounds refreshed \u2014 14,518 rows across 41 events. Finishes rebuilt."
     }
   ]
 }
