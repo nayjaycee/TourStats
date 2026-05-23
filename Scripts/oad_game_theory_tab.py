@@ -828,7 +828,7 @@ def render_oad_game_theory_tab() -> None:
     if not odds_available:
         show_cols = [c for c in show_cols if c not in ("DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds")]
     if not have_this_week:
-        show_cols = [c for c in show_cols if c not in ("Picking Now (ahead)", "New Rank", "Used (wk)", "Ahead Used (wk)", "Behind Used (wk)")]
+        show_cols = [c for c in show_cols if c not in ("Picking Now (ahead)", "New Rank")]
     if n_chasers == 0:
         show_cols = [c for c in show_cols if c not in ("Behind Used", "Behind Used (wk)")]
 
@@ -876,7 +876,7 @@ def render_oad_game_theory_tab() -> None:
         if not odds_available:
             rec_cols = [c for c in rec_cols if c not in ("DG w/ Fit", "DG Model %", "Win % (odds)", "Best Odds")]
         if not have_this_week:
-            rec_cols = [c for c in rec_cols if c not in ("Picking Now (ahead)", "New Rank", "Used (wk)", "Ahead Used (wk)", "Behind Used (wk)")]
+            rec_cols = [c for c in rec_cols if c not in ("Picking Now (ahead)", "New Rank")]
         if n_chasers == 0:
             rec_cols = [c for c in rec_cols if c not in ("Behind Used", "Behind Used (wk)", "% Behind Used")]
 
