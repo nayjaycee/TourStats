@@ -1665,6 +1665,21 @@ if event_id is not None:
     field_ev = field_ev.drop_duplicates(subset=["dg_id"], keep="last")
     field_ids = field_ev["dg_id"].astype(int).tolist()
 
+    # If Fields.xlsx cache is stale (no rows for this event), check live field CSVs first
+    if not field_ids:
+        for _fpath in [INUSE_DIR / "next_week_field.csv", INUSE_DIR / "this_week_field.csv"]:
+            if not _fpath.exists():
+                continue
+            _fdf = pd.read_csv(_fpath)
+            _fdf["event_id"] = pd.to_numeric(_fdf.get("event_id"), errors="coerce")
+            _fdf["dg_id"]    = pd.to_numeric(_fdf.get("dg_id"),    errors="coerce")
+            _fdf = _fdf[_fdf["event_id"] == int(event_id)].dropna(subset=["dg_id"])
+            if not _fdf.empty:
+                _fdf["year"] = SEASON_YEAR
+                field_ev  = _fdf.drop_duplicates(subset=["dg_id"], keep="last")
+                field_ids = field_ev["dg_id"].astype(int).tolist()
+                break
+
     # Synthetic field fallback for future events with no real field data yet
     if not field_ids and schedule is not None and not schedule.empty:
         try:
