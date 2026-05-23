@@ -173,6 +173,7 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
     Returns per-tournament results: top-5 picks, hit counts, finishes.
     Cached - only runs once per session.
     """
+    # rounds_df already has Asian mislabeled events removed at load time
     date_col = "round_date" if "round_date" in rounds_df.columns else "event_completed"
     test_df  = rounds_df[rounds_df["year"].isin([2025, 2026])].copy()
     test_df["event_completed"] = pd.to_datetime(test_df["event_completed"], errors="coerce")
@@ -221,6 +222,7 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
             momentum = mean_L12 - mean_L36
             composite = 0.6 * ef_score + 0.4 * momentum
             scores.append({
+                "dg_id":       int(p["dg_id"]),
                 "player_name": p["player_name"],
                 "ef_score":    ef_score,
                 "momentum":    momentum,
@@ -247,8 +249,10 @@ def build_ef_history(rounds_df: pd.DataFrame) -> pd.DataFrame:
             "top5_hits":        int((top5["finish"] <= 5).sum()),
             "pool_wins":        int((top5["finish"] == 1).sum()),
             "picks":            ", ".join(top5["player_name"].tolist()),
+            "pick_ids":         ", ".join(top5["dg_id"].astype(str).tolist()),
             "finishes":         ", ".join(top5["finish"].astype(str).tolist()),
             "model_pick":       mp_row["player_name"],
+            "model_pick_id":    int(mp_row["dg_id"]),
             "model_pick_finish": int(mp_row["finish"]),
             "model_pick_top25": int(mp_row["finish"] <= 25),
             "model_pick_top10": int(mp_row["finish"] <= 10),
@@ -298,17 +302,16 @@ def render_elite_finish_analysis(
         unsafe_allow_html=True,
     )
 
-    # ── Build current-field stats ────────────────────────────────────────────
-    if field_ids and len(field_ids) > 0:
-        players_list = field_ids
-    elif all_players is not None and "dg_id" in all_players.columns:
-        players_list = pd.to_numeric(all_players["dg_id"], errors="coerce").dropna().astype(int).tolist()
-    else:
-        players_list = rounds_df["dg_id"].unique().tolist()
+    # ── Build stats for all players active in last 2 years (all tours) ──────
+    field_set = set(field_ids) if field_ids else set()
+
+    _dc = "round_date" if "round_date" in rounds_df.columns else "event_completed"
+    _two_yrs_ago = pd.Timestamp.now() - pd.Timedelta(days=730)
+    _recent = rounds_df[pd.to_datetime(rounds_df[_dc], errors="coerce") >= _two_yrs_ago]
+    players_list = _recent["dg_id"].dropna().astype(int).unique().tolist()
 
     rounds_for_stats = rounds_df
     if cutoff_dt is not None:
-        _dc    = "round_date" if "round_date" in rounds_df.columns else "event_completed"
         _dates = pd.to_datetime(rounds_df[_dc], errors="coerce")
         rounds_for_stats = rounds_df[_dates.isna() | (_dates < pd.to_datetime(cutoff_dt))].copy()
 
@@ -442,28 +445,55 @@ def render_elite_finish_analysis(
                 name=lname, hoverinfo="skip",
             ))
 
-        top15_ids = set(ef_df.head(15)["dg_id"].tolist())
-        others_ef = ef_df[~ef_df["dg_id"].isin(top15_ids)]
-        top_ef    = ef_df[ef_df["dg_id"].isin(top15_ids)]
-        ef_cmin   = ef_df["ef_score"].quantile(0.10)
-        ef_cmax   = ef_df["ef_score"].quantile(0.90)
+        top15_ids  = set(ef_df.head(15)["dg_id"].tolist())
+        top5_ids   = set(ef_df.head(5)["dg_id"].tolist())
+        ef_cmin    = ef_df["ef_score"].quantile(0.10)
+        ef_cmax    = ef_df["ef_score"].quantile(0.90)
 
+        # Split into layers: background non-field, field-only, labeled top-15
+        bg_df    = ef_df[~ef_df["dg_id"].isin(top15_ids) & ~ef_df["dg_id"].isin(field_set)]
+        field_df = ef_df[ef_df["dg_id"].isin(field_set) & ~ef_df["dg_id"].isin(top15_ids)]
+        top_ef   = ef_df[ef_df["dg_id"].isin(top15_ids)]
+
+        # Background players (not in field, not top 15)
         fig_ef.add_trace(go.Scatter(
-            x=others_ef["mean_sg"], y=others_ef["std_sg"],
+            x=bg_df["mean_sg"], y=bg_df["std_sg"],
             mode="markers",
-            marker=dict(size=7, opacity=0.5, color=others_ef["ef_score"],
+            name="All players",
+            marker=dict(size=5, opacity=0.25, color=bg_df["ef_score"],
                         colorscale="RdYlGn", cmin=ef_cmin, cmax=ef_cmax),
-            text=others_ef["player_name"], customdata=others_ef["ef_score"],
+            text=bg_df["player_name"], customdata=bg_df["ef_score"],
             hovertemplate="<b>%{text}</b><br>Mean: %{x:.2f}  Std: %{y:.2f}  EF: %{customdata:.2f}<extra></extra>",
             showlegend=False,
         ))
+
+        # Field players not in top 15 — brighter, slightly larger
+        if not field_df.empty:
+            fig_ef.add_trace(go.Scatter(
+                x=field_df["mean_sg"], y=field_df["std_sg"],
+                mode="markers",
+                name="This week's field",
+                marker=dict(size=8, opacity=0.75, color=field_df["ef_score"],
+                            colorscale="RdYlGn", cmin=ef_cmin, cmax=ef_cmax,
+                            line=dict(width=1, color="rgba(100,180,255,0.7)")),
+                text=field_df["player_name"], customdata=field_df["ef_score"],
+                hovertemplate="<b>%{text}</b> [field]<br>Mean: %{x:.2f}  Std: %{y:.2f}  EF: %{customdata:.2f}<extra></extra>",
+                showlegend=True,
+            ))
+
+        # Top-15 EF labeled — field players get a gold border, others white
+        _border_colors = [
+            "#FFD700" if did in field_set else "white"
+            for did in top_ef["dg_id"]
+        ]
         fig_ef.add_trace(go.Scatter(
             x=top_ef["mean_sg"], y=top_ef["std_sg"],
             mode="markers+text",
+            name="Top 15 EF",
             marker=dict(
-                size=10, color=top_ef["ef_score"],
+                size=11, color=top_ef["ef_score"],
                 colorscale="RdYlGn", cmin=ef_cmin, cmax=ef_cmax,
-                line=dict(width=1.5, color="white"),
+                line=dict(width=2, color=_border_colors),
                 showscale=True,
                 colorbar=dict(title="EF", thickness=12, len=0.7),
             ),
@@ -471,7 +501,7 @@ def render_elite_finish_analysis(
             textfont=dict(size=8, color="white"),
             customdata=top_ef["ef_score"],
             hovertemplate="<b>%{text}</b><br>Mean: %{x:.2f}  Std: %{y:.2f}  EF: %{customdata:.2f}<extra></extra>",
-            showlegend=False,
+            showlegend=True,
         ))
 
         _y_min = max(ef_df["std_sg"].min() - 0.1, 0)
@@ -511,11 +541,20 @@ def render_elite_finish_analysis(
         )
 
         for r, (_, row) in enumerate(ef_df.head(20).iterrows(), 1):
-            color   = row["tier_color"]
-            is_pick = row["dg_id"] == mp_dg_id
-            row_bg  = "background:rgba(0,204,150,0.06);" if is_pick else ""
-            fw      = "700" if is_pick else "600"
-            dot     = "<div style='width:6px;height:6px;border-radius:50%;background:#00CC96;flex-shrink:0;margin-right:4px'></div>" if is_pick else "<div style='width:10px;flex-shrink:0'></div>"
+            color      = row["tier_color"]
+            is_pick    = row["dg_id"] == mp_dg_id
+            in_field   = row["dg_id"] in field_set
+            in_top5    = row["dg_id"] in top5_ids
+            row_bg     = "background:rgba(0,204,150,0.06);" if is_pick else ("background:rgba(100,180,255,0.04);" if in_field else "")
+            fw         = "700" if is_pick else "600"
+            if is_pick:
+                dot = "<div style='width:6px;height:6px;border-radius:50%;background:#00CC96;flex-shrink:0;margin-right:4px'></div>"
+            elif in_top5 and in_field:
+                dot = "<div style='width:6px;height:6px;border-radius:50%;background:#FFD700;flex-shrink:0;margin-right:4px'></div>"
+            elif in_field:
+                dot = "<div style='width:6px;height:6px;border-radius:50%;background:rgba(100,180,255,0.8);flex-shrink:0;margin-right:4px'></div>"
+            else:
+                dot = "<div style='width:10px;flex-shrink:0'></div>"
             odds_h  = ""
             if has_odds and pd.notna(row.get("odds")):
                 odds_h = f"<div style='width:44px;text-align:right;font-size:11px;color:#888'>{row['odds']:.0f}</div>"
@@ -789,6 +828,163 @@ def render_elite_finish_analysis(
             fmt["Implied %"] = "{:.1f}%"
         styled = disp.style.applymap(_cc, subset=["Mean L36", "EF Score"]).format(fmt)
         st.dataframe(styled, hide_index=True, use_container_width=True, height=600)
+
+    # ── Section 4: Player Prediction Analysis ───────────────────────────────
+    st.divider()
+    st.markdown("### Player Prediction Analysis")
+    st.caption(
+        "How individual players perform when selected by the model · "
+        "based on retrospective top-5 EF pool picks across 2025/26"
+    )
+
+    with st.spinner("Building player analysis…"):
+        _hist = build_ef_history(rounds_df)
+
+    if not _hist.empty and "picks" in _hist.columns and "finishes" in _hist.columns:
+        _id_to_name: dict[int, str] = {}
+        if "dg_id" in rounds_df.columns and "player_name" in rounds_df.columns:
+            for did, name in rounds_df.drop_duplicates("dg_id")[["dg_id", "player_name"]].values:
+                try:
+                    _id_to_name[int(did)] = str(name)
+                except (ValueError, TypeError):
+                    pass
+
+        # Parse pick_ids/finishes into player-level records grouped by dg_id
+        player_records: list[dict] = []
+        for _, row in _hist.iterrows():
+            ids_raw  = str(row.get("pick_ids", "")).split(",")
+            fins_raw = str(row["finishes"]).split(",")
+            mp_id    = row.get("model_pick_id")
+            for pos, (id_str, fin_str) in enumerate(zip(ids_raw, fins_raw), 1):
+                try:
+                    did = int(id_str.strip())
+                    fin = int(fin_str.strip())
+                except ValueError:
+                    continue
+                player_records.append({
+                    "dg_id":      did,
+                    "finish":     fin,
+                    "pool_pos":   pos,
+                    "model_pick": did == mp_id,
+                    "event":      row.get("event_name", ""),
+                })
+
+        pr_df = pd.DataFrame(player_records)
+
+        # ── 4a: Pool-position breakdown ─────────────────────────────────────
+        st.markdown("#### Hit Rate by Pool Position")
+        st.caption(
+            "Position 1 = highest EF score in the event's top-5 pool. "
+            "Does the #1 pick actually outperform the rest?"
+        )
+
+        pos_rows = []
+        for pos in range(1, 6):
+            sub = pr_df[pr_df["pool_pos"] == pos]
+            n   = len(sub)
+            if n == 0:
+                continue
+            pos_rows.append({
+                "Pool Position": f"#{pos}",
+                "n":             n,
+                "Top-5 %":       round(sub["finish"].le(5).mean()  * 100, 1),
+                "Top-10 %":      round(sub["finish"].le(10).mean() * 100, 1),
+                "Top-25 %":      round(sub["finish"].le(25).mean() * 100, 1),
+                "Avg Finish":    round(sub["finish"].mean(), 1),
+            })
+        pos_summary = pd.DataFrame(pos_rows)
+
+        # Bar chart
+        fig_pos = go.Figure()
+        bar_colors = ["#00CC96", "#66D9A6", "#FFA07A"]
+        for col, color in zip(["Top-25 %", "Top-10 %", "Top-5 %"], bar_colors):
+            fig_pos.add_trace(go.Bar(
+                x=pos_summary["Pool Position"],
+                y=pos_summary[col],
+                name=col,
+                marker_color=color,
+            ))
+        fig_pos.update_layout(
+            barmode="group",
+            height=300,
+            plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+            xaxis=dict(gridcolor="rgba(128,128,128,0.1)"),
+            yaxis=dict(title="Hit Rate %", range=[0, 105], gridcolor="rgba(128,128,128,0.2)"),
+            legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0,
+                        font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
+            margin=dict(t=10, b=30, l=40, r=20),
+        )
+        st.plotly_chart(fig_pos, use_container_width=True)
+
+        # ── 4b: Player reliability table ────────────────────────────────────
+        st.markdown("#### Player Reliability (3+ appearances in EF pool)")
+        st.caption(
+            "Players who have been selected into the top-5 EF pool most frequently, "
+            "and how they actually performed."
+        )
+
+        pgrp = pr_df.groupby("dg_id")
+        pstats = pgrp.agg(
+            appearances=("finish", "count"),
+            top5_hits=("finish",  lambda x: x.le(5).sum()),
+            top10_hits=("finish", lambda x: x.le(10).sum()),
+            top25_hits=("finish", lambda x: x.le(25).sum()),
+            wins=("finish",       lambda x: x.eq(1).sum()),
+            avg_finish=("finish", "mean"),
+            model_picks=("model_pick", "sum"),
+        ).reset_index()
+
+        pstats["player"]     = pstats["dg_id"].map(_id_to_name).fillna(pstats["dg_id"].astype(str))
+        pstats["Top-5 %"]    = (pstats["top5_hits"]  / pstats["appearances"] * 100).round(1)
+        pstats["Top-10 %"]   = (pstats["top10_hits"] / pstats["appearances"] * 100).round(1)
+        pstats["Top-25 %"]   = (pstats["top25_hits"] / pstats["appearances"] * 100).round(1)
+        pstats["Avg Finish"] = pstats["avg_finish"].round(1)
+
+        min_apps = 3
+        show = pstats[pstats["appearances"] >= min_apps].sort_values(
+            "Top-25 %", ascending=False
+        ).head(50).reset_index(drop=True)
+        show.insert(0, "#", range(1, len(show) + 1))
+
+        # Add field status column for highlighting
+        show["In Field"]   = show["dg_id"].isin(field_set)
+        show["Top-5 Pick"] = show["dg_id"].isin(top5_ids)
+
+        disp_p = show[[
+            "#", "player", "appearances", "model_picks",
+            "Top-5 %", "Top-10 %", "Top-25 %", "Avg Finish", "wins",
+            "In Field", "Top-5 Pick",
+        ]].rename(columns={
+            "player": "Player", "appearances": "Pool Apps",
+            "model_picks": "Model Picks", "wins": "Wins",
+        })
+
+        def _hit_color(val):
+            try:
+                v = float(val)
+                if v >= 50: return "color:#00CC96;font-weight:700"
+                if v >= 30: return "color:#66D9A6;font-weight:600"
+                if v >= 15: return "color:#FFA07A"
+                return "color:#EF553B"
+            except Exception:
+                return ""
+
+        def _row_highlight(row):
+            if row.get("Top-5 Pick"):
+                return ["background-color:rgba(255,215,0,0.12)"] * len(row)
+            if row.get("In Field"):
+                return ["background-color:rgba(100,180,255,0.08)"] * len(row)
+            return [""] * len(row)
+
+        if field_set:
+            st.caption("Gold highlight = in this week's field & currently a top-5 EF pick · Blue = in field only")
+
+        st.dataframe(
+            disp_p.style
+                .apply(_row_highlight, axis=1)
+                .applymap(_hit_color, subset=["Top-5 %", "Top-10 %", "Top-25 %"]),
+            hide_index=True, use_container_width=True, height=500,
+        )
 
 
 def _merge_live(stats_df: pd.DataFrame, live_df: pd.DataFrame) -> pd.DataFrame:

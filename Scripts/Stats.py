@@ -118,6 +118,11 @@ def load_rounds_all():
         if c in df.columns:
             df[c] = pd.to_numeric(df[c], errors='coerce')
 
+    # Drop mislabeled Asian tour events (CHAU-SHI, TPGA, SL LINK, etc.)
+    # Real PGA Tour event_ids are all < 10000; Asian events use 10000+ IDs
+    if 'tour' in df.columns and 'event_id' in df.columns:
+        df = df[~((df['tour'].str.upper() == 'PGA') & (df['event_id'] >= 10000))]
+
     date_col = 'round_date' if 'round_date' in df.columns else 'event_completed'
     if date_col in df.columns:
         df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
@@ -1998,7 +2003,6 @@ if not _live_active:
 
 _live_label = "🔴 Live" if _live_active else "⚫ Live"
 
-_MODEL_LAB_AVAILABLE = (Path(__file__).parent / "model_lab_tab.py").exists()
 _OAD_GT_AVAILABLE   = (Path(__file__).parent / "oad_game_theory_tab.py").exists()
 _OAD_SOLO_AVAILABLE = (Path(__file__).parent / "oad_solo_tab.py").exists()
 
@@ -2012,7 +2016,7 @@ TAB_NAMES = [
     "Deep Dive",
     _live_label,
     "Archive",
-] + (["Lab"] if _MODEL_LAB_AVAILABLE else []) + (["3.5k"] if _OAD_GT_AVAILABLE else []) + (["1k"] if _OAD_SOLO_AVAILABLE else []) + ["Guide"]
+] + (["3.5k"] if _OAD_GT_AVAILABLE else []) + (["1k"] if _OAD_SOLO_AVAILABLE else []) + ["Guide"]
 
 # Handle ?nav_dd=<dg_id> query param - clicking a player name/photo anywhere in the
 # app sets this param; we intercept it here, clear it, and navigate to Deep Dive.
@@ -2189,25 +2193,13 @@ elif active_tab == "Archive":
 elif active_tab == "Guide":
     render_documentation_tab()
 
-elif active_tab == "Lab" and _MODEL_LAB_AVAILABLE:
-    from model_lab_tab import render_model_lab_tab
-    render_model_lab_tab(
-        rounds_df=active_rounds_df,
-        field_ids=field_ids,
-        all_players=all_players,
-        cutoff_dt=cutoff,
-        summary_top=summary_top,
-        event_id=event_id,
-        schedule_df=schedule_df,
-    )
-
 elif active_tab == "3.5k" and _OAD_GT_AVAILABLE:
     from oad_game_theory_tab import render_oad_game_theory_tab
-    render_oad_game_theory_tab()
+    render_oad_game_theory_tab(selected_row=selected_row)
 
 elif active_tab == "1k" and _OAD_SOLO_AVAILABLE:
     from oad_solo_tab import render_oad_solo_tab
-    render_oad_solo_tab()
+    render_oad_solo_tab(selected_row=selected_row)
 
 # elif active_tab == "Model":
 #     render_elite_finish_tab(rounds_df=rounds_df, fields_df=fields_df, event_id=event_id)

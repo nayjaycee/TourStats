@@ -44,6 +44,9 @@ MAJOR_TYPES = {"MAJOR"}
 _MAJOR_EVENT_IDS = {14, 26, 33, 100}          # Masters, US Open, PGA Championship, Open Championship
 _SIG_EVENT_IDS   = {5, 7, 9, 11, 12, 23, 34, 480, 541}  # Pebble, Genesis, API, PLAYERS, RBC, Memorial, Travelers, Truist, GenScottish
 
+# Asian tour events mislabeled as PGA in DataGolf data — event_id >= 10000
+_ASIAN_EVENT_ID_CUTOFF = 10000
+
 
 def _to_slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", str(s).lower()).strip("_")
@@ -156,6 +159,8 @@ def _get_major_player_pool() -> pd.DataFrame:
     if not ROUNDS_PATH.exists():
         return pd.DataFrame()
     df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "tour", "event_id", "round_date"], low_memory=False)
+    df["event_id"] = pd.to_numeric(df["event_id"], errors="coerce")
+    df = df[~((df["tour"].str.upper() == "PGA") & (df["event_id"] >= _ASIAN_EVENT_ID_CUTOFF))]
     df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
     cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
     cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
@@ -174,6 +179,8 @@ def _get_signature_player_pool() -> pd.DataFrame:
     if not ROUNDS_PATH.exists():
         return pd.DataFrame()
     df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "tour", "event_id", "round_date"], low_memory=False)
+    df["event_id"] = pd.to_numeric(df["event_id"], errors="coerce")
+    df = df[~((df["tour"].str.upper() == "PGA") & (df["event_id"] >= _ASIAN_EVENT_ID_CUTOFF))]
     df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
     cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
     cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
@@ -191,6 +198,8 @@ def _get_regular_player_pool(min_events: int = 15) -> pd.DataFrame:
     if not ROUNDS_PATH.exists():
         return pd.DataFrame()
     df = pd.read_csv(ROUNDS_PATH, usecols=["dg_id", "player_name", "tour", "event_id", "round_date"], low_memory=False)
+    df["event_id"] = pd.to_numeric(df["event_id"], errors="coerce")
+    df = df[~((df["tour"].str.upper() == "PGA") & (df["event_id"] >= _ASIAN_EVENT_ID_CUTOFF))]
     df["round_date"] = pd.to_datetime(df["round_date"], errors="coerce")
     cutoff_365 = pd.Timestamp.now() - pd.Timedelta(days=365)
     cutoff_120 = pd.Timestamp.now() - pd.Timedelta(days=120)
@@ -325,7 +334,7 @@ def _render_standings_chart_3k(events_df: pd.DataFrame, sched: pd.DataFrame, lb:
 
 # ─────────────────────────────────────────────────────────────────────────────
 
-def render_oad_game_theory_tab() -> None:
+def render_oad_game_theory_tab(selected_row=None) -> None:
     events_df         = _load_events()
     lb                = _load_leaderboard()
     sched             = _load_schedule()
@@ -340,77 +349,24 @@ def render_oad_game_theory_tab() -> None:
     _render_standings_chart_3k(events_df, sched, lb)
     st.divider()
 
-    # -- Event selector ────────────────────────────────────────────────────────
-    field_df = this_week_df  # for current-event slug matching
-    current_event_name = field_df["event_name"].iloc[0] if not field_df.empty else ""
-    current_slug       = _to_slug(current_event_name)
-    today              = pd.Timestamp.now().normalize()
+    today       = pd.Timestamp.now().normalize()
     filed_slugs: set[str] = set(events_df["_slug"].unique())
 
-    event_options: list[dict] = []
-    if not sched.empty:
-        for _, row in sched.sort_values("start_date").iterrows():
-            slug       = row["_slug"]
-            name       = row["event_name"]
-            start      = row["start_date"]
-            etype      = str(row.get("event_type", "REGULAR")).upper()
-            # 3.5k tab always uses oad_winner_share
-            winner_sh = int(row["oad_winner_share"]) if pd.notna(row.get("oad_winner_share")) else 0
-            is_filed   = slug in filed_slugs
-            is_current = slug == current_slug
-            is_future  = pd.notna(start) and start > today
-            is_major   = etype in MAJOR_TYPES
+    if selected_row is None:
+        st.info("No event selected.")
+        return
 
-            is_recent = pd.notna(start) and start >= (today - pd.Timedelta(days=4))
-            if is_recent or is_future:
-                label = name
-                if is_current:
-                    label = f"{name} (current)"
-                elif is_future:
-                    label = f"{name} - {start.strftime('%b %-d')} {'[MAJOR]' if is_major else ''}"
-                event_options.append({
-                    "label": label.strip(), "name": name, "slug": slug,
-                    "start_date": start, "is_current": is_current,
-                    "is_future": is_future, "is_filed": is_filed,
-                    "is_major": is_major, "winner_share": winner_sh,
-                    "event_type": etype,
-                })
+    sel_name       = str(selected_row.get("event_name", ""))
+    sel_slug       = _to_slug(sel_name)
+    sel_event_type = str(selected_row.get("event_type", "REGULAR")).upper()
+    sel_is_major   = sel_event_type in MAJOR_TYPES
+    _sd            = selected_row.get("start_date")
+    sel_start      = pd.Timestamp(_sd) if pd.notna(_sd) else pd.NaT
+    winner_share   = int(selected_row["oad_winner_share"]) if pd.notna(selected_row.get("oad_winner_share")) else 0
+    sel_event_id   = int(selected_row["event_id"]) if pd.notna(selected_row.get("event_id")) else None
 
     st.subheader("OAD Game Theory")
     st.caption("McKenzie Scotts Tots")
-
-    valid_labels = [e["label"] for e in event_options]
-
-    # Default: if this week's event has already started, jump to next week
-    if event_options:
-        first_start = event_options[0]["start_date"]
-        if pd.notna(first_start) and first_start <= today:
-            default_idx = 1 if len(event_options) > 1 else 0
-        else:
-            default_idx = 0
-    else:
-        default_idx = 0
-
-    if st.session_state.get("gt_event_select") not in valid_labels:
-        st.session_state.pop("gt_event_select", None)
-    sel_label = st.selectbox(
-        "Event", options=valid_labels,
-        index=default_idx, key="gt_event_select",
-    )
-    sel_event = next((e for e in event_options if e["label"] == sel_label),
-                     event_options[default_idx] if event_options else None)
-
-    if sel_event is None:
-        st.info("No events found in schedule.")
-        return
-
-    sel_slug       = sel_event["slug"]
-    sel_name       = sel_event["name"]
-    sel_is_major   = sel_event["is_major"]
-    sel_event_type = sel_event["event_type"]
-    sel_start      = sel_event["start_date"]
-    winner_share   = sel_event["winner_share"]
-
     st.divider()
 
     # -- Our position ──────────────────────────────────────────────────────────
@@ -481,10 +437,6 @@ def render_oad_game_theory_tab() -> None:
     # -- Field ─────────────────────────────────────────────────────────────────
     field_ids: set[int]        = set()
     field_name_map: dict[int, str] = {}
-
-    # Match field file by event_id from schedule
-    _eid_series = sched.loc[sched["_slug"] == sel_slug, "event_id"] if not sched.empty else pd.Series(dtype=float)
-    sel_event_id = int(_eid_series.iloc[0]) if not _eid_series.empty and pd.notna(_eid_series.iloc[0]) else None
 
     def _field_event_id(df):
         return int(df["event_id"].iloc[0]) if not df.empty and "event_id" in df.columns and pd.notna(df["event_id"].iloc[0]) else None
