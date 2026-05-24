@@ -1,6 +1,24 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-24 12:00:10 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19, 21"
+    },
+    {
+      "timestamp": "2026-05-24 12:00:13 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-24 11:02:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
       "timestamp": "2026-05-24 06:00:11 ET",
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
@@ -101,24 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
       "details": "Field updated: 19"
-    },
-    {
-      "timestamp": "2026-05-21 16:02:09 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19"
-    },
-    {
-      "timestamp": "2026-05-21 11:42:22 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19"
-    },
-    {
-      "timestamp": "2026-05-21 05:55:15 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19, 21"
     }
   ]
 }
