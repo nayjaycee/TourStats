@@ -1,6 +1,90 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-24 06:00:11 ET",
+      "type": "field_odds_refresh",
+      "event_name": "THE CJ CUP Byron Nelson",
+      "details": "Field updated: 19, 21"
+    },
+    {
+      "timestamp": "2026-05-23 23:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 23:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 22:30:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 22:00:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 21:30:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 21:05:21 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 18:30:10 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 70 players"
+    },
+    {
+      "timestamp": "2026-05-23 11:30:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-05-22 23:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-05-22 23:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-05-22 22:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-05-22 21:30:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-05-22 21:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
       "timestamp": "2026-05-22 15:57:32 ET",
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
@@ -35,30 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
       "details": "Field updated: 19, 21"
-    },
-    {
-      "timestamp": "2026-05-22 20:30:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 20:00:29 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 19:01:46 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-05-22 18:30:28 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 14,518 rows across 41 events. Finishes rebuilt."
     }
   ]
 }
