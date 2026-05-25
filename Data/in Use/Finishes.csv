@@ -1187,6 +1187,153 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Masters Tournament,14,2026-04-12,"Watson, Bubba",7334,CUT,,0,0,0,0,0,1
 2026,Masters Tournament,14,2026-04-12,"Weir, Mike",5513,CUT,,0,0,0,0,0,1
 2026,Masters Tournament,14,2026-04-12,"Willett, Danny",12920,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Clark, Wyndham",23604,1,1.0,1,1,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kim, Si Woo",14609,2,2.0,0,1,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Scheffler, Scottie",18417,3,3.0,0,1,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Suber, Jackson",29279,4,4.0,0,1,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Mitchell, Keith",17365,5,5.0,0,1,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Bauchou, Zach",19846,T6,6.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Finau, Tony",11676,T6,6.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hoge, Tom",15575,T6,6.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Greyserman, Max",23465,T9,9.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Im, Sungjae",17488,T9,9.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Jaeger, Stephan",16394,T9,9.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Keefer, Johnny",32457,T9,9.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Svensson, Jesper",26850,T9,9.0,0,0,1,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Brown, Blades",32152,T14,14.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Koepka, Brooks",16243,T14,14.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Moore, Taylor",21944,T14,14.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Silverman, Ben",17381,17,17.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Noh, S.Y.",11117,18,18.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Coody, Pierceson",28309,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Ewart, A.J.",21883,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Fisk, Steven",26657,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Higgo, Garrick",24342,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hirata, Kensei",20954,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hisatsune, Ryo",22760,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hoey, Rico",23504,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Malnati, Peter",14926,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Neergaard-Petersen, Rasmus",23841,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Power, Seamus",10104,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Spieth, Jordan",14636,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"van Rooyen, Erik",17550,T19,19.0,0,0,0,1,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Clanton, Luke",32330,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Cole, Eric",21756,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Ghim, Doug",24550,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hubbard, Mark",16333,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kirk, Chris",12423,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Meissner, Mac",28159,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Ryder, Sam",16715,T31,31.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Grillo, Emiliano",12808,T38,38.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kim, Chan",15004,T38,38.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Duncan, Tyler",18187,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Eckroat, Austin",26653,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"List, Luke",7960,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Pavon, Matthieu",19960,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Saddier, Adrien",14792,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Shipley, Neal",32055,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Villegas, Camilo",9171,T40,40.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Brown, Dan",20766,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Fishburn, Patrick",25094,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Gomez, Fabian",8571,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Lower, Justin",17723,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Parry, John",13764,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Pendrith, Taylor",17780,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Rodgers, Patrick",16283,T47,47.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hoffman, Charley",5768,T54,54.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kang, Jeffrey",21889,T54,54.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kim, Tom",24766,T54,54.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Merritt, Troy",13367,T54,54.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Svensson, Adam",13997,T54,54.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Byrd, Jonathan",6931,T59,59.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Ramey, Chad",19840,T59,59.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Smith, Jordan",18586,T59,59.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Bae, Yongjun",25628,T62,62.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hojgaard, Rasmus",23838,T62,62.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Lebioda, Hank",21943,T62,62.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Olesen, Thorbjorn",13412,T62,62.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hughes, Mackenzie",15556,66,66.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Griffin, Lanto",15330,T67,67.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"VanDerLaan, John",25319,T67,67.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Blair, Zac",17639,69,69.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Willett, Danny",12920,70,70.0,0,0,0,0,1,0
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Banerjee, Ronin",35309,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Bezuidenhout, Christiaan",18103,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Brehm, Ryan",10423,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Brennan, Michael",29197,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Buchanan, Jackson",32333,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Champ, Cameron",23542,WD,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Cook, Austin",18579,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Crowe, Trace",27780,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Dahmen, Joel",14509,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Davis, Cam",17786,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Dou, Zecheng",16757,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Dumont de Chassart, Adrien",22002,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Dunlap, Nick",28270,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Goodwin, Noah",24837,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Gordon, Will",26660,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Gregory, Greg",6243,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hadwin, Adam",13965,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hahn, James",11374,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hardy, Nick",19865,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Headley, Adam",35304,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hodges, Lee",25157,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Horschel, Billy",11276,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Hossler, Beau",15470,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Howell, Mason",33759,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Huang, Alex",35310,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kanaya, Takumi",19729,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kizzire, Patton",13470,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kohles, Ben",16395,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Kuchar, Matt",6169,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Laird, Martin",9586,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Lee, K.H.",13497,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Martin, Ben",14007,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"McGreevy, Max",23505,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Montgomery, Taylor",25442,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Mouw, William",29770,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Nakajima, Keita",21074,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Norlander, Henrik",11657,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Nyholm, Pontus",25475,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Palmer, Ryan",7820,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Paul, Jeremy",22087,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Peterson, Paul",16341,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Petronzio, Nathan",29915,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Phillips, Chandler",27164,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Piercy, Scott",7899,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Roy, Kevin",18424,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Schmid, Matti",20722,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Sides, William",35308,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Skinns, David",10873,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Springer, Hayden",21995,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Stanger, Jimmy",23048,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Stout, Preston",32089,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Streb, Robert",14852,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Streelman, Kevin",8480,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Thompson, Davis",27364,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Thorbjornsen, Michael",26649,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Vegas, Jhonattan",13508,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Vilips, Karl",24304,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Young, Carson",23656,CUT,,0,0,0,0,0,1
+2026,THE CJ CUP Byron Nelson,19,2026-05-24,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
 2026,Texas Children's Houston Open,20,2026-03-29,"Woodland, Gary",12577,1,1.0,1,1,1,1,1,0
 2026,Texas Children's Houston Open,20,2026-03-29,"Hojgaard, Nicolai",23602,2,2.0,0,1,1,1,1,0
 2026,Texas Children's Houston Open,20,2026-03-29,"Keefer, Johnny",32457,T3,3.0,0,1,1,1,1,0
@@ -4404,6 +4551,162 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
 2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
 2026,Estrella Damm Catalunya Championship,2026117,2026-05-10,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Sterne, Richard",7049,1,1.0,1,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Armitage, Marcus",17813,T2,2.0,0,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Campillo, Jorge",14016,T2,2.0,0,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Kaneko, Kota",28268,T2,2.0,0,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Kinhult, Marcus",18514,T2,2.0,0,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Olesen, Jacob Skov",25611,T2,2.0,0,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Perez, Victor",20730,T2,2.0,0,1,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Daffue, Mj",17068,T8,8.0,0,0,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"De Leo, Gregorio",26506,T8,8.0,0,0,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Kimsey, Nathan",18027,T8,8.0,0,0,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Lombard, Zander",16897,T8,8.0,0,0,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Schmidt, Ben",27258,T8,8.0,0,0,1,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Bergstrom, Albin",23620,T13,13.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Johnston, Andrew",14666,T13,13.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Vaillant, Tom",28157,T13,13.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Van Driel, Darius",13374,T13,13.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Laporta, Francesco",14987,T17,17.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Lindberg, Mikael",20084,T17,17.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Wenyi, Ding",26193,T17,17.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Winther, Jeff",15680,T17,17.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Zanotti, Fabrizio",9842,T17,17.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Jarvis, Casey",26947,T22,22.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Lopez-Chacarra, Eugenio",26745,T22,22.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Buchanan, Jack",27379,T24,24.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Couvra, Martin",27811,T24,24.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Gouveia, Ricardo",18722,T24,24.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Levy, Alexander",14973,T24,24.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Pepperell, Eddie",15113,T24,24.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Schaper, Jayden Trey",26991,T24,24.0,0,0,0,1,1,0
+2026,Soudal Open,2026119,2026-05-24,"Bryant, Davis",32550,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Dantorp, Jens",14018,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Elvira, Manuel",26008,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Lindell, Oliver",20085,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Paratore, Renato",16549,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Premlall, Yurav",25890,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Ravetto, David",23416,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Schneider, Marcel",12522,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Scrivener, Jason",12734,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Walker, Euan",27147,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Waring, Paul",12426,T30,30.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Adam, Cameron",34024,T41,41.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Broomhead, Jonothan",30210,T41,41.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Crocker, Sean",23610,T41,41.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"De schutter , Anthony",27069,T41,41.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Halvorsen, Andreas",17747,T41,41.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Zhou, Yanhan",29119,T41,41.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Baldwin, Matthew",13344,T47,47.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Charmasson, Clement",22220,T47,47.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Dean, Joe",16497,T47,47.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Guerrier, Julien",10201,T47,47.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Repetto Taylor, Rocco Paolo",31235,T47,47.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Sullivan, Andy",15326,T47,47.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Cantero Gutierrez, Ivan",19635,T53,53.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Detry, Thomas",14181,T53,53.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Hoshino, Rikuya",19190,T53,53.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Langasque, Romain",16652,T53,53.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Manassero, Matteo",11460,T53,53.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Siem, Marcel",6950,T53,53.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Hill, Calum",25131,T59,59.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Katsuragawa, Yuto",20448,T59,59.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Steinlechner, Maximilian",21677,T59,59.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Ulenaers , Kristof",22004,T59,59.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Blomme, Adam",23784,T63,63.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Du Plessis, Hennie",19421,T63,63.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Jamieson, Scott",11397,T63,63.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Kaewkanjana, Sadom",19844,T63,63.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Sandhu, Yuvraj Singh",23060,T63,63.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Debove , Quentin",25325,T68,68.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Haghedooren, Arthur",32240,T68,68.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Green, Gavin",12530,T70,70.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Surratt, Caleb",30463,T70,70.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Von Dellingshausen, Nicolai",22231,T70,70.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Fisher, Ross",9396,73,73.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Grinberg, Lev",29461,T74,74.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Luiten, Joost",10158,T74,74.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Syme, Connor",22089,T74,74.0,0,0,0,0,1,0
+2026,Soudal Open,2026119,2026-05-24,"Aphibarnrat, Kiradech",12321,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Bairstow, Sam",28615,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Ballester, Jose Luis",28473,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Bentein, Liam",32384,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Besard, Matthis",26562,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Bjerregaard, Lucas",11619,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Buijs, Lars",21209,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Clements, Todd",22608,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Cockerill, Aaron",15596,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Colsaerts, Nicolas",6893,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Cossement, Nathan",30199,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Coussaud, Ugo",20727,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Da Costa Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Elvira Mijares, Ignacio",12988,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Ferguson, Ewen",21646,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Follet-Smith, Benjamin",15211,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Forrest, Grant",16475,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Forsstrom, Simon",19806,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Garcia Rodriguez, Sebastian",12258,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Gavins, Daniel",18241,WD,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Germishuys, Deon",25888,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Guillamoundeguy, Oihan",28239,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Helligkilde, Marcus",20190,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Hillier, Daniel",21362,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Huizing, Daan",12650,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Jordan, Matthew",25601,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Kennedy, Frank",28693,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Kieffer, Maximilian",12317,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Kobori, Kazuma",24369,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Lacroix, Frederic",23733,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Mansell, Richard",24185,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Meronk, Adrian",14196,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Meyer de beco, James",28803,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Molinari, Edoardo",7033,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Moller, Niklas Norgaard",15676,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Morrison, James",11061,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Mory , Felix",25089,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Paul, Yannik",19898,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Quayle, Anthony",18900,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Ritchie, JC",18174,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Schott, Freddy",27588,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Skeet, James",29463,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Stone, Brandon",15229,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Tarren, Callum",20519,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Tollenaire , Jarno",27067,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Townsend, Hugo",31165,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Van Doren, Yente",19852,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,Soudal Open,2026119,2026-05-24,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
