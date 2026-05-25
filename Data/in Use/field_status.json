@@ -18,7 +18,6 @@
       "Cauley, Bud",
       "Chatfield, Davis",
       "Clanton, Luke",
-      "Clark, Wyndham",
       "Cole, Eric",
       "Coody, Pierceson",
       "Crowe, Trace",
@@ -39,6 +38,7 @@
       "Glover, Lucas",
       "Greyserman, Max",
       "Griffin, Ben",
+      "Griffin, Lanto",
       "Grillo, Emiliano",
       "Hall, Harry",
       "Hansson, Albert",
@@ -70,6 +70,7 @@
       "Kirk, Chris",
       "Kisner, Kevin",
       "Kizzire, Patton",
+      "Kohles, Ben",
       "Kuchar, Matt",
       "Lamprecht, Christo",
       "Lebioda, Hank",
@@ -104,7 +105,6 @@
       "Rozo, Marcelo",
       "Ryder, Sam",
       "Saddier, Adrien",
-      "Sargent, Gordon",
       "Schenk, Adam",
       "Shipley, Neal",
       "Simpson, Webb",
@@ -137,8 +137,20 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-25 13:27:46 ET",
+    "last_updated": "2026-05-25 15:50:22 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-25 15:50:22 ET",
+        "added": [
+          "Griffin, Lanto",
+          "Kohles, Ben"
+        ],
+        "withdrawn": [
+          "Clark, Wyndham",
+          "Sargent, Gordon"
+        ],
+        "note": "+2 / -2"
+      },
       {
         "timestamp": "2026-05-25 13:27:46 ET",
         "added": [],
@@ -279,12 +291,6 @@
       },
       {
         "timestamp": "2026-05-23 09:50:53 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-23 04:27:20 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
