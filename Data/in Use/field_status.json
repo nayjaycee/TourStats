@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 21,
     "event_name": "Charles Schwab Challenge",
-    "player_count": 130,
+    "player_count": 132,
     "player_names": [
       "Aberg, Ludvig",
       "Bauchou, Zach",
@@ -107,6 +107,7 @@
       "Sargent, Gordon",
       "Schenk, Adam",
       "Shipley, Neal",
+      "Simpson, Webb",
       "Skinns, David",
       "Smalley, Alex",
       "Smith, Jordan",
@@ -117,6 +118,7 @@
       "Stanger, Jimmy",
       "Stevens, Sam",
       "Streelman, Kevin",
+      "Suber, Jackson",
       "Svensson, Adam",
       "Theegala, Sahith",
       "Thomas, Justin",
@@ -135,8 +137,17 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-25 06:21:39 ET",
+    "last_updated": "2026-05-25 10:31:13 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-25 10:31:13 ET",
+        "added": [
+          "Simpson, Webb",
+          "Suber, Jackson"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-05-25 06:21:39 ET",
         "added": [
@@ -274,12 +285,6 @@
       },
       {
         "timestamp": "2026-05-22 10:55:30 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-22 05:40:27 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
