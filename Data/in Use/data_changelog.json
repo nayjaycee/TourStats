@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-25 16:56:31 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Charles Schwab Challenge",
+      "details": "Field updated: 21"
+    },
+    {
       "timestamp": "2026-05-25 15:50:22 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-21 16:02:09 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19"
-    },
-    {
-      "timestamp": "2026-05-21 11:42:22 ET",
       "type": "field_odds_refresh",
       "event_name": "THE CJ CUP Byron Nelson",
       "details": "Field updated: 19"
