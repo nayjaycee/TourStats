@@ -15,7 +15,6 @@
       "Brown, Dan",
       "Campbell, Brian",
       "Castillo, Ricky",
-      "Cauley, Bud",
       "Chatfield, Davis",
       "Clanton, Luke",
       "Cole, Eric",
@@ -30,6 +29,7 @@
       "Eckroat, Austin",
       "Ewart, A.J.",
       "Finau, Tony",
+      "Fishburn, Patrick",
       "Fisk, Steven",
       "Fowler, Rickie",
       "Garnett, Brice",
@@ -137,8 +137,18 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-26 11:56:01 ET",
+    "last_updated": "2026-05-26 16:21:36 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-26 16:21:36 ET",
+        "added": [
+          "Fishburn, Patrick"
+        ],
+        "withdrawn": [
+          "Cauley, Bud"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-05-26 11:56:01 ET",
         "added": [],
@@ -285,12 +295,6 @@
       },
       {
         "timestamp": "2026-05-24 15:25:17 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-24 09:48:49 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
