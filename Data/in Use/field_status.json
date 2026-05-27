@@ -137,8 +137,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-26 16:21:36 ET",
+    "last_updated": "2026-05-27 06:07:22 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-27 06:07:22 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-26 16:21:36 ET",
         "added": [
@@ -292,12 +298,6 @@
           "Young, Carson"
         ],
         "note": "+34 / -51"
-      },
-      {
-        "timestamp": "2026-05-24 15:25:17 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
