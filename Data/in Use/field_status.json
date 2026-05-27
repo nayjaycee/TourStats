@@ -137,8 +137,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-27 12:00:27 ET",
+    "last_updated": "2026-05-27 16:25:52 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-27 16:25:52 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-27 12:00:27 ET",
         "added": [],
@@ -202,15 +208,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-25 10:31:13 ET",
-        "added": [
-          "Simpson, Webb",
-          "Suber, Jackson"
-        ],
-        "withdrawn": [],
-        "note": "+2 / -0"
       }
     ]
   },
