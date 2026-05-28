@@ -137,8 +137,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-28 06:16:03 ET",
+    "last_updated": "2026-05-28 12:15:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-28 12:15:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-28 06:16:03 ET",
         "added": [],
@@ -202,12 +208,6 @@
           "Sargent, Gordon"
         ],
         "note": "+2 / -2"
-      },
-      {
-        "timestamp": "2026-05-25 13:27:46 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
