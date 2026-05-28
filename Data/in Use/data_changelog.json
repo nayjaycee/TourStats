@@ -1,6 +1,78 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-28 18:00:02 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Charles Schwab Challenge",
+      "details": "Field updated: 21"
+    },
+    {
+      "timestamp": "2026-05-28 18:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 17:30:11 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 17:00:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 16:30:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 16:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 15:00:12 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 14:30:08 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 14:00:27 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 13:30:19 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 13:00:13 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
+      "timestamp": "2026-05-28 12:30:11 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 132 players"
+    },
+    {
       "timestamp": "2026-05-28 12:00:12 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
@@ -47,78 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 132 players"
-    },
-    {
-      "timestamp": "2026-05-25 16:07:29 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,094 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-05-25 16:07:27 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 15,414 rows across 43 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-05-25 16:07:20 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Charles Schwab Challenge",
-      "details": "Field updated: 21"
-    },
-    {
-      "timestamp": "2026-05-24 23:32:54 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 22:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 21:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 21:00:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 20:00:16 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 19:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 19:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
-    },
-    {
-      "timestamp": "2026-05-24 18:00:22 ET",
-      "type": "field_odds_refresh",
-      "event_name": "THE CJ CUP Byron Nelson",
-      "details": "Field updated: 19, 21"
-    },
-    {
-      "timestamp": "2026-05-24 18:00:22 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 70 players"
     }
   ]
 }
