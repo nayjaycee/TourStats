@@ -137,8 +137,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-28 12:15:03 ET",
+    "last_updated": "2026-05-28 16:32:06 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-28 16:32:06 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-28 12:15:03 ET",
         "added": [],
@@ -196,18 +202,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-25 15:50:22 ET",
-        "added": [
-          "Griffin, Lanto",
-          "Kohles, Ben"
-        ],
-        "withdrawn": [
-          "Clark, Wyndham",
-          "Sargent, Gordon"
-        ],
-        "note": "+2 / -2"
       }
     ]
   },
