@@ -137,8 +137,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-05-30 15:27:15 ET",
+    "last_updated": "2026-05-31 04:55:13 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-31 04:55:13 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-30 15:27:15 ET",
         "added": [],
@@ -189,12 +195,6 @@
       },
       {
         "timestamp": "2026-05-28 06:16:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-27 16:25:52 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
@@ -278,8 +278,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-05-30 15:27:15 ET",
+    "last_updated": "2026-05-31 04:55:13 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-05-31 04:55:13 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-05-30 15:27:15 ET",
         "added": [],
@@ -463,90 +469,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-22 20:34:24 ET",
-        "added": [
-          "Aberg, Ludvig",
-          "Bhatia, Akshay",
-          "Bradley, Keegan",
-          "Campbell, Brian",
-          "Castillo, Ricky",
-          "Cauley, Bud",
-          "Echavarria, Nico",
-          "Fowler, Rickie",
-          "Gerard, Ryan",
-          "Glover, Lucas",
-          "Griffin, Ben",
-          "Hall, Harry",
-          "Hansson, Albert",
-          "Harman, Brian",
-          "Henley, Russell",
-          "Homa, Max",
-          "Howell, Mason",
-          "Kisner, Kevin",
-          "Lipsky, David",
-          "MacIntyre, Robert",
-          "Matsuyama, Hideki",
-          "McCarthy, Denny",
-          "McCarty, Matt",
-          "Novak, Andrew",
-          "Poston, J.T.",
-          "Smalley, Alex",
-          "Smotherman, Austin",
-          "Snedeker, Brandt",
-          "Spaun, J.J.",
-          "Stevens, Sam",
-          "Theegala, Sahith",
-          "Thomas, Justin",
-          "Woodland, Gary",
-          "Yellamaraju, Sudarshan"
-        ],
-        "withdrawn": [
-          "Bae, Yongjun",
-          "Brehm, Ryan",
-          "Brown, Blades",
-          "Buchanan, Jackson",
-          "Campos, Rafael",
-          "Duncan, Tyler",
-          "Fishburn, Patrick",
-          "Garnett, Brice",
-          "Griffin, Lanto",
-          "Hadwin, Adam",
-          "Hahn, James",
-          "Headley, Adam",
-          "Higgs, Harry",
-          "Hojgaard, Nicolai",
-          "Kim, Chan",
-          "Kim, Si Woo",
-          "Kohles, Ben",
-          "Laird, Martin",
-          "Lee, K.H.",
-          "Lower, Justin",
-          "Malnati, Peter",
-          "Merritt, Troy",
-          "Montgomery, Taylor",
-          "Norlander, Henrik",
-          "Paul, Jeremy",
-          "Pendrith, Taylor",
-          "Penge, Marco",
-          "Potgieter, Aldrich",
-          "Rai, Aaron",
-          "Scheffler, Scottie",
-          "Schmid, Matti",
-          "Sides, William",
-          "Silverman, Ben",
-          "Spieth, Jordan",
-          "Stanger, Jimmy",
-          "Stout, Preston",
-          "Streb, Robert",
-          "Svensson, Jesper",
-          "Vegas, Jhonattan",
-          "Willett, Danny",
-          "Wise, Aaron",
-          "Young, Carson"
-        ],
-        "note": "+34 / -42"
       }
     ]
   }
