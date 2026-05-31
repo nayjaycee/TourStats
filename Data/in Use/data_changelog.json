@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-05-31 09:59:51 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Charles Schwab Challenge",
+      "details": "Field updated: 21, 23"
+    },
+    {
       "timestamp": "2026-05-31 04:55:13 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-25 16:56:31 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Charles Schwab Challenge",
-      "details": "Field updated: 21"
-    },
-    {
-      "timestamp": "2026-05-25 15:50:22 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
       "details": "Field updated: 21"
