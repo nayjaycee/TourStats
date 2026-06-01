@@ -1469,6 +1469,138 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Texas Children's Houston Open,20,2026-03-29,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
 2026,Texas Children's Houston Open,20,2026-03-29,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
 2026,Texas Children's Houston Open,20,2026-03-29,"Zalatoris, Will",19428,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Henley, Russell",14578,1,1.0,1,1,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Cole, Eric",21756,2,2.0,0,1,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Griffin, Ben",24968,T3,3.0,0,1,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Meissner, Mac",28159,T3,3.0,0,1,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Smalley, Alex",18474,T3,3.0,0,1,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Brennan, Michael",29197,T6,6.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Echavarria, Nico",22833,T6,6.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Spaun, J.J.",17536,T6,6.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Woodland, Gary",12577,T6,6.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Fisk, Steven",26657,T10,10.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Gerard, Ryan",29767,T10,10.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Hughes, Mackenzie",15556,T10,10.0,0,0,1,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Matsuyama, Hideki",13562,T13,13.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Smith, Jordan",18586,T13,13.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Thomas, Justin",14139,T13,13.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Thorbjornsen, Michael",26649,16,16.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Aberg, Ludvig",23950,T17,17.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Ewart, A.J.",21883,T17,17.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Hoey, Rico",23504,T17,17.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Kim, Michael",17543,T17,17.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Putnam, Andrew",14704,T17,17.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Bauchou, Zach",19846,T22,22.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Coody, Pierceson",28309,T22,22.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Garnett, Brice",11451,T22,22.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Harman, Brian",8825,T22,22.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Homa, Max",17538,T22,22.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Kuchar, Matt",6169,T22,22.0,0,0,0,1,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Bhatia, Akshay",26096,T28,28.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Ghim, Doug",24550,T28,28.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Nakajima, Keita",21074,T28,28.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Snedeker, Brandt",8820,T28,28.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Bezuidenhout, Christiaan",18103,T32,32.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Griffin, Lanto",15330,T32,32.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Higgo, Garrick",24342,T32,32.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Bradley, Keegan",13872,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Hodges, Lee",25157,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Keefer, Johnny",32457,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"McGreevy, Max",23505,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Poston, J.T.",21554,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Thompson, Davis",27364,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Yu, Kevin",17881,T35,35.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Blanchet, Chandler",24956,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Castillo, Ricky",27819,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Dahmen, Joel",14509,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Grillo, Emiliano",12808,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Horschel, Billy",11276,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Kang, Jeffrey",21889,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"MacIntyre, Robert",23323,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Neergaard-Petersen, Rasmus",23841,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Saddier, Adrien",14792,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Smotherman, Austin",22985,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Stevens, Sam",25569,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Streelman, Kevin",8480,T42,42.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Clanton, Luke",32330,T54,54.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Fishburn, Patrick",25094,T54,54.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Kanaya, Takumi",19729,T54,54.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Kim, Tom",24766,T54,54.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Novak, Andrew",23475,T54,54.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Power, Seamus",10104,T54,54.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Dunlap, Nick",28270,T60,60.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Hubbard, Mark",16333,T60,60.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"McCarty, Matt",28635,T60,60.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Moore, Taylor",21944,T60,60.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Rodgers, Patrick",16283,T60,60.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Theegala, Sahith",23014,T60,60.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Hisatsune, Ryo",22760,66,66.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Eckroat, Austin",26653,T67,67.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Olesen, Thorbjorn",13412,T67,67.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Suber, Jackson",29279,T67,67.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"van Rooyen, Erik",17550,70,70.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Glover, Lucas",7399,T71,71.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Hoge, Tom",15575,T71,71.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Riley, Davis",19872,T71,71.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Roy, Kevin",18424,T74,74.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Schenk, Adam",19477,T74,74.0,0,0,0,0,1,0
+2026,Charles Schwab Challenge,21,2026-05-31,"Blair, Zac",17639,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Brown, Dan",20766,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Chatfield, Davis",30620,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Crowe, Trace",27780,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Davis, Cam",17786,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Dou, Zecheng",16757,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Dumont de Chassart, Adrien",22002,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Finau, Tony",11676,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Fowler, Rickie",12965,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Greyserman, Max",23465,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hall, Harry",27194,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hansson, Albert",27646,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hardy, Nick",19865,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hojgaard, Rasmus",23838,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Hossler, Beau",15470,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Howell, Mason",33759,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Im, Sungjae",17488,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Jaeger, Stephan",16394,WD,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Kirk, Chris",12423,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Kisner, Kevin",11328,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Kizzire, Patton",13470,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Kohles, Ben",16395,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Lipsky, David",15980,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Martin, Ben",14007,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Mitchell, Keith",17365,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Mouw, William",29770,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Nyholm, Pontus",25475,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Palmer, Ryan",7820,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Parry, John",13764,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Pavon, Matthieu",19960,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Peterson, Paul",16341,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Phillips, Chandler",27164,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Ramey, Chad",19840,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Ryder, Sam",16715,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Simpson, Webb",11049,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Skinns, David",10873,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Springer, Hayden",21995,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Stanger, Jimmy",23048,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Vilips, Karl",24304,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Villegas, Camilo",9171,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,Charles Schwab Challenge,21,2026-05-31,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
 2026,PGA Championship,33,2026-05-17,"Rai, Aaron",18554,1,1.0,1,1,1,1,1,0
 2026,PGA Championship,33,2026-05-17,"Rahm, Jon",19195,T2,2.0,0,1,1,1,1,0
 2026,PGA Championship,33,2026-05-17,"Smalley, Alex",18474,T2,2.0,0,1,1,1,1,0
@@ -2700,6 +2832,63 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Mexico City,1028,2026-04-19,"Campbell, Ben",14373,56,56.0,0,0,0,0,1,0
 2026,Mexico City,1028,2026-04-19,"Carrera, Luis",29579,NAN,,0,0,0,0,0,1
 2026,Mexico City,1028,2026-04-19,"DeChambeau, Bryson",19841,WD,,0,0,0,0,0,1
+2026,Korea,1029,2026-05-31,"Niemann, Joaquin",18079,1,1.0,1,1,1,1,1,0
+2026,Korea,1029,2026-05-31,"Gooch, Talor",18580,2,2.0,0,1,1,1,1,0
+2026,Korea,1029,2026-05-31,"DeChambeau, Bryson",19841,3,3.0,0,1,1,1,1,0
+2026,Korea,1029,2026-05-31,"Johnson, Dustin",12422,4,4.0,0,1,1,1,1,0
+2026,Korea,1029,2026-05-31,"Vincent, Scott",14559,5,5.0,0,1,1,1,1,0
+2026,Korea,1029,2026-05-31,"Steele, Brendan",11019,T6,6.0,0,0,1,1,1,0
+2026,Korea,1029,2026-05-31,"Varner III, Harold",16602,T6,6.0,0,0,1,1,1,0
+2026,Korea,1029,2026-05-31,"Herbert, Lucas",17064,T8,8.0,0,0,1,1,1,0
+2026,Korea,1029,2026-05-31,"Howell III, Charles",6892,T8,8.0,0,0,1,1,1,0
+2026,Korea,1029,2026-05-31,"Leishman, Marc",7649,T8,8.0,0,0,1,1,1,0
+2026,Korea,1029,2026-05-31,"Smyth, Trav",19232,T8,8.0,0,0,1,1,1,0
+2026,Korea,1029,2026-05-31,"Campbell, Ben",14373,T12,12.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Canter, Laurie",14795,T12,12.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Grace, Branden",11952,T12,12.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Song, Younghan",16160,T12,12.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Poulter, Ian",1435,T16,16.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Puig, David",28984,T16,16.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Rahm, Jon",19195,T16,16.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Smith, Cameron",15856,T16,16.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Kim, Anthony",11641,T20,20.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Kokrak, Jason",12337,T20,20.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Pieters, Thomas",13944,T20,20.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Bland, Richard",6516,T23,23.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Burmester, Dean",14424,T23,23.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"McKibbin, Tom",22322,T23,23.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Mun, Doyeob",17386,T23,23.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Munoz, Sebastian",20770,T23,23.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Perez, Victor",20730,T23,23.0,0,0,0,1,1,0
+2026,Korea,1029,2026-05-31,"Ancer, Abraham",18238,T29,29.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Garcia, Sergio",5689,T29,29.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Lee, Danny",11826,T29,29.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Meronk, Adrian",14196,T29,29.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Watson, Bubba",7334,T29,29.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Ballester, Jose Luis",28473,T34,34.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Schwartzel, Charl",7398,T34,34.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Tringale, Cameron",14013,T34,34.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"An, Byeong Hun",14459,T37,37.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Masaveu, Luis",30428,T37,37.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Oosthuizen, Louis",7672,T37,37.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Westwood, Lee",4052,T37,37.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Asaji, Yosuke",12637,T41,41.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Detry, Thomas",14181,T41,41.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Lahiri, Anirban",12669,T41,41.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Lee, Richard",12413,T41,41.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Kaymer, Martin",8117,T45,45.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"McDowell, Graeme",7548,T45,45.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Rottluff, Max",19899,T45,45.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Smylie, Elvis",24200,T45,45.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Surratt, Caleb",30463,T45,45.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"La Sasso, Michael",33755,T50,50.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Tabuena, Miguel",15274,T50,50.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Ortiz, Carlos",14735,T52,52.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Uihlein, Peter",11357,T52,52.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Kim, Minkyu",20780,54,54.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Horsfield, Sam",19866,55,55.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Hellgren, Bjorn",16231,56,56.0,0,0,0,0,1,0
+2026,Korea,1029,2026-05-31,"Wolff, Matthew",25919,57,57.0,0,0,0,0,1,0
 2026,Virginia,1030,2026-05-10,"Herbert, Lucas",17064,1,1.0,1,1,1,1,1,0
 2026,Virginia,1030,2026-05-10,"Garcia, Sergio",5689,2,2.0,0,1,1,1,1,0
 2026,Virginia,1030,2026-05-10,"DeChambeau, Bryson",19841,3,3.0,0,1,1,1,1,0
@@ -3049,6 +3238,142 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu-chen, Yu",25682,CUT,,0,0,0,0,0,1
 2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yu-cheng, Hsu",25680,CUT,,0,0,0,0,0,1
 2026,Sun Flower & TPGA Championship,11349,2026-05-17,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Kai-jen, Tsai",18978,1,1.0,1,1,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ching-hung, Su",24106,2,2.0,0,1,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Huang, Yi-tseng",24105,3,3.0,0,1,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Shih-chang, Chan",9698,4,4.0,0,1,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Noro, Ryo",24222,5,5.0,0,1,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chan, Chia-Han",33412,T6,6.0,0,0,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Mako, Shapiyate",30395,T6,6.0,0,0,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ting-Wei, Hsieh",24096,T6,6.0,0,0,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tseng Seng, Tzu Hao",23629,T6,6.0,0,0,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yamaura, Kazuki",28928,T6,6.0,0,0,1,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chi-Hsien, Hsieh",13484,T11,11.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ishizuka, Shori",22851,T11,11.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Han-Ting, Chiu",20880,T13,13.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ishige, Takumi",15389,T13,13.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chien-Yao, Hung",11738,T15,15.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tse-yu, Chang",25515,T15,15.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wei-chih, Lu",8170,T15,15.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Ting-yu",33753,T18,18.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ieamgaew, Warun",22884,T18,18.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yang, Hsiao-che",33411,T18,18.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tsai, Shang-kai",32957,T21,21.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu-jui, Liu",17880,T21,21.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Hsi-An, Wang",25681,T23,23.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Kao, Teng",17922,T23,23.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Sun-Yi, Lu",20881,T23,23.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wu, Yao-wei",32956,T23,23.0,0,0,0,1,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wang, Sheng-hui",33059,T27,27.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yen-hung, Liu",18798,T27,27.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu-cheng, Hsu",25680,T27,27.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"IIda, Yusuke",16184,T30,30.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin, Ta-yu",33058,T30,30.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Shih-hung, Lee",17735,T30,30.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tsung-yu, Tsai",14504,T30,30.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yeh, Chia-Yin",31679,T34,34.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu-chen, Yu",25682,T34,34.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chao-hua, Lee",17763,T36,36.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Okada, Keita",33143,T36,36.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu-Chen, Yeh",17771,T36,36.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chi, Huang",23208,T39,39.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ikeuchi, Kei",29862,T39,39.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chiang, Ian",33568,41,41.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Fukuhara, Shota",15388,T43,43.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Oda, Nobuaki",24108,T43,43.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Peng, Ian",32452,T45,45.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Sui, Justin",34345,T45,45.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yung Lung, Lin",17923,T45,45.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Shou-Cheng",33574,T48,48.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wei-cheng, Shen",25521,T48,48.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin, K.P.",15023,50,50.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Chieh-Sheng",31005,T51,51.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Kudo, Jun",27056,T51,51.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Duangphaichoom, Jaturon",19321,53,53.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Wei-sheng",30398,54,54.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Sakuma, Hayato",29720,55,55.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tsurumi, Daiki",26077,T56,56.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wei-lin, Lee",15048,T56,56.0,0,0,0,0,1,0
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Arbole, Art",15973,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Bagtas, Leandro Luis",33170,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chang, Yu-Cheng",31654,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Hui-hung",33062,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Ming-Yi",35360,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Po-hao",30424,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Yen-Yu",33566,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chen, Yi-tong",23206,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Cheng Yen, Yu",18801,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Cheng(Am), Yi Le",35358,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Cheng, Christopher",29909,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chien-chi, Chang",17879,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chih-kai, Hsu",21182,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chin-chou, Lee",17764,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Chou, Yu-Hsuan",35268,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ding-Sheng, Lin",16298,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Fujita, Tsubasa",25533,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Furuya, Ryoto",29313,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Hsieh (Am), Kun-lin",34653,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Hsieh, Tung-hung",14095,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Hsu, Chao-Wei",34650,WD,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Huang, Chih Chen",34034,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Huang, Chih-yi",33415,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Huang, Kuan-hsun",30402,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Huang, Yi-Chun",35267,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Hwang(Am), Jen-You",35364,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Ikoma, Reiji",29867,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Iwama Gamma, Takanari",21390,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Jui-cheng, Hung",25519,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Kaneko, Tokuma",35357,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Kashimoto, Kohei",25711,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Kung, Te-shu",34446,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lai (Am), Yu-ting",34655,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lai, Chia-i",30401,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lee, Jui-shen",30422,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lee, Shang-Jung",33573,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lee, Tony",33064,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Li(Am), Ansen",35366,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin(Am), Po-Hsun",35363,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin(Am), Yi‑Cheng",34038,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin, Chen-chu",33060,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin, Kai-jie",33563,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin, Ming-yeh",33572,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Lin, Yuan-Wei",19491,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Liu, Tse Sen",23628,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Liu, Yen-chun",34663,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Masayama(Am), Hiroki",29325,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Mishima, Taiki",33754,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Mizuno, Shinichi",15143,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Morii, Akinori",14155,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Nishiguchi, Naoki",35362,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Pan, Anson",34448,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Sakurai, Kento",33746,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Sekito, Yuji",25823,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Shih(Am), Yu-Hsiang",33404,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Shih, Chun-Yu",33399,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Shinno, Yohei",16297,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Takeuchi, Shingo",26231,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tokunaga, Hiroki",26455,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tsai (Am), An-chieh",34383,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tsai (Am), Yu-Chia",34649,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tsai, Chin-Yang",33408,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tseng, Fu-tung",30396,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Tzu Ming, Wang",17769,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wakaari, Nobuhiko",31357,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Walker, Johnny",34998,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wang, Li-Wei",33398,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wang, Ruikun",35361,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wang, Yu-cheng",33749,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wei-Chen, Hsu",33920,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wei-fan(Am), Liu",20932,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wen, Cheng-Hsiang",19698,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Wu, Hung yuan",35365,WD,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yang(Am), Ting Yi",35359,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yang, Jay",33409,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yokokawa, Kosuke",30439,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yoshikuwa, Yuta",28252,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu chen, Chen",24451,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu-Ting(Am), Lin",34039,CUT,,0,0,0,0,0,1
+2026,Chau-Shi Series GIANT Open,11384,2026-05-30,"Yu-cheng, Ho",22754,CUT,,0,0,0,0,0,1
 2026,Dubai Invitational,2026105,2026-01-18,"Elvira Mijares, Ignacio",12988,1,1.0,1,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Hillier, Daniel",21362,2,2.0,0,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Guerrier, Julien",10201,T3,3.0,0,1,1,1,1,0
@@ -4707,6 +5032,162 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Soudal Open,2026119,2026-05-24,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
 2026,Soudal Open,2026119,2026-05-24,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
 2026,Soudal Open,2026119,2026-05-24,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Kaneko, Kota",28268,1,1.0,1,1,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Bryant, Davis",32550,T2,2.0,0,1,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Gouveia, Ricardo",18722,T2,2.0,0,1,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Cabrera Bello, Rafa",7457,T4,4.0,0,1,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"De Leo, Gregorio",26506,T4,4.0,0,1,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Wiesberger, Bernd",9531,T4,4.0,0,1,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Elvira, Manuel",26008,T7,7.0,0,0,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Hillier, Daniel",21362,T7,7.0,0,0,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Luiten, Joost",10158,T7,7.0,0,0,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Steinlechner, Maximilian",21677,T7,7.0,0,0,1,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Girrbach, Joel",15592,11,11.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Dean, Joe",16497,T12,12.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Forrest, Grant",16475,T12,12.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lopez-Chacarra, Eugenio",26745,T12,12.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Straka, Sepp",17511,T12,12.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Zhou, Yanhan",29119,T12,12.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Celli, Filippo",23549,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Coussaud, Ugo",20727,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Ferguson, Ewen",21646,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Hill, Calum",25131,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Johnston, Andrew",14666,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Kimsey, Nathan",18027,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Levy, Alexander",14973,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Ritchie, JC",18174,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Schneider, Marcel",12522,T17,17.0,0,0,0,1,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Armitage, Marcus",17813,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Cantero Gutierrez, Ivan",19635,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Garcia-Heredia, Alfredo",7887,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Hoshino, Rikuya",19190,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Katsuragawa, Yuto",20448,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Mory , Felix",25089,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Olesen, Jacob Skov",25611,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Rozner, Antoine",18770,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Vaillant, Tom",28157,T26,26.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Couvra, Martin",27811,T35,35.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Daffue, Mj",17068,T35,35.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Guillamoundeguy, Oihan",28239,T35,35.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Morrison, James",11061,T35,35.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Ravetto, David",23416,T35,35.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Du Plessis, Hennie",19421,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Jordan, Matthew",25601,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Laporta, Francesco",14987,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Na, Kevin",7452,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Premlall, Yurav",25890,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Robinson-Thompson, Brandon",24497,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Van Driel, Darius",13374,T40,40.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Adam, Cameron",34024,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Jonsson, Tobias",28686,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lindell, Oliver",20085,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Paratore, Renato",16549,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Sterne, Richard",7049,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Stone, Brandon",15229,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Townsend, Hugo",31165,T47,47.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Langasque, Romain",16652,T54,54.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Warren, Marc",7567,T54,54.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Bergstrom, Albin",23620,56,56.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Fisher, Ross",9396,T57,57.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Wenyi, Ding",26193,T57,57.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Bjerregaard, Lucas",11619,T59,59.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Halvorsen, Andreas",17747,T59,59.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Johnston, Ryggs",32449,T59,59.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Quayle, Anthony",18900,T59,59.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Crocker, Sean",23610,T63,63.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Forsstrom, Simon",19806,T63,63.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Molinari, Edoardo",7033,T63,63.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Garcia Rodriguez, Sebastian",12258,66,66.0,0,0,0,0,1,0
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Aphibarnrat, Kiradech",12321,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Bairstow, Sam",28615,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Baltl, Timon",17586,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Bautista, Austin",21152,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Bleier, Christoph",24911,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Blomme, Adam",23784,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Boandl, Lukas",26456,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Broomhead, Jonothan",30210,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Buchanan, Jack",27379,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Catlin, John",18524,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Charmasson, Clement",22220,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Clements, Todd",22608,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Da Costa Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Dantorp, Jens",14018,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"De Herrypon, Tom",35337,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Debove , Quentin",25325,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Del Rey, Alejandro",22259,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Elvira Mijares, Ignacio",12988,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Ennsmann, David",26457,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Follet-Smith, Benjamin",15211,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Gavins, Daniel",18241,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Green, Gavin",12530,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Guerrier, Julien",10201,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Helligkilde, Marcus",20190,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Hofmann, Tim",29481,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Jamieson, Scott",11397,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Jarvis, Casey",26947,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Kaewkanjana, Sadom",19844,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Kinhult, Marcus",18514,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Ko, Jeong Weon",26213,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Kobori, Kazuma",24369,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Kopp, Alexander",26935,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Langfors, Per",20414,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lee, Junghwan",13498,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lemke, Niklas",10418,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lindberg, Mikael",20084,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lombard, Zander",16897,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Lotschak, Jakob",27732,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Manassero, Matteo",11460,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Migliozzi, Guido",17357,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Nemecz, Lukas",13089,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Paul, Yannik",19898,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Pepperell, Eddie",15113,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Popert, Kipp",30568,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Regner , Niklas",21674,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Sarkozi, Richard",30993,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Schmidt, Ben",27258,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Schott, Freddy",27588,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Schwab, Matthias",15016,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Schweighofer, Florian",27728,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Scrivener, Jason",12734,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Siem, Marcel",6950,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Syme, Connor",22089,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Tarren, Callum",20519,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Von Dellingshausen, Nicolai",22231,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Winther, Jeff",15680,WD,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Wu, Ashun",11763,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,Austrian Alpine Open presented by Kitzbühel Tirol,2026120,2026-05-31,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
