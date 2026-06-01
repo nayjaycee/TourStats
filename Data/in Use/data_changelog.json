@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-01 13:14:09 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,097 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-06-01 13:14:06 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-26 16:21:36 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Charles Schwab Challenge",
-      "details": "Field updated: 21"
-    },
-    {
-      "timestamp": "2026-05-26 11:56:01 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
       "details": "Field updated: 21"
