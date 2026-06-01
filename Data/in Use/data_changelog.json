@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-01 13:39:38 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 16,879 rows across 47 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-06-01 13:39:30 ET",
       "type": "field_odds_refresh",
       "event_name": "the Memorial Tournament presented by Workday",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-29 22:30:10 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 131 players"
-    },
-    {
-      "timestamp": "2026-05-29 22:00:06 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 131 players"
