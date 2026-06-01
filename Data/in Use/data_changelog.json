@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-01 07:48:10 ET",
+      "type": "field_odds_refresh",
+      "event_name": "the Memorial Tournament presented by Workday",
+      "details": "Field updated: 23"
+    },
+    {
       "timestamp": "2026-05-31 15:26:43 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,094 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-05-25 16:56:42 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 15,414 rows across 43 events. Finishes rebuilt."
     }
   ]
 }
