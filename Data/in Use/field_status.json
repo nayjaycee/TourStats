@@ -42,7 +42,6 @@
       "Kim, Michael",
       "Kim, Si Woo",
       "Kitayama, Kurt",
-      "Knapp, Jake",
       "Kuchar, Matt",
       "Lee, Min Woo",
       "Lowry, Shane",
@@ -75,10 +74,21 @@
       "Thomas, Justin",
       "Vegas, Jhonattan",
       "Woodland, Gary",
+      "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-06-02 06:47:26 ET",
+    "last_updated": "2026-06-02 12:45:49 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-02 12:45:49 ET",
+        "added": [
+          "Yellamaraju, Sudarshan"
+        ],
+        "withdrawn": [
+          "Knapp, Jake"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-06-02 06:47:26 ET",
         "added": [],
@@ -263,12 +273,6 @@
       },
       {
         "timestamp": "2026-05-31 04:55:13 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-30 15:27:15 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
