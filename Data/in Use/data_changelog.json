@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-03 07:11:54 ET",
+      "type": "field_odds_refresh",
+      "event_name": "the Memorial Tournament presented by Workday",
+      "details": "Field updated: 23"
+    },
+    {
       "timestamp": "2026-06-02 16:58:08 ET",
       "type": "field_odds_refresh",
       "event_name": "the Memorial Tournament presented by Workday",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-29 06:06:24 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Charles Schwab Challenge",
-      "details": "Field updated: 21"
-    },
-    {
-      "timestamp": "2026-05-28 16:32:06 ET",
       "type": "field_odds_refresh",
       "event_name": "Charles Schwab Challenge",
       "details": "Field updated: 21"
