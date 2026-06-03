@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-06-02 18:05:37 ET",
+    "last_updated": "2026-06-03 18:00:05 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-03 18:00:05 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-02 18:05:37 ET",
         "added": [
@@ -274,12 +280,6 @@
           "Cauley, Bud"
         ],
         "note": "+1 / -1"
-      },
-      {
-        "timestamp": "2026-05-25 18:05:10 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
