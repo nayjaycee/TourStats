@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-04 06:00:19 ET",
+      "type": "field_odds_refresh",
+      "event_name": "the Memorial Tournament presented by Workday",
+      "details": "Field updated: 23"
+    },
+    {
       "timestamp": "2026-06-03 18:00:05 ET",
       "type": "field_odds_refresh",
       "event_name": "the Memorial Tournament presented by Workday",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-05-30 20:00:13 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 75 players"
-    },
-    {
-      "timestamp": "2026-05-30 19:00:29 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 75 players"
