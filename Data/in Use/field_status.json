@@ -77,8 +77,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-06-05 11:17:42 ET",
+    "last_updated": "2026-06-05 16:03:00 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-05 16:03:00 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-05 11:17:42 ET",
         "added": [],
@@ -132,16 +138,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-02 12:45:49 ET",
-        "added": [
-          "Yellamaraju, Sudarshan"
-        ],
-        "withdrawn": [
-          "Knapp, Jake"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
