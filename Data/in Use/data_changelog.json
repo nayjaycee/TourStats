@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-07 12:06:28 ET",
+      "type": "field_odds_refresh",
+      "event_name": "the Memorial Tournament presented by Workday",
+      "details": "Field updated: 23, 32"
+    },
+    {
+      "timestamp": "2026-06-07 12:06:29 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 53 players"
+    },
+    {
+      "timestamp": "2026-06-06 19:01:28 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 53 players"
+    },
+    {
+      "timestamp": "2026-06-06 18:31:30 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-06-06 18:00:33 ET",
       "type": "field_odds_refresh",
       "event_name": "the Memorial Tournament presented by Workday",
@@ -95,30 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-04 23:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-04 22:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-04 21:30:31 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-04 18:04:24 ET",
-      "type": "field_odds_refresh",
-      "event_name": "the Memorial Tournament presented by Workday",
-      "details": "Field updated: 23"
     }
   ]
 }
