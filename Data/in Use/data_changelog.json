@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-08 17:41:40 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,094 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-06-08 17:41:39 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-05 11:17:42 ET",
-      "type": "field_odds_refresh",
-      "event_name": "the Memorial Tournament presented by Workday",
-      "details": "Field updated: 23"
-    },
-    {
-      "timestamp": "2026-06-05 06:03:22 ET",
       "type": "field_odds_refresh",
       "event_name": "the Memorial Tournament presented by Workday",
       "details": "Field updated: 23"
