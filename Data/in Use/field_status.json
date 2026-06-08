@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 32,
     "event_name": "RBC Canadian Open",
-    "player_count": 145,
+    "player_count": 144,
     "player_names": [
       "Anderson, Matthew",
       "Bauchou, Zach",
@@ -80,6 +80,7 @@
       "Lowry, Shane",
       "MacIntyre, Robert",
       "Malnati, Peter",
+      "Martin, Ben",
       "Matthews, Justin",
       "McCarthy, Denny",
       "McCulloch, Ashton",
@@ -101,7 +102,6 @@
       "Pavon, Matthieu",
       "Pendrith, Taylor",
       "Phillips, Chandler",
-      "Poston, J.T.",
       "Potgieter, Aldrich",
       "Power, Seamus",
       "Putnam, Andrew",
@@ -119,7 +119,6 @@
       "Schmid, Matti",
       "Shipley, Neal",
       "Sihota, Jeevan",
-      "Silverman, Ben",
       "Sloan, Roger",
       "Smith, Jordan",
       "Smotherman, Austin",
@@ -150,8 +149,19 @@
       "Yu, Kevin",
       "Zhao, Eric"
     ],
-    "last_updated": "2026-06-08 07:09:28 ET",
+    "last_updated": "2026-06-08 11:24:45 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-08 11:24:45 ET",
+        "added": [
+          "Martin, Ben"
+        ],
+        "withdrawn": [
+          "Poston, J.T.",
+          "Silverman, Ben"
+        ],
+        "note": "+1 / -2"
+      },
       {
         "timestamp": "2026-06-08 07:09:28 ET",
         "added": [
@@ -357,12 +367,6 @@
       },
       {
         "timestamp": "2026-06-05 11:17:42 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-05 06:03:22 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
