@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-08 12:06:29 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Canadian Open",
+      "details": "Field updated: 32"
+    },
+    {
       "timestamp": "2026-06-08 11:25:00 ET",
       "type": "approach_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-03 07:11:54 ET",
-      "type": "field_odds_refresh",
-      "event_name": "the Memorial Tournament presented by Workday",
-      "details": "Field updated: 23"
-    },
-    {
-      "timestamp": "2026-06-02 16:58:08 ET",
       "type": "field_odds_refresh",
       "event_name": "the Memorial Tournament presented by Workday",
       "details": "Field updated: 23"
