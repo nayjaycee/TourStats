@@ -152,8 +152,14 @@
       "Yu, Kevin",
       "Zhao, Eric"
     ],
-    "last_updated": "2026-06-09 06:00:09 ET",
+    "last_updated": "2026-06-09 18:00:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-09 18:00:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-09 06:00:09 ET",
         "added": [],
@@ -367,23 +373,13 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-02 18:05:37 ET",
-        "added": [
-          "Yellamaraju, Sudarshan"
-        ],
-        "withdrawn": [
-          "Knapp, Jake"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
   "next_week": {
     "event_id": 26,
     "event_name": "U.S. Open",
-    "player_count": 148,
+    "player_count": 150,
     "player_names": [
       "Aberg, Ludvig",
       "Arni Sveinsson, Gunnlaugur",
@@ -398,6 +394,7 @@
       "Cantlay, Patrick",
       "Celli, Filippo",
       "Clark, Wyndham",
+      "Coleman, Hamilton",
       "Conners, Corey",
       "Coody, Pierceson",
       "Coussaud, Ugo",
@@ -487,6 +484,7 @@
       "Puebla, Giuseppe",
       "Puig, David",
       "Pulcini, Mateo",
+      "Putnam, Andrew",
       "Rahm, Jon",
       "Rai, Aaron",
       "Reed, Patrick",
@@ -534,8 +532,17 @@
       "Young, Cameron",
       "Yuan, Carl"
     ],
-    "last_updated": "2026-06-09 06:00:09 ET",
+    "last_updated": "2026-06-09 18:00:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-09 18:00:03 ET",
+        "added": [
+          "Coleman, Hamilton",
+          "Putnam, Andrew"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-06-09 06:00:09 ET",
         "added": [
@@ -1093,90 +1100,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-05-22 20:34:24 ET",
-        "added": [
-          "Aberg, Ludvig",
-          "Bhatia, Akshay",
-          "Bradley, Keegan",
-          "Campbell, Brian",
-          "Castillo, Ricky",
-          "Cauley, Bud",
-          "Echavarria, Nico",
-          "Fowler, Rickie",
-          "Gerard, Ryan",
-          "Glover, Lucas",
-          "Griffin, Ben",
-          "Hall, Harry",
-          "Hansson, Albert",
-          "Harman, Brian",
-          "Henley, Russell",
-          "Homa, Max",
-          "Howell, Mason",
-          "Kisner, Kevin",
-          "Lipsky, David",
-          "MacIntyre, Robert",
-          "Matsuyama, Hideki",
-          "McCarthy, Denny",
-          "McCarty, Matt",
-          "Novak, Andrew",
-          "Poston, J.T.",
-          "Smalley, Alex",
-          "Smotherman, Austin",
-          "Snedeker, Brandt",
-          "Spaun, J.J.",
-          "Stevens, Sam",
-          "Theegala, Sahith",
-          "Thomas, Justin",
-          "Woodland, Gary",
-          "Yellamaraju, Sudarshan"
-        ],
-        "withdrawn": [
-          "Bae, Yongjun",
-          "Brehm, Ryan",
-          "Brown, Blades",
-          "Buchanan, Jackson",
-          "Campos, Rafael",
-          "Duncan, Tyler",
-          "Fishburn, Patrick",
-          "Garnett, Brice",
-          "Griffin, Lanto",
-          "Hadwin, Adam",
-          "Hahn, James",
-          "Headley, Adam",
-          "Higgs, Harry",
-          "Hojgaard, Nicolai",
-          "Kim, Chan",
-          "Kim, Si Woo",
-          "Kohles, Ben",
-          "Laird, Martin",
-          "Lee, K.H.",
-          "Lower, Justin",
-          "Malnati, Peter",
-          "Merritt, Troy",
-          "Montgomery, Taylor",
-          "Norlander, Henrik",
-          "Paul, Jeremy",
-          "Pendrith, Taylor",
-          "Penge, Marco",
-          "Potgieter, Aldrich",
-          "Rai, Aaron",
-          "Scheffler, Scottie",
-          "Schmid, Matti",
-          "Sides, William",
-          "Silverman, Ben",
-          "Spieth, Jordan",
-          "Stanger, Jimmy",
-          "Stout, Preston",
-          "Streb, Robert",
-          "Svensson, Jesper",
-          "Vegas, Jhonattan",
-          "Willett, Danny",
-          "Wise, Aaron",
-          "Young, Carson"
-        ],
-        "note": "+34 / -42"
       }
     ]
   }
