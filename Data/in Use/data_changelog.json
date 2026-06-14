@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-14 10:18:45 ET",
+      "type": "field_odds_refresh",
+      "event_name": "RBC Canadian Open",
+      "details": "Field updated: 32, 26"
+    },
+    {
       "timestamp": "2026-06-14 05:47:24 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Canadian Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-08 17:41:29 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Canadian Open",
-      "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-08 16:26:39 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Canadian Open",
       "details": "Field updated: 32, 26"
