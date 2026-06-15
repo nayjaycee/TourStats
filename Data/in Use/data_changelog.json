@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-15 18:09:47 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 18,606 rows across 52 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-06-15 18:09:36 ET",
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-10 16:39:34 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Canadian Open",
-      "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-10 11:53:35 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Canadian Open",
       "details": "Field updated: 32, 26"
