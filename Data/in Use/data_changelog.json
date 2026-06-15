@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-15 12:53:19 ET",
+      "type": "field_odds_refresh",
+      "event_name": "U.S. Open",
+      "details": "Field updated: 26"
+    },
+    {
       "timestamp": "2026-06-15 08:31:01 ET",
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "RBC Canadian Open",
       "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-08 17:41:40 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,094 rows (l12/l24/ytd)"
     }
   ]
 }
