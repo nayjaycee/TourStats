@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-18 12:00:04 ET",
+      "type": "field_odds_refresh",
+      "event_name": "U.S. Open",
+      "details": "Field updated: 26"
+    },
+    {
+      "timestamp": "2026-06-18 12:00:09 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-06-18 11:30:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
+      "timestamp": "2026-06-18 11:00:09 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
       "timestamp": "2026-06-17 18:04:18 ET",
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
@@ -92,30 +116,6 @@
     },
     {
       "timestamp": "2026-06-13 05:26:20 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Canadian Open",
-      "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-12 16:19:52 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Canadian Open",
-      "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-12 11:30:13 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Canadian Open",
-      "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-12 06:24:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "RBC Canadian Open",
-      "details": "Field updated: 32, 26"
-    },
-    {
-      "timestamp": "2026-06-11 16:29:23 ET",
       "type": "field_odds_refresh",
       "event_name": "RBC Canadian Open",
       "details": "Field updated: 32, 26"
