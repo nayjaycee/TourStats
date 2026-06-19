@@ -161,8 +161,14 @@
       "Young, Cameron",
       "Yuan, Carl"
     ],
-    "last_updated": "2026-06-19 06:47:53 ET",
+    "last_updated": "2026-06-19 11:33:43 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-19 11:33:43 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-19 06:47:53 ET",
         "added": [],
@@ -213,12 +219,6 @@
       },
       {
         "timestamp": "2026-06-16 13:08:06 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-16 07:24:23 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
