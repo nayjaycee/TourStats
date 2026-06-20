@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-20 15:46:42 ET",
+      "type": "field_odds_refresh",
+      "event_name": "U.S. Open",
+      "details": "Field updated: 26, 34"
+    },
+    {
       "timestamp": "2026-06-20 10:18:31 ET",
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,107 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-06-15 12:53:31 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 18,606 rows across 52 events. Finishes rebuilt."
     }
   ]
 }
