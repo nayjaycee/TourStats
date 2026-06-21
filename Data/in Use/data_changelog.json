@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-21 12:00:12 ET",
+      "type": "field_odds_refresh",
+      "event_name": "U.S. Open",
+      "details": "Field updated: 26, 34"
+    },
+    {
+      "timestamp": "2026-06-21 12:00:14 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-06-21 11:30:10 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-06-21 11:00:20 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-06-21 06:00:02 ET",
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
@@ -95,30 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-20 12:32:20 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-20 11:30:25 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-20 11:00:12 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-20 06:00:11 ET",
-      "type": "field_odds_refresh",
-      "event_name": "U.S. Open",
-      "details": "Field updated: 26, 34"
     }
   ]
 }
