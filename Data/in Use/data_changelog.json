@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-22 19:44:10 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 19,060 rows across 53 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-06-22 18:00:03 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-20 23:00:12 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-20 22:30:11 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
