@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 34,
     "event_name": "Travelers Championship",
-    "player_count": 71,
+    "player_count": 72,
     "player_names": [
       "Aberg, Ludvig",
       "Berger, Daniel",
@@ -51,6 +51,7 @@
       "McCarty, Matt",
       "McNealy, Maverick",
       "Meissner, Mac",
+      "Mitchell, Keith",
       "Morikawa, Collin",
       "Noren, Alex",
       "Novak, Andrew",
@@ -76,8 +77,16 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-06-22 12:00:02 ET",
+    "last_updated": "2026-06-22 18:00:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-22 18:00:03 ET",
+        "added": [
+          "Mitchell, Keith"
+        ],
+        "withdrawn": [],
+        "note": "+1 / -0"
+      },
       {
         "timestamp": "2026-06-22 12:00:02 ET",
         "added": [
@@ -237,12 +246,6 @@
       },
       {
         "timestamp": "2026-06-19 06:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-18 18:00:03 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"

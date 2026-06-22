@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-22 18:00:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34"
+    },
+    {
       "timestamp": "2026-06-22 12:00:02 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-20 22:30:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-20 21:30:12 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
