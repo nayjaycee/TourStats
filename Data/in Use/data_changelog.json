@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-23 18:09:49 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34"
+    },
+    {
       "timestamp": "2026-06-22 19:44:10 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
       "details": "Field updated: 26, 34"
-    },
-    {
-      "timestamp": "2026-06-20 23:00:12 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
     }
   ]
 }
