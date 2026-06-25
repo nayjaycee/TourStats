@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-25 16:10:42 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34"
+    },
+    {
       "timestamp": "2026-06-25 10:44:35 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-21 05:58:53 ET",
-      "type": "field_odds_refresh",
-      "event_name": "U.S. Open",
-      "details": "Field updated: 26, 34"
-    },
-    {
-      "timestamp": "2026-06-20 15:46:42 ET",
       "type": "field_odds_refresh",
       "event_name": "U.S. Open",
       "details": "Field updated: 26, 34"
