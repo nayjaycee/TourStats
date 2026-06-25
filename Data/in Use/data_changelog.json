@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-25 12:00:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34"
+    },
+    {
+      "timestamp": "2026-06-25 12:00:03 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-06-25 11:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-06-25 11:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-06-24 18:02:46 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -92,30 +116,6 @@
     },
     {
       "timestamp": "2026-06-21 13:00:14 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-21 12:30:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-21 12:00:12 ET",
-      "type": "field_odds_refresh",
-      "event_name": "U.S. Open",
-      "details": "Field updated: 26, 34"
-    },
-    {
-      "timestamp": "2026-06-21 12:00:14 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-21 11:30:10 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
