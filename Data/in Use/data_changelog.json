@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-26 12:00:11 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34"
+    },
+    {
+      "timestamp": "2026-06-26 12:00:12 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-06-26 11:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
+      "timestamp": "2026-06-26 11:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 72 players"
+    },
+    {
       "timestamp": "2026-06-26 06:00:14 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -92,30 +116,6 @@
     },
     {
       "timestamp": "2026-06-25 17:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-25 16:30:03 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-25 16:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-25 15:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-25 14:30:03 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"

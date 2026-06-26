@@ -77,8 +77,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-06-26 06:00:14 ET",
+    "last_updated": "2026-06-26 12:00:11 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-26 12:00:11 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-26 06:00:14 ET",
         "added": [],
@@ -240,12 +246,6 @@
       },
       {
         "timestamp": "2026-06-21 18:00:11 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-21 12:00:12 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
