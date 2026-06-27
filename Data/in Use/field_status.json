@@ -77,8 +77,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-06-27 12:00:13 ET",
+    "last_updated": "2026-06-27 18:00:11 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-27 18:00:11 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-27 12:00:13 ET",
         "added": [],
@@ -132,14 +138,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-22 18:00:03 ET",
-        "added": [
-          "Mitchell, Keith"
-        ],
-        "withdrawn": [],
-        "note": "+1 / -0"
       }
     ]
   },
@@ -289,8 +287,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-27 12:00:13 ET",
+    "last_updated": "2026-06-27 18:00:11 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-27 18:00:11 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-27 12:00:13 ET",
         "added": [
@@ -611,12 +615,6 @@
       },
       {
         "timestamp": "2026-06-14 05:47:24 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-13 15:45:19 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
