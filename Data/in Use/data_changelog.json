@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-27 09:56:32 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34, 30"
+    },
+    {
       "timestamp": "2026-06-27 04:44:43 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -113,12 +119,6 @@
       "type": "rounds_refresh",
       "event_name": "",
       "details": "Rounds refreshed \u2014 19,060 rows across 53 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-06-22 12:25:10 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Travelers Championship",
-      "details": "Field updated: 34"
     }
   ]
 }
