@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-28 10:02:49 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34, 30"
+    },
+    {
       "timestamp": "2026-06-28 05:20:45 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-22 17:54:50 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Travelers Championship",
-      "details": "Field updated: 34"
-    },
-    {
-      "timestamp": "2026-06-22 16:56:32 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
       "details": "Field updated: 34"
