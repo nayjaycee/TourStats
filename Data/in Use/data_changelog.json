@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-28 05:20:45 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Travelers Championship",
+      "details": "Field updated: 34, 30"
+    },
+    {
       "timestamp": "2026-06-27 15:38:05 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
       "details": "Field updated: 34"
-    },
-    {
-      "timestamp": "2026-06-22 12:25:26 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,138 rows (l12/l24/ytd)"
     }
   ]
 }
