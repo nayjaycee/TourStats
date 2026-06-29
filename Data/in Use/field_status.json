@@ -17,6 +17,7 @@
       "Byrd, Jonathan",
       "Campbell, Brian",
       "Campos, Rafael",
+      "Champ, Cameron",
       "Chatfield, Davis",
       "Clanton, Luke",
       "Cole, Eric",
@@ -27,7 +28,6 @@
       "Dumont De Chassart, Adrien",
       "Duncan, Tyler",
       "Dunlap, Nick",
-      "Echavarria, Nico",
       "Eckroat, Austin",
       "Ewart, A.J.",
       "Finau, Tony",
@@ -145,8 +145,18 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-29 11:58:16 ET",
+    "last_updated": "2026-06-29 14:02:54 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-29 14:02:54 ET",
+        "added": [
+          "Champ, Cameron"
+        ],
+        "withdrawn": [
+          "Echavarria, Nico"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-06-29 11:58:16 ET",
         "added": [],
@@ -361,12 +371,6 @@
       },
       {
         "timestamp": "2026-06-27 04:44:43 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-26 15:59:37 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
