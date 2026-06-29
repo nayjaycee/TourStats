@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-29 11:26:58 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 19,060 rows across 53 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-06-29 11:26:47 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-23 11:14:47 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Travelers Championship",
-      "details": "Field updated: 34"
-    },
-    {
-      "timestamp": "2026-06-23 05:55:14 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
       "details": "Field updated: 34"
