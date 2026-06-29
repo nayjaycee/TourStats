@@ -145,8 +145,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-29 14:02:54 ET",
+    "last_updated": "2026-06-29 16:08:01 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-29 16:08:01 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-29 14:02:54 ET",
         "added": [
@@ -365,12 +371,6 @@
       },
       {
         "timestamp": "2026-06-27 09:56:32 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-27 04:44:43 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
