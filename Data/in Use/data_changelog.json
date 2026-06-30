@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-06-29 23:27:34 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 19,809 rows across 55 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-06-29 18:01:21 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-28 11:00:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 72 players"
-    },
-    {
-      "timestamp": "2026-06-27 22:11:45 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 72 players"
