@@ -2,8 +2,9 @@
   "this_week": {
     "event_id": 30,
     "event_name": "John Deere Classic",
-    "player_count": 140,
+    "player_count": 144,
     "player_names": [
+      "Adler, Patrick",
       "Bauchou, Zach",
       "Berger, Daniel",
       "Bezuidenhout, Christiaan",
@@ -30,6 +31,7 @@
       "Dunlap, Nick",
       "Eckroat, Austin",
       "Ewart, A.J.",
+      "Feagles, Michael",
       "Finau, Tony",
       "Fishburn, Patrick",
       "Fisher, Darin",
@@ -46,6 +48,7 @@
       "Griffin, Ben",
       "Griffin, Lanto",
       "Grillo, Emiliano",
+      "Gutschewski, Luke",
       "Hadwin, Adam",
       "Hardy, Nick",
       "Higgo, Garrick",
@@ -94,6 +97,7 @@
       "Nakajima, Keita",
       "Noh, S.Y.",
       "Novak, Andrew",
+      "Nunez, Augusto",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
       "Paul, Jeremy",
@@ -145,8 +149,19 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-29 17:16:01 ET",
+    "last_updated": "2026-06-30 05:52:37 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-30 05:52:37 ET",
+        "added": [
+          "Adler, Patrick",
+          "Feagles, Michael",
+          "Gutschewski, Luke",
+          "Nunez, Augusto"
+        ],
+        "withdrawn": [],
+        "note": "+4 / -0"
+      },
       {
         "timestamp": "2026-06-29 17:16:01 ET",
         "added": [],
@@ -368,12 +383,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-27 15:38:05 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -536,8 +545,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-29 17:16:01 ET",
+    "last_updated": "2026-06-30 05:52:37 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-30 05:52:37 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-29 17:16:01 ET",
         "added": [
@@ -978,12 +993,6 @@
       },
       {
         "timestamp": "2026-06-21 15:52:43 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-21 10:24:44 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
