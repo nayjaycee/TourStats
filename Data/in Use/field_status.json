@@ -149,8 +149,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-30 05:52:37 ET",
+    "last_updated": "2026-06-30 10:32:29 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-30 10:32:29 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-30 05:52:37 ET",
         "added": [
@@ -377,12 +383,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-28 05:20:45 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -545,8 +545,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-06-30 05:52:37 ET",
+    "last_updated": "2026-06-30 10:32:29 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-06-30 10:32:29 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-06-30 05:52:37 ET",
         "added": [],
@@ -990,12 +996,6 @@
           "Young, Cameron"
         ],
         "note": "+116 / -47"
-      },
-      {
-        "timestamp": "2026-06-21 15:52:43 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   }
