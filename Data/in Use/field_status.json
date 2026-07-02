@@ -23,6 +23,7 @@
       "Clanton, Luke",
       "Cole, Eric",
       "Coody, Pierceson",
+      "Cook, Austin",
       "Crowe, Trace",
       "Dahmen, Joel",
       "Dou, Zecheng",
@@ -112,7 +113,6 @@
       "Putnam, Andrew",
       "Ramey, Chad",
       "Riley, Davis",
-      "Rodgers, Patrick",
       "Roy, Kevin",
       "Rozo, Marcelo",
       "Sargent, Gordon",
@@ -149,8 +149,18 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-01 18:00:12 ET",
+    "last_updated": "2026-07-02 12:16:50 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-02 12:16:50 ET",
+        "added": [
+          "Cook, Austin"
+        ],
+        "withdrawn": [
+          "Rodgers, Patrick"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-01 18:00:12 ET",
         "added": [],
@@ -378,12 +388,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-26 06:00:14 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -546,8 +550,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-01 18:00:12 ET",
+    "last_updated": "2026-07-02 12:16:50 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-02 12:16:50 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-01 18:00:12 ET",
         "added": [],
@@ -988,12 +998,6 @@
       },
       {
         "timestamp": "2026-06-21 12:00:12 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-21 06:00:02 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
