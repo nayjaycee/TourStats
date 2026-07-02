@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-02 10:17:48 ET",
+      "type": "field_odds_refresh",
+      "event_name": "John Deere Classic",
+      "details": "Field updated: 30, 541"
+    },
+    {
       "timestamp": "2026-07-02 05:24:19 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-06-28 10:02:49 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Travelers Championship",
-      "details": "Field updated: 34, 30"
-    },
-    {
-      "timestamp": "2026-06-28 05:20:45 ET",
       "type": "field_odds_refresh",
       "event_name": "Travelers Championship",
       "details": "Field updated: 34, 30"
