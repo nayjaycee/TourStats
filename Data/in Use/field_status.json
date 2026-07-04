@@ -149,8 +149,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-03 15:38:43 ET",
+    "last_updated": "2026-07-04 04:46:05 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-04 04:46:05 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-03 15:38:43 ET",
         "added": [],
@@ -208,27 +214,19 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-30 16:06:49 ET",
-        "added": [
-          "Gordon, Will"
-        ],
-        "withdrawn": [
-          "Vegas, Jhonattan"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
   "next_week": {
     "event_id": 541,
     "event_name": "Genesis Scottish Open",
-    "player_count": 153,
+    "player_count": 154,
     "player_names": [
       "Aberg, Ludvig",
       "Ayora, Angel",
+      "Bauchou, Zach",
       "Bradbury, Dan",
+      "Brennan, Michael",
       "Brown, Dan",
       "Campbell, Brian",
       "Canter, Laurie",
@@ -244,9 +242,9 @@
       "Couvra, Martin",
       "Da Costa Rodrigues, Daniel",
       "Davis, Cam",
-      "Day, Jason",
       "Del Rey, Alejandro",
       "Du Plessis, Hennie",
+      "Dumont De Chassart, Adrien",
       "Echavarria, Nico",
       "Elvira Mijares, Ignacio",
       "English, Harris",
@@ -259,10 +257,9 @@
       "Fox, Ryan",
       "Frittelli, Dylan",
       "Gerard, Ryan",
+      "Ghim, Doug",
       "Gotterup, Chris",
       "Greyserman, Max",
-      "Griffin, Ben",
-      "Grillo, Emiliano",
       "Guerrier, Julien",
       "Gumberg, Jordan",
       "Hall, Harry",
@@ -279,14 +276,14 @@
       "Horschel, Billy",
       "Hoshino, Rikuya",
       "Hovland, Viktor",
-      "Hughes, Mackenzie",
+      "Hubbard, Mark",
       "Im, Sungjae",
-      "Jaeger, Stephan",
       "Jamieson, Scott",
       "Jarvis, Casey",
       "Johnston, Ryggs",
       "Kaneko, Kota",
       "Katsuragawa, Yuto",
+      "Keefer, Johnny",
       "Kim, Baekjun",
       "Kim, Michael",
       "Kim, Si Woo",
@@ -305,6 +302,7 @@
       "Li, Haotong",
       "Lindberg, Mikael",
       "Lowry, Shane",
+      "Luiten, Joost",
       "MacIntyre, Robert",
       "Manassero, Matteo",
       "Mansell, Richard",
@@ -328,7 +326,7 @@
       "Olesen, Thorbjorn",
       "Otaegui, Adrian",
       "Parry, John",
-      "Pendrith, Taylor",
+      "Pavon, Matthieu",
       "Penge, Marco",
       "Perez, Victor",
       "Potgieter, Aldrich",
@@ -341,7 +339,7 @@
       "Reed, Patrick",
       "Reitan, Kristoffer",
       "Riley, Davis",
-      "Rodgers, Patrick",
+      "Roy, Kevin",
       "Rozner, Antoine",
       "Saddier, Adrien",
       "Schaper, Jayden",
@@ -354,7 +352,6 @@
       "Smalley, Alex",
       "Smith, Jordan",
       "Smotherman, Austin",
-      "Smylie, Elvis",
       "Snedeker, Brandt",
       "Spaun, J.J.",
       "Sterne, Richard",
@@ -371,17 +368,44 @@
       "Van Driel, Darius",
       "Van Rooyen, Erik",
       "Veerman, Johannes",
-      "Vegas, Jhonattan",
       "Von Dellingshausen, Nicolai",
       "Wallace, Matt",
       "Waring, Paul",
       "Wiesberger, Bernd",
+      "Willett, Danny",
       "Wu, Ashun",
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-03 15:38:43 ET",
+    "last_updated": "2026-07-04 04:46:05 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-04 04:46:05 ET",
+        "added": [
+          "Bauchou, Zach",
+          "Brennan, Michael",
+          "Dumont De Chassart, Adrien",
+          "Ghim, Doug",
+          "Hubbard, Mark",
+          "Keefer, Johnny",
+          "Luiten, Joost",
+          "Pavon, Matthieu",
+          "Roy, Kevin",
+          "Willett, Danny"
+        ],
+        "withdrawn": [
+          "Day, Jason",
+          "Griffin, Ben",
+          "Grillo, Emiliano",
+          "Hughes, Mackenzie",
+          "Jaeger, Stephan",
+          "Pendrith, Taylor",
+          "Rodgers, Patrick",
+          "Smylie, Elvis",
+          "Vegas, Jhonattan"
+        ],
+        "note": "+10 / -9"
+      },
       {
         "timestamp": "2026-07-03 15:38:43 ET",
         "added": [],
@@ -432,12 +456,6 @@
       },
       {
         "timestamp": "2026-07-01 06:01:17 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-30 16:06:49 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
