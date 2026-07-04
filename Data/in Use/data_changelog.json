@@ -1,6 +1,96 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-04 18:06:03 ET",
+      "type": "field_odds_refresh",
+      "event_name": "John Deere Classic",
+      "details": "Field updated: 30, 541"
+    },
+    {
+      "timestamp": "2026-07-04 18:06:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 17:32:14 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 17:00:08 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 16:05:52 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 15:31:37 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 15:03:59 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 14:32:41 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 14:04:45 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 13:00:08 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-04 12:32:38 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-03 21:30:34 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-03 20:31:46 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-03 20:25:55 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-03 19:01:19 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
       "timestamp": "2026-07-03 18:03:21 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
@@ -29,96 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-03 11:03:34 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-02 22:30:57 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-02 21:30:43 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-02 17:06:25 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
-    },
-    {
-      "timestamp": "2026-07-02 15:30:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
-    },
-    {
-      "timestamp": "2026-07-02 15:00:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
-    },
-    {
-      "timestamp": "2026-07-02 14:32:02 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
-    },
-    {
-      "timestamp": "2026-07-02 13:03:27 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
-    },
-    {
-      "timestamp": "2026-07-02 12:16:50 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-07-02 12:16:50 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
-    },
-    {
-      "timestamp": "2026-07-01 18:00:12 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-07-01 12:00:04 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-06-29 23:27:34 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 19,809 rows across 55 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-06-29 18:01:21 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-06-29 06:00:12 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Travelers Championship",
-      "details": "Field updated: 34, 30"
     }
   ]
 }

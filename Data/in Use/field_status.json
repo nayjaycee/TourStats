@@ -149,8 +149,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-03 18:03:21 ET",
+    "last_updated": "2026-07-04 18:06:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-04 18:06:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-03 18:03:21 ET",
         "added": [],
@@ -382,12 +388,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-06-26 18:00:17 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -398,7 +398,9 @@
     "player_names": [
       "Aberg, Ludvig",
       "Ayora, Angel",
+      "Bauchou, Zach",
       "Bradbury, Dan",
+      "Brennan, Michael",
       "Brown, Dan",
       "Campbell, Brian",
       "Canter, Laurie",
@@ -414,7 +416,6 @@
       "Couvra, Martin",
       "Da Costa Rodrigues, Daniel",
       "Davis, Cam",
-      "Day, Jason",
       "Del Rey, Alejandro",
       "Du Plessis, Hennie",
       "Echavarria, Nico",
@@ -429,10 +430,9 @@
       "Fox, Ryan",
       "Frittelli, Dylan",
       "Gerard, Ryan",
+      "Ghim, Doug",
       "Gotterup, Chris",
       "Greyserman, Max",
-      "Griffin, Ben",
-      "Grillo, Emiliano",
       "Guerrier, Julien",
       "Gumberg, Jordan",
       "Hall, Harry",
@@ -449,14 +449,14 @@
       "Horschel, Billy",
       "Hoshino, Rikuya",
       "Hovland, Viktor",
-      "Hughes, Mackenzie",
+      "Hubbard, Mark",
       "Im, Sungjae",
-      "Jaeger, Stephan",
       "Jamieson, Scott",
       "Jarvis, Casey",
       "Johnston, Ryggs",
       "Kaneko, Kota",
       "Katsuragawa, Yuto",
+      "Keefer, Johnny",
       "Kim, Baekjun",
       "Kim, Michael",
       "Kim, Si Woo",
@@ -464,7 +464,6 @@
       "Kirk, Chris",
       "Kitayama, Kurt",
       "Knapp, Jake",
-      "Koepka, Brooks",
       "Kruyswijk, Jacques",
       "LaCroix, Frederic",
       "Lagergren, Joakim",
@@ -475,18 +474,20 @@
       "Li, Haotong",
       "Lindberg, Mikael",
       "Lowry, Shane",
+      "Luiten, Joost",
       "MacIntyre, Robert",
       "Manassero, Matteo",
       "Mansell, Richard",
       "McCarty, Matt",
+      "McGreevy, Max",
       "McIlroy, Rory",
       "McKibbin, Tom",
       "Meissner, Mac",
       "Meronk, Adrian",
       "Migliozzi, Guido",
-      "Mitchell, Keith",
       "Molinari, Francesco",
       "Moore, Taylor",
+      "Mouw, William",
       "Naidoo, Dylan",
       "Nakajima, Keita",
       "Neergaard-Petersen, Rasmus",
@@ -498,7 +499,7 @@
       "Olesen, Thorbjorn",
       "Otaegui, Adrian",
       "Parry, John",
-      "Pendrith, Taylor",
+      "Pavon, Matthieu",
       "Penge, Marco",
       "Perez, Victor",
       "Potgieter, Aldrich",
@@ -511,7 +512,7 @@
       "Reed, Patrick",
       "Reitan, Kristoffer",
       "Riley, Davis",
-      "Rodgers, Patrick",
+      "Roy, Kevin",
       "Rozner, Antoine",
       "Saddier, Adrien",
       "Schaper, Jayden",
@@ -524,7 +525,6 @@
       "Smalley, Alex",
       "Smith, Jordan",
       "Smotherman, Austin",
-      "Smylie, Elvis",
       "Snedeker, Brandt",
       "Spaun, J.J.",
       "Sterne, Richard",
@@ -541,17 +541,47 @@
       "Van Driel, Darius",
       "Van Rooyen, Erik",
       "Veerman, Johannes",
-      "Vegas, Jhonattan",
       "Von Dellingshausen, Nicolai",
       "Wallace, Matt",
       "Waring, Paul",
       "Wiesberger, Bernd",
+      "Willett, Danny",
       "Wu, Ashun",
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-03 18:03:21 ET",
+    "last_updated": "2026-07-04 18:06:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-04 18:06:03 ET",
+        "added": [
+          "Bauchou, Zach",
+          "Brennan, Michael",
+          "Ghim, Doug",
+          "Hubbard, Mark",
+          "Keefer, Johnny",
+          "Luiten, Joost",
+          "McGreevy, Max",
+          "Mouw, William",
+          "Pavon, Matthieu",
+          "Roy, Kevin",
+          "Willett, Danny"
+        ],
+        "withdrawn": [
+          "Day, Jason",
+          "Griffin, Ben",
+          "Grillo, Emiliano",
+          "Hughes, Mackenzie",
+          "Jaeger, Stephan",
+          "Koepka, Brooks",
+          "Mitchell, Keith",
+          "Pendrith, Taylor",
+          "Rodgers, Patrick",
+          "Smylie, Elvis",
+          "Vegas, Jhonattan"
+        ],
+        "note": "+11 / -11"
+      },
       {
         "timestamp": "2026-07-03 18:03:21 ET",
         "added": [],
@@ -995,12 +1025,6 @@
           "Young, Cameron"
         ],
         "note": "+116 / -47"
-      },
-      {
-        "timestamp": "2026-06-21 18:00:11 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   }
