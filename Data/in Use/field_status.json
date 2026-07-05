@@ -149,8 +149,14 @@
       "Young, Carson",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-04 15:23:28 ET",
+    "last_updated": "2026-07-05 05:14:55 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-05 05:14:55 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-04 15:23:28 ET",
         "added": [],
@@ -208,19 +214,13 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-01 16:04:18 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
     "event_id": 541,
     "event_name": "Genesis Scottish Open",
-    "player_count": 154,
+    "player_count": 153,
     "player_names": [
       "Aberg, Ludvig",
       "Ayora, Angel",
@@ -244,7 +244,6 @@
       "Davis, Cam",
       "Del Rey, Alejandro",
       "Du Plessis, Hennie",
-      "Dumont De Chassart, Adrien",
       "Echavarria, Nico",
       "Elvira Mijares, Ignacio",
       "English, Harris",
@@ -291,7 +290,6 @@
       "Kirk, Chris",
       "Kitayama, Kurt",
       "Knapp, Jake",
-      "Koepka, Brooks",
       "Kruyswijk, Jacques",
       "LaCroix, Frederic",
       "Lagergren, Joakim",
@@ -307,14 +305,15 @@
       "Manassero, Matteo",
       "Mansell, Richard",
       "McCarty, Matt",
+      "McGreevy, Max",
       "McIlroy, Rory",
       "McKibbin, Tom",
       "Meissner, Mac",
       "Meronk, Adrian",
       "Migliozzi, Guido",
-      "Mitchell, Keith",
       "Molinari, Francesco",
       "Moore, Taylor",
+      "Mouw, William",
       "Naidoo, Dylan",
       "Nakajima, Keita",
       "Neergaard-Petersen, Rasmus",
@@ -377,8 +376,21 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-04 15:23:28 ET",
+    "last_updated": "2026-07-05 05:14:55 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-05 05:14:55 ET",
+        "added": [
+          "McGreevy, Max",
+          "Mouw, William"
+        ],
+        "withdrawn": [
+          "Dumont De Chassart, Adrien",
+          "Koepka, Brooks",
+          "Mitchell, Keith"
+        ],
+        "note": "+2 / -3"
+      },
       {
         "timestamp": "2026-07-04 15:23:28 ET",
         "added": [],
@@ -450,12 +462,6 @@
       },
       {
         "timestamp": "2026-07-02 05:24:19 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-01 16:04:18 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
