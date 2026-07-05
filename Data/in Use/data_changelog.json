@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-05 09:53:41 ET",
+      "type": "field_odds_refresh",
+      "event_name": "John Deere Classic",
+      "details": "Field updated: 30, 541"
+    },
+    {
       "timestamp": "2026-07-05 05:14:55 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
       "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-06-29 16:08:01 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30"
     }
   ]
 }
