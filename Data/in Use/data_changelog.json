@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-06 17:19:57 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,143 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-07-06 17:19:55 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-03 10:23:02 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-07-03 05:28:47 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
       "details": "Field updated: 30, 541"
