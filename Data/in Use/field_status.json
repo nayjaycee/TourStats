@@ -5,6 +5,7 @@
     "player_count": 156,
     "player_names": [
       "Aberg, Ludvig",
+      "Armitage, Marcus",
       "Ayora, Angel",
       "Bauchou, Zach",
       "Bradbury, Dan",
@@ -31,7 +32,6 @@
       "Elvira Mijares, Ignacio",
       "English, Harris",
       "Ferguson, Ewen",
-      "Finau, Tony",
       "Fitzpatrick, Alex",
       "Fitzpatrick, Matt",
       "Fleetwood, Tommy",
@@ -55,7 +55,6 @@
       "Hoffman, Charley",
       "Hojgaard, Nicolai",
       "Hojgaard, Rasmus",
-      "Hollick, Michael",
       "Horschel, Billy",
       "Hoshino, Rikuya",
       "Hovland, Viktor",
@@ -113,6 +112,7 @@
       "Pavon, Matthieu",
       "Penge, Marco",
       "Perez, Victor",
+      "Phillips, Chandler",
       "Potgieter, Aldrich",
       "Premlall, Yurav",
       "Puig, David",
@@ -161,8 +161,20 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-06 06:51:06 ET",
+    "last_updated": "2026-07-06 10:54:54 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-06 10:54:54 ET",
+        "added": [
+          "Armitage, Marcus",
+          "Phillips, Chandler"
+        ],
+        "withdrawn": [
+          "Finau, Tony",
+          "Hollick, Michael"
+        ],
+        "note": "+2 / -2"
+      },
       {
         "timestamp": "2026-07-06 06:51:06 ET",
         "added": [
@@ -448,19 +460,13 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-03 05:28:47 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
     "event_id": 100,
     "event_name": "The Open Championship",
-    "player_count": 140,
+    "player_count": 135,
     "player_names": [
       "Aberg, Ludvig",
       "Ayora, Angel",
@@ -486,13 +492,11 @@
       "Conners, Corey",
       "Couvra, Martin",
       "Daffue, MJ",
-      "Daly, John",
       "Day, Jason",
       "De Castro Piera, Alejandro",
       "DeChambeau, Bryson",
       "Docherty, Alistair",
       "Du Plessis, Hennie",
-      "Els, Ernie",
       "English, Harris",
       "Fitzpatrick, Alex",
       "Fitzpatrick, Matt",
@@ -505,7 +509,6 @@
       "Griffin, Ben",
       "Hall, Harry",
       "Ham, Jeong Woo",
-      "Hamilton, Todd",
       "Harman, Brian",
       "Harrington, Padraig",
       "Hatton, Tyrrell",
@@ -523,7 +526,6 @@
       "Im, Sungjae",
       "Jarvis, Casey",
       "John, Cameron",
-      "Johnson, Zach",
       "Jordan, Matthew",
       "Kaneko, Kota",
       "Kataoka, Naoyuki",
@@ -538,7 +540,6 @@
       "Laopakdee, Fifa",
       "Laporta, Francesco",
       "Lee, Min Woo",
-      "Leonard, Justin",
       "Li, Haotong",
       "Lowry, Shane",
       "MacIntyre, Robert",
@@ -581,7 +582,6 @@
       "Smalley, Alex",
       "Smith, Cameron",
       "Smith, Jordan",
-      "Smylie, Elvis",
       "Smyth, Trav",
       "Southgate, Matthew",
       "Spaun, J.J.",
@@ -597,14 +597,30 @@
       "Truslow, Austen",
       "Uihlein, Peter",
       "Vincent, Scott",
+      "Wiedemeyer, Tim",
       "Wiesberger, Bernd",
       "Woodland, Gary",
       "Yang, Jiho",
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-06 06:51:06 ET",
+    "last_updated": "2026-07-06 10:54:54 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-06 10:54:54 ET",
+        "added": [
+          "Wiedemeyer, Tim"
+        ],
+        "withdrawn": [
+          "Daly, John",
+          "Els, Ernie",
+          "Hamilton, Todd",
+          "Johnson, Zach",
+          "Leonard, Justin",
+          "Smylie, Elvis"
+        ],
+        "note": "+1 / -6"
+      },
       {
         "timestamp": "2026-07-06 06:51:06 ET",
         "added": [
@@ -836,12 +852,6 @@
       },
       {
         "timestamp": "2026-07-03 10:23:02 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-03 05:28:47 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
