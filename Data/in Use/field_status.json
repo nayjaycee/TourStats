@@ -137,7 +137,6 @@
       "Smotherman, Austin",
       "Snedeker, Brandt",
       "Spaun, J.J.",
-      "Stanger, Jimmy",
       "Sterne, Richard",
       "Stevens, Sam",
       "Straka, Sepp",
@@ -152,6 +151,7 @@
       "Van Driel, Darius",
       "Van Rooyen, Erik",
       "Veerman, Johannes",
+      "Vilips, Karl",
       "Von Dellingshausen, Nicolai",
       "Wallace, Matt",
       "Waring, Paul",
@@ -161,8 +161,18 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-06 14:03:35 ET",
+    "last_updated": "2026-07-06 16:06:35 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-06 16:06:35 ET",
+        "added": [
+          "Vilips, Karl"
+        ],
+        "withdrawn": [
+          "Stanger, Jimmy"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-06 14:03:35 ET",
         "added": [
@@ -464,12 +474,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-04 04:46:05 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
@@ -614,8 +618,14 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-06 14:03:35 ET",
+    "last_updated": "2026-07-06 16:06:35 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-06 16:06:35 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-06 14:03:35 ET",
         "added": [],
@@ -838,33 +848,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-04 04:46:05 ET",
-        "added": [
-          "Bauchou, Zach",
-          "Brennan, Michael",
-          "Dumont De Chassart, Adrien",
-          "Ghim, Doug",
-          "Hubbard, Mark",
-          "Keefer, Johnny",
-          "Luiten, Joost",
-          "Pavon, Matthieu",
-          "Roy, Kevin",
-          "Willett, Danny"
-        ],
-        "withdrawn": [
-          "Day, Jason",
-          "Griffin, Ben",
-          "Grillo, Emiliano",
-          "Hughes, Mackenzie",
-          "Jaeger, Stephan",
-          "Pendrith, Taylor",
-          "Rodgers, Patrick",
-          "Smylie, Elvis",
-          "Vegas, Jhonattan"
-        ],
-        "note": "+10 / -9"
       }
     ]
   }
