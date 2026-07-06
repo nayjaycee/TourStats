@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-06 06:51:06 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Genesis Scottish Open",
+      "details": "Field updated: 541, 100"
+    },
+    {
       "timestamp": "2026-07-05 15:26:57 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,134 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-06-29 17:16:13 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 19,809 rows across 55 events. Finishes rebuilt."
     }
   ]
 }
