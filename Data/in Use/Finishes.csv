@@ -1828,6 +1828,150 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,U.S. Open,26,2026-06-21,"Wu, Brandon",25213,CUT,,0,0,0,0,0,1
 2026,U.S. Open,26,2026-06-21,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
 2026,U.S. Open,26,2026-06-21,"Yuan, Carl",17266,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Gotterup, Chris",27774,1,1.0,1,1,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Homa, Max",17538,2,2.0,0,1,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Glover, Lucas",7399,T3,3.0,0,1,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Hodges, Lee",25157,T3,3.0,0,1,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Kohles, Ben",16395,T3,3.0,0,1,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Ghim, Doug",24550,T6,6.0,0,0,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Meissner, Mac",28159,T6,6.0,0,0,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Suber, Jackson",29279,T6,6.0,0,0,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Blair, Zac",17639,T9,9.0,0,0,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Hisatsune, Ryo",22760,T9,9.0,0,0,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Johnson, Zach",6986,T9,9.0,0,0,1,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Bezuidenhout, Christiaan",18103,T12,12.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Brown, Blades",32152,T12,12.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Duncan, Tyler",18187,T12,12.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Fowler, Rickie",12965,T15,15.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Jaeger, Stephan",16394,T15,15.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Kuchar, Matt",6169,T15,15.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Phillips, Chandler",27164,T15,15.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Stout, Preston",32089,T15,15.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Yu, Kevin",17881,T15,15.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Dou, Zecheng",16757,T21,21.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Griffin, Ben",24968,T21,21.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Higgs, Harry",14140,T21,21.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Lipsky, David",15980,T21,21.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Merritt, Troy",13367,T21,21.0,0,0,0,1,1,0
+2026,John Deere Classic,30,2026-07-05,"Bradley, Keegan",13872,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Bridgeman, Jacob",29433,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Grillo, Emiliano",12808,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Mouw, William",29770,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Nyholm, Pontus",25475,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Thompson, Davis",27364,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"van Rooyen, Erik",17550,T26,26.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Brennan, Michael",29197,T33,33.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Chatfield, Davis",30620,T33,33.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Dunlap, Nick",28270,T33,33.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Hoge, Tom",15575,T33,33.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Skinns, David",10873,T33,33.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Wallace, Matt",20706,T33,33.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Cole, Eric",21756,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Coody, Pierceson",28309,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Crowe, Trace",27780,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Griffin, Lanto",15330,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Hossler, Beau",15470,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Vilips, Karl",24304,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Wise, Aaron",22051,T39,39.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Dahmen, Joel",14509,T46,46.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Hubbard, Mark",16333,T46,46.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Hughes, Mackenzie",15556,T46,46.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Kim, Tom",24766,T46,46.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Nakajima, Keita",21074,T46,46.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Dumont de Chassart, Adrien",22002,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Gutschewski, Luke",32683,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Kim, Chan",15004,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"McGreevy, Max",23505,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Mitchell, Keith",17365,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Poston, J.T.",21554,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Putnam, Andrew",14704,T51,51.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Eckroat, Austin",26653,T58,58.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Finau, Tony",11676,T58,58.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Malnati, Peter",14926,T58,58.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Smotherman, Austin",22985,T58,58.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Spieth, Jordan",14636,T58,58.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Springer, Hayden",21995,T58,58.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Gordon, Will",26660,64,64.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Riley, Davis",19872,T65,65.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Villegas, Camilo",9171,T65,65.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Bauchou, Zach",19846,T67,67.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Campos, Rafael",12909,T67,67.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Fishburn, Patrick",25094,T67,67.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Fisk, Steven",26657,T67,67.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Byrd, Jonathan",6931,T71,71.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Ewart, A.J.",21883,T71,71.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Im, Sungjae",17488,T71,71.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Feagles, Michael",26656,T74,74.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Gomez, Fabian",8571,T74,74.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Lindheim, Nicholas",16713,T74,74.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Voois, Ryan",35545,77,77.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Sargent, Gordon",30814,78,78.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Brehm, Ryan",10423,79,79.0,0,0,0,0,1,0
+2026,John Deere Classic,30,2026-07-05,"Adler, Patrick",35576,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Berger, Daniel",17606,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Champ, Cameron",23542,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Clanton, Luke",32330,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Cook, Austin",18579,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Fisher, Darin",23709,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Goodwin, Noah",24837,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Greyserman, Max",23465,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Hadwin, Adam",13965,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Hardy, Nick",19865,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Higgo, Garrick",24342,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Hoey, Rico",23504,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Howell, Mason",33759,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Kanaya, Takumi",19729,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Keefer, Johnny",32457,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Kim, Michael",17543,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Kizzire, Patton",13470,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Koivun, Jackson",32319,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Laird, Martin",9586,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"List, Luke",7960,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Lower, Justin",17723,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Martin, Ben",14007,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"McCarthy, Denny",19870,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Moore, Taylor",21944,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Noh, S.Y.",11117,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Novak, Andrew",23475,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Nunez, Augusto",16796,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Olesen, Thorbjorn",13412,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Paul, Jeremy",22087,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Pavon, Matthieu",19960,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Pendrith, Taylor",17780,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Peterson, Paul",16341,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Power, Seamus",10104,WD,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Ramey, Chad",19840,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Roy, Kevin",18424,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Silverman, Ben",17381,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Simpson, Webb",11049,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Stanger, Jimmy",23048,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Streb, Robert",14852,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Streelman, Kevin",8480,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Thorbjornsen, Michael",26649,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Todd, Brendon",12425,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Ventura, Kris",15651,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
+2026,John Deere Classic,30,2026-07-05,"Young, Carson",23656,CUT,,0,0,0,0,0,1
 2026,RBC Canadian Open,32,2026-06-14,"Cauley, Bud",14502,1,1.0,1,1,1,1,1,0
 2026,RBC Canadian Open,32,2026-06-14,"Fitzpatrick, Matt",17646,2,2.0,0,1,1,1,1,0
 2026,RBC Canadian Open,32,2026-06-14,"Hovland, Viktor",18841,3,3.0,0,1,1,1,1,0
@@ -4008,6 +4152,149 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,ThreeBond TPGA Challenge Tour - Mizuno Open,11400,2026-06-06,"Yin Jen, Fang",19490,WD,,0,0,0,0,0,1
 2026,ThreeBond TPGA Challenge Tour - Mizuno Open,11400,2026-06-06,"Yu-Chen, Yeh",17771,WD,,0,0,0,0,0,1
 2026,ThreeBond TPGA Challenge Tour - Mizuno Open,11400,2026-06-06,"Yu-chen, Yu",25682,WD,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Shih-chang, Chan",9698,1,1.0,1,1,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ishizuka, Shori",22851,T2,2.0,0,1,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wei Hsuan, Wang",19697,T2,2.0,0,1,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Shinzato, Rinkei ",34999,4,4.0,0,1,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chieh-po, Lee",16563,5,5.0,0,1,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chan, Chia-Han",33412,T6,6.0,0,0,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lee, Jui-shen",30422,T6,6.0,0,0,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Huang, Yi-tseng",24105,T8,8.0,0,0,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yokokawa, Kosuke",30439,T8,8.0,0,0,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Morioka, Shunichiro",16296,T10,10.0,0,0,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Sui, Justin",34345,T10,10.0,0,0,1,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chin-hung, He",27411,T12,12.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Noro, Ryo",24222,T12,12.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"De Barba, Gabriele",18492,T14,14.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yung Hua, Liu",19492,T14,14.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Kai-jen, Tsai",18978,T16,16.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tsai, Shang-kai",32957,T16,16.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Watanabe, Ryunosuke",28565,T18,18.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wei Lun, Chang",19494,T18,18.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wei-chih, Lu",8170,T18,18.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wu, Yao-wei",32956,T18,18.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu-Chen, Yeh",17771,T18,18.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Yi-tong",23206,T23,23.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ching-hung, Su",24106,T23,23.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ting-Wei, Hsieh",24096,T23,23.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wakaari, Nobuhiko",31357,T23,23.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wei-cheng, Shen",25521,T23,23.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu-cheng, Ho",22754,T23,23.0,0,0,0,1,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Po-hao",30424,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lee, Shang-Jung",33573,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Mako, Shapiyate",30395,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Peng, Ian",32452,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Shih-hung, Lee",17735,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tokunaga, Hiroki",26455,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu-cheng, Hsu",25680,T29,29.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ikeuchi, Kei",29862,T36,36.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Liang-Yu(Am), Ko",33921,T36,36.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Okada, Keita",33143,T36,36.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tokumitsu, Yuya",19164,T36,36.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wang, Sheng-hui",33059,T36,36.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu-jui, Liu",17880,T36,36.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yoshikuwa, Yuta",28252,T42,42.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu-chen, Yu",25682,T42,42.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Arbole, Art",15973,T44,44.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Yuan-Wei",19491,T44,44.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Sun-Yi, Lu",20881,T44,44.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tsai, Chin-Yang",33408,T44,44.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Walker, Johnny",34998,T44,44.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Fang, Chuan-wei",31669,49,49.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chiang, Ian",33568,50,50.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Wei-sheng",30398,T51,51.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lai, Chia-i",30401,T51,51.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"IIda, Yusuke",16184,T53,53.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Kai-jie",33563,T53,53.0,0,0,0,0,1,0
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Bruminhent, Pattanan",34241,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chang Chien, Ko-yen",33063,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chang, Hsun-chen",30399,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chao-hua, Lee",17763,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Chieh-Sheng",31005,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Hua",22923,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Hui-hung",33062,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Ke-yi",33061,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Shou-Cheng",33574,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Ting-yu",33753,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chen, Yen-Yu",33566,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Cheng(Am), Yi Le",35358,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Cheng-min(Am), Chen",34041,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chi, Huang",23208,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chi-Hsien, Hsieh",13484,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chien-Yao, Hung",11738,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chih-kai, Hsu",21182,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chin-chou, Lee",17764,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chiu, Yu-chia",30613,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chong-Han(Am), Liao",34040,WD,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Chung-nan(Am), Lai",34043,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ding-Sheng, Lin",16298,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Fukuhara, Shota",15388,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Fung, Nicholas",12889,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Furuya, Ryoto",29313,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Han-Ting, Chiu",20880,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ho (Am), Peter",35001,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ho, Yi Jui",35583,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Hsi-An, Wang",25681,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Hsiang-hao, Huang",18037,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Hsu (Am), Yu Chan",35582,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Hsu, Chao-Wei",34650,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Huang (Am), James",35581,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Huang (Am), William",35575,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Huang, Chih Chen",34034,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Huang, Chih-yi",33415,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Huang, Yu-Chung",35578,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Hung Hsuan, Hsu",25579,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Hung, Chao-hsin",27247,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ishige, Takumi",15389,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Iwama Gamma, Takanari",21390,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Jaraula, Reymon",15359,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Kashimoto, Kohei",25711,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Kudo, Jun",27056,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Kung, Te-shu",34446,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Kuo, Chieh-Lun",33419,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lee(Am), Wei-ting",33418,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Chen-chu",33060,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, K.P.",15023,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Ming-yeh",33572,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Ta-yu",33058,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Yi-Yuan",31680,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lin, Yu-chen (AM)",34817,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Liu, Tse Sen",23628,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Liu, Yen-chun",34663,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Lu-Sen, Lien",11582,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Min-hsuan, Hsieh",25517,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Mishima, Taiki",33754,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Mizuno, Shinichi",15143,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Morii, Akinori",14155,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Nishiguchi, Naoki",35362,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Oda, Nobuaki",24108,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ohishi, Atsuya",28782,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Sakuma, Hayato",29720,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Sekito, Yuji",25823,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Shen(Am), Yuan-fu",34534,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Suwanpanang, Worrasorn",18597,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Takeda, Shinnosuke",35000,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tang (Am), Ming Hsien",35580,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tang (Am), Ming-Hsin (AM)",35577,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Ting, Lawrence",19582,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tsai, Chen-Kai",34538,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tse-yu, Chang",25515,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tseng Seng, Tzu Hao",23629,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tseng, Fu-tung",30396,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Tsung-yu, Tsai",14504,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wei-Chen, Hsu",33920,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wen, Cheng-Hsiang",19698,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wen, Xin",33562,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Wu (Am), Chen-shiuan",34382,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yaginuma, Yuki",34997,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yamaura, Kazuki",28928,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yang, Hsiao-che",33411,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yang, Jay",33409,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yeh, Chia-Yin",31679,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yen-hung, Liu",18798,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu chen, Chen",24451,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yu(Am), Matt",34207,CUT,,0,0,0,0,0,1
+2026,ThreeBond TPGA Challenge Tour - Dingyue Jipin Open,11450,2026-07-04,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
 2026,Dubai Invitational,2026105,2026-01-18,"Elvira Mijares, Ignacio",12988,1,1.0,1,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Hillier, Daniel",21362,2,2.0,0,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Guerrier, Julien",10201,T3,3.0,0,1,1,1,1,0
@@ -6131,6 +6418,162 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,DS Automobiles 83° Open d’Italia,2026123,2026-06-28,"Willett, Danny",12920,CUT,,0,0,0,0,0,1
 2026,DS Automobiles 83° Open d’Italia,2026123,2026-06-28,"Zemmer, Aron",15952,CUT,,0,0,0,0,0,1
 2026,DS Automobiles 83° Open d’Italia,2026123,2026-06-28,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Hollick, Michael",15993,1,1.0,1,1,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Du Plessis, Hennie",19421,2,2.0,0,1,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Wiesberger, Bernd",9531,3,3.0,0,1,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Guillamoundeguy, Oihan",28239,T4,4.0,0,1,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Ortiz, Carlos",14735,T4,4.0,0,1,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Rosenmuller, Thomas",22736,6,6.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Niemann, Joaquin",18079,T7,7.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Wu, Ashun",11763,T7,7.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Aphibarnrat, Kiradech",12321,T9,9.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Dean, Joe",16497,T9,9.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Penge, Marco",22465,T9,9.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Perez, Victor",20730,T9,9.0,0,0,1,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Lindell, Oliver",20085,T13,13.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Paratore, Renato",16549,T13,13.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Townsend, Hugo",31165,T13,13.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Debove , Quentin",25325,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Del Rey, Alejandro",22259,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Elvira Mijares, Ignacio",12988,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Elvira, Manuel",26008,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Langasque, Romain",16652,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Schott, Freddy",27588,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Winther, Jeff",15680,T16,16.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Fisher, Ross",9396,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Girrbach, Joel",15592,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Lacroix, Frederic",23733,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Mazzoli, Stefano",20844,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Schmid, Matthias",20722,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Senior, Jack",15115,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Von Dellingshausen, Nicolai",22231,T23,23.0,0,0,0,1,1,0
+2026,BMW International Open,2026124,2026-07-05,"Celli, Filippo",23549,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Coussaud, Ugo",20727,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Dalke, Brad",21501,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Hill, Calum",25131,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Ko, Jeong Weon",26213,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Kolle, Finn",30242,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Moller, Niklas Norgaard",15676,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Steinlechner, Maximilian",21677,T30,30.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Clements, Todd",22608,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Jamieson, Scott",11397,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Jarvis, Casey",26947,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Jordan, Matthew",25601,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Norris, Shaun",7677,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Van Tonder, Daniel",15193,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Waring, Paul",12426,T38,38.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Bairstow, Sam",28615,T45,45.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Morrison, James",11061,T45,45.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Ritchie, JC",18174,T45,45.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Sullivan, Andy",15326,T45,45.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Vidal, Quim",29712,T45,45.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Ancer, Abraham",18238,T50,50.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Armitage, Marcus",17813,T50,50.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Bryant, Davis",32550,T50,50.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Garcia-Heredia, Alfredo",7887,T50,50.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Levy, Alexander",14973,T50,50.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Biondi, Fred",25614,55,55.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Neergaard-Petersen, Rasmus",23841,56,56.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Meronk, Adrian",14196,T57,57.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Young, Daniel",19908,T57,57.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Naidoo, Dylan",19429,T59,59.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Schaper, Jayden Trey",26991,T59,59.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"De Leo, Gregorio",26506,T61,61.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Garcia Rodriguez, Sebastian",12258,T61,61.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Munoz, Sebastian",20770,T61,61.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Schmidt, Ben",27258,T61,61.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Van Driel, Darius",13374,65,65.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Manassero, Matteo",11460,66,66.0,0,0,0,0,1,0
+2026,BMW International Open,2026124,2026-07-05,"Adam, Cameron",34024,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"An, Byeong Hun",14459,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Ayora, Angel",30445,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Ballester, Jose Luis",28473,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Bjerregaard, Lucas",11619,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Bradbury, Dan",29971,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Broomhead, Jonothan",30210,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Brown, Daniel",20766,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Buchanan, Jack",27379,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Campillo, Jorge",14016,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Charmasson, Clement",22220,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Couvra, Martin",27811,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Crocker, Sean",23610,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Da Costa Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"De Bruyn, Jannik",23112,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Ferguson, Ewen",21646,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Follet-Smith, Benjamin",15211,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Foos, Dominic",17022,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Forsstrom, Simon",19806,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Garcia, Sergio",5689,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Gavins, Daniel",18241,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Guerrier, Julien",10201,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Hillier, Daniel",21362,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Hoshino, Rikuya",19190,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kaewkanjana, Sadom",19844,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kaneko, Kota",28268,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Katsuragawa, Yuto",20448,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kaymer, Martin",8117,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kieffer, Maximilian",12317,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kimsey, Nathan",18027,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kobori, Kazuma",24369,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Kruyswijk, Jacques",16896,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Lee, Junghwan",13498,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Lombard, Zander",16897,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Lopez-Chacarra, Eugenio",26745,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Luiten, Joost",10158,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"McKinney, Connor",24172,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Migliozzi, Guido",17357,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Mory , Felix",25089,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Olesen, Jacob Skov",25611,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Palmer, Ryan",7820,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Paul, Yannik",19898,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Pepperell, Eddie",15113,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Premlall, Yurav",25890,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Quayle, Anthony",18900,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Ravetto, David",23416,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Reed, Patrick",14838,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Schmidt, Thomas",31390,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Schneider, Marcel",12522,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Scrivener, Jason",12734,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Siem, Marcel",6950,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Southgate, Matthew",15191,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Stone, Brandon",15229,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Strydom, Ockie",13731,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Syme, Connor",22089,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Tarren, Callum",20519,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Vaillant, Tom",28157,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Wenyi, Ding",26193,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Willett, Danny",12920,WD,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
+2026,BMW International Open,2026124,2026-07-05,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
