@@ -161,8 +161,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-07 05:53:11 ET",
+    "last_updated": "2026-07-07 10:51:30 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-07 10:51:30 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-07 05:53:11 ET",
         "added": [],
@@ -468,19 +474,13 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-05 05:14:55 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
     "event_id": 100,
     "event_name": "The Open Championship",
-    "player_count": 135,
+    "player_count": 152,
     "player_names": [
       "Aberg, Ludvig",
       "Ayora, Angel",
@@ -491,6 +491,7 @@
       "Bhatia, Akshay",
       "Bradbury, Dan",
       "Bradley, Keegan",
+      "Brennan, Michael",
       "Bridgeman, Jacob",
       "Brown, Dan",
       "Buchanan, Jack",
@@ -503,14 +504,19 @@
       "Cink, Stewart",
       "Clark, Wyndham",
       "Clarke, Darren",
+      "Cole, Eric",
       "Conners, Corey",
+      "Coody, Pierceson",
       "Couvra, Martin",
       "Daffue, MJ",
       "Day, Jason",
       "De Castro Piera, Alejandro",
       "DeChambeau, Bryson",
+      "Detry, Thomas",
       "Docherty, Alistair",
       "Du Plessis, Hennie",
+      "Duval, David",
+      "Echavarria, Nico",
       "English, Harris",
       "Fitzpatrick, Alex",
       "Fitzpatrick, Matt",
@@ -520,7 +526,9 @@
       "Gerard, Ryan",
       "Gotterup, Chris",
       "Grehan, Stuart",
+      "Greyserman, Max",
       "Griffin, Ben",
+      "Grinberg, Lev",
       "Hall, Harry",
       "Ham, Jeong Woo",
       "Harman, Brian",
@@ -530,9 +538,11 @@
       "Herbert, Lucas",
       "Higa, Kazuki",
       "Hillier, Daniel",
+      "Hisatsune, Ryo",
       "Hojgaard, Nicolai",
       "Hojgaard, Rasmus",
       "Hollick, Michael",
+      "Homa, Max",
       "Horschel, Billy",
       "Hovland, Viktor",
       "Howard, David",
@@ -545,6 +555,7 @@
       "Kataoka, Naoyuki",
       "Kim, Michael",
       "Kim, Si Woo",
+      "Kim, Tom",
       "Kitayama, Kurt",
       "Knapp, Jake",
       "Kobori, Kazuma",
@@ -563,6 +574,7 @@
       "McIlroy, Rory",
       "McKibbin, Tom",
       "McNealy, Maverick",
+      "Mitchell, Keith",
       "Molinari, Francesco",
       "Morikawa, Collin",
       "Nagano, Ryutaro",
@@ -578,6 +590,7 @@
       "Penge, Marco",
       "Plunkett, Marcus",
       "Poston, J.T.",
+      "Puig, David",
       "Pulcini, Mateo",
       "Rahm, Jon",
       "Rai, Aaron",
@@ -601,16 +614,20 @@
       "Spaun, J.J.",
       "Spieth, Jordan",
       "Stenson, Henrik",
+      "Stevens, Sam",
       "Straka, Sepp",
       "Suber, Jackson",
       "Sullivan, Andy",
       "Surratt, Caleb",
       "Svensson, Jesper",
       "Taylor, Nick",
+      "Theegala, Sahith",
       "Thomas, Justin",
       "Truslow, Austen",
       "Uihlein, Peter",
+      "Valimaki, Sami",
       "Vincent, Scott",
+      "Wallace, Matt",
       "Wiedemeyer, Tim",
       "Wiesberger, Bernd",
       "Woodland, Gary",
@@ -618,8 +635,32 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-07 05:53:11 ET",
+    "last_updated": "2026-07-07 10:51:30 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-07 10:51:30 ET",
+        "added": [
+          "Brennan, Michael",
+          "Cole, Eric",
+          "Coody, Pierceson",
+          "Detry, Thomas",
+          "Duval, David",
+          "Echavarria, Nico",
+          "Greyserman, Max",
+          "Grinberg, Lev",
+          "Hisatsune, Ryo",
+          "Homa, Max",
+          "Kim, Tom",
+          "Mitchell, Keith",
+          "Puig, David",
+          "Stevens, Sam",
+          "Theegala, Sahith",
+          "Valimaki, Sami",
+          "Wallace, Matt"
+        ],
+        "withdrawn": [],
+        "note": "+17 / -0"
+      },
       {
         "timestamp": "2026-07-07 05:53:11 ET",
         "added": [],
@@ -835,19 +876,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-05 05:14:55 ET",
-        "added": [
-          "McGreevy, Max",
-          "Mouw, William"
-        ],
-        "withdrawn": [
-          "Dumont De Chassart, Adrien",
-          "Koepka, Brooks",
-          "Mitchell, Keith"
-        ],
-        "note": "+2 / -3"
       }
     ]
   }
