@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-08 15:43:13 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Genesis Scottish Open",
+      "details": "Field updated: 541, 100"
+    },
+    {
       "timestamp": "2026-07-08 10:29:28 ET",
       "type": "field_odds_refresh",
       "event_name": "Genesis Scottish Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-05 09:53:41 ET",
-      "type": "field_odds_refresh",
-      "event_name": "John Deere Classic",
-      "details": "Field updated: 30, 541"
-    },
-    {
-      "timestamp": "2026-07-05 05:14:55 ET",
       "type": "field_odds_refresh",
       "event_name": "John Deere Classic",
       "details": "Field updated: 30, 541"
