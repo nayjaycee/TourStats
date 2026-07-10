@@ -161,8 +161,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-10 12:00:03 ET",
+    "last_updated": "2026-07-10 18:05:51 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-10 18:05:51 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-10 12:00:03 ET",
         "added": [],
@@ -452,20 +458,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-01 12:00:04 ET",
-        "added": [
-          "Adler, Patrick",
-          "Feagles, Michael",
-          "Gordon, Will",
-          "Gutschewski, Luke",
-          "Nunez, Augusto"
-        ],
-        "withdrawn": [
-          "Vegas, Jhonattan"
-        ],
-        "note": "+5 / -1"
       }
     ]
   },
@@ -627,8 +619,14 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-10 12:00:03 ET",
+    "last_updated": "2026-07-10 18:05:51 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-10 18:05:51 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-10 12:00:03 ET",
         "added": [],
@@ -869,12 +867,6 @@
       },
       {
         "timestamp": "2026-07-01 18:00:12 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-01 12:00:04 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
