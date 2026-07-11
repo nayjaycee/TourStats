@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-11 09:40:36 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Genesis Scottish Open",
+      "details": "Field updated: 541, 100"
+    },
+    {
       "timestamp": "2026-07-11 04:05:29 ET",
       "type": "field_odds_refresh",
       "event_name": "Genesis Scottish Open",
@@ -113,12 +119,6 @@
       "type": "rounds_refresh",
       "event_name": "",
       "details": "Rounds refreshed \u2014 21,090 rows across 58 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-07-06 14:03:35 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
     }
   ]
 }
