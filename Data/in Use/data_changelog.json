@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-12 09:41:53 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Genesis Scottish Open",
+      "details": "Field updated: 541, 100"
+    },
+    {
       "timestamp": "2026-07-12 04:26:25 ET",
       "type": "field_odds_refresh",
       "event_name": "Genesis Scottish Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-06 17:19:42 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
-    },
-    {
-      "timestamp": "2026-07-06 16:06:35 ET",
       "type": "field_odds_refresh",
       "event_name": "Genesis Scottish Open",
       "details": "Field updated: 541, 100"
