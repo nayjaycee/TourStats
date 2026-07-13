@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-13 13:47:46 ET",
+      "type": "field_odds_refresh",
+      "event_name": "The Open Championship",
+      "details": "Field updated: 100"
+    },
+    {
       "timestamp": "2026-07-13 10:48:52 ET",
       "type": "field_odds_refresh",
       "event_name": "The Open Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-07 16:05:23 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
-    },
-    {
-      "timestamp": "2026-07-07 10:51:30 ET",
       "type": "field_odds_refresh",
       "event_name": "Genesis Scottish Open",
       "details": "Field updated: 541, 100"

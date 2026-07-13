@@ -109,12 +109,12 @@
       "Noren, Alex",
       "Norris, Shaun",
       "Novak, Andrew",
-      "Oosthuizen, Louis",
       "Parry, John",
       "Penge, Marco",
       "Perez, Victor",
       "Plunkett, Marcus",
       "Poston, J.T.",
+      "Potgieter, Aldrich",
       "Puig, David",
       "Pulcini, Mateo",
       "Rahm, Jon",
@@ -161,8 +161,18 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-13 10:48:52 ET",
+    "last_updated": "2026-07-13 13:47:46 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-13 13:47:46 ET",
+        "added": [
+          "Potgieter, Aldrich"
+        ],
+        "withdrawn": [
+          "Oosthuizen, Louis"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-13 10:48:52 ET",
         "added": [],
@@ -358,12 +368,6 @@
       },
       {
         "timestamp": "2026-07-11 04:05:29 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-10 15:41:48 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
