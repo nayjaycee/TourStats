@@ -2862,6 +2862,306 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Puerto Rico Open,483,2026-03-08,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
 2026,Puerto Rico Open,483,2026-03-08,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
 2026,Puerto Rico Open,483,2026-03-08,"van Wyk, Kieron",27300,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Fisk, Steven",26657,1,1.0,1,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Pendrith, Taylor",17780,2,2.0,0,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Silverman, Ben",17381,T3,3.0,0,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Wise, Aaron",22051,T3,3.0,0,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Chatfield, Davis",30620,T5,5.0,0,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Glover, Lucas",7399,T5,5.0,0,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Ventura, Kristoffer",15651,T5,5.0,0,1,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Blair, Zac",17639,T8,8.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Elvira, Manuel",26008,T8,8.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Hoge, Tom",15575,T10,10.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Hughes, Mackenzie",15556,T10,10.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Koivun, Jackson",32319,T10,10.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Mouw, William",29770,T10,10.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Rosenmueller, Thomas",22736,T10,10.0,0,0,1,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Campos, Rafael",12909,T15,15.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Jaeger, Stephan",16394,T15,15.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"James, Ben",29827,T15,15.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Kanaya, Takumi",19729,T15,15.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Kohles, Ben",16395,T15,15.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Phillips, Chandler",27164,T15,15.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Bairstow, Sam",28615,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Bezuidenhout, Christiaan",18103,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Coussaud, Ugo",20727,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Ding, Wenyi",26193,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Hardy, Nick",19865,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Hossler, Beau",15470,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Ko, Jeong Weon",26213,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Martin, Ben",14007,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Mory, Felix",25089,T21,21.0,0,0,0,1,1,0
+2026,ISCO Championship,518,2026-07-12,"Dahmen, Joel",14509,T30,30.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Olesen, Jacob Skov",25611,T30,30.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Ramey, Chad",19840,T30,30.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Tosti, Alejandro",17032,T30,30.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Ewart, A.J.",21883,T34,34.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Girrbach, Joel",15592,T34,34.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Kim, Chan",15004,T34,34.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Walker, Euan",27147,T34,34.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Wu, Dylan",25002,T34,34.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Byrd, Jonathan",6931,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Champ, Cameron",23542,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Dumont de Chassart, Adrien",22002,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Guillamoundeguy, Oihan",28239,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Homa, Max",17538,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Kizzire, Patton",13470,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Lemke, Niklas",10418,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"McCarthy, Denny",19870,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Streelman, Kevin",8480,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Walker, Danny",25003,T39,39.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Hoey, Rico",23504,T49,49.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Langasque, Romain",16652,T49,49.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Lipsky, David",15980,T49,49.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"List, Luke",7960,T49,49.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Peterson, Paul",16341,T49,49.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Stout, Preston",32089,T49,49.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Bryant, Davis",32550,T55,55.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Griffin, Lanto",15330,T55,55.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Nyholm, Pontus",25475,T55,55.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Townsend, Hugo",31165,T55,55.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Dunlap, Nick",28270,T59,59.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Gomez, Fabian",8571,T59,59.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Kinhult, Marcus",18514,T59,59.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Lower, Justin",17723,T59,59.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Merritt, Troy",13367,T59,59.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Lamprecht, Christo",24343,T64,64.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Schneider, Marcel",12522,T64,64.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Svensson, Adam",13997,T66,66.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Villegas, Camilo",9171,T66,66.0,0,0,0,0,1,0
+2026,ISCO Championship,518,2026-07-12,"Aphibarnrat, Kiradech",12321,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Blanchet, Chandler",24956,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Brehm, Ryan",10423,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Campillo, Jorge",14016,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Clanton, Luke",32330,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Clements, Todd",22608,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Collet, Tyler",28077,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Cook, Austin",18579,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Crocker, Sean",23610,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Crowe, Trace",27780,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Dantorp, Jens",14018,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Dou, Zecheng",16757,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Doyle, Drew",33101,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Duncan, Tyler",18187,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Fishburn, Patrick",25094,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Garcia Rodriguez, Sebastian",12258,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Gavins, Daniel",18241,WD,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Gilbert, Josiah",33106,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Gordon, Will",26660,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Hadwin, Adam",13965,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Helligkilde, Marcus",20190,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Hodges, Lee",25157,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Holmes, J.B.",7959,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Iceman, Daniel",22255,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Kang, Jeffrey",21889,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Kuhl, Tommy",31215,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Laird, Martin",9586,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Larson, Anders",31312,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Lebioda, Hank",21943,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"McGirt, William",12477,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Musselman, Cooper",25318,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Noh, S.Y.",11117,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Paul, Jeremy",22087,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Piercy, Scott",7899,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Preston, Jansen",35616,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Ramsay, Richie",11396,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Repetto Taylor, Rocco",31235,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Ritchie, JC",18174,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Robinson Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Russell, Miles",32064,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Shipley, Neal",32055,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Shirley, Trey",23506,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Skinns, David",10873,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Springer, Hayden",21995,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Stanger, Jimmy",23048,WD,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Stone, Brandon",15229,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Streb, Robert",14852,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Thompson, Davis",27364,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Todd, Brendon",12425,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Vaillant, Tom",28157,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Van Horne, Ashton",22207,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"VanDerLaan, John",25319,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Wolfe, Jared",18164,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,ISCO Championship,518,2026-07-12,"van Tonder, Daniel",15193,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Kim, Tom",24766,1,1.0,1,1,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Lee, Min Woo",16841,2,2.0,0,1,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Fitzpatrick, Matt",17646,T3,3.0,0,1,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Keefer, Johnny",32457,T3,3.0,0,1,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"MacIntyre, Robert",23323,T3,3.0,0,1,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Nakajima, Keita",21074,T3,3.0,0,1,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"McIlroy, Rory",10091,T7,7.0,0,0,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Thorbjornsen, Michael",26649,T7,7.0,0,0,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Kim, Si Woo",14609,T9,9.0,0,0,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Perez, Victor",20730,T9,9.0,0,0,1,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Gotterup, Chris",27774,T11,11.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Roy, Kevin",18424,T11,11.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Clark, Wyndham",23604,T13,13.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Fleetwood, Tommy",12294,T13,13.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Hovland, Viktor",18841,T13,13.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Reed, Patrick",14838,T13,13.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Del Rey, Alejandro",22259,T17,17.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Hatton, Tyrrell",14796,T17,17.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Luiten, Joost",10158,T17,17.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Molinari, Francesco",7655,T17,17.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Davis, Cam",17786,T21,21.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Jarvis, Casey",26947,T21,21.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Schmid, Matti",20722,T21,21.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Smith, Jordan",18586,T21,21.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Willett, Danny",12920,T21,21.0,0,0,0,1,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Armitage, Marcus",17813,T26,26.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Gerard, Ryan",29767,T26,26.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Hojgaard, Nicolai",23602,T26,26.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Taylor, Nick",13126,T26,26.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Eckroat, Austin",26653,T30,30.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Fox, Ryan",11889,T30,30.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"McKibbin, Tom",22322,T30,30.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Meissner, Mac",28159,T30,30.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Sullivan, Andy",15326,T30,30.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Vilips, Karl",24304,T30,30.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Echavarria, Nico",22833,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Greyserman, Max",23465,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Harman, Brian",8825,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Hojgaard, Rasmus",23838,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Lindell, Oliver",20085,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Neergaard-Petersen, Rasmus",23841,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Norris, Shaun",7677,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Rahm, Jon",19195,T36,36.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Castillo, Ricky",27819,T44,44.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Hill, Calum",25131,T44,44.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Kitayama, Kurt",21891,T44,44.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Lindberg, Mikael",20084,T44,44.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Spaun, J.J.",17536,T44,44.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Van Driel, Darius",13374,T44,44.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Canter, Laurie",14795,T50,50.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Thomas, Justin",14139,T50,50.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Brennan, Michael",29197,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Chacarra, Eugenio",26745,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Conners, Corey",17576,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Putnam, Andrew",14704,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Svensson, Jesper",26850,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Von Dellingshausen, Nicolai",22231,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Yellamaraju, Sudarshan",29925,T52,52.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Kruyswijk, Jacques",16896,T59,59.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Migliozzi, Guido",17357,T59,59.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Du Plessis, Hennie",19421,T61,61.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Katsuragawa, Yuto",20448,T61,61.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Kirk, Chris",12423,T61,61.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Novak, Andrew",23475,T61,61.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Saddier, Adrien",14792,T61,61.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Scott, Adam",6430,T66,66.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Theegala, Sahith",23014,T66,66.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Elvira, Nacho",12988,68,68.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Riley, Davis",19872,69,69.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Cole, Eric",21756,70,70.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Jamieson, Scott",11397,71,71.0,0,0,0,0,1,0
+2026,Genesis Scottish Open,541,2026-07-12,"Aberg, Ludvig",23950,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Ayora, Angel",30445,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Bauchou, Zach",19846,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Bradbury, Dan",29971,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Brown, Dan",20766,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Cantlay, Patrick",15466,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Cauley, Bud",14502,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Choi, Seungbin",26580,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Coody, Pierceson",28309,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Couvra, Martin",27811,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"English, Harris",14577,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Ferguson, Ewen",21646,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Fitzpatrick, Alex",25362,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Forrest, Grant",16475,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Ghim, Doug",24550,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Guerrier, Julien",10201,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Gumberg, Jordan",23892,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Hall, Harry",27194,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Harrington, Padraig",5716,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Hillier, Daniel",21362,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Horschel, Billy",11276,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Hoshino, Rikuya",19190,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Hubbard, Mark",16333,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Im, Sungjae",17488,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Kaneko, Kota",28268,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Kim, Baekjun",27759,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Kim, Michael",17543,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Knapp, Jake",19396,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Koepka, Brooks",16243,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"LaCroix, Frederic",23733,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Lagergren, Joakim",14780,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Larrazabal, Pablo",9133,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Lawrence, Thriston",18105,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Lee, Junghwan",13498,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Lowry, Shane",13900,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Manassero, Matteo",11460,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Mansell, Richard",24185,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"McCarty, Matt",28635,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"McGreevy, Max",23505,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Meronk, Adrian",14196,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Moore, Taylor",21944,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Noren, Alex",10419,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Norgaard, Niklas",15676,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Ok, Taehoon",21072,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Olesen, Thorbjorn",13412,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Otaegui, Adrian",14975,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Parry, John",13764,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Pavon, Matthieu",19960,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Penge, Marco",22465,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Premlall, Yurav",25890,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Puig, David",28984,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Rai, Aaron",18554,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Ravetto, David",23416,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Reitan, Kristoffer",21407,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Rozner, Antoine",18770,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Schaper, Jayden",26991,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Schauffele, Xander",19895,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Scheffler, Scottie",18417,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Schott, Freddy",27588,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Siem, Marcel",6950,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Smalley, Alex",18474,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Smotherman, Austin",22985,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Sterne, Richard",7049,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Stevens, Sam",25569,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Straka, Sepp",17511,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Strydom, Ockie",13731,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Syme, Connor",22089,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Wallace, Matt",20706,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Waring, Paul",12426,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Wiesberger, Bernd",9531,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Wu, Ashun",11763,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"Yu, Kevin",17881,CUT,,0,0,0,0,0,1
+2026,Genesis Scottish Open,541,2026-07-12,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
 2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Snedeker, Brandt",8820,1,1.0,1,1,1,1,1,0
 2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hubbard, Mark",16333,2,2.0,0,1,1,1,1,0
 2026,ONEflight Myrtle Beach Classic,553,2026-05-10,"Hossler, Beau",15470,T3,3.0,0,1,1,1,1,0
