@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-13 13:48:03 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,197 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-07-13 13:48:00 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-08 10:29:28 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
-    },
-    {
-      "timestamp": "2026-07-08 04:38:37 ET",
       "type": "field_odds_refresh",
       "event_name": "Genesis Scottish Open",
       "details": "Field updated: 541, 100"
