@@ -1,121 +1,121 @@
 {
   "events": [
     {
-      "timestamp": "2026-07-11 06:00:13 ET",
+      "timestamp": "2026-07-13 13:14:44 ET",
       "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
+      "event_name": "The Open Championship",
+      "details": "Field updated: 100"
     },
     {
-      "timestamp": "2026-07-10 23:30:07 ET",
+      "timestamp": "2026-07-12 22:15:23 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 23:00:14 ET",
+      "timestamp": "2026-07-12 20:30:03 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 22:30:06 ET",
+      "timestamp": "2026-07-12 20:00:10 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 22:00:08 ET",
+      "timestamp": "2026-07-12 19:30:09 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 21:30:06 ET",
+      "timestamp": "2026-07-12 19:00:09 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 21:00:11 ET",
+      "timestamp": "2026-07-12 18:33:48 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 20:31:42 ET",
+      "timestamp": "2026-07-12 17:01:29 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 20:06:56 ET",
+      "timestamp": "2026-07-12 15:30:35 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 18:05:51 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
-    },
-    {
-      "timestamp": "2026-07-10 18:05:52 ET",
+      "timestamp": "2026-07-12 14:30:08 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 17:37:02 ET",
+      "timestamp": "2026-07-12 14:01:56 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 17:00:11 ET",
+      "timestamp": "2026-07-12 13:31:17 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 14:30:11 ET",
+      "timestamp": "2026-07-11 23:00:11 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 14:00:08 ET",
+      "timestamp": "2026-07-11 22:00:06 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 13:30:06 ET",
+      "timestamp": "2026-07-11 21:30:32 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 13:00:07 ET",
+      "timestamp": "2026-07-11 20:30:06 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 12:30:09 ET",
+      "timestamp": "2026-07-11 20:05:26 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 156 players"
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 12:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Genesis Scottish Open",
-      "details": "Field updated: 541, 100"
+      "timestamp": "2026-07-11 17:31:27 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 71 players"
     },
     {
-      "timestamp": "2026-07-10 12:00:08 ET",
+      "timestamp": "2026-07-11 17:02:49 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 71 players"
+    },
+    {
+      "timestamp": "2026-07-11 16:21:12 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 156 players"
