@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 100,
     "event_name": "The Open Championship",
-    "player_count": 155,
+    "player_count": 156,
     "player_names": [
       "Aberg, Ludvig",
       "Ayora, Angel",
@@ -34,6 +34,7 @@
       "Day, Jason",
       "De Castro Piera, Alejandro",
       "DeChambeau, Bryson",
+      "Dean, Joe",
       "Detry, Thomas",
       "Docherty, Alistair",
       "Du Plessis, Hennie",
@@ -160,8 +161,16 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-13 05:39:03 ET",
+    "last_updated": "2026-07-13 10:00:27 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-13 10:00:27 ET",
+        "added": [
+          "Dean, Joe"
+        ],
+        "withdrawn": [],
+        "note": "+1 / -0"
+      },
       {
         "timestamp": "2026-07-13 05:39:03 ET",
         "added": [
@@ -355,12 +364,6 @@
       },
       {
         "timestamp": "2026-07-10 10:42:13 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-10 05:46:45 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
