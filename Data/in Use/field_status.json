@@ -161,8 +161,14 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-14 15:35:14 ET",
+    "last_updated": "2026-07-15 04:24:39 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-15 04:24:39 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-14 15:35:14 ET",
         "added": [],
@@ -365,12 +371,6 @@
           "Yu, Kevin"
         ],
         "note": "+70 / -71"
-      },
-      {
-        "timestamp": "2026-07-12 15:14:06 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
