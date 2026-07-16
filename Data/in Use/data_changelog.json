@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-16 18:03:55 ET",
+      "type": "field_odds_refresh",
+      "event_name": "The Open Championship",
+      "details": "Field updated: 100"
+    },
+    {
+      "timestamp": "2026-07-16 18:03:56 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 156 players"
+    },
+    {
       "timestamp": "2026-07-16 06:06:49 ET",
       "type": "field_odds_refresh",
       "event_name": "The Open Championship",
@@ -104,18 +116,6 @@
     },
     {
       "timestamp": "2026-07-12 14:01:56 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 71 players"
-    },
-    {
-      "timestamp": "2026-07-12 13:31:17 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 71 players"
-    },
-    {
-      "timestamp": "2026-07-11 23:00:11 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 71 players"
