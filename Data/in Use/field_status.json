@@ -161,8 +161,14 @@
       "Yonezawa, Ren",
       "Young, Cameron"
     ],
-    "last_updated": "2026-07-16 04:24:03 ET",
+    "last_updated": "2026-07-16 10:08:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-16 10:08:15 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-16 04:24:03 ET",
         "added": [],
@@ -216,16 +222,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-13 13:47:46 ET",
-        "added": [
-          "Potgieter, Aldrich"
-        ],
-        "withdrawn": [
-          "Oosthuizen, Louis"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
