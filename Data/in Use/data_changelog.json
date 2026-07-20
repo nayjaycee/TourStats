@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-20 09:45:24 ET",
+      "type": "field_odds_refresh",
+      "event_name": "3M Open",
+      "details": "Field updated: 525"
+    },
+    {
       "timestamp": "2026-07-20 05:26:47 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "The Open Championship",
       "details": "Field updated: 100"
-    },
-    {
-      "timestamp": "2026-07-13 16:48:06 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,197 rows (l12/l24/ytd)"
     }
   ]
 }
