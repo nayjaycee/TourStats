@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-20 13:17:36 ET",
+      "type": "field_odds_refresh",
+      "event_name": "3M Open",
+      "details": "Field updated: 525"
+    },
+    {
       "timestamp": "2026-07-20 10:21:33 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-15 09:56:10 ET",
-      "type": "field_odds_refresh",
-      "event_name": "The Open Championship",
-      "details": "Field updated: 100"
-    },
-    {
-      "timestamp": "2026-07-15 04:24:39 ET",
       "type": "field_odds_refresh",
       "event_name": "The Open Championship",
       "details": "Field updated: 100"
