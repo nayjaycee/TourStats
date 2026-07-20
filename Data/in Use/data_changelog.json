@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-20 13:38:11 ET",
+      "type": "field_odds_refresh",
+      "event_name": "3M Open",
+      "details": "Field updated: 525"
+    },
+    {
       "timestamp": "2026-07-20 06:00:05 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-18 20:38:31 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-18 20:05:31 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 78 players"

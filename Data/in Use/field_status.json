@@ -2,12 +2,13 @@
   "this_week": {
     "event_id": 525,
     "event_name": "3M Open",
-    "player_count": 145,
+    "player_count": 140,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
       "Blair, Zac",
       "Blanchet, Chandler",
+      "Brehm, Ryan",
       "Brennan, Michael",
       "Campbell, Brian",
       "Campbell, Thomas",
@@ -23,7 +24,6 @@
       "Dahmen, Joel",
       "Davis, Cam",
       "Day, Jason",
-      "Dean, Joe",
       "Donohue, Muzzy",
       "Dou, Zecheng",
       "Dumont De Chassart, Adrien",
@@ -65,7 +65,6 @@
       "Kanaya, Takumi",
       "Kang, Jeffrey",
       "Keefer, Johnny",
-      "Keefer, Johnny",
       "Kim, Michael",
       "Kim, Tom",
       "Kirk, Chris",
@@ -96,17 +95,14 @@
       "Mouw, William",
       "Nakajima, Keita",
       "Neergaard-Petersen, Rasmus",
-      "Noh, S.Y.",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
       "Parry, John",
       "Paul, Jeremy",
       "Pavon, Matthieu",
       "Pendrith, Taylor",
-      "Perez, Victor",
       "Peterson, Paul",
       "Phillips, Chandler",
-      "Potgieter, Aldrich",
       "Potgieter, Aldrich",
       "Power, Seamus",
       "Putnam, Andrew",
@@ -135,7 +131,6 @@
       "Svensson, Adam",
       "Svensson, Jesper",
       "Thompson, Davis",
-      "Thorbjornsen, Michael",
       "Tosti, Alejandro",
       "Van Rooyen, Erik",
       "VanDerLaan, John",
@@ -150,8 +145,21 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-20 06:00:05 ET",
+    "last_updated": "2026-07-20 13:38:11 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-20 13:38:11 ET",
+        "added": [
+          "Brehm, Ryan"
+        ],
+        "withdrawn": [
+          "Dean, Joe",
+          "Noh, S.Y.",
+          "Perez, Victor",
+          "Thorbjornsen, Michael"
+        ],
+        "note": "+1 / -4"
+      },
       {
         "timestamp": "2026-07-20 06:00:05 ET",
         "added": [
@@ -587,12 +595,6 @@
       },
       {
         "timestamp": "2026-07-11 06:00:13 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-10 18:05:51 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
