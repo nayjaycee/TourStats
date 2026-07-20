@@ -8,7 +8,6 @@
       "Bezuidenhout, Christiaan",
       "Blair, Zac",
       "Blanchet, Chandler",
-      "Brehm, Ryan",
       "Brennan, Michael",
       "Campbell, Brian",
       "Campbell, Thomas",
@@ -35,7 +34,6 @@
       "Finau, Tony",
       "Fishburn, Patrick",
       "Fisk, Steven",
-      "Fox, Ryan",
       "Garnett, Brice",
       "Ghim, Doug",
       "Glover, Lucas",
@@ -48,6 +46,7 @@
       "Hardy, Nick",
       "Harman, Brian",
       "Higgo, Garrick",
+      "Higgs, Harry",
       "Highsmith, Joe",
       "Hirata, Kensei",
       "Hodges, Lee",
@@ -62,6 +61,7 @@
       "Im, Sungjae",
       "Jaeger, Stephan",
       "James, Ben",
+      "Jarvis, Casey",
       "Kanaya, Takumi",
       "Kang, Jeffrey",
       "Keefer, Johnny",
@@ -85,6 +85,7 @@
       "Malnati, Peter",
       "Martin, Ben",
       "Matsuyama, Hideki",
+      "Mazzoli, Stefano",
       "McCarthy, Denny",
       "McGreevy, Max",
       "McNealy, Maverick",
@@ -96,7 +97,6 @@
       "Nakajima, Keita",
       "Neergaard-Petersen, Rasmus",
       "Noh, S.Y.",
-      "Norlander, Henrik",
       "Nyholm, Pontus",
       "Olesen, Thorbjorn",
       "Parry, John",
@@ -150,8 +150,22 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-19 18:00:36 ET",
+    "last_updated": "2026-07-20 06:00:05 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-20 06:00:05 ET",
+        "added": [
+          "Higgs, Harry",
+          "Jarvis, Casey",
+          "Mazzoli, Stefano"
+        ],
+        "withdrawn": [
+          "Brehm, Ryan",
+          "Fox, Ryan",
+          "Norlander, Henrik"
+        ],
+        "note": "+3 / -3"
+      },
       {
         "timestamp": "2026-07-19 18:00:36 ET",
         "added": [
@@ -579,12 +593,6 @@
       },
       {
         "timestamp": "2026-07-10 18:05:51 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-10 12:00:03 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
