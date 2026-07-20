@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-20 09:45:36 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 22,882 rows across 62 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-07-20 09:45:24 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-14 09:59:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "The Open Championship",
-      "details": "Field updated: 100"
-    },
-    {
-      "timestamp": "2026-07-14 04:19:09 ET",
       "type": "field_odds_refresh",
       "event_name": "The Open Championship",
       "details": "Field updated: 100"
