@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 525,
     "event_name": "3M Open",
-    "player_count": 140,
+    "player_count": 144,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
@@ -31,6 +31,7 @@
       "Dunlap, Nick",
       "Eckroat, Austin",
       "Ewart, A.J.",
+      "Fahrny, Brannon",
       "Finau, Tony",
       "Fishburn, Patrick",
       "Fisk, Steven",
@@ -116,7 +117,9 @@
       "Scheffler, Scottie",
       "Schenk, Adam",
       "Schmid, Matti",
+      "Schultz, Cooper",
       "Shipley, Neal",
+      "Sihota, Jeevan",
       "Silverman, Ben",
       "Skinns, David",
       "Smith, Jordan",
@@ -140,13 +143,25 @@
       "Walker, Danny",
       "Whaley, Vince",
       "Wise, Aaron",
+      "Wood, Griffin",
       "Woodland, Gary",
       "Wu, Dylan",
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-20 16:59:45 ET",
+    "last_updated": "2026-07-21 04:38:10 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-21 04:38:10 ET",
+        "added": [
+          "Fahrny, Brannon",
+          "Schultz, Cooper",
+          "Sihota, Jeevan",
+          "Wood, Griffin"
+        ],
+        "withdrawn": [],
+        "note": "+4 / -0"
+      },
       {
         "timestamp": "2026-07-20 16:59:45 ET",
         "added": [],
@@ -440,12 +455,6 @@
       },
       {
         "timestamp": "2026-07-19 04:27:52 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-18 15:12:59 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
