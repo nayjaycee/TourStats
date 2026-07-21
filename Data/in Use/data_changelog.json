@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-21 18:02:16 ET",
+      "type": "field_odds_refresh",
+      "event_name": "",
+      "details": "Field updated: "
+    },
+    {
+      "timestamp": "2026-07-20 13:38:24 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 140 players"
+    },
+    {
       "timestamp": "2026-07-20 13:38:23 ET",
       "type": "approach_refresh",
       "event_name": "",
@@ -104,18 +116,6 @@
     },
     {
       "timestamp": "2026-07-19 11:03:22 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-18 23:06:25 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-18 21:30:35 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 78 players"
