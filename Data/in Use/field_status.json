@@ -23,7 +23,6 @@
       "Crowe, Trace",
       "Dahmen, Joel",
       "Davis, Cam",
-      "Day, Jason",
       "Donohue, Muzzy",
       "Dou, Zecheng",
       "Dumont De Chassart, Adrien",
@@ -52,6 +51,7 @@
       "Hirata, Kensei",
       "Hodges, Lee",
       "Hoey, Rico",
+      "Hoffman, Charley",
       "Hoge, Tom",
       "Hojgaard, Rasmus",
       "Homa, Max",
@@ -149,8 +149,18 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-22 10:10:19 ET",
+    "last_updated": "2026-07-22 15:35:38 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-22 15:35:38 ET",
+        "added": [
+          "Hoffman, Charley"
+        ],
+        "withdrawn": [
+          "Day, Jason"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-22 10:10:19 ET",
         "added": [],
@@ -213,16 +223,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-20 09:45:24 ET",
-        "added": [],
-        "withdrawn": [
-          "Dean, Joe",
-          "Perez, Victor",
-          "Thorbjornsen, Michael"
-        ],
-        "note": "+0 / -3"
       }
     ]
   },
