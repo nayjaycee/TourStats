@@ -1,6 +1,36 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-23 18:01:31 ET",
+      "type": "field_odds_refresh",
+      "event_name": "3M Open",
+      "details": "Field updated: 525"
+    },
+    {
+      "timestamp": "2026-07-23 18:01:31 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 144 players"
+    },
+    {
+      "timestamp": "2026-07-23 17:06:30 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 144 players"
+    },
+    {
+      "timestamp": "2026-07-23 15:00:57 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 144 players"
+    },
+    {
+      "timestamp": "2026-07-23 14:02:56 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 144 players"
+    },
+    {
       "timestamp": "2026-07-23 12:06:44 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -86,36 +116,6 @@
     },
     {
       "timestamp": "2026-07-19 21:00:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-19 18:00:36 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
-    },
-    {
-      "timestamp": "2026-07-19 18:00:36 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-19 16:00:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-19 15:30:08 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
-    },
-    {
-      "timestamp": "2026-07-19 15:00:10 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 78 players"
