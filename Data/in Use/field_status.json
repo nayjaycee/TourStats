@@ -149,8 +149,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-24 04:35:10 ET",
+    "last_updated": "2026-07-24 09:57:55 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-24 09:57:55 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-24 04:35:10 ET",
         "added": [],
@@ -208,17 +214,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-21 04:38:10 ET",
-        "added": [
-          "Fahrny, Brannon",
-          "Schultz, Cooper",
-          "Sihota, Jeevan",
-          "Wood, Griffin"
-        ],
-        "withdrawn": [],
-        "note": "+4 / -0"
       }
     ]
   },
