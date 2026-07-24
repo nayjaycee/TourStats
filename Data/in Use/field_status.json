@@ -149,8 +149,14 @@
       "Yellamaraju, Sudarshan",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-23 15:27:59 ET",
+    "last_updated": "2026-07-24 04:35:10 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-24 04:35:10 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-23 15:27:59 ET",
         "added": [],
@@ -213,12 +219,6 @@
         ],
         "withdrawn": [],
         "note": "+4 / -0"
-      },
-      {
-        "timestamp": "2026-07-20 16:59:45 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
