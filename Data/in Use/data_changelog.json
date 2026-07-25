@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-25 15:17:21 ET",
+      "type": "field_odds_refresh",
+      "event_name": "3M Open",
+      "details": "Field updated: 525, 524"
+    },
+    {
       "timestamp": "2026-07-25 09:48:23 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,214 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-07-20 13:17:49 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 22,882 rows across 62 events. Finishes rebuilt."
     }
   ]
 }
