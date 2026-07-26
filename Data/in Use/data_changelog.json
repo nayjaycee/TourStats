@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-26 15:20:24 ET",
+      "type": "field_odds_refresh",
+      "event_name": "3M Open",
+      "details": "Field updated: 525, 524"
+    },
+    {
       "timestamp": "2026-07-26 09:42:08 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -113,12 +119,6 @@
       "type": "rounds_refresh",
       "event_name": "",
       "details": "Rounds refreshed \u2014 22,882 rows across 62 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-07-20 16:59:45 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
     }
   ]
 }
