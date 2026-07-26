@@ -1,124 +1,124 @@
 {
   "events": [
     {
-      "timestamp": "2026-07-23 18:01:31 ET",
+      "timestamp": "2026-07-26 18:00:03 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
-      "details": "Field updated: 525"
+      "details": "Field updated: 525, 524"
     },
     {
-      "timestamp": "2026-07-23 18:01:31 ET",
+      "timestamp": "2026-07-26 18:00:09 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-23 17:06:30 ET",
+      "timestamp": "2026-07-26 17:30:06 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-23 15:00:57 ET",
+      "timestamp": "2026-07-26 17:00:11 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-23 14:02:56 ET",
+      "timestamp": "2026-07-26 16:30:07 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-23 12:06:44 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
-    },
-    {
-      "timestamp": "2026-07-23 12:06:44 ET",
+      "timestamp": "2026-07-26 16:01:34 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 144 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-22 18:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
-    },
-    {
-      "timestamp": "2026-07-21 18:02:16 ET",
-      "type": "field_odds_refresh",
-      "event_name": "",
-      "details": "Field updated: "
-    },
-    {
-      "timestamp": "2026-07-20 13:38:24 ET",
+      "timestamp": "2026-07-26 14:22:18 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 140 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-20 13:38:23 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,214 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-07-20 13:38:21 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 22,882 rows across 62 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-07-20 13:38:11 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
-    },
-    {
-      "timestamp": "2026-07-20 06:00:05 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
-    },
-    {
-      "timestamp": "2026-07-19 23:30:05 ET",
+      "timestamp": "2026-07-26 11:30:30 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-19 23:00:13 ET",
+      "timestamp": "2026-07-26 11:03:16 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-19 22:30:04 ET",
+      "timestamp": "2026-07-25 23:32:22 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-19 22:00:05 ET",
+      "timestamp": "2026-07-25 21:30:26 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-19 21:30:04 ET",
+      "timestamp": "2026-07-25 21:00:09 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
+      "details": "Live odds refreshed \u2014 66 players"
     },
     {
-      "timestamp": "2026-07-19 21:00:05 ET",
+      "timestamp": "2026-07-25 20:30:07 ET",
       "type": "live_odds_refresh",
       "event_name": "",
-      "details": "Live odds refreshed \u2014 78 players"
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-25 20:00:19 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-25 19:30:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-25 19:01:35 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-25 17:02:26 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-25 16:33:42 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-25 14:04:31 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
+    },
+    {
+      "timestamp": "2026-07-25 13:02:57 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 143 players"
     }
   ]
 }
