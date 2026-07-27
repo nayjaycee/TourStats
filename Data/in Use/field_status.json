@@ -45,7 +45,6 @@
       "Gotterup, Chris",
       "Greyserman, Max",
       "Griffin, Ben",
-      "Griffin, Lanto",
       "Grillo, Emiliano",
       "Hall, Harry",
       "Henley, Russell",
@@ -76,6 +75,7 @@
       "Kizzire, Patton",
       "Knapp, Jake",
       "Koepka, Brooks",
+      "Kohles, Ben",
       "Koivun, Jackson",
       "Kuchar, Matt",
       "Lamprecht, Christo",
@@ -146,8 +146,18 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-27 06:02:10 ET",
+    "last_updated": "2026-07-27 10:08:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-27 10:08:03 ET",
+        "added": [
+          "Kohles, Ben"
+        ],
+        "withdrawn": [
+          "Griffin, Lanto"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-27 06:02:10 ET",
         "added": [
@@ -279,12 +289,6 @@
       },
       {
         "timestamp": "2026-07-24 09:57:55 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-24 04:35:10 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
