@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-27 10:08:16 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 23,528 rows across 64 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-07-27 10:08:03 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-21 10:09:16 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525"
-    },
-    {
-      "timestamp": "2026-07-21 04:38:10 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
       "details": "Field updated: 525"
