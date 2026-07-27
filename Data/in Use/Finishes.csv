@@ -3306,6 +3306,150 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Corales Puntacana Championship,522,2026-07-19,"Whaley, Vince",25908,CUT,,0,0,0,0,0,1
 2026,Corales Puntacana Championship,522,2026-07-19,"Willett, Danny",12920,CUT,,0,0,0,0,0,1
 2026,Corales Puntacana Championship,522,2026-07-19,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Koivun, Jackson",32319,1,1.0,1,1,1,1,1,0
+2026,3M Open,525,2026-07-26,"Scheffler, Scottie",18417,2,2.0,0,1,1,1,1,0
+2026,3M Open,525,2026-07-26,"Harman, Brian",8825,T3,3.0,0,1,1,1,1,0
+2026,3M Open,525,2026-07-26,"Matsuyama, Hideki",13562,T3,3.0,0,1,1,1,1,0
+2026,3M Open,525,2026-07-26,"McCarthy, Denny",19870,T3,3.0,0,1,1,1,1,0
+2026,3M Open,525,2026-07-26,"Phillips, Chandler",27164,T3,3.0,0,1,1,1,1,0
+2026,3M Open,525,2026-07-26,"Grillo, Emiliano",12808,T7,7.0,0,0,1,1,1,0
+2026,3M Open,525,2026-07-26,"Thompson, Davis",27364,T7,7.0,0,0,1,1,1,0
+2026,3M Open,525,2026-07-26,"Kohles, Ben",16395,9,9.0,0,0,1,1,1,0
+2026,3M Open,525,2026-07-26,"Kim, Michael",17543,T10,10.0,0,0,1,1,1,0
+2026,3M Open,525,2026-07-26,"Power, Seamus",10104,T10,10.0,0,0,1,1,1,0
+2026,3M Open,525,2026-07-26,"Woodland, Gary",12577,T10,10.0,0,0,1,1,1,0
+2026,3M Open,525,2026-07-26,"Blair, Zac",17639,T13,13.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Horschel, Billy",11276,T13,13.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Knapp, Jake",19396,T13,13.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Chatfield, Davis",30620,T16,16.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Dou, Zecheng",16757,T16,16.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Fishburn, Patrick",25094,T16,16.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Yu, Kevin",17881,T16,16.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Bezuidenhout, Christiaan",18103,T20,20.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Hodges, Lee",25157,T20,20.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Kim, Tom",24766,T20,20.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Neergaard-Petersen, Rasmus",23841,T20,20.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Blanchet, Chandler",24956,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Brennan, Michael",29197,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Kitayama, Kurt",21891,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Lebioda, Hank",21943,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Parry, John",13764,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Smotherman, Austin",22985,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Streelman, Kevin",8480,T24,24.0,0,0,0,1,1,0
+2026,3M Open,525,2026-07-26,"Greyserman, Max",23465,T31,31.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Kirk, Chris",12423,T31,31.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Roy, Kevin",18424,T31,31.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Dahmen, Joel",14509,T34,34.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Donohue, Muzzy",33994,T34,34.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Hubbard, Mark",16333,T34,34.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"McNealy, Maverick",18634,T34,34.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Whaley, Vince",25908,T34,34.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Conners, Corey",17576,T39,39.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Merritt, Troy",13367,T39,39.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Nyholm, Pontus",25475,T39,39.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Smith, Jordan",18586,T39,39.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"VanDerLaan, John",25319,T39,39.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Bauchou, Zach",19846,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Castillo, Ricky",27819,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Hughes, Mackenzie",15556,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Mitchell, Keith",17365,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Schmid, Matti",20722,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Shipley, Neal",32055,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Svensson, Jesper",26850,T44,44.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Jarvis, Casey",26947,T51,51.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Stanger, Jimmy",23048,T51,51.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Ventura, Kristoffer",15651,T51,51.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Villegas, Camilo",9171,T51,51.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Ewart, A.J.",21883,55,55.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Hossler, Beau",15470,56,56.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Eckroat, Austin",26653,T57,57.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Glover, Lucas",7399,T57,57.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Li, Haotong",15310,T57,57.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Gordon, Will",26660,T60,60.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Stevens, Sam",25569,T60,60.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Crowe, Trace",27780,T62,62.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Hoey, Rico",23504,T62,62.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Griffin, Lanto",15330,T64,64.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Kang, Jeffrey",21889,T64,64.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Gomez, Fabian",8571,66,66.0,0,0,0,0,1,0
+2026,3M Open,525,2026-07-26,"Brehm, Ryan",10423,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Campbell, Brian",18628,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Campbell, Thomas",18359,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Campos, Rafael",12909,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Champ, Cameron",23542,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Clanton, Luke",32330,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Coody, Pierceson",28309,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Cowan, Ryder",35481,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Davis, Cam",17786,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Dumont de Chassart, Adrien",22002,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Duncan, Tyler",18187,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Dunlap, Nick",28270,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Fahrny, Brannon",34058,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Finau, Tony",11676,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Fisk, Steven",26657,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Garnett, Brice",11451,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Ghim, Doug",24550,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Hadwin, Adam",13965,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Hardy, Nick",19865,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Higgo, Garrick",24342,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Higgs, Harry",14140,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Highsmith, Joe",28469,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Hirata, Kensei",20954,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Hoffman, Charley",5768,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Hoge, Tom",15575,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Hojgaard, Rasmus",23838,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Homa, Max",17538,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Im, Sungjae",17488,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Jaeger, Stephan",16394,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"James, Ben",29827,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Kanaya, Takumi",19729,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Keefer, Johnny",32457,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Kizzire, Patton",13470,WD,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Kuchar, Matt",6169,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Lamprecht, Christo",24343,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Lindheim, Nicholas",16713,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Lipsky, David",15980,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"List, Luke",7960,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Lower, Justin",17723,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Malnati, Peter",14926,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Martin, Ben",14007,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Mazzoli, Stefano",20844,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"McGreevy, Max",23505,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Meissner, Mac",28159,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Moore, Taylor",21944,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Mouw, William",29770,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Nakajima, Keita",21074,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Olesen, Thorbjorn",13412,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Paul, Jeremy",22087,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Pavon, Matthieu",19960,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Pendrith, Taylor",17780,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Peterson, Paul",16341,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Potgieter, Aldrich",27900,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Putnam, Andrew",14704,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Ramey, Chad",19840,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Riley, Davis",19872,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Rodgers, Patrick",16283,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Rozo, Marcelo",16591,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Sandhu, Sihan",35632,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Sargent, Gordon",30814,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Schenk, Adam",19477,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Schultz, Cooper",31250,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Sihota, Jeevan",29702,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Silverman, Ben",17381,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Skinns, David",10873,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Snedeker, Brandt",8820,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Springer, Hayden",21995,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Stout, Preston",32089,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Suber, Jackson",29279,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Svensson, Adam",13997,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Tosti, Alejandro",17032,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Vilips, Karl",24304,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Walker, Danny",25003,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Wise, Aaron",22051,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Wood, Griffin",29710,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Wu, Dylan",25002,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
+2026,3M Open,525,2026-07-26,"van Rooyen, Erik",17550,CUT,,0,0,0,0,0,1
 2026,Genesis Scottish Open,541,2026-07-12,"Kim, Tom",24766,1,1.0,1,1,1,1,1,0
 2026,Genesis Scottish Open,541,2026-07-12,"Lee, Min Woo",16841,2,2.0,0,1,1,1,1,0
 2026,Genesis Scottish Open,541,2026-07-12,"Fitzpatrick, Matt",17646,T3,3.0,0,1,1,1,1,0
@@ -3964,6 +4108,63 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Andalucia,1024,2026-06-07,"Asaji, Yosuke",12637,56,56.0,0,0,0,0,1,0
 2026,Andalucia,1024,2026-06-07,"Oosthuizen, Louis",7672,WD,,0,0,0,0,0,1
 2026,Andalucia,1024,2026-06-07,"Ormsby, Wade",7532,NAN,,0,0,0,0,0,1
+2026,United Kingdom,1025,2026-07-26,"Herbert, Lucas",17064,1,1.0,1,1,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Hatton, Tyrrell",14796,2,2.0,0,1,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"DeChambeau, Bryson",19841,3,3.0,0,1,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Smith, Cameron",15856,4,4.0,0,1,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Ancer, Abraham",18238,T5,5.0,0,1,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Surratt, Caleb",30463,T5,5.0,0,1,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Canter, Laurie",14795,T7,7.0,0,0,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Howell III, Charles",6892,T7,7.0,0,0,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Varner III, Harold",16602,T7,7.0,0,0,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Ortiz, Carlos",14735,10,10.0,0,0,1,1,1,0
+2026,United Kingdom,1025,2026-07-26,"An, Byeong Hun",14459,11,11.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Kim, Anthony",11641,T12,12.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Leishman, Marc",7649,T12,12.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Puig, David",28984,T12,12.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Poulter, Ian",1435,T15,15.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Uihlein, Peter",11357,T15,15.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Burmester, Dean",14424,T17,17.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Grace, Branden",11952,T17,17.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Hellgren, Bjorn",16231,T17,17.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Ballester, Jose Luis",28473,T20,20.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"McKibbin, Tom",22322,T20,20.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Schwartzel, Charl",7398,22,22.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Casey, Paul",7108,T23,23.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Lahiri, Anirban",12669,T23,23.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Perez, Victor",20730,T23,23.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Pieters, Thomas",13944,T23,23.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Rahm, Jon",19195,T23,23.0,0,0,0,1,1,0
+2026,United Kingdom,1025,2026-07-26,"Meronk, Adrian",14196,T28,28.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Niemann, Joaquin",18079,T28,28.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Vincent, Scott",14559,T28,28.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Detry, Thomas",14181,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Kaymer, Martin",8117,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Lee, Danny",11826,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Masaveu, Luis",30428,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Song, Younghan",16160,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Tringale, Cameron",14013,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Vorster, Martin",25829,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Watson, Bubba",7334,T31,31.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Horsfield, Sam",19866,T39,39.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Munoz, Sebastian",20770,T39,39.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Westwood, Lee",4052,41,41.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Garcia, Sergio",5689,T42,42.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Wolff, Matthew",25919,T42,42.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Asaji, Yosuke",12637,44,44.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Bland, Richard",6516,T45,45.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Gooch, Talor",18580,T45,45.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Kim, Minkyu",20780,T47,47.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Smyth, Trav",19232,T47,47.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Steele, Brendan",11019,T47,47.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Tabuena, Miguel",15274,50,50.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Campbell, Ben",14373,51,51.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Johnson, Dustin",12422,52,52.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"McDowell, Graeme",7548,T53,53.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Mun, Doyeob",17386,T53,53.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Kokrak, Jason",12337,55,55.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"La Sasso, Michael",33755,56,56.0,0,0,0,0,1,0
+2026,United Kingdom,1025,2026-07-26,"Lee, Richard",12413,WD,,0,0,0,0,0,1
 2026,Riyadh,1027,2026-02-07,"Smylie, Elvis",24200,1,1.0,1,1,1,1,1,0
 2026,Riyadh,1027,2026-02-07,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
 2026,Riyadh,1027,2026-02-07,"Uihlein, Peter",11357,3,3.0,0,1,1,1,1,0
