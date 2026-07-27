@@ -7,11 +7,11 @@
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
       "Bhatia, Akshay",
+      "Blair, Zac",
       "Blanchet, Chandler",
       "Bradley, Keegan",
       "Brennan, Michael",
       "Bridgeman, Jacob",
-      "Brown, Dan",
       "Campbell, Brian",
       "Campos, Rafael",
       "Cantlay, Patrick",
@@ -26,7 +26,6 @@
       "Dahmen, Joel",
       "Dalke, Brad",
       "Davis, Cam",
-      "Day, Jason",
       "Dou, Zecheng",
       "Dumont De Chassart, Adrien",
       "Dunlap, Nick",
@@ -124,6 +123,7 @@
       "Snedeker, Brandt",
       "Spaun, J.J.",
       "Spieth, Jordan",
+      "Springer, Hayden",
       "Stevens, Sam",
       "Streelman, Kevin",
       "Suber, Jackson",
@@ -148,8 +148,20 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-27 13:28:15 ET",
+    "last_updated": "2026-07-27 15:44:00 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-27 15:44:00 ET",
+        "added": [
+          "Blair, Zac",
+          "Springer, Hayden"
+        ],
+        "withdrawn": [
+          "Brown, Dan",
+          "Day, Jason"
+        ],
+        "note": "+2 / -2"
+      },
       {
         "timestamp": "2026-07-27 13:28:15 ET",
         "added": [
@@ -288,12 +300,6 @@
       },
       {
         "timestamp": "2026-07-25 09:48:23 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-25 04:15:35 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
