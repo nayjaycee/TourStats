@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 524,
     "event_name": "Rocket Classic",
-    "player_count": 141,
+    "player_count": 143,
     "player_names": [
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
@@ -45,6 +45,7 @@
       "Gotterup, Chris",
       "Greyserman, Max",
       "Griffin, Ben",
+      "Griffin, Lanto",
       "Grillo, Emiliano",
       "Hall, Harry",
       "Henley, Russell",
@@ -82,6 +83,7 @@
       "Lebioda, Hank",
       "Li, Haotong",
       "Lipsky, David",
+      "Lower, Justin",
       "Malnati, Peter",
       "Matsuyama, Hideki",
       "Mazzoli, Stefano",
@@ -146,8 +148,17 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-27 12:00:04 ET",
+    "last_updated": "2026-07-27 13:46:10 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-27 13:46:10 ET",
+        "added": [
+          "Griffin, Lanto",
+          "Lower, Justin"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-07-27 12:00:04 ET",
         "added": [
@@ -537,12 +548,6 @@
       },
       {
         "timestamp": "2026-07-17 12:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-16 18:03:55 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"

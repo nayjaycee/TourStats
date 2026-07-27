@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-27 13:46:10 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Rocket Classic",
+      "details": "Field updated: 524"
+    },
+    {
       "timestamp": "2026-07-27 12:00:04 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-25 20:30:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-25 20:00:19 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 66 players"
