@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-27 12:00:04 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Rocket Classic",
+      "details": "Field updated: 524"
+    },
+    {
+      "timestamp": "2026-07-26 21:30:03 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-26 21:00:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-26 20:30:03 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-26 20:02:16 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
+      "timestamp": "2026-07-26 19:00:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 66 players"
+    },
+    {
       "timestamp": "2026-07-26 18:00:03 ET",
       "type": "field_odds_refresh",
       "event_name": "3M Open",
@@ -83,42 +119,6 @@
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-25 19:30:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-25 19:01:35 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-25 17:02:26 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-25 16:33:42 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-25 14:04:31 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
-    },
-    {
-      "timestamp": "2026-07-25 13:02:57 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 143 players"
     }
   ]
 }
