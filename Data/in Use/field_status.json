@@ -77,7 +77,6 @@
       "Kirk, Chris",
       "Kizzire, Patton",
       "Knapp, Jake",
-      "Koepka, Brooks",
       "Kohles, Ben",
       "Koivun, Jackson",
       "Kuchar, Matt",
@@ -121,6 +120,7 @@
       "Schenk, Adam",
       "Schmid, Matti",
       "Shipley, Neal",
+      "Silverman, Ben",
       "Simpson, Webb",
       "Smith, Jordan",
       "Smotherman, Austin",
@@ -152,8 +152,18 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-28 10:24:09 ET",
+    "last_updated": "2026-07-28 15:41:13 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-28 15:41:13 ET",
+        "added": [
+          "Silverman, Ben"
+        ],
+        "withdrawn": [
+          "Koepka, Brooks"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-28 10:24:09 ET",
         "added": [],
@@ -303,12 +313,6 @@
       },
       {
         "timestamp": "2026-07-26 15:20:24 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-26 09:42:08 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
