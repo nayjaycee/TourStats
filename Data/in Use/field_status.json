@@ -2,8 +2,9 @@
   "this_week": {
     "event_id": 524,
     "event_name": "Rocket Classic",
-    "player_count": 143,
+    "player_count": 147,
     "player_names": [
+      "Azallion, Daniel",
       "Bauchou, Zach",
       "Bezuidenhout, Christiaan",
       "Bhatia, Akshay",
@@ -16,6 +17,7 @@
       "Campos, Rafael",
       "Cantlay, Patrick",
       "Castillo, Ricky",
+      "Celano, Ryan",
       "Chatfield, Davis",
       "Clanton, Luke",
       "Clark, Wyndham",
@@ -62,6 +64,7 @@
       "Hossler, Beau",
       "Hubbard, Mark",
       "Hughes, Mackenzie",
+      "Huskey, Keenan",
       "Im, Sungjae",
       "Jaeger, Stephan",
       "James, Ben",
@@ -105,6 +108,7 @@
       "Potgieter, Aldrich",
       "Power, Seamus",
       "Putnam, Andrew",
+      "Quiban, Justin",
       "Ramey, Chad",
       "Riley, Davis",
       "Rodgers, Patrick",
@@ -148,8 +152,19 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-27 17:00:38 ET",
+    "last_updated": "2026-07-28 04:45:06 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-28 04:45:06 ET",
+        "added": [
+          "Azallion, Daniel",
+          "Celano, Ryan",
+          "Huskey, Keenan",
+          "Quiban, Justin"
+        ],
+        "withdrawn": [],
+        "note": "+4 / -0"
+      },
       {
         "timestamp": "2026-07-27 17:00:38 ET",
         "added": [],
@@ -294,12 +309,6 @@
       },
       {
         "timestamp": "2026-07-26 04:34:52 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-25 15:17:21 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
