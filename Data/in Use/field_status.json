@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-28 18:00:04 ET",
+    "last_updated": "2026-07-29 06:00:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-29 06:00:04 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-28 18:00:04 ET",
         "added": [
@@ -320,20 +326,6 @@
           "Thorbjornsen, Michael"
         ],
         "note": "+1 / -4"
-      },
-      {
-        "timestamp": "2026-07-20 06:00:05 ET",
-        "added": [
-          "Higgs, Harry",
-          "Jarvis, Casey",
-          "Mazzoli, Stefano"
-        ],
-        "withdrawn": [
-          "Brehm, Ryan",
-          "Fox, Ryan",
-          "Norlander, Henrik"
-        ],
-        "note": "+3 / -3"
       }
     ]
   },
