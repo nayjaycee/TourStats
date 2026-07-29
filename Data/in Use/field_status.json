@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-29 12:00:15 ET",
+    "last_updated": "2026-07-29 18:00:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-29 18:00:04 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-29 12:00:15 ET",
         "added": [],
@@ -305,20 +311,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-22 18:00:03 ET",
-        "added": [
-          "Fahrny, Brannon",
-          "Hoffman, Charley",
-          "Schultz, Cooper",
-          "Sihota, Jeevan",
-          "Wood, Griffin"
-        ],
-        "withdrawn": [
-          "Day, Jason"
-        ],
-        "note": "+5 / -1"
       }
     ]
   },
