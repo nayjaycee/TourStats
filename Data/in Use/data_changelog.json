@@ -1,6 +1,36 @@
 {
   "events": [
     {
+      "timestamp": "2026-07-30 18:03:54 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Rocket Classic",
+      "details": "Field updated: 524"
+    },
+    {
+      "timestamp": "2026-07-30 18:03:54 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 147 players"
+    },
+    {
+      "timestamp": "2026-07-30 16:34:38 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 147 players"
+    },
+    {
+      "timestamp": "2026-07-30 14:02:16 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 147 players"
+    },
+    {
+      "timestamp": "2026-07-30 12:35:31 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 147 players"
+    },
+    {
       "timestamp": "2026-07-29 18:00:04 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
@@ -86,36 +116,6 @@
     },
     {
       "timestamp": "2026-07-26 19:00:04 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-26 18:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "3M Open",
-      "details": "Field updated: 525, 524"
-    },
-    {
-      "timestamp": "2026-07-26 18:00:09 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-26 17:30:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-26 17:00:11 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 66 players"
-    },
-    {
-      "timestamp": "2026-07-26 16:30:07 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 66 players"

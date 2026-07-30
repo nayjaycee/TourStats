@@ -92,7 +92,6 @@
       "McCarty, Matt",
       "McGreevy, Max",
       "Meissner, Mac",
-      "Moore, Taylor",
       "Mouw, William",
       "Nakajima, Keita",
       "Neergaard-Petersen, Rasmus",
@@ -128,6 +127,7 @@
       "Spaun, J.J.",
       "Spieth, Jordan",
       "Springer, Hayden",
+      "Stanger, Jimmy",
       "Stevens, Sam",
       "Streelman, Kevin",
       "Suber, Jackson",
@@ -152,8 +152,18 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-29 18:00:04 ET",
+    "last_updated": "2026-07-30 18:03:54 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-30 18:03:54 ET",
+        "added": [
+          "Stanger, Jimmy"
+        ],
+        "withdrawn": [
+          "Moore, Taylor"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-07-29 18:00:04 ET",
         "added": [],
@@ -302,12 +312,6 @@
       },
       {
         "timestamp": "2026-07-23 18:01:31 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-23 12:06:44 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
