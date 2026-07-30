@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-30 04:37:52 ET",
+    "last_updated": "2026-07-30 10:19:16 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-30 10:19:16 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-30 04:37:52 ET",
         "added": [],
@@ -222,15 +228,6 @@
           "Day, Jason"
         ],
         "note": "+2 / -2"
-      },
-      {
-        "timestamp": "2026-07-27 13:28:15 ET",
-        "added": [
-          "Griffin, Lanto",
-          "Lower, Justin"
-        ],
-        "withdrawn": [],
-        "note": "+2 / -0"
       }
     ]
   },
