@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-30 15:42:08 ET",
+    "last_updated": "2026-07-31 05:10:02 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-31 05:10:02 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-30 15:42:08 ET",
         "added": [
@@ -220,12 +226,6 @@
         ],
         "withdrawn": [],
         "note": "+4 / -0"
-      },
-      {
-        "timestamp": "2026-07-27 17:00:38 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
