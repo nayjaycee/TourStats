@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-07-31 05:10:02 ET",
+    "last_updated": "2026-07-31 10:23:20 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-07-31 10:23:20 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-07-31 05:10:02 ET",
         "added": [],
@@ -215,17 +221,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-28 04:45:06 ET",
-        "added": [
-          "Azallion, Daniel",
-          "Celano, Ryan",
-          "Huskey, Keenan",
-          "Quiban, Justin"
-        ],
-        "withdrawn": [],
-        "note": "+4 / -0"
       }
     ]
   },
