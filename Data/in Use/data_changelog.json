@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-01 15:18:45 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Rocket Classic",
+      "details": "Field updated: 524, 13"
+    },
+    {
       "timestamp": "2026-08-01 09:41:35 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,251 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-07-27 13:28:29 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 23,528 rows across 64 events. Finishes rebuilt."
     }
   ]
 }
