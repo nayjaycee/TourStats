@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-02 04:31:52 ET",
+    "last_updated": "2026-08-02 09:41:23 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-02 09:41:23 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-02 04:31:52 ET",
         "added": [],
@@ -208,12 +214,6 @@
       },
       {
         "timestamp": "2026-07-30 10:19:16 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-30 04:37:52 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
@@ -366,8 +366,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-02 04:31:52 ET",
+    "last_updated": "2026-08-02 09:41:23 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-02 09:41:23 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-02 04:31:52 ET",
         "added": [],
@@ -462,87 +468,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-25 04:15:35 ET",
-        "added": [
-          "Bhatia, Akshay",
-          "Bradley, Keegan",
-          "Bridgeman, Jacob",
-          "Brown, Dan",
-          "Cantlay, Patrick",
-          "Clark, Wyndham",
-          "Dalke, Brad",
-          "Echavarria, Nico",
-          "English, Harris",
-          "Fowler, Rickie",
-          "Gerard, Ryan",
-          "Gotterup, Chris",
-          "Griffin, Ben",
-          "Hall, Harry",
-          "Henley, Russell",
-          "Hisatsune, Ryo",
-          "Hojgaard, Nicolai",
-          "Hooks, Joe",
-          "Jennings, William",
-          "Kim, Si Woo",
-          "Koepka, Brooks",
-          "Mazzoli, Stefano",
-          "McCarty, Matt",
-          "Novak, Andrew",
-          "Penge, Marco",
-          "Ruffels, Ryan",
-          "Saddier, Adrien",
-          "Schauffele, Xander",
-          "Simpson, Webb",
-          "Spaun, J.J.",
-          "Spieth, Jordan",
-          "Taylor, Nick",
-          "Thorbjornsen, Michael",
-          "Todd, Brendon",
-          "Wallace, Matt",
-          "Wilkes-Krier, Patrick",
-          "Young, Cameron"
-        ],
-        "withdrawn": [
-          "Blair, Zac",
-          "Brehm, Ryan",
-          "Campbell, Thomas",
-          "Champ, Cameron",
-          "Cowan, Ryder",
-          "Donohue, Muzzy",
-          "Duncan, Tyler",
-          "Fox, Ryan",
-          "Gomez, Fabian",
-          "Griffin, Lanto",
-          "Hadwin, Adam",
-          "Hardy, Nick",
-          "Harman, Brian",
-          "Homa, Max",
-          "Kim, Chan",
-          "Kim, Tom",
-          "Kitayama, Kurt",
-          "Kohles, Ben",
-          "Kuchar, Matt",
-          "Lindheim, Nicholas",
-          "List, Luke",
-          "Lower, Justin",
-          "Martin, Ben",
-          "Merritt, Troy",
-          "Noh, S.Y.",
-          "Paul, Jeremy",
-          "Peterson, Paul",
-          "Sandhu, Sihan",
-          "Scheffler, Scottie",
-          "Silverman, Ben",
-          "Skinns, David",
-          "Springer, Hayden",
-          "Stanger, Jimmy",
-          "Stout, Preston",
-          "Villegas, Camilo",
-          "Woodland, Gary"
-        ],
-        "note": "+37 / -36"
       }
     ]
   }

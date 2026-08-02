@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-02 09:41:23 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Rocket Classic",
+      "details": "Field updated: 524, 13"
+    },
+    {
       "timestamp": "2026-08-02 04:31:52 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-07-27 17:00:38 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Rocket Classic",
-      "details": "Field updated: 524"
-    },
-    {
-      "timestamp": "2026-07-27 15:44:00 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
       "details": "Field updated: 524"
