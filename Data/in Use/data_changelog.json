@@ -1,6 +1,66 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-03 06:00:04 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Wyndham Championship",
+      "details": "Field updated: 13"
+    },
+    {
+      "timestamp": "2026-08-02 23:30:04 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 23:00:06 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 22:32:44 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 22:00:05 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 21:30:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 21:00:10 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 20:30:10 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 20:00:27 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
+      "timestamp": "2026-08-02 19:30:09 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 73 players"
+    },
+    {
       "timestamp": "2026-08-02 18:00:03 ET",
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
@@ -56,66 +116,6 @@
     },
     {
       "timestamp": "2026-07-31 22:33:59 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-31 21:30:12 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-31 17:32:24 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-31 16:15:45 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-31 15:00:27 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-31 14:32:57 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-31 06:00:15 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Rocket Classic",
-      "details": "Field updated: 524"
-    },
-    {
-      "timestamp": "2026-07-30 23:30:05 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-30 23:00:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-30 22:30:06 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-07-30 22:00:06 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 146 players"
