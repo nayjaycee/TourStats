@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 13,
     "event_name": "Wyndham Championship",
-    "player_count": 143,
+    "player_count": 147,
     "player_names": [
       "Akina, Kihei",
       "Bauchou, Zach",
@@ -60,6 +60,7 @@
       "Hrabak, Cooper",
       "Hubbard, Mark",
       "Hughes, Mackenzie",
+      "Huskey, Keenan",
       "Im, Sungjae",
       "Jaeger, Stephan",
       "James, Ben",
@@ -78,12 +79,14 @@
       "Lebioda, Hank",
       "Li, Haotong",
       "Lipsky, David",
+      "List, Luke",
       "Lower, Justin",
       "Malnati, Peter",
       "Matsuyama, Hideki",
       "Mazzoli, Stefano",
       "McCarthy, Denny",
       "McCarty, Matt",
+      "McGirt, William",
       "McGreevy, Max",
       "McNealy, Maverick",
       "Meissner, Mac",
@@ -109,6 +112,7 @@
       "Ramey, Chad",
       "Riley, Davis",
       "Rodgers, Patrick",
+      "Rodriguez, Lorenzo",
       "Roy, Kevin",
       "Rozo, Marcelo",
       "Saddier, Adrien",
@@ -148,8 +152,19 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-03 15:46:33 ET",
+    "last_updated": "2026-08-03 16:53:19 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-03 16:53:19 ET",
+        "added": [
+          "Huskey, Keenan",
+          "List, Luke",
+          "McGirt, William",
+          "Rodriguez, Lorenzo"
+        ],
+        "withdrawn": [],
+        "note": "+4 / -0"
+      },
       {
         "timestamp": "2026-08-03 15:46:33 ET",
         "added": [
@@ -259,12 +274,6 @@
       },
       {
         "timestamp": "2026-08-01 15:18:45 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-01 09:41:35 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
