@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-03 10:12:20 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Wyndham Championship",
+      "details": "Field updated: 13"
+    },
+    {
       "timestamp": "2026-08-03 05:57:26 ET",
       "type": "field_odds_refresh",
       "event_name": "Wyndham Championship",
@@ -113,12 +119,6 @@
       "type": "field_odds_refresh",
       "event_name": "Rocket Classic",
       "details": "Field updated: 524"
-    },
-    {
-      "timestamp": "2026-07-27 17:00:54 ET",
-      "type": "approach_refresh",
-      "event_name": "",
-      "details": "Approach skill refreshed \u2014 1,251 rows (l12/l24/ytd)"
     }
   ]
 }
