@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 13,
     "event_name": "Wyndham Championship",
-    "player_count": 141,
+    "player_count": 143,
     "player_names": [
       "Akina, Kihei",
       "Bauchou, Zach",
@@ -123,6 +123,7 @@
       "Smotherman, Austin",
       "Snedeker, Brandt",
       "Spieth, Jordan",
+      "Springer, Hayden",
       "Stevens, Sam",
       "Straka, Sepp",
       "Streelman, Kevin",
@@ -138,6 +139,7 @@
       "VanDerLaan, John",
       "Ventura, Kristoffer",
       "Vilips, Karl",
+      "Villegas, Camilo",
       "Walker, Danny",
       "Wallace, Matt",
       "Whaley, Vince",
@@ -146,8 +148,17 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-03 10:53:49 ET",
+    "last_updated": "2026-08-03 13:45:38 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-03 13:45:38 ET",
+        "added": [
+          "Springer, Hayden",
+          "Villegas, Camilo"
+        ],
+        "withdrawn": [],
+        "note": "+2 / -0"
+      },
       {
         "timestamp": "2026-08-03 10:53:49 ET",
         "added": [],
@@ -250,12 +261,6 @@
       },
       {
         "timestamp": "2026-08-01 04:28:52 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-31 15:43:29 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
