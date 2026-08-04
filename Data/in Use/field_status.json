@@ -2,7 +2,7 @@
   "this_week": {
     "event_id": 13,
     "event_name": "Wyndham Championship",
-    "player_count": 143,
+    "player_count": 147,
     "player_names": [
       "Akina, Kihei",
       "Bauchou, Zach",
@@ -15,7 +15,6 @@
       "Brown, Blades",
       "Campbell, Brian",
       "Campos, Rafael",
-      "Cantlay, Patrick",
       "Castillo, Ricky",
       "Cauley, Bud",
       "Chatfield, Davis",
@@ -48,7 +47,6 @@
       "Grillo, Emiliano",
       "Hall, Harry",
       "Harman, Brian",
-      "Higgo, Garrick",
       "Highsmith, Joe",
       "Hirata, Kensei",
       "Hisatsune, Ryo",
@@ -61,6 +59,7 @@
       "Hrabak, Cooper",
       "Hubbard, Mark",
       "Hughes, Mackenzie",
+      "Huskey, Keenan",
       "Im, Sungjae",
       "Jaeger, Stephan",
       "James, Ben",
@@ -79,12 +78,14 @@
       "Lebioda, Hank",
       "Li, Haotong",
       "Lipsky, David",
+      "List, Luke",
       "Lower, Justin",
       "Malnati, Peter",
       "Matsuyama, Hideki",
       "Mazzoli, Stefano",
       "McCarthy, Denny",
       "McCarty, Matt",
+      "McGirt, William",
       "McGreevy, Max",
       "McNealy, Maverick",
       "Meissner, Mac",
@@ -110,6 +111,7 @@
       "Ramey, Chad",
       "Riley, Davis",
       "Rodgers, Patrick",
+      "Rodriguez, Lorenzo",
       "Roy, Kevin",
       "Rozo, Marcelo",
       "Saddier, Adrien",
@@ -117,6 +119,7 @@
       "Schenk, Adam",
       "Schmid, Matti",
       "Shipley, Neal",
+      "Silverman, Ben",
       "Simpson, Webb",
       "Smalley, Alex",
       "Smith, Jordan",
@@ -124,6 +127,7 @@
       "Snedeker, Brandt",
       "Spieth, Jordan",
       "Springer, Hayden",
+      "Stanger, Jimmy",
       "Stevens, Sam",
       "Straka, Sepp",
       "Streelman, Kevin",
@@ -148,8 +152,24 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-03 13:44:58 ET",
+    "last_updated": "2026-08-04 12:00:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-04 12:00:15 ET",
+        "added": [
+          "Huskey, Keenan",
+          "List, Luke",
+          "McGirt, William",
+          "Rodriguez, Lorenzo",
+          "Silverman, Ben",
+          "Stanger, Jimmy"
+        ],
+        "withdrawn": [
+          "Cantlay, Patrick",
+          "Higgo, Garrick"
+        ],
+        "note": "+6 / -2"
+      },
       {
         "timestamp": "2026-08-03 13:44:58 ET",
         "added": [
@@ -262,16 +282,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-28 18:00:04 ET",
-        "added": [
-          "Silverman, Ben"
-        ],
-        "withdrawn": [
-          "Koepka, Brooks"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
