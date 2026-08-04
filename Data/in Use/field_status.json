@@ -47,7 +47,6 @@
       "Grillo, Emiliano",
       "Hall, Harry",
       "Harman, Brian",
-      "Higgo, Garrick",
       "Highsmith, Joe",
       "Hirata, Kensei",
       "Hisatsune, Ryo",
@@ -128,6 +127,7 @@
       "Snedeker, Brandt",
       "Spieth, Jordan",
       "Springer, Hayden",
+      "Stanger, Jimmy",
       "Stevens, Sam",
       "Straka, Sepp",
       "Streelman, Kevin",
@@ -152,8 +152,18 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-04 04:48:08 ET",
+    "last_updated": "2026-08-04 10:30:10 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-04 10:30:10 ET",
+        "added": [
+          "Stanger, Jimmy"
+        ],
+        "withdrawn": [
+          "Higgo, Garrick"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-08-04 04:48:08 ET",
         "added": [],
@@ -268,12 +278,6 @@
       },
       {
         "timestamp": "2026-08-02 09:41:23 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-02 04:31:52 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
