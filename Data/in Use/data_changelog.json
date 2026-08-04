@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-04 18:00:04 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Wyndham Championship",
+      "details": "Field updated: 13"
+    },
+    {
       "timestamp": "2026-08-04 12:00:15 ET",
       "type": "field_odds_refresh",
       "event_name": "Wyndham Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-01 19:06:39 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 73 players"
-    },
-    {
-      "timestamp": "2026-08-01 18:32:58 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 73 players"

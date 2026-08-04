@@ -6,7 +6,6 @@
     "player_names": [
       "Akina, Kihei",
       "Bauchou, Zach",
-      "Berger, Daniel",
       "Bezuidenhout, Christiaan",
       "Blair, Zac",
       "Blanchet, Chandler",
@@ -121,6 +120,7 @@
       "Shipley, Neal",
       "Silverman, Ben",
       "Simpson, Webb",
+      "Skinns, David",
       "Smalley, Alex",
       "Smith, Jordan",
       "Smotherman, Austin",
@@ -152,8 +152,18 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-04 12:00:15 ET",
+    "last_updated": "2026-08-04 18:00:04 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-04 18:00:04 ET",
+        "added": [
+          "Skinns, David"
+        ],
+        "withdrawn": [
+          "Berger, Daniel"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-08-04 12:00:15 ET",
         "added": [
@@ -273,12 +283,6 @@
       },
       {
         "timestamp": "2026-07-29 12:00:15 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-29 06:00:04 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
