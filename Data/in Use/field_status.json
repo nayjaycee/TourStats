@@ -88,8 +88,8 @@
       "McGreevy, Max",
       "McNealy, Maverick",
       "Meissner, Mac",
+      "Merritt, Troy",
       "Mitchell, Keith",
-      "Moore, Taylor",
       "Mouw, William",
       "Neergaard-Petersen, Rasmus",
       "Noren, Alex",
@@ -152,8 +152,18 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-05 10:23:21 ET",
+    "last_updated": "2026-08-05 15:43:47 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-05 15:43:47 ET",
+        "added": [
+          "Merritt, Troy"
+        ],
+        "withdrawn": [
+          "Moore, Taylor"
+        ],
+        "note": "+1 / -1"
+      },
       {
         "timestamp": "2026-08-05 10:23:21 ET",
         "added": [],
@@ -224,12 +234,6 @@
       },
       {
         "timestamp": "2026-08-03 10:53:49 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-03 10:12:20 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
