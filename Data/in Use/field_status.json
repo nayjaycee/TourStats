@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-05 04:45:21 ET",
+    "last_updated": "2026-08-05 10:23:21 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-05 10:23:21 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-05 04:45:21 ET",
         "added": [
@@ -227,64 +233,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-03 05:57:26 ET",
-        "added": [
-          "Akina, Kihei",
-          "Berger, Daniel",
-          "Brown, Blades",
-          "Cauley, Bud",
-          "Collet, Tyler",
-          "Day, Jason",
-          "Fitzpatrick, Alex",
-          "Harman, Brian",
-          "Hrabak, Cooper",
-          "Kim, Tom",
-          "Koepka, Brooks",
-          "McNealy, Maverick",
-          "Mitchell, Keith",
-          "Moore, Taylor",
-          "Noren, Alex",
-          "Pan, C.T.",
-          "Poston, J.T.",
-          "Rai, Aaron",
-          "Smalley, Alex",
-          "Straka, Sepp",
-          "Theegala, Sahith",
-          "Thomas, Justin"
-        ],
-        "withdrawn": [
-          "Azallion, Daniel",
-          "Bhatia, Akshay",
-          "Bridgeman, Jacob",
-          "Celano, Ryan",
-          "Clark, Wyndham",
-          "Conners, Corey",
-          "Dalke, Brad",
-          "Fowler, Rickie",
-          "Gotterup, Chris",
-          "Henley, Russell",
-          "Hojgaard, Nicolai",
-          "Hooks, Joe",
-          "Huskey, Keenan",
-          "Jennings, William",
-          "Kim, Si Woo",
-          "Knapp, Jake",
-          "Nakajima, Keita",
-          "Quiban, Justin",
-          "Ruffels, Ryan",
-          "Schauffele, Xander",
-          "Silverman, Ben",
-          "Spaun, J.J.",
-          "Springer, Hayden",
-          "Stanger, Jimmy",
-          "Thorbjornsen, Michael",
-          "Todd, Brendon",
-          "Wilkes-Krier, Patrick",
-          "Yellamaraju, Sudarshan"
-        ],
-        "note": "+22 / -28"
       }
     ]
   },
