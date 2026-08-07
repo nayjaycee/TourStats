@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-06 20:07:54 ET",
+    "last_updated": "2026-08-07 03:25:28 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-07 03:25:28 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-06 20:07:54 ET",
         "added": [],
@@ -219,17 +225,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-03 16:53:19 ET",
-        "added": [
-          "Huskey, Keenan",
-          "List, Luke",
-          "McGirt, William",
-          "Rodriguez, Lorenzo"
-        ],
-        "withdrawn": [],
-        "note": "+4 / -0"
       }
     ]
   },
