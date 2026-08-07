@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-06 12:00:03 ET",
+    "last_updated": "2026-08-07 12:00:03 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-07 12:00:03 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-06 12:00:03 ET",
         "added": [],
@@ -280,16 +286,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-30 18:03:54 ET",
-        "added": [
-          "Stanger, Jimmy"
-        ],
-        "withdrawn": [
-          "Moore, Taylor"
-        ],
-        "note": "+1 / -1"
       }
     ]
   },
