@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-06 20:07:54 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Wyndham Championship",
+      "details": "Field updated: 13"
+    },
+    {
       "timestamp": "2026-08-06 10:26:13 ET",
       "type": "field_odds_refresh",
       "event_name": "Wyndham Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-03 10:12:20 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Wyndham Championship",
-      "details": "Field updated: 13"
-    },
-    {
-      "timestamp": "2026-08-03 05:57:26 ET",
       "type": "field_odds_refresh",
       "event_name": "Wyndham Championship",
       "details": "Field updated: 13"
