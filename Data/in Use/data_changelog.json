@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-07 09:16:50 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Wyndham Championship",
+      "details": "Field updated: 13"
+    },
+    {
       "timestamp": "2026-08-07 03:25:28 ET",
       "type": "field_odds_refresh",
       "event_name": "Wyndham Championship",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,251 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-08-03 10:12:33 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 23,967 rows across 65 events. Finishes rebuilt."
     }
   ]
 }
