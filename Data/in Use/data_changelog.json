@@ -1,6 +1,72 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-07 21:06:33 ET",
+      "type": "field_odds_refresh",
+      "event_name": "Wyndham Championship",
+      "details": "Field updated: 13"
+    },
+    {
+      "timestamp": "2026-08-07 21:00:10 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 144 players"
+    },
+    {
+      "timestamp": "2026-08-07 20:30:08 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 144 players"
+    },
+    {
+      "timestamp": "2026-08-07 20:00:17 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 17:36:43 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 17:08:52 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 16:34:34 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 15:00:10 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 14:30:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 13:00:09 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
+      "timestamp": "2026-08-07 12:30:07 ET",
+      "type": "live_odds_refresh",
+      "event_name": "",
+      "details": "Live odds refreshed \u2014 146 players"
+    },
+    {
       "timestamp": "2026-08-07 12:00:03 ET",
       "type": "field_odds_refresh",
       "event_name": "Wyndham Championship",
@@ -50,72 +116,6 @@
     },
     {
       "timestamp": "2026-08-06 16:30:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 16:00:15 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 15:00:38 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 14:30:22 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 14:00:08 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 13:30:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 13:00:09 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 12:30:07 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 12:00:03 ET",
-      "type": "field_odds_refresh",
-      "event_name": "Wyndham Championship",
-      "details": "Field updated: 13"
-    },
-    {
-      "timestamp": "2026-08-06 12:00:09 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 11:30:08 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 147 players"
-    },
-    {
-      "timestamp": "2026-08-06 11:00:09 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 147 players"
