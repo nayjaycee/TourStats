@@ -152,8 +152,14 @@
       "Young, Cameron",
       "Yu, Kevin"
     ],
-    "last_updated": "2026-08-09 09:03:23 ET",
+    "last_updated": "2026-08-09 14:50:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-09 14:50:15 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-09 09:03:23 ET",
         "added": [],
@@ -225,15 +231,6 @@
           "Higgo, Garrick"
         ],
         "note": "+6 / -2"
-      },
-      {
-        "timestamp": "2026-08-03 13:44:58 ET",
-        "added": [
-          "Springer, Hayden",
-          "Villegas, Camilo"
-        ],
-        "withdrawn": [],
-        "note": "+2 / -0"
       }
     ]
   },
@@ -312,8 +309,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-09 09:03:23 ET",
+    "last_updated": "2026-08-09 14:50:15 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-09 14:50:15 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-09 09:03:23 ET",
         "added": [],
@@ -849,12 +852,6 @@
       },
       {
         "timestamp": "2026-07-10 12:00:03 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-09 12:00:04 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
