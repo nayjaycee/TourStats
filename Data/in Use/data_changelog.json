@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-10 08:41:29 ET",
+      "type": "rounds_refresh",
+      "event_name": "",
+      "details": "Rounds refreshed \u2014 25,023 rows across 68 events. Finishes rebuilt."
+    },
+    {
       "timestamp": "2026-08-10 08:41:14 ET",
       "type": "field_odds_refresh",
       "event_name": "FedEx St. Jude Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-07 17:36:43 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 146 players"
-    },
-    {
-      "timestamp": "2026-08-07 17:08:52 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 146 players"
