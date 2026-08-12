@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-12 03:40:43 ET",
+      "type": "field_odds_refresh",
+      "event_name": "FedEx St. Jude Championship",
+      "details": "Field updated: 27"
+    },
+    {
       "timestamp": "2026-08-11 15:13:00 ET",
       "type": "field_odds_refresh",
       "event_name": "FedEx St. Jude Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-08 11:32:41 ET",
-      "type": "live_odds_refresh",
-      "event_name": "",
-      "details": "Live odds refreshed \u2014 81 players"
-    },
-    {
-      "timestamp": "2026-08-08 11:00:11 ET",
       "type": "live_odds_refresh",
       "event_name": "",
       "details": "Live odds refreshed \u2014 81 players"
