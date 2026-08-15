@@ -74,8 +74,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-14 15:01:52 ET",
+    "last_updated": "2026-08-15 02:47:48 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-15 02:47:48 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-14 15:01:52 ET",
         "added": [],
@@ -129,34 +135,24 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-11 15:13:00 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
   "next_week": {
-    "event_id": 27,
-    "event_name": "FedEx St. Jude Championship",
-    "player_count": 69,
+    "event_id": 28,
+    "event_name": "BMW Championship",
+    "player_count": 50,
     "player_names": [
       "Aberg, Ludvig",
       "Bhatia, Akshay",
+      "Brennan, Michael",
       "Bridgeman, Jacob",
       "Burns, Sam",
       "Cantlay, Patrick",
-      "Castillo, Ricky",
       "Cauley, Bud",
       "Clark, Wyndham",
       "Cole, Eric",
-      "Conners, Corey",
-      "Coody, Pierceson",
       "Echavarria, Nico",
-      "English, Harris",
-      "Fisk, Steven",
       "Fitzpatrick, Alex",
       "Fitzpatrick, Matt",
       "Fleetwood, Tommy",
@@ -165,22 +161,15 @@
       "Gerard, Ryan",
       "Gotterup, Chris",
       "Griffin, Ben",
-      "Hall, Harry",
-      "Harman, Brian",
       "Henley, Russell",
       "Hisatsune, Ryo",
       "Hojgaard, Nicolai",
-      "Homa, Max",
       "Hovland, Viktor",
-      "Im, Sungjae",
-      "Kim, Michael",
       "Kim, Si Woo",
       "Kim, Tom",
       "Kitayama, Kurt",
       "Knapp, Jake",
-      "Koivun, Jackson",
       "Lee, Min Woo",
-      "Lowry, Shane",
       "MacIntyre, Robert",
       "Matsuyama, Hideki",
       "McCarty, Matt",
@@ -190,31 +179,52 @@
       "Morikawa, Collin",
       "Noren, Alex",
       "Poston, J.T.",
-      "Potgieter, Aldrich",
       "Rai, Aaron",
       "Reitan, Kristoffer",
-      "Rodgers, Patrick",
       "Rose, Justin",
       "Schauffele, Xander",
       "Scheffler, Scottie",
-      "Schmid, Matti",
       "Scott, Adam",
       "Smalley, Alex",
-      "Smith, Jordan",
       "Spaun, J.J.",
-      "Spieth, Jordan",
-      "Stevens, Sam",
       "Straka, Sepp",
-      "Taylor, Nick",
       "Theegala, Sahith",
       "Thomas, Justin",
       "Thorbjornsen, Michael",
       "Woodland, Gary",
-      "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-09 14:50:15 ET",
+    "last_updated": "2026-08-15 02:47:48 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-15 02:47:48 ET",
+        "added": [
+          "Brennan, Michael"
+        ],
+        "withdrawn": [
+          "Castillo, Ricky",
+          "Conners, Corey",
+          "Coody, Pierceson",
+          "English, Harris",
+          "Fisk, Steven",
+          "Hall, Harry",
+          "Harman, Brian",
+          "Homa, Max",
+          "Im, Sungjae",
+          "Kim, Michael",
+          "Koivun, Jackson",
+          "Lowry, Shane",
+          "Potgieter, Aldrich",
+          "Rodgers, Patrick",
+          "Schmid, Matti",
+          "Smith, Jordan",
+          "Spieth, Jordan",
+          "Stevens, Sam",
+          "Taylor, Nick",
+          "Yellamaraju, Sudarshan"
+        ],
+        "note": "+1 / -20"
+      },
       {
         "timestamp": "2026-08-09 14:50:15 ET",
         "added": [],
@@ -750,12 +760,6 @@
       },
       {
         "timestamp": "2026-07-10 18:05:51 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-07-10 12:00:03 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
