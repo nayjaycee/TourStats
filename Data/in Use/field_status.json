@@ -74,8 +74,14 @@
       "Yellamaraju, Sudarshan",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-16 08:50:44 ET",
+    "last_updated": "2026-08-16 14:36:47 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-16 14:36:47 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-16 08:50:44 ET",
         "added": [],
@@ -126,12 +132,6 @@
       },
       {
         "timestamp": "2026-08-13 15:10:19 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-13 09:24:34 ET",
         "added": [],
         "withdrawn": [],
         "note": "No changes"
@@ -194,8 +194,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-16 08:50:44 ET",
+    "last_updated": "2026-08-16 14:36:47 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-16 14:36:47 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-16 08:50:44 ET",
         "added": [],
@@ -405,53 +411,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-01 12:14:52 ET",
-        "added": [
-          "Akina, Kihei",
-          "Berger, Daniel",
-          "Brown, Blades",
-          "Cauley, Bud",
-          "Collet, Tyler",
-          "Fitzpatrick, Alex",
-          "Harman, Brian",
-          "Hrabak, Cooper",
-          "Kim, Tom",
-          "Kohles, Ben",
-          "Noren, Alex",
-          "Pan, C.T.",
-          "Poston, J.T.",
-          "Rai, Aaron",
-          "Reitan, Kristoffer",
-          "Smalley, Alex",
-          "Straka, Sepp",
-          "Theegala, Sahith",
-          "Thomas, Justin"
-        ],
-        "withdrawn": [
-          "Bhatia, Akshay",
-          "Bridgeman, Jacob",
-          "Clark, Wyndham",
-          "Conners, Corey",
-          "Dalke, Brad",
-          "Fowler, Rickie",
-          "Gotterup, Chris",
-          "Henley, Russell",
-          "Hojgaard, Nicolai",
-          "Hooks, Joe",
-          "Jennings, William",
-          "Kim, Si Woo",
-          "Knapp, Jake",
-          "Nakajima, Keita",
-          "Ruffels, Ryan",
-          "Schauffele, Xander",
-          "Spaun, J.J.",
-          "Ventura, Kristoffer",
-          "Wilkes-Krier, Patrick",
-          "Yellamaraju, Sudarshan"
-        ],
-        "note": "+19 / -20"
       }
     ]
   }
