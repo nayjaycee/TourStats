@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-17 12:14:12 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,231 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-08-17 12:14:09 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-13 03:43:00 ET",
-      "type": "field_odds_refresh",
-      "event_name": "FedEx St. Jude Championship",
-      "details": "Field updated: 27"
-    },
-    {
-      "timestamp": "2026-08-12 15:09:25 ET",
       "type": "field_odds_refresh",
       "event_name": "FedEx St. Jude Championship",
       "details": "Field updated: 27"
