@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-17 03:06:09 ET",
+      "type": "field_odds_refresh",
+      "event_name": "BMW Championship",
+      "details": "Field updated: 28"
+    },
+    {
       "timestamp": "2026-08-16 14:36:47 ET",
       "type": "field_odds_refresh",
       "event_name": "FedEx St. Jude Championship",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,235 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-08-10 16:30:29 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 25,023 rows across 68 events. Finishes rebuilt."
     }
   ]
 }
