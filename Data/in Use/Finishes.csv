@@ -1975,6 +1975,75 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,U.S. Open,26,2026-06-21,"Wu, Brandon",25213,CUT,,0,0,0,0,0,1
 2026,U.S. Open,26,2026-06-21,"Yellamaraju, Sudarshan",29925,CUT,,0,0,0,0,0,1
 2026,U.S. Open,26,2026-06-21,"Yuan, Carl",17266,CUT,,0,0,0,0,0,1
+2026,FedEx St. Jude Championship,27,2026-08-16,"Scheffler, Scottie",18417,1,1.0,1,1,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Kim, Si Woo",14609,2,2.0,0,1,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Burns, Sam",19483,T3,3.0,0,1,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Noren, Alex",10419,T3,3.0,0,1,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Clark, Wyndham",23604,T5,5.0,0,1,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Im, Sungjae",17488,T5,5.0,0,1,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Aberg, Ludvig",23950,T7,7.0,0,0,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Fleetwood, Tommy",12294,T7,7.0,0,0,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Knapp, Jake",19396,T7,7.0,0,0,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Matsuyama, Hideki",13562,T7,7.0,0,0,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Schauffele, Xander",19895,T7,7.0,0,0,1,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Cantlay, Patrick",15466,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Cauley, Bud",14502,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Echavarria, Nico",22833,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Fitzpatrick, Matt",17646,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Kim, Tom",24766,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Kitayama, Kurt",21891,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Scott, Adam",6430,T12,12.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Coody, Pierceson",28309,T19,19.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Hovland, Viktor",18841,T19,19.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"McNealy, Maverick",18634,T19,19.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Rodgers, Patrick",16283,T19,19.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Spieth, Jordan",14636,T19,19.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Gerard, Ryan",29767,T24,24.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Hall, Harry",27194,T24,24.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Homa, Max",17538,T24,24.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Koivun, Jackson",32319,T24,24.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Poston, J.T.",21554,T24,24.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Smalley, Alex",18474,T24,24.0,0,0,0,1,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Bridgeman, Jacob",29433,T30,30.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Gotterup, Chris",27774,T30,30.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Harman, Brian",8825,T30,30.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Henley, Russell",14578,T30,30.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Fowler, Rickie",12965,T34,34.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Hojgaard, Nicolai",23602,T34,34.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Mitchell, Keith",17365,T34,34.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Spaun, J.J.",17536,T34,34.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Straka, Sepp",17511,T34,34.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Rose, Justin",6093,T39,39.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Taylor, Nick",13126,T39,39.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Young, Cameron",26651,T39,39.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Brennan, Michael",29197,T42,42.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"English, Harris",14577,T42,42.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Griffin, Ben",24968,T42,42.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Stevens, Sam",25569,T42,42.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Woodland, Gary",12577,T42,42.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Conners, Corey",17576,T47,47.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Schmid, Matti",20722,T47,47.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Thomas, Justin",14139,T47,47.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Thorbjornsen, Michael",26649,T47,47.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Yellamaraju, Sudarshan",29925,T47,47.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Hisatsune, Ryo",22760,T52,52.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Lowry, Shane",13900,T52,52.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Morikawa, Collin",22085,T52,52.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Kim, Michael",17543,T55,55.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Lee, Min Woo",16841,T55,55.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Smith, Jordan",18586,T55,55.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Cole, Eric",21756,T58,58.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Fox, Ryan",11889,T58,58.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Reitan, Kristoffer",21407,T58,58.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Fitzpatrick, Alex",25362,T61,61.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Potgieter, Aldrich",27900,T61,61.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Castillo, Ricky",27819,T63,63.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"McCarty, Matt",28635,T63,63.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Rai, Aaron",18554,T63,63.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"McIlroy, Rory",10091,66,66.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Theegala, Sahith",23014,67,67.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"Bhatia, Akshay",26096,68,68.0,0,0,0,0,1,0
+2026,FedEx St. Jude Championship,27,2026-08-16,"MacIntyre, Robert",23323,WD,,0,0,0,0,0,1
 2026,John Deere Classic,30,2026-07-05,"Gotterup, Chris",27774,1,1.0,1,1,1,1,1,0
 2026,John Deere Classic,30,2026-07-05,"Homa, Max",17538,2,2.0,0,1,1,1,1,0
 2026,John Deere Classic,30,2026-07-05,"Glover, Lucas",7399,T3,3.0,0,1,1,1,1,0
@@ -5586,6 +5655,144 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,CHAU-SHI Series - Qing Lian HDF Open,11496,2026-08-08,"Yu-cheng, Ho",22754,CUT,,0,0,0,0,0,1
 2026,CHAU-SHI Series - Qing Lian HDF Open,11496,2026-08-08,"Yu-cheng, Hsu",25680,WD,,0,0,0,0,0,1
 2026,CHAU-SHI Series - Qing Lian HDF Open,11496,2026-08-08,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wei Hsuan, Wang",19697,1,1.0,1,1,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chien-Yao, Hung",11738,2,2.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Duangphaichoom, Jaturon",19321,T3,3.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Shinzato, Rinkei ",34999,T3,3.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wei Lun, Chang",19494,T3,3.0,0,1,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Kai-jen, Tsai",18978,T6,6.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Oda, Nobuaki",24108,T6,6.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ohishi, Atsuya",28782,T6,6.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ting, Lawrence",19582,T6,6.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu-Chen, Yeh",17771,T6,6.0,0,0,1,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"De Barba, Gabriele",18492,T11,11.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tokumitsu, Yuya",19164,T11,11.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wei-chih, Lu",8170,T11,11.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ying, Edven",33435,T11,11.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tsai, Shang-kai",32957,T15,15.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu, Sean Sung-Po",32008,T15,15.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ching-hung, Su",24106,T17,17.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yoshikuwa, Yuta",28252,T17,17.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Okada, Keita",33143,T19,19.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Watanabe, Ryunosuke",28565,T19,19.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, K.P.",15023,T21,21.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ting-Wei, Hsieh",24096,T21,21.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yung Hua, Liu",19492,T21,21.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chi, Huang",23208,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hsiang-hao, Huang",18037,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ikeuchi, Kei",29862,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sun-Yi, Lu",20881,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yen-hung, Liu",18798,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu-jui, Liu",17880,T24,24.0,0,0,0,1,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chieh-po, Lee",16563,T30,30.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chin-hung, He",27411,T30,30.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ieamgaew, Warun",22884,T30,30.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Peng, Ian",32452,T30,30.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu-cheng, Ho",22754,T30,30.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen(Am), Hsuan-Yi",31653,T35,35.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Takeda, Shinnosuke",35000,T35,35.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wei-cheng, Shen",25521,T35,35.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu-cheng, Hsu",25680,38,38.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hung, Chao-hsin",27247,39,39.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chang Chien, Ko-yen",33063,T40,40.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hsi-An, Wang",25681,T40,40.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Huang, Yi-tseng",24105,T40,40.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ishige, Takumi",15389,T40,40.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sekito, Yuji",25823,T40,40.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Yi-tong",23206,T45,45.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sakuma, Hayato",29720,T45,45.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tokunaga, Hiroki",26455,T45,45.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Ban, Shotaro",22304,T48,48.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chao-hua, Lee",17763,T48,48.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Morioka, Shunichiro",16296,T48,48.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wei-lin, Lee",15048,51,51.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Han-Ting, Chiu",20880,T52,52.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hsu, Chao-Wei",34650,T52,52.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Ta-yu",33058,T52,52.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chih-kai, Hsu",21182,55,55.0,0,0,0,0,1,0
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Bruminhent, Pattanan",34241,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chang(Am), Wei Lin",33750,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chang, Yu-chien",33695,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen(Am), Po-Ming",35745,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Chieh-Sheng",31005,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Hui-hung",33062,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Ke-yi",33061,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Ming-Yi",35360,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Nai-chia Kevin",33966,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Po-hao",30424,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Shou-Cheng",33574,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Ting-yu",33753,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Wei-hao",33569,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Wei-sheng",30398,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chen, Yen-Yu",33566,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chi-Hsien, Hsieh",13484,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chong-Han(Am), Liao",34040,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chuang (Am), Chieh-yu",35743,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Chung(Am), Ting Hsun",35746,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Fei-hao, Yang",15042,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Fukuhara, Shota",15388,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Fung, Nicholas",12889,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hsiang Chia, Huang",22250,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hsieh, Tung-hung",14095,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Huang, Chih Chen",34034,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Huang, Chih-yi",33415,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Huang, Kuan-hsun",30402,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Hung Hsuan, Hsu",25579,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"IIda, Yusuke",16184,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Juan(Am), Yi-kai",33744,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Kashimoto, Kohei",25711,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Kudo, Jun",27056,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Kung, Te-shu",34446,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Kuo(Am), Shi-chi",32978,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Kuo, Chieh-Lun",33419,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lai, Chia-i",30401,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lee, Shang-Jung",33573,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lee, Tony",33064,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Li, Tung",33565,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Liang-Yu(Am), Ko",33921,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin(Am), Yi‑Cheng",34038,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Chen-chu",33060,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Kai-jie",33563,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Keng-wei",17662,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Ming-yeh",33572,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Yi-Yuan",31680,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Yu-chen (AM)",34817,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lin, Yuan-Wei",19491,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Liu, Yen-chun",34663,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Lo, Cheng-Yuan",33567,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Mako, Shapiyate",30395,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Min-hsuan, Hsieh",25517,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Morii, Akinori",14155,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sakurai, Kento",33746,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sha(Am), Jinting",35744,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Shih, Chun-Yu",33399,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Shih-chang, Chan",9698,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Shinno, Yohei",16297,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sui, Justin",34345,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Sukkoed, Tunyapat",29067,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Suwanpanang, Worrasorn",18597,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Takeuchi, Shingo",26231,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tsai (Am), Yu-Chia",34649,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tsai, Chin-Yang",33408,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tsai, Yueh-ting",33403,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tseng Seng, Tzu Hao",23629,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tseng, Fu-tung",30396,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Tsung-yu, Tsai",14504,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Walker, Johnny",34998,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wang, Li-Wei",33398,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wang, Sheng-hui",33059,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wei-Chen, Hsu",33920,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wen, Cheng-Hsiang",19698,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Wu, Yao-wei",32956,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yang, Hao",18649,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yang, Hsiao-che",33411,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yang, Jay",33409,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yokokawa, Kosuke",30439,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu chen, Chen",24451,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu(Am), Hung-Yu",35411,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu-Ting(Am), Lin",34039,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yu-chen, Yu",25682,CUT,,0,0,0,0,0,1
+2026,CHAU-SHI Series - Wealthy Family Open,11509,2026-08-15,"Yung Lung, Lin",17923,CUT,,0,0,0,0,0,1
 2026,Dubai Invitational,2026105,2026-01-18,"Elvira Mijares, Ignacio",12988,1,1.0,1,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Hillier, Daniel",21362,2,2.0,0,1,1,1,1,0
 2026,Dubai Invitational,2026105,2026-01-18,"Guerrier, Julien",10201,T3,3.0,0,1,1,1,1,0
@@ -7865,6 +8072,150 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,BMW International Open,2026124,2026-07-05,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
 2026,BMW International Open,2026124,2026-07-05,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
 2026,BMW International Open,2026124,2026-07-05,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Winther, Jeff",15680,1,1.0,1,1,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Celli, Filippo",23549,T2,2.0,0,1,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Hojgaard, Rasmus",23838,T2,2.0,0,1,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Jordan, Matthew",25601,T2,2.0,0,1,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lindell, Oliver",20085,T2,2.0,0,1,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Zhou, Yanhan",29119,T2,2.0,0,1,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Helligkilde, Marcus",20190,T7,7.0,0,0,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Langasque, Romain",16652,T7,7.0,0,0,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Ferguson, Ewen",21646,T9,9.0,0,0,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Girrbach, Joel",15592,T9,9.0,0,0,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Olesen, Jacob Skov",25611,T9,9.0,0,0,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Schott, Freddy",27588,T9,9.0,0,0,1,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Perico, Julian",22812,T13,13.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Rozner, Antoine",18770,T13,13.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Senior, Jack",15115,T13,13.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Stone, Brandon",15229,T13,13.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Surratt, Caleb",30463,T13,13.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Watson, Bubba",7334,T13,13.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Bairstow, Sam",28615,T19,19.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lee, Kyounghoon",13497,T19,19.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Adam, Cameron",34024,T21,21.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Guillamoundeguy, Oihan",28239,T21,21.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Scrivener, Jason",12734,T21,21.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Siem, Marcel",6950,T21,21.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Yule, Jack",22496,T21,21.0,0,0,0,1,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Armitage, Marcus",17813,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Bjerregaard, Lucas",11619,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Guerrier, Julien",10201,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Horsey, David",11230,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lombard, Zander",16897,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Luiten, Joost",10158,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Ravetto, David",23416,T26,26.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Agerschou, Jacob Worm",24655,T33,33.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Bradbury, Dan",29971,T33,33.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Manassero, Matteo",11460,T33,33.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Otaegui, Adrian",14975,T33,33.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Simonsen, Martin Leth",16448,T33,33.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Van Driel, Darius",13374,T33,33.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Albers, Anton",25305,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Dantorp, Jens",14018,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Dean, Joe",16497,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Gouveia, Ricardo",18722,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lemke, Niklas",10418,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Olesen, Thorbjorn",13412,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Wiesberger, Bernd",9531,T39,39.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Ayora, Angel",30445,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Charmasson, Clement",22220,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Hebert, Benjamin",12213,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Law, David",14784,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"McKinney, Connor",24172,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Peake, Ryan",15169,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Wilson, Andrew",25588,T46,46.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Biondi, Fred",25614,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Clements, Todd",22608,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"De Leo, Gregorio",26506,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Langfors, Per",20414,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Laporta, Francesco",14987,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lindberg, Mikael",20084,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Mory , Felix",25089,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Von Dellingshausen, Nicolai",22231,T53,53.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Gumberg, Jordan",23892,T61,61.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Jamieson, Scott",11397,T61,61.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Schmidt, Ben",27258,T61,61.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Follet-Smith, Benjamin",15211,T64,64.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Kaewkanjana, Sadom",19844,T64,64.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lopez-Chacarra, Eugenio",26745,T64,64.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Hill, Calum",25131,T67,67.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Johnston, Ryggs",32449,T67,67.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Paul, Yannik",19898,T67,67.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Del Rey, Alejandro",22259,T70,70.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Lacroix, Frederic",23733,T70,70.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Quayle, Anthony",18900,T70,70.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Sterne, Richard",7049,T70,70.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Williams, Robin",24093,T70,70.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Premlall, Yurav",25890,75,75.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Buchanan, Jack",27379,T76,76.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Ege, Mats",23791,T76,76.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Ko, Jeong Weon",26213,T76,76.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Paratore, Renato",16549,T76,76.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Nemecz, Lukas",13089,80,80.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Mjaaseth, Michael",27717,81,81.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Wenyi, Ding",26193,82,82.0,0,0,0,0,1,0
+2026,Danish Golf Championship,2026131,2026-08-16,"Aphibarnrat, Kiradech",12321,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Axelsen, John",19637,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Baumgartner, Jonas",26799,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Bergstrom, Albin",23620,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Bjork, Alexander",14775,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Brown, Hamish",22168,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Cabrera Bello, Rafa",7457,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Crocker, Sean",23610,WD,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Da Costa Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Daffue, Mj",17068,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Debove , Quentin",25325,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Ejlersen , Anders Emil",22377,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Fisher, Ross",9396,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Forsstrom, Simon",19806,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Garcia-Heredia, Alfredo",7887,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Gavins, Daniel",18241,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Green, Gavin",12530,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Halvorsen, Andreas",17747,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Hidalgo, Angel",24127,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Host , August Thor",22386,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Jackson, Palmer",30464,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Jacobsen, Christian",22671,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Johannessen, Kristian Krogh",16421,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Jonsson, Tobias",28686,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Jorgensen, Oliver",20206,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Kimsey, Nathan",18027,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Lee, Junghwan",13498,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Levy, Alexander",14973,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Molinari, Edoardo",7033,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Moller, Niklas Norgaard",15676,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Morrison, James",11061,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Naidoo, Dylan",19429,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Neergaard-Petersen, Rasmus",23841,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Pepperell, Eddie",15113,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Schneider, Marcel",12522,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Sekne, Herman Wibe",23797,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Sharma, Shubhankar",17081,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Shogenji, Tatsunori",21921,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Soderberg, Sebastian",18517,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Steinlechner, Maximilian",21677,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Stenson, Henrik",5994,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Sullivan, Andy",15326,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Tarren, Callum",20519,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Townsend, Hugo",31165,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Van Tonder, Daniel",15193,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Vidal, Quim",29712,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Walker, Euan",27147,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Waring, Paul",12426,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
+2026,Danish Golf Championship,2026131,2026-08-16,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
