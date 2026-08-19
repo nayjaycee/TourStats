@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-19 02:53:44 ET",
+      "type": "field_odds_refresh",
+      "event_name": "BMW Championship",
+      "details": "Field updated: 28"
+    },
+    {
       "timestamp": "2026-08-18 14:46:24 ET",
       "type": "field_odds_refresh",
       "event_name": "BMW Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-15 14:37:30 ET",
-      "type": "field_odds_refresh",
-      "event_name": "FedEx St. Jude Championship",
-      "details": "Field updated: 27, 28"
-    },
-    {
-      "timestamp": "2026-08-15 08:49:12 ET",
       "type": "field_odds_refresh",
       "event_name": "FedEx St. Jude Championship",
       "details": "Field updated: 27, 28"

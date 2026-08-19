@@ -55,8 +55,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-18 14:46:24 ET",
+    "last_updated": "2026-08-19 02:53:44 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-19 02:53:44 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-18 14:46:24 ET",
         "added": [],
@@ -130,12 +136,6 @@
           "Yellamaraju, Sudarshan"
         ],
         "note": "+0 / -19"
-      },
-      {
-        "timestamp": "2026-08-16 14:36:47 ET",
-        "added": [],
-        "withdrawn": [],
-        "note": "No changes"
       }
     ]
   },
