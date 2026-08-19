@@ -55,8 +55,14 @@
       "Woodland, Gary",
       "Young, Cameron"
     ],
-    "last_updated": "2026-08-19 02:53:44 ET",
+    "last_updated": "2026-08-19 08:57:34 ET",
     "recent_changes": [
+      {
+        "timestamp": "2026-08-19 08:57:34 ET",
+        "added": [],
+        "withdrawn": [],
+        "note": "No changes"
+      },
       {
         "timestamp": "2026-08-19 02:53:44 ET",
         "added": [],
@@ -110,32 +116,6 @@
         "added": [],
         "withdrawn": [],
         "note": "No changes"
-      },
-      {
-        "timestamp": "2026-08-17 03:06:09 ET",
-        "added": [],
-        "withdrawn": [
-          "Castillo, Ricky",
-          "Conners, Corey",
-          "Coody, Pierceson",
-          "English, Harris",
-          "Hall, Harry",
-          "Harman, Brian",
-          "Homa, Max",
-          "Kim, Michael",
-          "Koivun, Jackson",
-          "Lowry, Shane",
-          "Mitchell, Keith",
-          "Potgieter, Aldrich",
-          "Rodgers, Patrick",
-          "Schmid, Matti",
-          "Smith, Jordan",
-          "Spieth, Jordan",
-          "Stevens, Sam",
-          "Taylor, Nick",
-          "Yellamaraju, Sudarshan"
-        ],
-        "note": "+0 / -19"
       }
     ]
   },
