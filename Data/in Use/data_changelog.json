@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-22 02:50:00 ET",
+      "type": "field_odds_refresh",
+      "event_name": "BMW Championship",
+      "details": "Field updated: 28"
+    },
+    {
       "timestamp": "2026-08-21 14:44:54 ET",
       "type": "field_odds_refresh",
       "event_name": "BMW Championship",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-17 12:13:54 ET",
-      "type": "field_odds_refresh",
-      "event_name": "BMW Championship",
-      "details": "Field updated: 28"
-    },
-    {
-      "timestamp": "2026-08-17 08:54:51 ET",
       "type": "field_odds_refresh",
       "event_name": "BMW Championship",
       "details": "Field updated: 28"
