@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-24 03:09:27 ET",
+      "type": "field_odds_refresh",
+      "event_name": "TOUR Championship",
+      "details": "Field updated: 60"
+    },
+    {
       "timestamp": "2026-08-23 14:37:22 ET",
       "type": "field_odds_refresh",
       "event_name": "BMW Championship",
@@ -113,12 +119,6 @@
       "type": "approach_refresh",
       "event_name": "",
       "details": "Approach skill refreshed \u2014 1,231 rows (l12/l24/ytd)"
-    },
-    {
-      "timestamp": "2026-08-17 16:14:11 ET",
-      "type": "rounds_refresh",
-      "event_name": "",
-      "details": "Rounds refreshed \u2014 26,133 rows across 71 events. Finishes rebuilt."
     }
   ]
 }
