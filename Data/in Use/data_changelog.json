@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-24 12:22:52 ET",
+      "type": "approach_refresh",
+      "event_name": "",
+      "details": "Approach skill refreshed \u2014 1,231 rows (l12/l24/ytd)"
+    },
+    {
       "timestamp": "2026-08-24 12:22:49 ET",
       "type": "rounds_refresh",
       "event_name": "",
@@ -110,12 +116,6 @@
     },
     {
       "timestamp": "2026-08-20 02:55:19 ET",
-      "type": "field_odds_refresh",
-      "event_name": "BMW Championship",
-      "details": "Field updated: 28"
-    },
-    {
-      "timestamp": "2026-08-19 14:42:43 ET",
       "type": "field_odds_refresh",
       "event_name": "BMW Championship",
       "details": "Field updated: 28"
