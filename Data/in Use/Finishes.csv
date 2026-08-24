@@ -2044,6 +2044,56 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,FedEx St. Jude Championship,27,2026-08-16,"Theegala, Sahith",23014,67,67.0,0,0,0,0,1,0
 2026,FedEx St. Jude Championship,27,2026-08-16,"Bhatia, Akshay",26096,68,68.0,0,0,0,0,1,0
 2026,FedEx St. Jude Championship,27,2026-08-16,"MacIntyre, Robert",23323,WD,,0,0,0,0,0,1
+2026,BMW Championship,28,2026-08-23,"Clark, Wyndham",23604,1,1.0,1,1,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Cantlay, Patrick",15466,2,2.0,0,1,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"McIlroy, Rory",10091,3,3.0,0,1,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Gotterup, Chris",27774,T4,4.0,0,1,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Morikawa, Collin",22085,T4,4.0,0,1,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Woodland, Gary",12577,T4,4.0,0,1,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"MacIntyre, Robert",23323,T7,7.0,0,0,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"McNealy, Maverick",18634,T7,7.0,0,0,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Bridgeman, Jacob",29433,9,9.0,0,0,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Brennan, Michael",29197,T10,10.0,0,0,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Im, Sungjae",17488,T10,10.0,0,0,1,1,1,0
+2026,BMW Championship,28,2026-08-23,"Bhatia, Akshay",26096,T12,12.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Henley, Russell",14578,T12,12.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Hisatsune, Ryo",22760,T12,12.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Scheffler, Scottie",18417,T12,12.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Aberg, Ludvig",23950,T16,16.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Gerard, Ryan",29767,T16,16.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Rai, Aaron",18554,T16,16.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Scott, Adam",6430,T16,16.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Smalley, Alex",18474,T16,16.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Thomas, Justin",14139,T16,16.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Poston, J.T.",21554,T22,22.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Reitan, Kristoffer",21407,T22,22.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Rose, Justin",6093,T22,22.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Spaun, J.J.",17536,T22,22.0,0,0,0,1,1,0
+2026,BMW Championship,28,2026-08-23,"Kitayama, Kurt",21891,T26,26.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Schauffele, Xander",19895,T26,26.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Burns, Sam",19483,T28,28.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Cole, Eric",21756,T28,28.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Fitzpatrick, Matt",17646,T28,28.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Kim, Tom",24766,T28,28.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Matsuyama, Hideki",13562,T28,28.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Hovland, Viktor",18841,T33,33.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Kim, Si Woo",14609,T33,33.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"McCarty, Matt",28635,T33,33.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Straka, Sepp",17511,T33,33.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Fowler, Rickie",12965,T37,37.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Noren, Alex",10419,T37,37.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Thorbjornsen, Michael",26649,T37,37.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Young, Cameron",26651,T37,37.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Hojgaard, Nicolai",23602,T41,41.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Knapp, Jake",19396,T41,41.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Theegala, Sahith",23014,T41,41.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Cauley, Bud",14502,T44,44.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Fitzpatrick, Alex",25362,T44,44.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Griffin, Ben",24968,T44,44.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Fleetwood, Tommy",12294,T47,47.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Fox, Ryan",11889,T47,47.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Lee, Min Woo",16841,T47,47.0,0,0,0,0,1,0
+2026,BMW Championship,28,2026-08-23,"Echavarria, Nico",22833,50,50.0,0,0,0,0,1,0
 2026,John Deere Classic,30,2026-07-05,"Gotterup, Chris",27774,1,1.0,1,1,1,1,1,0
 2026,John Deere Classic,30,2026-07-05,"Homa, Max",17538,2,2.0,0,1,1,1,1,0
 2026,John Deere Classic,30,2026-07-05,"Glover, Lucas",7399,T3,3.0,0,1,1,1,1,0
@@ -4814,6 +4864,63 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Virginia,1030,2026-05-10,"Horsfield, Sam",19866,55,55.0,0,0,0,0,1,0
 2026,Virginia,1030,2026-05-10,"Kim, Minkyu",20780,56,56.0,0,0,0,0,1,0
 2026,Virginia,1030,2026-05-10,"Lee, Danny",11826,WD,,0,0,0,0,0,1
+2026,Indianapolis,1032,2026-08-23,"La Sasso, Michael",33755,1,1.0,1,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Rahm, Jon",19195,2,2.0,0,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"DeChambeau, Bryson",19841,T3,3.0,0,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Garcia, Sergio",5689,T3,3.0,0,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Canter, Laurie",14795,T5,5.0,0,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Lee, Richard",12413,T5,5.0,0,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Vincent, Scott",14559,T5,5.0,0,1,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Burmester, Dean",14424,8,8.0,0,0,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Bland, Richard",6516,9,9.0,0,0,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Detry, Thomas",14181,T10,10.0,0,0,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Leishman, Marc",7649,T10,10.0,0,0,1,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Hellgren, Bjorn",16231,T12,12.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"McKibbin, Tom",22322,T12,12.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Song, Younghan",16160,T12,12.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Watson, Bubba",7334,T12,12.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Wolff, Matthew",25919,T12,12.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"An, Byeong Hun",14459,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Ancer, Abraham",18238,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Ballester, Jose Luis",28473,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Grace, Branden",11952,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Herbert, Lucas",17064,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Niemann, Joaquin",18079,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Pieters, Thomas",13944,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Smith, Cameron",15856,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Varner III, Harold",16602,T17,17.0,0,0,0,1,1,0
+2026,Indianapolis,1032,2026-08-23,"Poulter, Ian",1435,26,26.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Hatton, Tyrrell",14796,T27,27.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Howell III, Charles",6892,T27,27.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Surratt, Caleb",30463,T27,27.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Uihlein, Peter",11357,T27,27.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Westwood, Lee",4052,T27,27.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Lee, Danny",11826,T32,32.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Steele, Brendan",11019,T32,32.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Kim, Anthony",11641,T34,34.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Meronk, Adrian",14196,T34,34.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Asaji, Yosuke",12637,T36,36.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Munoz, Sebastian",20770,T36,36.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Ortiz, Carlos",14735,T36,36.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Johnson, Dustin",12422,T39,39.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Masaveu, Luis",30428,T39,39.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Mun, Doyeob",17386,T39,39.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Smyth, Trav",19232,T39,39.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Gooch, Talor",18580,T43,43.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Oosthuizen, Louis",7672,T43,43.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Casey, Paul",7108,T45,45.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Kim, Minkyu",20780,T45,45.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Schwartzel, Charl",7398,T45,45.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Tabuena, Miguel",15274,T45,45.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Puig, David",28984,49,49.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Kaymer, Martin",8117,T50,50.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Schniederjans, Ollie",18662,T50,50.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"McDowell, Graeme",7548,T52,52.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Tringale, Cameron",14013,T52,52.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Kokrak, Jason",12337,54,54.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Horsfield, Sam",19866,55,55.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Lahiri, Anirban",12669,56,56.0,0,0,0,0,1,0
+2026,Indianapolis,1032,2026-08-23,"Rottluff, Max",19899,57,57.0,0,0,0,0,1,0
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Peng, Ian",32452,1,1.0,1,1,1,1,1,0
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Chan, Chia-Han",33412,T2,2.0,0,1,1,1,1,0
 2026,CHAU-SHI Series - Chang Wah Open,11280,2026-03-28,"Ieamgaew, Warun",22884,T2,2.0,0,1,1,1,1,0
@@ -8216,6 +8323,143 @@ year,event_name,event_id,event_completed,player_name,dg_id,finish_text,finish_nu
 2026,Danish Golf Championship,2026131,2026-08-16,"Waring, Paul",12426,CUT,,0,0,0,0,0,1
 2026,Danish Golf Championship,2026131,2026-08-16,"Young, Daniel",19908,CUT,,0,0,0,0,0,1
 2026,Danish Golf Championship,2026131,2026-08-16,"Zanotti, Fabrizio",9842,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Jamieson, Scott",11397,1,1.0,1,1,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Jordan, Matthew",25601,2,2.0,0,1,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Sullivan, Andy",15326,3,3.0,0,1,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Kinhult, Marcus",18514,T4,4.0,0,1,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Nakajima, Keita",21074,T4,4.0,0,1,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Vidal, Quim",29712,T4,4.0,0,1,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Mansell, Richard",24185,T7,7.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Norris, Shaun",7677,T7,7.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Zanotti, Fabrizio",9842,T7,7.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Bairstow, Sam",28615,T10,10.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Couvra, Martin",27811,T10,10.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"McKinney, Connor",24172,T10,10.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Syme, Connor",22089,T10,10.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Walker, Euan",27147,T10,10.0,0,0,1,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Baker, Eliot",35762,15,15.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Brown, Daniel",20766,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Dantorp, Jens",14018,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Manassero, Matteo",11460,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Olesen, Jacob Skov",25611,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Otaegui, Adrian",14975,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Ravetto, David",23416,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Southgate, Matthew",15191,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Van Tonder, Daniel",15193,T16,16.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Bergstrom, Albin",23620,T24,24.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Dean, Joe",16497,T24,24.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Ferguson, Ewen",21646,T24,24.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Laird, Martin",9586,T24,24.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Paul, Yannik",19898,T24,24.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Pavon, Matthieu",19960,T24,24.0,0,0,0,1,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Aphibarnrat, Kiradech",12321,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Daly II, John",32432,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Kimsey, Nathan",18027,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Lopez-Chacarra, Eugenio",26745,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Mory , Felix",25089,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Reed, Patrick",14838,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Scrivener, Jason",12734,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Wilson, Andrew",25588,T30,30.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Armitage, Marcus",17813,T38,38.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Germishuys, Deon",25888,T38,38.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Jonsson, Tobias",28686,T38,38.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Moller, Niklas Norgaard",15676,T38,38.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Rebula, Jovan",22912,T42,42.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Steinlechner, Maximilian",21677,T42,42.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Bjerregaard, Lucas",11619,T44,44.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Young, Daniel",19908,T44,44.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Halvorsen, Andreas",17747,T46,46.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Nemecz, Lukas",13089,T46,46.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Sharma, Shubhankar",17081,T46,46.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Bryant, Davis",32550,T49,49.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Crocker, Sean",23610,T49,49.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Lagergren, Joakim",14780,T49,49.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Lewis, Tom",15164,T49,49.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Adam, Cameron",34024,T53,53.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Follet-Smith, Benjamin",15211,T53,53.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Levy, Alexander",14973,T53,53.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Sterne, Richard",7049,T53,53.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Elvira, Manuel",26008,T57,57.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Ereno, Pablo",33839,T57,57.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Premlall, Yurav",25890,T57,57.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Larrazabal, Pablo",9133,60,60.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Gregor, Graham",30201,T61,61.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Mccullen, Haydn",19121,T61,61.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Forrest, Grant",16475,T63,63.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Lee, Kyounghoon",13497,T63,63.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Perico, Julian",22812,T63,63.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Siem, Marcel",6950,T63,63.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Lee, Junghwan",13498,67,67.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Charmasson, Clement",22220,T68,68.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Kaewkanjana, Sadom",19844,T68,68.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Naidoo, Dylan",19429,70,70.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Quiros, Alvaro",7886,71,71.0,0,0,0,0,1,0
+2026,Nexo Championship,2026132,2026-08-23,"Arnaus, Adri",23236,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Baldwin, Matthew",13344,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Baumgartner, Jonas",26799,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Berry, Joshua",31520,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Biondi, Fred",25614,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Brown, Barclay",29947,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Brown, Steven",15771,WD,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Buchanan, Jack",27379,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Campillo, Jorge",14016,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Cantero Gutierrez, Ivan",19635,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Celli, Filippo",23549,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Da Costa Rodrigues, Daniel",27149,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Daffue, Mj",17068,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Debove , Quentin",25325,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Fisher, Ross",9396,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Forsstrom, Simon",19806,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Franssen, Rory",30349,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Frittelli, Dylan",11955,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Fyfe, Calum",25096,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Gallegos, Andres German",19296,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Garcia-Heredia, Alfredo",7887,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Gavins, Daniel",18241,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Girrbach, Joel",15592,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Gouveia, Ricardo",18722,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Green, Gavin",12530,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Guerrier, Julien",10201,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Hebert, Benjamin",12213,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Hollick, Michael",15993,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Jackson, Palmer",30464,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Jarvis, Casey",26947,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Johnston, Liam",22631,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Johnston, Ryggs",32449,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Kieffer, Maximilian",12317,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Kobori, Kazuma",24369,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Law, David",14784,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Li, Haotong",15310,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Locke, Sam",25315,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Logan, Hunter",31866,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Lombard, Zander",16897,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Micheluzzi, David",19224,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Mjaaseth, Michael",27717,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Morrison, James",11061,WD,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"O'hara, Paul",23707,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Paratore, Renato",16549,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Peake, Ryan",15169,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Quayle, Anthony",18900,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Repetto Taylor, Rocco Paolo",31235,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Robinson-Thompson, Brandon",24497,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Sandhu, Yuvraj Singh",23060,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Schmidt, Ben",27258,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Senior, Jack",15115,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Shogenji, Tatsunori",21921,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Stone, Brandon",15229,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Tarren, Callum",20519,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Teder, Richard",32733,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Toorop, Mike",25273,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Townsend, Hugo",31165,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Van Velzen, Ryan",27960,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Veerman, Johannes",20522,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Virto, Borja",17313,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Vogelpohl, John",30045,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Von Dellingshausen, Nicolai",22231,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Williams, Robin",24093,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Yule, Jack",22496,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Zach, Simon",15671,CUT,,0,0,0,0,0,1
+2026,Nexo Championship,2026132,2026-08-23,"Zhou, Yanhan",29119,CUT,,0,0,0,0,0,1
 2026,Qatar Masters,2026145,2026-02-08,"Reed, Patrick",14838,1,1.0,1,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Hill, Calum",25131,2,2.0,0,1,1,1,1,0
 2026,Qatar Masters,2026145,2026-02-08,"Olesen, Jacob Skov",25611,T3,3.0,0,1,1,1,1,0
