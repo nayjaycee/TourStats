@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "timestamp": "2026-08-30 16:51:56 ET",
+      "type": "field_odds_refresh",
+      "event_name": "TOUR Championship",
+      "details": "Field updated: 60"
+    },
+    {
       "timestamp": "2026-08-30 12:29:21 ET",
       "type": "field_odds_refresh",
       "event_name": "TOUR Championship",
@@ -113,12 +119,6 @@
       "type": "rounds_refresh",
       "event_name": "",
       "details": "Rounds refreshed \u2014 26,975 rows across 74 events. Finishes rebuilt."
-    },
-    {
-      "timestamp": "2026-08-24 12:22:34 ET",
-      "type": "field_odds_refresh",
-      "event_name": "TOUR Championship",
-      "details": "Field updated: 60"
     }
   ]
 }
